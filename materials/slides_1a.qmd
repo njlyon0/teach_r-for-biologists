@@ -1,6 +1,7 @@
 ---
 title: "Intro to Data Science"
 author: "Nick J Lyon"
+engine: knitr
 format: 
   revealjs: 
     slide-number: c
@@ -64,13 +65,107 @@ Tell me a bit about yourselves!
 
 ## [My Goal for You]{.purple}
 
-![](comics/r_knowledge.png){fig-alt="Comic-style graph depicting someone's confidence with R changing over time"}
+
+<p align="center">
+<img src="comics/r_knowledge.png" alt="Comic-style graph depicting someone's confidence with R changing over time">
+</p>
 
 ## [Data Science Definition]{.orange} 
 
 Data science combines [_programming_]{.gold} and statistics with [_subject matter expertise_]{.purple} to identify patterns and insights hidden in data
 
+## Why is this Course Taught in R? {.smaller}
 
+`r fontawesome::fa(name = "r-project", fill = "#F4F3EE", a11y = "sem")` is a programming language that is _awesome_ for environmental data scientists
 
+\
+
+. . .
+
+Benefits of R:
+
+. . .
+
+- Free!
+- Reproducible
+- Accessible
+    - _Many_ online tutorials for R
+- Popular
+- Versatile
+
+## [R's Popularity]{.orange}
+
+```{r}
+#| echo: false
+
+# Read in data
+pop_df <- read.csv(file = file.path("materials", "data", "r-popularity.csv"))
+
+# Load ggplot2
+library(ggplot2)
+
+# Make graph
+ggplot(pop_df, aes(x = year, y = percent_papers)) +
+  geom_smooth(method = "lm", formula = "y ~ x", se = F, color = "black") +
+  geom_point(aes(fill = 'x'), size = 5, pch = 21) +
+  labs(x = "Year", y = "Papers Using R (%)") +
+  # Tweak X-axis
+  scale_x_continuous(breaks = round(pop_df$year)) +
+  # Custom color
+  scale_fill_manual(values = "#ffc300") +
+  # Custom theming
+  theme(legend.position = "none",
+        panel.background = element_blank(),
+        panel.grid = element_blank(),
+        axis.line = element_line(color = "black"),
+        axis.text = element_text(size = 15),
+        # axis.text.x = element_text(angle = 35, hjust = 1),
+        axis.title = element_text(size = 18),
+        axis.title.x = element_blank())
+```
+
+:::{.aside}
+Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.2567)
+:::
+
+## [R Data Science Value]{.orange}{.smaller}
+
+:::{.incremental}
+
+::::{.columns}
+
+:::{.column width="50%"}
+### `r fontawesome::fa(name = "arrows-left-right", fill = "#F4F3EE", a11y = "sem")` Reproducibility 
+
+- R is written in "[scripts]{.blue}"
+    - Scripts = step-by-step instructions
+- Scripts can be run by _any_ R user
+- Allows perfect replication of process
+- Programs that require clicking buttons are not (as) reproducible
+    - Would depend on accompanying written/verbal instructions
+:::
+
+:::{.column width="50%"}
+### Collaboration  `r fontawesome::fa(name = "handshake", fill = "#F4F3EE", a11y = "sem")`
+
+- R scripts can be co-developed!
+- They can then be shared like a paper draft
+- Many tools exist to formalize sharing
+    - We'll cover one in this course!
+- Unscripted programs would again require written/verbal instructions
+    - Then hoping they click the right buttons in the right way 
+:::
+
+::::
+
+:::
+
+## [Temperature Check]{.purple}
+
+### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
 
 
