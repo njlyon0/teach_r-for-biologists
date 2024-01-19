@@ -19,30 +19,11 @@ $link-color: $url_blue;
 /*-- scss:rules --*/
 
 // Quick refs for core palette
-.blue { 
-  color: $blue;
-  font-weight: bold;
-}
-
-.purple { 
-  color: $purple;
-  font-weight: bold;
-}
-
-.pink { 
-  color: $pink;
-  font-weight: bold;
-}
-
-.orange { 
-  color: $orange;
-  font-weight: bold;
-}
-
-.gold { 
-  color: $gold;
-  font-weight: bold;
-}
+.blue { color: $blue; }
+.purple { color: $purple; }
+.pink { color: $pink; }
+.orange { color: $orange; }
+.gold { color: $gold; }
 
 //Underline URLs
 .reveal .slide a {

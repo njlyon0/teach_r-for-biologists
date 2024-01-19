@@ -4,7 +4,6 @@ author: "Nick J Lyon"
 format: 
   revealjs: 
     slide-number: c
-    incremental: true
     scrollable: false
     theme: [night, slides.scss]
     reference-location: document
@@ -12,7 +11,6 @@ format:
 ---
 
 ## A Guide to Your Process
-:::{.nonincremental}
 
 ### [Scheduling]{.blue}
 
@@ -23,16 +21,56 @@ format:
 ### [Supporting Information]{.orange}
 
 ### [Class Discussion]{.gold}
-:::
 
 ## [Today's Plan]{.blue}
-:::{.nonincremental}
+
 - Introductions
 - Data Science Background
 - Why R?
 - Problem Solving Tips (for Coding)
 - Computer File Paths
-:::
+
+## [Today's Learning Objectives]{.purple}
+
+After today's session you will be able to:
+
+. . .
+
+- Define "data science"
+- Explain why the course is taught in R
+- Identify useful code problem solving techniques
+- Demonstrate comprehension of computer file paths
+
+## [Introductions]{.gold}
+
+Tell me a bit about yourselves!
+
+. . .
+
+- What is your preferred name?
+
+- What year are you in school?
+
+- What's a fun fact that brings you joy?
+
+## [Introductions (Continued)]{.gold}
+
+- Why did you sign up for the course?
+
+- What skill(s) are you most excited to learn?
+
+- What previous coding / data science experience do you have?
+    - Absolutely fine if this is your first foray into data science!
+
+## [My Goal for You]{.purple}
+
+![](comics/r_knowledge.png){fig-alt="Comic-style graph depicting someone's confidence with R changing over time"}
+
+## [Data Science Definition]{.orange} 
+
+Data science combines [_programming_]{.gold} and statistics with [_subject matter expertise_]{.purple} to identify patterns and insights hidden in data
+
+
 
 
 
