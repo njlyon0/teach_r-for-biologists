@@ -1,5 +1,5 @@
 ---
-title: "teach_r-for-bio"
+title: "Home Page"
 ---
 
 This is a Quarto website.
