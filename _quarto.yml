@@ -20,44 +20,17 @@ website:
     style: "docked"
     alignment: left
     border: true
-    collapse-level: 1
+    collapse-level: 2
     contents:
       - section: "Course Overview"
         contents:
           - text: "Home"
             href: index.qmd
-      - section: "Week 1"
+      - section: "Slide Decks"
         contents:
-          - text: "x"
-          - text: "y"
-      - section: "Week 2"
-        contents:
-          - text: "x"
-          - text: "y"
-      - section: "Week 3"
-        contents:
-          - text: "x"
-          - text: "y"
-      - section: "Week 4"
-        contents:
-          - text: "x"
-          - text: "y"
-      - section: "Week 5"
-        contents:
-          - text: "x"
-          - text: "y"
-      - section: "Week 6"
-        contents:
-          - text: "x"
-          - text: "y"
-      - section: "Week 7"
-        contents:
-          - text: "x"
-          - text: "y"
-      - section: "Week 8"
-        contents:
-          - text: "x"
-          - text: "y"
+          - text: "Data Science Background"
+            href: materials/home_1a.qmd
+          - text: "RStudio & Base R"
   page-footer: 
     center: "Copyright 2024, Nicholas J Lyon"
 
