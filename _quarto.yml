@@ -8,24 +8,67 @@ website:
   repo-url: https://github.com/njlyon0/teach_r-for-bio
   repo-actions: [issue]
   navbar:
-    background: primary
-    left:
-      - text: "Course Home"
-        href: index.qmd
     right: 
       - text: "Instructors"
         menu:
           - text: "Nick J Lyon"
             href: https://njlyon0.github.io/
+      - icon: github
+        href: https://github.com/njlyon0/teach_r-for-bio
+        aria-label: GitHub
+  sidebar:
+    style: "docked"
+    alignment: left
+    border: true
+    collapse-level: 1
+    contents:
+      - section: "Course Overview"
+        contents:
+          - text: "Home"
+            href: index.qmd
+      - section: "Week 1"
+        contents:
+          - text: "x"
+          - text: "y"
+      - section: "Week 2"
+        contents:
+          - text: "x"
+          - text: "y"
+      - section: "Week 3"
+        contents:
+          - text: "x"
+          - text: "y"
+      - section: "Week 4"
+        contents:
+          - text: "x"
+          - text: "y"
+      - section: "Week 5"
+        contents:
+          - text: "x"
+          - text: "y"
+      - section: "Week 6"
+        contents:
+          - text: "x"
+          - text: "y"
+      - section: "Week 7"
+        contents:
+          - text: "x"
+          - text: "y"
+      - section: "Week 8"
+        contents:
+          - text: "x"
+          - text: "y"
   page-footer: 
     center: "Copyright 2024, Nicholas J Lyon"
-    background: secondary
 
 execute:
   freeze: auto
 
 format:
   html:
+    code-overflow: wrap
+    code-line-numbers: false
+    code-copy: hover
     theme: 
       light: lyonlight.scss
       dark: lyondark.scss
