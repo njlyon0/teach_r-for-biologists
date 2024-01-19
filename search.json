@@ -5,5 +5,19 @@
     "title": "Home Page",
     "section": "",
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "materials/home_1a.html",
+    "href": "materials/home_1a.html",
+    "title": "Data Science Fundamentals",
+    "section": "",
+    "text": "Brief slide deck preface/explanation\n\n\nFull Screen"
+  },
+  {
+    "objectID": "materials/home_template.html",
+    "href": "materials/home_template.html",
+    "title": "Data Science Fundamentals",
+    "section": "",
+    "text": "Brief slide deck preface/explanation\n\n\nFull Screen"
   }
 ]

@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://github.com/njlyon0/teach_r-for-bio/materials/slides_1a.html</loc>
+    <lastmod>2024-01-19T17:14:33.782Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/njlyon0/teach_r-for-bio/materials/slides_template.html</loc>
+    <lastmod>2024-01-19T17:14:32.722Z</lastmod>
+  </url>
+  <url>
     <loc>https://github.com/njlyon0/teach_r-for-bio/index.html</loc>
-    <lastmod>2024-01-19T16:41:37.542Z</lastmod>
+    <lastmod>2024-01-19T17:14:31.594Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/njlyon0/teach_r-for-bio/materials/home_1a.html</loc>
+    <lastmod>2024-01-19T17:14:32.454Z</lastmod>
+  </url>
+  <url>
+    <loc>https://github.com/njlyon0/teach_r-for-bio/materials/home_template.html</loc>
+    <lastmod>2024-01-19T17:14:33.554Z</lastmod>
   </url>
 </urlset>
