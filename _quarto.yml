@@ -5,19 +5,31 @@ project:
 
 website:
   title: "R Programming for Biologists"
+  repo-url: https://github.com/njlyon0/teach_r-for-bio
+  repo-actions: [issue]
   navbar:
+    background: primary
     left:
-      - text: "Home"
+      - text: "Course Home"
         href: index.qmd
+    right: 
+      - text: "Instructors"
+        menu:
+          - text: "Nick J Lyon"
+            href: https://njlyon0.github.io/
+  page-footer: 
+    center: "Copyright 2024, Nicholas J Lyon"
+    background: secondary
 
 execute:
   freeze: auto
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: 
+      light: lyonlight.scss
+      dark: lyondark.scss
+    mainfont: Open Sans
     toc: true
-
-
-
+    link-external-newwindow: true
+    link-external-icon: false
