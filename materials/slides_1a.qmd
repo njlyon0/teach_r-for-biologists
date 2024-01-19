@@ -1,5 +1,49 @@
 ---
 title: "1B"
-format: revealjs
+format: 
+  revealjs: 
+    incremental: true
 ---
+
+## Content Slide 1
+
+Test list:
+
+- X
+- Y
+- Z
+
+
+## Content Slide 2
+
+:::{.nonincremental}
+
+Test _non_-incremental list
+
+- A
+- B
+- C
+
+:::
+
+## Multi-Column Slide
+
+:::: {.columns}
+
+::: {.column width="33.33%"}
+contents...
+:::
+
+::: {.column width="33.33%"}
+contents...
+:::
+
+::: {.column width="33.33%"}
+contents...
+:::
+
+::::
+
+
+
 
