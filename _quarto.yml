@@ -31,7 +31,7 @@ website:
           - text: "Data Science Background"
             href: materials/home_1a.qmd
           - text: "RStudio & Base R"
-          - text: "Objects, Vectors, & Conditionals"
+          - text: "Objects & Conditionals"
           - text: "Version Control"
           - text: "Data & Wrangling"
           - text: "Summarizing & Reshaping"
