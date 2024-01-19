@@ -1,5 +1,6 @@
 ---
-title: "1B"
+title: "Intro to Data Science"
+author: "Nick J Lyon"
 format: 
   revealjs: 
     slide-number: c
@@ -10,96 +11,28 @@ format:
     footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-bio/)"
 ---
 
-## [Incremental List]{.blue}
- 
-Incremental because of [presentation]{.purple}-level YAML 
-
-- [X]{.orange}
-- [Y]{.pink}
-- [Z]{.gold}
-
-## Non-Incremental List
-
+## A Guide to Your Process
 :::{.nonincremental}
 
-- A
-- B
-- C
+### [Scheduling]{.blue}
 
+### [Learning Objectives]{.purple}
+
+### [Practice]{.pink}
+
+### [Supporting Information]{.orange}
+
+### [Class Discussion]{.gold}
 :::
 
-## Multi-Column Slide
-
-:::: {.columns}
-
-::: {.column width="33.33%"}
-contents...
-:::
-
-::: {.column width="33.33%"}
-contents...
-:::
-
-::: {.column width="33.33%"}
-contents...
-:::
-
-::::
-
-## Slide with Aside
-
+## [Today's Plan]{.blue}
 :::{.nonincremental}
-
-- x
-- y
-- z\*
-
+- Introductions
+- Data Science Background
+- Why R?
+- Problem Solving Tips (for Coding)
+- Computer File Paths
 :::
 
-::: aside
-\* = footnote (smaller/lighter text)
-:::
 
-## Example Code Chunk
 
-Including incremental line emphasis
-
-```{.r code-line-numbers="|2|5"}
-# Make vector
-vec <- c(1, 2, 3)
-
-# Take average
-mean(vec)
-```
-
-## Executable Code Chunk
-
-```{r}
-#| echo: true
-#| output-location: fragment
-
-# Make vector
-vec <- c(1, 2, 3)
-
-# Take average
-mean(vec)
-```
-
-## Code Chunk Outputting to Next Slide
-
-```{r}
-#| echo: true
-#| output-location: slide
-
-# Load ggplot2
-library(ggplot2)
-
-# Create plot
-ggplot(airquality, aes(x = Temp, y = Ozone)) +
-  geom_point() +
-  geom_smooth(method = "loess")
-```
-
-## Slide with different background color {background-color="#FFB02F"} 
-
-Hello world
