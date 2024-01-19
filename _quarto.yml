@@ -1,5 +1,7 @@
 project:
   type: website
+  execute-dir: project
+  output-dir: docs
 
 website:
   title: "teach_r-for-bio"
