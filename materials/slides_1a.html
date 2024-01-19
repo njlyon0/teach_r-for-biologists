@@ -7,10 +7,11 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.450">
 
-  <title>R Programming for Biologists - 1B</title>
+  <meta name="author" content="Nick J Lyon">
+  <title>R Programming for Biologists - Intro to Data Science</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -319,22 +320,161 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">1B</h1>
+  <h1 class="title">Intro to Data Science</h1>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Nick J Lyon 
+</div>
+</div>
 </div>
 
 </section>
-<section class="slide level2">
+<section id="a-guide-to-your-process" class="slide level2">
+<h2>A Guide to Your Process</h2>
+<h3 id="scheduling"><span class="blue">Scheduling</span></h3>
+<h3 id="learning-objectives"><span class="purple">Learning Objectives</span></h3>
+<h3 id="practice"><span class="pink">Practice</span></h3>
+<h3 id="supporting-information"><span class="orange">Supporting Information</span></h3>
+<h3 id="class-discussion"><span class="gold">Class Discussion</span></h3>
+</section>
+<section id="todays-plan" class="slide level2">
+<h2><span class="blue">Today’s Plan</span></h2>
+<ul>
+<li>Introductions</li>
+<li>Data Science Background</li>
+<li>Why R?</li>
+<li>Problem Solving Tips (for Coding)</li>
+<li>Computer File Paths</li>
+</ul>
+</section>
+<section id="todays-learning-objectives" class="slide level2">
+<h2><span class="purple">Today’s Learning Objectives</span></h2>
+<p>After today’s session you will be able to:</p>
+<div class="fragment">
+<ul>
+<li>Define “data science”</li>
+<li>Explain why the course is taught in R</li>
+<li>Identify useful code problem solving techniques</li>
+<li>Demonstrate comprehension of computer file paths</li>
+</ul>
+</div>
+</section>
+<section id="introductions" class="slide level2">
+<h2><span class="gold">Introductions</span></h2>
+<p>Tell me a bit about yourselves!</p>
+<div class="fragment">
+<ul>
+<li><p>What is your preferred name?</p></li>
+<li><p>What year are you in school?</p></li>
+<li><p>What’s a fun fact that brings you joy?</p></li>
+</ul>
+</div>
+</section>
+<section id="introductions-continued" class="slide level2">
+<h2><span class="gold">Introductions (Continued)</span></h2>
+<ul>
+<li><p>Why did you sign up for the course?</p></li>
+<li><p>What skill(s) are you most excited to learn?</p></li>
+<li><p>What previous coding / data science experience do you have?</p>
+<ul>
+<li>Absolutely fine if this is your first foray into data science!</li>
+</ul></li>
+</ul>
+</section>
+<section id="my-goal-for-you" class="slide level2">
+<h2><span class="purple">My Goal for You</span></h2>
+<p align="center">
+<img src="comics/r_knowledge.png" alt="Comic-style graph depicting someone's confidence with R changing over time">
+</p>
+</section>
+<section id="data-science-definition" class="slide level2">
+<h2><span class="orange">Data Science Definition</span></h2>
+<p>Data science combines <span class="gold"><em>programming</em></span> and statistics with <span class="purple"><em>subject matter expertise</em></span> to identify patterns and insights hidden in data</p>
+</section>
+<section id="why-is-this-course-taught-in-r" class="slide level2 smaller">
+<h2>Why is this Course Taught in R?</h2>
+<p><svg aria-label="R Project" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#F4F3EE;overflow:visible;position:relative;"><title>R Project</title><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> is a programming language that is <em>awesome</em> for environmental data scientists</p>
+<p><br>
+</p>
+<div class="fragment">
+<p>Benefits of R:</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Free!</li>
+<li>Reproducible</li>
+<li>Accessible
+<ul>
+<li><em>Many</em> online tutorials for R</li>
+</ul></li>
+<li>Popular</li>
+<li>Versatile</li>
+</ul>
+</div>
+</section>
+<section id="rs-popularity" class="slide level2">
+<h2><span class="orange">R’s Popularity</span></h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="slides_1a_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+</div>
+</div>
 
+<aside><div>
+<p>Data from <a href="https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecs2.2567">Lai <em>et al.</em> 2019</a></p>
+</div></aside></section>
+<section id="r-data-science-value" class="slide level2 smaller">
+<h2><span class="orange">R Data Science Value</span></h2>
+<div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="reproducibility"><svg aria-label="Arrows Left Right" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#F4F3EE;overflow:visible;position:relative;"><title>Arrows Left Right</title><path d="M406.6 374.6l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224l-293.5 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288l293.5 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"></path></svg> Reproducibility</h3>
+<ul>
+<li class="fragment">R is written in “<span class="blue">scripts</span>”
+<ul>
+<li class="fragment">Scripts = step-by-step instructions</li>
+</ul></li>
+<li class="fragment">Scripts can be run by <em>any</em> R user</li>
+<li class="fragment">Allows perfect replication of process</li>
+<li class="fragment">Programs that require clicking buttons are not (as) reproducible
+<ul>
+<li class="fragment">Would depend on accompanying written/verbal instructions</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="collaboration">Collaboration <svg aria-label="Handshake" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#F4F3EE;overflow:visible;position:relative;"><title>Handshake</title><path d="M272.2 64.6l-51.1 51.1c-15.3 4.2-29.5 11.9-41.5 22.5L153 161.9C142.8 171 129.5 176 115.8 176H96V304c20.4 .6 39.8 8.9 54.3 23.4l35.6 35.6 7 7 0 0L219.9 397c6.2 6.2 16.4 6.2 22.6 0c1.7-1.7 3-3.7 3.7-5.8c2.8-7.7 9.3-13.5 17.3-15.3s16.4 .6 22.2 6.5L296.5 393c11.6 11.6 30.4 11.6 41.9 0c5.4-5.4 8.3-12.3 8.6-19.4c.4-8.8 5.6-16.6 13.6-20.4s17.3-3 24.4 2.1c9.4 6.7 22.5 5.8 30.9-2.6c9.4-9.4 9.4-24.6 0-33.9L340.1 243l-35.8 33c-27.3 25.2-69.2 25.6-97 .9c-31.7-28.2-32.4-77.4-1.6-106.5l70.1-66.2C303.2 78.4 339.4 64 377.1 64c36.1 0 71 13.3 97.9 37.2L505.1 128H544h40 40c8.8 0 16 7.2 16 16V352c0 17.7-14.3 32-32 32H576c-11.8 0-22.2-6.4-27.7-16H463.4c-3.4 6.7-7.9 13.1-13.5 18.7c-17.1 17.1-40.8 23.8-63 20.1c-3.6 7.3-8.5 14.1-14.6 20.2c-27.3 27.3-70 30-100.4 8.1c-25.1 20.8-62.5 19.5-86-4.1L159 404l-7-7-35.6-35.6c-5.5-5.5-12.7-8.7-20.4-9.3C96 369.7 81.6 384 64 384H32c-17.7 0-32-14.3-32-32V144c0-8.8 7.2-16 16-16H56 96h19.8c2 0 3.9-.7 5.3-2l26.5-23.6C175.5 77.7 211.4 64 248.7 64H259c4.4 0 8.9 .2 13.2 .6zM544 320V176H496c-5.9 0-11.6-2.2-15.9-6.1l-36.9-32.8c-18.2-16.2-41.7-25.1-66.1-25.1c-25.4 0-49.8 9.7-68.3 27.1l-70.1 66.2c-10.3 9.8-10.1 26.3 .5 35.7c9.3 8.3 23.4 8.1 32.5-.3l71.9-66.4c9.7-9 24.9-8.4 33.9 1.4s8.4 24.9-1.4 33.9l-.8 .8 74.4 74.4c10 10 16.5 22.3 19.4 35.1H544zM64 336a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm528 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"></path></svg></h3>
+<ul>
+<li class="fragment">R scripts can be co-developed!</li>
+<li class="fragment">They can then be shared like a paper draft</li>
+<li class="fragment">Many tools exist to formalize sharing
+<ul>
+<li class="fragment">We’ll cover one in this course!</li>
+</ul></li>
+<li class="fragment">Unscripted programs would again require written/verbal instructions
+<ul>
+<li class="fragment">Then hoping they click the right buttons in the right way</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="temperature-check" class="slide level2">
+<h2><span class="purple">Temperature Check</span></h2>
+<h3 id="how-are-you-feeling">How are you Feeling?</h3>
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
 
 <div class="footer footer-default">
-
+<p><a href="https://njlyon0.github.io/teach_r-for-bio/">Programming in R for Biologists</a></p>
 </div>
 </section>
     </div>
@@ -389,7 +529,7 @@
         progress: true,
 
         // Display the page number of the current slide
-        slideNumber: false,
+        slideNumber: 'c',
 
         // 'all', 'print', or 'speaker'
         showSlideNumber: 'all',
@@ -548,6 +688,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

@@ -1,5 +1,145 @@
 [
   {
+    "objectID": "materials/slides_1a.html#a-guide-to-your-process",
+    "href": "materials/slides_1a.html#a-guide-to-your-process",
+    "title": "Intro to Data Science",
+    "section": "A Guide to Your Process",
+    "text": "A Guide to Your Process\nScheduling\nLearning Objectives\nPractice\nSupporting Information\nClass Discussion"
+  },
+  {
+    "objectID": "materials/slides_1a.html#todays-plan",
+    "href": "materials/slides_1a.html#todays-plan",
+    "title": "Intro to Data Science",
+    "section": "Today’s Plan",
+    "text": "Today’s Plan\n\nIntroductions\nData Science Background\nWhy R?\nProblem Solving Tips (for Coding)\nComputer File Paths"
+  },
+  {
+    "objectID": "materials/slides_1a.html#todays-learning-objectives",
+    "href": "materials/slides_1a.html#todays-learning-objectives",
+    "title": "Intro to Data Science",
+    "section": "Today’s Learning Objectives",
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nDefine “data science”\nExplain why the course is taught in R\nIdentify useful code problem solving techniques\nDemonstrate comprehension of computer file paths"
+  },
+  {
+    "objectID": "materials/slides_1a.html#introductions",
+    "href": "materials/slides_1a.html#introductions",
+    "title": "Intro to Data Science",
+    "section": "Introductions",
+    "text": "Introductions\nTell me a bit about yourselves!\n\n\nWhat is your preferred name?\nWhat year are you in school?\nWhat’s a fun fact that brings you joy?"
+  },
+  {
+    "objectID": "materials/slides_1a.html#introductions-continued",
+    "href": "materials/slides_1a.html#introductions-continued",
+    "title": "Intro to Data Science",
+    "section": "Introductions (Continued)",
+    "text": "Introductions (Continued)\n\nWhy did you sign up for the course?\nWhat skill(s) are you most excited to learn?\nWhat previous coding / data science experience do you have?\n\nAbsolutely fine if this is your first foray into data science!"
+  },
+  {
+    "objectID": "materials/slides_1a.html#my-goal-for-you",
+    "href": "materials/slides_1a.html#my-goal-for-you",
+    "title": "Intro to Data Science",
+    "section": "My Goal for You",
+    "text": "My Goal for You"
+  },
+  {
+    "objectID": "materials/slides_1a.html#data-science-definition",
+    "href": "materials/slides_1a.html#data-science-definition",
+    "title": "Intro to Data Science",
+    "section": "Data Science Definition",
+    "text": "Data Science Definition\nData science combines programming and statistics with subject matter expertise to identify patterns and insights hidden in data"
+  },
+  {
+    "objectID": "materials/slides_1a.html#why-is-this-course-taught-in-r",
+    "href": "materials/slides_1a.html#why-is-this-course-taught-in-r",
+    "title": "Intro to Data Science",
+    "section": "Why is this Course Taught in R?",
+    "text": "Why is this Course Taught in R?\nR Project is a programming language that is awesome for environmental data scientists\n\n\n\nBenefits of R:\n\n\n\nFree!\nReproducible\nAccessible\n\nMany online tutorials for R\n\nPopular\nVersatile"
+  },
+  {
+    "objectID": "materials/slides_1a.html#rs-popularity",
+    "href": "materials/slides_1a.html#rs-popularity",
+    "title": "Intro to Data Science",
+    "section": "R’s Popularity",
+    "text": "R’s Popularity\n\n\n\n\n\n\n\nData from Lai et al. 2019"
+  },
+  {
+    "objectID": "materials/slides_1a.html#r-data-science-value",
+    "href": "materials/slides_1a.html#r-data-science-value",
+    "title": "Intro to Data Science",
+    "section": "R Data Science Value",
+    "text": "R Data Science Value\n\n\n\nArrows Left Right Reproducibility\n\nR is written in “scripts”\n\nScripts = step-by-step instructions\n\nScripts can be run by any R user\nAllows perfect replication of process\nPrograms that require clicking buttons are not (as) reproducible\n\nWould depend on accompanying written/verbal instructions\n\n\n\nCollaboration Handshake\n\nR scripts can be co-developed!\nThey can then be shared like a paper draft\nMany tools exist to formalize sharing\n\nWe’ll cover one in this course!\n\nUnscripted programs would again require written/verbal instructions\n\nThen hoping they click the right buttons in the right way"
+  },
+  {
+    "objectID": "materials/slides_1a.html#temperature-check",
+    "href": "materials/slides_1a.html#temperature-check",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?\n\n\n\n\n\nProgramming in R for Biologists"
+  },
+  {
+    "objectID": "materials/slides_template.html#incremental-list",
+    "href": "materials/slides_template.html#incremental-list",
+    "title": "Title",
+    "section": "Incremental List",
+    "text": "Incremental List\nIncremental because of presentation-level YAML\n\nX\nY\nZ"
+  },
+  {
+    "objectID": "materials/slides_template.html#non-incremental-list",
+    "href": "materials/slides_template.html#non-incremental-list",
+    "title": "Title",
+    "section": "Non-Incremental List",
+    "text": "Non-Incremental List\n\n\nA\nB\nC"
+  },
+  {
+    "objectID": "materials/slides_template.html#multi-column-slide",
+    "href": "materials/slides_template.html#multi-column-slide",
+    "title": "Title",
+    "section": "Multi-Column Slide",
+    "text": "Multi-Column Slide\n\n\ncontents…\n\ncontents…\n\ncontents…"
+  },
+  {
+    "objectID": "materials/slides_template.html#slide-with-aside",
+    "href": "materials/slides_template.html#slide-with-aside",
+    "title": "Title",
+    "section": "Slide with Aside",
+    "text": "Slide with Aside\n\n\nx\ny\nz*\n\n\n\n\n* = footnote (smaller/lighter text)"
+  },
+  {
+    "objectID": "materials/slides_template.html#example-code-chunk",
+    "href": "materials/slides_template.html#example-code-chunk",
+    "title": "Title",
+    "section": "Example Code Chunk",
+    "text": "Example Code Chunk\nIncluding incremental line emphasis\n# Make vector\nvec &lt;- c(1, 2, 3)\n\n# Take average\nmean(vec)"
+  },
+  {
+    "objectID": "materials/slides_template.html#executable-code-chunk",
+    "href": "materials/slides_template.html#executable-code-chunk",
+    "title": "Title",
+    "section": "Executable Code Chunk",
+    "text": "Executable Code Chunk\n\n# Make vector\nvec &lt;- c(1, 2, 3)\n\n# Take average\nmean(vec)\n\n\n\n[1] 2"
+  },
+  {
+    "objectID": "materials/slides_template.html#code-chunk-outputting-to-next-slide",
+    "href": "materials/slides_template.html#code-chunk-outputting-to-next-slide",
+    "title": "Title",
+    "section": "Code Chunk Outputting to Next Slide",
+    "text": "Code Chunk Outputting to Next Slide\n\n# Load ggplot2\nlibrary(ggplot2)\n\n# Create plot\nggplot(airquality, aes(x = Temp, y = Ozone)) +\n  geom_point() +\n  geom_smooth(method = \"loess\")"
+  },
+  {
+    "objectID": "materials/slides_template.html#code-chunk-outputting-to-next-slide-output",
+    "href": "materials/slides_template.html#code-chunk-outputting-to-next-slide-output",
+    "title": "Title",
+    "section": "Code Chunk Outputting to Next Slide",
+    "text": "Code Chunk Outputting to Next Slide"
+  },
+  {
+    "objectID": "materials/slides_template.html#slide-with-different-background-color",
+    "href": "materials/slides_template.html#slide-with-different-background-color",
+    "title": "Title",
+    "section": "Slide with different background color",
+    "text": "Slide with different background color\nHello world\n\n\nProgramming in R for Biologists"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home Page",
