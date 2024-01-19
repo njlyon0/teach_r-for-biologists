@@ -1,0 +1,20 @@
+{
+  "hash": "aa353115b4c10faf60cb3eaed5952fe4",
+  "result": {
+    "markdown": "---\ntitle: \"1B\"\nformat: \n  revealjs: \n    slide-number: c\n    incremental: true\n    scrollable: false\n    theme: [night, slides.scss]\n    reference-location: document\n    footer: \"[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-bio/)\"\n---\n\n\n## [Incremental List]{.blue}\n \nIncremental because of [presentation]{.purple}-level YAML \n\n- [X]{.orange}\n- [Y]{.pink}\n- [Z]{.gold}\n \n## Non-Incremental List\n\n:::{.nonincremental}\n\n- A\n- B\n- C\n\n:::\n\n## Multi-Column Slide\n\n:::: {.columns}\n\n::: {.column width=\"33.33%\"}\ncontents...\n:::\n\n::: {.column width=\"33.33%\"}\ncontents...\n:::\n\n::: {.column width=\"33.33%\"}\ncontents...\n:::\n\n::::\n\n## Slide with Aside\n\n:::{.nonincremental}\n\n- x\n- y\n- z\\*\n\n:::\n\n::: aside\n\\* = footnote (smaller/lighter text)\n:::\n\n## Example Code Chunk\n\nIncluding incremental line emphasis\n\n```{.r code-line-numbers=\"|2|5\"}\n# Make vector\nvec <- c(1, 2, 3)\n\n# Take average\nmean(vec)\n```\n\n## Executable Code Chunk\n\n\n::: {.cell output-location='fragment'}\n\n```{.r .cell-code}\n# Make vector\nvec <- c(1, 2, 3)\n\n# Take average\nmean(vec)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] 2\n```\n:::\n:::\n\n\n## Code Chunk Outputting to Next Slide\n\n\n::: {.cell output-location='slide'}\n\n```{.r .cell-code}\n# Load ggplot2\nlibrary(ggplot2)\n\n# Create plot\nggplot(airquality, aes(x = Temp, y = Ozone)) +\n  geom_point() +\n  geom_smooth(method = \"loess\")\n```\n\n::: {.cell-output-display}\n![](slides_1a_files/figure-revealjs/unnamed-chunk-2-1.png){width=960}\n:::\n:::\n\n\n## Slide with different background color {background-color=\"#FFB02F\"} \n\nHello world\n",
+    "supporting": [
+      "slides_1a_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

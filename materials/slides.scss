@@ -1,0 +1,50 @@
+/*-- scss:defaults --*/
+
+// Color Definitions
+$blue: #588FF9;
+$purple: #725EEC;
+$pink: #DF227C;
+$orange: #FF6018;
+$gold: #FFB02F;
+$cream: #F4F3EE;
+$charcoal: #222222;
+$black: #000000;
+$url-blue: #01BAEF;
+
+// Define Defaults
+$body-bg: $charcoal;
+$body-color: $cream;
+$link-color: $url_blue;
+
+/*-- scss:rules --*/
+
+// Quick refs for core palette
+.blue { 
+  color: $blue;
+  font-weight: bold;
+}
+
+.purple { 
+  color: $purple;
+  font-weight: bold;
+}
+
+.pink { 
+  color: $pink;
+  font-weight: bold;
+}
+
+.orange { 
+  color: $orange;
+  font-weight: bold;
+}
+
+.gold { 
+  color: $gold;
+  font-weight: bold;
+}
+
+//Underline URLs
+.reveal .slide a {
+  text-decoration: underline;
+}

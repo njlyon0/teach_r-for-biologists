@@ -2,23 +2,25 @@
 title: "1B"
 format: 
   revealjs: 
+    slide-number: c
     incremental: true
+    scrollable: false
+    theme: [night, slides.scss]
+    reference-location: document
+    footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-bio/)"
 ---
 
-## Content Slide 1
+## [Incremental List]{.blue}
+ 
+Incremental because of [presentation]{.purple}-level YAML 
 
-Test list:
+- [X]{.orange}
+- [Y]{.pink}
+- [Z]{.gold}
 
-- X
-- Y
-- Z
-
-
-## Content Slide 2
+## Non-Incremental List
 
 :::{.nonincremental}
-
-Test _non_-incremental list
 
 - A
 - B
@@ -44,6 +46,60 @@ contents...
 
 ::::
 
+## Slide with Aside
 
+:::{.nonincremental}
 
+- x
+- y
+- z\*
 
+:::
+
+::: aside
+\* = footnote (smaller/lighter text)
+:::
+
+## Example Code Chunk
+
+Including incremental line emphasis
+
+```{.r code-line-numbers="|2|5"}
+# Make vector
+vec <- c(1, 2, 3)
+
+# Take average
+mean(vec)
+```
+
+## Executable Code Chunk
+
+```{r}
+#| echo: true
+#| output-location: fragment
+
+# Make vector
+vec <- c(1, 2, 3)
+
+# Take average
+mean(vec)
+```
+
+## Code Chunk Outputting to Next Slide
+
+```{r}
+#| echo: true
+#| output-location: slide
+
+# Load ggplot2
+library(ggplot2)
+
+# Create plot
+ggplot(airquality, aes(x = Temp, y = Ozone)) +
+  geom_point() +
+  geom_smooth(method = "loess")
+```
+
+## Slide with different background color {background-color="#FFB02F"} 
+
+Hello world
