@@ -226,10 +226,155 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
     2. Paste it into Google
     3. Check the first few links to see how others solved that issue
 
-## [Method 3: x]{.orange}
+## [Google Tips]{.orange}
 
+- Use a plus sign (`+`) between search terms
+    - E.g., "R + \<error message text\>
 
-## [Method 4: x]{.orange}
+\
 
+- When specific wording matters, use quotes!
+    - E.g., "I want results with exactly this phrase"
+
+## [Method 3: Team Up!]{.orange} {.smaller}
+
+- Group work is a classic method of problem solving
+
+\
+
+- Email/text classmates about errors you're encountering
+    - Set up a weekly time to meet and work together
+
+\
+
+- Group work & assignments
+    - I really encourage you to work together to [solve problems]{.blue}
+    - _BUT_ assignments should be produced by you alone
+    - There are **no group assignments** in this course!
+
+## [Method 4: Take a Break]{.orange}
+
+<p align="center">
+<img src="comics/need-a-min.png" alt="Creature saying they need a minute while the R logo with eyes looks worried in a cloud of error messages"/>
+</p>
+
+## [Method 4: Take a Break]{.orange} {.smaller}
+
+- Coding issue can be super frustrating
+   - Totally **normal** to feel this way
+
+\
+
+. . .
+
+- If you are struggling to solve a problem, take a few minutes to step re-set
+   - Physically step away and do something active
+   - Do one of your hobbies for a few minutes
+   - Work on something else
+
+\
+
+. . .
+
+- Return to the problem an hour or so later and try again!
 
 ## [Method 5: Yours!]{.gold}
+
+- As students, you're experienced problem solvers already!
+
+\
+
+. . . 
+
+- Code problems can likely be solved by the strategies you already use!
+
+\
+
+. . . 
+
+- How do you solve problems you encounter in other courses or at work?
+
+## [Temperature Check]{.purple}
+
+### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
+## [Computer File Paths]{.orange} {.smaller}
+
+- Computers store files in "[folders]{.purple}"
+
+\
+
+- Folders can be _nested_ inside other folders
+
+\
+
+- The name of all folders leading to a particular file is that file's "[file path]{.gold}"
+    - File path starts at the biggest folder ("top" folder) and ends at the file
+    - Each folder name is separated by slashes (`\` or `/`)
+
+
+\
+
+- For example: _[\~]{.blue} [/]{.orange} Downloads [/]{.orange} BIO316 Syllabus.pdf_
+
+## [File Path Example]{.gold} {.smaller}
+
+What is the file path for the [notes]{.blue} document in this image?
+
+![](images/file-path.png){.absolute top=175 left=250 height="500" width="625"}
+
+. . . 
+
+_[\~]{.blue} [/]{.orange} Documents [/]{.orange} BIO 316 [/]{.orange} BIO316-Notes-Week 1.docx_
+
+## [Practice: File Paths]{.pink} {.smaller}
+
+- Pick a file on your computer
+    - _Not_ one in the "Downloads" folder (file paths are too short)
+
+\
+
+. . .
+
+- What is that file's path?
+    - Hint: _[\~]{.blue} [/]{.orange} ... [/]{.orange} ... [/]{.orange} ..._
+
+\
+
+. . .
+
+- When you have it, show me the file and tell me its path
+
+## [Upcoming Due Dates]{.blue} {.smaller}
+
+::::{.columns}
+
+:::{.column width="50%"}
+
+### Due before lab
+
+#### ASAP
+
+- Install R (see [here](https://cran.r-project.org/))
+- Install RStudio (see [here](https://posit.co/download/rstudio-desktop/))
+- Read the syllabus (esp. point values + assignment descriptions)
+
+#### Midnight before lab
+
+- Muddiest Point \#1
+
+:::
+
+:::{.column width="50%"}
+
+### Due before next lecture
+
+- Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) (p.1-12) 
+
+:::
+
+::::

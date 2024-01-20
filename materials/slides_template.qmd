@@ -1,15 +1,27 @@
 ---
-title: "Title"
+title: "Intro to Data Science"
 author: "Nick J Lyon"
+engine: knitr
 format: 
   revealjs: 
     slide-number: c
-    incremental: true
     scrollable: false
     theme: [night, slides.scss]
     reference-location: document
     footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-bio/)"
 ---
+
+## A Guide to Your Process
+
+### [Scheduling]{.blue}
+
+### [Learning Objectives]{.purple}
+
+### [Practice]{.pink}
+
+### [Supporting Information]{.orange}
+
+### [Class Discussion]{.gold}
 
 ## [Temperature Check]{.purple}
 
@@ -19,4 +31,31 @@ format:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+
+
+## [Upcoming Due Dates]{.blue} {.smaller}
+
+::::{.columns}
+
+:::{.column width="50%"}
+
+### Due before lab
+
+#### (By midnight)
+
+- Muddiest Point \#x
+
+:::
+
+:::{.column width="50%"}
+
+### Due before lecture
+
+#### (By midnight)
+
+- Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) (p.1-12) 
+
+:::
+
+::::
 
