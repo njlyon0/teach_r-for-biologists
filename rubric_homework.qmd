@@ -2,3 +2,22 @@
 title: "Homework Rubric"
 ---
 
+## Learning Objective(s)
+
+The specific learning objectives differ between each homework assignment and are listed there.
+
+## Assignment Due Date(s)
+
+Each homework is due at midnight the day before each lecture (i.e., Monday night) Late work will be accepted but will be subject to the late assignments policy outlined in this course’s syllabus.
+
+## Assignment Rubric
+
+Each homework is worth 10 points each; roughly 4% of your course grade (80 points total or 36% of your total grade). These will be graded as follows:
+
+| Points Earned | Standard |
+| :---: |:--- |
+| 10 | - Produces the correct result using the requested approach </br> - Follows reproducibility best practices (e.g., uses comments effectively, defines relevant function arguments, etc.) |
+| 9 | - Uses mostly the right approach(es), but a minor mistake results in an incorrect final product </br> - Primarily adheres to reproducibility guidelines. |
+| 5 | - Attempts to accomplish the task and makes some progress using the core concept(s) </br> - Follows reproducibility best practices reasonably well with a few areas without comments / function argument definition |
+| 1 | - Answer demonstrates a lack of understanding of the core concept </br> - Lacks reproducibility components |
+| 0 | - No submission OR submission is more than 10 days late |
