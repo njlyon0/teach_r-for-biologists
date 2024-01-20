@@ -67,7 +67,7 @@ Tell me a bit about yourselves!
 
 
 <p align="center">
-<img src="comics/r_knowledge.png" alt="Comic-style graph depicting someone's confidence with R changing over time">
+<img src="comics/r-knowledge.png" alt="Comic-style graph depicting someone's confidence with R changing over time">
 </p>
 
 ## [Data Science Definition]{.orange} 
@@ -170,7 +170,7 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 ## [Problem Solving in R]{.orange}
 
 <p align="center">
-<img src="comics/issue_source.png" alt="Small monster blaming a code creature for slipping while in the background other creatures labeled file management, typing, and computer navigation laugh">
+<img src="comics/issue-source.png" alt="Small monster blaming a code creature for slipping while in the background other creatures labeled file management, typing, and computer navigation laugh">
 </p>
 
 ## [Problem Solving Methods]{.orange} {.smaller}
@@ -209,7 +209,7 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 ## [Method 2: Google]{.orange} {.smaller}
 
-![](images/logo_google.png){.absolute top=50 left=750 width="400" height="140"}
+![](images/logo-google.png){.absolute top=50 left=750 width="400" height="140"}
 
 - This is a serious suggestion!
     - Google is truly an _amazing_ resource for this
