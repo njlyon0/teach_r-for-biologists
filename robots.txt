@@ -1,1 +1,1 @@
-Sitemap: https://github.com/njlyon0/teach_r-for-bio/sitemap.xml
+Sitemap: https://github.com/njlyon0/teach_r-for-biologists/sitemap.xml

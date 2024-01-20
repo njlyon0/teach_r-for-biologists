@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R Programming for Biologists - Home Page</title>
+<title>R Programming for Biologists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -144,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Course Overview</a></li><li class="breadcrumb-item"><a href="./index.html">Home</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Course Overview</a></li><li class="breadcrumb-item"><a href="./index.html">Syllabus</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -168,7 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Home</span></a>
+ <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
       </ul>
@@ -252,38 +218,286 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#course-description" id="toc-course-description" class="nav-link active" data-scroll-target="#course-description">Course Description</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#course-structure" id="toc-course-structure" class="nav-link" data-scroll-target="#course-structure">Course Structure</a></li>
+  <li><a href="#required-course-materials" id="toc-required-course-materials" class="nav-link" data-scroll-target="#required-course-materials">Required Course Materials</a></li>
+  <li><a href="#course-policies" id="toc-course-policies" class="nav-link" data-scroll-target="#course-policies">Course Policies</a>
+  <ul class="collapse">
+  <li><a href="#attendance" id="toc-attendance" class="nav-link" data-scroll-target="#attendance">Attendance</a></li>
+  <li><a href="#late-assignments" id="toc-late-assignments" class="nav-link" data-scroll-target="#late-assignments">Late assignments</a></li>
+  <li><a href="#zoom-etiquette" id="toc-zoom-etiquette" class="nav-link" data-scroll-target="#zoom-etiquette">Zoom Etiquette</a></li>
+  </ul></li>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  <li><a href="#assignment-descriptions" id="toc-assignment-descriptions" class="nav-link" data-scroll-target="#assignment-descriptions">Assignment Descriptions</a>
+  <ul class="collapse">
+  <li><a href="#weekly-homework" id="toc-weekly-homework" class="nav-link" data-scroll-target="#weekly-homework">Weekly Homework</a></li>
+  <li><a href="#muddiest-point-responses" id="toc-muddiest-point-responses" class="nav-link" data-scroll-target="#muddiest-point-responses">Muddiest Point Responses</a></li>
+  <li><a href="#r-function-tutorials" id="toc-r-function-tutorials" class="nav-link" data-scroll-target="#r-function-tutorials">R Function Tutorials</a></li>
+  <li><a href="#github-presence" id="toc-github-presence" class="nav-link" data-scroll-target="#github-presence">GitHub Presence</a></li>
+  <li><a href="#participation" id="toc-participation" class="nav-link" data-scroll-target="#participation">Participation</a></li>
+  </ul></li>
+  <li><a href="#how-to-succeed" id="toc-how-to-succeed" class="nav-link" data-scroll-target="#how-to-succeed">How to Succeed</a></li>
+  <li><a href="#usability-accessibility-and-design" id="toc-usability-accessibility-and-design" class="nav-link" data-scroll-target="#usability-accessibility-and-design">Usability, Accessibility, and Design</a></li>
+  <li><a href="#name-gender-identity-andor-gender-expression" id="toc-name-gender-identity-andor-gender-expression" class="nav-link" data-scroll-target="#name-gender-identity-andor-gender-expression">Name, Gender Identity, and/or Gender Expression</a></li>
+  <li><a href="#respect-for-your-peers" id="toc-respect-for-your-peers" class="nav-link" data-scroll-target="#respect-for-your-peers">Respect for your Peers</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/njlyon0/teach_r-for-bio/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Home Page</h1>
-</div>
 
 
+<section id="course-description" class="level2">
+<h2 class="anchored" data-anchor-id="course-description">Course Description</h2>
+<p>Computer literacy is increasingly critical to all aspects of the world in which we live. Data science is the branch of this skillset that sits in the middle of the Venn diagram between computers and some other subject area. Regardless of your academic specialty, fundamental data science skills data are both extremely useful and highly sought after in virtually all career paths. This course aims to give you a primer on data management best practices, analytical processes, and reproducible code. There will also be an opportunity to practice communication of technical concepts to a non-specialist audience.</p>
+<p>This course is relatively new so I will really appreciate your feedback and participation as we learn together! As such, I may need to adjust the scheduling of various topics (see the schedule for more information), but you will be notified of any changes sufficiently far in advance that you can prepare.</p>
+<p>I would also like to acknowledge that this course has taken place on Wôpanâak (Wampanoag), Massa-adchu-es-et (Massachusett), and Pokanoket land. For more information, please visit <a href="https://native-land.ca/">www.native-land.ca</a></p>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>Upon completion of this course, students will be able to:</p>
+<ul>
+<li>Understand the principles of well-structured data and reproducible coding</li>
+<li>Write short computer programs (called “scripts”) in R</li>
+<li>Explore data through wrangling and visualization techniques</li>
+<li>Automate data processes using loops and conditionals</li>
+<li>Apply general data science concepts to new datasets</li>
+<li>Create a professional online presence on GitHub (www.github.com)</li>
+<li>Evaluate peer’s work and offer both useful positive and constructively critical feedback</li>
+</ul>
+</section>
+<section id="course-structure" class="level2">
+<h2 class="anchored" data-anchor-id="course-structure">Course Structure</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Class Type</th>
+<th style="text-align: center;">Duration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Lecture</td>
+<td style="text-align: center;">1 hr 15 min</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Lab</td>
+<td style="text-align: center;">2 hrs 20 min</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="required-course-materials" class="level2">
+<h2 class="anchored" data-anchor-id="required-course-materials">Required Course Materials</h2>
+<ol type="1">
+<li>R (www.cran.r-project.org)</li>
+</ol>
+<p>I recognize that this website is very bare bones, but this program is the industry standard and enjoys the support of a large and active population of users. When you are troubleshooting (i.e., “debugging”) your code you will very much appreciate the breadth of people who are also using R. Follow the “Download R for …” link for your computer operating system (i.e., Mac vs.&nbsp;Windows vs.&nbsp;Linux) to install R.</p>
+<ol start="2" type="1">
+<li>RStudio Desktop (www.posit.co/downloads)</li>
+</ol>
+<p>RStudio is the preferred platform for working in R; as the R website showed, so-called “base R” can be a little basic. RStudio will provide several helpful bells and whistles that will make the program easier to work with and easier on the eyes!</p>
+<ol start="3" type="1">
+<li>Git &amp; GitHub</li>
+</ol>
+<p>Git (an application like R) and GitHub (a website) will be a part of the course, but you do not need to do anything with them before we cover them in class! Installing Git can be a little annoying for those without command line (a.k.a. “terminal”, “shell”, or “bash”) experience. We’ll cover working with Git and GitHub together a few weeks into the course. If you feel so moved, you are welcome to try to install Git (see instructions <a href="https://happygitwithr.com/install-git">here</a>) and make a profile on GitHub on your own, but doing it alone is <em>optional</em> so don’t worry if you can’t get it to work before we cover it in class!</p>
+<ol start="4" type="1">
+<li>Miscellaneous peer-reviewed articles / book excerpts</li>
+</ol>
+<p>I will provide any readings for the course in PDF format, so check the Canvas/etc. page regularly to download the necessary files. Any required readings will be posted at least one week before we discuss it in class. I’ll also do my best to link directly to the readings from this website!</p>
+</section>
+<section id="course-policies" class="level2">
+<h2 class="anchored" data-anchor-id="course-policies">Course Policies</h2>
+<section id="attendance" class="level3">
+<h3 class="anchored" data-anchor-id="attendance">Attendance</h3>
+<p>If you get sick, observe a religious holiday unaccounted for by the university’s calendar, have to miss class for a job/grad school interview, or simply don’t think you can handle class on a given day, please email me as early as possible to let me know you won’t be in class with a (brief) explanation. This will help me to share resources we’ll cover in class with you and plan for a smaller in-class community while you are out. My hope is that this class will be somewhere you <em>want</em> to attend, but I understand that sometimes life happens!</p>
+<p>While attendance is neither required nor graded, please do not abuse my sympathy and instead reserve absences for days where you honestly cannot attend. Your presence in and contributions to class are important both to your understanding of the material and the creation and maintenance of an in-class community.</p>
+</section>
+<section id="late-assignments" class="level3">
+<h3 class="anchored" data-anchor-id="late-assignments">Late assignments</h3>
+<p>Late work will be accepted with a 10% penalty for each day that it is late. You are welcome to submit assignments that are more than 10 days for feedback so that you can improve going forward but assignments submitted that far after the due date will not be worth any points. If you think that you will struggle to meet a particular deadline, come chat with me <em>as soon as possible</em> so that we can work out whether a compromise would be possible.</p>
+</section>
+<section id="zoom-etiquette" class="level3">
+<h3 class="anchored" data-anchor-id="zoom-etiquette">Zoom Etiquette</h3>
+<p>If needed, the entirety of this course can be taught virtually so I would like to clarify some expectations I have for that modality. I <strong><em>do not</em></strong> require that you either have your camera on or unmute yourself to contribute verbally. That said, talking with a room full of muted Zoom panels with cameras turned off makes it difficult for me to know whether I’m successfully engaging you and that you understand the material. Therefore, I really encourage you to have your cameras on and unmute to ask or answer questions as needed.</p>
+<p>Regardless of whether you take me up on that, I will make extensive use of the chat and “reactions” feature (i.e., thumbs up, raised hand, etc.) so be ready to engage on those axes whether or not your camera and mic are on for full participation credit (see participation guidelines below).</p>
+</section>
+</section>
+<section id="grading" class="level2">
+<h2 class="anchored" data-anchor-id="grading">Grading</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Assignment</th>
+<th style="text-align: center;">Point Value</th>
+<th style="text-align: center;">Percent of Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Weekly Homework</td>
+<td style="text-align: center;">80 pts (10 pts ea.)</td>
+<td style="text-align: center;">32% (4% ea.)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Muddiest Point Responses</td>
+<td style="text-align: center;">40 pts (5 pts ea.)</td>
+<td style="text-align: center;">16% (2% ea.)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">R Function Tutorial - First Draft</td>
+<td style="text-align: center;">30 pts</td>
+<td style="text-align: center;">12%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">R Function Tutorial - Final Draft</td>
+<td style="text-align: center;">40 pts</td>
+<td style="text-align: center;">16%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">GitHub Presence</td>
+<td style="text-align: center;">40 pts</td>
+<td style="text-align: center;">16%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Participation (incl.&nbsp;R Package Report Peer Review)</td>
+<td style="text-align: center;">20 pts</td>
+<td style="text-align: center;">8%</td>
+</tr>
+</tbody>
+</table>
+<p>Detailed rubrics are shared elsewhere in this site.</p>
+</section>
+<section id="assignment-descriptions" class="level2">
+<h2 class="anchored" data-anchor-id="assignment-descriptions">Assignment Descriptions</h2>
+<section id="weekly-homework" class="level3">
+<h3 class="anchored" data-anchor-id="weekly-homework">Weekly Homework</h3>
+<ul>
+<li>There will be eight (8) equally weighted homework assignments. These will be graded as follows:
+<ul>
+<li>(10 pts) Produces the correct result using the requested approach</li>
+<li>(9 pts) Generally uses the right approach, but a minor mistake results in an incorrect final product</li>
+<li>(5 pts) Attempts to accomplish the task and makes some progress using the core concept(s)</li>
+<li>(1 pt) Answer demonstrates a lack of understanding of the core concept</li>
+<li>(0 pts) No submission OR submission is more than 10 days late</li>
+</ul></li>
+<li>Homework numbers 1 through 7 will be assigned after lecture and due before the following lecture at midnight (i.e., 7 days)
+<ul>
+<li>Homework 8 will be assigned after lecture and due before lab of that week (i.e., 3 days) because there won’t be a lecture after that one</li>
+</ul></li>
+<li>I will give you feedback on these assignments that you are welcome to implement so that you can include those revised homework assignments in your GitHub portfolio (see “GitHub Presence” below)</li>
+</ul>
+</section>
+<section id="muddiest-point-responses" class="level3">
+<h3 class="anchored" data-anchor-id="muddiest-point-responses">Muddiest Point Responses</h3>
+<ul>
+<li>“Muddiest Point” is a type of exit ticket. Such assignments are meant to allow you space to think critically about what concepts from that day you felt confident with and which you struggled with (i.e., which were “muddier”).</li>
+<li>Note that if everything was clear in a given lesson then substituting a follow-up question that goes beyond the lecture materials is appropriate!</li>
+<li>There will be eight (8) equally weighted muddiest point responses. These will be graded as follows:
+<ul>
+<li>(5 pts) Clearly articulates both a concept that was difficult and what about that concept was challenging and a concept that was clear</li>
+<li>(3 pts) Identifies a difficult concept but does not explain what was challenging about it in sufficient detail that I can identify the stumbling block</li>
+<li>(1 pt) Response lacks depth and does not sufficiently explain why topic was difficult</li>
+<li>(0 pts) No submission OR submission is more than 10 days late</li>
+</ul></li>
+<li>All muddiest point responses will be due by midnight the day before each lab (i.e., one day after the lecture to which they are responding)
+<ul>
+<li>My hope is this will be helpful to you in clearly remembering which topics did or did not make sense to you.</li>
+<li>Additionally, this tight turn around will let me re-cover concepts in lab that several students identify as their muddiest point from that week’s lecture</li>
+</ul></li>
+</ul>
+</section>
+<section id="r-function-tutorials" class="level3">
+<h3 class="anchored" data-anchor-id="r-function-tutorials">R Function Tutorials</h3>
+<ul>
+<li>A full rubric is available elsewhere so that you can have some specific guidelines on how to succeed on this assignment</li>
+<li>First Draft
+<ul>
+<li>Students will pick three functions from R package(s) available on CRAN (i.e., “official” R packages)</li>
+<li>You will then create a tutorial of these three functions aimed at an interested but non-specialist audience (i.e., your classmates) in an R Markdown file</li>
+<li>This tutorial should be self-contained and support copy/pasting of code that runs for your classmates / me</li>
+<li>You may begin work on this assignment whenever you wish though you may wish to wait until we cover R Markdown files in the early weeks of the course</li>
+<li>Roughly halfway through the course, you will share your R Markdowns with your classmates and walk us through your tutorial</li>
+<li>Your classmates will provide positive and <em>constructively</em> critical feedback on your tutorial</li>
+</ul></li>
+<li>Revision
+<ul>
+<li>You will have two weeks to implement any changes your classmates suggest by emphasizing strengths and addressing weaknesses indicated by your peers</li>
+<li>You will then get to present your revised tutorial and receive more feedback</li>
+</ul></li>
+</ul>
+</section>
+<section id="github-presence" class="level3">
+<h3 class="anchored" data-anchor-id="github-presence">GitHub Presence</h3>
+<ul>
+<li>A rubric for this assignment is also available elsewhere but the summarized description below may prove helpful in setting expectations.</li>
+<li>This assignment includes two parts: (1) a fleshed-out GitHub profile including a ‘special repository’ that serves as a landing page for visitors to your profile and (2) a portfolio repository that includes (at least) your revised R Package Report
+<ul>
+<li>Don’t worry if some of those vocabulary terms are alien to your right now, we will cover them in class/lab, and you will be well-prepared to tackle this component</li>
+<li>Your portfolio repository should also include any homework assignments that you receive a 9 or 10 on (or revise following a score)</li>
+</ul></li>
+<li>This assignment is meant both to give you some working knowledge of Git/GitHub and to serve as a tangible resource that you can share with prospective employers and add to your resume and/or curriculum vitae (CV)</li>
+</ul>
+</section>
+<section id="participation" class="level3">
+<h3 class="anchored" data-anchor-id="participation">Participation</h3>
+<p>Recognizing that not everyone is equally comfortable speaking in front of a group, communication is still a crucial skill in virtually any career path. I <em>strongly encourage</em> you to take advantage of this course to get out of your comfort zone and try to develop that skill while in a safe environment if it is not your natural inclination. That being said, your participation grade will not be entirely dependent upon contributing to conversation and there will be other ways to grow as a communicator in this course.</p>
+<ul>
+<li>Your participation score includes:
+<ul>
+<li>Asking questions in class (both verbally and in the Zoom chat)</li>
+<li>Useful written feedback to peers on either draft of their R package reports</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="how-to-succeed" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-succeed">How to Succeed</h2>
+<p>I am committed to being a partner in your success in this course, and in the spirit of that I have the following tips for success:</p>
+<ol type="1">
+<li>Come to office hours / email me
+<ul>
+<li>I will be readily available via office hours and informally whenever my office door is open</li>
+<li>I am also happy to just chat with you about fun course-adjacent things, so don’t feel like you need to be struggling with the course to stop by</li>
+</ul></li>
+<li>Check the Canvas page and your university email regularly
+<ul>
+<li>Messages to the class/assignments/grades will be posted there</li>
+<li>Check every so often so that no assignments / deadlines sneak up on you</li>
+</ul></li>
+<li>Build “muscle memory”
+<ul>
+<li>I will do my utmost to make this course accessible and fun, but programming is fundamentally a new language, so you’ll need to practice to “speak” it confidently</li>
+<li>I recommend playing with the concepts and code from class outside of class so that you can build fluency that will last beyond the scope of this course</li>
+<li>Try to convince a peer to let you teach them some topic we covered in class; teaching something is one of the best ways to truly understand that topic!</li>
+</ul></li>
+<li>Give me feedback on where I can improve/change my teaching style to benefit you
+<ul>
+<li>I will give an anonymous mid-term evaluation so that I can be most effective for what you need to excel</li>
+<li>I will also welcome informal feedback if you are comfortable sharing</li>
+</ul></li>
+</ol>
+</section>
+<section id="usability-accessibility-and-design" class="level2">
+<h2 class="anchored" data-anchor-id="usability-accessibility-and-design">Usability, Accessibility, and Design</h2>
+<p>I am committed to creating a course that is inclusive in its design. If you encounter barriers, please let me know immediately so that we can determine if there is a design adjustment that can be made or if an accommodation might be needed to overcome the limitations of the design. I am always happy to consider creative solutions as long as they do not compromise the intent of the assessment or learning activity. I welcome feedback that will assist me in improving the usability and experience for all students.</p>
+</section>
+<section id="name-gender-identity-andor-gender-expression" class="level2">
+<h2 class="anchored" data-anchor-id="name-gender-identity-andor-gender-expression">Name, Gender Identity, and/or Gender Expression</h2>
+<p>The university will provide me with each student’s legal name, but I will gladly honor your request to address you by an alternate name. I will also use whichever gender pronouns you identify with. Please advise me of your pronouns and/or chosen name early in the semester so that I may make appropriate changes to my records.</p>
+</section>
+<section id="respect-for-your-peers" class="level2">
+<h2 class="anchored" data-anchor-id="respect-for-your-peers">Respect for your Peers</h2>
+<p>Group work is a significant part of this course explicitly in some of the assignments as well as implicitly by the collaborative nature of some of these coding tasks. I expect that you will be mutually respectful with one another both in and outside of class time. I will ask you questions during lab and lecture and both places are also an ideal time for you all to ask me questions that you have on course topics &amp; policies. I don’t believe that “dumb questions” exist, and I expect that you treat your peers’ questions with the respect that your fellow students deserve. Together we will learn more in an environment where we build one another up than we would in one where we fail to support one another.</p>
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
-
-
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -633,7 +847,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-      var filterRegex = new RegExp("https:\/\/github\.com\/njlyon0\/teach_r-for-bio");
+      var filterRegex = new RegExp("https:\/\/github\.com\/njlyon0\/teach_r-for-biologists");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href);
     }
@@ -654,7 +868,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-left">
       &nbsp;
     </div>   
-    <div class="nav-footer-center">Copyright 2024, Nicholas J Lyon<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/njlyon0/teach_r-for-bio/issues/new" class="toc-action">Report an issue</a></p></div></div></div>
+    <div class="nav-footer-center">Copyright 2024, Nicholas J Lyon</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
