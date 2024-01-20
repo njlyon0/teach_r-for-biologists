@@ -12,12 +12,12 @@ I would also like to acknowledge that this course has taken place on Wôpanâak 
 Upon completion of this course, students will be able to:
 
 - Understand the principles of well-structured data and reproducible coding
--	Write short computer programs (called "scripts") in R
--	Explore data through wrangling and visualization techniques
--	Automate data processes using loops and conditionals
--	Apply general data science concepts to new datasets
--	Create a professional online presence on GitHub (www.github.com)
--	Evaluate peer's work and offer both useful positive and constructively critical feedback
+- Write short computer programs (called "scripts") in R
+- Explore data through wrangling and visualization techniques
+- Automate data processes using loops and conditionals
+- Apply general data science concepts to new datasets
+- Create a professional online presence on GitHub (www.github.com)
+- Evaluate peer's work and offer both useful positive and constructively critical feedback
 
 ## Course Structure
 
@@ -28,19 +28,19 @@ Upon completion of this course, students will be able to:
 
 ## Required Course Materials
 
-1.	R (www.cran.r-project.org)
+1. R (www.cran.r-project.org)
 
 I recognize that this website is very bare bones, but this program is the industry standard and enjoys the support of a large and active population of users. When you are troubleshooting (i.e., "debugging") your code you will very much appreciate the breadth of people who are also using R. Follow the "Download R for ..." link for your computer operating system (i.e., Mac vs. Windows vs. Linux) to install R.
 
-2.	RStudio Desktop (www.posit.co/downloads)
+2. RStudio Desktop (www.posit.co/downloads)
 
 RStudio is the preferred platform for working in R; as the R website showed, so-called "base R" can be a little basic. RStudio will provide several helpful bells and whistles that will make the program easier to work with and easier on the eyes!
 
-3.	Git & GitHub
+3. Git & GitHub
 
 Git (an application like R) and GitHub (a website) will be a part of the course, but you do not need to do anything with them before we cover them in class! Installing Git can be a little annoying for those without command line (a.k.a. "terminal", "shell", or "bash") experience. We'll cover working with Git and GitHub together a few weeks into the course. If you feel so moved, you are welcome to try to install Git (see instructions [here](https://happygitwithr.com/install-git)) and make a profile on GitHub on your own, but doing it alone is _optional_ so don't worry if you can't get it to work before we cover it in class!
 
-4.	Miscellaneous peer-reviewed articles / book excerpts
+4. Miscellaneous peer-reviewed articles / book excerpts
 
 I will provide any readings for the course in PDF format, so check the Canvas/etc. page regularly to download the necessary files. Any required readings will be posted at least one week before we discuss it in class. I'll also do my best to link directly to the readings from this website!
 
@@ -63,5 +63,17 @@ If needed, the entirety of this course can be taught virtually so I would like t
 
 Regardless of whether you take me up on that, I will make extensive use of the chat and "reactions" feature (i.e., thumbs up, raised hand, etc.) so be ready to engage on those axes whether or not your camera and mic are on for full participation credit (see participation guidelines below).
 
+## Grading
+
+| Assignment | Point Value | Percent of Total |
+| :---: | :---: | :---: |
+| Weekly Homework | 80 pts (10 pts ea.) | 32% (4% ea.) |
+| Muddiest Point Responses | 40 pts (5 pts ea.) | 16% (2% ea.) | 
+| R Function Tutorial - First Draft | 30 pts | 12% |
+| R Function Tutorial - Final Draft | 40 pts | 16% |
+| GitHub Presence | 40 pts | 16% |
+| Participation (incl. R Package Report Peer Review) | 20 pts | 8% |
+
+Detailed rubrics are shared elsewhere in this site.
 
 
