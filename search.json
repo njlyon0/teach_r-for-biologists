@@ -46,7 +46,7 @@
     "href": "materials/slides_1a.html#data-science-definition",
     "title": "Intro to Data Science",
     "section": "Data Science Definition",
-    "text": "Data Science Definition\nData science combines programming and statistics with subject matter expertise to identify patterns and insights hidden in data"
+    "text": "Data Science Definition\n\n\n\nData science combines programming and statistics with subject matter expertise to identify patterns and insights hidden in data"
   },
   {
     "objectID": "materials/slides_1a.html#why-is-this-course-taught-in-r",
@@ -105,32 +105,109 @@
     "text": "Method 2: Google\n\n\nThis is a serious suggestion!\n\nGoogle is truly an amazing resource for this\n\n\n\n\n\nThere are forums where where people discuss code issues\n\nStackOverflow, GitHub Discussions, etc.\n\n\n\n\n\nIf you get an error:\n\nCopy the entire error message\nPaste it into Google\nCheck the first few links to see how others solved that issue"
   },
   {
-    "objectID": "materials/slides_1a.html#method-3-x",
-    "href": "materials/slides_1a.html#method-3-x",
+    "objectID": "materials/slides_1a.html#google-tips",
+    "href": "materials/slides_1a.html#google-tips",
     "title": "Intro to Data Science",
-    "section": "Method 3: x",
-    "text": "Method 3: x"
+    "section": "Google Tips",
+    "text": "Google Tips\n\nUse a plus sign (+) between search terms\n\nE.g., “R + &lt;error message text&gt;\n\n\n\n\n\nWhen specific wording matters, use quotes!\n\nE.g., “I want results with exactly this phrase”"
   },
   {
-    "objectID": "materials/slides_1a.html#method-4-x",
-    "href": "materials/slides_1a.html#method-4-x",
+    "objectID": "materials/slides_1a.html#method-3-team-up",
+    "href": "materials/slides_1a.html#method-3-team-up",
     "title": "Intro to Data Science",
-    "section": "Method 4: x",
-    "text": "Method 4: x"
+    "section": "Method 3: Team Up!",
+    "text": "Method 3: Team Up!\n\nGroup work is a classic method of problem solving\n\n\n\n\nEmail/text classmates about errors you’re encountering\n\nSet up a weekly time to meet and work together\n\n\n\n\n\nGroup work & assignments\n\nI really encourage you to work together to solve problems\nBUT assignments should be produced by you alone\nThere are no group assignments in this course!"
+  },
+  {
+    "objectID": "materials/slides_1a.html#method-4-take-a-break",
+    "href": "materials/slides_1a.html#method-4-take-a-break",
+    "title": "Intro to Data Science",
+    "section": "Method 4: Take a Break",
+    "text": "Method 4: Take a Break"
+  },
+  {
+    "objectID": "materials/slides_1a.html#method-4-take-a-break-1",
+    "href": "materials/slides_1a.html#method-4-take-a-break-1",
+    "title": "Intro to Data Science",
+    "section": "Method 4: Take a Break",
+    "text": "Method 4: Take a Break\n\nCoding issue can be super frustrating\n\nTotally normal to feel this way\n\n\n\n\n\n\nIf you are struggling to solve a problem, take a few minutes to step re-set\n\nPhysically step away and do something active\nDo one of your hobbies for a few minutes\nWork on something else\n\n\n\n\n\n\n\nReturn to the problem an hour or so later and try again!"
   },
   {
     "objectID": "materials/slides_1a.html#method-5-yours",
     "href": "materials/slides_1a.html#method-5-yours",
     "title": "Intro to Data Science",
     "section": "Method 5: Yours!",
-    "text": "Method 5: Yours!\n\n\nProgramming in R for Biologists"
+    "text": "Method 5: Yours!\n\nAs students, you’re experienced problem solvers already!\n\n\n\n\n\nCode problems can likely be solved by the strategies you already use!\n\n\n\n\n\n\nHow do you solve problems you encounter in other courses or at work?"
+  },
+  {
+    "objectID": "materials/slides_1a.html#temperature-check-1",
+    "href": "materials/slides_1a.html#temperature-check-1",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
+    "objectID": "materials/slides_1a.html#computer-file-paths",
+    "href": "materials/slides_1a.html#computer-file-paths",
+    "title": "Intro to Data Science",
+    "section": "Computer File Paths",
+    "text": "Computer File Paths\n\nComputers store files in “folders”\n\n\n\n\nFolders can be nested inside other folders\n\n\n\n\nThe name of all folders leading to a particular file is that file’s “file path”\n\nFile path starts at the biggest folder (“top” folder) and ends at the file\nEach folder name is separated by slashes (\\ or /)\n\n\n\n\n\nFor example: ~ / Downloads / BIO316 Syllabus.pdf"
+  },
+  {
+    "objectID": "materials/slides_1a.html#file-path-example",
+    "href": "materials/slides_1a.html#file-path-example",
+    "title": "Intro to Data Science",
+    "section": "File Path Example",
+    "text": "File Path Example\nWhat is the file path for the notes document in this image?\n\n\n~ / Documents / BIO 316 / BIO316-Notes-Week 1.docx"
+  },
+  {
+    "objectID": "materials/slides_1a.html#practice-file-paths",
+    "href": "materials/slides_1a.html#practice-file-paths",
+    "title": "Intro to Data Science",
+    "section": "Practice: File Paths",
+    "text": "Practice: File Paths\n\nPick a file on your computer\n\nNot one in the “Downloads” folder (file paths are too short)\n\n\n\n\n\n\nWhat is that file’s path?\n\nHint: ~ / … / … / …\n\n\n\n\n\n\n\nWhen you have it, show me the file and tell me its path"
+  },
+  {
+    "objectID": "materials/slides_1a.html#upcoming-due-dates",
+    "href": "materials/slides_1a.html#upcoming-due-dates",
+    "title": "Intro to Data Science",
+    "section": "Upcoming Due Dates",
+    "text": "Upcoming Due Dates\n\n\nDue before lab\nDue ASAP\n\nInstall R (see here)\nInstall RStudio (see here)\nRead the syllabus (esp. point values + assignment descriptions)\n\nDue by midnight\n\nMuddiest Point #1\n\n\nDue before lecture\n(By midnight)\n\nRead the British Ecological Society’s Reproducible Code Guide (p.1-12)\n\n\n\n\n\nProgramming in R for Biologists"
+  },
+  {
+    "objectID": "materials/slides_template.html#a-guide-to-your-process",
+    "href": "materials/slides_template.html#a-guide-to-your-process",
+    "title": "Intro to Data Science",
+    "section": "A Guide to Your Process",
+    "text": "A Guide to Your Process\nScheduling\nLearning Objectives\nPractice\nSupporting Information\nClass Discussion"
+  },
+  {
+    "objectID": "materials/slides_template.html#todays-plan",
+    "href": "materials/slides_template.html#todays-plan",
+    "title": "Intro to Data Science",
+    "section": "Today’s Plan",
+    "text": "Today’s Plan\n\nY"
+  },
+  {
+    "objectID": "materials/slides_template.html#todays-learning-objectives",
+    "href": "materials/slides_template.html#todays-learning-objectives",
+    "title": "Intro to Data Science",
+    "section": "Today’s Learning Objectives",
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nX"
   },
   {
     "objectID": "materials/slides_template.html#temperature-check",
     "href": "materials/slides_template.html#temperature-check",
-    "title": "Title",
+    "title": "Intro to Data Science",
     "section": "Temperature Check",
-    "text": "Temperature Check\nHow are you Feeling?\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
+    "objectID": "materials/slides_template.html#upcoming-due-dates",
+    "href": "materials/slides_template.html#upcoming-due-dates",
+    "title": "Intro to Data Science",
+    "section": "Upcoming Due Dates",
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #x\n\n\nDue before lecture\n(By midnight)\n\nX\n\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "index.html",
