@@ -8,7 +8,7 @@ website:
   repo-url: https://github.com/njlyon0/teach_r-for-bio
   repo-actions: [issue]
   navbar:
-    right: 
+    right:
       - text: "Instructors"
         menu:
           - text: "Nick J Lyon"
@@ -24,7 +24,7 @@ website:
     contents:
       - section: "Course Overview"
         contents:
-          - text: "Home"
+          - text: "Syllabus"
             href: index.qmd
       - section: "Slide Decks"
         contents:
@@ -44,10 +44,10 @@ website:
           - text: "Code Iteration"
           - text: "Custom Functions"
           - section: "Bonus Content"
-            contents: 
+            contents:
               - text: "Ecology + R"
               - text: "Spatial Resources"
-  page-footer: 
+  page-footer:
     center: "Copyright 2024, Nicholas J Lyon"
 
 execute:
@@ -58,7 +58,7 @@ format:
     code-overflow: wrap
     code-line-numbers: false
     code-copy: hover
-    theme: 
+    theme:
       light: lyonlight.scss
       dark: lyondark.scss
     mainfont: Open Sans

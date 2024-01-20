@@ -1,11 +1,20 @@
----
-title: "Home Page"
----
 
-This is a Quarto website.
+## Course Description 
+Computer literacy is increasingly critical to all aspects of the world in which we live. Data science is the branch of this skillset that sits in the middle of the Venn diagram between computers and some other subject area. Regardless of your academic specialty, fundamental data science skills data are both extremely useful and highly sought after in virtually all career paths. This course aims to give you a primer on data management best practices, analytical processes, and reproducible code. There will also be an opportunity to practice communication of technical concepts to a non-specialist audience.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+This course is relatively new so I will really appreciate your feedback and participation as we learn together! As such, I may need to adjust the scheduling of various topics (see the schedule for more information), but you will be notified of any changes sufficiently far in advance that you can prepare.
 
-```{r}
-1 + 1
-```
+I would also like to acknowledge that this course has taken place on Wôpanâak (Wampanoag), Massa-adchu-es-et (Massachusett), and Pokanoket land. For more information, please visit [www.native-land.ca](https://native-land.ca/)
+
+## Learning Objectives
+
+Upon completion of this course, students will be able to:
+
+- Understand the principles of well-structured data and reproducible coding
+-	Write short computer programs (called “scripts”) in R
+-	Explore data through wrangling and visualization techniques
+-	Automate data processes using loops and conditionals
+-	Apply general data science concepts to new datasets
+-	Create a professional online presence on GitHub (www.github.com)
+-	Evaluate peer’s work and offer both useful positive and constructively critical feedback
+
