@@ -74,9 +74,9 @@ Tell me a bit about yourselves!
 
 Data science combines [_programming_]{.gold} and statistics with [_subject matter expertise_]{.purple} to identify patterns and insights hidden in data
 
-## Why is this Course Taught in R? {.smaller}
+## [Why is this Course Taught in R?]{.orange} {.smaller}
 
-`r fontawesome::fa(name = "r-project", fill = "#F4F3EE", a11y = "sem")` is a programming language that is _awesome_ for environmental data scientists
+R is a programming language that is _awesome_ for environmental data scientists
 
 \
 
@@ -84,14 +84,13 @@ Data science combines [_programming_]{.gold} and statistics with [_subject matte
 
 Benefits of R:
 
-. . .
+\
 
-- Free!
-- Reproducible
-- Accessible
-    - _Many_ online tutorials for R
-- Popular
-- Versatile
+. . . 
+
+| Free | Reproducible | Accessible | Popular | Versatile |
+| :---: | :---: | :---: | :---: | :---: |
+| `r fontawesome::fa(name = "piggy-bank", a11y = "sem")` | `r fontawesome::fa(name = "repeat", a11y = "sem")` | `r fontawesome::fa(name = "universal-access", a11y = "sem")` | `r fontawesome::fa(name = "star", a11y = "sem")` | `r fontawesome::fa(name = "masks-theater", a11y = "sem")` |
 
 ## [R's Popularity]{.orange}
 
@@ -135,7 +134,7 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 ::::{.columns}
 
 :::{.column width="50%"}
-### `r fontawesome::fa(name = "arrows-left-right", fill = "#F4F3EE", a11y = "sem")` Reproducibility 
+### `r fontawesome::fa(name = "arrows-left-right", a11y = "sem")` Reproducibility 
 
 - R is written in "[scripts]{.blue}"
     - Scripts = step-by-step instructions
@@ -146,7 +145,7 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 :::
 
 :::{.column width="50%"}
-### Collaboration  `r fontawesome::fa(name = "handshake", fill = "#F4F3EE", a11y = "sem")`
+### Collaboration  `r fontawesome::fa(name = "handshake", a11y = "sem")`
 
 - R scripts can be co-developed!
 - They can then be shared like a paper draft
@@ -168,4 +167,56 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+## [Problem Solving in R]{.orange}
+
+<p align="center">
+<img src="comics/issue_source.png" alt="Small monster blaming a code creature for slipping while in the background other creatures labeled file management, typing, and computer navigation laugh">
+</p>
+
+## [Problem Solving Methods]{.orange} {.smaller}
+
+- Problem solving is an important life skill generally
+    - Also useful for data science!
+
+\
+
+- Let's discuss some useful strategies:
+    1. 'Rubber duck' method
+    2. Google (seriously!)
+    3. Teamwork
+    4. Take a break
+    5. Whatever methods _you_ use!
+
+## [Method 1: Rubber Duck](.orange) {.smaller}
+
+::::{.columns}
+
+::: {.column width="70%"}
+
+- Get rubber duck / small object
+
+. . . 
+
+- Explain each line of your code to the duck
+    - Go into as much detail as possible
+    - Re-read lines _carefully_ as you explain
+
+. . .
+
+- You'll catch typos/errors that you had missed!
+
+. . .
+
+- Why "rubber duck" instead of "friend"?
+    - Because it would likely be a dull experience for your friend `r fontawesome::fa(name = "smile", a11y = "sem")`
+
+:::
+
+:::{.column width="30%"}
+
+x
+
+:::
+
+::::
 
