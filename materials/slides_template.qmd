@@ -23,9 +23,21 @@ format:
 
 ### [Class Discussion]{.gold}
 
+## [Today's Plan]{.blue}
+
+- Y
+
+## [Today's Learning Objectives]{.purple}
+
+After today's session you will be able to:
+
+. . .
+
+- X
+
 ## [Temperature Check]{.purple}
 
-### How are you Feeling?
+#### How are you Feeling?
 
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
@@ -53,7 +65,7 @@ format:
 
 #### (By midnight)
 
-- Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) (p.1-12) 
+- X
 
 :::
 

@@ -1,6 +1,6 @@
 ---
 title: "Intro to Data Science"
-author: "Nick J Lyon"
+author: "Lecture 1 -- Data Science Background"
 engine: knitr
 format: 
   revealjs: 
@@ -34,7 +34,7 @@ format:
 ## [Today's Learning Objectives]{.purple}
 
 After today's session you will be able to:
-
+ 
 . . .
 
 - Define "data science"
@@ -65,16 +65,18 @@ Tell me a bit about yourselves!
 
 ## [My Goal for You]{.purple}
 
-
 <p align="center">
 <img src="comics/r-knowledge.png" alt="Comic-style graph depicting someone's confidence with R changing over time">
 </p>
 
 ## [Data Science Definition]{.orange} 
 
+\
+\
+
 Data science combines [_programming_]{.gold} and statistics with [_subject matter expertise_]{.purple} to identify patterns and insights hidden in data
 
-## [Why is this Course Taught in R?]{.orange} {.smaller}
+## [Why is this Course Taught in R?]{.orange}
 
 R is a programming language that is _awesome_ for environmental data scientists
 
@@ -161,7 +163,7 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 ## [Temperature Check]{.purple}
 
-### How are you Feeling?
+#### How are you Feeling?
 
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
@@ -296,7 +298,7 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 ## [Temperature Check]{.purple}
 
-### How are you Feeling?
+#### How are you Feeling?
 
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
@@ -357,13 +359,13 @@ _[\~]{.blue} [/]{.orange} Documents [/]{.orange} BIO 316 [/]{.orange} BIO316-Not
 
 ### Due before lab
 
-#### ASAP
+#### Due ASAP
 
 - Install R (see [here](https://cran.r-project.org/))
 - Install RStudio (see [here](https://posit.co/download/rstudio-desktop/))
 - Read the syllabus (esp. point values + assignment descriptions)
 
-#### Midnight before lab
+#### Due by midnight
 
 - Muddiest Point \#1
 
@@ -371,7 +373,9 @@ _[\~]{.blue} [/]{.orange} Documents [/]{.orange} BIO 316 [/]{.orange} BIO316-Not
 
 :::{.column width="50%"}
 
-### Due before next lecture
+### Due before lecture
+
+#### (By midnight)
 
 - Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) (p.1-12) 
 
