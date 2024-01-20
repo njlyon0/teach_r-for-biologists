@@ -53,7 +53,7 @@
     "href": "materials/slides_1a.html#why-is-this-course-taught-in-r",
     "title": "Intro to Data Science",
     "section": "Why is this Course Taught in R?",
-    "text": "Why is this Course Taught in R?\nR Project is a programming language that is awesome for environmental data scientists\n\n\n\nBenefits of R:\n\n\n\nFree!\nReproducible\nAccessible\n\nMany online tutorials for R\n\nPopular\nVersatile"
+    "text": "Why is this Course Taught in R?\nR is a programming language that is awesome for environmental data scientists\n\n\n\nBenefits of R:\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFree\nReproducible\nAccessible\nPopular\nVersatile\n\n\n\n\nPiggy Bank\nRepeat\nUniversal Access\nStar\nMasks Theater"
   },
   {
     "objectID": "materials/slides_1a.html#rs-popularity",
@@ -74,70 +74,63 @@
     "href": "materials/slides_1a.html#temperature-check",
     "title": "Intro to Data Science",
     "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
+    "objectID": "materials/slides_1a.html#problem-solving-in-r",
+    "href": "materials/slides_1a.html#problem-solving-in-r",
+    "title": "Intro to Data Science",
+    "section": "Problem Solving in R",
+    "text": "Problem Solving in R"
+  },
+  {
+    "objectID": "materials/slides_1a.html#problem-solving-methods",
+    "href": "materials/slides_1a.html#problem-solving-methods",
+    "title": "Intro to Data Science",
+    "section": "Problem Solving Methods",
+    "text": "Problem Solving Methods\n\nProblem solving is an important life skill generally\n\nAlso useful for data science!\n\n\n\n\n\nLet’s discuss some useful strategies:\n\n‘Rubber duck’ method\nGoogle (seriously!)\nTeamwork\nTake a break\nWhatever methods you use!"
+  },
+  {
+    "objectID": "materials/slides_1a.html#method-1-rubber-duck",
+    "href": "materials/slides_1a.html#method-1-rubber-duck",
+    "title": "Intro to Data Science",
+    "section": "Method 1: Rubber Duck",
+    "text": "Method 1: Rubber Duck\n - Get rubber duck / small object\n\n\nExplain each line of your code to the duck\n\nGo into as much detail as possible\nRe-read lines carefully as you explain\n\n\n\n\n\nYou’ll catch typos/errors that you had missed!\n\n\n\n\nWhy “rubber duck” instead of “friend”?\n\nBecause it would likely be a dull experience for your friend Face Smile"
+  },
+  {
+    "objectID": "materials/slides_1a.html#method-2-google",
+    "href": "materials/slides_1a.html#method-2-google",
+    "title": "Intro to Data Science",
+    "section": "Method 2: Google",
+    "text": "Method 2: Google\n\n\nThis is a serious suggestion!\n\nGoogle is truly an amazing resource for this\n\n\n\n\n\nThere are forums where where people discuss code issues\n\nStackOverflow, GitHub Discussions, etc.\n\n\n\n\n\nIf you get an error:\n\nCopy the entire error message\nPaste it into Google\nCheck the first few links to see how others solved that issue"
+  },
+  {
+    "objectID": "materials/slides_1a.html#method-3-x",
+    "href": "materials/slides_1a.html#method-3-x",
+    "title": "Intro to Data Science",
+    "section": "Method 3: x",
+    "text": "Method 3: x"
+  },
+  {
+    "objectID": "materials/slides_1a.html#method-4-x",
+    "href": "materials/slides_1a.html#method-4-x",
+    "title": "Intro to Data Science",
+    "section": "Method 4: x",
+    "text": "Method 4: x"
+  },
+  {
+    "objectID": "materials/slides_1a.html#method-5-yours",
+    "href": "materials/slides_1a.html#method-5-yours",
+    "title": "Intro to Data Science",
+    "section": "Method 5: Yours!",
+    "text": "Method 5: Yours!\n\n\nProgramming in R for Biologists"
+  },
+  {
+    "objectID": "materials/slides_template.html#temperature-check",
+    "href": "materials/slides_template.html#temperature-check",
+    "title": "Title",
+    "section": "Temperature Check",
     "text": "Temperature Check\nHow are you Feeling?\n\n\n\n\n\nProgramming in R for Biologists"
-  },
-  {
-    "objectID": "materials/slides_template.html#incremental-list",
-    "href": "materials/slides_template.html#incremental-list",
-    "title": "Title",
-    "section": "Incremental List",
-    "text": "Incremental List\nIncremental because of presentation-level YAML\n\nX\nY\nZ"
-  },
-  {
-    "objectID": "materials/slides_template.html#non-incremental-list",
-    "href": "materials/slides_template.html#non-incremental-list",
-    "title": "Title",
-    "section": "Non-Incremental List",
-    "text": "Non-Incremental List\n\n\nA\nB\nC"
-  },
-  {
-    "objectID": "materials/slides_template.html#multi-column-slide",
-    "href": "materials/slides_template.html#multi-column-slide",
-    "title": "Title",
-    "section": "Multi-Column Slide",
-    "text": "Multi-Column Slide\n\n\ncontents…\n\ncontents…\n\ncontents…"
-  },
-  {
-    "objectID": "materials/slides_template.html#slide-with-aside",
-    "href": "materials/slides_template.html#slide-with-aside",
-    "title": "Title",
-    "section": "Slide with Aside",
-    "text": "Slide with Aside\n\n\nx\ny\nz*\n\n\n\n\n* = footnote (smaller/lighter text)"
-  },
-  {
-    "objectID": "materials/slides_template.html#example-code-chunk",
-    "href": "materials/slides_template.html#example-code-chunk",
-    "title": "Title",
-    "section": "Example Code Chunk",
-    "text": "Example Code Chunk\nIncluding incremental line emphasis\n# Make vector\nvec &lt;- c(1, 2, 3)\n\n# Take average\nmean(vec)"
-  },
-  {
-    "objectID": "materials/slides_template.html#executable-code-chunk",
-    "href": "materials/slides_template.html#executable-code-chunk",
-    "title": "Title",
-    "section": "Executable Code Chunk",
-    "text": "Executable Code Chunk\n\n# Make vector\nvec &lt;- c(1, 2, 3)\n\n# Take average\nmean(vec)\n\n\n\n[1] 2"
-  },
-  {
-    "objectID": "materials/slides_template.html#code-chunk-outputting-to-next-slide",
-    "href": "materials/slides_template.html#code-chunk-outputting-to-next-slide",
-    "title": "Title",
-    "section": "Code Chunk Outputting to Next Slide",
-    "text": "Code Chunk Outputting to Next Slide\n\n# Load ggplot2\nlibrary(ggplot2)\n\n# Create plot\nggplot(airquality, aes(x = Temp, y = Ozone)) +\n  geom_point() +\n  geom_smooth(method = \"loess\")"
-  },
-  {
-    "objectID": "materials/slides_template.html#code-chunk-outputting-to-next-slide-output",
-    "href": "materials/slides_template.html#code-chunk-outputting-to-next-slide-output",
-    "title": "Title",
-    "section": "Code Chunk Outputting to Next Slide",
-    "text": "Code Chunk Outputting to Next Slide"
-  },
-  {
-    "objectID": "materials/slides_template.html#slide-with-different-background-color",
-    "href": "materials/slides_template.html#slide-with-different-background-color",
-    "title": "Title",
-    "section": "Slide with different background color",
-    "text": "Slide with different background color\nHello world\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "index.html",
