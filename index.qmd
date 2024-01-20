@@ -1,5 +1,6 @@
 
-## Course Description 
+## Course Description
+
 Computer literacy is increasingly critical to all aspects of the world in which we live. Data science is the branch of this skillset that sits in the middle of the Venn diagram between computers and some other subject area. Regardless of your academic specialty, fundamental data science skills data are both extremely useful and highly sought after in virtually all career paths. This course aims to give you a primer on data management best practices, analytical processes, and reproducible code. There will also be an opportunity to practice communication of technical concepts to a non-specialist audience.
 
 This course is relatively new so I will really appreciate your feedback and participation as we learn together! As such, I may need to adjust the scheduling of various topics (see the schedule for more information), but you will be notified of any changes sufficiently far in advance that you can prepare.
@@ -11,10 +12,35 @@ I would also like to acknowledge that this course has taken place on Wôpanâak 
 Upon completion of this course, students will be able to:
 
 - Understand the principles of well-structured data and reproducible coding
--	Write short computer programs (called “scripts”) in R
+-	Write short computer programs (called "scripts") in R
 -	Explore data through wrangling and visualization techniques
 -	Automate data processes using loops and conditionals
 -	Apply general data science concepts to new datasets
 -	Create a professional online presence on GitHub (www.github.com)
--	Evaluate peer’s work and offer both useful positive and constructively critical feedback
+-	Evaluate peer's work and offer both useful positive and constructively critical feedback
+
+## Course Structure
+
+| Class Type | Duration |
+| :---: | :---: |
+| Lecture | 1 hr 15 min |
+| Lab | 2 hrs 20 min |
+
+## Required Course Materials
+
+1.	R (www.cran.r-project.org)
+
+I recognize that this website is very bare bones, but this program is the industry standard and enjoys the support of a large and active population of users. When you are troubleshooting (i.e., "debugging") your code you will very much appreciate the breadth of people who are also using R. Follow the "Download R for ..." link for your computer operating system (i.e., Mac vs. Windows vs. Linux) to install R.
+
+2.	RStudio Desktop (www.posit.co/downloads)
+
+RStudio is the preferred platform for working in R; as the R website showed, so-called "base R" can be a little basic. RStudio will provide several helpful bells and whistles that will make the program easier to work with and easier on the eyes!
+
+3.	Git & GitHub
+
+Git (an application like R) and GitHub (a website) will be a part of the course, but you do not need to do anything with them before we cover them in class! Installing Git can be a little annoying for those without command line (a.k.a. "terminal", "shell", or "bash") experience. We'll cover working with Git and GitHub together a few weeks into the course. If you feel so moved, you are welcome to try to install Git (see instructions [here](https://happygitwithr.com/install-git)) and make a profile on GitHub on your own, but doing it alone is _optional_ so don't worry if you can't get it to work before we cover it in class!
+
+4.	Miscellaneous peer-reviewed articles / book excerpts
+
+I will provide any readings for the course in PDF format, so check the Canvas/etc. page regularly to download the necessary files. Any required readings will be posted at least one week before we discuss it in class. I'll also do my best to link directly to the readings from this website!
 
