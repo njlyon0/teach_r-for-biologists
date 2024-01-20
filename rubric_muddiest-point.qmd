@@ -2,3 +2,37 @@
 title: "Muddiest Point Rubric"
 ---
 
+## Learning Objective(s)
+
+Upon completion of these assignments, students will be able to:
+
+- Develop thoughtful questions about the topics covered in that week's lecture and the preceding week's lab
+
+## Assignment Due Date(s)
+
+Each muddiest point assignment is due at midnight the day before each lab. Late work will be accepted but will be subject to the late assignments policy outlined in this course's syllabus.
+
+## Assignment Description
+
+This assignment is meant to encourage you to reflect on the topics from the preceding lecture and lab and identify areas that you feel would benefit from re-covering in a future class session. Each muddiest point assignment should be relatively short, and all iterations of this assignment share the guidelines and rubric outlined in this document.
+
+Each muddiest point must address the following **three** questions:
+
+1. What topic covered in the last lecture/lab really "clicked" for you? What other concepts do you mentally connect that topic with?
+2. What topic covered in the last lecture/lab did you struggle to understand? What about the concept made it difficult for you to grasp?
+3. What questions do you have about the concept you struggled with that—if answered—would help clarify things for you?
+
+All three questions must be answered, and each response should be sufficiently detailed for me to understand where you're feeling confident versus what topics we may need to carve out extra in-class time to cover.
+
+Remember: there are no dumb questions! If you struggled with a topic, the odds are good that at least one other person struggled with the same thing. Asking instructors to re-cover materials can be an act of bravery and those of your peers struggling with the same question(s) will be appreciative that you brought it up!
+
+## Assignment Rubric
+
+There will be eight (8) equally weighted muddiest point responses in the entire course (one per week). Each response is worth a maximum of 5 points. These will be graded as follows:
+
+| Points Earned | Standard |
+| :---: |:--- |
+| 5 | Clearly articulates both a concept that was difficult and what about that concept was challenging. Also identifies a concept that was clear. |
+| 3 | Identifies a difficult concept but does not explain what was challenging about it in sufficient detail that I can identify the stumbling block(s) |
+| 1 | Response lacks depth and does not sufficiently explain why the topic was difficult |
+| 0 | No submission OR submission is more than 10 days late |
