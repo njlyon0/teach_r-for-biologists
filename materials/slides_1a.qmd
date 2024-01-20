@@ -187,12 +187,9 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
     4. Take a break
     5. Whatever methods _you_ use!
 
-## [Method 1: Rubber Duck](.orange) {.smaller}
+## [Method 1: Rubber Duck]{.orange} {.smaller}
 
-::::{.columns}
-
-::: {.column width="70%"}
-
+![](images/ducky.png){.absolute top=50 left=800 width="250" height="250"}
 - Get rubber duck / small object
 
 . . . 
@@ -209,14 +206,4 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 - Why "rubber duck" instead of "friend"?
     - Because it would likely be a dull experience for your friend `r fontawesome::fa(name = "smile", a11y = "sem")`
-
-:::
-
-:::{.column width="30%"}
-
-x
-
-:::
-
-::::
 
