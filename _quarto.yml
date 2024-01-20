@@ -26,6 +26,16 @@ website:
         contents:
           - text: "Syllabus"
             href: index.qmd
+      - section: "Assignment Rubrics"
+        contents:
+          - text: "Muddiest Point"
+            href: rubric_muddiest-point.qmd
+          - text: "Homework"
+            href: rubric_homework.qmd
+          - text: "GitHub Presence"
+            href: rubric_github.qmd
+          - text: "Function Tutorials"
+            href: rubric_tutorials.qmd
       - section: "Slide Decks"
         contents:
           - text: "Data Science Background"
