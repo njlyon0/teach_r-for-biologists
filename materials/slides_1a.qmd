@@ -207,3 +207,29 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 - Why "rubber duck" instead of "friend"?
     - Because it would likely be a dull experience for your friend `r fontawesome::fa(name = "smile", a11y = "sem")`
 
+## [Method 2: Google]{.orange} {.smaller}
+
+![](images/logo_google.png){.absolute top=50 left=750 width="400" height="140"}
+
+- This is a serious suggestion!
+    - Google is truly an _amazing_ resource for this
+
+\
+
+- There are forums where where people discuss code issues
+    - [StackOverflow](https://stackoverflow.com/), [GitHub Discussions](https://github.com/orgs/community/discussions/categories/programming-help), etc.
+
+\
+
+- If you get an error:
+    1. Copy the entire error message
+    2. Paste it into Google
+    3. Check the first few links to see how others solved that issue
+
+## [Method 3: x]{.orange}
+
+
+## [Method 4: x]{.orange}
+
+
+## [Method 5: Yours!]{.gold}
