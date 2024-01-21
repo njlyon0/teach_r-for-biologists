@@ -1,3 +1,4 @@
+# R Programming for Biologists Syllabus
 
 ## Course Description
 
