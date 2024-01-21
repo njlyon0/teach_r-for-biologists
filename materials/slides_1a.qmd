@@ -1,6 +1,6 @@
 ---
 title: "Intro to Data Science"
-author: "Lecture 1 -- Data Science Background"
+author: "Lecture 1 -- Data Science Fundamentals"
 engine: knitr
 format: 
   revealjs: 
