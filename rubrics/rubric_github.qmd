@@ -12,9 +12,8 @@ Upon completion of this assignment, students will be able to:
 ## Assignment Due Date(s)
 
 - This assignment will be evaluated at midnight on the last day of the course
-    - I _strongly encourage_ you to work on this assignment a little bit throughout the course–after the introduction to GitHub in Week 2–rather than waiting until the last moment to do everything
-
-- 1-on-1 Check-Ins on your progress will be conducted during class in Lab \#6
+    - I *strongly encourage* you to work on this assignment a little bit throughout the course--after the introduction to GitHub in Week 2--rather than waiting until the last moment to do everything
+- 1-on-1 Check-Ins on your progress will be conducted during class in Lab #6
     - This does not affect your score but is a chance for you to run the content you already have by me and I can estimate your current score and/or indicate any missing components
 
 ## Assignment Description
@@ -27,33 +26,35 @@ This assignment is worth forty (40) points; 16% of the total points available in
 
 The following sub-sections are included in this assignment
 
-1. Profile – 10 points
+1. Profile -- 10 points
 
-2. Special Repository – 10 points
+2. Special Repository -- 10 points
+
     - When you make a GitHub repository that has the same name as your profile it is a "special repository." See [an example here](https://github.com/njlyon0/njlyon0).
     - The README.md file for that repository becomes the top of your public profile and helps orient visitors to your profile to the stuff about yourself / your work that you'd like to highlight
 
-3. Portfolio Repository – 20 points
-    - This repository will contain–at minimum–your revised function tutorial
+3. Portfolio Repository -- 20 points
+
+    - This repository will contain--at minimum--your revised function tutorial
     - I recommend also including any homework assignments on which you earn 8-10 points
 
-| Category | Item | Points | Description |
-| :---: | :---: | :---: | :--- |
-| Profile | Name | 2 | Name you'd like employers to use |
-| Profile | Biography| 2 | One-sentence description of your professional background
-| Profile | Company | 1 | If you have a post-college position already, put that. Otherwise put your university |
-| Profile | Hometown | 1 | If you are moving after college and know where, put that city. If not, put the city of your university |
-| Profile | Social Account | 1 | Link one social account of your choosing (e.g., LinkedIn, etc.). Pick an account you want employers to know about |
-| Profile | Photo | 2 | Include a profile photo. Doesn't need to be a photo of you but that is recommended. Do not use a group photo where it is unclear which person you are. |
-| Special Repository | Exists | 1 | Repository with the same name as your profile was created. |
-| Special Repo. | README Exists | 1 | Repository has a README.md file |
+| Category |  Item  | Points | Description |
+|:---------------:|:---------------------:|:------------:|:---------------------------------------------------------------------------------------|
+| Profile |  Name  | 2 | Name you'd like employers to use |
+| Profile |  Biography  | 2 | One-sentence description of your professional background |
+| Profile |  Company  | 1 | If you have a post-college position already, put that. Otherwise put your university |
+| Profile |  Hometown  | 1 | If you are moving after college and know where, put that city. If not, put the city of your university |
+| Profile | Social Account  | 1 | Link one social account of your choosing (e.g., LinkedIn, etc.). Pick an account you want employers to know about |
+| Profile |  Photo  | 2 | Include a profile photo. Doesn't need to be a photo of you but that is recommended. Do not use a group photo where it is unclear which person you are. |
+| Special Repository |  Exists  | 1 | Repository with the same name as your profile was created. |
+| Special Repo. |  README Exists  | 1 | Repository has a README.md file |
 | Special Repo. | Welcome - in README | 2 | Welcome message to visitors that includes your name |
 | Special Repo. | Current Role - in README | 2 | Explains your current position, and list some of your research interests (1-3 sentences) |
 | Special Repo. | Career Goals - in README | 2 | Briefly summarize your career goals in the next 5 years (1-3 sentences). Write as if you were answering this question in an interview |
 | Special Repo. | Explain Portfolio - in README | 3 | Explain your portfolio repository and highlight 1-2 major files in that repository that you'd want employers to use as an example of you work's quality |
 | Portfolio Repository | Repository Exists | 1 | Repository with the word "portfolio" was created |
 | Portfolio Repo. | Repository Pinned to Profile | 1 | Up to four repositories can be "pinned" on your profile which makes them easy for visitors to find. **Your portfolio repository must be pinned** |
-| Portfolio Repo. | README Exists | 1 | Portfolio repository has a README file |
-| Portfolio Repo. | README Content | 4 | README includes a brief (1-3 sentence) description of all files included in the repository. Each file's explanation should include (A) name of file, (B) what the file does, and (C) why you created the file (i.e., for an assignment? Fun? Work?) |
+| Portfolio Repo. |  README Exists  | 1 | Portfolio repository has a README file |
+| Portfolio Repo. | README Content  | 4 | README includes a brief (1-3 sentence) description of all files included in the repository. Each file's explanation should include (A) name of file, (B) what the file does, and (C) why you created the file (i.e., for an assignment? Fun? Work?) |
 | Portfolio Repo. | Function Tutorial Included | 8 | Final draft of your function tutorial is included in the portfolio repository (and properly explained by the README of that repository) |
 | Portfolio Repo. | Homework Included | 5 | At least one homework assignment is included in the portfolio repository (and properly explained by the README). Feel free to include as many homework assignments as you'd like; only one is required but more is often better! |
