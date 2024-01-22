@@ -11,14 +11,28 @@
     "href": "materials/slides_1b.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nY"
+    "text": "Today’s Plan\n\nInstallation Check (R + RStudio)\nNavigating RStudio\nRStudio Projects\nR Scripts\n“Base” R"
   },
   {
     "objectID": "materials/slides_1b.html#todays-learning-objectives",
     "href": "materials/slides_1b.html#todays-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
-    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nX"
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nSet up RStudio on your computer\nCreate an RStudio Project\nUse R Scripts\nDefine fundamental base R terms\n\nE.g., object, assign, function, arguments, etc.\n\nSolve simple arithmetic operations using R"
+  },
+  {
+    "objectID": "materials/slides_1b.html#installation-check-r-rstudio",
+    "href": "materials/slides_1b.html#installation-check-r-rstudio",
+    "title": "Intro to Data Science",
+    "section": "Installation Check: R & RStudio",
+    "text": "Installation Check: R & RStudio\n\n\nDid anyone not get R installed?\n\n\n\n\nDid anyone not get RStudio installed?\n\n\n\n\nOnce you have both installed, please open RStudio"
+  },
+  {
+    "objectID": "materials/slides_1b.html#r-versus-rstudio",
+    "href": "materials/slides_1b.html#r-versus-rstudio",
+    "title": "Intro to Data Science",
+    "section": "R versus RStudio",
+    "text": "R versus RStudio\n\n\n\n\n\n\n\n\nAccess to fundamental R operations\nNot aesthetically pleasing\n\nIn my opinion Face Smile\n\nFaster for very complex operations\n\nUnlikely to matter for this course!\n\n\n\n\n\n\n\n\n\nAccess to fundamental R operations\nAllows custom aesthetics\nHas quality-of-life improvements\nTechnically an “IDE”\n\nIntegrated Developer Environment"
   },
   {
     "objectID": "materials/slides_1b.html#temperature-check",
