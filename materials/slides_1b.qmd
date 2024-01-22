@@ -1,6 +1,6 @@
 ---
 title: "Intro to Data Science"
-author: "Nick J Lyon"
+author: "Lab 1 -- RStudio & Base R"
 engine: knitr
 format: 
   revealjs: 

@@ -16,3 +16,8 @@ title: "Week 1 Slide Decks"
 
 ## Lab 1 - RStudio & Base R
 
+```{=html}
+<iframe class="slide-deck" src="slides_1b.html" height="420" width="750" style="border: 1px solid #2e3846;></iframe>
+```
+ 
+[Lab Slides -- Full Screen](slides_1b.qmd)
