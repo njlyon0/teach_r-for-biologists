@@ -98,6 +98,84 @@ After today's session you will be able to:
 
 ::::
 
+## [RStudio Layout]{.orange} {.smaller}
+
+- Layout consisting of four [panes]{.blue}
+    - Each pane has [tabs]{.gold} that do different things
+    - You can customize which tabs are in each pane!
+- To customize options:
+    - In top menu, click "Tools"
+    - Select "Global Options"
+    - Select "Pane Layout"
+- I recommend the following layout:
+
+![](images/rstudio-layout.png){.absolute top=280 left=600 width="40%"}
+
+## [Practice: Choose Your Colors]{.pink}
+
+- Tools `r fontawesome::fa("arrow-right", a11y = "sem")` Global Options `r fontawesome::fa("arrow-right", a11y = "sem")` Appearance 
+
+- Look through some of the available color schemes
+
+- Feel free to share the name of your favorites!
+
+\
+
+. . . 
+
+- Once you've picked one that you're happy with:
+    - Click "OK" (in bottom left)
+
+## [RStudio Projects]{.orange}
+
+:::{.incremental}
+
+- Projects are a special way of marking a folder on your computer for R
+
+\
+
+- You can still use the folder for other stuff though!
+
+\
+
+- RStudio will give you benefits if you use Projects
+
+:::
+
+## [Why Use Projects?]{.orange} {.smaller}
+
+- Sets default location for reading in / saving files
+    - A.k.a. "importing" and "exporting" files
+
+\
+
+. . .
+
+- Convenient separation among tasks you're working on!
+    - RStudio 'remembers' which files are a part of each Project
+    - Even re-opens whatever files you had opened last time you used the Project!
+
+\
+
+. . .
+
+- Lowers risk of mixing up data / script files
+
+## [Practice: Create a Project]{.pink} {.smaller}
+
+1. Make an empty folder on your computer to make the Project in
+
+\
+
+2. In RStudio, click "Project: (None)" in the top right corner
+    - Choose "New Project..."
+    - Pick "Existing Directory"
+    - Click "Browse..." and find the folder you made in [step 1]{.pink}
+
+\
+
+3. If the name of the folder you made in [step 1]{.pink} shows up in the top right corner of RStudio, it worked!
+
 ## [Temperature Check]{.purple}
 
 #### How are you Feeling?
@@ -108,19 +186,17 @@ After today's session you will be able to:
 
 
 
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
-:::{.column width="50%"}
-
-### Due before lab
-
-#### (By midnight)
-
-- Muddiest Point \#x
-
-:::
 
 :::{.column width="50%"}
 
@@ -128,7 +204,19 @@ After today's session you will be able to:
 
 #### (By midnight)
 
-- X
+- Homework \#1
+- Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) (p.1-12)
+
+:::
+
+:::{.column width="50%"}
+
+### Due before lab
+
+#### (By midnight)
+
+- Muddiest Point \#1
+- Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) (p.20-25)
 
 :::
 

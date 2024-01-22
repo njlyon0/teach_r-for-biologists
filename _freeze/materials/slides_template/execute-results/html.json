@@ -1,10 +1,8 @@
 {
-  "hash": "3a108990dc49417ab5b5eec979797fe9",
+  "hash": "a6e595b4794075da90392e2b27985246",
   "result": {
-    "markdown": "---\ntitle: \"Intro to Data Science\"\nauthor: \"Nick J Lyon\"\nengine: knitr\nformat: \n  revealjs: \n    slide-number: c\n    scrollable: false\n    theme: [night, slides.scss]\n    reference-location: document\n    footer: \"[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)\"\n---\n\n\n## A Guide to Your Process\n\n### [Scheduling]{.blue}\n\n### [Learning Objectives]{.purple}\n\n### [Practice]{.pink}\n\n### [Supporting Information]{.orange}\n\n### [Class Discussion]{.gold}\n\n## [Today's Plan]{.blue}\n\n- Y\n\n## [Today's Learning Objectives]{.purple}\n\nAfter today's session you will be able to:\n\n. . .\n\n- X\n\n## [Temperature Check]{.purple}\n\n#### How are you Feeling?\n\n<p align=\"center\">\n<img src=\"comics/debugging.png\" alt=\"Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)\">\n</p>\n\n\n\n## [Upcoming Due Dates]{.blue} {.smaller}\n\n::::{.columns}\n\n:::{.column width=\"50%\"}\n\n### Due before lab\n\n#### (By midnight)\n\n- Muddiest Point \\#x\n\n:::\n\n:::{.column width=\"50%\"}\n\n### Due before lecture\n\n#### (By midnight)\n\n- X\n\n:::\n\n::::\n\n",
-    "supporting": [
-      "slides_template_files"
-    ],
+    "markdown": "---\ntitle: \"Intro to Data Science\"\nauthor: \"Lecture X -- Title\"\nengine: knitr\nformat: \n  revealjs: \n    slide-number: c\n    scrollable: false\n    theme: [night, slides.scss]\n    reference-location: document\n    footer: \"[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)\"\n---\n\n\n## A Guide to Your Process\n\n### [Scheduling]{.blue}\n\n### [Learning Objectives]{.purple}\n\n### [Practice]{.pink}\n\n### [Supporting Information]{.orange}\n\n### [Class Discussion]{.gold}\n\n## [Today's Plan]{.blue}\n\n- Y\n\n## [Today's Learning Objectives]{.purple}\n\nAfter today's session you will be able to:\n\n. . .\n\n- X\n\n## [Temperature Check]{.purple}\n\n#### How are you Feeling?\n\n<p align=\"center\">\n<img src=\"comics/debugging.png\" alt=\"Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)\">\n</p>\n\n\n\n## [Upcoming Due Dates]{.blue} {.smaller}\n\n::::{.columns}\n\n:::{.column width=\"50%\"}\n\n### Due before lab\n\n#### (By midnight)\n\n- Muddiest Point \\#x\n\n:::\n\n:::{.column width=\"50%\"}\n\n### Due before lecture\n\n#### (By midnight)\n\n- X\n\n:::\n\n::::\n\n",
+    "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

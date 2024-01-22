@@ -1,6 +1,6 @@
 ---
 title: "Intro to Data Science"
-author: "Nick J Lyon"
+author: "Lecture X -- Title"
 engine: knitr
 format: 
   revealjs: 
