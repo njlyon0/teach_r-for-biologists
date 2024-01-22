@@ -191,7 +191,7 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 ## [Method 1: Rubber Duck]{.orange} {.smaller}
 
-![](images/ducky.png){.absolute top=50 left=800 width="250" height="250"}
+![](images/ducky.png){.absolute top=50 left=800 width="20%"}
 - Get rubber duck / small object
 
 . . . 
@@ -211,7 +211,7 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 ## [Method 2: Google]{.orange} {.smaller}
 
-![](images/logo-google.png){.absolute top=50 left=750 width="400" height="140"}
+![](images/logo-google.png){.absolute top=50 left=700 width="30%"}
 
 - This is a serious suggestion!
     - Google is truly an _amazing_ resource for this
@@ -327,7 +327,7 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 What is the file path for the [notes]{.blue} document in this image?
 
-![](images/file-path.png){.absolute top=175 left=250 height="500" width="625"}
+![](images/file-path.png){.absolute top=175 left=250 height="75%"}
 
 . . . 
 

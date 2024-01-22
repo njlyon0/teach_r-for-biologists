@@ -60,6 +60,44 @@ After today's session you will be able to:
 
 :::
 
+## [R versus RStudio]{.orange} {.smaller}
+
+::::{.columns}
+
+:::{.column width="50%"}
+
+![](images/logo-r.png){.absolute top=100 left=150 width="15%"}
+\
+\
+\
+\
+
+- Access to fundamental R operations
+- Not aesthetically pleasing
+    - In my opinion `r fontawesome::fa(name = "smile", a11y = "sem")`
+- Faster for _very_ complex operations
+    - Unlikely to matter for this course!
+
+:::
+
+:::{.column width="50%"}
+
+![](images/logo-rstudio.png){.absolute top=100 left=580 width="35%"}
+\
+\
+\
+\
+
+- Access to fundamental R operations
+- Allows custom aesthetics
+- Has quality-of-life improvements
+- Technically an "[IDE]{.purple}"
+    - <u>I</u>ntegrated <u>D</u>eveloper <u>E</u>nvironment
+
+:::
+
+::::
+
 ## [Temperature Check]{.purple}
 
 #### How are you Feeling?
