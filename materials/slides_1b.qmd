@@ -184,7 +184,69 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+## [R Scripts]{.orange} {.smaller}
 
+- A code file is called a "script"
+    - [Microsoft Word]{.blue}:[document]{.gold} -- [R]{.blue}:[script]{.gold}
+
+\
+
+- Lines of code written in scripts can be re-used
+    - I.e., re-"run"
+
+\
+
+- Scripts can be run line-by-line manually or run all at once
+    - Running all at once = "sourcing" a script
+
+## [Practice: Create an R Script]{.pink}
+
+
+
+
+## [Base R Fundamentals]{.orange}
+
+
+## [Objects and Assignment]{.orange}
+
+
+## [Objects Continued]{.orange}
+
+
+
+
+## [Practice: Object Assignment]{.pink}
+
+
+
+## [Code Comments]{.orange}
+
+
+## [Practice: Comments]{.pink}
+
+
+## [Functions]{.orange}
+
+
+## [Functions Continued]{.orange}
+
+
+## [Practice: Functions]{.pink}
+
+
+## [Vectors and Concatenation]{.orange}
+
+
+## [Object Classes]{.orange}
+
+
+## [Object Classes Cont.]{.orange}
+
+
+## [Class Coercion]{.orange}
+
+
+## [Practice: Concatenation & Classes]{.pink}
 
 ## [Temperature Check]{.purple}
 
