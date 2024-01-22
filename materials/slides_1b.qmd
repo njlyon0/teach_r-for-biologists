@@ -6,6 +6,9 @@ format:
   revealjs: 
     slide-number: c
     scrollable: false
+    code-overflow: wrap
+    code-line-numbers: false
+    code-copy: hover
     theme: [night, slides.scss]
     reference-location: document
     footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
@@ -199,54 +202,345 @@ After today's session you will be able to:
 - Scripts can be run line-by-line manually or run all at once
     - Running all at once = "sourcing" a script
 
-## [Practice: Create an R Script]{.pink}
+## [Practice: Create an R Script]{.pink} {.smaller}
+
+- Create an R script
+    - "File" `r fontawesome::fa("arrow-right", a11y="sem")` "New File" `r fontawesome::fa("arrow-right", a11y="sem")` "R Script"
+
+\
+
+- Once created, save it as "316_week1.R"
+    - "File" `r fontawesome::fa("arrow-right", a11y="sem")` "Save"
+
+\
+
+- Note that the save location defaults to inside of your RStudio Project
+    - Another reason to use Projects!
 
 
+## [Base R Fundamentals]{.orange} {.smaller}
 
+- "Base R" includes a set of core functions that are broadly useful
+    - Reading in a CSV, taking an average, etc.
 
-## [Base R Fundamentals]{.orange}
+\
 
+- R's real power comes from "packages" with more advanced functions
+    - These packages are _not_ in base R
+    - We'll begin to cover these next week
 
-## [Objects and Assignment]{.orange}
+\
 
+- Base R is really useful in its own right!
+
+## [Objects and Assignment]{.orange} {.smaller}
+
+- You can do math in R directly
+
+\
+
+- More useful to use [objects]{.blue} instead of direct values
+    - [object]{.blue} = alias for a value / set of values
+
+\
+
+- When we create an object we [assign]{.gold} some value(s) to the object
+    - Uses the [assignment operator]{.orange} (`<-`)
+    - Keyboard shortcut: Alt + hyphen
+
+\
+
+- After you create an object, you can use it in place of its value!
+
+## [Object Example]{.gold}
+
+We can make an object like so:
+
+```{r object-example-p1}
+#| echo: true
+my_obj <- 52
+```
+
+\
+
+. . . 
+
+Then when we use the name of the object later...
+
+```{r object-example-p2}
+#| echo: true
+my_obj
+```
+
+\
+
+... we get the value we assigned to it!
 
 ## [Objects Continued]{.orange}
 
+- Useful because it lets you _flexibly_ code 
 
+\
 
+- If you know that an object only contains numbers, you can do general operations that work for any number object
 
-## [Practice: Object Assignment]{.pink}
+\
 
+- If you had to use the actual value every time, complex operations would be brutal to code
 
+## [Practice: Object Assignment]{.pink} {.smaller}
+
+::::{.columns}
+
+:::{.column width="50%"}
+
+#### Arithmetic
+
+- Calculate 576 / 3
+
+\
+
+- Calculate (258 * 4) / 13
+
+\
+
+- Calculate 2 + 2 - 4
+
+:::
+
+:::{.column width="50%"}
+
+#### Object Practice
+
+- Create an object called `yy` with a value of 55
+    - _Hint_: remember to use the assignment operator (`<-`)
+
+\
+
+- Create an object called `my_char` with a value of "text"
+    - What happens when you don't include quotation marks around "text"?
+
+:::
+
+::::
+
+## [Code Comments]{.orange} {.smaller}
+
+- Coding languages all allow [comments]{.gold}
+
+\
+
+- Comments are _non-coding_ lines that explain what the code is doing in a human-readable way
+
+\
+
+- In R, comment lines start with a hashtag (`#`)
+
+\
+
+- Comments allow others to read your code and understand what is happening
+    - Great for <u>_future you</u>!!!_
 
 ## [Code Comments]{.orange}
 
+<p align="center">
+<img src="memes/comments.jpg" alt="Person applying clown makeup as they talk about why they don't need to use code comments" width="45%">
+</p>
 
-## [Practice: Comments]{.pink}
+## [Code Example]{.gold}
+
+Here are some example comments:
+
+```{.r code-line-numbers="|1,4"}
+# Make an object with a value of 77
+q <- 77
+
+# Divide it by 7 and assign to a new object
+p <- q / 7
+```
+
+## [Practice: Comments]{.pink} {.smaller}
+
+- Add a comment at the top of your script with the course number and your name
+
+\
+
+. . .
+
+- For each line of code you wrote earlier:
+    - Add a comment line _above it_ explaining what that line does
+    - Use wording that makes sense to you!
+
+\
+
+. . .
+
+- This lets your class notes be included directly with your code!
+
+## [Functions]{.orange} {.smaller}
+
+- Programming wouldn't be useful if you could only use arithmetic
+
+\
+
+- Programming languages include [functions]{.blue} to avoid arithmetic
+    - Someone else has done the arithmetic and made an object **of that process**!
+
+\
+
+- You can then use the function instead of doing the math yourself
+
+\
+
+- Functions use [arguments]{.orange} to let users specify what they can modify
+
+## [Function Example]{.gold} {.smaller}
+
+- There is a function called `round` that rounds decimals either up or down
+
+\
+
+- `round` has two arguments:
+    - `x` = the number(s) to round
+    - `digits` = the number of digits to which to round `x`
+
+\
 
 
-## [Functions]{.orange}
+- Let's look at an example
 
+. . . 
 
-## [Functions Continued]{.orange}
+```{r round-demo}
+#| echo: true
 
+# Round a decimal to 2 digits
+round(x = 62.82379110, digits = 2)
+```
 
-## [Practice: Functions]{.pink}
+## [Function Help]{.gold}
 
+- Functions include help files built into R to help you use them!
 
-## [Vectors and Concatenation]{.orange}
+\
 
+- Can be accessed by typing a `?` and then the function name
+    - E.g., `?mean`
 
-## [Object Classes]{.orange}
+\
 
+. . . 
+
+Type and run `?round` and see what happens
+
+## [Practice: Functions]{.pink} {.smaller}
+
+- Base R includes an object called `pi` that includes the first 6 digits of π
+
+\
+
+- Using the `round` function, round `pi` to 3 digits
+
+\
+
+. . .
+
+- Consult the help file for the square root function (`sqrt`)
+    - What argument(s) does `sqrt` expect?
+
+\
+
+- What is the square root of pi?
+
+\
+
+. . .
+
+- Don’t forget to add comments to each line in your script!
+
+## [Vectors and Concatenation]{.orange} {.smaller}
+
+- You can also make objects that contain several values
+    - This type of object is called a [vector]{.purple}
+
+\
+
+- You can make vectors using "concatenation"
+    - \[con-CAT-eh-nation\]
+
+\
+
+- R does this with a lower case `c` and parentheses
+    - You need commas between each [element]{.orange} of a vector
+    - E.g., `my_vector <- c(1, 2, 3, 4)`
+
+## [Object Classes]{.orange} {.smaller}
+
+- Objects have a [class]{.blue} that dictates what operations they support
+
+\
+
+- Math can only be done on "numeric" objects
+
+\
+
+- Text can be stored in "character" objects
+    - But math can’t be done on characters!
+
+\
+
+- You can check an object's current class with the `class` function
+    - E.g., `class(my_object)`
 
 ## [Object Classes Cont.]{.orange}
 
+- There are _many_ classes
 
-## [Class Coercion]{.orange}
+\
 
+- Let's focus on 4 fundamental classes
+    - Numeric = numbers
+    - Integer = numbers without _any_ decimal places
+    - Character = text
+    - Factor = text but defines categorical groups
 
-## [Practice: Concatenation & Classes]{.pink}
+## [Class Coercion]{.orange} {.smaller}
+
+- You can force (a.k.a. [coerce]{.pink}) an object from one class to another
+
+\
+
+- The simplest functions to do this are all `as.<desired class>()`
+    - E.g., `as.numeric()`
+
+\
+
+- Want to have your code treat a number like text?
+    - `my_text <- as.character(111)`
+
+\
+
+- What happens when you try to force text into a number?
+    - `my_num <- as.numeric("hello")`
+
+## [Practice: Concatenation & Classes]{.pink} {.smaller}
+
+- Concatenate the numbers 1, 4, 9, and 6 into a vector
+    - Remember to use `c`!
+    - What is the class of that vector?
+
+\
+
+. . .
+
+- Concatenate "hello", "world", and the first vector into a _new_ vector
+    - What is the class of the _new_ vector?
+
+\
+
+. . .
+
+- Multiply the second vector by 16; what does this return?
 
 ## [Temperature Check]{.purple}
 

@@ -5,7 +5,11 @@ engine: knitr
 format: 
   revealjs: 
     slide-number: c
+
     scrollable: false
+    code-overflow: wrap
+    code-line-numbers: false
+    code-copy: hover
     theme: [night, slides.scss]
     reference-location: document
     footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
