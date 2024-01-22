@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -426,9 +491,588 @@ Lab 1 – RStudio &amp; Base R
 </div>
 </div>
 </section>
+<section id="rstudio-layout" class="slide level2 smaller">
+<h2><span class="orange">RStudio Layout</span></h2>
+<ul>
+<li>Layout consisting of four <span class="blue">panes</span>
+<ul>
+<li>Each pane has <span class="gold">tabs</span> that do different things</li>
+<li>You can customize which tabs are in each pane!</li>
+</ul></li>
+<li>To customize options:
+<ul>
+<li>In top menu, click “Tools”</li>
+<li>Select “Global Options”</li>
+<li>Select “Pane Layout”</li>
+</ul></li>
+<li>I recommend the following layout:</li>
+</ul>
+<p><img data-src="images/rstudio-layout.png" class="absolute" style="top: 280px; left: 600px; width: 40%; "></p>
+</section>
+<section id="practice-choose-your-colors" class="slide level2">
+<h2><span class="pink">Practice: Choose Your Colors</span></h2>
+<ul>
+<li><p>Tools <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> Global Options <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> Appearance</p></li>
+<li><p>Look through some of the available color schemes</p></li>
+<li><p>Feel free to share the name of your favorites!</p></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Once you’ve picked one that you’re happy with:
+<ul>
+<li>Click “OK” (in bottom left)</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="rstudio-projects" class="slide level2">
+<h2><span class="orange">RStudio Projects</span></h2>
+<div>
+<ul>
+<li class="fragment">Projects are a special way of marking a folder on your computer for R</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li class="fragment">You can still use the folder for other stuff though!</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li class="fragment">RStudio will give you benefits if you use Projects</li>
+</ul>
+</div>
+</section>
+<section id="why-use-projects" class="slide level2 smaller">
+<h2><span class="orange">Why Use Projects?</span></h2>
+<ul>
+<li>Sets default location for reading in / saving files
+<ul>
+<li>A.k.a. “importing” and “exporting” files</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Convenient separation among tasks you’re working on!
+<ul>
+<li>RStudio ‘remembers’ which files are a part of each Project</li>
+<li>Even re-opens whatever files you had opened last time you used the Project!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Lowers risk of mixing up data / script files</li>
+</ul>
+</div>
+</section>
+<section id="practice-create-a-project" class="slide level2 smaller">
+<h2><span class="pink">Practice: Create a Project</span></h2>
+<ol type="1">
+<li>Make an empty folder on your computer to make the Project in</li>
+</ol>
+<p><br>
+</p>
+<ol start="2" type="1">
+<li>In RStudio, click “Project: (None)” in the top right corner
+<ul>
+<li>Choose “New Project…”</li>
+<li>Pick “Existing Directory”</li>
+<li>Click “Browse…” and find the folder you made in <span class="pink">step 1</span></li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+<ol start="3" type="1">
+<li>If the name of the folder you made in <span class="pink">step 1</span> shows up in the top right corner of RStudio, it worked!</li>
+</ol>
+</section>
 <section id="temperature-check" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
 <h4 id="how-are-you-feeling">How are you Feeling?</h4>
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+</section>
+<section id="r-scripts" class="slide level2 smaller">
+<h2><span class="orange">R Scripts</span></h2>
+<ul>
+<li>A code file is called a “script”
+<ul>
+<li><span class="blue">Microsoft Word</span>:<span class="gold">document</span> – <span class="blue">R</span>:<span class="gold">script</span></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Lines of code written in scripts can be re-used
+<ul>
+<li>I.e., re-“run”</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Scripts can be run line-by-line manually or run all at once
+<ul>
+<li>Running all at once = “sourcing” a script</li>
+</ul></li>
+</ul>
+</section>
+<section id="practice-create-an-r-script" class="slide level2 smaller">
+<h2><span class="pink">Practice: Create an R Script</span></h2>
+<ul>
+<li>Create an R script
+<ul>
+<li>“File” <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> “New File” <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> “R Script”</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Once created, save it as “316_week1.R”
+<ul>
+<li>“File” <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> “Save”</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Note that the save location defaults to inside of your RStudio Project
+<ul>
+<li>Another reason to use Projects!</li>
+</ul></li>
+</ul>
+</section>
+<section id="base-r-fundamentals" class="slide level2 smaller">
+<h2><span class="orange">Base R Fundamentals</span></h2>
+<ul>
+<li>“Base R” includes a set of core functions that are broadly useful
+<ul>
+<li>Reading in a CSV, taking an average, etc.</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>R’s real power comes from “packages” with more advanced functions
+<ul>
+<li>These packages are <em>not</em> in base R</li>
+<li>We’ll begin to cover these next week</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Base R is really useful in its own right!</li>
+</ul>
+</section>
+<section id="objects-and-assignment" class="slide level2 smaller">
+<h2><span class="orange">Objects and Assignment</span></h2>
+<ul>
+<li>You can do math in R directly</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>More useful to use <span class="blue">objects</span> instead of direct values
+<ul>
+<li><span class="blue">object</span> = alias for a value / set of values</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>When we create an object we <span class="gold">assign</span> some value(s) to the object
+<ul>
+<li>Uses the <span class="orange">assignment operator</span> (<code>&lt;-</code>)</li>
+<li>Keyboard shortcut: Alt + hyphen</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>After you create an object, you can use it in place of its value!</li>
+</ul>
+</section>
+<section id="object-example" class="slide level2">
+<h2><span class="gold">Object Example</span></h2>
+<p>We can make an object like so:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_obj <span class="ot">&lt;-</span> <span class="dv">52</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br>
+</p>
+<div class="fragment">
+<p>Then when we use the name of the object later…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_obj</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 52</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+<p>… we get the value we assigned to it!</p>
+</div>
+</section>
+<section id="objects-continued" class="slide level2">
+<h2><span class="orange">Objects Continued</span></h2>
+<ul>
+<li>Useful because it lets you <em>flexibly</em> code</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>If you know that an object only contains numbers, you can do general operations that work for any number object</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>If you had to use the actual value every time, complex operations would be brutal to code</li>
+</ul>
+</section>
+<section id="practice-object-assignment" class="slide level2 smaller">
+<h2><span class="pink">Practice: Object Assignment</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="arithmetic">Arithmetic</h4>
+<ul>
+<li>Calculate 576 / 3</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Calculate (258 * 4) / 13</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Calculate 2 + 2 - 4</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="object-practice">Object Practice</h4>
+<ul>
+<li>Create an object called <code>yy</code> with a value of 55
+<ul>
+<li><em>Hint</em>: remember to use the assignment operator (<code>&lt;-</code>)</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Create an object called <code>my_char</code> with a value of “text”
+<ul>
+<li>What happens when you don’t include quotation marks around “text”?</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="code-comments" class="slide level2 smaller">
+<h2><span class="orange">Code Comments</span></h2>
+<ul>
+<li>Coding languages all allow <span class="gold">comments</span></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Comments are <em>non-coding</em> lines that explain what the code is doing in a human-readable way</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>In R, comment lines start with a hashtag (<code>#</code>)</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Comments allow others to read your code and understand what is happening
+<ul>
+<li>Great for <u><em>future you</em></u><em>!!!</em></li>
+</ul></li>
+</ul>
+</section>
+<section id="code-comments-1" class="slide level2">
+<h2><span class="orange">Code Comments</span></h2>
+<p align="center">
+<img src="memes/comments.jpg" alt="Person applying clown makeup as they talk about why they don't need to use code comments" width="45%">
+</p>
+</section>
+<section id="code-example" class="slide level2">
+<h2><span class="gold">Code Example</span></h2>
+<p>Here are some example comments:</p>
+<div class="sourceCode" id="cb4" data-code-line-numbers="|1,4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Make an object with a value of 77</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>q <span class="ot">&lt;-</span> <span class="dv">77</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Divide it by 7 and assign to a new object</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>p <span class="ot">&lt;-</span> q <span class="sc">/</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="practice-comments" class="slide level2 smaller">
+<h2><span class="pink">Practice: Comments</span></h2>
+<ul>
+<li>Add a comment at the top of your script with the course number and your name</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>For each line of code you wrote earlier:
+<ul>
+<li>Add a comment line <em>above it</em> explaining what that line does</li>
+<li>Use wording that makes sense to you!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>This lets your class notes be included directly with your code!</li>
+</ul>
+</div>
+</section>
+<section id="functions" class="slide level2 smaller">
+<h2><span class="orange">Functions</span></h2>
+<ul>
+<li>Programming wouldn’t be useful if you could only use arithmetic</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Programming languages include <span class="blue">functions</span> to avoid arithmetic
+<ul>
+<li>Someone else has done the arithmetic and made an object <strong>of that process</strong>!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>You can then use the function instead of doing the math yourself</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Functions use <span class="orange">arguments</span> to let users specify what they can modify</li>
+</ul>
+</section>
+<section id="function-example" class="slide level2 smaller">
+<h2><span class="gold">Function Example</span></h2>
+<ul>
+<li>There is a function called <code>round</code> that rounds decimals either up or down</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li><code>round</code> has two arguments:
+<ul>
+<li><code>x</code> = the number(s) to round</li>
+<li><code>digits</code> = the number of digits to which to round <code>x</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Let’s look at an example</li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Round a decimal to 2 digits</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="at">x =</span> <span class="fl">62.82379110</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 62.82</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="function-help" class="slide level2">
+<h2><span class="gold">Function Help</span></h2>
+<ul>
+<li>Functions include help files built into R to help you use them!</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Can be accessed by typing a <code>?</code> and then the function name
+<ul>
+<li>E.g., <code>?mean</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<p>Type and run <code>?round</code> and see what happens</p>
+</div>
+</section>
+<section id="practice-functions" class="slide level2 smaller">
+<h2><span class="pink">Practice: Functions</span></h2>
+<ul>
+<li>Base R includes an object called <code>pi</code> that includes the first 6 digits of π</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Using the <code>round</code> function, round <code>pi</code> to 3 digits</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Consult the help file for the square root function (<code>sqrt</code>)
+<ul>
+<li>What argument(s) does <code>sqrt</code> expect?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What is the square root of pi?</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Don’t forget to add comments to each line in your script!</li>
+</ul>
+</div>
+</section>
+<section id="vectors-and-concatenation" class="slide level2 smaller">
+<h2><span class="orange">Vectors and Concatenation</span></h2>
+<ul>
+<li>You can also make objects that contain several values
+<ul>
+<li>This type of object is called a <span class="purple">vector</span></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>You can make vectors using “concatenation”
+<ul>
+<li>[con-CAT-eh-nation]</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>R does this with a lower case <code>c</code> and parentheses
+<ul>
+<li>You need commas between each <span class="orange">element</span> of a vector</li>
+<li>E.g., <code>my_vector &lt;- c(1, 2, 3, 4)</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="object-classes" class="slide level2 smaller">
+<h2><span class="orange">Object Classes</span></h2>
+<ul>
+<li>Objects have a <span class="blue">class</span> that dictates what operations they support</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Math can only be done on “numeric” objects</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Text can be stored in “character” objects
+<ul>
+<li>But math can’t be done on characters!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>You can check an object’s current class with the <code>class</code> function
+<ul>
+<li>E.g., <code>class(my_object)</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="object-classes-cont." class="slide level2">
+<h2><span class="orange">Object Classes Cont.</span></h2>
+<ul>
+<li>There are <em>many</em> classes</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Let’s focus on 4 fundamental classes
+<ul>
+<li>Numeric = numbers</li>
+<li>Integer = numbers without <em>any</em> decimal places</li>
+<li>Character = text</li>
+<li>Factor = text but defines categorical groups</li>
+</ul></li>
+</ul>
+</section>
+<section id="class-coercion" class="slide level2 smaller">
+<h2><span class="orange">Class Coercion</span></h2>
+<ul>
+<li>You can force (a.k.a. <span class="pink">coerce</span>) an object from one class to another</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>The simplest functions to do this are all <code>as.&lt;desired class&gt;()</code>
+<ul>
+<li>E.g., <code>as.numeric()</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Want to have your code treat a number like text?
+<ul>
+<li><code>my_text &lt;- as.character(111)</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What happens when you try to force text into a number?
+<ul>
+<li><code>my_num &lt;- as.numeric("hello")</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="practice-concatenation-classes" class="slide level2 smaller">
+<h2><span class="pink">Practice: Concatenation &amp; Classes</span></h2>
+<ul>
+<li>Concatenate the numbers 1, 4, 9, and 6 into a vector
+<ul>
+<li>Remember to use <code>c</code>!</li>
+<li>What is the class of that vector?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Concatenate “hello”, “world”, and the first vector into a <em>new</em> vector
+<ul>
+<li>What is the class of the <em>new</em> vector?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Multiply the second vector by 16; what does this return?</li>
+</ul>
+</div>
+</section>
+<section id="temperature-check-1" class="slide level2">
+<h2><span class="purple">Temperature Check</span></h2>
+<h4 id="how-are-you-feeling-1">How are you Feeling?</h4>
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
@@ -437,16 +1081,18 @@ Lab 1 – RStudio &amp; Base R
 <h2><span class="blue">Upcoming Due Dates</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="due-before-lab">Due before lab</h3>
+<h3 id="due-before-lecture">Due before lecture</h3>
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
-<li>Muddiest Point #x</li>
+<li>Homework #1</li>
+<li>Read the British Ecological Society’s <a href="https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf">Reproducible Code Guide</a> (p.1-12)</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<h3 id="due-before-lecture">Due before lecture</h3>
+<h3 id="due-before-lab">Due before lab</h3>
 <h4 id="by-midnight-1">(By midnight)</h4>
 <ul>
-<li>X</li>
+<li>Muddiest Point #1</li>
+<li>Read the British Ecological Society’s <a href="https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf">Reproducible Code Guide</a> (p.20-25)</li>
 </ul>
 </div>
 </div>

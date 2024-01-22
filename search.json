@@ -35,8 +35,190 @@
     "text": "R versus RStudio\n\n\n\n\n\n\n\n\nAccess to fundamental R operations\nNot aesthetically pleasing\n\nIn my opinion Face Smile\n\nFaster for very complex operations\n\nUnlikely to matter for this course!\n\n\n\n\n\n\n\n\n\nAccess to fundamental R operations\nAllows custom aesthetics\nHas quality-of-life improvements\nTechnically an “IDE”\n\nIntegrated Developer Environment"
   },
   {
+    "objectID": "materials/slides_1b.html#rstudio-layout",
+    "href": "materials/slides_1b.html#rstudio-layout",
+    "title": "Intro to Data Science",
+    "section": "RStudio Layout",
+    "text": "RStudio Layout\n\nLayout consisting of four panes\n\nEach pane has tabs that do different things\nYou can customize which tabs are in each pane!\n\nTo customize options:\n\nIn top menu, click “Tools”\nSelect “Global Options”\nSelect “Pane Layout”\n\nI recommend the following layout:"
+  },
+  {
+    "objectID": "materials/slides_1b.html#practice-choose-your-colors",
+    "href": "materials/slides_1b.html#practice-choose-your-colors",
+    "title": "Intro to Data Science",
+    "section": "Practice: Choose Your Colors",
+    "text": "Practice: Choose Your Colors\n\nTools Arrow Right Global Options Arrow Right Appearance\nLook through some of the available color schemes\nFeel free to share the name of your favorites!\n\n\n\n\n\nOnce you’ve picked one that you’re happy with:\n\nClick “OK” (in bottom left)"
+  },
+  {
+    "objectID": "materials/slides_1b.html#rstudio-projects",
+    "href": "materials/slides_1b.html#rstudio-projects",
+    "title": "Intro to Data Science",
+    "section": "RStudio Projects",
+    "text": "RStudio Projects\n\n\nProjects are a special way of marking a folder on your computer for R\n\n\n\n\nYou can still use the folder for other stuff though!\n\n\n\n\nRStudio will give you benefits if you use Projects"
+  },
+  {
+    "objectID": "materials/slides_1b.html#why-use-projects",
+    "href": "materials/slides_1b.html#why-use-projects",
+    "title": "Intro to Data Science",
+    "section": "Why Use Projects?",
+    "text": "Why Use Projects?\n\nSets default location for reading in / saving files\n\nA.k.a. “importing” and “exporting” files\n\n\n\n\n\n\nConvenient separation among tasks you’re working on!\n\nRStudio ‘remembers’ which files are a part of each Project\nEven re-opens whatever files you had opened last time you used the Project!\n\n\n\n\n\n\n\nLowers risk of mixing up data / script files"
+  },
+  {
+    "objectID": "materials/slides_1b.html#practice-create-a-project",
+    "href": "materials/slides_1b.html#practice-create-a-project",
+    "title": "Intro to Data Science",
+    "section": "Practice: Create a Project",
+    "text": "Practice: Create a Project\n\nMake an empty folder on your computer to make the Project in\n\n\n\n\nIn RStudio, click “Project: (None)” in the top right corner\n\nChoose “New Project…”\nPick “Existing Directory”\nClick “Browse…” and find the folder you made in step 1\n\n\n\n\n\nIf the name of the folder you made in step 1 shows up in the top right corner of RStudio, it worked!"
+  },
+  {
     "objectID": "materials/slides_1b.html#temperature-check",
     "href": "materials/slides_1b.html#temperature-check",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
+    "objectID": "materials/slides_1b.html#r-scripts",
+    "href": "materials/slides_1b.html#r-scripts",
+    "title": "Intro to Data Science",
+    "section": "R Scripts",
+    "text": "R Scripts\n\nA code file is called a “script”\n\nMicrosoft Word:document – R:script\n\n\n\n\n\nLines of code written in scripts can be re-used\n\nI.e., re-“run”\n\n\n\n\n\nScripts can be run line-by-line manually or run all at once\n\nRunning all at once = “sourcing” a script"
+  },
+  {
+    "objectID": "materials/slides_1b.html#practice-create-an-r-script",
+    "href": "materials/slides_1b.html#practice-create-an-r-script",
+    "title": "Intro to Data Science",
+    "section": "Practice: Create an R Script",
+    "text": "Practice: Create an R Script\n\nCreate an R script\n\n“File” Arrow Right “New File” Arrow Right “R Script”\n\n\n\n\n\nOnce created, save it as “316_week1.R”\n\n“File” Arrow Right “Save”\n\n\n\n\n\nNote that the save location defaults to inside of your RStudio Project\n\nAnother reason to use Projects!"
+  },
+  {
+    "objectID": "materials/slides_1b.html#base-r-fundamentals",
+    "href": "materials/slides_1b.html#base-r-fundamentals",
+    "title": "Intro to Data Science",
+    "section": "Base R Fundamentals",
+    "text": "Base R Fundamentals\n\n“Base R” includes a set of core functions that are broadly useful\n\nReading in a CSV, taking an average, etc.\n\n\n\n\n\nR’s real power comes from “packages” with more advanced functions\n\nThese packages are not in base R\nWe’ll begin to cover these next week\n\n\n\n\n\nBase R is really useful in its own right!"
+  },
+  {
+    "objectID": "materials/slides_1b.html#objects-and-assignment",
+    "href": "materials/slides_1b.html#objects-and-assignment",
+    "title": "Intro to Data Science",
+    "section": "Objects and Assignment",
+    "text": "Objects and Assignment\n\nYou can do math in R directly\n\n\n\n\nMore useful to use objects instead of direct values\n\nobject = alias for a value / set of values\n\n\n\n\n\nWhen we create an object we assign some value(s) to the object\n\nUses the assignment operator (&lt;-)\nKeyboard shortcut: Alt + hyphen\n\n\n\n\n\nAfter you create an object, you can use it in place of its value!"
+  },
+  {
+    "objectID": "materials/slides_1b.html#object-example",
+    "href": "materials/slides_1b.html#object-example",
+    "title": "Intro to Data Science",
+    "section": "Object Example",
+    "text": "Object Example\nWe can make an object like so:\n\nmy_obj &lt;- 52\n\n\n\n\nThen when we use the name of the object later…\n\nmy_obj\n\n[1] 52\n\n\n\n\n… we get the value we assigned to it!"
+  },
+  {
+    "objectID": "materials/slides_1b.html#objects-continued",
+    "href": "materials/slides_1b.html#objects-continued",
+    "title": "Intro to Data Science",
+    "section": "Objects Continued",
+    "text": "Objects Continued\n\nUseful because it lets you flexibly code\n\n\n\n\nIf you know that an object only contains numbers, you can do general operations that work for any number object\n\n\n\n\nIf you had to use the actual value every time, complex operations would be brutal to code"
+  },
+  {
+    "objectID": "materials/slides_1b.html#practice-object-assignment",
+    "href": "materials/slides_1b.html#practice-object-assignment",
+    "title": "Intro to Data Science",
+    "section": "Practice: Object Assignment",
+    "text": "Practice: Object Assignment\n\n\nArithmetic\n\nCalculate 576 / 3\n\n\n\n\nCalculate (258 * 4) / 13\n\n\n\n\nCalculate 2 + 2 - 4\n\n\nObject Practice\n\nCreate an object called yy with a value of 55\n\nHint: remember to use the assignment operator (&lt;-)\n\n\n\n\n\nCreate an object called my_char with a value of “text”\n\nWhat happens when you don’t include quotation marks around “text”?"
+  },
+  {
+    "objectID": "materials/slides_1b.html#code-comments",
+    "href": "materials/slides_1b.html#code-comments",
+    "title": "Intro to Data Science",
+    "section": "Code Comments",
+    "text": "Code Comments\n\nCoding languages all allow comments\n\n\n\n\nComments are non-coding lines that explain what the code is doing in a human-readable way\n\n\n\n\nIn R, comment lines start with a hashtag (#)\n\n\n\n\nComments allow others to read your code and understand what is happening\n\nGreat for future you!!!"
+  },
+  {
+    "objectID": "materials/slides_1b.html#code-comments-1",
+    "href": "materials/slides_1b.html#code-comments-1",
+    "title": "Intro to Data Science",
+    "section": "Code Comments",
+    "text": "Code Comments"
+  },
+  {
+    "objectID": "materials/slides_1b.html#code-example",
+    "href": "materials/slides_1b.html#code-example",
+    "title": "Intro to Data Science",
+    "section": "Code Example",
+    "text": "Code Example\nHere are some example comments:\n# Make an object with a value of 77\nq &lt;- 77\n\n# Divide it by 7 and assign to a new object\np &lt;- q / 7"
+  },
+  {
+    "objectID": "materials/slides_1b.html#practice-comments",
+    "href": "materials/slides_1b.html#practice-comments",
+    "title": "Intro to Data Science",
+    "section": "Practice: Comments",
+    "text": "Practice: Comments\n\nAdd a comment at the top of your script with the course number and your name\n\n\n\n\n\nFor each line of code you wrote earlier:\n\nAdd a comment line above it explaining what that line does\nUse wording that makes sense to you!\n\n\n\n\n\n\n\nThis lets your class notes be included directly with your code!"
+  },
+  {
+    "objectID": "materials/slides_1b.html#functions",
+    "href": "materials/slides_1b.html#functions",
+    "title": "Intro to Data Science",
+    "section": "Functions",
+    "text": "Functions\n\nProgramming wouldn’t be useful if you could only use arithmetic\n\n\n\n\nProgramming languages include functions to avoid arithmetic\n\nSomeone else has done the arithmetic and made an object of that process!\n\n\n\n\n\nYou can then use the function instead of doing the math yourself\n\n\n\n\nFunctions use arguments to let users specify what they can modify"
+  },
+  {
+    "objectID": "materials/slides_1b.html#function-example",
+    "href": "materials/slides_1b.html#function-example",
+    "title": "Intro to Data Science",
+    "section": "Function Example",
+    "text": "Function Example\n\nThere is a function called round that rounds decimals either up or down\n\n\n\n\nround has two arguments:\n\nx = the number(s) to round\ndigits = the number of digits to which to round x\n\n\n\n\n\nLet’s look at an example\n\n\n\n# Round a decimal to 2 digits\nround(x = 62.82379110, digits = 2)\n\n[1] 62.82"
+  },
+  {
+    "objectID": "materials/slides_1b.html#function-help",
+    "href": "materials/slides_1b.html#function-help",
+    "title": "Intro to Data Science",
+    "section": "Function Help",
+    "text": "Function Help\n\nFunctions include help files built into R to help you use them!\n\n\n\n\nCan be accessed by typing a ? and then the function name\n\nE.g., ?mean\n\n\n\n\n\nType and run ?round and see what happens"
+  },
+  {
+    "objectID": "materials/slides_1b.html#practice-functions",
+    "href": "materials/slides_1b.html#practice-functions",
+    "title": "Intro to Data Science",
+    "section": "Practice: Functions",
+    "text": "Practice: Functions\n\nBase R includes an object called pi that includes the first 6 digits of π\n\n\n\n\nUsing the round function, round pi to 3 digits\n\n\n\n\n\nConsult the help file for the square root function (sqrt)\n\nWhat argument(s) does sqrt expect?\n\n\n\n\n\nWhat is the square root of pi?\n\n\n\n\n\n\nDon’t forget to add comments to each line in your script!"
+  },
+  {
+    "objectID": "materials/slides_1b.html#vectors-and-concatenation",
+    "href": "materials/slides_1b.html#vectors-and-concatenation",
+    "title": "Intro to Data Science",
+    "section": "Vectors and Concatenation",
+    "text": "Vectors and Concatenation\n\nYou can also make objects that contain several values\n\nThis type of object is called a vector\n\n\n\n\n\nYou can make vectors using “concatenation”\n\n[con-CAT-eh-nation]\n\n\n\n\n\nR does this with a lower case c and parentheses\n\nYou need commas between each element of a vector\nE.g., my_vector &lt;- c(1, 2, 3, 4)"
+  },
+  {
+    "objectID": "materials/slides_1b.html#object-classes",
+    "href": "materials/slides_1b.html#object-classes",
+    "title": "Intro to Data Science",
+    "section": "Object Classes",
+    "text": "Object Classes\n\nObjects have a class that dictates what operations they support\n\n\n\n\nMath can only be done on “numeric” objects\n\n\n\n\nText can be stored in “character” objects\n\nBut math can’t be done on characters!\n\n\n\n\n\nYou can check an object’s current class with the class function\n\nE.g., class(my_object)"
+  },
+  {
+    "objectID": "materials/slides_1b.html#object-classes-cont.",
+    "href": "materials/slides_1b.html#object-classes-cont.",
+    "title": "Intro to Data Science",
+    "section": "Object Classes Cont.",
+    "text": "Object Classes Cont.\n\nThere are many classes\n\n\n\n\nLet’s focus on 4 fundamental classes\n\nNumeric = numbers\nInteger = numbers without any decimal places\nCharacter = text\nFactor = text but defines categorical groups"
+  },
+  {
+    "objectID": "materials/slides_1b.html#class-coercion",
+    "href": "materials/slides_1b.html#class-coercion",
+    "title": "Intro to Data Science",
+    "section": "Class Coercion",
+    "text": "Class Coercion\n\nYou can force (a.k.a. coerce) an object from one class to another\n\n\n\n\nThe simplest functions to do this are all as.&lt;desired class&gt;()\n\nE.g., as.numeric()\n\n\n\n\n\nWant to have your code treat a number like text?\n\nmy_text &lt;- as.character(111)\n\n\n\n\n\nWhat happens when you try to force text into a number?\n\nmy_num &lt;- as.numeric(\"hello\")"
+  },
+  {
+    "objectID": "materials/slides_1b.html#practice-concatenation-classes",
+    "href": "materials/slides_1b.html#practice-concatenation-classes",
+    "title": "Intro to Data Science",
+    "section": "Practice: Concatenation & Classes",
+    "text": "Practice: Concatenation & Classes\n\nConcatenate the numbers 1, 4, 9, and 6 into a vector\n\nRemember to use c!\nWhat is the class of that vector?\n\n\n\n\n\n\nConcatenate “hello”, “world”, and the first vector into a new vector\n\nWhat is the class of the new vector?\n\n\n\n\n\n\n\nMultiply the second vector by 16; what does this return?"
+  },
+  {
+    "objectID": "materials/slides_1b.html#temperature-check-1",
+    "href": "materials/slides_1b.html#temperature-check-1",
     "title": "Intro to Data Science",
     "section": "Temperature Check",
     "text": "Temperature Check\nHow are you Feeling?"
@@ -46,7 +228,7 @@
     "href": "materials/slides_1b.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #x\n\n\nDue before lecture\n(By midnight)\n\nX\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #1\nRead the British Ecological Society’s Reproducible Code Guide (p.1-12)\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #1\nRead the British Ecological Society’s Reproducible Code Guide (p.20-25)\n\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/slides_1a.html#a-guide-to-your-process",
