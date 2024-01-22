@@ -36,27 +36,28 @@ website:
             href: rubrics/rubric_github.qmd
           - text: "Function Tutorials"
             href: rubrics/rubric_tutorials.qmd
-      - section: "Slide Decks"
+      - section: "Course Content"
         contents:
-          - text: "Data Science Background"
-            href: materials/home_1a.qmd
-          - text: "RStudio & Base R"
-          - text: "Objects & Conditionals"
-          - text: "Version Control"
-          - text: "Data & Wrangling"
-          - text: "Summarizing & Reshaping"
-          - text: "Joining"
-          - text: "Statistics 101"
-          - text: "Multi-Model Inference"
-          - text: "Survey Design"
-          - text: "Visualization I"
-          - text: "Visualization II"
-          - text: "Code Iteration"
-          - text: "Custom Functions"
-          - section: "Bonus Content"
+          - text: "Week 1 Content"
+            href: materials/home_week1.qmd
+          - section: "Week 2"
             contents:
-              - text: "Ecology + R"
-              - text: "Spatial Resources"
+              - text: "Objects & Conditionals"
+              - text: "Version Control"
+              - text: "Data & Wrangling"
+              - text: "Summarizing & Reshaping"
+              - text: "Joining"
+              - text: "Statistics 101"
+              - text: "Multi-Model Inference"
+              - text: "Survey Design"
+              - text: "Visualization I"
+              - text: "Visualization II"
+              - text: "Code Iteration"
+              - text: "Custom Functions"
+              - section: "Bonus Content"
+                contents:
+                  - text: "Ecology + R"
+                  - text: "Spatial Resources"
   page-footer:
     center: "Copyright 2024, Nicholas J Lyon"
 
