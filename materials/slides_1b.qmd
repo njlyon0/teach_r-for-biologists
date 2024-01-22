@@ -25,7 +25,11 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- Installation Check (R + RStudio)
+- Navigating RStudio
+- RStudio Projects
+- R Scripts
+- "Base" R
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -33,7 +37,28 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Set up RStudio on your computer
+- Create an RStudio Project
+- Use R Scripts
+- Define fundamental base R terms
+    - E.g., object, assign, function, arguments, etc.
+- Solve simple arithmetic operations using R
+
+## [Installation Check: R & RStudio]{.gold}
+
+:::{.incremental}
+
+- Did anyone <u>_not_</u> get [R]{.blue} installed?
+
+\
+
+- Did anyone <u>_not_</u> get [RStudio]{.orange} installed?
+
+\
+
+- Once you have both installed, please open [RStudio]{.orange}
+
+:::
 
 ## [Temperature Check]{.purple}
 
