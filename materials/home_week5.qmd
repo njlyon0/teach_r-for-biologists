@@ -16,4 +16,26 @@ title: "Week 5 Slide Decks"
 
 ## Homework 5
 
+### Learning Objective(s)
 
+Upon completion of this assignment, students will be able to:
+
+- Identify the most appropriate statistical test for a given hypothesis
+- Use multi-model inference tools in R
+
+### Assignment Due Date(s)
+
+Each homework is due at midnight the day before each lecture (i.e., Monday night) Late work will be accepted but will be subject to the late assignments policy outlined in this course's syllabus.
+
+### Assignment Description
+
+This homework should be submitted as an R Markdown with your last name and the week number as the file name (e.g., "Lyon_week6.Rmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
+
+1. You hypothesize that penguin flipper length differs between sexes and that the degree of difference between sexes is related to the species of penguin (i.e., sex and species are interacting). Test your hypothesis using the "penguins" dataset in the `palmerpenguins` package
+    - What is the name of the most appropriate statistical test? Why is it the correct test for this question?
+    - In a code chunk, fit the model you have chosen and generate a summary table of the relevant information. Remember to remove any penguins that don't have a recorded sex!
+    - Based on the summary table you just generated, is your hypothesis supported? What information in the summary table allows you to draw this conclusion? 
+
+2. You present on your work at a professional society's annual meeting and people are really excited about this finding! A colleague approaches you afterwards and asks you whether you've used multi-model inference to check to see if including the home island of the penguin improves your model's explanatory power. You realize this is a great idea and decide to pursue it immediately
+    - Fit a model with sex and species interacting and add a term for island (no interaction term). Fit another model where sex, species, and island are all included as explanatory variables and they are all allowed to interact.
+    - Using the `AIC` function, compare these two new models with your original model. Which model has the most explanatory power? How do you know?

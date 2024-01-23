@@ -22,4 +22,27 @@ I may (and likely will) design new 'bonus content' modules and I'll list those b
 
 ## Homework 8
 
+### Learning Objective(s)
+
+Upon completion of this assignment, students will be able to:
+
+- Create a custom function in R
+- Demonstrate your process for writing a new function
+
+### Assignment Due Date(s)
+
+Each homework is due at midnight the day before each lecture (i.e., Monday night) Late work will be accepted but will be subject to the late assignments policy outlined in this course’s syllabus.
+
+### Assignment Description
+
+This homework should be submitted as an R Markdown with your last name and the week number as the file name (e.g., "Lyon_week6.Rmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
+
+1. Your French colleague (for whom you calculated a number of temperature conversions last week) reaches out to you again with one final request: they would like you to write a function for them in R that converts temperature from Celsius to Fahrenheit so that they can stop bothering you to do the conversion for them. Note that last week you converted F to C and this week is the opposite!
+    - In a code chunk, convert 22°C into Fahrenheit. Feel free to Google the formula. Also, note that you may want to be careful to use parentheses to make sure the order of operations is correct.
+    - Identify which part of that formula should be replaced with an object (i.e., what part of the formula will become an argument). In another code chunk, copy your conversion formula and replace the relevant part(s) with objects.
+    - Use R’s function syntax to make your scripted formula into a working function. Define the function (i.e., assign it to an object) in a code chunk.
+    - Use your new custom function to convert 5°C and 35°C into their equivalents in Fahrenheit in a final code chunk.
+
+
+
 

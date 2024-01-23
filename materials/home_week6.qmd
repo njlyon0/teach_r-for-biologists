@@ -16,4 +16,28 @@ title: "Week 6 Slide Decks"
 
 ## Homework 6
 
+### Learning Objective(s)
 
+Upon completion of this assignment, students will be able to:
+
+- Create publication-quality graphs using the `ggplot2` package
+- Customize background theme elements of those graphs
+- Make multi-panel graphs both using `ggplot2` and using the `cowplot` package
+
+### Assignment Due Date(s)
+
+Each homework is due at midnight the day before each lecture (i.e., Monday night) Late work will be accepted but will be subject to the late assignments policy outlined in this course’s syllabus.
+
+### Assignment Description
+
+This homework should be submitted as an R Markdown with your last name and the week number as the file name (e.g., "Lyon_week6.Rmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
+
+1. Recalling your exciting statistical discoveries on penguin flipper length relationship to sex, species, and island, you decide to make some publication quality figures to demonstrate your findings. Use the `ggplot2` package to make the graphs and the `palmerpenguins` package for the "penguins" data.
+    - Begin by creating a violin plot with sex on the x axis and flipper length on the y axis. The violin blobs’ fill color should differ between the two sexes (default colors are fine!).
+    - That graph was a fine first pass but you realize you’ve neglected to include penguin species information in the graph! Facet the graph to divide the plot into three panels (either rows or columns are fine)--one panel per species of penguin. Also, remove the gray background color (but keep the black axis lines!) and add custom axis titles that remove the underscores ("_") in the raw column names.
+
+2. Remembering your colleague’s suggestion of evaluating the effect of island you decide to make a second graph where you visualize penguin flipper length at the three islands.
+    - Create a violin plot where island is on the y axis and flipper length is on the x axis. Make the fill color of each violin different between islands. Remove the gray background color, keep black axis lines, and customize the axis titles so this graph visually matches your first graph.
+    - After making this graph you realize you are accidentally re-using the default `ggplot2` red and blue colors. This could be very confusing to your audience so you definitely need to address it. Visit the Coolors website (coolors.co/palettes/trending) and pick a custom color for each of the three islands. Manually set the violin fill to give each island one of these three colors.
+
+3. Your two graphs are looking great! Now you just need to combine them into one file for ease of sharing to your peers. Use the `cowplot` package to put both graphs (the species by sex graph and the island graph) into one plot. These can be either side-by-side or one on top of the other depending on your preference.

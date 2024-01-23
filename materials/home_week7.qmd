@@ -16,5 +16,24 @@ This space was held empty to allow for in-class presentations of the functional 
 
 ## Homework 7
 
+### Learning Objective(s)
 
+Upon completion of this assignment, students will be able to:
 
+- Write a for loop to perform a repeated operation
+- Modify a for loop to handle multiple conditionals
+- Create informative messages within a loop using the `print` and `paste` functions together
+
+### Assignment Due Date(s)
+
+Each homework is due at midnight the day before each lecture (i.e., Monday night) Late work will be accepted but will be subject to the late assignments policy outlined in this course’s syllabus.
+
+### Assignment Description
+
+This homework should be submitted as an R Markdown with your last name and the week number as the file name (e.g., "Lyon_week6.Rmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
+
+1. At an international conference you meet a French colleague also interested in penguin research. They’re very excited after your recent string of findings (and beautiful graphs) and want to plan a visit to the states to visit several researchers in your field. However, they intuitively think in Celsius (C) and would love your help with an R script that converts Fahrenheit (F) to their preferred temperature units
+    - Create an object containing the number 35. Using that object, convert it to Celsius and print that converted value. The conversion formula is as follows: C = (F - 32) x 5/9
+    - Your colleague is very appreciative of your quick calculation but realizes it might be easier to convert a set of temperatures from C to F so that they can keep that range in mind. Write a for loop that converts 35, 45, 55, 65, 75, 85, and 95°F into their equivalents in C and prints the result
+    - You’re happy with this loop but you don’t think the raw temperatures are going to be very useful to your colleague’s planning. Add a conditional to the loop where if the temperature in Celsius is less than or equal to 18 a message is printed that includes (1) the temp in Fahrenheit and (2) a note to your colleague that they should plan on packing a jacket. If the temperature is greater than 18°C, the message should still include the temp in F and can tell them not to worry about bringing a jacket
+    - Whether or not to bring a jacket is a rather coarse assessment of temperature though! Add more conditionals such that (A) if temperature is less than 18°C the message includes the note about bringing a jacket, (B) if temperature is greater than or equal to 23°C the message is that they should pack shorts, or (C) if temperature is between 18 and 23°C that neither shorts nor a jacket is required. All three message options should also include the temperature in Fahrenheit for that iteration of the loop (same as question 1c)

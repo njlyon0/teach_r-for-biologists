@@ -16,4 +16,39 @@ title: "Week 2 Slide Decks"
 
 ## Homework 2
 
+### Learning Objective(s)
 
+Upon completion of these assignments, students will be able to:
+
+-	Explain R package installation and use
+-	Manipulate a vector using concatenation and bracket notation
+-	Write conditional statements to subset a dataframe
+-	Define fundamental Git vocabulary
+-	Provide the URL for your GitHub profile 
+
+### Assignment Due Date(s)
+
+Each homework is due at midnight the day before each lecture (i.e., Monday night) Late work will be accepted but will be subject to the late assignments policy outlined in this course's syllabus.
+
+### Assignment Description
+
+This homework should be submitted as an R script with your last name and week 2 as the file name (e.g., "Lyon_week2.R"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
+
+1. As a comment, explain what steps are needed to install a new R package from CRAN and then use functions in that package
+
+2. As a comment, explain (A) what is meant by "namespacing" a function and (B) what–in your opinion–the advantage(s) of namespacing are
+
+3. As a comment, define what is meant by an object's "class"
+
+4. Assign the base R constant `letters` to an object called "my_vec". Using bracket notation and concatenation, subsample 'my_vec' to spell out your surname (i.e., your last name)
+
+5. This is a multi-part question. Please be sure to answer every part of this question and include a comment above each answer explaining (briefly) what the line of code is doing in your own words
+    - Load the `palmerpenguins` library
+    - Assign the "penguins_raw" dataframe embedded in that library to an object called "peng_df2"
+    - Check the structure of 'peng_df2'. How many rows are there? How many columns are there? As a comment, specify how you figured out the number of rows / columns
+    - Subset 'peng_df2' to only penguins that were found on the island named "Torgersen". How many rows are in that subset (i.e., how many penguins were found on Torgersen Island)?
+    - Using as many subsets as needed, identify how many penguins had their sex recorded. I.e., for how many rows of 'peng_df2' was the "Sex" column either "MALE" or "FEMALE"? As a comment, explain your thought process for how you figured this out.
+
+6. As a comment, define what a "pull" means in the context of Git / GitHub
+
+7. As a comment, provide the link to your GitHub profile (e.g., "github.com/njlyon0")
