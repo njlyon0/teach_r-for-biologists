@@ -4,7 +4,7 @@ title: "Week 1 Slide Decks"
 
 ## Overview
 
-> This week we'll be covering mostly big picture background content. We'll begin with background on data science generally then narrow to talking about why this course is taught in R (rather than some other coding language). I'll then give you some hard-won tips on problem solving so that you can begin to develop strategies for handling the errors and warnings that you'll inevitably encounter as you grow your competency in this arena. In lab, we'll discuss some crucial components of navigating and using RStudio as well as begin our conversation about R scripts and "base R"
+This week we'll be covering mostly big picture background content. We'll begin with background on data science generally then narrow to talking about why this course is taught in R (rather than some other coding language). I'll then give you some hard-won tips on problem solving so that you can begin to develop strategies for handling the errors and warnings that you'll inevitably encounter as you grow your competency in this arena. In lab, we'll discuss some crucial components of navigating and using RStudio as well as begin our conversation about R scripts and "base R"
 
 ## Lecture 1 - Data Science Fundamentals
 
@@ -17,9 +17,9 @@ title: "Week 1 Slide Decks"
 ## Lab 1 - RStudio & Base R
 
 ```{=html}
-<iframe class="slide-deck" src="slides_1b.html" height="420" width="750" style="border: 1px solid #2e3846;></iframe>
+<iframe class="slide-deck" src="slides_1b.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 ```
- 
+
 [Lab Slides -- Full Screen](slides_1b.qmd)
 
 ## Homework 1
@@ -40,7 +40,7 @@ Each homework is due at midnight the day before each lecture (i.e., Monday night
 
 ### Assignment Description
 
-This homework should be submitted as an R script with your last name and week 1 as the file name (e.g., "Lyon_week1.R"). Remember to specifically load any necessary packages using the `library` argument and include comments explaining what line(s) correspond to each of the following prompts.
+This homework should be submitted as an R script with your last name and week 1 as the file name (e.g., "Lyon_week1.R"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
 
 1. As a comment, write the full file path on your computer to where you've saved this script. Folders should be separated by slashes. Include the name of the R script in the file path
 
@@ -56,7 +56,7 @@ This homework should be submitted as an R script with your last name and week 1 
 
 7. Write the code necessary to access the help file for the function `floor`
 
-8. As a comment, define the argument(s) that the `floor` function accepts beneath your response to #7
+8. As a comment, define the argument(s) that the `floor` function accepts beneath your response to \#7
     - NOTE: this should include both (A) the name of the argument and (B) what class(es) the argument requires
 
 9. Concatenate the following values into an object called "my_vector": 4, 8, 15, 23, "hello", "world"
