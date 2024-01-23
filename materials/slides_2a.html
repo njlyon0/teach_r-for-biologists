@@ -852,23 +852,282 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 </section>
-<section id="conditionals" class="slide level2">
+<section id="conditionals" class="slide level2 smaller">
 <h2><span class="orange">Conditionals</span></h2>
+<ul>
+<li>You can write code that runs <em>only</em> if an ‘if statement’ is true
+<ul>
+<li>Otherwise that chunk of code is skipped!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>This allows you to write flexible code that can handle any outcome that you can anticipate!
+<ul>
+<li>Particularly useful for subsetting data based on the contents of a column</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>These ‘if statements’ are called <span class="purple">conditionals</span></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>The answer to a conditional <u><em>must</em></u> be either <code>TRUE</code> or <code>FALSE</code></li>
+</ul>
+</div>
 </section>
-<section id="conditionals-equal-or-and" class="slide level2">
-<h2><span class="orange">Conditionals: EQUAL, OR, &amp; AND</span></h2>
+<section id="fundamentals-equal" class="slide level2">
+<h2><span class="orange">Fundamentals: EQUAL</span></h2>
+<ul>
+<li>Are two things exactly equal?</li>
+</ul>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+<ul>
+<li>Uses <code>==</code> operator
+<ul>
+<li>Just two equal signs</li>
+</ul></li>
+</ul>
 </section>
-<section id="practice-fundamental-conditionals" class="slide level2">
+<section id="fundamentals-or" class="slide level2">
+<h2><span class="orange">Fundamentals: OR</span></h2>
+<ul>
+<li>Are <em>any</em> of these conditions met?</li>
+</ul>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">|</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+<ul>
+<li>Uses <code>|</code> operator
+<ul>
+<li>Shift + <code>\</code> on keyboard</li>
+</ul></li>
+</ul>
+</section>
+<section id="fundamentals-and" class="slide level2">
+<h2><span class="orange">Fundamentals: AND</span></h2>
+<ul>
+<li>Are <em>all</em> of the conditions met?</li>
+</ul>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">&amp;</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+<ul>
+<li>Uses <code>&amp;</code> operator
+<ul>
+<li>Shift + 7 on keyboard</li>
+</ul></li>
+</ul>
+</section>
+<section id="fundamentals-summary" class="slide level2 smaller">
+<h2><span class="orange">Fundamentals: Summary</span></h2>
+<div class="columns">
+<div class="column" style="width:33.33%;">
+<h3 id="equal">EQUAL</h3>
+<ul>
+<li>Are two things exactly equal?</li>
+</ul>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+<ul>
+<li>Uses <code>==</code> operator
+<ul>
+<li>Just two equal signs</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:33.33%;">
+<h3 id="or">OR</h3>
+<ul>
+<li>Are <em>any</em> of these conditions met?</li>
+</ul>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">|</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+<ul>
+<li>Uses <code>|</code> operator
+<ul>
+<li>Shift + <code>\</code> on keyboard</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:33.33%;">
+<h3 id="and">AND</h3>
+<ul>
+<li>Are <em>all</em> of the conditions met?</li>
+</ul>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">&amp;</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+<ul>
+<li>Uses <code>&amp;</code> operator
+<ul>
+<li>Shift + 7 on keyboard</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="practice-fundamental-conditionals" class="slide level2 smaller">
 <h2><span class="pink">Practice: Fundamental Conditionals</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>We’ll use the base R <code>subset</code> function with the <code>peng_df</code> object
+<ul>
+<li>If needed, consult the help file for more details (<code>?subset</code>)</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Subset <code>peng_df</code> to only Adelie penguins (and assign to a <code>sub_v1</code> object)
+<ul>
+<li>I.e., <code>species == "Adelie"</code></li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="discussion-conditionals" class="slide level2">
+<section id="more-practice-fundamental-conditionals" class="slide level2 smaller">
+<h2><span class="pink">More Practice: Fundamental Conditionals</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Subset <code>peng_df</code> to Adelie <em>or</em> Biscoe penguins
+<ul>
+<li>Assign this subset to <code>sub_v2</code> object</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Subset <code>peng_df</code> to only male Gentoo penguins
+<ul>
+<li>Assign to <code>sub_v3</code> object</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="discussion-conditionals" class="slide level2 smaller">
 <h2><span class="gold">Discussion: Conditionals</span></h2>
+<ul>
+<li>We’ve covered EQUAL, OR, and AND
+<ul>
+<li><code>==</code>, <code>|</code>, or <code>&amp;</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What unanswered questions do you have?</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>What other types of conditional statements would be useful?
+<ul>
+<li>Think about it in the context of wanting to subset some data</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="numeric-conditionals" class="slide level2">
 <h2><span class="orange">Numeric Conditionals</span></h2>
+<ul>
+<li>For numbers, we can use greater/less than conditionals!</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Greater / less than are expressed as normal
+<ul>
+<li><code>&gt;</code> and <code>&lt;</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Adding ‘or equal to’ is done by adding an equal sign
+<ul>
+<li><code>&gt;=</code> and <code>&lt;=</code></li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="practice-numeric-conditionals" class="slide level2">
 <h2><span class="orange">Practice: Numeric Conditionals</span></h2>
+<ul>
+<li>Subset <code>peng_df</code> to only penguins with a bill length greater than 40 mm
+<ul>
+<li>Assign to <code>sub_v7</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Subset <code>peng_df</code> to only penguins with a body mass less than or equal to 4,000 g
+<ul>
+<li>Assign to <code>sub_v8</code></li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="temperature-check-1" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
@@ -884,13 +1143,15 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <h3 id="due-before-lab">Due before lab</h3>
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
-<li>Muddiest Point #x</li>
+<li>Muddiest Point #2</li>
+<li>Read <a href="https://peerj.com/preprints/3159/">Excuse me, do you have a moment to talk about version control?</a></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="due-before-lecture">Due before lecture</h3>
 <h4 id="by-midnight-1">(By midnight)</h4>
 <ul>
-<li>X</li>
+<li>Homework #2</li>
+<li>Read the British Ecological Society’s <a href="https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf">Reproducible Code Guide</a> (p.20-25)</li>
 </ul>
 </div>
 </div>
@@ -900,14 +1161,80 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <h1><span class="purple">Bonus Conditionals</span></h1>
 
 </section>
-<section id="or-with-2-options" class="slide level2">
+<section id="or-with-2-options" class="slide level2 smaller">
 <h2><span class="orange">OR with &gt;2 Options</span></h2>
+<ul>
+<li>OR conditionals with many options get cumbersome quickly
+<ul>
+<li>E.g., <code>x == 1 | x == 2 | x == 3 | x == 4 …</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>We can use concatenation and the <code>%in%</code> operator to simplify this!</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li><code>%in%</code> is effectively “if any of &lt;this vector&gt; matches the value”
+<ul>
+<li>E.g., <code>x %in% c(1, 2, 3, 4, …)</code></li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="conditionals-not" class="slide level2">
+<section id="conditionals-not" class="slide level2 smaller">
 <h2><span class="orange">Conditionals: NOT</span></h2>
+<ul>
+<li>You can also <em>exclude</em> based on conditions
+<ul>
+<li>Two different ways of doing this</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>For one / a few options: use <code>!=</code> for “not equal to”
+<ul>
+<li>E.g., <code>x != 10</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Can be combined with <code>%in%</code> to exclude a set of options
+<ul>
+<li>E.g., <code>!x %in% c(...)</code></li>
+<li>Note the exclamation mark is <em>before</em> the object</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="practice-advanced-conditionals" class="slide level2">
+<h2><span class="purple">Practice: Advanced Conditionals</span></h2>
+<ul>
+<li>Subset <code>peng_df</code> is species is any of “Adelie”, “Gentoo”, or “Chinstrap”
+<ul>
+<li>Use the <code>%in%</code> operator</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Subset <code>peng_df</code> to all islands except “Dream”</li>
+</ul>
 
 <div class="footer footer-default">
 <p><a href="https://njlyon0.github.io/teach_r-for-biologists/">Programming in R for Biologists</a></p>
+</div>
 </div>
 </section></section>
     </div>
