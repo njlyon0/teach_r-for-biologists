@@ -45,45 +45,341 @@ After today's session you will be able to:
 - Write conditional statements
 - Manage missing data in objects with conditionals
 
-## [R Package Background]{.orange}
+## [R Package Background]{.orange} {.smaller}
 
+- R packages are suites of functions developed by users
 
+\
+
+- Packages have no defined depth or breadth requirements
+    - A package could be a single, simple function
+    - Or a complex ecosystem of inter-related functions
+
+\
+
+- Packages can be installed by any R user for _free!_
+
+\
+
+- R is versatile and powerful (in part) because of contributed packages
 
 ## [Package Locations]{.orange}
 
+- There are two main homes for R packages
+
+\
+
+. . . 
+
+1. Comprehensive R Archive Network
+    - A.k.a. "CRAN"
+    - [cran.rstudio.com](https://cran.rstudio.com/)
+
+2. GitHub
+    - [github.com](https://github.com/)
+
+## [Package Locations Cont.]{.orange} {.smaller}
+
+::::{.columns}
+
+:::{.column width="50%"}
+
+#### CRAN
+
+- Currently >20,000 packages live here
+
+\
+
+- Strict rules for packages to be allowed
+
+\
+
+- These are "official" packages
+
+:::
+
+:::{.column width="50%"}
+
+#### GitHub
+
+- Unknown number of packages here (no centralized record retained)
+
+\
+
+- No mandatory quality control tests to be available here
+
+\
+
+- Packages _usually_ work but they don't have the same quality control as CRAN packages
+
+:::
+
+::::
 
 ## [Using Packages]{.orange}
 
+- In order to use a package, you must:
+
+\
+
+1. <u>Install</u> the desired package
+    - Done once per computer
+
+\
+
+2. <u>Load</u> the package into R
+    - Done _every_ time you re-open RStudio
+
+## [Using Packages: Specific Steps]{.orange}
+
+\
+
+```{.r}
+# Install desired package
+install.packages("dplyr")
+
+# Load that package
+library(dplyr)
+```
+
+\
+
+- `install.packages` <u>_requires_</u> the package name be in quotes
+- `library` <u>_requires_</u> requires **unquoted** names.
 
 ## [Package Analogy]{.gold}
 
+. . . 
 
-## [Practice: Packages]{.pink}
+- `install.packages` = buying a set of tools from the store and putting them in your home
 
+\
 
-## [Package Namespacing]{.orange}
+. . .
 
+- `library` = moving the tools that you already own to your workbench
 
-## [Practice: Namespacing]{.pink}
+\
 
+. . .
 
-## [Class versus Structure]{.orange}
+- You only _buy_ the tools **once** but _every time_ you start work you need to bring them back to your work area!
 
+## [Practice: Packages]{.pink} {.smaller}
 
-## [Checking Class/Structure]{.orange}
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
 
+- Make a new script for this week's lecture!
+    - Save it in your RStudio Project folder for this course
+    - Make sure it has "lecture" and "2" in the file name
 
-## [Practice: Structure]{.pink}
+\
 
+. . .
 
-## [Using Vectors: Coordinates]{.orange}
+- Install the `palmerpenguins` package
+    - Remember to put quotes around the package name!
 
+\
 
-## [Using Vectors: Coordinates Cont.]{.orange}
+. . .
 
+- Load the package with the `library` function
+    - Once loaded, run `?palmerpenguins` to see the package-level help file
 
-## [Practice: Vector Navigation]{.pink}
+## [Note on _Function_ Names]{.orange} {.smaller}
 
+- Functions <u>_are not_</u> required to have unique names across all packages
+
+\
+
+- Risk of using a different function than intended
+    - Best case: creates an error and forces you to catch the mistake
+    - Worst case: _silently_ does something wrong
+
+\
+
+- Functions can be "namespaced" to specify which package the function comes from
+
+## [Function Namespacing]{.orange}
+
+- Namespacing _guarantees_ you use the function from the desired package
+
+\
+
+- Done with two colons (:) between the package and function names
+    - E.g., `package::function()`
+
+## [Practice: Namespacing]{.pink} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-dplyr.png){.absolute top=0 left=965 width="12%"}
+
+- `palmerpenguins` includes an example dataset on penguins
+
+. . .
+
+- Run the following code
+    - `peng_df <- palmerpenguins::penguins`
+
+\
+
+. . .
+
+- Install and load the `dplyr` package
+    - `dplyr` has a function called `glimpse` that shows you core structures of data
+
+\
+
+. . .
+
+- Namespace `glimpse` and run it on `peng_df`
+
+## [Class versus Structure]{.orange} {.smaller}
+
+- Objects have both [class]{.blue} and [structure]{.gold}
+
+\
+
+. . .
+
+- [Class]{.blue} = the type of object it is
+    - E.g., dataframe, integer, character, etc.
+
+\
+
+. . .
+
+- [Structure]{.gold} = the dimensions and "shape" of the data
+    - E.g., Number of rows / columns, length, etc.
+
+\
+
+. . .
+
+- _Both_ class and structure affect what you can do with or to a given object!
+
+## [Checking Class/Structure]{.orange} {.smaller}
+
+- Best to **check class and structure** of an object to ensure functions will work
+
+. . .
+
+::::{.columns}
+
+:::{.column width="50%"}
+
+### Check Class
+
+- Use the `class` function
+
+\
+
+```{.r}
+# Checking class of 'my_obj'
+class(my_obj)
+```
+
+:::
+
+:::{.column width="50%"}
+
+### Check Structure
+
+- Use _either_ the `str` function _or_ `dplyr::glimpse`
+
+```{.r}
+# Checking structure of 'my_obj' (with base R)
+str(my_obj)
+
+# Checking structure of 'my_obj' (with `dplyr`)
+dplyr::glimpse(my_obj)
+```
+
+:::
+
+::::
+
+## [Practice: Structure]{.pink} {.smaller}
+
+- What is the [class]{.blue} of 'peng_df'?
+
+\
+
+. . .
+
+- What is the [structure]{.gold}?
+    - What information is included when you check?
+
+\
+
+. . .
+
+- What happens when you check the [class]{.blue} of a function?
+    - Run `class(class)`
+
+\
+
+. . .
+
+- What happens when you check the [structure]{.gold} of a function?
+    - Run `str(str)`
+
+## [Using Vectors: Coordinates]{.orange} {.smaller}
+
+- Vector structure is expressed as "length"
+    - Vector length = number of elements in the vector
+    - Dataframe length = number of rows
+
+\
+
+- Bracket notation can be used to navigate vectors
+
+\
+
+- Running `my_vec[5]` will return the fifth element of `my_vec`
+
+## [Using Vectors: Coordinates Cont.]{.orange} {.smaller}
+
+- Bracket notation accepts vectors of coordinates
+
+\
+
+. . .
+
+- Running `my_vec[c(1, 4, 7)]` returns the first, fourth, and seventh elements of `my_vec`
+
+\
+
+. . .
+
+- You can also grab the same element _more than once!_
+
+\
+
+. . .
+
+- Running `my_vec[c(1, 1, 1)]` returns the first element three times 
+
+## [Practice: Vector Navigation]{.pink} {.smaller}
+
+- Base R has a built-in vector of letters called `letters`
+    - Assign `letters` to an object called `my_vec`
+
+\
+
+- Check the length of `my_vec` using the `length` function
+
+\
+
+. . .
+ 
+- Identify the 10th element of `my_vec` using bracket notation
+
+\
+
+- Identify the 8^th^, 5^th^, 12^th^, 12^th^ (again), and 15^th^ elements of `my_vec`
+    - Use concatenation inside of the brackets (with `c`)!
 
 ## [Temperature Check]{.purple}
 
