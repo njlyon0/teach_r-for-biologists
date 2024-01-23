@@ -4,7 +4,7 @@ title: "Week 7 Slide Decks"
 
 ## Overview
 
-
+During lecture this week we'll go over how we can run a section of code repeatedly to automate some processes. This avoids copy/pasting code and leads to very sleek scripts! As a class you will also decide on the topic(s) that you want to cover during the Lab 8 "bonus content". I've prepared some options to aid that conversation but I hope you'll share the things you're excited/curious about so we can potentially cover them instead. The majority of lab is dedicated to presenting your second draft of your function tutorials.
 
 ## Lecture 7 - Code Iteration
 

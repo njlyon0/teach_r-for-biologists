@@ -4,7 +4,7 @@ title: "Week 2 Slide Decks"
 
 ## Overview
 
-
+This week we'll learn to use R packages. We'll also explore ways of checking the structure of objects and using conditionals to subset data or handle missing data. In lab we'll cover an introduction to version control systems; in our class we will be using Git and its web interface GitHub.
 
 ## Lecture 2 - Packages, Object Structure, & Conditionals
 

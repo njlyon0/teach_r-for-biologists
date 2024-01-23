@@ -4,7 +4,7 @@ title: "Week 6 Slide Decks"
 
 ## Overview
 
-
+This week is all about data visualization! We'll begin by covering the fundamentals of creating graphs with the `ggplot2` package during lecture. In lab we'll continue that conversation by moving on to customizing some of the non-data elements of a ggplot as well as how to combine multiple graphs as panels in a larger figure. During lecture we'll also debrief your take-aways from your presentations last week and during lab we'll do some <u>_ungraded_</u> GitHub presence check ins (1-on-1) so I can see how each of you is doing with that assignment.
 
 ## Lecture 6 - Visualization I
 

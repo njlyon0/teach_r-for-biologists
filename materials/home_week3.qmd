@@ -4,7 +4,7 @@ title: "Week 3 Slide Decks"
 
 ## Overview
 
-
+This week we'll cover the fundamentals of an R Markdown file (as opposed to the R scripts we've been covering). We'll also practice loading external data files into R and then exploring them with both base R tools and functions included in the `dplyr` package. In lab, we'll expand our data wrangling conversation to include the pipe operator and how group-wise summarization can be accomplished in R. We'll finish up with data "shapes" and how data can be re-shaped between wide and long format.
 
 ## Lecture 3 - R Markdowns & Data Wrangling (P1)
 

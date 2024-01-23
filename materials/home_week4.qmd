@@ -4,7 +4,7 @@ title: "Week 4 Slide Decks"
 
 ## Overview
 
-
+This week we'll focus first on data joining via the four types of join. During lab, we'll move on to begin our exploration of statistics in R. We'll begin with thinking about the larger context for why we (need to) do statistics and then go into a few of the most common tests and how they can be run in R.
 
 ## Lecture 4 - Joining Data
 
