@@ -389,22 +389,226 @@ dplyr::glimpse(my_obj)
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-## [Conditionals]{.orange}
+## [Conditionals]{.orange} {.smaller}
+
+- You can write code that runs _only_ if an 'if statement' is true
+    - Otherwise that chunk of code is skipped!
+
+\
+
+. . .
+
+- This allows you to write flexible code that can handle any outcome that you can anticipate!
+    - Particularly useful for subsetting data based on the contents of a column
+
+\
+
+. . .
+
+- These 'if statements' are called [conditionals]{.purple}
+
+\
+
+. . .
+
+- The answer to a conditional <u>_must_</u> be either `TRUE` or `FALSE`
+
+## [Fundamentals: EQUAL]{.orange}
+
+- Are two things exactly equal?
+
+\
+
+```{r conditional-equal}
+#| echo: true
+
+"hello" == "hello"
+```
 
 
-## [Conditionals: EQUAL, OR, & AND]{.orange}
+\
+
+- Uses `==` operator
+    - Just two equal signs
+
+## [Fundamentals: OR]{.orange}
+
+- Are _any_ of these conditions met?
+
+\
+
+```{r conditional-or}
+#| echo: true
+
+"hello" == "hello" | 2 == 7
+```
+
+\
+
+- Uses `|` operator
+    - Shift + `\` on keyboard
 
 
-## [Practice: Fundamental Conditionals]{.pink}
+## [Fundamentals: AND]{.orange}
+
+- Are _all_ of the conditions met?
+
+\
+
+```{r conditional-and}
+#| echo: true
+
+"hello" == "hello" & 2 == 7
+```
+
+\
+
+- Uses `&` operator
+    - Shift + 7 on keyboard
+
+## [Fundamentals: Summary]{.orange} {.smaller}
+
+::::{.columns}
+
+:::{.column width="33.33%"}
+
+### EQUAL
+
+- Are two things exactly equal?
+
+\
+
+```{r conditional-ex1}
+#| echo: true
+
+"hello" == "hello"
+```
 
 
-## [Discussion: Conditionals]{.gold}
+\
 
+- Uses `==` operator
+    - Just two equal signs
+
+:::
+
+:::{.column width="33.33%"}
+
+### OR
+
+- Are _any_ of these conditions met?
+
+\
+
+```{r conditional-ex2}
+#| echo: true
+
+"hello" == "hello" | 2 == 7
+```
+
+\
+
+- Uses `|` operator
+    - Shift + `\` on keyboard
+
+:::
+
+:::{.column width="33.33%"}
+
+### AND
+
+- Are _all_ of the conditions met?
+
+\
+
+```{r conditional-ex3}
+#| echo: true
+
+"hello" == "hello" & 2 == 7
+```
+
+\
+
+- Uses `&` operator
+    - Shift + 7 on keyboard
+
+:::
+
+::::
+
+## [Practice: Fundamental Conditionals]{.pink} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+
+- We'll use the base R `subset` function with the `peng_df` object
+    - If needed, consult the help file for more details (`?subset`)
+
+\
+
+. . .
+
+- Subset `peng_df` to only Adelie penguins (and assign to a `sub_v1` object)
+    - I.e., `species == "Adelie"`
+
+## [More Practice: Fundamental Conditionals]{.pink} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+
+- Subset `peng_df` to Adelie _or_ Biscoe penguins
+    - Assign this subset to `sub_v2` object
+
+\
+
+. . .
+
+- Subset `peng_df` to only male Gentoo penguins
+    - Assign to `sub_v3` object
+
+## [Discussion: Conditionals]{.gold} {.smaller}
+
+- We've covered EQUAL, OR, and AND
+    - `==`, `|`, or `&`
+
+\
+
+- What unanswered questions do you have?
+
+\
+
+. . .
+
+- What other types of conditional statements would be useful?
+    - Think about it in the context of wanting to subset some data
 
 ## [Numeric Conditionals]{.orange}
 
+- For numbers, we can use greater/less than conditionals!
+
+\
+
+. . .
+
+- Greater / less than are expressed as normal
+    - `>` and `<`
+
+\
+
+. . .
+
+- Adding 'or equal to' is done by adding an equal sign
+    - `>=` and `<=`
 
 ## [Practice: Numeric Conditionals]{.orange}
+
+- Subset `peng_df` to only penguins with a bill length greater than 40 mm
+    - Assign to `sub_v7`
+
+\
+
+. . . 
+
+- Subset `peng_df` to only penguins with a body mass less than or equal to 4,000 g
+    - Assign to `sub_v8`
 
 ## [Temperature Check]{.purple}
 
@@ -424,7 +628,8 @@ dplyr::glimpse(my_obj)
 
 #### (By midnight)
 
-- Muddiest Point \#x
+- Muddiest Point \#2
+- Read [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159/)
 
 :::
 
@@ -434,7 +639,8 @@ dplyr::glimpse(my_obj)
 
 #### (By midnight)
 
-- X
+- Homework \#2
+- Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) (p.20-25)
 
 :::
 
@@ -442,8 +648,51 @@ dplyr::glimpse(my_obj)
 
 # [Bonus Conditionals]{.purple}
 
-## [OR with >2 Options]{.orange}
+## [OR with >2 Options]{.orange} {.smaller}
 
+- OR conditionals with many options get cumbersome quickly
+    - E.g., `x == 1 | x == 2 | x == 3 | x == 4 …`
 
-## [Conditionals: NOT]{.orange}
+\
 
+. . .
+
+-  We can use concatenation and the `%in%` operator to simplify this!
+
+\
+
+. . .
+
+- `%in%` is effectively "if any of \<this vector\> matches the value"
+    - E.g., `x %in% c(1, 2, 3, 4, …)`
+
+## [Conditionals: NOT]{.orange} {.smaller}
+
+- You can also _exclude_ based on conditions
+    - Two different ways of doing this
+
+\
+
+. . . 
+
+- For one / a few options: use `!=` for "not equal to"
+    - E.g., `x != 10`
+
+\
+
+. . . 
+
+- Can be combined with `%in%` to exclude a set of options
+    - E.g., `!x %in% c(...)`
+    - Note the exclamation mark is _before_ the object
+
+## [Practice: Advanced Conditionals]{.purple}
+
+- Subset `peng_df` is species is any of "Adelie", "Gentoo", or "Chinstrap"
+    - Use the `%in%` operator
+
+\
+
+. . .
+
+- Subset `peng_df` to all islands except "Dream"
