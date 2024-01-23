@@ -6,11 +6,17 @@ title: "Week 8 Slide Decks"
 
 
 
-## Lecture 8 -
+## Lecture 8 - Custom Functions
 
 
 
-## Lab 8 - 
+## Lab 8 - Bonus Content
+
+I may (and likely will) design new 'bonus content' modules and I'll list those below as they are created.
+
+### Biodiversity & Mapping Resources
+
+
 
 
 

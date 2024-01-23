@@ -6,11 +6,11 @@ title: "Week 5 Slide Decks"
 
 
 
-## Lecture 5 -
+## Lecture 5 - Multi-Model Inference
 
 
 
-## Lab 5 - 
+## Lab 5 - Survey Design Basics
 
 
 

@@ -6,11 +6,11 @@ title: "Week 2 Slide Decks"
 
 
 
-## Lecture 2 -
+## Lecture 2 - Packages, Object Structure, & Conditionals
 
 
 
-## Lab 2 - 
+## Lab 2 - Version Control
 
 
 

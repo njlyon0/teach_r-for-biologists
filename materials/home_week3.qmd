@@ -6,11 +6,11 @@ title: "Week 3 Slide Decks"
 
 
 
-## Lecture 3 -
+## Lecture 3 - R Markdowns & Data Wrangling (P1)
 
 
 
-## Lab 3 - 
+## Lab 3 - Data Wrangling (P2)
 
 
 

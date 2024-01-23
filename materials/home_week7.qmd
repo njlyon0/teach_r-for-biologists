@@ -6,13 +6,13 @@ title: "Week 7 Slide Decks"
 
 
 
-## Lecture 7 -
+## Lecture 7 - Code Iteration
 
 
 
-## Lab 7 - 
+## Lab 7 - NA
 
-
+This space was held empty to allow for in-class presentations of the functional tutorials (second draft)
 
 ## Homework 7
 

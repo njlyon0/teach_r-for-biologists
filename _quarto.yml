@@ -40,24 +40,20 @@ website:
         contents:
           - text: "Week 1 Content"
             href: materials/home_week1.qmd
-          - section: "Week 2"
-            contents:
-              - text: "Objects & Conditionals"
-              - text: "Version Control"
-              - text: "Data & Wrangling"
-              - text: "Summarizing & Reshaping"
-              - text: "Joining"
-              - text: "Statistics 101"
-              - text: "Multi-Model Inference"
-              - text: "Survey Design"
-              - text: "Visualization I"
-              - text: "Visualization II"
-              - text: "Code Iteration"
-              - text: "Custom Functions"
-              - section: "Bonus Content"
-                contents:
-                  - text: "Ecology + R"
-                  - text: "Spatial Resources"
+          - text: "Week 2 Content"
+            href: materials/home_week2.qmd
+          - text: "Week 3 Content"
+            href: materials/home_week3.qmd
+          - text: "Week 4 Content"
+            href: materials/home_week4.qmd
+          - text: "Week 5 Content"
+            href: materials/home_week5.qmd
+          - text: "Week 6 Content"
+            href: materials/home_week6.qmd
+          - text: "Week 7 Content"
+            href: materials/home_week7.qmd
+          - text: "Week 8 Content"
+            href: materials/home_week8.qmd
   page-footer:
     center: "Copyright 2024, Nicholas J Lyon"
 
