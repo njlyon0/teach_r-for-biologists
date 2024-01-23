@@ -28,7 +28,10 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- R Packages
+- Class vs. Structure
+- Using Vectors
+- Conditionals
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -36,7 +39,51 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Load and use an R package
+- Define the difference(s) between object <u>class</u> and <u>structure</u>
+- Create and manipulate vectors
+- Write conditional statements
+- Manage missing data in objects with conditionals
+
+## [R Package Background]{.orange}
+
+
+
+## [Package Locations]{.orange}
+
+
+## [Using Packages]{.orange}
+
+
+## [Package Analogy]{.gold}
+
+
+## [Practice: Packages]{.pink}
+
+
+## [Package Namespacing]{.orange}
+
+
+## [Practice: Namespacing]{.pink}
+
+
+## [Class versus Structure]{.orange}
+
+
+## [Checking Class/Structure]{.orange}
+
+
+## [Practice: Structure]{.pink}
+
+
+## [Using Vectors: Coordinates]{.orange}
+
+
+## [Using Vectors: Coordinates Cont.]{.orange}
+
+
+## [Practice: Vector Navigation]{.pink}
+
 
 ## [Temperature Check]{.purple}
 
@@ -46,7 +93,30 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+## [Conditionals]{.orange}
 
+
+## [Conditionals: EQUAL, OR, & AND]{.orange}
+
+
+## [Practice: Fundamental Conditionals]{.pink}
+
+
+## [Discussion: Conditionals]{.gold}
+
+
+## [Numeric Conditionals]{.orange}
+
+
+## [Practice: Numeric Conditionals]{.orange}
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
 
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
@@ -73,4 +143,11 @@ After today's session you will be able to:
 :::
 
 ::::
+
+# [Bonus Conditionals]{.purple}
+
+## [OR with >2 Options]{.orange}
+
+
+## [Conditionals: NOT]{.orange}
 
