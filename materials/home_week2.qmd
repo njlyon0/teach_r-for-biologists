@@ -8,14 +8,22 @@ This week we'll learn to use R packages. We'll also explore ways of checking the
 
 ## Lecture 2 - Packages, Object Structure, & Conditionals
 
+```{=html}
+<iframe class="slide-deck" src="slides_2a.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+```
 
+[Lecture Slides -- Full Screen](slides_2a.qmd)
 
 ## Lab 2 - Version Control
 
+```{=html}
+<iframe class="slide-deck" src="slides_2b.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+```
 
+[Lab Slides -- Full Screen](slides_2b.qmd)
 
 ## Homework 2
-
+ 
 ### Learning Objective(s)
 
 Upon completion of these assignments, students will be able to:
