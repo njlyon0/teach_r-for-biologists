@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.450">
+  <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Lab 2 – Version Control">
   <title>R Programming for Biologists - Intro to Data Science</title>
@@ -156,7 +156,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -347,7 +348,21 @@ Lab 2 – Version Control
 <section id="todays-plan" class="slide level2">
 <h2><span class="blue">Today’s Plan</span></h2>
 <ul>
-<li>Y</li>
+<li>Core Content
+<ul>
+<li>Muddiest Point Review</li>
+<li>Version Control Background</li>
+<li>Navigating GitHub</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Time Permitting
+<ul>
+<li>Git / GitHub Setup</li>
+<li>RStudio + Git / GitHub</li>
+</ul></li>
 </ul>
 </section>
 <section id="todays-learning-objectives" class="slide level2">
@@ -355,7 +370,172 @@ Lab 2 – Version Control
 <p>After today’s session you will be able to:</p>
 <div class="fragment">
 <ul>
-<li>X</li>
+<li>Explain the difference(s) between Git and GitHub</li>
+<li>Define fundamental version control vocabulary</li>
+</ul>
+<p><br>
+</p>
+<h3 id="time-permitting">Time Permitting</h3>
+<ul>
+<li>Integrate Git and GitHub with RStudio on your computer</li>
+</ul>
+</div>
+</section>
+<section id="muddiest-point-review" class="slide level2">
+<h2><span class="gold">Muddiest Point Review</span></h2>
+<ul>
+<li>Recurring topics from most recent MPs:
+<ul>
+<li>TBD</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>What other topic(s) would you like to review?</li>
+</ul>
+</div>
+</section>
+<section id="version-control-background" class="slide level2">
+<h2><span class="orange">Version Control Background</span></h2>
+<ul>
+<li>“Version control” is a set of tools for tracking changes to a code file</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Version control lets you work only in a single file but still preserves the history
+<ul>
+<li>No comments you’d have to resolve (like MS Word / etc.)</li>
+<li>No need to “Save As” and retain many different files for each draft</li>
+</ul></li>
+</ul>
+</section>
+<section id="version-control-rationale" class="slide level2 smaller">
+<h2><span class="orange">Version Control Rationale</span></h2>
+<p>Why use version control?</p>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:33.33%;">
+<h5 id="collaboration">Collaboration <svg aria-label="Handshake" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Handshake</title><path d="M272.2 64.6l-51.1 51.1c-15.3 4.2-29.5 11.9-41.5 22.5L153 161.9C142.8 171 129.5 176 115.8 176H96V304c20.4 .6 39.8 8.9 54.3 23.4l35.6 35.6 7 7 0 0L219.9 397c6.2 6.2 16.4 6.2 22.6 0c1.7-1.7 3-3.7 3.7-5.8c2.8-7.7 9.3-13.5 17.3-15.3s16.4 .6 22.2 6.5L296.5 393c11.6 11.6 30.4 11.6 41.9 0c5.4-5.4 8.3-12.3 8.6-19.4c.4-8.8 5.6-16.6 13.6-20.4s17.3-3 24.4 2.1c9.4 6.7 22.5 5.8 30.9-2.6c9.4-9.4 9.4-24.6 0-33.9L340.1 243l-35.8 33c-27.3 25.2-69.2 25.6-97 .9c-31.7-28.2-32.4-77.4-1.6-106.5l70.1-66.2C303.2 78.4 339.4 64 377.1 64c36.1 0 71 13.3 97.9 37.2L505.1 128H544h40 40c8.8 0 16 7.2 16 16V352c0 17.7-14.3 32-32 32H576c-11.8 0-22.2-6.4-27.7-16H463.4c-3.4 6.7-7.9 13.1-13.5 18.7c-17.1 17.1-40.8 23.8-63 20.1c-3.6 7.3-8.5 14.1-14.6 20.2c-27.3 27.3-70 30-100.4 8.1c-25.1 20.8-62.5 19.5-86-4.1L159 404l-7-7-35.6-35.6c-5.5-5.5-12.7-8.7-20.4-9.3C96 369.7 81.6 384 64 384H32c-17.7 0-32-14.3-32-32V144c0-8.8 7.2-16 16-16H56 96h19.8c2 0 3.9-.7 5.3-2l26.5-23.6C175.5 77.7 211.4 64 248.7 64H259c4.4 0 8.9 .2 13.2 .6zM544 320V176H496c-5.9 0-11.6-2.2-15.9-6.1l-36.9-32.8c-18.2-16.2-41.7-25.1-66.1-25.1c-25.4 0-49.8 9.7-68.3 27.1l-70.1 66.2c-10.3 9.8-10.1 26.3 .5 35.7c9.3 8.3 23.4 8.1 32.5-.3l71.9-66.4c9.7-9 24.9-8.4 33.9 1.4s8.4 24.9-1.4 33.9l-.8 .8 74.4 74.4c10 10 16.5 22.3 19.4 35.1H544zM64 336a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm528 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"></path></svg></h5>
+<p><br>
+</p>
+<p>Easily share &amp; work together on files</p>
+</div><div class="column" style="width:33.33%;">
+<h5 id="reproducibility">Reproducibility <svg aria-label="Arrows Left Right" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrows Left Right</title><path d="M406.6 374.6l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224l-293.5 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288l293.5 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"></path></svg></h5>
+<p><br>
+</p>
+<p>Fully document your progress and end results</p>
+</div><div class="column" style="width:33.33%;">
+<h5 id="portfolio">Portfolio <svg aria-label="Book" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Book</title><path d="M96 0C43 0 0 43 0 96V416c0 53 43 96 96 96H384h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V384c17.7 0 32-14.3 32-32V32c0-17.7-14.3-32-32-32H384 96zm0 384H352v64H96c-17.7 0-32-14.3-32-32s14.3-32 32-32zm32-240c0-8.8 7.2-16 16-16H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16zm16 48H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H144c-8.8 0-16-7.2-16-16s7.2-16 16-16z"></path></svg></h5>
+<p><br>
+</p>
+<p>Demonstrate your skills to others with coding know-how</p>
+</div>
+</div>
+</section>
+<section id="git-versus-github" class="slide level2 smaller">
+<h2><span class="orange">Git Versus GitHub</span></h2>
+<p><img data-src="images/logo-git.png" class="absolute" style="top: 60px; left: -120px; width: 9%; "> <img data-src="images/logo-github.png" class="absolute" style="top: 20px; left: 1000px; width: 15%; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="git">Git</h3>
+<ul>
+<li>Actual version control software</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Does the tracking of changes</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Works locally on your computer</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Not something others can interact with</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="github">GitHub</h3>
+<ul>
+<li><u>G</u>raphical <u>u</u>ser <u>i</u>nterface (GUI) for Git</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Allows <em>viewing</em> of Git-tracked changes
+<ul>
+<li>Not actually doing version control itself</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Other users can see your content
+<ul>
+<li>Depending on your settings</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="create-a-github-profile" class="slide level2">
+<h2><span class="gold">Create a Github Profile</span></h2>
+<ul>
+<li>On your computer, go to <a href="https://github.com/">github.com</a></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Create a profile</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Let me know if you run into any issues!</li>
+</ul>
+</section>
+<section id="navigating-github" class="slide level2 smaller">
+<h2><span class="orange">Navigating GitHub</span></h2>
+<ul>
+<li>We’ll work through part of an established GitHub workshop for this section</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li><a href="https://nceas.github.io/scicomp-workshop-collaborative-coding/github.html">nceas.github.io/scicomp-workshop-collaborative-coding/github</a></li>
+</ul>
+</section>
+<section id="practice-create-a-repository" class="slide level2 smaller">
+<h2><span class="pink">Practice: Create a Repository</span></h2>
+<ul>
+<li>To practice what we’ve just covered, you all will make a practice repository!</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>This is a test repository so:
+<ul>
+<li>Set it to “Private”</li>
+<li>Create the repo with both a README and a .gitignore</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>As you go through this process, take notes for ‘future you’
+<ul>
+<li>This course will require you to make two more repositories</li>
+<li>So you’ll want to have a good resource to remind yourself with down the line</li>
+</ul></li>
 </ul>
 </div>
 </section>
@@ -370,22 +550,25 @@ Lab 2 – Version Control
 <h2><span class="blue">Upcoming Due Dates</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="due-before-lab">Due before lab</h3>
+<h3 id="due-before-lecture">Due before lecture</h3>
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
-<li>Muddiest Point #x</li>
+<li>Homework #2</li>
+<li>Read the British Ecological Society’s <a href="https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf">Reproducible Code Guide</a> (p.20-25)</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<h3 id="due-before-lecture">Due before lecture</h3>
+<h3 id="due-before-lab">Due before lab</h3>
 <h4 id="by-midnight-1">(By midnight)</h4>
 <ul>
-<li>X</li>
+<li>Muddiest Point #3</li>
 </ul>
 </div>
 </div>
 
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://njlyon0.github.io/teach_r-for-biologists/">Programming in R for Biologists</a></p>
+</div>
 </div>
 </section>
     </div>
@@ -414,7 +597,6 @@ Lab 2 – Version Control
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': false,
-'smaller': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -713,10 +895,9 @@ Lab 2 – Version Control
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -726,8 +907,17 @@ Lab 2 – Version Control
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
