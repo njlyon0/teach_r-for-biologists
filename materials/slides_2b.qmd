@@ -28,7 +28,16 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- Core Content
+    - Muddiest Point Review
+    - Version Control Background
+    - Navigating GitHub
+
+\
+
+- Time Permitting
+    - Git / GitHub Setup
+    - RStudio + Git / GitHub
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -36,7 +45,159 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Explain the difference(s) between Git and GitHub
+- Define fundamental version control vocabulary
+
+\
+
+### Time Permitting
+
+- Integrate Git and GitHub with RStudio on your computer
+
+## [Muddiest Point Review]{.gold}
+
+- Recurring topics from most recent MPs:
+    - TBD
+
+\
+
+. . .
+
+- What other topic(s) would you like to review?
+
+## [Version Control Background]{.orange}
+
+- "Version control" is a set of tools for tracking changes to a code file
+
+\
+
+- Version control lets you work only in a single file but still preserves the history
+    - No comments you'd have to resolve (like MS Word / etc.)
+    - No need to "Save As" and retain many different files for each draft
+
+## [Version Control Rationale]{.orange} {.smaller}
+
+Why use version control?
+
+\
+
+::::{.columns}
+:::{.column width="33.33%"}
+
+##### Collaboration `r fontawesome::fa(name = "handshake", a11y = "sem")`
+
+\
+
+Easily share & work together on files
+
+:::
+
+:::{.column width="33.33%"}
+
+##### Reproducibility `r fontawesome::fa(name = "arrows-left-right", a11y = "sem")`
+
+\
+
+Fully document your progress and end results
+
+::: 
+
+
+:::{.column width="33.33%"}
+
+##### Portfolio `r fontawesome::fa(name = "book", a11y = "sem")`
+
+\
+
+Demonstrate your skills to others with coding know-how
+
+:::
+::::
+
+## [Git Versus GitHub]{.orange} {.smaller}
+
+![](images/logo-git.png){.absolute left=-120 top=60 width="9%"}
+![](images/logo-github.png){.absolute left=1000 top=20 width="15%"}
+
+::::{.columns}
+:::{.column width="50%"}
+
+### Git
+
+- Actual version control software
+
+\
+
+- Does the tracking of changes
+
+\
+
+- Works locally on your computer
+
+\
+
+- Not something others can interact with
+
+:::
+
+:::{.column width="50%"}
+
+### GitHub
+
+- <u>G</u>raphical <u>u</u>ser <u>i</u>nterface (GUI) for Git
+
+\
+
+- Allows _viewing_ of Git-tracked changes
+    - Not actually doing version control itself
+
+\
+
+- Other users can see your content
+    - Depending on your settings
+
+:::
+::::
+
+## [Create a Github Profile]{.gold}
+
+- On your computer, go to [github.com](https://github.com/)
+
+\
+
+- Create a profile
+
+\
+
+- Let me know if you run into any issues!
+
+## [Navigating GitHub]{.orange} {.smaller}
+
+- We'll work through part of an established GitHub workshop for this section
+
+\
+
+- [nceas.github.io/scicomp-workshop-collaborative-coding/github](https://nceas.github.io/scicomp-workshop-collaborative-coding/github.html)
+
+## [Practice: Create a Repository]{.pink} {.smaller}
+
+- To practice what we've just covered, you all will make a practice repository!
+
+\
+
+. . .
+
+- This is a test repository so:
+    - Set it to "Private"
+    - Create the repo with both a README and a .gitignore
+
+\
+
+. . .
+
+- As you go through this process, take notes for 'future you'
+    - This course will require you to make two more repositories 
+    - So you'll want to have a good resource to remind yourself with down the line
 
 ## [Temperature Check]{.purple}
 
@@ -46,21 +207,9 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-
-
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
-:::{.column width="50%"}
-
-### Due before lab
-
-#### (By midnight)
-
-- Muddiest Point \#x
-
-:::
 
 :::{.column width="50%"}
 
@@ -68,9 +217,19 @@ After today's session you will be able to:
 
 #### (By midnight)
 
-- X
+- Homework \#2
+- Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) (p.20-25)
+
 
 :::
+:::{.column width="50%"}
 
+### Due before lab
+
+#### (By midnight)
+
+- Muddiest Point \#3
+
+:::
 ::::
 
