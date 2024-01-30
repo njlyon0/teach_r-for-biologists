@@ -58,23 +58,156 @@ After today's session you will be able to:
 - What questions do you have about this?
     - Does this feel reasonable to you?
 
-## [RMarkdown Files Intro]{.orange}
+## [RMarkdown Files Intro]{.orange} {.smaller}
+
+RMarkdown (Rmd) files have three sections:
+
+. . . 
+
+1. Metadata (YAML)
+    - Controls formatting of document
+
+\
+
+. . . 
+
+2. Plain Text
+    - Technically written in [markdown syntax]{.purple}
+
+\
+
+. . . 
+
+3. Code "Chunks"
+    - Essentially mini R scripts within the larger file!
+
+## [RMarkdown Analogy]{.orange}
+
+![](images/logo-r.png){.absolute top=110 left=160 width="15%"}
+
+![](images/chocolate.png){.absolute top=300 left=-10 width="50%"}
+
+![](images/hex-rmarkdown.png){.absolute top=105 left=720 width="11%"}
+
+![](images/cookie.png){.absolute top=250 left=625 width="30%"}
+
+## [Rmds Part 1: Metadata]{.orange} {.smaller}
+
+- Document formatting metadata is called YAML
+    - <u>Y</u>et <u>A</u>nother <u>M</u>arkup <u>L</u>anguage
+
+\
+
+. . .
+
+- Defines document header information & formatting
+    - Title, Author, Date
+    - File output type
+
+\
+
+. . .
 
 
-## [Rmds Part 1: Metadata]{.orange}
+- Output options:
+    - HTML = like a webpage but outputs as a file rather than a living website
+    - PDF
 
+## [Rmds Part 2: Plain Text]{.orange} 
 
-## [Rmds Part 2: Plain Text]{.orange}
+- Write text just like you would in MS Word / etc.
 
+\
 
-## [Rmds Part 3: Code Chunks]{.orange}
+. . .
 
+- _But_, there is no toolbar with buttons for doing formatting
+
+\
+
+. . . 
+
+- Instead [Markdown syntax]{.purple} is required to accomplish these tweaks
+
+## [Markdown Syntax]{.orange} {.smaller}
+
+- Your function tutorials have four **required** markdown styles:
+
+\
+
+. . .
+
+1. \# = headings (_more_ \# = _smaller_ heading)
+2. \_text\_ = italics
+3. \*\*text\*\* = bold
+4. \[text\]\(link\) = hyperlinked text
+
+\
+
+Other format options here: [markdownguide.org/basic-syntax](https://markdownguide.offshoot.io/basic-syntax/)
+
+## [Rmds Part 3: Code Chunks]{.orange} {.smaller}
+
+Let's look at the structure of an example code chunk
+
+:::{.r-stack}
+
+![](images/code-chunk.png){.fragment .fade-out}
+
+![](images/code-chunk-annotated.png){.fragment}
+
+:::
+
+\
+
+. . .
+
+Note that chunk definition must be formatted like:
+
+    - ```{language chunk_name, option_1, option_2, ...}
 
 ## [Code Chunks Options]{.orange}
 
+Let's check out three crucial code chunk options!
 
-## [Practice: RMarkdown Files]{.pink}
+. . . 
 
+<p align="center">
+<img src="images/code-chunk-options.png" width="120%">
+</p>
+
+. . .
+
+- For a full list of options see [here](www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+
+## [Practice: RMarkdown Files]{.pink} {.smaller}
+
+![](images/hex-rmarkdown.png){.absolute top=0 left=1100 width="12%"}
+
+- Install the `rmarkdown` package
+    - Remember to use the `install.packages` function
+
+\
+
+. . .
+
+2. Create a new RMarkdown file!
+    - File `r fontawesome::fa("arrow-right", a11y = "sem")` New File `r fontawesome::fa("arrow-right", a11y = "sem")` R Markdown...
+    - In resulting pop-up, skip to bottom and click "OK"
+
+\
+
+. . .
+
+3. Look at (1) YAML, (2) Plain text, and (3) code chunks
+
+    - Take notes on anything that jumps out at you
+
+\
+
+. . .
+
+4. Click the "knit" button
 
 ## [Temperature Check]{.purple}
 
