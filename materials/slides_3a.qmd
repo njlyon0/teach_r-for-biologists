@@ -5,7 +5,6 @@ engine: knitr
 format: 
   revealjs: 
     slide-number: c
-
     scrollable: false
     code-overflow: wrap
     code-line-numbers: false
@@ -29,7 +28,10 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- R Markdown Files
+- Loading Data
+- Working with Data
+- Tidyverse - `dplyr`
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -37,7 +39,42 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Define the three major components of RMarkdown files (.Rmd)
+- Write code to load external data into R
+- Explore data with base R tools
+- Manipulate data with `dplyr`
+
+## [GitHub Individual Work]{.gold} {.smaller}
+
+- Great work last week!
+
+\
+
+- In the next week or two (i.e., before the second half of the course) I would like you to:
+    - Make _another_ practice repository (or maybe 2!)
+
+\
+
+- What questions do you have about this?
+    - Does this feel reasonable to you?
+
+## [RMarkdown Files Intro]{.orange}
+
+
+## [Rmds Part 1: Metadata]{.orange}
+
+
+## [Rmds Part 2: Plain Text]{.orange}
+
+
+## [Rmds Part 3: Code Chunks]{.orange}
+
+
+## [Code Chunks Options]{.orange}
+
+
+## [Practice: RMarkdown Files]{.pink}
+
 
 ## [Temperature Check]{.purple}
 
@@ -47,7 +84,43 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+## [Loading Data]{.orange}
 
+
+## [Practice: Load Data]{.pink}
+
+
+## [Explore Data with Base R]{.orange}
+
+
+## [Practice: Base R Data Exploration]{.pink}
+
+
+## [Tidyverse Background]{.orange}
+
+
+## [`dplyr` Part 1: `filter`]{.orange}
+
+
+## [`dplyr` Part 2: `mutate`]{.orange}
+
+
+## [Column Naming Aside]{.orange}
+
+
+## [`dplyr` Part 3: `select`]{.orange}
+
+
+## [Practice: Wrangling with `dplyr`]{.pink}
+
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
 
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
@@ -59,7 +132,7 @@ After today's session you will be able to:
 
 #### (By midnight)
 
-- Muddiest Point \#x
+- Muddiest Point \#3
 
 :::
 
@@ -69,7 +142,12 @@ After today's session you will be able to:
 
 #### (By midnight)
 
-- X
+- Homework \#3
+- Pick 7-10 possible functions for Function Tutorial assignment
+    - Visit: [cran.r-project.org](https://cran.r-project.org/)
+    - Click "Packages" in left sidebar
+    - Click "Table of available packages, sorted by name"
+    - Your possible functions must be from these packages!
 
 :::
 
