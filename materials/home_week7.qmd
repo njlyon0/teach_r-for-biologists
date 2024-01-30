@@ -8,11 +8,15 @@ During lecture this week we'll go over how we can run a section of code repeated
 
 ## Lecture 7 - Code Iteration
 
+```{=html}
+<iframe class="slide-deck" src="slides_7a.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+```
 
+[Lecture Slides -- Full Screen](slides_7a.qmd)
 
 ## Lab 7 - NA
 
-This space was held empty to allow for in-class presentations of the functional tutorials (second draft)
+This space was held empty to allow for in-class presentations of the functional tutorials (second draft).
 
 ## Homework 7
 

@@ -8,7 +8,11 @@ This week we'll cover how to write your own functions in R! During lab we will c
 
 ## Lecture 8 - Custom Functions
 
+```{=html}
+<iframe class="slide-deck" src="slides_8a.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+```
 
+[Lecture Slides -- Full Screen](slides_8a.qmd)
 
 ## Lab 8 - Bonus Content
 
@@ -16,9 +20,11 @@ I may (and likely will) design new 'bonus content' modules and I'll list those b
 
 ### Biodiversity + Mapping Resources
 
+```{=html}
+<iframe class="slide-deck" src="slides_bonus-biodiversity.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+```
 
-
-
+[Biodiversity Slides -- Full Screen](slides_bonus-biodiversity.qmd)
 
 ## Homework 8
 
