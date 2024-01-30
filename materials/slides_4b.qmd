@@ -1,11 +1,10 @@
 ---
 title: "Intro to Data Science"
-author: "Lab 3 -- Data Wrangling (P2)"
+author: "Lab 4 -- Statistics"
 engine: knitr
 format: 
   revealjs: 
     slide-number: c
-
     scrollable: false
     code-overflow: wrap
     code-line-numbers: false

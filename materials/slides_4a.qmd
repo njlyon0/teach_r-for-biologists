@@ -1,11 +1,10 @@
 ---
 title: "Intro to Data Science"
-author: "Lab 3 -- Data Wrangling (P2)"
+author: "Lecture 4 -- Joining Data"
 engine: knitr
 format: 
   revealjs: 
     slide-number: c
-
     scrollable: false
     code-overflow: wrap
     code-line-numbers: false
@@ -55,17 +54,17 @@ After today's session you will be able to:
 
 :::{.column width="50%"}
 
-### Due before lecture
+### Due before lab
 
 #### (By midnight)
 
-- x
+- Muddiest Point \#x
 
 :::
 
 :::{.column width="50%"}
 
-### Due before lab
+### Due before lecture
 
 #### (By midnight)
 
