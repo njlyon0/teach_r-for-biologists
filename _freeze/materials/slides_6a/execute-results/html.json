@@ -1,0 +1,18 @@
+{
+  "hash": "8d5ab3e4ec1da816459ea49fa133923b",
+  "result": {
+    "markdown": "---\ntitle: \"Intro to Data Science\"\nauthor: \"Lecture 6 -- Visualization I\"\nengine: knitr\nformat: \n  revealjs: \n    slide-number: c\n    scrollable: false\n    code-overflow: wrap\n    code-line-numbers: false\n    code-copy: hover\n    theme: [night, slides.scss]\n    reference-location: document\n    footer: \"[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)\"\n---\n\n\n## A Guide to Your Process\n\n### [Scheduling]{.blue}\n\n### [Learning Objectives]{.purple}\n\n### [Practice]{.pink}\n\n### [Supporting Information]{.orange}\n\n### [Class Discussion]{.gold}\n\n## [Today's Plan]{.blue}\n\n- Y\n\n## [Today's Learning Objectives]{.purple}\n\nAfter today's session you will be able to:\n\n. . .\n\n- X\n\n## [Temperature Check]{.purple}\n\n#### How are you Feeling?\n\n<p align=\"center\">\n<img src=\"comics/debugging.png\" alt=\"Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)\">\n</p>\n\n\n\n## [Upcoming Due Dates]{.blue} {.smaller}\n\n::::{.columns}\n\n:::{.column width=\"50%\"}\n\n### Due before lab\n\n#### (By midnight)\n\n- Muddiest Point \\#x\n\n:::\n\n:::{.column width=\"50%\"}\n\n### Due before lecture\n\n#### (By midnight)\n\n- X\n\n:::\n\n::::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

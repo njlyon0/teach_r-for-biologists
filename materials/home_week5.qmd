@@ -8,11 +8,19 @@ We will continue our exploration of statistics in R this week from last week's l
 
 ## Lecture 5 - Multi-Model Inference
 
+```{=html}
+<iframe class="slide-deck" src="slides_5a.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+```
 
+[Lecture Slides -- Full Screen](slides_5a.qmd)
 
 ## Lab 5 - Survey Design Basics
 
+```{=html}
+<iframe class="slide-deck" src="slides_5b.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+```
 
+[Lab Slides -- Full Screen](slides_5b.qmd)
 
 ## Homework 5
 

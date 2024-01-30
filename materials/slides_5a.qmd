@@ -1,0 +1,76 @@
+---
+title: "Intro to Data Science"
+author: "Lecture 5 -- Multi-Model Inference"
+engine: knitr
+format: 
+  revealjs: 
+    slide-number: c
+    scrollable: false
+    code-overflow: wrap
+    code-line-numbers: false
+    code-copy: hover
+    theme: [night, slides.scss]
+    reference-location: document
+    footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
+---
+
+## A Guide to Your Process
+
+### [Scheduling]{.blue}
+
+### [Learning Objectives]{.purple}
+
+### [Practice]{.pink}
+
+### [Supporting Information]{.orange}
+
+### [Class Discussion]{.gold}
+
+## [Today's Plan]{.blue}
+
+- Y
+
+## [Today's Learning Objectives]{.purple}
+
+After today's session you will be able to:
+
+. . .
+
+- X
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
+
+
+## [Upcoming Due Dates]{.blue} {.smaller}
+
+::::{.columns}
+
+:::{.column width="50%"}
+
+### Due before lab
+
+#### (By midnight)
+
+- Muddiest Point \#x
+
+:::
+
+:::{.column width="50%"}
+
+### Due before lecture
+
+#### (By midnight)
+
+- X
+
+:::
+
+::::
+

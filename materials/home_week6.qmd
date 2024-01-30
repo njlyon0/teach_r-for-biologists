@@ -8,11 +8,19 @@ This week is all about data visualization! We'll begin by covering the fundament
 
 ## Lecture 6 - Visualization I
 
+```{=html}
+<iframe class="slide-deck" src="slides_6a.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+```
 
+[Lecture Slides -- Full Screen](slides_6a.qmd)
 
 ## Lab 6 - Visualization II
 
+```{=html}
+<iframe class="slide-deck" src="slides_6b.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+```
 
+[Lab Slides -- Full Screen](slides_6b.qmd)
 
 ## Homework 6
 
