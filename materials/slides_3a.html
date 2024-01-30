@@ -348,7 +348,10 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <section id="todays-plan" class="slide level2">
 <h2><span class="blue">Today’s Plan</span></h2>
 <ul>
-<li>Y</li>
+<li>R Markdown Files</li>
+<li>Loading Data</li>
+<li>Working with Data</li>
+<li>Tidyverse - <code>dplyr</code></li>
 </ul>
 </section>
 <section id="todays-learning-objectives" class="slide level2">
@@ -356,13 +359,250 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <p>After today’s session you will be able to:</p>
 <div class="fragment">
 <ul>
-<li>X</li>
+<li>Define the three major components of RMarkdown files (.Rmd)</li>
+<li>Write code to load external data into R</li>
+<li>Explore data with base R tools</li>
+<li>Manipulate data with <code>dplyr</code></li>
 </ul>
+</div>
+</section>
+<section id="github-individual-work" class="slide level2 smaller">
+<h2><span class="gold">GitHub Individual Work</span></h2>
+<ul>
+<li>Great work last week!</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>In the next week or two (i.e., before the second half of the course) I would like you to:
+<ul>
+<li>Make <em>another</em> practice repository (or maybe 2!)</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What questions do you have about this?
+<ul>
+<li>Does this feel reasonable to you?</li>
+</ul></li>
+</ul>
+</section>
+<section id="rmarkdown-files-intro" class="slide level2 smaller">
+<h2><span class="orange">RMarkdown Files Intro</span></h2>
+<p>RMarkdown (Rmd) files have three sections:</p>
+<div class="fragment">
+<ol type="1">
+<li>Metadata (YAML)
+<ul>
+<li>Controls formatting of document</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Plain Text
+<ul>
+<li>Technically written in <span class="purple">markdown syntax</span></li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Code “Chunks”
+<ul>
+<li>Essentially mini R scripts within the larger file!</li>
+</ul></li>
+</ol>
+</div>
+</section>
+<section id="rmarkdown-analogy" class="slide level2">
+<h2><span class="orange">RMarkdown Analogy</span></h2>
+<p><img data-src="images/logo-r.png" class="absolute" style="top: 110px; left: 160px; width: 15%; "></p>
+<p><img data-src="images/chocolate.png" class="absolute" style="top: 300px; left: -10px; width: 50%; "></p>
+<p><img data-src="images/hex-rmarkdown.png" class="absolute" style="top: 105px; left: 720px; width: 11%; "></p>
+<p><img data-src="images/cookie.png" class="absolute" style="top: 250px; left: 625px; width: 30%; "></p>
+</section>
+<section id="rmds-part-1-metadata" class="slide level2 smaller">
+<h2><span class="orange">Rmds Part 1: Metadata</span></h2>
+<ul>
+<li>Document formatting metadata is called YAML
+<ul>
+<li><u>Y</u>et <u>A</u>nother <u>M</u>arkup <u>L</u>anguage</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Defines document header information &amp; formatting
+<ul>
+<li>Title, Author, Date</li>
+<li>File output type</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Output options:
+<ul>
+<li>HTML = like a webpage but outputs as a file rather than a living website</li>
+<li>PDF</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="rmds-part-2-plain-text" class="slide level2">
+<h2><span class="orange">Rmds Part 2: Plain Text</span></h2>
+<ul>
+<li>Write text just like you would in MS Word / etc.</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li><em>But</em>, there is no toolbar with buttons for doing formatting</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Instead <span class="purple">Markdown syntax</span> is required to accomplish these tweaks</li>
+</ul>
+</div>
+</section>
+<section id="markdown-syntax" class="slide level2 smaller">
+<h2><span class="orange">Markdown Syntax</span></h2>
+<ul>
+<li>Your function tutorials have four <strong>required</strong> markdown styles:</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ol type="1">
+<li># = headings (<em>more</em> # = <em>smaller</em> heading)</li>
+<li>_text_ = italics</li>
+<li>**text** = bold</li>
+<li>[text](link) = hyperlinked text</li>
+</ol>
+<p><br>
+</p>
+<p>Other format options here: <a href="https://markdownguide.offshoot.io/basic-syntax/">markdownguide.org/basic-syntax</a></p>
+</div>
+</section>
+<section id="rmds-part-3-code-chunks" class="slide level2 smaller">
+<h2><span class="orange">Rmds Part 3: Code Chunks</span></h2>
+<p>Let’s look at the structure of an example code chunk</p>
+<div class="r-stack">
+<p><img data-src="images/code-chunk.png" class="fragment fade-out"></p>
+<p><img data-src="images/code-chunk-annotated.png" class="fragment"></p>
+</div>
+<p><br>
+</p>
+<div class="fragment">
+<p>Note that chunk definition must be formatted like:</p>
+<pre><code>- ```{language chunk_name, option_1, option_2, ...}</code></pre>
+</div>
+</section>
+<section id="code-chunks-options" class="slide level2">
+<h2><span class="orange">Code Chunks Options</span></h2>
+<p>Let’s check out three crucial code chunk options!</p>
+<div class="fragment">
+<p align="center">
+<img src="images/code-chunk-options.png" width="120%">
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>For a full list of options see <a href="www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf">here</a></li>
+</ul>
+</div>
+</section>
+<section id="practice-rmarkdown-files" class="slide level2 smaller">
+<h2><span class="pink">Practice: RMarkdown Files</span></h2>
+<p><img data-src="images/hex-rmarkdown.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Install the <code>rmarkdown</code> package
+<ul>
+<li>Remember to use the <code>install.packages</code> function</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Create a new RMarkdown file!
+<ul>
+<li>File <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> New File <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> R Markdown…</li>
+<li>In resulting pop-up, skip to bottom and click “OK”</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li><p>Look at (1) YAML, (2) Plain text, and (3) code chunks</p>
+<ul>
+<li>Take notes on anything that jumps out at you</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="4" type="1">
+<li>Click the “knit” button</li>
+</ol>
 </div>
 </section>
 <section id="temperature-check" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
 <h4 id="how-are-you-feeling">How are you Feeling?</h4>
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+</section>
+<section id="loading-data" class="slide level2">
+<h2><span class="orange">Loading Data</span></h2>
+</section>
+<section id="practice-load-data" class="slide level2">
+<h2><span class="pink">Practice: Load Data</span></h2>
+</section>
+<section id="explore-data-with-base-r" class="slide level2">
+<h2><span class="orange">Explore Data with Base R</span></h2>
+</section>
+<section id="practice-base-r-data-exploration" class="slide level2">
+<h2><span class="pink">Practice: Base R Data Exploration</span></h2>
+</section>
+<section id="tidyverse-background" class="slide level2">
+<h2><span class="orange">Tidyverse Background</span></h2>
+</section>
+<section id="dplyr-part-1-filter" class="slide level2">
+<h2><span class="orange"><code>dplyr</code> Part 1: <code>filter</code></span></h2>
+</section>
+<section id="dplyr-part-2-mutate" class="slide level2">
+<h2><span class="orange"><code>dplyr</code> Part 2: <code>mutate</code></span></h2>
+</section>
+<section id="column-naming-aside" class="slide level2">
+<h2><span class="orange">Column Naming Aside</span></h2>
+</section>
+<section id="dplyr-part-3-select" class="slide level2">
+<h2><span class="orange"><code>dplyr</code> Part 3: <code>select</code></span></h2>
+</section>
+<section id="practice-wrangling-with-dplyr" class="slide level2">
+<h2><span class="pink">Practice: Wrangling with <code>dplyr</code></span></h2>
+</section>
+<section id="temperature-check-1" class="slide level2">
+<h2><span class="purple">Temperature Check</span></h2>
+<h4 id="how-are-you-feeling-1">How are you Feeling?</h4>
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
@@ -374,13 +614,20 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <h3 id="due-before-lab">Due before lab</h3>
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
-<li>Muddiest Point #x</li>
+<li>Muddiest Point #3</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="due-before-lecture">Due before lecture</h3>
 <h4 id="by-midnight-1">(By midnight)</h4>
 <ul>
-<li>X</li>
+<li>Homework #3</li>
+<li>Pick 7-10 possible functions for Function Tutorial assignment
+<ul>
+<li>Visit: <a href="https://cran.r-project.org/">cran.r-project.org</a></li>
+<li>Click “Packages” in left sidebar</li>
+<li>Click “Table of available packages, sorted by name”</li>
+<li>Your possible functions must be from these packages!</li>
+</ul></li>
 </ul>
 </div>
 </div>
