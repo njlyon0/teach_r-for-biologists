@@ -219,33 +219,258 @@ Let's check out three crucial code chunk options!
 
 ## [Loading Data]{.orange}
 
+- Function to use depends on file type
+    - CSV = `read.csv`
+    - MS Excel = `readxl::read_excel`
+
+\
+
+. . .
+
+- Need to assign to an object to use the data!
+
+```{.r}
+my_data <- read.csv(file = "my_data_file.csv")
+```
+
+## [Download Example Data]{.gold}
+
+1. From the course page, download "minnow.csv"
+
+\
+
+2. Move "minnow.csv" from your "Downloads" folder to your RStudio Project folder
+
+\
+
+3. Make a new script for today's lecture
 
 ## [Practice: Load Data]{.pink}
 
+![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
 
-## [Explore Data with Base R]{.orange}
+- Now, use `read.csv` to read "minnow.csv" into R
+    - Remember to assign it to an object!
 
+\
 
-## [Practice: Base R Data Exploration]{.pink}
+. . . 
 
+- First thing after reading in data: _<u>check structure</u>!_
+    - Can use `str` or `dplyr::glimpse`
 
-## [Tidyverse Background]{.orange}
+\
 
+- What do you see?
 
-## [`dplyr` Part 1: `filter`]{.orange}
+## [Exploring Data with Base R]{.orange}
 
+Two ways in base R to access data:
 
-## [`dplyr` Part 2: `mutate`]{.orange}
+\
 
+. . . 
 
-## [Column Naming Aside]{.orange}
+1. Bracket notation (works similar to vectors)
 
+\
 
-## [`dplyr` Part 3: `select`]{.orange}
+. . . 
 
+2. Dollar sign ($) notation
 
-## [Practice: Wrangling with `dplyr`]{.pink}
+## [Bracket Notation]{.orange} {.smaller}
 
+- The syntax is: `data[row number, column number]`
+
+\
+
+. . . 
+
+- Let's look at some example cases
+
+```{.r}
+# Get first column
+my_df[,1]
+
+# Get first row
+my_df[1,]
+
+# Get the value in the tenth row and fourth column
+my_df[10, 4]
+```
+
+\
+
+. . . 
+
+- Note that concatenation works here too!
+    - e.g., `my_df[c(1, 2, 3), 1]`
+
+## [Dollar Sign Notations]{.orange}
+
+- The syntax is: `data$column`
+
+\
+
+. . . 
+
+- Let's look at an example
+
+```{.r}
+# Get the column titled "species"
+my_df$species
+```
+
+\
+
+. . . 
+
+- Note that this **does not** work for rows!
+
+## [Practice: Base R Data Exploration]{.pink} {.smaller}
+
+1. Using bracket notation:
+    - Access the 7th row of the minnow data
+    - Access the 5th column of the minnow data
+    - What is the value in the 21st row and 3rd column?
+
+\
+
+. . . 
+
+2. Using dollar sign notation:
+    - Check the "diameter" column
+    - Look at the "species" column
+
+## [Tidyverse Background]{.orange} {.smaller}
+
+- Ecosystem of inter-related packages & functions
+    - Very human-readable
+    - Extremely popular & commonly-used
+
+![](images/hex-tidyverse.png){.absolute top=225 left=381 width="25%"}
+![](images/hex-dplyr.png){.absolute top=500 left=0 width="12%"}
+
+![](images/hex-ggplot2.png){.absolute top=500 left=150 width="12%"}
+
+![](images/hex-tidyr.png){.absolute top=500 left=300 width="12%"}
+
+![](images/hex-purrr.png){.absolute top=500 left=450 width="12%"}
+
+![](images/hex-readr.png){.absolute top=500 left=600 width="12%"}
+
+![](images/hex-tibble.png){.absolute top=500 left=750 width="12%"}
+
+![](images/hex-magrittr.png){.absolute top=500 left=900 width="12%"}
+
+## [`dplyr` Part 1: `filter`]{.orange} {.smaller}
+
+- Subset using conditionals with `filter`
+    - `dplyr::filter` == `subset`
+
+\
+
+```{.r}
+# Subset to only butterfly milkweed records
+milkweed <- dplyr::filter(.data = flowers, species == "Asclepias tuberosa")
+```
+
+\
+
+. . .
+
+- Can use `filter` instead of `subset` just to live fully in the Tidyverse
+    - Ultimately a style choice so your call!
+
+\
+
+- Remember our discussion of [conditionals]{.blue} last week? 
+    - Types include: `==`, `|`, `&`, `%in%`, `!=`
+
+## [`dplyr` Part 2: `mutate`]{.orange} {.smaller}
+
+- Make new columns with `mutate`
+
+\
+
+- Can create multiple columns at the same time
+```{.r}
+mutate(.data = my_df, new1 = ...,
+                      new2 = ...,
+                      new3 = new1 / new2)
+```
+
+\
+
+. . .
+
+- Has optional `.after` argument to specify where you want the new column
+```{.r}
+my_df2, <- mutate(.data = my_df, weight_lb = weight_kg * 2.2,
+                  .after = weight_kg)
+```
+
+## [Column Naming Aside]{.orange} {.smaller} 
+
+- Avoid spaces or hyphens (`-`) in column names
+    - Programming languages don't like these characters in column names
+
+. . .
+
+<p align="center">
+<img src="comics/case-options.jpg" alt="Comic depicting multiple case options used in coding as the things they're named after" width="70%">
+</p>
+
+## [`dplyr` Part 3: `select`]{.orange} {.smaller}
+
+- Pick columns to keep or remove with `select`
+
+\
+
+. . .
+
+- Can choose columns to _keep_ or to _remove_
+```{.r}
+# Keep only species information and count columns
+select(.data = my_df, species, count)
+
+# Remove the weight column
+select(.data = my_df, -weight_kg)
+```
+
+\
+
+. . .
+
+- Notice that column names are **not** in quotes
+    - This is one of the special properties of the Tidyverse
+
+## [Practice: Wrangling with `dplyr`]{.pink} {.smaller}
+
+![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
+
+1. Filter the minnow data to only cases where the species is Stoneroller or Chub
+    - There are (at least) three ways of doing this; can you identify them all?
+
+. . .
+
+2. For that subset, make new columns where river depth and fish nest diameter are in meters
+
+. . .
+
+3. Next, keep only the transect, species, diameter in meters, and depth in meters columns
+    - There are two ways of doing this; can you identify them both?
+
+\
+
+. . .
+
+4. Check your work! What are the dimensions of the final data object?
+
+. . . 
+
+- Should be 14 rows and 4 columns
 
 ## [Temperature Check]{.purple}
 
