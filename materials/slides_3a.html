@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -572,33 +637,303 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </section>
 <section id="loading-data" class="slide level2">
 <h2><span class="orange">Loading Data</span></h2>
+<ul>
+<li>Function to use depends on file type
+<ul>
+<li>CSV = <code>read.csv</code></li>
+<li>MS Excel = <code>readxl::read_excel</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Need to assign to an object to use the data!</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>my_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"my_data_file.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="download-example-data" class="slide level2">
+<h2><span class="gold">Download Example Data</span></h2>
+<ol type="1">
+<li>From the course page, download “minnow.csv”</li>
+</ol>
+<p><br>
+</p>
+<ol start="2" type="1">
+<li>Move “minnow.csv” from your “Downloads” folder to your RStudio Project folder</li>
+</ol>
+<p><br>
+</p>
+<ol start="3" type="1">
+<li>Make a new script for today’s lecture</li>
+</ol>
 </section>
 <section id="practice-load-data" class="slide level2">
 <h2><span class="pink">Practice: Load Data</span></h2>
+<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Now, use <code>read.csv</code> to read “minnow.csv” into R
+<ul>
+<li>Remember to assign it to an object!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>First thing after reading in data: <em><u>check structure</u>!</em>
+<ul>
+<li>Can use <code>str</code> or <code>dplyr::glimpse</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What do you see?</li>
+</ul>
+</div>
 </section>
-<section id="explore-data-with-base-r" class="slide level2">
-<h2><span class="orange">Explore Data with Base R</span></h2>
+<section id="exploring-data-with-base-r" class="slide level2">
+<h2><span class="orange">Exploring Data with Base R</span></h2>
+<p>Two ways in base R to access data:</p>
+<p><br>
+</p>
+<div class="fragment">
+<ol type="1">
+<li>Bracket notation (works similar to vectors)</li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Dollar sign ($) notation</li>
+</ol>
+</div>
 </section>
-<section id="practice-base-r-data-exploration" class="slide level2">
+<section id="bracket-notation" class="slide level2 smaller">
+<h2><span class="orange">Bracket Notation</span></h2>
+<ul>
+<li>The syntax is: <code>data[row number, column number]</code></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Let’s look at some example cases</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Get first column</span></span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a>my_df[,<span class="dv">1</span>]</span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Get first row</span></span>
+<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a>my_df[<span class="dv">1</span>,]</span>
+<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Get the value in the tenth row and fourth column</span></span>
+<span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a>my_df[<span class="dv">10</span>, <span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Note that concatenation works here too!
+<ul>
+<li>e.g., <code>my_df[c(1, 2, 3), 1]</code></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="dollar-sign-notations" class="slide level2">
+<h2><span class="orange">Dollar Sign Notations</span></h2>
+<ul>
+<li>The syntax is: <code>data$column</code></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Let’s look at an example</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Get the column titled "species"</span></span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>my_df<span class="sc">$</span>species</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Note that this <strong>does not</strong> work for rows!</li>
+</ul>
+</div>
+</section>
+<section id="practice-base-r-data-exploration" class="slide level2 smaller">
 <h2><span class="pink">Practice: Base R Data Exploration</span></h2>
+<ol type="1">
+<li>Using bracket notation:
+<ul>
+<li>Access the 7th row of the minnow data</li>
+<li>Access the 5th column of the minnow data</li>
+<li>What is the value in the 21st row and 3rd column?</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Using dollar sign notation:
+<ul>
+<li>Check the “diameter” column</li>
+<li>Look at the “species” column</li>
+</ul></li>
+</ol>
+</div>
 </section>
-<section id="tidyverse-background" class="slide level2">
+<section id="tidyverse-background" class="slide level2 smaller">
 <h2><span class="orange">Tidyverse Background</span></h2>
+<ul>
+<li>Ecosystem of inter-related packages &amp; functions
+<ul>
+<li>Very human-readable</li>
+<li>Extremely popular &amp; commonly-used</li>
+</ul></li>
+</ul>
+<p><img data-src="images/hex-tidyverse.png" class="absolute" style="top: 225px; left: 381px; width: 25%; "> <img data-src="images/hex-dplyr.png" class="absolute" style="top: 500px; left: 0px; width: 12%; "></p>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 500px; left: 150px; width: 12%; "></p>
+<p><img data-src="images/hex-tidyr.png" class="absolute" style="top: 500px; left: 300px; width: 12%; "></p>
+<p><img data-src="images/hex-purrr.png" class="absolute" style="top: 500px; left: 450px; width: 12%; "></p>
+<p><img data-src="images/hex-readr.png" class="absolute" style="top: 500px; left: 600px; width: 12%; "></p>
+<p><img data-src="images/hex-tibble.png" class="absolute" style="top: 500px; left: 750px; width: 12%; "></p>
+<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 500px; left: 900px; width: 12%; "></p>
 </section>
-<section id="dplyr-part-1-filter" class="slide level2">
+<section id="dplyr-part-1-filter" class="slide level2 smaller">
 <h2><span class="orange"><code>dplyr</code> Part 1: <code>filter</code></span></h2>
+<ul>
+<li>Subset using conditionals with <code>filter</code>
+<ul>
+<li><code>dplyr::filter</code> == <code>subset</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Subset to only butterfly milkweed records</span></span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>milkweed <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="at">.data =</span> flowers, species <span class="sc">==</span> <span class="st">"Asclepias tuberosa"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Can use <code>filter</code> instead of <code>subset</code> just to live fully in the Tidyverse
+<ul>
+<li>Ultimately a style choice so your call!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Remember our discussion of <span class="blue">conditionals</span> last week?
+<ul>
+<li>Types include: <code>==</code>, <code>|</code>, <code>&amp;</code>, <code>%in%</code>, <code>!=</code></li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="dplyr-part-2-mutate" class="slide level2">
+<section id="dplyr-part-2-mutate" class="slide level2 smaller">
 <h2><span class="orange"><code>dplyr</code> Part 2: <code>mutate</code></span></h2>
+<ul>
+<li>Make new columns with <code>mutate</code></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Can create multiple columns at the same time</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">.data =</span> my_df, <span class="at">new1 =</span> ...,</span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>                      <span class="at">new2 =</span> ...,</span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>                      <span class="at">new3 =</span> new1 <span class="sc">/</span> new2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Has optional <code>.after</code> argument to specify where you want the new column</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>my_df2, <span class="ot">&lt;-</span> <span class="fu">mutate</span>(<span class="at">.data =</span> my_df, <span class="at">weight_lb =</span> weight_kg <span class="sc">*</span> <span class="fl">2.2</span>,</span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>                  <span class="at">.after =</span> weight_kg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="column-naming-aside" class="slide level2">
+<section id="column-naming-aside" class="slide level2 smaller">
 <h2><span class="orange">Column Naming Aside</span></h2>
+<ul>
+<li>Avoid spaces or hyphens (<code>-</code>) in column names
+<ul>
+<li>Programming languages don’t like these characters in column names</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p align="center">
+<img src="comics/case-options.jpg" alt="Comic depicting multiple case options used in coding as the things they're named after" width="70%">
+</p>
+</div>
 </section>
-<section id="dplyr-part-3-select" class="slide level2">
+<section id="dplyr-part-3-select" class="slide level2 smaller">
 <h2><span class="orange"><code>dplyr</code> Part 3: <code>select</code></span></h2>
+<ul>
+<li>Pick columns to keep or remove with <code>select</code></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Can choose columns to <em>keep</em> or to <em>remove</em></li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only species information and count columns</span></span>
+<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(<span class="at">.data =</span> my_df, species, count)</span>
+<span id="cb8-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the weight column</span></span>
+<span id="cb8-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(<span class="at">.data =</span> my_df, <span class="sc">-</span>weight_kg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Notice that column names are <strong>not</strong> in quotes
+<ul>
+<li>This is one of the special properties of the Tidyverse</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="practice-wrangling-with-dplyr" class="slide level2">
+<section id="practice-wrangling-with-dplyr" class="slide level2 smaller">
 <h2><span class="pink">Practice: Wrangling with <code>dplyr</code></span></h2>
+<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ol type="1">
+<li>Filter the minnow data to only cases where the species is Stoneroller or Chub
+<ul>
+<li>There are (at least) three ways of doing this; can you identify them all?</li>
+</ul></li>
+</ol>
+<div class="fragment">
+<ol start="2" type="1">
+<li>For that subset, make new columns where river depth and fish nest diameter are in meters</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Next, keep only the transect, species, diameter in meters, and depth in meters columns
+<ul>
+<li>There are two ways of doing this; can you identify them both?</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="4" type="1">
+<li>Check your work! What are the dimensions of the final data object?</li>
+</ol>
+</div>
+<div class="fragment">
+<ul>
+<li>Should be 14 rows and 4 columns</li>
+</ul>
+</div>
 </section>
 <section id="temperature-check-1" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>

@@ -1398,70 +1398,91 @@
     "href": "materials/slides_3a.html#loading-data",
     "title": "Intro to Data Science",
     "section": "Loading Data",
-    "text": "Loading Data"
+    "text": "Loading Data\n\nFunction to use depends on file type\n\nCSV = read.csv\nMS Excel = readxl::read_excel\n\n\n\n\n\n\nNeed to assign to an object to use the data!\n\nmy_data &lt;- read.csv(file = \"my_data_file.csv\")"
+  },
+  {
+    "objectID": "materials/slides_3a.html#download-example-data",
+    "href": "materials/slides_3a.html#download-example-data",
+    "title": "Intro to Data Science",
+    "section": "Download Example Data",
+    "text": "Download Example Data\n\nFrom the course page, download “minnow.csv”\n\n\n\n\nMove “minnow.csv” from your “Downloads” folder to your RStudio Project folder\n\n\n\n\nMake a new script for today’s lecture"
   },
   {
     "objectID": "materials/slides_3a.html#practice-load-data",
     "href": "materials/slides_3a.html#practice-load-data",
     "title": "Intro to Data Science",
     "section": "Practice: Load Data",
-    "text": "Practice: Load Data"
+    "text": "Practice: Load Data\n\n\nNow, use read.csv to read “minnow.csv” into R\n\nRemember to assign it to an object!\n\n\n\n\n\n\nFirst thing after reading in data: check structure!\n\nCan use str or dplyr::glimpse\n\n\n\n\n\nWhat do you see?"
   },
   {
-    "objectID": "materials/slides_3a.html#explore-data-with-base-r",
-    "href": "materials/slides_3a.html#explore-data-with-base-r",
+    "objectID": "materials/slides_3a.html#exploring-data-with-base-r",
+    "href": "materials/slides_3a.html#exploring-data-with-base-r",
     "title": "Intro to Data Science",
-    "section": "Explore Data with Base R",
-    "text": "Explore Data with Base R"
+    "section": "Exploring Data with Base R",
+    "text": "Exploring Data with Base R\nTwo ways in base R to access data:\n\n\n\n\nBracket notation (works similar to vectors)\n\n\n\n\n\n\nDollar sign ($) notation"
+  },
+  {
+    "objectID": "materials/slides_3a.html#bracket-notation",
+    "href": "materials/slides_3a.html#bracket-notation",
+    "title": "Intro to Data Science",
+    "section": "Bracket Notation",
+    "text": "Bracket Notation\n\nThe syntax is: data[row number, column number]\n\n\n\n\n\nLet’s look at some example cases\n\n# Get first column\nmy_df[,1]\n\n# Get first row\nmy_df[1,]\n\n# Get the value in the tenth row and fourth column\nmy_df[10, 4]\n\n\n\n\n\nNote that concatenation works here too!\n\ne.g., my_df[c(1, 2, 3), 1]"
+  },
+  {
+    "objectID": "materials/slides_3a.html#dollar-sign-notations",
+    "href": "materials/slides_3a.html#dollar-sign-notations",
+    "title": "Intro to Data Science",
+    "section": "Dollar Sign Notations",
+    "text": "Dollar Sign Notations\n\nThe syntax is: data$column\n\n\n\n\n\nLet’s look at an example\n\n# Get the column titled \"species\"\nmy_df$species\n\n\n\n\n\nNote that this does not work for rows!"
   },
   {
     "objectID": "materials/slides_3a.html#practice-base-r-data-exploration",
     "href": "materials/slides_3a.html#practice-base-r-data-exploration",
     "title": "Intro to Data Science",
     "section": "Practice: Base R Data Exploration",
-    "text": "Practice: Base R Data Exploration"
+    "text": "Practice: Base R Data Exploration\n\nUsing bracket notation:\n\nAccess the 7th row of the minnow data\nAccess the 5th column of the minnow data\nWhat is the value in the 21st row and 3rd column?\n\n\n\n\n\n\nUsing dollar sign notation:\n\nCheck the “diameter” column\nLook at the “species” column"
   },
   {
     "objectID": "materials/slides_3a.html#tidyverse-background",
     "href": "materials/slides_3a.html#tidyverse-background",
     "title": "Intro to Data Science",
     "section": "Tidyverse Background",
-    "text": "Tidyverse Background"
+    "text": "Tidyverse Background\n\nEcosystem of inter-related packages & functions\n\nVery human-readable\nExtremely popular & commonly-used"
   },
   {
     "objectID": "materials/slides_3a.html#dplyr-part-1-filter",
     "href": "materials/slides_3a.html#dplyr-part-1-filter",
     "title": "Intro to Data Science",
     "section": "dplyr Part 1: filter",
-    "text": "dplyr Part 1: filter"
+    "text": "dplyr Part 1: filter\n\nSubset using conditionals with filter\n\ndplyr::filter == subset\n\n\n\n\n# Subset to only butterfly milkweed records\nmilkweed &lt;- dplyr::filter(.data = flowers, species == \"Asclepias tuberosa\")\n\n\n\n\nCan use filter instead of subset just to live fully in the Tidyverse\n\nUltimately a style choice so your call!\n\n\n\n\n\nRemember our discussion of conditionals last week?\n\nTypes include: ==, |, &, %in%, !="
   },
   {
     "objectID": "materials/slides_3a.html#dplyr-part-2-mutate",
     "href": "materials/slides_3a.html#dplyr-part-2-mutate",
     "title": "Intro to Data Science",
     "section": "dplyr Part 2: mutate",
-    "text": "dplyr Part 2: mutate"
+    "text": "dplyr Part 2: mutate\n\nMake new columns with mutate\n\n\n\n\nCan create multiple columns at the same time\n\nmutate(.data = my_df, new1 = ...,\n                      new2 = ...,\n                      new3 = new1 / new2)\n\n\n\n\nHas optional .after argument to specify where you want the new column\n\nmy_df2, &lt;- mutate(.data = my_df, weight_lb = weight_kg * 2.2,\n                  .after = weight_kg)"
   },
   {
     "objectID": "materials/slides_3a.html#column-naming-aside",
     "href": "materials/slides_3a.html#column-naming-aside",
     "title": "Intro to Data Science",
     "section": "Column Naming Aside",
-    "text": "Column Naming Aside"
+    "text": "Column Naming Aside\n\nAvoid spaces or hyphens (-) in column names\n\nProgramming languages don’t like these characters in column names"
   },
   {
     "objectID": "materials/slides_3a.html#dplyr-part-3-select",
     "href": "materials/slides_3a.html#dplyr-part-3-select",
     "title": "Intro to Data Science",
     "section": "dplyr Part 3: select",
-    "text": "dplyr Part 3: select"
+    "text": "dplyr Part 3: select\n\nPick columns to keep or remove with select\n\n\n\n\n\nCan choose columns to keep or to remove\n\n# Keep only species information and count columns\nselect(.data = my_df, species, count)\n\n# Remove the weight column\nselect(.data = my_df, -weight_kg)\n\n\n\n\n\nNotice that column names are not in quotes\n\nThis is one of the special properties of the Tidyverse"
   },
   {
     "objectID": "materials/slides_3a.html#practice-wrangling-with-dplyr",
     "href": "materials/slides_3a.html#practice-wrangling-with-dplyr",
     "title": "Intro to Data Science",
     "section": "Practice: Wrangling with dplyr",
-    "text": "Practice: Wrangling with dplyr"
+    "text": "Practice: Wrangling with dplyr\n\n\nFilter the minnow data to only cases where the species is Stoneroller or Chub\n\nThere are (at least) three ways of doing this; can you identify them all?\n\n\n\n\nFor that subset, make new columns where river depth and fish nest diameter are in meters\n\n\n\n\nNext, keep only the transect, species, diameter in meters, and depth in meters columns\n\nThere are two ways of doing this; can you identify them both?\n\n\n\n\n\n\n\nCheck your work! What are the dimensions of the final data object?\n\n\n\n\nShould be 14 rows and 4 columns"
   },
   {
     "objectID": "materials/slides_3a.html#temperature-check-1",
