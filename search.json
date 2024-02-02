@@ -939,49 +939,56 @@
     "href": "materials/slides_3b.html#why-named-pipe",
     "title": "Intro to Data Science",
     "section": "Why Named “Pipe”?",
-    "text": "Why Named “Pipe”?"
+    "text": "Why Named “Pipe”?\nRené Magritte – The Treachery of Images (1929)"
   },
   {
     "objectID": "materials/slides_3b.html#practice-pipe",
     "href": "materials/slides_3b.html#practice-pipe",
     "title": "Intro to Data Science",
     "section": "Practice: Pipe",
-    "text": "Practice: Pipe"
+    "text": "Practice: Pipe\n\n\nInstall and load the magrittr package\n\n\n\n\nReturn to your 3-step wrangling of “minnow.csv” from Lecture #3\n\nFilter “minnow.csv” to only Stonerollers and Chubs\nConvert depth & diameter to meters (from cm)\nPare down columns to only species and depth/diameter in meters\n\n\n\n\n\nCopy these lines and edit them to use the %&gt;%\n\nDoes this have the same end result as the non-pipe lines?"
   },
   {
     "objectID": "materials/slides_3b.html#groupwise-summarization",
     "href": "materials/slides_3b.html#groupwise-summarization",
     "title": "Intro to Data Science",
     "section": "Groupwise Summarization",
-    "text": "Groupwise Summarization"
+    "text": "Groupwise Summarization\n\nSummarizing within groups is a common operation\n\nAverage barnacle number at several tidal heights\nVariation in reported customer satisfaction within demographic groups\n\n\n\n\n\n\ndplyr offers three functions to accomplish this\n\ngroup_by\nsummarize\nungroup"
   },
   {
     "objectID": "materials/slides_3b.html#summarization-syntax",
     "href": "materials/slides_3b.html#summarization-syntax",
     "title": "Intro to Data Science",
     "section": "Summarization Syntax",
-    "text": "Summarization Syntax"
+    "text": "Summarization Syntax\n\ngroup_by has similar structure to select\n\nWants column names separated by commas\n\n\n\n\n\n\nsummarize has similar structure to mutate\n\nE.g., new_column = function(old_column)\n\n\n\n\n\n\n\nungroup has no arguments!"
   },
   {
-    "objectID": "materials/slides_3b.html#summarization-warning",
-    "href": "materials/slides_3b.html#summarization-warning",
+    "objectID": "materials/slides_3b.html#summarization-pipes",
+    "href": "materials/slides_3b.html#summarization-pipes",
     "title": "Intro to Data Science",
-    "section": "Summarization Warning",
-    "text": "Summarization Warning"
+    "section": "Summarization + Pipes",
+    "text": "Summarization + Pipes\nLet’s check out an example:\n\n\n# Take data\ndata %&gt;%\n    # 1. Group by treatment\n    group_by(treatment) %&gt;%\n    # 2. Calculate average and deviation\n    summarize(mean_val = mean(response),\n              sd_val = sd(response)) %&gt;%\n    # 3. Ungroup\n    ungroup()"
+  },
+  {
+    "objectID": "materials/slides_3b.html#summarization-warnings",
+    "href": "materials/slides_3b.html#summarization-warnings",
+    "title": "Intro to Data Science",
+    "section": "Summarization Warnings",
+    "text": "Summarization Warnings\n\nSummarizing simplifies dataframes!\n\nAfter summarizing, you’ll have one row per combination of grouping columns\n\n\n\n\n\n\nSummarizing drops columns unless:\n\nColumn is named in group_by\nColumn is created by summarize\n\n\n\n\n\nIf you don’t want to lose a column, it needs to meet one of those criteria"
   },
   {
     "objectID": "materials/slides_3b.html#relevant-helper-functions",
     "href": "materials/slides_3b.html#relevant-helper-functions",
     "title": "Intro to Data Science",
     "section": "Relevant Helper Functions",
-    "text": "Relevant Helper Functions"
+    "text": "Relevant Helper Functions\n\nTo summarize you’ll need to use functions that calculate summary values\n\n\n\n\n\nTake an average with mean\n\nHas na.rm argument that determines whether missing values are included\n\n\n\n\n\n\n\nFind standard deviation with sd\n\nCommon measurement to use as error bars in a graph\n\n\n\n\n\n\n\nFind the smallest or largest number with min and max"
   },
   {
-    "objectID": "materials/slides_3b.html#practice-summarizing.",
-    "href": "materials/slides_3b.html#practice-summarizing.",
+    "objectID": "materials/slides_3b.html#practice-summarizing",
+    "href": "materials/slides_3b.html#practice-summarizing",
     "title": "Intro to Data Science",
-    "section": "[Practice: Summarizing]{.}",
-    "text": "[Practice: Summarizing]{.}"
+    "section": "Practice: Summarizing",
+    "text": "Practice: Summarizing\n   - Load the palmerpenguins, tidyr, and magrittr packages\n\n\n\nUsing the “penguins” data in the palmerpenguins package, answer the following questions:\n\n\n\n\n\nWhat is the average bill length in millimeters for each species of penguin?\n\n\n\n\nWhich island has the smallest individual penguin?\n\nHint: use body mass\n\n\n\n\n\nWhich species at which island has the longest flippers for female penguins?\n\nHint: remember you can use filter before or after summarize!"
   },
   {
     "objectID": "materials/slides_3b.html#temperature-check",
@@ -1019,11 +1026,11 @@
     "text": "Reshaping Longer Visual"
   },
   {
-    "objectID": "materials/slides_3b.html#practice-pivot_longer.",
-    "href": "materials/slides_3b.html#practice-pivot_longer.",
+    "objectID": "materials/slides_3b.html#practice-pivot_longer",
+    "href": "materials/slides_3b.html#practice-pivot_longer",
     "title": "Intro to Data Science",
-    "section": "[Practice: pivot_longer]{.}",
-    "text": "[Practice: pivot_longer]{.}"
+    "section": "Practice: pivot_longer",
+    "text": "Practice: pivot_longer"
   },
   {
     "objectID": "materials/slides_3b.html#reshaping-wider",
@@ -1047,11 +1054,11 @@
     "text": "Reshaping Wider Visual"
   },
   {
-    "objectID": "materials/slides_3b.html#practice-pivot_wider.",
-    "href": "materials/slides_3b.html#practice-pivot_wider.",
+    "objectID": "materials/slides_3b.html#practice-pivot_wider",
+    "href": "materials/slides_3b.html#practice-pivot_wider",
     "title": "Intro to Data Science",
-    "section": "[Practice: pivot_wider]{.}",
-    "text": "[Practice: pivot_wider]{.}"
+    "section": "Practice: pivot_wider",
+    "text": "Practice: pivot_wider"
   },
   {
     "objectID": "materials/slides_3b.html#temperature-check-1",

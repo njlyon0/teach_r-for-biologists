@@ -511,24 +511,187 @@ Lab 3 – Data Wrangling (P2)
 </section>
 <section id="why-named-pipe" class="slide level2">
 <h2><span class="orange">Why Named “Pipe”?</span></h2>
+<p>René Magritte – <em>The Treachery of Images</em> (1929)</p>
+<p><img data-src="images/magritte-profile.jpg" class="absolute" style="top: 150px; left: 50px; width: 30%; "></p>
+<p><img data-src="images/magritte-treachery.jpg" class="absolute" style="top: 150px; left: 450px; width: 60%; "> <img data-src="images/hex-magrittr.png" class="fragment fade-in absolute" style="top: 475px; left: 120px; width: 18%; "></p>
 </section>
-<section id="practice-pipe" class="slide level2">
+<section id="practice-pipe" class="slide level2 smaller">
 <h2><span class="pink">Practice: Pipe</span></h2>
+<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ol type="1">
+<li>Install and load the <code>magrittr</code> package</li>
+</ol>
+<p><br>
+</p>
+<ol start="2" type="1">
+<li>Return to your 3-step wrangling of “minnow.csv” from <span class="gold">Lecture #3</span>
+<ul>
+<li>Filter “minnow.csv” to only Stonerollers and Chubs</li>
+<li>Convert depth &amp; diameter to meters (from cm)</li>
+<li>Pare down columns to only species and depth/diameter in meters</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+<ol start="3" type="1">
+<li>Copy these lines and edit them to use the <code>%&gt;%</code>
+<ul>
+<li>Does this have the same end result as the non-pipe lines?</li>
+</ul></li>
+</ol>
 </section>
-<section id="groupwise-summarization" class="slide level2">
+<section id="groupwise-summarization" class="slide level2 smaller">
 <h2><span class="orange">Groupwise Summarization</span></h2>
+<ul>
+<li>Summarizing within groups is a <em>common</em> operation
+<ul>
+<li><strong>Average</strong> barnacle number at several tidal heights</li>
+<li><strong>Variation</strong> in reported customer satisfaction within demographic groups</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li><code>dplyr</code> offers three functions to accomplish this
+<ol type="1">
+<li><code>group_by</code></li>
+<li><code>summarize</code></li>
+<li><code>ungroup</code></li>
+</ol></li>
+</ul>
+</div>
 </section>
 <section id="summarization-syntax" class="slide level2">
 <h2><span class="orange">Summarization Syntax</span></h2>
+<ul>
+<li><code>group_by</code> has similar structure to <code>select</code>
+<ul>
+<li>Wants column names separated by commas</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li><code>summarize</code> has similar structure to <code>mutate</code>
+<ul>
+<li>E.g., <code>new_column = function(old_column)</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li><code>ungroup</code> has <em>no</em> arguments!</li>
+</ul>
+</div>
 </section>
-<section id="summarization-warning" class="slide level2">
-<h2><span class="orange">Summarization Warning</span></h2>
+<section id="summarization-pipes" class="slide level2">
+<h2><span class="orange">Summarization + Pipes</span></h2>
+<p>Let’s check out an example:</p>
+<p><br>
+</p>
+<div class="sourceCode" id="cb5" data-code-line-numbers="|4|6,7|9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Take data</span></span>
+<span id="cb5-2"><a></a>data <span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a></a>    <span class="co"># 1. Group by treatment</span></span>
+<span id="cb5-4"><a></a>    <span class="fu">group_by</span>(treatment) <span class="sc">%&gt;%</span></span>
+<span id="cb5-5"><a></a>    <span class="co"># 2. Calculate average and deviation</span></span>
+<span id="cb5-6"><a></a>    <span class="fu">summarize</span>(<span class="at">mean_val =</span> <span class="fu">mean</span>(response),</span>
+<span id="cb5-7"><a></a>              <span class="at">sd_val =</span> <span class="fu">sd</span>(response)) <span class="sc">%&gt;%</span></span>
+<span id="cb5-8"><a></a>    <span class="co"># 3. Ungroup</span></span>
+<span id="cb5-9"><a></a>    <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="relevant-helper-functions" class="slide level2">
+<section id="summarization-warnings" class="slide level2 smaller">
+<h2><span class="orange">Summarization Warnings</span></h2>
+<ol type="1">
+<li>Summarizing simplifies dataframes!
+<ul>
+<li>After summarizing, you’ll have <em>one</em> row per <u>combination</u> of grouping columns</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Summarizing drops columns <em>unless</em>:
+<ol type="1">
+<li>Column is named in <code>group_by</code></li>
+<li>Column is created by <code>summarize</code></li>
+</ol></li>
+</ol>
+<p><br>
+</p>
+<ul>
+<li>If you don’t want to lose a column, it needs to meet one of those criteria</li>
+</ul>
+</div>
+</section>
+<section id="relevant-helper-functions" class="slide level2 smaller">
 <h2><span class="orange">Relevant Helper Functions</span></h2>
+<ul>
+<li>To summarize you’ll need to use functions that calculate summary values</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Take an average with <code>mean</code>
+<ul>
+<li>Has <code>na.rm</code> argument that determines whether missing values are included</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Find standard deviation with <code>sd</code>
+<ul>
+<li>Common measurement to use as error bars in a graph</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Find the smallest or largest number with <code>min</code> and <code>max</code></li>
+</ul>
+</div>
 </section>
-<section id="practice-summarizing." class="slide level2">
-<h2>[Practice: Summarizing]{.}</h2>
+<section id="practice-summarizing" class="slide level2 smaller">
+<h2><span class="orange">Practice: Summarizing</span></h2>
+<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "> <img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 830px; width: 12%; "> - Load the <code>palmerpenguins</code>, <code>tidyr</code>, and <code>magrittr</code> packages</p>
+<p><br>
+</p>
+<ul>
+<li>Using the “penguins” data in the <code>palmerpenguins</code> package, answer the following questions:</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ol type="1">
+<li>What is the average bill length in millimeters for each species of penguin?</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Which island has the smallest individual penguin?
+<ul>
+<li><em>Hint:</em> use body mass</li>
+</ul></li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Which species <u>at which island</u> has the longest flippers for female penguins?
+<ul>
+<li>Hint: remember you can use <code>filter</code> before or after <code>summarize</code>!</li>
+</ul></li>
+</ol>
+</div>
 </section>
 <section id="temperature-check" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
@@ -549,8 +712,9 @@ Lab 3 – Data Wrangling (P2)
 <section id="reshaping-longer-visual" class="slide level2">
 <h2><span class="orange">Reshaping Longer Visual</span></h2>
 </section>
-<section id="practice-pivot_longer." class="slide level2">
-<h2>[Practice: <code>pivot_longer</code>]{.}</h2>
+<section id="practice-pivot_longer" class="slide level2">
+<h2><span class="pink">Practice: <code>pivot_longer</code></span></h2>
+<p><img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
 </section>
 <section id="reshaping-wider" class="slide level2">
 <h2><span class="orange">Reshaping Wider</span></h2>
@@ -561,8 +725,9 @@ Lab 3 – Data Wrangling (P2)
 <section id="reshaping-wider-visual" class="slide level2">
 <h2><span class="orange">Reshaping Wider Visual</span></h2>
 </section>
-<section id="practice-pivot_wider." class="slide level2">
-<h2>[Practice: <code>pivot_wider</code>]{.}</h2>
+<section id="practice-pivot_wider" class="slide level2">
+<h2><span class="pink">Practice: <code>pivot_wider</code></span></h2>
+<p><img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
 </section>
 <section id="temperature-check-1" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
