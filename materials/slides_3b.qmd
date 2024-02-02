@@ -248,7 +248,9 @@ data %>%
 
 ![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%"}
 ![](images/hex-tidyr.png){.absolute top=0 left=965 width="12%"}
-![](images/hex-penguins.png){.absolute top=0 left=830 width="12%"}
+![](images/hex-penguins.png){.absolute top=115 left=1032 width="12%"}
+
+
 - Load the `palmerpenguins`, `tidyr`, and `magrittr` packages
 
 \
@@ -328,39 +330,181 @@ data %>%
 
 ![](images/shape-arrows.png){.fragment .fade-in .absolute top=325 left=400 width="20%"}
 
-## [Reshaping Longer]{.orange}
+## [Reshaping Longer]{.orange} {.smaller}
+
+- Change _from_ wide _to_ long format with `tidyr::pivot_longer`
+    - Has 4 key arguments
+
+\
+
+. . . 
+
+1. `data` = the wide data to pivot
 
 
+\
 
-## [Reshaping Longer Continued]{.orange}
+. . .
 
+2. `cols` = the columns to pivot
+    - Can select which columns to pivot _OR_ which to **not**
+    - Include: `cols = colD:colX`
+    - Exclude: `cols = -colA:-colC`
 
+## [Reshaping Longer Continued]{.orange} {.smaller}
+
+3. `names_to` = name of new column to hold old column names
+    - Must be in quotes
+
+\
+
+. . .
+
+4. `values_to` = name of new column to hold _values_
+    - Also in quotes
+
+\
+
+. . .
+
+- Example (for syntax):
+```{.r}
+pivot_longer(data = my_df,
+             columns = hydrogen:uranium,
+             names_to = "element",
+             values_to = "measurement")
+```
 
 ## [Reshaping Longer Visual]{.orange}
 
+<p align="center">
+<img src="images/graphic-pivot-longer.png" width="120%">
+</p>
 
-## [Practice: `pivot_longer`]{.pink}
+## [Practice: `pivot_longer`]{.pink} {.smaller}
 
 ![](images/hex-tidyr.png){.absolute top=0 left=1100 width="12%"}
 
+1. Download the "bees.csv" and load it into R with `read.csv`
+    - Check its structure! What columns are there?
 
-## [Reshaping Wider]{.orange}
+\
+
+. . .
+
+2. Pivot the data so that you are left with three columns:
+    - "year", "bee_group", and "bee_abundance"
+
+\
+
+. . . 
+
+3. Check your work! What are the dimensions of the resulting dataframe?
+
+. . . 
+
+- Should be 32 rows by 3 columns
 
 
+## [Reshaping Wider]{.orange} {.smaller}
 
-## [Reshaping Wider Continued]{.orange}
+- Change _from_ long _to_ wide format with `tidyr::pivot_wider`
+    - Also has 4 key arguments
+
+\
+
+. . . 
+
+1. `data` = the wide data to pivot
 
 
+\
+
+. . .
+
+2. `names_from` = name of the column to turn into new column names
+    - Must be <u>unquoted</u>
+
+## [Reshaping Wider Continued]{.orange} {.smaller}
+
+3. `values_from` = name of column to make into new column values
+    - Also <u>unquoted</u>
+
+\
+
+. . .
+
+4. `values_fill` = value to fill if value is missing in original data
+    - Technically optional but good practice to include explicitly
+
+\
+
+. . .
+
+- Example:
+```{.r}
+pivot_wider(data = my_df,
+            names_from = "fruit",
+            values_from = "size",
+            values_fill = NA)
+```
 
 ## [Reshaping Wider Visual]{.orange}
 
+<p align="center">
+<img src="images/graphic-pivot-wider.png" width="120%">
+</p>
 
 ## [Practice: `pivot_wider`]{.pink}
 
 ![](images/hex-tidyr.png){.absolute top=0 left=1100 width="12%"}
 
+1. Take the data object you pivoted to long format in the prior practice block
 
+\
 
+. . . 
+
+2. Pivot it back to wide format with `pivot_wider`!
+
+\
+
+. . . 
+
+3. Check your work!
+    - Does it look like the original object you loaded with `read.csv`?
+
+## [Practice: Wrangling!]{.pink} {.smaller}
+
+![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-tidyr.png){.absolute top=0 left=965 width="12%"}
+
+![](images/hex-dplyr.png){.absolute top=115 left=1032 width="12%"}
+![](images/hex-penguins.png){.absolute top=115 left=897 width="12%"}
+
+- Beginning with the "penguins" data do the following operations:
+
+. . .
+
+1. Keep only data on female penguins
+    - No male penguins and no individuals where sex is not known
+
+. . .
+
+2. Calculate average bill depth within species **and** island
+
+. . .
+
+3. Reshape _to_ wide format so that each island is a column
+    - Note that if an island doesn't have a given species it should have `NA` (not `0`)
+
+. . .
+
+4. Check your work! What are the dimensions of the resulting dataframe?
+
+. . . 
+
+- Should be 6 rows by 5 columns
 
 ## [Temperature Check]{.purple}
 
