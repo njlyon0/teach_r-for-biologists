@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -348,7 +413,11 @@ Lab 3 – Data Wrangling (P2)
 <section id="todays-plan" class="slide level2">
 <h2><span class="blue">Today’s Plan</span></h2>
 <ul>
-<li>Y</li>
+<li>Muddiest Point Review</li>
+<li>Intro to the Pipe</li>
+<li>Groupwise Summarization with <code>dplyr</code></li>
+<li>Reshaping Data with <code>tidyr</code></li>
+<li>Discuss Function Tutorial Assignment</li>
 </ul>
 </section>
 <section id="todays-learning-objectives" class="slide level2">
@@ -356,13 +425,312 @@ Lab 3 – Data Wrangling (P2)
 <p>After today’s session you will be able to:</p>
 <div class="fragment">
 <ul>
-<li>X</li>
+<li>Use the pipe operator in your code</li>
+<li>Perform group summarization with <code>dplyr</code> functions</li>
+<li>Reshape data from long to wide format
+<ul>
+<li>And vice versa</li>
+</ul></li>
 </ul>
 </div>
+</section>
+<section id="muddiest-point-review" class="slide level2">
+<h2><span class="gold">Muddiest Point Review</span></h2>
+<ul>
+<li>Recurring topics from most recent MPs:</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>What other topic(s) would you like to review?</li>
+</ul>
+</div>
+</section>
+<section id="pipe-operator" class="slide level2">
+<h2><span class="orange">Pipe Operator (<code>%&gt;%</code>)</span></h2>
+<ul>
+<li>Allows chaining together multiple operations</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Product of each function passed to next function</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>new_data <span class="ot">&lt;-</span> old_data <span class="sc">%&gt;%</span></span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>            <span class="cf">function</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>            <span class="fu">another_fxn</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>            <span class="fu">etc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<ul>
+<li>Same workflow requires fewer objects</li>
+</ul>
+</section>
+<section id="pipe-operator-example" class="slide level2 smaller">
+<h2><span class="orange">Pipe Operator Example</span></h2>
+<h3 id="without-pipe">Without Pipe</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Load data</span></span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>df_v1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"butterfly.csv"</span>)</span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Subset to only one treatment</span></span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a>df_v2 <span class="ot">&lt;-</span> <span class="fu">filter</span>(df_v1, treatment <span class="sc">==</span> <span class="st">"cows"</span>)</span>
+<span id="cb2-6"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Add together caterpillars and adult butterflies</span></span>
+<span id="cb2-8"><a aria-hidden="true" tabindex="-1"></a>df_v3 <span class="ot">&lt;-</span> <span class="fu">mutate</span>(df_v2, <span class="at">monarch.tot =</span> monarch.bfly <span class="sc">+</span> monarch.larva)</span>
+<span id="cb2-9"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only the total monarch column</span></span>
+<span id="cb2-11"><a aria-hidden="true" tabindex="-1"></a>df_v4 <span class="ot">&lt;-</span> <span class="fu">select</span>(df_v3, monarch)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="pipe-operator-example-1" class="slide level2 smaller">
+<h2><span class="orange">Pipe Operator Example</span></h2>
+<h3 id="without-pipe-1">Without Pipe</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Load data</span></span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a>df_v1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"butterfly.csv"</span>)</span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Subset to only one treatment</span></span>
+<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a>df_v2 <span class="ot">&lt;-</span> <span class="fu">filter</span>(df_v1, treatment <span class="sc">==</span> <span class="st">"cows"</span>)</span>
+<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Add together caterpillars and adult butterflies</span></span>
+<span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a>df_v3 <span class="ot">&lt;-</span> <span class="fu">mutate</span>(df_v2, <span class="at">monarch.tot =</span> monarch.bfly <span class="sc">+</span> monarch.larva)</span>
+<span id="cb3-9"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only the total monarch column</span></span>
+<span id="cb3-11"><a aria-hidden="true" tabindex="-1"></a>df_v4 <span class="ot">&lt;-</span> <span class="fu">select</span>(df_v3, monarch)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<h3 id="with-pipe">With Pipe</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Load data</span></span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>df_v1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"butterfly.csv"</span>)</span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Do all needed wrangling</span></span>
+<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a>df_done <span class="ot">&lt;-</span> df_v1 <span class="sc">%&gt;%</span></span>
+<span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a>      <span class="co"># Subset to only one treatment</span></span>
+<span id="cb4-7"><a aria-hidden="true" tabindex="-1"></a>      <span class="fu">filter</span>(treatment <span class="sc">==</span> <span class="st">"cows"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-8"><a aria-hidden="true" tabindex="-1"></a>      <span class="co"># Add together caterpillars and adult butterflies</span></span>
+<span id="cb4-9"><a aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">monarch.tot =</span> monarch.bfly <span class="sc">+</span> monarch.larva) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-10"><a aria-hidden="true" tabindex="-1"></a>      <span class="co"># Keep only the total monarch column</span></span>
+<span id="cb4-11"><a aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(df_v3, monarch)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="why-named-pipe" class="slide level2">
+<h2><span class="orange">Why Named “Pipe”?</span></h2>
+</section>
+<section id="practice-pipe" class="slide level2">
+<h2><span class="pink">Practice: Pipe</span></h2>
+</section>
+<section id="groupwise-summarization" class="slide level2">
+<h2><span class="orange">Groupwise Summarization</span></h2>
+</section>
+<section id="summarization-syntax" class="slide level2">
+<h2><span class="orange">Summarization Syntax</span></h2>
+</section>
+<section id="summarization-warning" class="slide level2">
+<h2><span class="orange">Summarization Warning</span></h2>
+</section>
+<section id="relevant-helper-functions" class="slide level2">
+<h2><span class="orange">Relevant Helper Functions</span></h2>
+</section>
+<section id="practice-summarizing." class="slide level2">
+<h2>[Practice: Summarizing]{.}</h2>
 </section>
 <section id="temperature-check" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
 <h4 id="how-are-you-feeling">How are you Feeling?</h4>
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+</section>
+<section id="data-shape" class="slide level2">
+<h2><span class="orange">Data “Shape”</span></h2>
+</section>
+<section id="reshaping-longer" class="slide level2">
+<h2><span class="orange">Reshaping Longer</span></h2>
+</section>
+<section id="reshaping-longer-continued" class="slide level2">
+<h2><span class="orange">Reshaping Longer Continued</span></h2>
+</section>
+<section id="reshaping-longer-visual" class="slide level2">
+<h2><span class="orange">Reshaping Longer Visual</span></h2>
+</section>
+<section id="practice-pivot_longer." class="slide level2">
+<h2>[Practice: <code>pivot_longer</code>]{.}</h2>
+</section>
+<section id="reshaping-wider" class="slide level2">
+<h2><span class="orange">Reshaping Wider</span></h2>
+</section>
+<section id="reshaping-wider-continued" class="slide level2">
+<h2><span class="orange">Reshaping Wider Continued</span></h2>
+</section>
+<section id="reshaping-wider-visual" class="slide level2">
+<h2><span class="orange">Reshaping Wider Visual</span></h2>
+</section>
+<section id="practice-pivot_wider." class="slide level2">
+<h2>[Practice: <code>pivot_wider</code>]{.}</h2>
+</section>
+<section id="temperature-check-1" class="slide level2">
+<h2><span class="purple">Temperature Check</span></h2>
+<h4 id="how-are-you-feeling-1">How are you Feeling?</h4>
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+</section>
+<section id="function-tutorial-learning-objectives" class="slide level2">
+<h2><span class="orange">Function Tutorial: Learning Objectives</span></h2>
+<p>After completing this assignment you will be able to:</p>
+<div class="fragment">
+<ul>
+<li>Explain the proper syntax and use of R functions</li>
+<li>Communicate effectively to an audience of interested non-specialists</li>
+<li>Apply feedback on an assignment to a successful revision</li>
+<li>Reflect on the process of revising a presentation based on constructively critical feedback</li>
+</ul>
+</div>
+</section>
+<section id="function-tutorial-faq" class="slide level2 smaller">
+<h2><span class="orange">Function Tutorial: FAQ</span></h2>
+<ul>
+<li>Tutorial should be an R Markdown with plain text and code chunks
+<ul>
+<li>Write tutorials for your classmates for three functions from packages on CRAN</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>You’ll present your tutorials for 5-10 minutes in <span class="blue">Lab #5</span>
+<ul>
+<li>Get peer feedback then &amp; implement changes before submitting draft 2</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Submit &amp; present revised tutorials during <span class="pink">Lab #7</span></li>
+</ul>
+</div>
+</section>
+<section id="function-tutorial-points" class="slide level2 smaller">
+<h2><span class="orange">Function Tutorial: Points</span></h2>
+<ul>
+<li><strong>Draft 1 = 30 pts (12% course grade)</strong>
+<ul>
+<li>Overall report – 6 pts</li>
+<li>Function tutorial (x3) – 8 pts each</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li><strong>Draft 2 = 40 pts (16% of grade)</strong>
+<ul>
+<li>Overall report – 6 pts</li>
+<li>Function tutorial (x3) – 8 pts each</li>
+<li>Revision response – 3 pts</li>
+<li>Edited from draft 1 from peer feedback – 7 pts</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li><span class="gold"><strong><em>Optional</em></strong></span> Draft 3 = 40 pts
+<ul>
+<li>If submitted, score replaces draft 2</li>
+<li><u>Score can only improve</u> (no way draft 3 reduces total points earned)</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="picking-functions" class="slide level2 smaller">
+<h2><span class="orange">Picking Functions</span></h2>
+<ul>
+<li>Everyone must pick three <em>different</em> functions
+<ul>
+<li>This way no two people present tutorials on the same function</li>
+</ul></li>
+<li>Unfortunately, means if someone picks before you they “claim” that function</li>
+</ul>
+<div class="fragment">
+<p><br>
+</p>
+<ul>
+<li>My plan to do this equitably is as follows:
+<ol type="1">
+<li>Randomize student order and each person picks one function</li>
+<li>Second function picked in reverse of that order (I.e., if you were last to pick in round 1, you’re first in round 2)</li>
+<li>Re-randomize student order for third function</li>
+</ol></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Sound fair? If not, what’s a good alternative?</li>
+</ul>
+</div>
+</section>
+<section id="nicks-recommended-packages" class="slide level2">
+<h2><span class="orange">Nick’s <em>Recommended</em> Packages</span></h2>
+</section>
+<section id="forbidden-packages-sorry" class="slide level2">
+<h2><span class="orange">Forbidden Packages (Sorry!)</span></h2>
+</section>
+<section id="assignment-q-a" class="slide level2">
+<h2><span class="gold">Assignment Q &amp; A</span></h2>
+<ul>
+<li>What questions do you have about this assignment?
+<ul>
+<li>No “dumb” questions so ask away!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Feeling good about next steps?</li>
+</ul>
+</div>
+</section>
+<section id="exploring-cran-packages" class="slide level2 smaller">
+<h2><span class="orange">Exploring CRAN Packages</span></h2>
+<ul>
+<li>Visit <a href="https://cran.r-project.org/">cran.r-project.org</a></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Click “Packages” on the left sidebar
+<ul>
+<li>Approx. 2/3 down sidebar items</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Click “Table of available packages, sorted by name”</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Scroll through and look for one with a cool name / title!</li>
+</ul>
+</section>
+<section id="practice-exploring-cran" class="slide level2">
+<h2><span class="pink">Practice: Exploring CRAN</span></h2>
+<ul>
+<li>Explore available packages / functions</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Select 7-10 functions so you have alternates (if needed)</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>We will pick functions during next lecture (<span class="blue">Lecture #4</span>)</li>
+</ul>
+</section>
+<section id="temperature-check-2" class="slide level2">
+<h2><span class="purple">Temperature Check</span></h2>
+<h4 id="how-are-you-feeling-2">How are you Feeling?</h4>
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
@@ -374,13 +742,17 @@ Lab 3 – Data Wrangling (P2)
 <h3 id="due-before-lecture">Due before lecture</h3>
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
-<li>x</li>
+<li>Homework #3</li>
+<li>Pick 7-10 possible functions for Function Tutorial assignment
+<ul>
+<li>Remember, they <strong><em>must</em></strong> be from CRAN packages!</li>
+</ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="due-before-lab">Due before lab</h3>
 <h4 id="by-midnight-1">(By midnight)</h4>
 <ul>
-<li>X</li>
+<li>Muddiest Point #4</li>
 </ul>
 </div>
 </div>

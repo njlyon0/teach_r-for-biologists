@@ -897,14 +897,91 @@
     "href": "materials/slides_3b.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nY"
+    "text": "Today’s Plan\n\nMuddiest Point Review\nIntro to the Pipe\nGroupwise Summarization with dplyr\nReshaping Data with tidyr\nDiscuss Function Tutorial Assignment"
   },
   {
     "objectID": "materials/slides_3b.html#todays-learning-objectives",
     "href": "materials/slides_3b.html#todays-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
-    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nX"
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nUse the pipe operator in your code\nPerform group summarization with dplyr functions\nReshape data from long to wide format\n\nAnd vice versa"
+  },
+  {
+    "objectID": "materials/slides_3b.html#muddiest-point-review",
+    "href": "materials/slides_3b.html#muddiest-point-review",
+    "title": "Intro to Data Science",
+    "section": "Muddiest Point Review",
+    "text": "Muddiest Point Review\n\nRecurring topics from most recent MPs:\n\n\n\n\n\nWhat other topic(s) would you like to review?"
+  },
+  {
+    "objectID": "materials/slides_3b.html#pipe-operator",
+    "href": "materials/slides_3b.html#pipe-operator",
+    "title": "Intro to Data Science",
+    "section": "Pipe Operator (%>%)",
+    "text": "Pipe Operator (%&gt;%)\n\nAllows chaining together multiple operations\n\n\n\n\nProduct of each function passed to next function\n\nnew_data &lt;- old_data %&gt;%\n            function() %&gt;%\n            another_fxn() %&gt;%\n            etc()\n\n\n\nSame workflow requires fewer objects"
+  },
+  {
+    "objectID": "materials/slides_3b.html#pipe-operator-example",
+    "href": "materials/slides_3b.html#pipe-operator-example",
+    "title": "Intro to Data Science",
+    "section": "Pipe Operator Example",
+    "text": "Pipe Operator Example\nWithout Pipe\n# Load data\ndf_v1 &lt;- read.csv(\"butterfly.csv\")\n\n# Subset to only one treatment\ndf_v2 &lt;- filter(df_v1, treatment == \"cows\")\n\n# Add together caterpillars and adult butterflies\ndf_v3 &lt;- mutate(df_v2, monarch.tot = monarch.bfly + monarch.larva)\n\n# Keep only the total monarch column\ndf_v4 &lt;- select(df_v3, monarch)"
+  },
+  {
+    "objectID": "materials/slides_3b.html#pipe-operator-example-1",
+    "href": "materials/slides_3b.html#pipe-operator-example-1",
+    "title": "Intro to Data Science",
+    "section": "Pipe Operator Example",
+    "text": "Pipe Operator Example\nWithout Pipe\n# Load data\ndf_v1 &lt;- read.csv(\"butterfly.csv\")\n\n# Subset to only one treatment\ndf_v2 &lt;- filter(df_v1, treatment == \"cows\")\n\n# Add together caterpillars and adult butterflies\ndf_v3 &lt;- mutate(df_v2, monarch.tot = monarch.bfly + monarch.larva)\n\n# Keep only the total monarch column\ndf_v4 &lt;- select(df_v3, monarch)\nWith Pipe\n# Load data\ndf_v1 &lt;- read.csv(\"butterfly.csv\")\n\n# Do all needed wrangling\ndf_done &lt;- df_v1 %&gt;%\n      # Subset to only one treatment\n      filter(treatment == \"cows\") %&gt;%\n      # Add together caterpillars and adult butterflies\n      mutate(monarch.tot = monarch.bfly + monarch.larva) %&gt;% \n      # Keep only the total monarch column\n      select(df_v3, monarch)"
+  },
+  {
+    "objectID": "materials/slides_3b.html#why-named-pipe",
+    "href": "materials/slides_3b.html#why-named-pipe",
+    "title": "Intro to Data Science",
+    "section": "Why Named “Pipe”?",
+    "text": "Why Named “Pipe”?"
+  },
+  {
+    "objectID": "materials/slides_3b.html#practice-pipe",
+    "href": "materials/slides_3b.html#practice-pipe",
+    "title": "Intro to Data Science",
+    "section": "Practice: Pipe",
+    "text": "Practice: Pipe"
+  },
+  {
+    "objectID": "materials/slides_3b.html#groupwise-summarization",
+    "href": "materials/slides_3b.html#groupwise-summarization",
+    "title": "Intro to Data Science",
+    "section": "Groupwise Summarization",
+    "text": "Groupwise Summarization"
+  },
+  {
+    "objectID": "materials/slides_3b.html#summarization-syntax",
+    "href": "materials/slides_3b.html#summarization-syntax",
+    "title": "Intro to Data Science",
+    "section": "Summarization Syntax",
+    "text": "Summarization Syntax"
+  },
+  {
+    "objectID": "materials/slides_3b.html#summarization-warning",
+    "href": "materials/slides_3b.html#summarization-warning",
+    "title": "Intro to Data Science",
+    "section": "Summarization Warning",
+    "text": "Summarization Warning"
+  },
+  {
+    "objectID": "materials/slides_3b.html#relevant-helper-functions",
+    "href": "materials/slides_3b.html#relevant-helper-functions",
+    "title": "Intro to Data Science",
+    "section": "Relevant Helper Functions",
+    "text": "Relevant Helper Functions"
+  },
+  {
+    "objectID": "materials/slides_3b.html#practice-summarizing.",
+    "href": "materials/slides_3b.html#practice-summarizing.",
+    "title": "Intro to Data Science",
+    "section": "[Practice: Summarizing]{.}",
+    "text": "[Practice: Summarizing]{.}"
   },
   {
     "objectID": "materials/slides_3b.html#temperature-check",
@@ -914,11 +991,151 @@
     "text": "Temperature Check\nHow are you Feeling?"
   },
   {
+    "objectID": "materials/slides_3b.html#data-shape",
+    "href": "materials/slides_3b.html#data-shape",
+    "title": "Intro to Data Science",
+    "section": "Data “Shape”",
+    "text": "Data “Shape”"
+  },
+  {
+    "objectID": "materials/slides_3b.html#reshaping-longer",
+    "href": "materials/slides_3b.html#reshaping-longer",
+    "title": "Intro to Data Science",
+    "section": "Reshaping Longer",
+    "text": "Reshaping Longer"
+  },
+  {
+    "objectID": "materials/slides_3b.html#reshaping-longer-continued",
+    "href": "materials/slides_3b.html#reshaping-longer-continued",
+    "title": "Intro to Data Science",
+    "section": "Reshaping Longer Continued",
+    "text": "Reshaping Longer Continued"
+  },
+  {
+    "objectID": "materials/slides_3b.html#reshaping-longer-visual",
+    "href": "materials/slides_3b.html#reshaping-longer-visual",
+    "title": "Intro to Data Science",
+    "section": "Reshaping Longer Visual",
+    "text": "Reshaping Longer Visual"
+  },
+  {
+    "objectID": "materials/slides_3b.html#practice-pivot_longer.",
+    "href": "materials/slides_3b.html#practice-pivot_longer.",
+    "title": "Intro to Data Science",
+    "section": "[Practice: pivot_longer]{.}",
+    "text": "[Practice: pivot_longer]{.}"
+  },
+  {
+    "objectID": "materials/slides_3b.html#reshaping-wider",
+    "href": "materials/slides_3b.html#reshaping-wider",
+    "title": "Intro to Data Science",
+    "section": "Reshaping Wider",
+    "text": "Reshaping Wider"
+  },
+  {
+    "objectID": "materials/slides_3b.html#reshaping-wider-continued",
+    "href": "materials/slides_3b.html#reshaping-wider-continued",
+    "title": "Intro to Data Science",
+    "section": "Reshaping Wider Continued",
+    "text": "Reshaping Wider Continued"
+  },
+  {
+    "objectID": "materials/slides_3b.html#reshaping-wider-visual",
+    "href": "materials/slides_3b.html#reshaping-wider-visual",
+    "title": "Intro to Data Science",
+    "section": "Reshaping Wider Visual",
+    "text": "Reshaping Wider Visual"
+  },
+  {
+    "objectID": "materials/slides_3b.html#practice-pivot_wider.",
+    "href": "materials/slides_3b.html#practice-pivot_wider.",
+    "title": "Intro to Data Science",
+    "section": "[Practice: pivot_wider]{.}",
+    "text": "[Practice: pivot_wider]{.}"
+  },
+  {
+    "objectID": "materials/slides_3b.html#temperature-check-1",
+    "href": "materials/slides_3b.html#temperature-check-1",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
+    "objectID": "materials/slides_3b.html#function-tutorial-learning-objectives",
+    "href": "materials/slides_3b.html#function-tutorial-learning-objectives",
+    "title": "Intro to Data Science",
+    "section": "Function Tutorial: Learning Objectives",
+    "text": "Function Tutorial: Learning Objectives\nAfter completing this assignment you will be able to:\n\n\nExplain the proper syntax and use of R functions\nCommunicate effectively to an audience of interested non-specialists\nApply feedback on an assignment to a successful revision\nReflect on the process of revising a presentation based on constructively critical feedback"
+  },
+  {
+    "objectID": "materials/slides_3b.html#function-tutorial-faq",
+    "href": "materials/slides_3b.html#function-tutorial-faq",
+    "title": "Intro to Data Science",
+    "section": "Function Tutorial: FAQ",
+    "text": "Function Tutorial: FAQ\n\nTutorial should be an R Markdown with plain text and code chunks\n\nWrite tutorials for your classmates for three functions from packages on CRAN\n\n\n\n\n\n\nYou’ll present your tutorials for 5-10 minutes in Lab #5\n\nGet peer feedback then & implement changes before submitting draft 2\n\n\n\n\n\n\n\nSubmit & present revised tutorials during Lab #7"
+  },
+  {
+    "objectID": "materials/slides_3b.html#function-tutorial-points",
+    "href": "materials/slides_3b.html#function-tutorial-points",
+    "title": "Intro to Data Science",
+    "section": "Function Tutorial: Points",
+    "text": "Function Tutorial: Points\n\nDraft 1 = 30 pts (12% course grade)\n\nOverall report – 6 pts\nFunction tutorial (x3) – 8 pts each\n\n\n\n\nDraft 2 = 40 pts (16% of grade)\n\nOverall report – 6 pts\nFunction tutorial (x3) – 8 pts each\nRevision response – 3 pts\nEdited from draft 1 from peer feedback – 7 pts\n\n\n\n\n\nOptional Draft 3 = 40 pts\n\nIf submitted, score replaces draft 2\nScore can only improve (no way draft 3 reduces total points earned)"
+  },
+  {
+    "objectID": "materials/slides_3b.html#picking-functions",
+    "href": "materials/slides_3b.html#picking-functions",
+    "title": "Intro to Data Science",
+    "section": "Picking Functions",
+    "text": "Picking Functions\n\nEveryone must pick three different functions\n\nThis way no two people present tutorials on the same function\n\nUnfortunately, means if someone picks before you they “claim” that function\n\n\n\n\n\nMy plan to do this equitably is as follows:\n\nRandomize student order and each person picks one function\nSecond function picked in reverse of that order (I.e., if you were last to pick in round 1, you’re first in round 2)\nRe-randomize student order for third function\n\n\n\n\n\nSound fair? If not, what’s a good alternative?"
+  },
+  {
+    "objectID": "materials/slides_3b.html#nicks-recommended-packages",
+    "href": "materials/slides_3b.html#nicks-recommended-packages",
+    "title": "Intro to Data Science",
+    "section": "Nick’s Recommended Packages",
+    "text": "Nick’s Recommended Packages"
+  },
+  {
+    "objectID": "materials/slides_3b.html#forbidden-packages-sorry",
+    "href": "materials/slides_3b.html#forbidden-packages-sorry",
+    "title": "Intro to Data Science",
+    "section": "Forbidden Packages (Sorry!)",
+    "text": "Forbidden Packages (Sorry!)"
+  },
+  {
+    "objectID": "materials/slides_3b.html#assignment-q-a",
+    "href": "materials/slides_3b.html#assignment-q-a",
+    "title": "Intro to Data Science",
+    "section": "Assignment Q & A",
+    "text": "Assignment Q & A\n\nWhat questions do you have about this assignment?\n\nNo “dumb” questions so ask away!\n\n\n\n\n\n\nFeeling good about next steps?"
+  },
+  {
+    "objectID": "materials/slides_3b.html#exploring-cran-packages",
+    "href": "materials/slides_3b.html#exploring-cran-packages",
+    "title": "Intro to Data Science",
+    "section": "Exploring CRAN Packages",
+    "text": "Exploring CRAN Packages\n\nVisit cran.r-project.org\n\n\n\n\nClick “Packages” on the left sidebar\n\nApprox. 2/3 down sidebar items\n\n\n\n\n\nClick “Table of available packages, sorted by name”\n\n\n\n\nScroll through and look for one with a cool name / title!"
+  },
+  {
+    "objectID": "materials/slides_3b.html#practice-exploring-cran",
+    "href": "materials/slides_3b.html#practice-exploring-cran",
+    "title": "Intro to Data Science",
+    "section": "Practice: Exploring CRAN",
+    "text": "Practice: Exploring CRAN\n\nExplore available packages / functions\n\n\n\n\nSelect 7-10 functions so you have alternates (if needed)\n\n\n\n\nWe will pick functions during next lecture (Lecture #4)"
+  },
+  {
+    "objectID": "materials/slides_3b.html#temperature-check-2",
+    "href": "materials/slides_3b.html#temperature-check-2",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
     "objectID": "materials/slides_3b.html#upcoming-due-dates",
     "href": "materials/slides_3b.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nx\n\n\nDue before lab\n(By midnight)\n\nX\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #3\nPick 7-10 possible functions for Function Tutorial assignment\n\nRemember, they must be from CRAN packages!\n\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #4\n\n\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/slides_8a.html#a-guide-to-your-process",
