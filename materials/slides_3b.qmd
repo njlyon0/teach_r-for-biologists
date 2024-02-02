@@ -583,12 +583,67 @@ After completing this assignment you will be able to:
 
 - Sound fair? If not, what’s a good alternative?
 
-## [Nick's _Recommended_ Packages]{.orange}
+## [Nick's _Recommended_ Packages]{.orange} {.smaller}
 
+::::{.columns}
 
-## [Forbidden Packages (Sorry!)]{.orange}
+:::{.column width="50%"}
 
+![](images/hex-stringr.png){.absolute top=60 left=-150 width="12%"}
+![](images/hex-dndr.png){.absolute top=255 left=-150 width="12%"}
+![](images/hex-lterpalettefinder.png){.absolute top=450 left=-150 width="12%"}
 
+`stringr` -- Simple, Consistent Wrappers for Common String Operations
+
+\
+\
+
+`dndR` -- Dungeons & Dragons Functions for Players and Dungeon Masters
+
+\
+\
+
+`lterpalettefinder` -- Extract Color Palettes from Photos and Pick Official LTER Palettes
+
+:::
+
+:::{.column width="50%"}
+
+![](images/hex-supportr.png){.absolute top=60 left=1050 width="12%"}
+![](images/hex-vegan.png){.absolute top=255 left=1050 width="12%"}
+
+`supportR` -- Support Functions for Wrangling and Visualization
+
+\
+\
+\
+
+`vegan` -- Community Ecology Package
+
+:::
+
+::::
+
+## [Forbidden Packages (Sorry!)]{.orange} {.smaller}
+
+![](images/hex-dplyr.png){.absolute top=60 left=-150 width="12%"}
+![](images/hex-tidyr.png){.absolute top=255 left=-150 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=520 left=-150 width="12%"}
+
+- `dplyr` -- A Grammar of Data Manipulation
+    - [Reason:]{.pink} we cover a lot of this in class
+
+\
+
+- `tidyr` -- Tidy Messy Data
+    - Actually [only 2 forbidden functions:]{.gold} `pivot_longer` & `pivot_wider`
+    - Others are okay to use!
+    - [Reason:]{.pink} we _just_ covered both in class
+
+\
+
+- `ggplot2` -- Create Elegant Data Visualizations Using the Grammar of Graphics
+    - [Reason:]{.pink} we cover a lot of this in class (see [week 6]{.blue}) **and** its functions use a really different syntax from what is used by other packages
 
 ## [Assignment Q & A]{.gold}
 
