@@ -5,7 +5,6 @@ engine: knitr
 format: 
   revealjs: 
     slide-number: c
-
     scrollable: false
     code-overflow: wrap
     code-line-numbers: false
@@ -29,7 +28,11 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- Muddiest Point Review
+- Intro to the Pipe
+- Groupwise Summarization with `dplyr`
+- Reshaping Data with `tidyr`
+- Discuss Function Tutorial Assignment
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -37,7 +40,117 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Use the pipe operator in your code
+- Perform group summarization with `dplyr` functions
+- Reshape data from long to wide format
+    - And vice versa
+
+## [Muddiest Point Review]{.gold}
+
+- Recurring topics from most recent MPs:
+
+\
+
+. . .
+
+- What other topic(s) would you like to review?
+
+## [Pipe Operator (`%>%`)]{.orange}
+
+- Allows chaining together multiple operations
+
+\
+
+- Product of each function passed to next function
+```{.r}
+new_data <- old_data %>%
+			function() %>%
+			another_fxn() %>%
+			etc()
+```
+
+\
+
+- Same workflow requires fewer objects
+
+## [Pipe Operator Example]{.orange} {.smaller}
+
+### Without Pipe
+
+```{.r}
+# Load data
+df_v1 <- read.csv("butterfly.csv")
+
+# Subset to only one treatment
+df_v2 <- filter(df_v1, treatment == "cows")
+
+# Add together caterpillars and adult butterflies
+df_v3 <- mutate(df_v2, monarch.tot = monarch.bfly + monarch.larva)
+
+# Keep only the total monarch column
+df_v4 <- select(df_v3, monarch)
+```
+
+## [Pipe Operator Example]{.orange} {.smaller}
+
+### Without Pipe
+
+```{.r}
+# Load data
+df_v1 <- read.csv("butterfly.csv")
+
+# Subset to only one treatment
+df_v2 <- filter(df_v1, treatment == "cows")
+
+# Add together caterpillars and adult butterflies
+df_v3 <- mutate(df_v2, monarch.tot = monarch.bfly + monarch.larva)
+
+# Keep only the total monarch column
+df_v4 <- select(df_v3, monarch)
+```
+
+### With Pipe
+
+```{.r}
+# Load data
+df_v1 <- read.csv("butterfly.csv")
+
+# Do all needed wrangling
+df_done <- df_v1 %>%
+      # Subset to only one treatment
+      filter(treatment == "cows") %>%
+      # Add together caterpillars and adult butterflies
+      mutate(monarch.tot = monarch.bfly + monarch.larva) %>% 
+      # Keep only the total monarch column
+      select(df_v3, monarch)
+```
+
+## [Why Named "Pipe"?]{.orange}
+
+
+
+## [Practice: Pipe]{.pink}
+
+
+
+## [Groupwise Summarization]{.orange}
+
+
+## [Summarization Syntax]{.orange}
+
+
+
+## [Summarization Warning]{.orange}
+
+
+
+## [Relevant Helper Functions]{.orange}
+
+
+
+## [Practice: Summarizing]{.}
+
+
 
 ## [Temperature Check]{.purple}
 
@@ -47,7 +160,173 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+## [Data "Shape"]{.orange}
 
+
+
+## [Reshaping Longer]{.orange}
+
+
+
+## [Reshaping Longer Continued]{.orange}
+
+
+
+## [Reshaping Longer Visual]{.orange}
+
+
+## [Practice: `pivot_longer`]{.}
+
+
+## [Reshaping Wider]{.orange}
+
+
+
+## [Reshaping Wider Continued]{.orange}
+
+
+
+## [Reshaping Wider Visual]{.orange}
+
+
+## [Practice: `pivot_wider`]{.}
+
+
+
+
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
+## [Function Tutorial: Learning Objectives]{.orange}
+
+After completing this assignment you will be able to:
+
+. . .
+
+- Explain the proper syntax and use of R functions
+- Communicate effectively to an audience of interested non-specialists
+- Apply feedback on an assignment to a successful revision
+- Reflect on the process of revising a presentation based on constructively critical feedback
+
+## [Function Tutorial: FAQ]{.orange} {.smaller}
+
+- Tutorial should be an R Markdown with plain text and code chunks
+    - Write tutorials for your classmates for three functions from packages on CRAN
+
+\
+
+. . .
+
+- You’ll present your tutorials for 5-10 minutes in [Lab \#5]{.blue}
+    - Get peer feedback then & implement changes before submitting draft 2
+
+\
+
+. . . 
+
+- Submit & present revised tutorials during [Lab \#7]{.pink}
+
+## [Function Tutorial: Points]{.orange} {.smaller}
+
+- **Draft 1 = 30 pts (12% course grade)**
+    - Overall report – 6 pts
+    - Function tutorial (x3) – 8 pts each
+
+. . . 
+
+- **Draft 2 = 40 pts (16% of grade)**
+    - Overall report – 6 pts
+    - Function tutorial (x3) – 8 pts each
+    - Revision response – 3 pts
+    - Edited from draft 1 from peer feedback – 7 pts
+
+. . . 
+
+- [**_Optional_**]{.gold} Draft 3 = 40 pts
+    - If submitted, score replaces draft 2
+    - <u>Score can only improve</u> (no way draft 3 reduces total points earned)
+
+## [Picking Functions]{.orange} {.smaller}
+
+- Everyone must pick three _different_ functions
+    - This way no two people present tutorials on the same function
+
+- Unfortunately, means if someone picks before you they "claim" that function
+
+. . .
+
+\
+
+- My plan to do this equitably is as follows:
+    1. Randomize student order and each person picks one function
+    2. Second function picked in reverse of that order (I.e., if you were last to pick in round 1, you're first in round 2)
+    3. Re-randomize student order for third function
+
+\
+
+- Sound fair? If not, what’s a good alternative?
+
+## [Nick's _Recommended_ Packages]{.orange}
+
+
+## [Forbidden Packages (Sorry!)]{.orange}
+
+
+
+## [Assignment Q & A]{.gold}
+
+- What questions do you have about this assignment?
+    - No "dumb" questions so ask away!
+
+\
+
+. . .
+
+- Feeling good about next steps?
+
+
+## [Exploring CRAN Packages]{.orange} {.smaller}
+
+- Visit [cran.r-project.org](https://cran.r-project.org/)
+
+\
+
+- Click "Packages" on the left sidebar
+    - Approx. 2/3 down sidebar items
+
+\
+
+- Click "Table of available packages, sorted by name"
+
+\
+
+- Scroll through and look for one with a cool name / title!
+
+## [Practice: Exploring CRAN]{.pink}
+
+- Explore available packages / functions
+
+\
+
+- Select 7-10 functions so you have alternates (if needed)
+
+\
+
+- We will pick functions during next lecture ([Lecture \#4]{.blue})
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
 
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
@@ -59,7 +338,10 @@ After today's session you will be able to:
 
 #### (By midnight)
 
-- x
+- Homework \#3
+- Pick 7-10 possible functions for Function Tutorial assignment
+    - Remember, they **_must_** be from CRAN packages!
+
 
 :::
 
@@ -69,7 +351,7 @@ After today's session you will be able to:
 
 #### (By midnight)
 
-- X
+- Muddiest Point \#4
 
 :::
 
