@@ -988,7 +988,7 @@
     "href": "materials/slides_3b.html#practice-summarizing",
     "title": "Intro to Data Science",
     "section": "Practice: Summarizing",
-    "text": "Practice: Summarizing\n   - Load the palmerpenguins, tidyr, and magrittr packages\n\n\n\nUsing the “penguins” data in the palmerpenguins package, answer the following questions:\n\n\n\n\n\nWhat is the average bill length in millimeters for each species of penguin?\n\n\n\n\nWhich island has the smallest individual penguin?\n\nHint: use body mass\n\n\n\n\n\nWhich species at which island has the longest flippers for female penguins?\n\nHint: remember you can use filter before or after summarize!"
+    "text": "Practice: Summarizing\n  \n\nLoad the palmerpenguins, tidyr, and magrittr packages\n\n\n\n\nUsing the “penguins” data in the palmerpenguins package, answer the following questions:\n\n\n\n\n\nWhat is the average bill length in millimeters for each species of penguin?\n\n\n\n\nWhich island has the smallest individual penguin?\n\nHint: use body mass\n\n\n\n\n\nWhich species at which island has the longest flippers for female penguins?\n\nHint: remember you can use filter before or after summarize!"
   },
   {
     "objectID": "materials/slides_3b.html#temperature-check",
@@ -1002,21 +1002,28 @@
     "href": "materials/slides_3b.html#data-shape",
     "title": "Intro to Data Science",
     "section": "Data “Shape”",
-    "text": "Data “Shape”"
+    "text": "Data “Shape”\n\nData with rows/columns has a shape\n\nShape refers to whether observations are in the rows or the columns\n\n\n\n\n\n\n“Wide” data has observations as columns\n\nE.g., Each column is a different species’ count\n\n\n\n\n\n\n\n“Long” data has observations as rows\n\nE.g., The columns are “species” and “count”"
+  },
+  {
+    "objectID": "materials/slides_3b.html#data-shape-visual",
+    "href": "materials/slides_3b.html#data-shape-visual",
+    "title": "Intro to Data Science",
+    "section": "Data Shape Visual",
+    "text": "Data Shape Visual\n\n\n\n\nLong Data\n\n\n\nWide Data"
   },
   {
     "objectID": "materials/slides_3b.html#reshaping-longer",
     "href": "materials/slides_3b.html#reshaping-longer",
     "title": "Intro to Data Science",
     "section": "Reshaping Longer",
-    "text": "Reshaping Longer"
+    "text": "Reshaping Longer\n\nChange from wide to long format with tidyr::pivot_longer\n\nHas 4 key arguments\n\n\n\n\n\n\ndata = the wide data to pivot\n\n\n\n\n\n\ncols = the columns to pivot\n\nCan select which columns to pivot OR which to not\nInclude: cols = colD:colX\nExclude: cols = -colA:-colC"
   },
   {
     "objectID": "materials/slides_3b.html#reshaping-longer-continued",
     "href": "materials/slides_3b.html#reshaping-longer-continued",
     "title": "Intro to Data Science",
     "section": "Reshaping Longer Continued",
-    "text": "Reshaping Longer Continued"
+    "text": "Reshaping Longer Continued\n\nnames_to = name of new column to hold old column names\n\nMust be in quotes\n\n\n\n\n\n\nvalues_to = name of new column to hold values\n\nAlso in quotes\n\n\n\n\n\n\n\nExample (for syntax):\n\npivot_longer(data = my_df,\n             columns = hydrogen:uranium,\n             names_to = \"element\",\n             values_to = \"measurement\")"
   },
   {
     "objectID": "materials/slides_3b.html#reshaping-longer-visual",
@@ -1030,21 +1037,21 @@
     "href": "materials/slides_3b.html#practice-pivot_longer",
     "title": "Intro to Data Science",
     "section": "Practice: pivot_longer",
-    "text": "Practice: pivot_longer"
+    "text": "Practice: pivot_longer\n\n\nDownload the “bees.csv” and load it into R with read.csv\n\nCheck its structure! What columns are there?\n\n\n\n\n\n\nPivot the data so that you are left with three columns:\n\n“year”, “bee_group”, and “bee_abundance”\n\n\n\n\n\n\n\nCheck your work! What are the dimensions of the resulting dataframe?\n\n\n\n\nShould be 32 rows by 3 columns"
   },
   {
     "objectID": "materials/slides_3b.html#reshaping-wider",
     "href": "materials/slides_3b.html#reshaping-wider",
     "title": "Intro to Data Science",
     "section": "Reshaping Wider",
-    "text": "Reshaping Wider"
+    "text": "Reshaping Wider\n\nChange from long to wide format with tidyr::pivot_wider\n\nAlso has 4 key arguments\n\n\n\n\n\n\ndata = the wide data to pivot\n\n\n\n\n\n\nnames_from = name of the column to turn into new column names\n\nMust be unquoted"
   },
   {
     "objectID": "materials/slides_3b.html#reshaping-wider-continued",
     "href": "materials/slides_3b.html#reshaping-wider-continued",
     "title": "Intro to Data Science",
     "section": "Reshaping Wider Continued",
-    "text": "Reshaping Wider Continued"
+    "text": "Reshaping Wider Continued\n\nvalues_from = name of column to make into new column values\n\nAlso unquoted\n\n\n\n\n\n\nvalues_fill = value to fill if value is missing in original data\n\nTechnically optional but good practice to include explicitly\n\n\n\n\n\n\n\nExample:\n\npivot_wider(data = my_df,\n            names_from = \"fruit\",\n            values_from = \"size\",\n            values_fill = NA)"
   },
   {
     "objectID": "materials/slides_3b.html#reshaping-wider-visual",
@@ -1058,7 +1065,14 @@
     "href": "materials/slides_3b.html#practice-pivot_wider",
     "title": "Intro to Data Science",
     "section": "Practice: pivot_wider",
-    "text": "Practice: pivot_wider"
+    "text": "Practice: pivot_wider\n\n\nTake the data object you pivoted to long format in the prior practice block\n\n\n\n\n\nPivot it back to wide format with pivot_wider!\n\n\n\n\n\n\nCheck your work!\n\nDoes it look like the original object you loaded with read.csv?"
+  },
+  {
+    "objectID": "materials/slides_3b.html#practice-wrangling",
+    "href": "materials/slides_3b.html#practice-wrangling",
+    "title": "Intro to Data Science",
+    "section": "Practice: Wrangling!",
+    "text": "Practice: Wrangling!\n \n \n\nBeginning with the “penguins” data do the following operations:\n\n\n\nKeep only data on female penguins\n\nNo male penguins and no individuals where sex is not known\n\n\n\n\n\nCalculate average bill depth within species and island\n\n\n\n\nReshape to wide format so that each island is a column\n\nNote that if an island doesn’t have a given species it should have NA (not 0)\n\n\n\n\n\nCheck your work! What are the dimensions of the resulting dataframe?\n\n\n\n\nShould be 6 rows by 5 columns"
   },
   {
     "objectID": "materials/slides_3b.html#temperature-check-1",
@@ -1100,14 +1114,14 @@
     "href": "materials/slides_3b.html#nicks-recommended-packages",
     "title": "Intro to Data Science",
     "section": "Nick’s Recommended Packages",
-    "text": "Nick’s Recommended Packages"
+    "text": "Nick’s Recommended Packages\n\n\n  \nstringr – Simple, Consistent Wrappers for Common String Operations\n\n\n\ndndR – Dungeons & Dragons Functions for Players and Dungeon Masters\n\n\n\nlterpalettefinder – Extract Color Palettes from Photos and Pick Official LTER Palettes\n\n \nsupportR – Support Functions for Wrangling and Visualization\n\n\n\n\nvegan – Community Ecology Package"
   },
   {
     "objectID": "materials/slides_3b.html#forbidden-packages-sorry",
     "href": "materials/slides_3b.html#forbidden-packages-sorry",
     "title": "Intro to Data Science",
     "section": "Forbidden Packages (Sorry!)",
-    "text": "Forbidden Packages (Sorry!)"
+    "text": "Forbidden Packages (Sorry!)\n  \n\ndplyr – A Grammar of Data Manipulation\n\nReason: we cover a lot of this in class\n\n\n\n\n\ntidyr – Tidy Messy Data\n\nActually only 2 forbidden functions: pivot_longer & pivot_wider\nOthers are okay to use!\nReason: we just covered both in class\n\n\n\n\n\nggplot2 – Create Elegant Data Visualizations Using the Grammar of Graphics\n\nReason: we cover a lot of this in class (see week 6) and its functions use a really different syntax from what is used by other packages"
   },
   {
     "objectID": "materials/slides_3b.html#assignment-q-a",

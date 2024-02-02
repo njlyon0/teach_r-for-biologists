@@ -663,7 +663,10 @@ Lab 3 – Data Wrangling (P2)
 </section>
 <section id="practice-summarizing" class="slide level2 smaller">
 <h2><span class="orange">Practice: Summarizing</span></h2>
-<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "> <img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 830px; width: 12%; "> - Load the <code>palmerpenguins</code>, <code>tidyr</code>, and <code>magrittr</code> packages</p>
+<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "> <img data-src="images/hex-penguins.png" class="absolute" style="top: 115px; left: 1032px; width: 12%; "></p>
+<ul>
+<li>Load the <code>palmerpenguins</code>, <code>tidyr</code>, and <code>magrittr</code> packages</li>
+</ul>
 <p><br>
 </p>
 <ul>
@@ -700,34 +703,272 @@ Lab 3 – Data Wrangling (P2)
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 </section>
-<section id="data-shape" class="slide level2">
+<section id="data-shape" class="slide level2 smaller">
 <h2><span class="orange">Data “Shape”</span></h2>
+<ul>
+<li>Data with rows/columns has a <span class="purple">shape</span>
+<ul>
+<li>Shape refers to whether <em>observations</em> are in the rows or the columns</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>“Wide” data has observations as <em>columns</em>
+<ul>
+<li>E.g., Each column is a different species’ count</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>“Long” data has observations as <em>rows</em>
+<ul>
+<li>E.g., The columns are “species” and “count”</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="reshaping-longer" class="slide level2">
+<section id="data-shape-visual" class="slide level2">
+<h2><span class="orange">Data Shape Visual</span></h2>
+<p><br>
+</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<h3 id="long-data">Long Data</h3>
+</div><div class="column" style="width:10%;">
+
+</div><div class="column" style="width:30%;">
+<h3 id="wide-data">Wide Data</h3>
+</div>
+</div>
+<p><img data-src="images/shape-long.png" class="fragment fade-in absolute" style="top: 200px; left: -50px; width: 40%; "></p>
+<p><img data-src="images/shape-wide.png" class="fragment fade-in absolute" style="top: 325px; left: 650px; width: 50%; "></p>
+<p><img data-src="images/shape-arrows.png" class="fragment fade-in absolute" style="top: 325px; left: 400px; width: 20%; "></p>
+</section>
+<section id="reshaping-longer" class="slide level2 smaller">
 <h2><span class="orange">Reshaping Longer</span></h2>
+<ul>
+<li>Change <em>from</em> wide <em>to</em> long format with <code>tidyr::pivot_longer</code>
+<ul>
+<li>Has 4 key arguments</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ol type="1">
+<li><code>data</code> = the wide data to pivot</li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li><code>cols</code> = the columns to pivot
+<ul>
+<li>Can select which columns to pivot <em>OR</em> which to <strong>not</strong></li>
+<li>Include: <code>cols = colD:colX</code></li>
+<li>Exclude: <code>cols = -colA:-colC</code></li>
+</ul></li>
+</ol>
+</div>
 </section>
-<section id="reshaping-longer-continued" class="slide level2">
+<section id="reshaping-longer-continued" class="slide level2 smaller">
 <h2><span class="orange">Reshaping Longer Continued</span></h2>
+<ol start="3" type="1">
+<li><code>names_to</code> = name of new column to hold old column names
+<ul>
+<li>Must be in quotes</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+<div class="fragment">
+<ol start="4" type="1">
+<li><code>values_to</code> = name of new column to hold <em>values</em>
+<ul>
+<li>Also in quotes</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Example (for syntax):</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">pivot_longer</span>(<span class="at">data =</span> my_df,</span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>             <span class="at">columns =</span> hydrogen<span class="sc">:</span>uranium,</span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>             <span class="at">names_to =</span> <span class="st">"element"</span>,</span>
+<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a>             <span class="at">values_to =</span> <span class="st">"measurement"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="reshaping-longer-visual" class="slide level2">
 <h2><span class="orange">Reshaping Longer Visual</span></h2>
+<p align="center">
+<img src="images/graphic-pivot-longer.png" width="120%">
+</p>
 </section>
-<section id="practice-pivot_longer" class="slide level2">
+<section id="practice-pivot_longer" class="slide level2 smaller">
 <h2><span class="pink">Practice: <code>pivot_longer</code></span></h2>
 <p><img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ol type="1">
+<li>Download the “bees.csv” and load it into R with <code>read.csv</code>
+<ul>
+<li>Check its structure! What columns are there?</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Pivot the data so that you are left with three columns:
+<ul>
+<li>“year”, “bee_group”, and “bee_abundance”</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Check your work! What are the dimensions of the resulting dataframe?</li>
+</ol>
+</div>
+<div class="fragment">
+<ul>
+<li>Should be 32 rows by 3 columns</li>
+</ul>
+</div>
 </section>
-<section id="reshaping-wider" class="slide level2">
+<section id="reshaping-wider" class="slide level2 smaller">
 <h2><span class="orange">Reshaping Wider</span></h2>
+<ul>
+<li>Change <em>from</em> long <em>to</em> wide format with <code>tidyr::pivot_wider</code>
+<ul>
+<li>Also has 4 key arguments</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ol type="1">
+<li><code>data</code> = the wide data to pivot</li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li><code>names_from</code> = name of the column to turn into new column names
+<ul>
+<li>Must be <u>unquoted</u></li>
+</ul></li>
+</ol>
+</div>
 </section>
-<section id="reshaping-wider-continued" class="slide level2">
+<section id="reshaping-wider-continued" class="slide level2 smaller">
 <h2><span class="orange">Reshaping Wider Continued</span></h2>
+<ol start="3" type="1">
+<li><code>values_from</code> = name of column to make into new column values
+<ul>
+<li>Also <u>unquoted</u></li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+<div class="fragment">
+<ol start="4" type="1">
+<li><code>values_fill</code> = value to fill if value is missing in original data
+<ul>
+<li>Technically optional but good practice to include explicitly</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Example:</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">pivot_wider</span>(<span class="at">data =</span> my_df,</span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>            <span class="at">names_from =</span> <span class="st">"fruit"</span>,</span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>            <span class="at">values_from =</span> <span class="st">"size"</span>,</span>
+<span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a>            <span class="at">values_fill =</span> <span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="reshaping-wider-visual" class="slide level2">
 <h2><span class="orange">Reshaping Wider Visual</span></h2>
+<p align="center">
+<img src="images/graphic-pivot-wider.png" width="120%">
+</p>
 </section>
 <section id="practice-pivot_wider" class="slide level2">
 <h2><span class="pink">Practice: <code>pivot_wider</code></span></h2>
 <p><img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ol type="1">
+<li>Take the data object you pivoted to long format in the prior practice block</li>
+</ol>
+<p><br>
+</p>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Pivot it back to wide format with <code>pivot_wider</code>!</li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Check your work!
+<ul>
+<li>Does it look like the original object you loaded with <code>read.csv</code>?</li>
+</ul></li>
+</ol>
+</div>
+</section>
+<section id="practice-wrangling" class="slide level2 smaller">
+<h2><span class="pink">Practice: Wrangling!</span></h2>
+<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "></p>
+<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 115px; left: 1032px; width: 12%; "> <img data-src="images/hex-penguins.png" class="absolute" style="top: 115px; left: 897px; width: 12%; "></p>
+<ul>
+<li>Beginning with the “penguins” data do the following operations:</li>
+</ul>
+<div class="fragment">
+<ol type="1">
+<li>Keep only data on female penguins
+<ul>
+<li>No male penguins and no individuals where sex is not known</li>
+</ul></li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Calculate average bill depth within species <strong>and</strong> island</li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Reshape <em>to</em> wide format so that each island is a column
+<ul>
+<li>Note that if an island doesn’t have a given species it should have <code>NA</code> (not <code>0</code>)</li>
+</ul></li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="4" type="1">
+<li>Check your work! What are the dimensions of the resulting dataframe?</li>
+</ol>
+</div>
+<div class="fragment">
+<ul>
+<li>Should be 6 rows by 5 columns</li>
+</ul>
+</div>
 </section>
 <section id="temperature-check-1" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
@@ -831,11 +1072,58 @@ Lab 3 – Data Wrangling (P2)
 </ul>
 </div>
 </section>
-<section id="nicks-recommended-packages" class="slide level2">
+<section id="nicks-recommended-packages" class="slide level2 smaller">
 <h2><span class="orange">Nick’s <em>Recommended</em> Packages</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/hex-stringr.png" class="absolute" style="top: 60px; left: -150px; width: 12%; "> <img data-src="images/hex-dndr.png" class="absolute" style="top: 255px; left: -150px; width: 12%; "> <img data-src="images/hex-lterpalettefinder.png" class="absolute" style="top: 450px; left: -150px; width: 12%; "></p>
+<p><code>stringr</code> – Simple, Consistent Wrappers for Common String Operations</p>
+<p><br>
+<br>
+</p>
+<p><code>dndR</code> – Dungeons &amp; Dragons Functions for Players and Dungeon Masters</p>
+<p><br>
+<br>
+</p>
+<p><code>lterpalettefinder</code> – Extract Color Palettes from Photos and Pick Official LTER Palettes</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/hex-supportr.png" class="absolute" style="top: 60px; left: 1050px; width: 12%; "> <img data-src="images/hex-vegan.png" class="absolute" style="top: 255px; left: 1050px; width: 12%; "></p>
+<p><code>supportR</code> – Support Functions for Wrangling and Visualization</p>
+<p><br>
+<br>
+<br>
+</p>
+<p><code>vegan</code> – Community Ecology Package</p>
+</div>
+</div>
 </section>
-<section id="forbidden-packages-sorry" class="slide level2">
+<section id="forbidden-packages-sorry" class="slide level2 smaller">
 <h2><span class="orange">Forbidden Packages (Sorry!)</span></h2>
+<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 60px; left: -150px; width: 12%; "> <img data-src="images/hex-tidyr.png" class="absolute" style="top: 255px; left: -150px; width: 12%; "> <img data-src="images/hex-ggplot2.png" class="absolute" style="top: 520px; left: -150px; width: 12%; "></p>
+<ul>
+<li><code>dplyr</code> – A Grammar of Data Manipulation
+<ul>
+<li><span class="pink">Reason:</span> we cover a lot of this in class</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li><code>tidyr</code> – Tidy Messy Data
+<ul>
+<li>Actually <span class="gold">only 2 forbidden functions:</span> <code>pivot_longer</code> &amp; <code>pivot_wider</code></li>
+<li>Others are okay to use!</li>
+<li><span class="pink">Reason:</span> we <em>just</em> covered both in class</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li><code>ggplot2</code> – Create Elegant Data Visualizations Using the Grammar of Graphics
+<ul>
+<li><span class="pink">Reason:</span> we cover a lot of this in class (see <span class="blue">week 6</span>) <strong>and</strong> its functions use a really different syntax from what is used by other packages</li>
+</ul></li>
+</ul>
 </section>
 <section id="assignment-q-a" class="slide level2">
 <h2><span class="gold">Assignment Q &amp; A</span></h2>
