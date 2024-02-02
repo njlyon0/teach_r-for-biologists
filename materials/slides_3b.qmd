@@ -127,30 +127,149 @@ df_done <- df_v1 %>%
 
 ## [Why Named "Pipe"?]{.orange}
 
+René Magritte -- _The Treachery of Images_ (1929)
 
+![](images/magritte-profile.jpg){.absolute top=150 left=50 width="30%"}
 
-## [Practice: Pipe]{.pink}
+![](images/magritte-treachery.jpg){.absolute top=150 left=450 width="60%"}
+![](images/hex-magrittr.png){.fragment .fade-in .absolute top=475 left=120 width="18%"}
 
+## [Practice: Pipe]{.pink} {.smaller}
 
+![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%"}
 
-## [Groupwise Summarization]{.orange}
+1. Install and load the `magrittr` package
 
+\
+
+2. Return to your 3-step wrangling of "minnow.csv" from [Lecture \#3]{.gold}
+    - Filter "minnow.csv" to only Stonerollers and Chubs
+    - Convert depth & diameter to meters (from cm)
+    - Pare down columns to only species and depth/diameter in meters
+
+\
+
+3. Copy these lines and edit them to use the `%>%`
+    - Does this have the same end result as the non-pipe lines?
+
+## [Groupwise Summarization]{.orange} {.smaller}
+
+- Summarizing within groups is a _common_ operation
+    - **Average** barnacle number at several tidal heights
+    - **Variation** in reported customer satisfaction within demographic groups
+
+\
+
+. . . 
+
+- `dplyr` offers three functions to accomplish this
+    1. `group_by`
+    2. `summarize`
+    3. `ungroup`
 
 ## [Summarization Syntax]{.orange}
 
+- `group_by` has similar structure to `select`
+    - Wants column names separated by commas
 
+\
 
-## [Summarization Warning]{.orange}
+. . . 
 
+- `summarize` has similar structure to `mutate`
+    - E.g., `new_column = function(old_column)`
 
+\
 
-## [Relevant Helper Functions]{.orange}
+. . . 
 
+- `ungroup` has _no_ arguments!
 
+## [Summarization + Pipes]{.orange}
 
-## [Practice: Summarizing]{.}
+Let's check out an example:
 
+\
 
+```{.r code-line-numbers="|4|6,7|9"}
+# Take data
+data %>%
+    # 1. Group by treatment
+    group_by(treatment) %>%
+    # 2. Calculate average and deviation
+    summarize(mean_val = mean(response),
+              sd_val = sd(response)) %>%
+    # 3. Ungroup
+    ungroup()
+```
+
+## [Summarization Warnings]{.orange} {.smaller}
+
+1. Summarizing simplifies dataframes!
+    - After summarizing, you'll have _one_ row per <u>combination</u> of grouping columns
+
+\
+
+. . . 
+
+2. Summarizing drops columns _unless_:
+    1. Column is named in `group_by`
+    2. Column is created by `summarize`
+
+\
+
+- If you don't want to lose a column, it needs to meet one of those criteria
+
+## [Relevant Helper Functions]{.orange} {.smaller}
+
+- To summarize you'll need to use functions that calculate summary values
+
+\
+
+. . . 
+
+- Take an average with `mean`
+    - Has `na.rm` argument that determines whether missing values are included
+
+\
+
+. . .
+
+- Find standard deviation with `sd`
+    - Common measurement to use as error bars in a graph
+
+\
+
+. . .
+
+- Find the smallest or largest number with `min` and `max`
+
+## [Practice: Summarizing]{.orange} {.smaller}
+
+![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-tidyr.png){.absolute top=0 left=965 width="12%"}
+![](images/hex-penguins.png){.absolute top=0 left=830 width="12%"}
+- Load the `palmerpenguins`, `tidyr`, and `magrittr` packages
+
+\
+
+- Using the "penguins" data in the `palmerpenguins` package, answer the following questions:
+
+\
+
+. . .
+
+1. What is the average bill length in millimeters for each species of penguin?
+
+. . .
+
+2. Which island has the smallest individual penguin?
+    - _Hint:_ use body mass
+
+. . . 
+
+3. Which species <u>at which island</u> has the longest flippers for female penguins?
+    - Hint: remember you can use `filter` before or after `summarize`!
 
 ## [Temperature Check]{.purple}
 
@@ -175,7 +294,9 @@ df_done <- df_v1 %>%
 ## [Reshaping Longer Visual]{.orange}
 
 
-## [Practice: `pivot_longer`]{.}
+## [Practice: `pivot_longer`]{.pink}
+
+![](images/hex-tidyr.png){.absolute top=0 left=1100 width="12%"}
 
 
 ## [Reshaping Wider]{.orange}
@@ -189,8 +310,9 @@ df_done <- df_v1 %>%
 ## [Reshaping Wider Visual]{.orange}
 
 
-## [Practice: `pivot_wider`]{.}
+## [Practice: `pivot_wider`]{.pink}
 
+![](images/hex-tidyr.png){.absolute top=0 left=1100 width="12%"}
 
 
 
