@@ -279,9 +279,54 @@ data %>%
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-## [Data "Shape"]{.orange}
+## [Data "Shape"]{.orange} {.smaller}
 
+- Data with rows/columns has a [shape]{.purple}
+    - Shape refers to whether _observations_ are in the rows or the columns
 
+\
+
+. . .
+
+- "Wide" data has observations as _columns_
+    - E.g., Each column is a different species' count
+
+\
+
+. . .
+
+- "Long" data has observations as _rows_
+    - E.g., The columns are "species" and "count"
+
+## [Data Shape Visual]{.orange}
+
+\
+
+::::{.columns}
+
+:::{.column width="60%"}
+
+### Long Data
+
+:::
+
+:::{.column width="10%"}
+
+:::
+
+:::{.column width="30%"}
+
+### Wide Data
+
+:::
+
+::::
+
+![](images/shape-long.png){.fragment .fade-in .absolute top=200 left=-50 width="40%"}
+
+![](images/shape-wide.png){.fragment .fade-in .absolute top=325 left=650 width="50%"}
+
+![](images/shape-arrows.png){.fragment .fade-in .absolute top=325 left=400 width="20%"}
 
 ## [Reshaping Longer]{.orange}
 
