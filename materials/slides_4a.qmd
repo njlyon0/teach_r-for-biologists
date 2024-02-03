@@ -28,7 +28,8 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- Joining Data
+- Function Tutorials - Claim Functions!
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -36,7 +37,160 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Name the four major types of joins
+- Contrast / compare the four major types of joins
+- Combine data using the four major types of joins
+
+## [Join Background]{.orange}
+
+
+## [Join Types]{.orange}
+
+
+
+## [Left/Right Joins]{.orange}
+
+
+
+## [Left/Right Join Visual]{.orange}
+
+
+
+
+## [Practice: Left Joins]{.pink}
+
+![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+
+## [Inner Joins]{.orange}
+
+
+## [Outer Joins]{.orange}
+
+
+## [Practice: Inner/Outer Joins]{.orange}
+
+![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+## [Anti Joins]{.orange}
+
+
+## [Practice: Anti Joins]{.orange}
+
+![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+## [Join Trivia - Question 1]{.gold}
+
+
+
+
+
+## [Join Trivia - Question 2]{.gold}
+
+
+
+## [Join Trivia - Question 3]{.gold}
+
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
+## [Function Tutorial Assignment]{.orange}
+
+- Picking functions today!
+
+\
+
+- Take a moment and get your 7-10 functions list ready
+    - You may also want to pull up CRAN (just in case)
+
+\
+
+- Any lingering questions about this assignment?
+    - Esp. any that need to be answered _before_ picking functions
+
+## [Randomizing Vectors]{.orange} {.smaller}
+
+- We'll use `sample` to randomize student order
+
+\
+
+- `sample` has three main arguments:
+    - `x` = vector to randomize
+    - `size` = number of times to randomly sample
+    - `replace` = whether vector elements can be retrieved more than once
+
+\
+
+. . .
+
+- In our case:
+    - `x` = vector of student names
+    - `size` = number of students
+    - `replace` = `FALSE` (don't want to double pick the same student)
+
+## [Randomizing Vectors Demo]{.orange}
+
+- Let's look at an example to clarify that
+
+```{.r code-line-numbers="|2|5"}
+# Make a vector of faux students
+students <- c("albatross", "cactus", "wave")
+
+# Randomize a vector
+sample(x = students, size = 3, replace = FALSE)
+```
+
+## [Function Tutorial: Pick Functions]{.gold} {.smaller}
+
+- Using order from `sample` we’ll claim one function each per round:
+    - Round 1: random order
+    - Round 2: reverse of Round 1 order
+    - Round 3: new random order
+
+\
+
+. . .
+
+- Claimed functions should be entered in the Google Sheet I made for this
+
+\
+
+. . .
+
+- We’ll go one by one so <u>do not enter functions</u> before your turn!
+
+## [Function Tutorial: Free Work]{.pink} {.smaller}
+
+- Make a new R Markdown file for this assignment
+
+\
+
+- Write in your three functions and which package(s) they come from
+
+\
+
+- Remember to check their help file!
+    - `?function_name`
+
+\
+
+- The help file also (sometimes) has examples at the bottom!
+    - Feel free to **_adapt_** these for your tutorial assignment `r fontawesome::fa("smile", a11y = "sem")`
 
 ## [Temperature Check]{.purple}
 
@@ -58,7 +212,7 @@ After today's session you will be able to:
 
 #### (By midnight)
 
-- Muddiest Point \#x
+- Muddiest Point \#4
 
 :::
 
@@ -68,7 +222,8 @@ After today's session you will be able to:
 
 #### (By midnight)
 
-- X
+- Homework \#4
+- Read [Model selection in ecology and evolution](https://www.uvm.edu/~bmitchel/NR385/Johnson_Model_selection.pdf)
 
 :::
 
