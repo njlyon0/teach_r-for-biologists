@@ -28,7 +28,10 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- Muddiest Point Review
+- Statistics Background
+- Stats Roadmap
+- Fundamental Statistical Tests
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -36,7 +39,143 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Recognize continuous versus categorical variables
+- Identify which statistical test is appropriate given X/Y variable types
+- Perform analytical tests using R
+
+## [Muddiest Point Review]{.gold}
+
+- Recurring topics from most recent MPs:
+
+\
+
+- Function Tutorial Assignment Questions
+
+\
+
+. . .
+
+- What other topic(s) would you like to review?
+
+## [Statistics Chat]{.gold}
+
+
+## [Statistics & Scientific Method]{.orange}
+
+
+## [Statistics Justification Example]{.orange}
+
+
+## [Stats Example Continued]{.orange}
+
+
+## [Statistics' Role in Science]{.orange}
+
+
+## [Data Science & Statistics]{.orange}
+
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
+## [Hypothesis Testing Philosophies]{.orange}
+
+
+## [Philosophies Continued]{.orange}
+
+
+## [Null Hypothesis: P Values]{.orange}
+
+
+## [Hypothesis Testing Chat]{.gold}
+
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
+## [Variable Types]{.orange}
+
+
+
+## [Variable Types Visual]{.orange}
+
+<p align="center">
+<img src="comics/discrete-vs-continuous.png" alt="" width="70%">
+</p>
+
+## [Variables & Hypothesis Testing]{.orange}
+
+
+
+
+## [Statistics Roadmap]{.orange}
+
+
+
+
+## [Regression]{.orange}
+
+
+
+
+
+## [R Stats Syntax]{.orange}
+
+
+
+
+## [Practice: Regression]{.pink}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+## [More Practice: Regression]{.pink}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+
+
+
+## [Interpreting Summary Tables]{.orange}
+
+
+
+
+
+## [<u>An</u>alysis <u>o</u>f <u>Va</u>riance (ANOVA)]{.orange}
+
+
+
+
+## [Practice: ANOVA]{.pink}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+
+## [Chi Squared Test]{.orange}
+
+
+
+
+
 
 ## [Temperature Check]{.purple}
 
@@ -58,7 +197,8 @@ After today's session you will be able to:
 
 #### (By midnight)
 
-- x
+- Homework \#4
+- Read [Model selection in ecology and evolution](https://www.uvm.edu/~bmitchel/NR385/Johnson_Model_selection.pdf)
 
 :::
 
@@ -68,7 +208,9 @@ After today's session you will be able to:
 
 #### (By midnight)
 
-- X
+- Muddiest Point \#5
+-  [Draft 1]{.pink} of Function Tutorials
+    - Double check rubric to see that you’re not leaving any points on the table!
 
 :::
 
