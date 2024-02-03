@@ -176,14 +176,105 @@
     "href": "materials/slides_4a.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nY"
+    "text": "Today’s Plan\n\nJoining Data\nFunction Tutorials - Claim Functions!"
   },
   {
     "objectID": "materials/slides_4a.html#todays-learning-objectives",
     "href": "materials/slides_4a.html#todays-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
-    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nX"
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nName the four major types of joins\nContrast / compare the four major types of joins\nCombine data using the four major types of joins"
+  },
+  {
+    "objectID": "materials/slides_4a.html#join-background",
+    "href": "materials/slides_4a.html#join-background",
+    "title": "Intro to Data Science",
+    "section": "Join Background",
+    "text": "Join Background"
+  },
+  {
+    "objectID": "materials/slides_4a.html#join-types",
+    "href": "materials/slides_4a.html#join-types",
+    "title": "Intro to Data Science",
+    "section": "Join Types",
+    "text": "Join Types"
+  },
+  {
+    "objectID": "materials/slides_4a.html#leftright-joins",
+    "href": "materials/slides_4a.html#leftright-joins",
+    "title": "Intro to Data Science",
+    "section": "Left/Right Joins",
+    "text": "Left/Right Joins"
+  },
+  {
+    "objectID": "materials/slides_4a.html#leftright-join-visual",
+    "href": "materials/slides_4a.html#leftright-join-visual",
+    "title": "Intro to Data Science",
+    "section": "Left/Right Join Visual",
+    "text": "Left/Right Join Visual"
+  },
+  {
+    "objectID": "materials/slides_4a.html#practice-left-joins",
+    "href": "materials/slides_4a.html#practice-left-joins",
+    "title": "Intro to Data Science",
+    "section": "Practice: Left Joins",
+    "text": "Practice: Left Joins"
+  },
+  {
+    "objectID": "materials/slides_4a.html#inner-joins",
+    "href": "materials/slides_4a.html#inner-joins",
+    "title": "Intro to Data Science",
+    "section": "Inner Joins",
+    "text": "Inner Joins"
+  },
+  {
+    "objectID": "materials/slides_4a.html#outer-joins",
+    "href": "materials/slides_4a.html#outer-joins",
+    "title": "Intro to Data Science",
+    "section": "Outer Joins",
+    "text": "Outer Joins"
+  },
+  {
+    "objectID": "materials/slides_4a.html#practice-innerouter-joins",
+    "href": "materials/slides_4a.html#practice-innerouter-joins",
+    "title": "Intro to Data Science",
+    "section": "Practice: Inner/Outer Joins",
+    "text": "Practice: Inner/Outer Joins"
+  },
+  {
+    "objectID": "materials/slides_4a.html#anti-joins",
+    "href": "materials/slides_4a.html#anti-joins",
+    "title": "Intro to Data Science",
+    "section": "Anti Joins",
+    "text": "Anti Joins"
+  },
+  {
+    "objectID": "materials/slides_4a.html#practice-anti-joins",
+    "href": "materials/slides_4a.html#practice-anti-joins",
+    "title": "Intro to Data Science",
+    "section": "Practice: Anti Joins",
+    "text": "Practice: Anti Joins"
+  },
+  {
+    "objectID": "materials/slides_4a.html#join-trivia---question-1",
+    "href": "materials/slides_4a.html#join-trivia---question-1",
+    "title": "Intro to Data Science",
+    "section": "Join Trivia - Question 1",
+    "text": "Join Trivia - Question 1"
+  },
+  {
+    "objectID": "materials/slides_4a.html#join-trivia---question-2",
+    "href": "materials/slides_4a.html#join-trivia---question-2",
+    "title": "Intro to Data Science",
+    "section": "Join Trivia - Question 2",
+    "text": "Join Trivia - Question 2"
+  },
+  {
+    "objectID": "materials/slides_4a.html#join-trivia---question-3",
+    "href": "materials/slides_4a.html#join-trivia---question-3",
+    "title": "Intro to Data Science",
+    "section": "Join Trivia - Question 3",
+    "text": "Join Trivia - Question 3"
   },
   {
     "objectID": "materials/slides_4a.html#temperature-check",
@@ -193,11 +284,53 @@
     "text": "Temperature Check\nHow are you Feeling?"
   },
   {
+    "objectID": "materials/slides_4a.html#function-tutorial-assignment",
+    "href": "materials/slides_4a.html#function-tutorial-assignment",
+    "title": "Intro to Data Science",
+    "section": "Function Tutorial Assignment",
+    "text": "Function Tutorial Assignment\n\nPicking functions today!\n\n\n\n\nTake a moment and get your 7-10 functions list ready\n\nYou may also want to pull up CRAN (just in case)\n\n\n\n\n\nAny lingering questions about this assignment?\n\nEsp. any that need to be answered before picking functions"
+  },
+  {
+    "objectID": "materials/slides_4a.html#randomizing-vectors",
+    "href": "materials/slides_4a.html#randomizing-vectors",
+    "title": "Intro to Data Science",
+    "section": "Randomizing Vectors",
+    "text": "Randomizing Vectors\n\nWe’ll use sample to randomize student order\n\n\n\n\nsample has three main arguments:\n\nx = vector to randomize\nsize = number of times to randomly sample\nreplace = whether vector elements can be retrieved more than once\n\n\n\n\n\n\nIn our case:\n\nx = vector of student names\nsize = number of students\nreplace = FALSE (don’t want to double pick the same student)"
+  },
+  {
+    "objectID": "materials/slides_4a.html#randomizing-vectors-demo",
+    "href": "materials/slides_4a.html#randomizing-vectors-demo",
+    "title": "Intro to Data Science",
+    "section": "Randomizing Vectors Demo",
+    "text": "Randomizing Vectors Demo\n\nLet’s look at an example to clarify that\n\n# Make a vector of faux students\nstudents &lt;- c(\"albatross\", \"cactus\", \"wave\")\n\n# Randomize a vector\nsample(x = students, size = 3, replace = FALSE)"
+  },
+  {
+    "objectID": "materials/slides_4a.html#function-tutorial-pick-functions",
+    "href": "materials/slides_4a.html#function-tutorial-pick-functions",
+    "title": "Intro to Data Science",
+    "section": "Function Tutorial: Pick Functions",
+    "text": "Function Tutorial: Pick Functions\n\nUsing order from sample we’ll claim one function each per round:\n\nRound 1: random order\nRound 2: reverse of Round 1 order\nRound 3: new random order\n\n\n\n\n\n\nClaimed functions should be entered in the Google Sheet I made for this\n\n\n\n\n\n\nWe’ll go one by one so do not enter functions before your turn!"
+  },
+  {
+    "objectID": "materials/slides_4a.html#function-tutorial-free-work",
+    "href": "materials/slides_4a.html#function-tutorial-free-work",
+    "title": "Intro to Data Science",
+    "section": "Function Tutorial: Free Work",
+    "text": "Function Tutorial: Free Work\n\nMake a new R Markdown file for this assignment\n\n\n\n\nWrite in your three functions and which package(s) they come from\n\n\n\n\nRemember to check their help file!\n\n?function_name\n\n\n\n\n\nThe help file also (sometimes) has examples at the bottom!\n\nFeel free to adapt these for your tutorial assignment Face Smile"
+  },
+  {
+    "objectID": "materials/slides_4a.html#temperature-check-1",
+    "href": "materials/slides_4a.html#temperature-check-1",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
     "objectID": "materials/slides_4a.html#upcoming-due-dates",
     "href": "materials/slides_4a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #x\n\n\nDue before lecture\n(By midnight)\n\nX\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #4\n\n\nDue before lecture\n(By midnight)\n\nHomework #4\nRead Model selection in ecology and evolution\n\n\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/slides_template.html#a-guide-to-your-process",
@@ -1957,14 +2090,63 @@
     "href": "materials/slides_4b.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nY"
+    "text": "Today’s Plan\n\nMuddiest Point Review\nStatistics Background\nStats Roadmap\nFundamental Statistical Tests"
   },
   {
     "objectID": "materials/slides_4b.html#todays-learning-objectives",
     "href": "materials/slides_4b.html#todays-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
-    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nX"
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nRecognize continuous versus categorical variables\nIdentify which statistical test is appropriate given X/Y variable types\nPerform analytical tests using R"
+  },
+  {
+    "objectID": "materials/slides_4b.html#muddiest-point-review",
+    "href": "materials/slides_4b.html#muddiest-point-review",
+    "title": "Intro to Data Science",
+    "section": "Muddiest Point Review",
+    "text": "Muddiest Point Review\n\nRecurring topics from most recent MPs:\n\n\n\n\nFunction Tutorial Assignment Questions\n\n\n\n\n\nWhat other topic(s) would you like to review?"
+  },
+  {
+    "objectID": "materials/slides_4b.html#statistics-chat",
+    "href": "materials/slides_4b.html#statistics-chat",
+    "title": "Intro to Data Science",
+    "section": "Statistics Chat",
+    "text": "Statistics Chat"
+  },
+  {
+    "objectID": "materials/slides_4b.html#statistics-scientific-method",
+    "href": "materials/slides_4b.html#statistics-scientific-method",
+    "title": "Intro to Data Science",
+    "section": "Statistics & Scientific Method",
+    "text": "Statistics & Scientific Method"
+  },
+  {
+    "objectID": "materials/slides_4b.html#statistics-justification-example",
+    "href": "materials/slides_4b.html#statistics-justification-example",
+    "title": "Intro to Data Science",
+    "section": "Statistics Justification Example",
+    "text": "Statistics Justification Example"
+  },
+  {
+    "objectID": "materials/slides_4b.html#stats-example-continued",
+    "href": "materials/slides_4b.html#stats-example-continued",
+    "title": "Intro to Data Science",
+    "section": "Stats Example Continued",
+    "text": "Stats Example Continued"
+  },
+  {
+    "objectID": "materials/slides_4b.html#statistics-role-in-science",
+    "href": "materials/slides_4b.html#statistics-role-in-science",
+    "title": "Intro to Data Science",
+    "section": "Statistics’ Role in Science",
+    "text": "Statistics’ Role in Science"
+  },
+  {
+    "objectID": "materials/slides_4b.html#data-science-statistics",
+    "href": "materials/slides_4b.html#data-science-statistics",
+    "title": "Intro to Data Science",
+    "section": "Data Science & Statistics",
+    "text": "Data Science & Statistics"
   },
   {
     "objectID": "materials/slides_4b.html#temperature-check",
@@ -1974,11 +2156,137 @@
     "text": "Temperature Check\nHow are you Feeling?"
   },
   {
+    "objectID": "materials/slides_4b.html#hypothesis-testing-philosophies",
+    "href": "materials/slides_4b.html#hypothesis-testing-philosophies",
+    "title": "Intro to Data Science",
+    "section": "Hypothesis Testing Philosophies",
+    "text": "Hypothesis Testing Philosophies"
+  },
+  {
+    "objectID": "materials/slides_4b.html#philosophies-continued",
+    "href": "materials/slides_4b.html#philosophies-continued",
+    "title": "Intro to Data Science",
+    "section": "Philosophies Continued",
+    "text": "Philosophies Continued"
+  },
+  {
+    "objectID": "materials/slides_4b.html#null-hypothesis-p-values",
+    "href": "materials/slides_4b.html#null-hypothesis-p-values",
+    "title": "Intro to Data Science",
+    "section": "Null Hypothesis: P Values",
+    "text": "Null Hypothesis: P Values"
+  },
+  {
+    "objectID": "materials/slides_4b.html#hypothesis-testing-chat",
+    "href": "materials/slides_4b.html#hypothesis-testing-chat",
+    "title": "Intro to Data Science",
+    "section": "Hypothesis Testing Chat",
+    "text": "Hypothesis Testing Chat"
+  },
+  {
+    "objectID": "materials/slides_4b.html#temperature-check-1",
+    "href": "materials/slides_4b.html#temperature-check-1",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
+    "objectID": "materials/slides_4b.html#variable-types",
+    "href": "materials/slides_4b.html#variable-types",
+    "title": "Intro to Data Science",
+    "section": "Variable Types",
+    "text": "Variable Types"
+  },
+  {
+    "objectID": "materials/slides_4b.html#variable-types-visual",
+    "href": "materials/slides_4b.html#variable-types-visual",
+    "title": "Intro to Data Science",
+    "section": "Variable Types Visual",
+    "text": "Variable Types Visual"
+  },
+  {
+    "objectID": "materials/slides_4b.html#variables-hypothesis-testing",
+    "href": "materials/slides_4b.html#variables-hypothesis-testing",
+    "title": "Intro to Data Science",
+    "section": "Variables & Hypothesis Testing",
+    "text": "Variables & Hypothesis Testing"
+  },
+  {
+    "objectID": "materials/slides_4b.html#statistics-roadmap",
+    "href": "materials/slides_4b.html#statistics-roadmap",
+    "title": "Intro to Data Science",
+    "section": "Statistics Roadmap",
+    "text": "Statistics Roadmap"
+  },
+  {
+    "objectID": "materials/slides_4b.html#regression",
+    "href": "materials/slides_4b.html#regression",
+    "title": "Intro to Data Science",
+    "section": "Regression",
+    "text": "Regression"
+  },
+  {
+    "objectID": "materials/slides_4b.html#r-stats-syntax",
+    "href": "materials/slides_4b.html#r-stats-syntax",
+    "title": "Intro to Data Science",
+    "section": "R Stats Syntax",
+    "text": "R Stats Syntax"
+  },
+  {
+    "objectID": "materials/slides_4b.html#practice-regression",
+    "href": "materials/slides_4b.html#practice-regression",
+    "title": "Intro to Data Science",
+    "section": "Practice: Regression",
+    "text": "Practice: Regression"
+  },
+  {
+    "objectID": "materials/slides_4b.html#more-practice-regression",
+    "href": "materials/slides_4b.html#more-practice-regression",
+    "title": "Intro to Data Science",
+    "section": "More Practice: Regression",
+    "text": "More Practice: Regression"
+  },
+  {
+    "objectID": "materials/slides_4b.html#interpreting-summary-tables",
+    "href": "materials/slides_4b.html#interpreting-summary-tables",
+    "title": "Intro to Data Science",
+    "section": "Interpreting Summary Tables",
+    "text": "Interpreting Summary Tables"
+  },
+  {
+    "objectID": "materials/slides_4b.html#analysis-of-variance-anova",
+    "href": "materials/slides_4b.html#analysis-of-variance-anova",
+    "title": "Intro to Data Science",
+    "section": "Analysis of Variance (ANOVA)",
+    "text": "Analysis of Variance (ANOVA)"
+  },
+  {
+    "objectID": "materials/slides_4b.html#practice-anova",
+    "href": "materials/slides_4b.html#practice-anova",
+    "title": "Intro to Data Science",
+    "section": "Practice: ANOVA",
+    "text": "Practice: ANOVA"
+  },
+  {
+    "objectID": "materials/slides_4b.html#chi-squared-test",
+    "href": "materials/slides_4b.html#chi-squared-test",
+    "title": "Intro to Data Science",
+    "section": "Chi Squared Test",
+    "text": "Chi Squared Test"
+  },
+  {
+    "objectID": "materials/slides_4b.html#temperature-check-2",
+    "href": "materials/slides_4b.html#temperature-check-2",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
     "objectID": "materials/slides_4b.html#upcoming-due-dates",
     "href": "materials/slides_4b.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nx\n\n\nDue before lab\n(By midnight)\n\nX\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #4\nRead Model selection in ecology and evolution\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #5\nDraft 1 of Function Tutorials\n\nDouble check rubric to see that you’re not leaving any points on the table!\n\n\n\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/home_week1.html",
