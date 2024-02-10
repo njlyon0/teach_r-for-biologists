@@ -57,23 +57,125 @@ After today's session you will be able to:
 
 - What other topic(s) would you like to review?
 
-## [Statistics Chat]{.gold}
+## [Statistics Chat]{.gold} {.smaller}
 
+- What previous experience do you have with statistics?
+    - <u>Do not worry</u> if the answer is "none"!
+    - I just want to get a sense for where you're at
 
-## [Statistics & Scientific Method]{.orange}
+\
 
+. . .
 
-## [Statistics Justification Example]{.orange}
+- What terms come to mind when you think about stats?
 
+\
 
-## [Stats Example Continued]{.orange}
+. . .
 
+- Have you heard of (or read about) any specific tests?
+    - If so, what were they?
 
-## [Statistics' Role in Science]{.orange}
+## [Statistics & Scientific Method]{.orange} {.smaller}
 
+- Scientific Method:
+    1. Ask a question
+    2. Make a hypothesis (educated guess for answer to question)
+    3. Test hypothesis with experiment
+    4. Analyze data to test hypothesis
+    5. Report results
 
-## [Data Science & Statistics]{.orange}
+\
 
+. . .
+
+- "Statistics" is what we do with our data to test our hypotheses!
+    - I.e., whether we find support for our hypothesis or not
+
+## [Statistics Justification Example]{.orange} {.smaller}
+
+- Hypothesis: adding Nitrogen (N) to soil will make sunflowers grow taller
+
+\
+
+. . .
+
+- Test: Grow many sunflowers either <u>with</u> or <u>without</u> adding a set amount of N to the soil
+
+\
+
+. . .
+
+- Data: After set number of days, measure height of all sunflowers
+
+. . .
+
+![](images/sunflower-hypothesis.png){.absolute top=450 left=750 width="40%"}
+
+## [Stats Example Continued]{.orange} {.smaller}
+
+- How do we decide whether adding N to the soil resulted in taller sunflowers?
+    - What difference in height would be "enough" to say whether we were right?
+
+\
+
+. . .
+
+- What if _some_ of the +N sunflowers are _shorter_ than some of the regular sunflowers?
+    - Does this mean our hypothesis isn't supported?
+
+\
+
+. . .
+
+- We need to use a statistical test to evaluate our hypothesis! 
+
+## [Statistics' Role in Science]{.orange} {.smaller}
+
+- Statistical tests let us know whether or not our hypothesis is supported
+    - These tests include some assumptions but they are well-documented
+
+\
+
+. . . 
+
+- Scientists assess the appropriateness of the statistics in _the same way they do_ for experimental design
+
+\
+
+. . .
+
+- A perfect experiment with inappropriate statistics is <u>not good science</u>
+
+## [Data Science & Statistics]{.orange} {.smaller}
+
+- Today is <u>**_not_**</u> a deep dive into the math behind statistics!
+    - There are whole classes devoted to that
+
+\
+
+. . . 
+
+- Professional data scientists have to look at data and pick an appropriate test
+
+\
+
+. . .
+
+- In this class we’ll:
+    - 1. Look at some typical test types
+    - 2. Cover what data types are the best fit for each test
+
+## [Data Science & Statistics Analogy]{.orange}
+
+- Statisticians are like artists
+- Data scientists are like art historians
+
+\
+
+. . .
+
+- Data scientists recognize art and can talk about it but we _may or may not_ be artists ourselves!
 
 ## [Temperature Check]{.purple}
 
