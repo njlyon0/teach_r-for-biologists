@@ -185,17 +185,164 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-## [Hypothesis Testing Philosophies]{.orange}
+## [Hypothesis Testing Philosophies]{.orange} {.smaller}
 
+::::{.columns}
+:::{.column width="50%"}
+#### Null Hypothesis Testing
 
-## [Philosophies Continued]{.orange}
+1. Make hypothesis & "null hypothesis"
+    - H~A~: Something is happening
+    - H~0~: Nothing is happening
 
+2. Assess odds of obtaining results as extreme as observations _assuming H~0~ is correct_
 
-## [Null Hypothesis: P Values]{.orange}
+\
 
+- Measured by [P value]{.purple}
+    - Ranges from 0 (0%) to 1 (100%)
+
+:::
+:::{.column width="50%"}
+#### Multi-Model Inference
+
+:::
+::::
+
+## [Hypothesis Testing Philosophies]{.orange} {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+#### Null Hypothesis Testing
+
+1. Make hypothesis & "null hypothesis"
+    - H~A~: Something is happening
+    - H~0~: Nothing is happening
+
+2. Assess odds of obtaining results as extreme as observations _assuming H~0~ is correct_
+
+\
+
+- Measured by [P value]{.purple}
+    - Ranges from 0 (0%) to 1 (100%)
+
+:::
+:::{.column width="50%"}
+#### Multi-Model Inference
+
+1. Define many possible explanations for observation
+    - I.e., many competing hypotheses
+
+2. Compare model strength
+    - Stronger models are better fit for the data and thus are more likely to be true
+
+\
+
+- More on this in [Lecture \#5]{.blue}!
+
+:::
+::::
+
+## [Philosophies Continued]{.orange} {.smaller}
+
+- Null hypothesis testing & multi-model inference are <u>both</u> good science!
+    - Just different framings of a hypothesis
+
+::::{.columns}
+:::{.column width="50%"}
+
+- Does temperature have _more of an effect_ than rainfall on newt growth?
+
+:::
+:::{.column width="50%"}
+
+- Higher temperatures and more rainfall affect newt growth
+
+:::
+::::
+
+## [Philosophies Continued]{.orange} {.smaller}
+
+- Null hypothesis testing & multi-model inference are <u>both</u> good science!
+    - Just different framings of a hypothesis
+
+::::{.columns}
+:::{.column width="50%"}
+
+- Does temperature have _more of an effect_ than rainfall on newt growth?
+
+\
+
+- Multi-model inference
+    - Want to know which variable explains the data better
+
+:::
+:::{.column width="50%"}
+
+- Higher temperatures and more rainfall affect newt growth
+
+:::
+::::
+
+## [Philosophies Continued]{.orange} {.smaller}
+
+- Null hypothesis testing & multi-model inference are <u>both</u> good science!
+    - Just different framings of a hypothesis
+
+::::{.columns}
+:::{.column width="50%"}
+
+- Does temperature have _more of an effect_ than rainfall on newt growth?
+
+\
+
+- Multi-model inference
+    - Want to know which variable explains the data better
+
+:::
+:::{.column width="50%"}
+
+- Higher temperatures and more rainfall affect newt growth
+
+\
+
+- Null hypothesis testing
+    - Want to know whether higher values result in effect on newts relative to lower values
+
+:::
+::::
+
+## [Null Hypothesis: P Values]{.orange} {.smaller}
+
+- P values < 0.05 are called "significant"
+    - Significant P values mean you 'reject the null hypothesis'
+    - I.e., you find support for your hypothesis!
+
+\
+
+. . .
+
+- 0.05 < p < 0.1 is 'marginally significant'
+    - A.k.a. weak evidence of support for hypothesis
+
+\
+
+. . .
+
+- In science writing, "significant" **_always_** means P < 0.05
+    - Use synonyms for non-P value contexts
+    - E.g., dramatic, substantial, important, etc.
 
 ## [Hypothesis Testing Chat]{.gold}
 
+- What questions do you have about this?
+
+\
+
+. . .
+
+- Ready to continue?
+    - I promise that is the end of the "stats theory" portion!
 
 ## [Temperature Check]{.purple}
 
