@@ -428,47 +428,341 @@ Lecture 4 – Joining Data
 </ul>
 </div>
 </section>
-<section id="join-background" class="slide level2">
+<section id="join-background" class="slide level2 smaller">
 <h2><span class="orange">Join Background</span></h2>
+<ul>
+<li>To test a hypothesis we often need to collect multiple types of data
+<ul>
+<li>But, virtually all statistical tools require <em>one</em> data object</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Somehow you need to combine data from multiple sources
+<ul>
+<li>Usually based on the contents of a shared column in <em>both</em> sources</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Conditional matching like this is called “joining” data</li>
+</ul>
+</div>
 </section>
-<section id="join-types" class="slide level2">
+<section id="join-example" class="slide level2 smaller">
+<h2><span class="orange">Join Example</span></h2>
+<ul>
+<li>You want to test how frogs are affected by rainfall</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>You collect the following data:
+<ol type="1">
+<li>number of frogs at ponds</li>
+<li>daily rainfall at those ponds</li>
+</ol></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Need to <span class="purple">join</span> the frog abundance and rain amount data matched <em>by their pond</em></li>
+</ul>
+</section>
+<section id="join-types" class="slide level2 smaller">
 <h2><span class="orange">Join Types</span></h2>
+<ul>
+<li>Four major flavors of join:
+<ul>
+<li>Left / Right Join</li>
+<li>Inner Join</li>
+<li>Outer Join (sometimes also known as “full” or “full outer”)</li>
+<li>Anti Join</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Let’s look at some example syntax</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Join frog and rain data by pond ID</span></span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>type<span class="sc">&gt;</span><span class="fu">_join</span>(<span class="at">x =</span> frog_df, <span class="at">y =</span> rain_df,</span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"pond_name"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="leftright-joins" class="slide level2">
-<h2><span class="orange">Left/Right Joins</span></h2>
+<section id="left-joins" class="slide level2">
+<h2><span class="orange">Left Joins</span></h2>
+<ul>
+<li>Left joins keep <em>all</em> rows/columns found in “left” dataframe
+<ul>
+<li>Add on columns from “right” dataframe <em>if they have matching rows</em> in “left”</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p><img src="images/graphic-join-left.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns and 'A' and 'B' rows" width="95%"></p>
+</div>
 </section>
-<section id="leftright-join-visual" class="slide level2">
-<h2><span class="orange">Left/Right Join Visual</span></h2>
+<section id="right-joins" class="slide level2">
+<h2><span class="orange">Right Joins</span></h2>
+<ul>
+<li>Right joins keep <em>all</em> rows/columns found in “right” dataframe
+<ul>
+<li>Add on columns from “left” dataframe <em>if they have matching rows</em> in “right”</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p><img src="images/graphic-join-right.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns and 'A' and 'C' rows" width="95%"></p>
+</div>
+</section>
+<section id="join-example-data" class="slide level2 smaller">
+<h2><span class="gold">Join Example Data</span></h2>
+<ul>
+<li>Before we practice our joins, let’s review an example dataset I’ve created for this purpose</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>We are studying the effect of human impacts on lichens that grow on trees</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>We collected two sets of data to test this hypothesis:
+<ol type="1">
+<li>The distance to the nearest road for 26 trees (“Tree_A” through “Tree_Z”)</li>
+<li>The percent cover of the three major lichen types on 10 of those trees</li>
+</ol></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Any questions on this study or these example datasets?</li>
+</ul>
+</div>
 </section>
 <section id="practice-left-joins" class="slide level2">
 <h2><span class="pink">Practice: Left Joins</span></h2>
 <p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Download the “tree_lichen.csv” and “tree_road.csv” from the course page
+<ul>
+<li>Load them into R and check their structure</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Use a <span class="purple"><u>left</u> join</span> to combine these two dataframes by tree ID
+<ul>
+<li>What is the structure of the resulting dataframe?</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="inner-joins" class="slide level2">
 <h2><span class="orange">Inner Joins</span></h2>
+<ul>
+<li>Inner joins keep columns from both left and right <strong>but</strong> only rows that are <em>found in both</em>
+<ul>
+<li>Useful when you only want to keep rows with complete data</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p><img src="images/graphic-join-inner.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns and only an 'A' row" width="95%"></p>
+</div>
 </section>
 <section id="outer-joins" class="slide level2">
 <h2><span class="orange">Outer Joins</span></h2>
+<ul>
+<li>Outer joins keep columns from both left and right <strong>and</strong> <em>all rows</em></li>
+</ul>
+<div class="fragment">
+<p><img src="images/graphic-join-outer.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns and 'A', 'B', and 'C' rows" width="95%"></p>
+</div>
+</section>
+<section id="revisiting-lichen-data" class="slide level2">
+<h2><span class="gold">Revisiting Lichen Data</span></h2>
+<ul>
+<li>You decide to revisit your lichen / tree study</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Now you want to keep the tree road distances <em>whether or not</em> you have lichen cover</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>What kind of join should you use? Why?</li>
+</ul>
+</div>
 </section>
 <section id="practice-innerouter-joins" class="slide level2">
-<h2><span class="orange">Practice: Inner/Outer Joins</span></h2>
+<h2><span class="pink">Practice: Inner/Outer Joins</span></h2>
 <p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Use a <span class="purple">full join</span> to combine the original lichen and road distance objects</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What is the structure of the resulting dataframe?</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>How does this differ from the result of your <strong>left</strong> join earlier?</li>
+</ul>
+</div>
 </section>
 <section id="anti-joins" class="slide level2">
 <h2><span class="orange">Anti Joins</span></h2>
+<ul>
+<li>Anti joins keep columns from both left and right <strong>but</strong> only rows that are <em><strong>not</strong></em> found in both</li>
+</ul>
+<div class="fragment">
+<p><img src="images/graphic-join-anti.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns 'B' and 'C' rows" width="95%"></p>
+</div>
 </section>
-<section id="practice-anti-joins" class="slide level2">
-<h2><span class="orange">Practice: Anti Joins</span></h2>
+<section id="re-revisiting-lichen-data" class="slide level2 smaller">
+<h2><span class="gold">Re-revisiting Lichen Data</span></h2>
+<ul>
+<li>You have just been awarded a grant to conduct more lichen research!
+<ul>
+<li>Congratulations!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>You decide to spend your grant on meauring lichen on all of the trees that you <u>did not</u> measure the first time</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>You need to join your old datasets to identify which trees you should measure with your new grant
+<ul>
+<li>What kind of join should you use? Why?</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="practice-anti-joins" class="slide level2 smaller">
+<h2><span class="pink">Practice: Anti Joins</span></h2>
 <p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Use an <span class="purple">anti join</span> to combine the original lichen and road distance objects</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Which dataframe should be on the “left” and which should be “right”?
+<ul>
+<li>Does it matter?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>How many trees do you need to measure lichen on with your new funding?</li>
+</ul>
+</div>
 </section>
-<section id="join-trivia---question-1" class="slide level2">
+<section id="join-trivia---question-1" class="slide level2 smaller">
 <h2><span class="gold">Join Trivia - Question 1</span></h2>
+<ul>
+<li>I have a table of <span class="orange">scorpion abundance</span> and another of <span class="orange">desert temperatures</span></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>I want to keep only scorpion values that <em>also</em> have temperature
+<ul>
+<li>Which type of join should I use?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Inner join!
+<ul>
+<li>Keeps only rows found in both dataframes</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="join-trivia---question-2" class="slide level2">
+<section id="join-trivia---question-2" class="slide level2 smaller">
 <h2><span class="gold">Join Trivia - Question 2</span></h2>
+<ul>
+<li>I have a table of <span class="orange">bird species</span> and another of <span class="orange">grass species</span> at various plots</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>I want to include all birds and grasses <em>regardless</em> of whether both are in each plot
+<ul>
+<li>Which type of join should I use?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Full join!
+<ul>
+<li>Keeps <strong>all</strong> rows found in either dataframe</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="join-trivia---question-3" class="slide level2">
+<section id="join-trivia---question-3" class="slide level2 smaller">
 <h2><span class="gold">Join Trivia - Question 3</span></h2>
+<ul>
+<li>I have a table of <span class="orange">patient response to medication</span> and another of <span class="orange">patients who indicated they don’t want their data used</span></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>I want to <em>remove</em> medication response information for all patients who didn’t give consent to use their data
+<ul>
+<li>Which type of join should I use?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Anti join!
+<ul>
+<li>Keeps only rows <strong>not</strong> found in both data tables</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="temperature-check" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
@@ -532,11 +826,11 @@ Lecture 4 – Joining Data
 <ul>
 <li>Let’s look at an example to clarify that</li>
 </ul>
-<div class="sourceCode" id="cb1" data-code-line-numbers="|2|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Make a vector of faux students</span></span>
-<span id="cb1-2"><a></a>students <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"albatross"</span>, <span class="st">"cactus"</span>, <span class="st">"wave"</span>)</span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a><span class="co"># Randomize a vector</span></span>
-<span id="cb1-5"><a></a><span class="fu">sample</span>(<span class="at">x =</span> students, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" data-code-line-numbers="|2|5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Make a vector of faux students</span></span>
+<span id="cb2-2"><a></a>students <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"albatross"</span>, <span class="st">"cactus"</span>, <span class="st">"wave"</span>)</span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a><span class="co"># Randomize a vector</span></span>
+<span id="cb2-5"><a></a><span class="fu">sample</span>(<span class="at">x =</span> students, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">replace =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="function-tutorial-pick-functions" class="slide level2 smaller">
 <h2><span class="gold">Function Tutorial: Pick Functions</span></h2>
