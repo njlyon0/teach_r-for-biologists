@@ -16,6 +16,17 @@ format:
 
 ## A Guide to Your Process
 
+```{r libraries}
+#| echo: false
+#| message: false
+#| error: false
+
+# Load needed libraries
+## install.packages("librarian")
+librarian::shelf(palmerpenguins, supportR, ggplot2)
+```
+
+
 ### [Scheduling]{.blue}
 
 ### [Learning Objectives]{.purple}
@@ -352,79 +363,355 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-## [Variable Types]{.orange}
+## [Variable Types]{.orange} {.smaller}
 
+::::{.columns}
+:::{.column width="50%"}
+### Continous
 
+- _Must_ be a number!
+
+\
+
+- Okay if coercible to number
+    - I.e., "yes" vs. "no" becomes 0 vs. 1
+
+\
+
+- Examples
+    - Sunflower height
+    - Flower nectar concentration
+    - Feather density
+
+:::
+:::{.column width="50%"}
+### Categorical
+
+:::
+::::
+
+## [Variable Types]{.orange} {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+### Continous
+
+- _Must_ be a number!
+
+\
+
+- Okay if coercible to number
+    - I.e., "yes" vs. "no" becomes 0 vs. 1
+
+\
+
+- Examples
+    - Sunflower height
+    - Flower nectar concentration
+    - Feather density
+
+:::
+:::{.column width="50%"}
+### Categorical
+
+- _Does not_ need to be a number
+    - Can be letters or numbers
+
+\
+\
+\
+\
+
+- Examples
+    - Rainfall of 0 mm, 10 mm, or 20 mm
+    - "Site A", "Site B", etc.
+
+:::
+::::
 
 ## [Variable Types Visual]{.orange}
 
 <p align="center">
-<img src="comics/discrete-vs-continuous.png" alt="" width="70%">
+<img src="comics/discrete-vs-continuous.png" alt="Bird cartoon beneath text reading 'continuous' saying 'I am 3.1 meters tall and I weigh 34.16 grams' next to an octopus beneath text reading 'discrete' saying 'I have 8 legs and 4 spots'" width="70%">
 </p>
 
-## [Variables & Hypothesis Testing]{.orange}
+## [Variables & Hypothesis Testing]{.orange} {.smaller}
 
+::::{.columns}
+:::{.column width="50%"}
+#### Response Variables
 
+- Data measured to test hypothesis
 
+\
+
+- Variable <u>responding to</u> treatment/outside force
+    - Can be categorical or continuous
+
+\
+
+- Also known as:
+    - Y variables
+    - Dependent variables (_depend on_ explanatory variable)
+
+:::
+:::{.column width="50%"}
+#### Explanatory Variables
+
+:::
+::::
+
+## [Variables & Hypothesis Testing]{.orange} {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+#### Response Variables
+
+- Data measured to test hypothesis
+
+\
+
+- Variable <u>responding to</u> treatment/outside force
+    - Can be categorical or continuous
+
+\
+
+- Also known as:
+    - Y variables
+    - Dependent variables (_depend on_ explanatory variable)
+
+:::
+:::{.column width="50%"}
+#### Explanatory Variables
+
+- Treatment and/or measurement of world
+
+\
+
+- Variable <u>explaining</u> response
+    - Also can be categorical or continuous
+
+\
+
+- Also known as:
+    - X variables
+    - Independent variables
+
+:::
+::::
 
 ## [Statistics Roadmap]{.orange}
 
+\
+
+:::{.r-stack}
+
+![](images/stats-roadmap-v0.png){.fragment .fade-out}
+
+![](images/stats-roadmap-v1.png){.fragment .fade-in}
+
+:::
+
+## [Regression]{.orange} {.smaller}
+
+- X & Y are _both_ continuous
+
+\
+
+- Hypothesis: The slope of the line between X & Y is <u>not</u> flat
+    - H~0~: The slope of the line _is_ flat
+
+\
+
+- Examples:
+    - Butterfly toxicity (Y) increases with time (X)
+    - Tree diameter (Y) increases with age (X)
+
+## [Regression Visual]{.orange}
+
+```{r regression}
+#| echo: false
+#| message: false
+#| fig-cap: "Scatterplot of penguin bill depth against bill length"
+#| fig-width: 7
+#| panel: center
+
+# Load in penguins dataset
+peng_df <- palmerpenguins::penguins
+
+# Make graph
+ggplot(peng_df, aes(x = bill_depth_mm, y = bill_length_mm, fill = 'x')) +
+  geom_point(shape = 21, size = 2.5, alpha = 0.75) +
+  geom_smooth(method = "lm", formula = "y ~ x", se = F, color = "black") +
+  scale_fill_manual(values = "#fb8500") +
+  labs(x = "Bill Depth (mm)", y = "Bill Length (mm)") +
+  supportR::theme_lyon() +
+  theme(legend.position = "none")
+```
+
+## [R Stats Syntax]{.orange} {.smaller}
+
+- All R statistical test functions use the same syntax
+    - Thankfully!
+
+\
+
+. . .
+
+- Syntax is as follows:
+```{.r}
+# Test effect of otters on sea urchins
+stat_test(urchin_count ~ otter_count, data = kelp_forest_df)
+```
+
+\
+
+. . .
+
+- Some tests require other arguments
+    - But the above example is a template of the fundamental bits
 
 
+## [Regression Syntax]{.orange} {.smaller}
 
-## [Regression]{.orange}
+- The function for regressions is `lm`
+    - Short for "linear model"
 
+\
 
+. . .
 
+- Example syntax:
+```{.r}
+# Run a regression
+my_model <- lm(response ~ explanatory, data = my_df)
+```
 
-
-## [R Stats Syntax]{.orange}
-
-
-
-
-## [Practice: Regression]{.pink}
+## [Practice: Regression]{.pink} {.smaller}
 
 ![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
 
+- You are studying penguins and want to test the following hypotheses:
+    - H~A~: As penguin bill length increases, bill depth decreases
+    - H~0~: Bill length and bill depth have no relationship
 
+\
 
+. . . 
 
-## [More Practice: Regression]{.pink}
+- Use a [regression]{.purple} to test the hypothesis and assign it to an object
+    - What is the class of that object? What is its structure?
+
+\
+
+. . .
+
+- Run the `summary` function on that object to get a human readable summary table
+
+## [Interpreting Summary Tables]{.orange} {.smaller}
+
+- You (maybe): "Okay, cute summary table but is our hypothesis supported or not?"
+
+\
+\
+\
+
+<p align="center">
+<img src="images/regression-table.png" alt="" width="55%">
+</p>
+
+## [Interpreting Summary Tables]{.orange} {.smaller}
+
+- You (maybe): "Okay, cute summary table but is our hypothesis supported or not?"
+
+\
+
+<p align="center">
+<img src="images/regression-table-annotated.png" alt="" width="100%">
+</p>
+
+## [<u>An</u>alysis <u>o</u>f <u>Va</u>riance (ANOVA)]{.orange} {.smaller}
+
+- X is categorical _but_ Y is continuous
+
+\
+
+- Hypothesis: Groups of X have different average Y values
+    - H~0~: All groups of X have the _same_ average Y values
+
+\
+
+- ANOVA function is `aov`
+
+\
+
+- Examples:
+    - Different countries (X) have different numbers of rabbits (Y)
+    - Grazing on pastures (X) reduces plant height (Y)
+
+## [ANOVA Visual]{.orange}
+
+```{r aov}
+#| echo: false
+#| message: false
+#| fig-cap: "Bar plot of penguin flipper length against penguin species. Error bars are standard deviation"
+#| fig-width: 7
+#| panel: center
+
+# Caculate average values within groups
+peng_avgdf <- supportR::summary_table(data = penguins, groups = "species",
+                                      response = "flipper_length_mm")
+
+# Make graph
+ggplot(peng_avgdf, aes(x = species, y = mean, fill = species)) +
+  geom_bar(stat = 'identity', color = 'black') +
+  geom_errorbar(aes(ymin = mean - std_dev, ymax = mean + std_dev),
+                width = 0.1) +
+  scale_fill_manual(values = c("#8ecae6", "#219ebc", "#023047")) +
+  labs(x = "Penguin Species", y = "Average Flipper Length (mm)") +
+  supportR::theme_lyon() +
+  theme(legend.position = "none")
+```
+
+## [Practice: ANOVA]{.pink} {.smaller}
 
 ![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
 
+- You are still studying penguins but have new hypotheses:
+    - H~A~: Penguin species have _different_ flipper lengths
+    - H~0~: Penguin species _do not_ have different flipper lengths
 
+\
 
+. . . 
 
+- Use an [ANOVA]{.purple} to test the hypothesis and assign it to an object
+    - What is the class of that object? What is its structure?
 
+\
 
+. . .
 
-## [Interpreting Summary Tables]{.orange}
+- Use the `summary` function to see if your hypothesis was supported
+    - What difference(s) do you see between this and the regression summary table?
 
+## [Chi Squared Test]{.orange} {.smaller}
 
+- X & Y _both_ categorical
 
+\
 
+- Hypothesis: Categories of X affect categories of Y
+    - H~0~: Categories of X are not related to categories of Y
 
-## [<u>An</u>alysis <u>o</u>f <u>Va</u>riance (ANOVA)]{.orange}
+\
 
+- Used in medical contexts and Hardy Weinberg Equillibrium
+    - You may have encountered this in BIO 102
 
+. . . 
 
-
-## [Practice: ANOVA]{.pink}
-
-![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
-
-
-
-
-
-## [Chi Squared Test]{.orange}
-
-
-
-
-
+![](images/chi-square-table.png){.absolute top=450 left=550 width="60%"}
 
 ## [Temperature Check]{.purple}
 
@@ -433,8 +720,6 @@ After today's session you will be able to:
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
-
-
 
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
