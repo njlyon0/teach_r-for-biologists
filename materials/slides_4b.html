@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -383,23 +448,172 @@ Lab 4 – Statistics
 </ul>
 </div>
 </section>
-<section id="statistics-chat" class="slide level2">
+<section id="statistics-chat" class="slide level2 smaller">
 <h2><span class="gold">Statistics Chat</span></h2>
+<ul>
+<li>What previous experience do you have with statistics?
+<ul>
+<li><u>Do not worry</u> if the answer is “none”!</li>
+<li>I just want to get a sense for where you’re at</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>What terms come to mind when you think about stats?</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Have you heard of (or read about) any specific tests?
+<ul>
+<li>If so, what were they?</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="statistics-scientific-method" class="slide level2">
+<section id="statistics-scientific-method" class="slide level2 smaller">
 <h2><span class="orange">Statistics &amp; Scientific Method</span></h2>
+<ul>
+<li>Scientific Method:
+<ol type="1">
+<li>Ask a question</li>
+<li>Make a hypothesis (educated guess for answer to question)</li>
+<li>Test hypothesis with experiment</li>
+<li>Analyze data to test hypothesis</li>
+<li>Report results</li>
+</ol></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>“Statistics” is what we do with our data to test our hypotheses!
+<ul>
+<li>I.e., whether we find support for our hypothesis or not</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="statistics-justification-example" class="slide level2">
+<section id="statistics-justification-example" class="slide level2 smaller">
 <h2><span class="orange">Statistics Justification Example</span></h2>
+<ul>
+<li>Hypothesis: adding Nitrogen (N) to soil will make sunflowers grow taller</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Test: Grow many sunflowers either <u>with</u> or <u>without</u> adding a set amount of N to the soil</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Data: After set number of days, measure height of all sunflowers</li>
+</ul>
+</div>
+<div class="fragment">
+<p><img data-src="images/sunflower-hypothesis.png" class="absolute" style="top: 450px; left: 750px; width: 40%; "></p>
+</div>
 </section>
-<section id="stats-example-continued" class="slide level2">
+<section id="stats-example-continued" class="slide level2 smaller">
 <h2><span class="orange">Stats Example Continued</span></h2>
+<ul>
+<li>How do we decide whether adding N to the soil resulted in taller sunflowers?
+<ul>
+<li>What difference in height would be “enough” to say whether we were right?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>What if <em>some</em> of the +N sunflowers are <em>shorter</em> than some of the regular sunflowers?
+<ul>
+<li>Does this mean our hypothesis isn’t supported?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>We need to use a statistical test to evaluate our hypothesis!</li>
+</ul>
+</div>
 </section>
-<section id="statistics-role-in-science" class="slide level2">
+<section id="statistics-role-in-science" class="slide level2 smaller">
 <h2><span class="orange">Statistics’ Role in Science</span></h2>
+<ul>
+<li>Statistical tests let us know whether or not our hypothesis is supported
+<ul>
+<li>These tests include some assumptions but they are well-documented</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Scientists assess the appropriateness of the statistics in <em>the same way they do</em> for experimental design</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>A perfect experiment with inappropriate statistics is <u>not good science</u></li>
+</ul>
+</div>
 </section>
-<section id="data-science-statistics" class="slide level2">
+<section id="data-science-statistics" class="slide level2 smaller">
 <h2><span class="orange">Data Science &amp; Statistics</span></h2>
+<ul>
+<li>Today is <u><strong><em>not</em></strong></u> a deep dive into the math behind statistics!
+<ul>
+<li>There are whole classes devoted to that</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Professional data scientists have to look at data and pick an appropriate test</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>In this class we’ll:
+<ul>
+<li><ol type="1">
+<li>Look at some typical test types</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Cover what data types are the best fit for each test</li>
+</ol></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="data-science-statistics-analogy" class="slide level2">
+<h2><span class="orange">Data Science &amp; Statistics Analogy</span></h2>
+<ul>
+<li>Statisticians are like artists</li>
+<li>Data scientists are like art historians</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Data scientists recognize art and can talk about it but we <em>may or may not</em> be artists ourselves!</li>
+</ul>
+</div>
 </section>
 <section id="temperature-check" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
@@ -408,17 +622,203 @@ Lab 4 – Statistics
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 </section>
-<section id="hypothesis-testing-philosophies" class="slide level2">
+<section id="hypothesis-testing-philosophies" class="slide level2 smaller">
 <h2><span class="orange">Hypothesis Testing Philosophies</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="null-hypothesis-testing">Null Hypothesis Testing</h4>
+<ol type="1">
+<li>Make hypothesis &amp; “null hypothesis”
+<ul>
+<li>H<sub>A</sub>: Something is happening</li>
+<li>H<sub>0</sub>: Nothing is happening</li>
+</ul></li>
+<li>Assess odds of obtaining results as extreme as observations <em>assuming H<sub>0</sub> is correct</em></li>
+</ol>
+<p><br>
+</p>
+<ul>
+<li>Measured by <span class="purple">P value</span>
+<ul>
+<li>Ranges from 0 (0%) to 1 (100%)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="multi-model-inference">Multi-Model Inference</h4>
+</div>
+</div>
 </section>
-<section id="philosophies-continued" class="slide level2">
+<section id="hypothesis-testing-philosophies-1" class="slide level2 smaller">
+<h2><span class="orange">Hypothesis Testing Philosophies</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="null-hypothesis-testing-1">Null Hypothesis Testing</h4>
+<ol type="1">
+<li>Make hypothesis &amp; “null hypothesis”
+<ul>
+<li>H<sub>A</sub>: Something is happening</li>
+<li>H<sub>0</sub>: Nothing is happening</li>
+</ul></li>
+<li>Assess odds of obtaining results as extreme as observations <em>assuming H<sub>0</sub> is correct</em></li>
+</ol>
+<p><br>
+</p>
+<ul>
+<li>Measured by <span class="purple">P value</span>
+<ul>
+<li>Ranges from 0 (0%) to 1 (100%)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="multi-model-inference-1">Multi-Model Inference</h4>
+<ol type="1">
+<li>Define many possible explanations for observation
+<ul>
+<li>I.e., many competing hypotheses</li>
+</ul></li>
+<li>Compare model strength
+<ul>
+<li>Stronger models are better fit for the data and thus are more likely to be true</li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+<ul>
+<li>More on this in <span class="blue">Lecture #5</span>!</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="philosophies-continued" class="slide level2 smaller">
 <h2><span class="orange">Philosophies Continued</span></h2>
+<ul>
+<li>Null hypothesis testing &amp; multi-model inference are <u>both</u> good science!
+<ul>
+<li>Just different framings of a hypothesis</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Does temperature have <em>more of an effect</em> than rainfall on newt growth?</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Higher temperatures and more rainfall affect newt growth</li>
+</ul>
+</div>
+</div>
 </section>
-<section id="null-hypothesis-p-values" class="slide level2">
+<section id="philosophies-continued-1" class="slide level2 smaller">
+<h2><span class="orange">Philosophies Continued</span></h2>
+<ul>
+<li>Null hypothesis testing &amp; multi-model inference are <u>both</u> good science!
+<ul>
+<li>Just different framings of a hypothesis</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Does temperature have <em>more of an effect</em> than rainfall on newt growth?</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Multi-model inference
+<ul>
+<li>Want to know which variable explains the data better</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Higher temperatures and more rainfall affect newt growth</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="philosophies-continued-2" class="slide level2 smaller">
+<h2><span class="orange">Philosophies Continued</span></h2>
+<ul>
+<li>Null hypothesis testing &amp; multi-model inference are <u>both</u> good science!
+<ul>
+<li>Just different framings of a hypothesis</li>
+</ul></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Does temperature have <em>more of an effect</em> than rainfall on newt growth?</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Multi-model inference
+<ul>
+<li>Want to know which variable explains the data better</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Higher temperatures and more rainfall affect newt growth</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Null hypothesis testing
+<ul>
+<li>Want to know whether higher values result in effect on newts relative to lower values</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="null-hypothesis-p-values" class="slide level2 smaller">
 <h2><span class="orange">Null Hypothesis: P Values</span></h2>
+<ul>
+<li>P values &lt; 0.05 are called “significant”
+<ul>
+<li>Significant P values mean you ‘reject the null hypothesis’</li>
+<li>I.e., you find support for your hypothesis!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>0.05 &lt; p &lt; 0.1 is ‘marginally significant’
+<ul>
+<li>A.k.a. weak evidence of support for hypothesis</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>In science writing, “significant” <strong><em>always</em></strong> means P &lt; 0.05
+<ul>
+<li>Use synonyms for non-P value contexts</li>
+<li>E.g., dramatic, substantial, important, etc.</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="hypothesis-testing-chat" class="slide level2">
 <h2><span class="gold">Hypothesis Testing Chat</span></h2>
+<ul>
+<li>What questions do you have about this?</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Ready to continue?
+<ul>
+<li>I promise that is the end of the “stats theory” portion!</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="temperature-check-1" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
@@ -427,47 +827,411 @@ Lab 4 – Statistics
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 </section>
-<section id="variable-types" class="slide level2">
+<section id="variable-types" class="slide level2 smaller">
 <h2><span class="orange">Variable Types</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="continous">Continous</h3>
+<ul>
+<li><em>Must</em> be a number!</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Okay if coercible to number
+<ul>
+<li>I.e., “yes” vs.&nbsp;“no” becomes 0 vs.&nbsp;1</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Examples
+<ul>
+<li>Sunflower height</li>
+<li>Flower nectar concentration</li>
+<li>Feather density</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="categorical">Categorical</h3>
+</div>
+</div>
+</section>
+<section id="variable-types-1" class="slide level2 smaller">
+<h2><span class="orange">Variable Types</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="continous-1">Continous</h3>
+<ul>
+<li><em>Must</em> be a number!</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Okay if coercible to number
+<ul>
+<li>I.e., “yes” vs.&nbsp;“no” becomes 0 vs.&nbsp;1</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Examples
+<ul>
+<li>Sunflower height</li>
+<li>Flower nectar concentration</li>
+<li>Feather density</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="categorical-1">Categorical</h3>
+<ul>
+<li><em>Does not</em> need to be a number
+<ul>
+<li>Can be letters or numbers</li>
+</ul></li>
+</ul>
+<p><br>
+<br>
+<br>
+<br>
+</p>
+<ul>
+<li>Examples
+<ul>
+<li>Rainfall of 0 mm, 10 mm, or 20 mm</li>
+<li>“Site A”, “Site B”, etc.</li>
+</ul></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="variable-types-visual" class="slide level2">
 <h2><span class="orange">Variable Types Visual</span></h2>
 <p align="center">
-<img src="comics/discrete-vs-continuous.png" alt="" width="70%">
+<img src="comics/discrete-vs-continuous.png" alt="Bird cartoon beneath text reading 'continuous' saying 'I am 3.1 meters tall and I weigh 34.16 grams' next to an octopus beneath text reading 'discrete' saying 'I have 8 legs and 4 spots'" width="70%">
 </p>
 </section>
-<section id="variables-hypothesis-testing" class="slide level2">
+<section id="variables-hypothesis-testing" class="slide level2 smaller">
 <h2><span class="orange">Variables &amp; Hypothesis Testing</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="response-variables">Response Variables</h4>
+<ul>
+<li>Data measured to test hypothesis</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Variable <u>responding to</u> treatment/outside force
+<ul>
+<li>Can be categorical or continuous</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Also known as:
+<ul>
+<li>Y variables</li>
+<li>Dependent variables (<em>depend on</em> explanatory variable)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="explanatory-variables">Explanatory Variables</h4>
+</div>
+</div>
+</section>
+<section id="variables-hypothesis-testing-1" class="slide level2 smaller">
+<h2><span class="orange">Variables &amp; Hypothesis Testing</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="response-variables-1">Response Variables</h4>
+<ul>
+<li>Data measured to test hypothesis</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Variable <u>responding to</u> treatment/outside force
+<ul>
+<li>Can be categorical or continuous</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Also known as:
+<ul>
+<li>Y variables</li>
+<li>Dependent variables (<em>depend on</em> explanatory variable)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="explanatory-variables-1">Explanatory Variables</h4>
+<ul>
+<li>Treatment and/or measurement of world</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Variable <u>explaining</u> response
+<ul>
+<li>Also can be categorical or continuous</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Also known as:
+<ul>
+<li>X variables</li>
+<li>Independent variables</li>
+</ul></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="statistics-roadmap" class="slide level2">
 <h2><span class="orange">Statistics Roadmap</span></h2>
+<p><br>
+</p>
+<div class="r-stack">
+<p><img data-src="images/stats-roadmap-v0.png" class="fragment fade-out"></p>
+<p><img data-src="images/stats-roadmap-v1.png" class="fragment fade-in"></p>
+</div>
 </section>
-<section id="regression" class="slide level2">
+<section id="regression" class="slide level2 smaller">
 <h2><span class="orange">Regression</span></h2>
+<ul>
+<li>X &amp; Y are <em>both</em> continuous</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Hypothesis: The slope of the line between X &amp; Y is <u>not</u> flat
+<ul>
+<li>H<sub>0</sub>: The slope of the line <em>is</em> flat</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Examples:
+<ul>
+<li>Butterfly toxicity (Y) increases with time (X)</li>
+<li>Tree diameter (Y) increases with age (X)</li>
+</ul></li>
+</ul>
 </section>
-<section id="r-stats-syntax" class="slide level2">
+<section id="regression-visual" class="slide level2">
+<h2><span class="orange">Regression Visual</span></h2>
+<div class="cell panel-center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_4b_files/figure-revealjs/regression-1.png" width="672"></p>
+<figcaption>Scatterplot of penguin bill depth against bill length</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="r-stats-syntax" class="slide level2 smaller">
 <h2><span class="orange">R Stats Syntax</span></h2>
+<ul>
+<li>All R statistical test functions use the same syntax
+<ul>
+<li>Thankfully!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Syntax is as follows:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Test effect of otters on sea urchins</span></span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">stat_test</span>(urchin_count <span class="sc">~</span> otter_count, <span class="at">data =</span> kelp_forest_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Some tests require other arguments
+<ul>
+<li>But the above example is a template of the fundamental bits</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="practice-regression" class="slide level2">
+<section id="regression-syntax" class="slide level2 smaller">
+<h2><span class="orange">Regression Syntax</span></h2>
+<ul>
+<li>The function for regressions is <code>lm</code>
+<ul>
+<li>Short for “linear model”</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Example syntax:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Run a regression</span></span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a>my_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(response <span class="sc">~</span> explanatory, <span class="at">data =</span> my_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="practice-regression" class="slide level2 smaller">
 <h2><span class="pink">Practice: Regression</span></h2>
 <p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>You are studying penguins and want to test the following hypotheses:
+<ul>
+<li>H<sub>A</sub>: As penguin bill length increases, bill depth decreases</li>
+<li>H<sub>0</sub>: Bill length and bill depth have no relationship</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Use a <span class="purple">regression</span> to test the hypothesis and assign it to an object
+<ul>
+<li>What is the class of that object? What is its structure?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Run the <code>summary</code> function on that object to get a human readable summary table</li>
+</ul>
+</div>
 </section>
-<section id="more-practice-regression" class="slide level2">
-<h2><span class="pink">More Practice: Regression</span></h2>
-<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
-</section>
-<section id="interpreting-summary-tables" class="slide level2">
+<section id="interpreting-summary-tables" class="slide level2 smaller">
 <h2><span class="orange">Interpreting Summary Tables</span></h2>
+<ul>
+<li>You (maybe): “Okay, cute summary table but is our hypothesis supported or not?”</li>
+</ul>
+<p><br>
+<br>
+<br>
+</p>
+<p align="center">
+<img src="images/regression-table.png" alt="" width="55%">
+</p>
 </section>
-<section id="analysis-of-variance-anova" class="slide level2">
+<section id="interpreting-summary-tables-1" class="slide level2 smaller">
+<h2><span class="orange">Interpreting Summary Tables</span></h2>
+<ul>
+<li>You (maybe): “Okay, cute summary table but is our hypothesis supported or not?”</li>
+</ul>
+<p><br>
+</p>
+<p align="center">
+<img src="images/regression-table-annotated.png" alt="" width="100%">
+</p>
+</section>
+<section id="analysis-of-variance-anova" class="slide level2 smaller">
 <h2><span class="orange"><u>An</u>alysis <u>o</u>f <u>Va</u>riance (ANOVA)</span></h2>
+<ul>
+<li>X is categorical <em>but</em> Y is continuous</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Hypothesis: Groups of X have different average Y values
+<ul>
+<li>H<sub>0</sub>: All groups of X have the <em>same</em> average Y values</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>ANOVA function is <code>aov</code></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Examples:
+<ul>
+<li>Different countries (X) have different numbers of rabbits (Y)</li>
+<li>Grazing on pastures (X) reduces plant height (Y)</li>
+</ul></li>
+</ul>
 </section>
-<section id="practice-anova" class="slide level2">
+<section id="anova-visual" class="slide level2">
+<h2><span class="orange">ANOVA Visual</span></h2>
+<div class="cell panel-center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_4b_files/figure-revealjs/aov-1.png" width="672"></p>
+<figcaption>Bar plot of penguin flipper length against penguin species. Error bars are standard deviation</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="practice-anova" class="slide level2 smaller">
 <h2><span class="pink">Practice: ANOVA</span></h2>
 <p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>You are still studying penguins but have new hypotheses:
+<ul>
+<li>H<sub>A</sub>: Penguin species have <em>different</em> flipper lengths</li>
+<li>H<sub>0</sub>: Penguin species <em>do not</em> have different flipper lengths</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Use an <span class="purple">ANOVA</span> to test the hypothesis and assign it to an object
+<ul>
+<li>What is the class of that object? What is its structure?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Use the <code>summary</code> function to see if your hypothesis was supported
+<ul>
+<li>What difference(s) do you see between this and the regression summary table?</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="chi-squared-test" class="slide level2">
+<section id="chi-squared-test" class="slide level2 smaller">
 <h2><span class="orange">Chi Squared Test</span></h2>
+<ul>
+<li>X &amp; Y <em>both</em> categorical</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Hypothesis: Categories of X affect categories of Y
+<ul>
+<li>H<sub>0</sub>: Categories of X are not related to categories of Y</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Used in medical contexts and Hardy Weinberg Equillibrium
+<ul>
+<li>You may have encountered this in BIO 102</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p><img data-src="images/chi-square-table.png" class="absolute" style="top: 450px; left: 550px; width: 60%; "></p>
+</div>
 </section>
 <section id="temperature-check-2" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>

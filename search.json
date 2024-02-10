@@ -1301,42 +1301,49 @@
     "href": "materials/slides_4b.html#statistics-chat",
     "title": "Intro to Data Science",
     "section": "Statistics Chat",
-    "text": "Statistics Chat"
+    "text": "Statistics Chat\n\nWhat previous experience do you have with statistics?\n\nDo not worry if the answer is “none”!\nI just want to get a sense for where you’re at\n\n\n\n\n\n\nWhat terms come to mind when you think about stats?\n\n\n\n\n\n\nHave you heard of (or read about) any specific tests?\n\nIf so, what were they?"
   },
   {
     "objectID": "materials/slides_4b.html#statistics-scientific-method",
     "href": "materials/slides_4b.html#statistics-scientific-method",
     "title": "Intro to Data Science",
     "section": "Statistics & Scientific Method",
-    "text": "Statistics & Scientific Method"
+    "text": "Statistics & Scientific Method\n\nScientific Method:\n\nAsk a question\nMake a hypothesis (educated guess for answer to question)\nTest hypothesis with experiment\nAnalyze data to test hypothesis\nReport results\n\n\n\n\n\n\n“Statistics” is what we do with our data to test our hypotheses!\n\nI.e., whether we find support for our hypothesis or not"
   },
   {
     "objectID": "materials/slides_4b.html#statistics-justification-example",
     "href": "materials/slides_4b.html#statistics-justification-example",
     "title": "Intro to Data Science",
     "section": "Statistics Justification Example",
-    "text": "Statistics Justification Example"
+    "text": "Statistics Justification Example\n\nHypothesis: adding Nitrogen (N) to soil will make sunflowers grow taller\n\n\n\n\n\nTest: Grow many sunflowers either with or without adding a set amount of N to the soil\n\n\n\n\n\n\nData: After set number of days, measure height of all sunflowers"
   },
   {
     "objectID": "materials/slides_4b.html#stats-example-continued",
     "href": "materials/slides_4b.html#stats-example-continued",
     "title": "Intro to Data Science",
     "section": "Stats Example Continued",
-    "text": "Stats Example Continued"
+    "text": "Stats Example Continued\n\nHow do we decide whether adding N to the soil resulted in taller sunflowers?\n\nWhat difference in height would be “enough” to say whether we were right?\n\n\n\n\n\n\nWhat if some of the +N sunflowers are shorter than some of the regular sunflowers?\n\nDoes this mean our hypothesis isn’t supported?\n\n\n\n\n\n\n\nWe need to use a statistical test to evaluate our hypothesis!"
   },
   {
     "objectID": "materials/slides_4b.html#statistics-role-in-science",
     "href": "materials/slides_4b.html#statistics-role-in-science",
     "title": "Intro to Data Science",
     "section": "Statistics’ Role in Science",
-    "text": "Statistics’ Role in Science"
+    "text": "Statistics’ Role in Science\n\nStatistical tests let us know whether or not our hypothesis is supported\n\nThese tests include some assumptions but they are well-documented\n\n\n\n\n\n\nScientists assess the appropriateness of the statistics in the same way they do for experimental design\n\n\n\n\n\n\nA perfect experiment with inappropriate statistics is not good science"
   },
   {
     "objectID": "materials/slides_4b.html#data-science-statistics",
     "href": "materials/slides_4b.html#data-science-statistics",
     "title": "Intro to Data Science",
     "section": "Data Science & Statistics",
-    "text": "Data Science & Statistics"
+    "text": "Data Science & Statistics\n\nToday is not a deep dive into the math behind statistics!\n\nThere are whole classes devoted to that\n\n\n\n\n\n\nProfessional data scientists have to look at data and pick an appropriate test\n\n\n\n\n\n\nIn this class we’ll:\n\n\nLook at some typical test types\n\n\nCover what data types are the best fit for each test"
+  },
+  {
+    "objectID": "materials/slides_4b.html#data-science-statistics-analogy",
+    "href": "materials/slides_4b.html#data-science-statistics-analogy",
+    "title": "Intro to Data Science",
+    "section": "Data Science & Statistics Analogy",
+    "text": "Data Science & Statistics Analogy\n\nStatisticians are like artists\nData scientists are like art historians\n\n\n\n\n\nData scientists recognize art and can talk about it but we may or may not be artists ourselves!"
   },
   {
     "objectID": "materials/slides_4b.html#temperature-check",
@@ -1350,28 +1357,49 @@
     "href": "materials/slides_4b.html#hypothesis-testing-philosophies",
     "title": "Intro to Data Science",
     "section": "Hypothesis Testing Philosophies",
-    "text": "Hypothesis Testing Philosophies"
+    "text": "Hypothesis Testing Philosophies\n\n\nNull Hypothesis Testing\n\nMake hypothesis & “null hypothesis”\n\nHA: Something is happening\nH0: Nothing is happening\n\nAssess odds of obtaining results as extreme as observations assuming H0 is correct\n\n\n\n\nMeasured by P value\n\nRanges from 0 (0%) to 1 (100%)\n\n\n\nMulti-Model Inference"
+  },
+  {
+    "objectID": "materials/slides_4b.html#hypothesis-testing-philosophies-1",
+    "href": "materials/slides_4b.html#hypothesis-testing-philosophies-1",
+    "title": "Intro to Data Science",
+    "section": "Hypothesis Testing Philosophies",
+    "text": "Hypothesis Testing Philosophies\n\n\nNull Hypothesis Testing\n\nMake hypothesis & “null hypothesis”\n\nHA: Something is happening\nH0: Nothing is happening\n\nAssess odds of obtaining results as extreme as observations assuming H0 is correct\n\n\n\n\nMeasured by P value\n\nRanges from 0 (0%) to 1 (100%)\n\n\n\nMulti-Model Inference\n\nDefine many possible explanations for observation\n\nI.e., many competing hypotheses\n\nCompare model strength\n\nStronger models are better fit for the data and thus are more likely to be true\n\n\n\n\n\nMore on this in Lecture #5!"
   },
   {
     "objectID": "materials/slides_4b.html#philosophies-continued",
     "href": "materials/slides_4b.html#philosophies-continued",
     "title": "Intro to Data Science",
     "section": "Philosophies Continued",
-    "text": "Philosophies Continued"
+    "text": "Philosophies Continued\n\nNull hypothesis testing & multi-model inference are both good science!\n\nJust different framings of a hypothesis\n\n\n\n\n\nDoes temperature have more of an effect than rainfall on newt growth?\n\n\n\nHigher temperatures and more rainfall affect newt growth"
+  },
+  {
+    "objectID": "materials/slides_4b.html#philosophies-continued-1",
+    "href": "materials/slides_4b.html#philosophies-continued-1",
+    "title": "Intro to Data Science",
+    "section": "Philosophies Continued",
+    "text": "Philosophies Continued\n\nNull hypothesis testing & multi-model inference are both good science!\n\nJust different framings of a hypothesis\n\n\n\n\n\nDoes temperature have more of an effect than rainfall on newt growth?\n\n\n\n\nMulti-model inference\n\nWant to know which variable explains the data better\n\n\n\n\nHigher temperatures and more rainfall affect newt growth"
+  },
+  {
+    "objectID": "materials/slides_4b.html#philosophies-continued-2",
+    "href": "materials/slides_4b.html#philosophies-continued-2",
+    "title": "Intro to Data Science",
+    "section": "Philosophies Continued",
+    "text": "Philosophies Continued\n\nNull hypothesis testing & multi-model inference are both good science!\n\nJust different framings of a hypothesis\n\n\n\n\n\nDoes temperature have more of an effect than rainfall on newt growth?\n\n\n\n\nMulti-model inference\n\nWant to know which variable explains the data better\n\n\n\n\nHigher temperatures and more rainfall affect newt growth\n\n\n\n\nNull hypothesis testing\n\nWant to know whether higher values result in effect on newts relative to lower values"
   },
   {
     "objectID": "materials/slides_4b.html#null-hypothesis-p-values",
     "href": "materials/slides_4b.html#null-hypothesis-p-values",
     "title": "Intro to Data Science",
     "section": "Null Hypothesis: P Values",
-    "text": "Null Hypothesis: P Values"
+    "text": "Null Hypothesis: P Values\n\nP values &lt; 0.05 are called “significant”\n\nSignificant P values mean you ‘reject the null hypothesis’\nI.e., you find support for your hypothesis!\n\n\n\n\n\n\n0.05 &lt; p &lt; 0.1 is ‘marginally significant’\n\nA.k.a. weak evidence of support for hypothesis\n\n\n\n\n\n\n\nIn science writing, “significant” always means P &lt; 0.05\n\nUse synonyms for non-P value contexts\nE.g., dramatic, substantial, important, etc."
   },
   {
     "objectID": "materials/slides_4b.html#hypothesis-testing-chat",
     "href": "materials/slides_4b.html#hypothesis-testing-chat",
     "title": "Intro to Data Science",
     "section": "Hypothesis Testing Chat",
-    "text": "Hypothesis Testing Chat"
+    "text": "Hypothesis Testing Chat\n\nWhat questions do you have about this?\n\n\n\n\n\nReady to continue?\n\nI promise that is the end of the “stats theory” portion!"
   },
   {
     "objectID": "materials/slides_4b.html#temperature-check-1",
@@ -1385,7 +1413,14 @@
     "href": "materials/slides_4b.html#variable-types",
     "title": "Intro to Data Science",
     "section": "Variable Types",
-    "text": "Variable Types"
+    "text": "Variable Types\n\n\nContinous\n\nMust be a number!\n\n\n\n\nOkay if coercible to number\n\nI.e., “yes” vs. “no” becomes 0 vs. 1\n\n\n\n\n\nExamples\n\nSunflower height\nFlower nectar concentration\nFeather density\n\n\n\nCategorical"
+  },
+  {
+    "objectID": "materials/slides_4b.html#variable-types-1",
+    "href": "materials/slides_4b.html#variable-types-1",
+    "title": "Intro to Data Science",
+    "section": "Variable Types",
+    "text": "Variable Types\n\n\nContinous\n\nMust be a number!\n\n\n\n\nOkay if coercible to number\n\nI.e., “yes” vs. “no” becomes 0 vs. 1\n\n\n\n\n\nExamples\n\nSunflower height\nFlower nectar concentration\nFeather density\n\n\n\nCategorical\n\nDoes not need to be a number\n\nCan be letters or numbers\n\n\n\n\n\n\n\n\nExamples\n\nRainfall of 0 mm, 10 mm, or 20 mm\n“Site A”, “Site B”, etc."
   },
   {
     "objectID": "materials/slides_4b.html#variable-types-visual",
@@ -1399,7 +1434,14 @@
     "href": "materials/slides_4b.html#variables-hypothesis-testing",
     "title": "Intro to Data Science",
     "section": "Variables & Hypothesis Testing",
-    "text": "Variables & Hypothesis Testing"
+    "text": "Variables & Hypothesis Testing\n\n\nResponse Variables\n\nData measured to test hypothesis\n\n\n\n\nVariable responding to treatment/outside force\n\nCan be categorical or continuous\n\n\n\n\n\nAlso known as:\n\nY variables\nDependent variables (depend on explanatory variable)\n\n\n\nExplanatory Variables"
+  },
+  {
+    "objectID": "materials/slides_4b.html#variables-hypothesis-testing-1",
+    "href": "materials/slides_4b.html#variables-hypothesis-testing-1",
+    "title": "Intro to Data Science",
+    "section": "Variables & Hypothesis Testing",
+    "text": "Variables & Hypothesis Testing\n\n\nResponse Variables\n\nData measured to test hypothesis\n\n\n\n\nVariable responding to treatment/outside force\n\nCan be categorical or continuous\n\n\n\n\n\nAlso known as:\n\nY variables\nDependent variables (depend on explanatory variable)\n\n\n\nExplanatory Variables\n\nTreatment and/or measurement of world\n\n\n\n\nVariable explaining response\n\nAlso can be categorical or continuous\n\n\n\n\n\nAlso known as:\n\nX variables\nIndependent variables"
   },
   {
     "objectID": "materials/slides_4b.html#statistics-roadmap",
@@ -1413,56 +1455,77 @@
     "href": "materials/slides_4b.html#regression",
     "title": "Intro to Data Science",
     "section": "Regression",
-    "text": "Regression"
+    "text": "Regression\n\nX & Y are both continuous\n\n\n\n\nHypothesis: The slope of the line between X & Y is not flat\n\nH0: The slope of the line is flat\n\n\n\n\n\nExamples:\n\nButterfly toxicity (Y) increases with time (X)\nTree diameter (Y) increases with age (X)"
+  },
+  {
+    "objectID": "materials/slides_4b.html#regression-visual",
+    "href": "materials/slides_4b.html#regression-visual",
+    "title": "Intro to Data Science",
+    "section": "Regression Visual",
+    "text": "Regression Visual\n\n\n\n\n\nScatterplot of penguin bill depth against bill length"
   },
   {
     "objectID": "materials/slides_4b.html#r-stats-syntax",
     "href": "materials/slides_4b.html#r-stats-syntax",
     "title": "Intro to Data Science",
     "section": "R Stats Syntax",
-    "text": "R Stats Syntax"
+    "text": "R Stats Syntax\n\nAll R statistical test functions use the same syntax\n\nThankfully!\n\n\n\n\n\n\nSyntax is as follows:\n\n# Test effect of otters on sea urchins\nstat_test(urchin_count ~ otter_count, data = kelp_forest_df)\n\n\n\n\n\nSome tests require other arguments\n\nBut the above example is a template of the fundamental bits"
+  },
+  {
+    "objectID": "materials/slides_4b.html#regression-syntax",
+    "href": "materials/slides_4b.html#regression-syntax",
+    "title": "Intro to Data Science",
+    "section": "Regression Syntax",
+    "text": "Regression Syntax\n\nThe function for regressions is lm\n\nShort for “linear model”\n\n\n\n\n\n\nExample syntax:\n\n# Run a regression\nmy_model &lt;- lm(response ~ explanatory, data = my_df)"
   },
   {
     "objectID": "materials/slides_4b.html#practice-regression",
     "href": "materials/slides_4b.html#practice-regression",
     "title": "Intro to Data Science",
     "section": "Practice: Regression",
-    "text": "Practice: Regression"
-  },
-  {
-    "objectID": "materials/slides_4b.html#more-practice-regression",
-    "href": "materials/slides_4b.html#more-practice-regression",
-    "title": "Intro to Data Science",
-    "section": "More Practice: Regression",
-    "text": "More Practice: Regression"
+    "text": "Practice: Regression\n\n\nYou are studying penguins and want to test the following hypotheses:\n\nHA: As penguin bill length increases, bill depth decreases\nH0: Bill length and bill depth have no relationship\n\n\n\n\n\n\nUse a regression to test the hypothesis and assign it to an object\n\nWhat is the class of that object? What is its structure?\n\n\n\n\n\n\n\nRun the summary function on that object to get a human readable summary table"
   },
   {
     "objectID": "materials/slides_4b.html#interpreting-summary-tables",
     "href": "materials/slides_4b.html#interpreting-summary-tables",
     "title": "Intro to Data Science",
     "section": "Interpreting Summary Tables",
-    "text": "Interpreting Summary Tables"
+    "text": "Interpreting Summary Tables\n\nYou (maybe): “Okay, cute summary table but is our hypothesis supported or not?”"
+  },
+  {
+    "objectID": "materials/slides_4b.html#interpreting-summary-tables-1",
+    "href": "materials/slides_4b.html#interpreting-summary-tables-1",
+    "title": "Intro to Data Science",
+    "section": "Interpreting Summary Tables",
+    "text": "Interpreting Summary Tables\n\nYou (maybe): “Okay, cute summary table but is our hypothesis supported or not?”"
   },
   {
     "objectID": "materials/slides_4b.html#analysis-of-variance-anova",
     "href": "materials/slides_4b.html#analysis-of-variance-anova",
     "title": "Intro to Data Science",
     "section": "Analysis of Variance (ANOVA)",
-    "text": "Analysis of Variance (ANOVA)"
+    "text": "Analysis of Variance (ANOVA)\n\nX is categorical but Y is continuous\n\n\n\n\nHypothesis: Groups of X have different average Y values\n\nH0: All groups of X have the same average Y values\n\n\n\n\n\nANOVA function is aov\n\n\n\n\nExamples:\n\nDifferent countries (X) have different numbers of rabbits (Y)\nGrazing on pastures (X) reduces plant height (Y)"
+  },
+  {
+    "objectID": "materials/slides_4b.html#anova-visual",
+    "href": "materials/slides_4b.html#anova-visual",
+    "title": "Intro to Data Science",
+    "section": "ANOVA Visual",
+    "text": "ANOVA Visual\n\n\n\n\n\nBar plot of penguin flipper length against penguin species. Error bars are standard deviation"
   },
   {
     "objectID": "materials/slides_4b.html#practice-anova",
     "href": "materials/slides_4b.html#practice-anova",
     "title": "Intro to Data Science",
     "section": "Practice: ANOVA",
-    "text": "Practice: ANOVA"
+    "text": "Practice: ANOVA\n\n\nYou are still studying penguins but have new hypotheses:\n\nHA: Penguin species have different flipper lengths\nH0: Penguin species do not have different flipper lengths\n\n\n\n\n\n\nUse an ANOVA to test the hypothesis and assign it to an object\n\nWhat is the class of that object? What is its structure?\n\n\n\n\n\n\n\nUse the summary function to see if your hypothesis was supported\n\nWhat difference(s) do you see between this and the regression summary table?"
   },
   {
     "objectID": "materials/slides_4b.html#chi-squared-test",
     "href": "materials/slides_4b.html#chi-squared-test",
     "title": "Intro to Data Science",
     "section": "Chi Squared Test",
-    "text": "Chi Squared Test"
+    "text": "Chi Squared Test\n\nX & Y both categorical\n\n\n\n\nHypothesis: Categories of X affect categories of Y\n\nH0: Categories of X are not related to categories of Y\n\n\n\n\n\nUsed in medical contexts and Hardy Weinberg Equillibrium\n\nYou may have encountered this in BIO 102"
   },
   {
     "objectID": "materials/slides_4b.html#temperature-check-2",
