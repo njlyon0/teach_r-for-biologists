@@ -41,65 +41,256 @@ After today's session you will be able to:
 - Contrast / compare the four major types of joins
 - Combine data using the four major types of joins
 
-## [Join Background]{.orange}
+## [Join Background]{.orange} {.smaller}
 
+- To test a hypothesis we often need to collect multiple types of data
+    - But, virtually all statistical tools require _one_ data object
 
-## [Join Types]{.orange}
+\
 
+. . . 
 
+- Somehow you need to combine data from multiple sources
+    - Usually based on the contents of a shared column in _both_ sources
 
-## [Left/Right Joins]{.orange}
+\
 
+. . . 
 
+- Conditional matching like this is called "joining" data
 
-## [Left/Right Join Visual]{.orange}
+## [Join Example]{.orange} {.smaller}
 
+- You want to test how frogs are affected by rainfall
 
+\
 
+- You collect the following data:
+    1. number of frogs at ponds
+    2. daily rainfall at those ponds
+
+\
+
+- Need to [join]{.purple} the frog abundance and rain amount data matched _by their pond_
+
+## [Join Types]{.orange} {.smaller}
+
+- Four major flavors of join:
+    - Left / Right Join
+    - Inner Join
+    - Outer Join (sometimes also known as "full" or "full outer")
+    - Anti Join
+
+\
+
+- Let's look at some example syntax
+```{.r}
+# Join frog and rain data by pond ID
+<type>_join(x = frog_df, y = rain_df,
+            by = c("pond_name"))
+```
+
+## [Left Joins]{.orange}
+
+- Left joins keep _all_ rows/columns found in "left" dataframe
+    - Add on columns from "right" dataframe _if they have matching rows_ in "left"
+
+. . .
+
+<img src="images/graphic-join-left.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns and 'A' and 'B' rows"  width="95%">
+
+## [Right Joins]{.orange}
+
+- Right joins keep _all_ rows/columns found in "right" dataframe
+    - Add on columns from "left" dataframe _if they have matching rows_ in "right"
+
+. . .
+
+<img src="images/graphic-join-right.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns and 'A' and 'C' rows" width="95%">
+
+## [Join Example Data]{.gold} {.smaller}
+
+- Before we practice our joins, let's review an example dataset I've created for this purpose
+
+\
+
+. . . 
+
+- We are studying the effect of human impacts on lichens that grow on trees
+
+\
+
+. . .
+
+- We collected two sets of data to test this hypothesis:
+    1. The distance to the nearest road for 26 trees ("Tree_A" through "Tree_Z")
+    2. The percent cover of the three major lichen types on 10 of those trees 
+
+\
+
+. . .
+
+- Any questions on this study or these example datasets?
 
 ## [Practice: Left Joins]{.pink}
 
 ![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
 
+- Download the "tree_lichen.csv" and "tree_road.csv" from the course page
+    - Load them into R and check their structure
 
+\
 
+. . .
 
+- Use a [<u>left</u> join]{.purple} to combine these two dataframes by tree ID
+    - What is the structure of the resulting dataframe?
 
 ## [Inner Joins]{.orange}
 
+- Inner joins keep columns from both left and right **but** only rows that are _found in both_
+    - Useful when you only want to keep rows with complete data
+
+. . .
+
+<img src="images/graphic-join-inner.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns and only an 'A' row" width="95%">
 
 ## [Outer Joins]{.orange}
 
+- Outer joins keep columns from both left and right **and** _all rows_ 
 
-## [Practice: Inner/Outer Joins]{.orange}
+. . .
+
+<img src="images/graphic-join-outer.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns and 'A', 'B', and 'C' rows" width="95%">
+
+## [Revisiting Lichen Data]{.gold}
+
+- You decide to revisit your lichen / tree study
+
+\
+
+. . .
+
+- Now you want to keep the tree road distances _whether or not_ you have lichen cover
+
+\
+
+. . .
+
+- What kind of join should you use? Why?
+
+## [Practice: Inner/Outer Joins]{.pink}
 
 ![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
 
+- Use a [full join]{.purple} to combine the original lichen and road distance objects
 
+\
 
+- What is the structure of the resulting dataframe?
+
+\
+
+. . .
+
+- How does this differ from the result of your **left** join earlier?
 
 ## [Anti Joins]{.orange}
 
+- Anti joins keep columns from both left and right **but** only rows that are _**not**_ found in both
 
-## [Practice: Anti Joins]{.orange}
+. . .
+
+<img src="images/graphic-join-anti.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns 'B' and 'C' rows" width="95%">
+
+## [Re-revisiting Lichen Data]{.gold} {.smaller}
+
+- You have just been awarded a grant to conduct more lichen research!
+    - Congratulations!
+
+\
+
+. . .
+
+- You decide to spend your grant on meauring lichen on all of the trees that you <u>did not</u> measure the first time
+
+\
+
+. . . 
+
+- You need to join your old datasets to identify which trees you should measure with your new grant
+    - What kind of join should you use? Why?
+
+## [Practice: Anti Joins]{.pink} {.smaller}
 
 ![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
 
+- Use an [anti join]{.purple} to combine the original lichen and road distance objects
 
+\
 
+- Which dataframe should be on the "left" and which should be "right"?
+    - Does it matter?
 
-## [Join Trivia - Question 1]{.gold}
+\
 
+. . .
 
+- How many trees do you need to measure lichen on with your new funding?
 
+## [Join Trivia - Question 1]{.gold} {.smaller}
 
+- I have a table of [scorpion abundance]{.orange} and another of [desert temperatures]{.orange}
 
-## [Join Trivia - Question 2]{.gold}
+\
 
+. . .
 
+- I want to keep only scorpion values that _also_ have temperature
+    - Which type of join should I use?
 
-## [Join Trivia - Question 3]{.gold}
+\
 
+. . .
+
+- Inner join!
+    - Keeps only rows found in both dataframes
+
+## [Join Trivia - Question 2]{.gold} {.smaller}
+
+- I have a table of [bird species]{.orange} and another of [grass species]{.orange} at various plots
+
+\
+
+. . .
+
+- I want to include all birds and grasses _regardless_ of whether both are in each plot
+    - Which type of join should I use?
+
+\
+
+. . .
+
+- Full join!
+    - Keeps **all** rows found in either dataframe
+
+## [Join Trivia - Question 3]{.gold} {.smaller}
+
+- I have a table of [patient response to medication]{.orange} and another of [patients who indicated they don't want their data used]{.orange}
+
+\
+
+. . .
+
+- I want to _remove_ medication response information for all patients who didn't give consent to use their data
+    - Which type of join should I use?
+
+\
+
+. . .
+
+- Anti join!
+    - Keeps only rows **not** found in both data tables
 
 ## [Temperature Check]{.purple}
 
