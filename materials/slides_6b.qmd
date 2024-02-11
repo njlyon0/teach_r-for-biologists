@@ -1,6 +1,6 @@
 ---
 title: "Intro to Data Science"
-author: "Lab 6 - Visualization II"
+author: "Lab 6 -- Visualization II"
 engine: knitr
 format: 
   revealjs: 
