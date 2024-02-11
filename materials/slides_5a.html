@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -348,7 +413,11 @@ Lecture 5 – Multi-Model Inference
 <section id="todays-plan" class="slide level2">
 <h2><span class="blue">Today’s Plan</span></h2>
 <ul>
-<li>Y</li>
+<li>Multiple X Variables</li>
+<li>Interactions</li>
+<li>Multi-Model Inference</li>
+<li>Mid-Term Instructor Evaluations</li>
+<li>Free Work on Function Tutorials</li>
 </ul>
 </section>
 <section id="todays-learning-objectives" class="slide level2">
@@ -356,7 +425,257 @@ Lecture 5 – Multi-Model Inference
 <p>After today’s session you will be able to:</p>
 <div class="fragment">
 <ul>
-<li>X</li>
+<li>Perform analytical tests using R</li>
+<li>Explain an “interaction term” in the context of life sciences</li>
+<li>Compare model strengths in R</li>
+</ul>
+</div>
+</section>
+<section id="roadmap-reminder" class="slide level2">
+<h2><span class="orange">Roadmap Reminder</span></h2>
+<p><br>
+<br>
+</p>
+<p align="center">
+<img src="images/stats-roadmap-v1.png" alt="Table with two rows (explanatory variables) and two columns (response variables). One row/column is labeled 'categorical' and the other 'continuous'. Categorical response and explanatory variables are a Chi Square test, Categorical response with continuous explanatory is a generalized linear model. Both continuous is a regression and a continuous response with categorical explanatory variables is an ANOVA." width="80%">
+</p>
+</section>
+<section id="roadmap-extension-multiple-xs" class="slide level2">
+<h2><span class="orange">Roadmap Extension: Multiple Xs</span></h2>
+<p><br>
+</p>
+<p align="center">
+<img src="images/stats-roadmap-v2.png" alt="Expansion of previous roadmap table with a new row labeled 'multiple (separate)'. Categorical response with multiple continuous explanatory variables is still a generalized linear model. Continuous response with multiple categorical explanatory variables is an 'n-way ANOVA'." width="80%">
+</p>
+</section>
+<section id="r-syntax-for-multiple-xs" class="slide level2">
+<h2><span class="orange">R Syntax for Multiple Xs</span></h2>
+<ul>
+<li>Special syntax to indicate multiple explanatory variables
+<ul>
+<li>Separate each explanatory variable with a plus sign</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Example syntax:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Test with two explanatory variables</span></span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">stat_test</span>(response_var <span class="sc">~</span> exp_var1 <span class="sc">+</span> exp_var2, <span class="at">data =</span> my_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="n-way-anova" class="slide level2 smaller">
+<h2><span class="orange"><em>n</em>-way ANOVA</span></h2>
+<ul>
+<li>Multiple X variables and Y must be continuous
+<ul>
+<li>X variables may be either categorical or continuous</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>“n” = number of X variables
+<ul>
+<li>E.g., 2-way ANOVA has 2 X variables</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Hypothesis: Each X variable (<em>separately</em>) affects Y values
+<ul>
+<li>H<sub>0</sub>: Each X does not affect Y</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="n-way-anova-continued" class="slide level2 smaller">
+<h2><span class="orange"><em>n</em>-way ANOVA Continued</span></h2>
+<ul>
+<li>Returns a P value for <em>each</em> X variable</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Examples:
+<ul>
+<li>Temperature (X) and bird presence (X) both affect worm length (Y)</li>
+<li>Fire (X) and grazing (X) both affect butterfly lifespan (Y)</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li><em>n</em>-way ANOVA function is the same as the regular ANOVA – <code>aov</code>
+<ul>
+<li>“Regular ANOVA” == 1-way ANOVA</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="practice-2-way-anova" class="slide level2 smaller">
+<h2><span class="pink">Practice: 2-way ANOVA</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>New funding source and new hypothesis for your penguin research:
+<ul>
+<li>H<sub>A</sub>: Penguin body mass differs among species and among islands</li>
+<li>H<sub>0</sub>: Penguin body mass <em>does not</em> differ with penguin species or island</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Test H<sub>A</sub> with a 2-way ANOVA
+<ul>
+<li>Was your hypothesis supported?</li>
+<li>What difference(s) do you see between this and a 1-way ANOVA summary table?</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="interaction-terms" class="slide level2">
+<h2><span class="orange">Interaction Terms</span></h2>
+<ul>
+<li>So far, we’ve assumed the effect on Y is due to each X <u>separately</u>
+<ul>
+<li>In real life, the effect on Y may be due to <span class="purple">interactions among X variables</span>!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Arguably <em>all</em> of biology lives in these interactions!</li>
+</ul>
+</div>
+</section>
+<section id="interactions-examples" class="slide level2">
+<h2><span class="orange">Interactions Examples</span></h2>
+<ul>
+<li>Let’s consider some examples to hopefully make this “click” for you</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ol type="1">
+<li>The number of ant hills (Y) depends on <u>both</u> how hot it is (X) and rainfall amounts (X)</li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Raccoons are fatter (Y) when they live close to humans (X) <u>and</u> the weather is mild (X)</li>
+</ol>
+</div>
+</section>
+<section id="interaction-visual" class="slide level2">
+<h2><span class="orange">Interaction Visual</span></h2>
+<ul>
+<li>One more example:
+<ul>
+<li>Students enjoy (Y) talking about stats (X) if there are good visuals (X)</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p align="center">
+<img src="images/interactions-visual.png" alt="Bar graph with 'student enjoyment' on vertical axis and combinations of 'talking about statistics' and 'quality of visuals' on horizontal axis. Bar is highest when not talking about statistics but with good visuals and lowest when talking about stats without good visuals. Not talking about statistics without good visuals is medium low and talking about statistics with good visuals is medium high." width="55%">
+</p>
+</div>
+</section>
+<section id="roadmap-extension-interactions" class="slide level2">
+<h2><span class="orange">Roadmap Extension: Interactions</span></h2>
+<p align="center">
+<img src="images/stats-roadmap-v3.png" alt="Expansion of previous roadmap table with a new row labeled 'multiple (interacting)'. Categorical response with multiple interacting continuous explanatory variables is still a generalized linear model. Continuous response with multiple interacting categorical explanatory variables is an 'ANCOVA'." width="80%">
+</p>
+</section>
+<section id="r-syntax-for-interactions" class="slide level2 smaller">
+<h2><span class="orange">R Syntax for Interactions</span></h2>
+<ul>
+<li>Two ways to add additional an interaction between two explanatory variables:
+<ul>
+<li>Use an asterisk (<code>*</code>) between the two terms</li>
+<li>Use a colon (<code>:</code>)</li>
+</ul></li>
+<li>Using an asterisk includes <em>both</em> terms separately <u>and</u> their interaction</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Example syntax:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Use the asterisk to test an interaction</span></span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">stat_test</span>(response <span class="sc">~</span> exp1 <span class="sc">*</span> exp2, <span class="at">data =</span> my_df)</span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the SAME MODEL with a colon instead</span></span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">stat_</span>(response <span class="sc">~</span> exp1 <span class="sc">+</span> exp2 <span class="sc">+</span> exp1<span class="sc">:</span>exp2, <span class="at">data =</span> my_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="analysis-of-co-variance-ancova" class="slide level2 smaller">
+<h2><span class="orange"><u>An</u>alysis of <u>Co</u>-<u>Va</u>riance (ANCOVA)</span></h2>
+<ul>
+<li>Multiple X variables and Y is continuous
+<ul>
+<li>X variables may be either categorical or continuous</li>
+<li>Must also include an “interaction term” between (at least) two of the X variables</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Hypothesis: The effect on Y is due to <em>the interaction</em> of X variables
+<ul>
+<li>H<sub>0</sub>: The effect on Y is not due to interactions among X variables</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Returns a P value for the interaction term and each X variable</li>
+</ul>
+</div>
+</section>
+<section id="practice-ancova" class="slide level2 smaller">
+<h2><span class="pink">Practice: ANCOVA</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>ANCOVA function is the same as the regular ANOVA / <em>n</em>-way ANOVA – <code>aov</code></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>New penguin-related hypothesis:
+<ul>
+<li>H<sub>A</sub>: The relationship between bill length and bill depth differs by species</li>
+<li>H<sub>0</sub>: Bill length-depth relationships are not species-dependent</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Test H<sub>A</sub> with an interaction term!
+<ul>
+<li>Was your hypothesis supported?</li>
+<li>What difference(s) do you see between this and a 2-way ANOVA summary table?</li>
+</ul></li>
 </ul>
 </div>
 </section>
@@ -367,6 +686,197 @@ Lecture 5 – Multi-Model Inference
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 </section>
+<section id="discussion-null-hypothesis-testing" class="slide level2">
+<h2><span class="gold">Discussion: Null Hypothesis Testing</span></h2>
+<ul>
+<li>What lingering questions do you have on this topic?</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Is the “roadmap” helpful?
+<ul>
+<li>How can I change it to <em>more</em> helpful (for future cohorts of students)?</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="multi-model-inference-mmi" class="slide level2 smaller">
+<h2><span class="orange">Multi-Model Inference (MMI)</span></h2>
+<ul>
+<li>MMI is an alternative to null hypothesis testing
+<ul>
+<li>P &lt; 0.05 is an <em>arbitrary</em> cutoff!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Instead, we can make several “candidate models”
+<ul>
+<li>Basically several alternate hypotheses (H<sub>A</sub>)</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Fit data to all candidate models (separately) and compare <span class="purple">strength of fit</span>
+<ul>
+<li>Candidate hypothesis with the strongest relationship to data is supported</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="model-strengths" class="slide level2 smaller">
+<h2><span class="orange">“Model Strengths”</span></h2>
+<ul>
+<li>‘Relative model strengths’ is very different from P values
+<ul>
+<li>Still all about hypothesis testing though!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>P values ask “does this affect things?”
+<ul>
+<li>MMI asks “does this affect things <em>more than other factors</em>?”</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Model strength evaluated with an <span class="purple">information criterion</span>
+<ul>
+<li>Way of summarizing each candidate model to decide the “winner(s)”</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="information-criteria" class="slide level2">
+<h2><span class="orange">Information Criteria</span></h2>
+<ul>
+<li>Most often: <u>A</u>kaike <u>I</u>nformation <u>C</u>riterion (AIC)
+<ul>
+<li>[Ah-kuh-ee-kay]</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Lowest information criterion is best model
+<ul>
+<li><em>BUT</em> models with <strong>&lt;2 AIC points difference</strong> are basically the same strength of fit</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Another arbitrary threshold!</li>
+</ul>
+</div>
+</section>
+<section id="aic-function" class="slide level2 smaller">
+<h2><span class="orange">AIC Function</span></h2>
+<ul>
+<li>AIC function is just a list of all your models
+<ul>
+<li>Function is–helpfully–<code>AIC</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Fit models using whichever stats test is appropriate
+<ul>
+<li>Remember the <span class="purple">roadmap</span>!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Example syntax:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Fit some candidate models</span></span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a>mod1 <span class="ot">&lt;-</span> <span class="fu">stat_test</span>(resp <span class="sc">~</span> exp_1, <span class="at">data =</span> my_df)</span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>mod2 <span class="ot">&lt;-</span> <span class="fu">stat_test</span>(resp <span class="sc">~</span> exp_2, <span class="at">data =</span> my_df)</span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>mod3 <span class="ot">&lt;-</span> <span class="fu">stat_test</span>(resp <span class="sc">~</span> exp_1 <span class="sc">+</span> exp_2, <span class="at">data =</span> my_df)</span>
+<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Compare their strengths</span></span>
+<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">AIC</span>(mod1, mod2, mod3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="practice-mmi" class="slide level2 smaller">
+<h2><span class="pink">Practice: MMI</span></h2>
+<ul>
+<li>Fit the following four candidate models using the most appropriate test <u>for each</u>
+<ul>
+<li>H<sub>A</sub>: Penguin body mass differs among species</li>
+<li>H<sub>A</sub>: Penguin body mass differs between sexes</li>
+<li>H<sub>A</sub>: Penguin body mass differs among species <em>and</em> between sexes</li>
+<li>H<sub>A</sub>: Penguin body mass differs among species differently <em>depending on</em> sex</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Which model best fits the data?
+<ul>
+<li>I.e., AIC is lowest</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>What is the <em>next best</em> model?</li>
+</ul>
+</div>
+</section>
+<section id="temperature-check-1" class="slide level2">
+<h2><span class="purple">Temperature Check</span></h2>
+<h4 id="how-are-you-feeling-1">How are you Feeling?</h4>
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+</section>
+<section id="instructor-evaluations" class="slide level2 smaller">
+<h2><span class="gold">Instructor Evaluations</span></h2>
+<ul>
+<li>Today is the first day of the second half of the course!</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>I hope you all are having a fun time
+<ul>
+<li>Hopefully not ironic to say that after two days of stats {{&lt; fa smile &gt;}}</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Would really appreciate you filling out an <em>anonymous</em> evaluation for me!
+<ul>
+<li>What am I doing well?</li>
+<li>What could I improve on for the rest of the course?</li>
+<li>Any other feedback you’d like to share?</li>
+</ul></li>
+</ul>
+</section>
 <section id="upcoming-due-dates" class="slide level2 smaller">
 <h2><span class="blue">Upcoming Due Dates</span></h2>
 <div class="columns">
@@ -374,20 +884,49 @@ Lecture 5 – Multi-Model Inference
 <h3 id="due-before-lab">Due before lab</h3>
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
-<li>Muddiest Point #x</li>
+<li>Muddiest Point #5</li>
+<li><span class="pink">Draft 1</span> of Function Tutorials
+<ul>
+<li>Double check rubric to see that you’re not leaving any points on the table!</li>
+</ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="due-before-lecture">Due before lecture</h3>
 <h4 id="by-midnight-1">(By midnight)</h4>
 <ul>
-<li>X</li>
+<li>Homework #5</li>
 </ul>
 </div>
 </div>
+</section>
+<section id="free-work-on-function-tutorials" class="slide level2 smaller">
+<h2><span class="pink">Free Work on Function Tutorials</span></h2>
+<ul>
+<li>Draft 1 is due <span class="blue">tomorrow night at midnight</span>!</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Tips for success:
+<ul>
+<li>Check out the rubric and make sure you don’t miss any “easy” points</li>
+<li>Don’t leave after this slide!</li>
+<li>I.e., make good use of this free work time to make sure you’re looking good for that due date</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>If you have questions, ask them <u><em>now</em></u> during this free work time</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://njlyon0.github.io/teach_r-for-biologists/">Programming in R for Biologists</a></p>
+</div>
 </div>
 </div>
 </section>

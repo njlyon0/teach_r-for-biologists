@@ -1155,14 +1155,105 @@
     "href": "materials/slides_5a.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nY"
+    "text": "Today’s Plan\n\nMultiple X Variables\nInteractions\nMulti-Model Inference\nMid-Term Instructor Evaluations\nFree Work on Function Tutorials"
   },
   {
     "objectID": "materials/slides_5a.html#todays-learning-objectives",
     "href": "materials/slides_5a.html#todays-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
-    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nX"
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nPerform analytical tests using R\nExplain an “interaction term” in the context of life sciences\nCompare model strengths in R"
+  },
+  {
+    "objectID": "materials/slides_5a.html#roadmap-reminder",
+    "href": "materials/slides_5a.html#roadmap-reminder",
+    "title": "Intro to Data Science",
+    "section": "Roadmap Reminder",
+    "text": "Roadmap Reminder"
+  },
+  {
+    "objectID": "materials/slides_5a.html#roadmap-extension-multiple-xs",
+    "href": "materials/slides_5a.html#roadmap-extension-multiple-xs",
+    "title": "Intro to Data Science",
+    "section": "Roadmap Extension: Multiple Xs",
+    "text": "Roadmap Extension: Multiple Xs"
+  },
+  {
+    "objectID": "materials/slides_5a.html#r-syntax-for-multiple-xs",
+    "href": "materials/slides_5a.html#r-syntax-for-multiple-xs",
+    "title": "Intro to Data Science",
+    "section": "R Syntax for Multiple Xs",
+    "text": "R Syntax for Multiple Xs\n\nSpecial syntax to indicate multiple explanatory variables\n\nSeparate each explanatory variable with a plus sign\n\n\n\n\n\n\nExample syntax:\n\n# Test with two explanatory variables\nstat_test(response_var ~ exp_var1 + exp_var2, data = my_df)"
+  },
+  {
+    "objectID": "materials/slides_5a.html#n-way-anova",
+    "href": "materials/slides_5a.html#n-way-anova",
+    "title": "Intro to Data Science",
+    "section": "n-way ANOVA",
+    "text": "n-way ANOVA\n\nMultiple X variables and Y must be continuous\n\nX variables may be either categorical or continuous\n\n\n\n\n\n\n“n” = number of X variables\n\nE.g., 2-way ANOVA has 2 X variables\n\n\n\n\n\n\n\nHypothesis: Each X variable (separately) affects Y values\n\nH0: Each X does not affect Y"
+  },
+  {
+    "objectID": "materials/slides_5a.html#n-way-anova-continued",
+    "href": "materials/slides_5a.html#n-way-anova-continued",
+    "title": "Intro to Data Science",
+    "section": "n-way ANOVA Continued",
+    "text": "n-way ANOVA Continued\n\nReturns a P value for each X variable\n\n\n\n\n\nExamples:\n\nTemperature (X) and bird presence (X) both affect worm length (Y)\nFire (X) and grazing (X) both affect butterfly lifespan (Y)\n\n\n\n\n\n\n\nn-way ANOVA function is the same as the regular ANOVA – aov\n\n“Regular ANOVA” == 1-way ANOVA"
+  },
+  {
+    "objectID": "materials/slides_5a.html#practice-2-way-anova",
+    "href": "materials/slides_5a.html#practice-2-way-anova",
+    "title": "Intro to Data Science",
+    "section": "Practice: 2-way ANOVA",
+    "text": "Practice: 2-way ANOVA\n\n\nNew funding source and new hypothesis for your penguin research:\n\nHA: Penguin body mass differs among species and among islands\nH0: Penguin body mass does not differ with penguin species or island\n\n\n\n\n\n\nTest HA with a 2-way ANOVA\n\nWas your hypothesis supported?\nWhat difference(s) do you see between this and a 1-way ANOVA summary table?"
+  },
+  {
+    "objectID": "materials/slides_5a.html#interaction-terms",
+    "href": "materials/slides_5a.html#interaction-terms",
+    "title": "Intro to Data Science",
+    "section": "Interaction Terms",
+    "text": "Interaction Terms\n\nSo far, we’ve assumed the effect on Y is due to each X separately\n\nIn real life, the effect on Y may be due to interactions among X variables!\n\n\n\n\n\n\nArguably all of biology lives in these interactions!"
+  },
+  {
+    "objectID": "materials/slides_5a.html#interactions-examples",
+    "href": "materials/slides_5a.html#interactions-examples",
+    "title": "Intro to Data Science",
+    "section": "Interactions Examples",
+    "text": "Interactions Examples\n\nLet’s consider some examples to hopefully make this “click” for you\n\n\n\n\n\nThe number of ant hills (Y) depends on both how hot it is (X) and rainfall amounts (X)\n\n\n\n\n\n\nRaccoons are fatter (Y) when they live close to humans (X) and the weather is mild (X)"
+  },
+  {
+    "objectID": "materials/slides_5a.html#interaction-visual",
+    "href": "materials/slides_5a.html#interaction-visual",
+    "title": "Intro to Data Science",
+    "section": "Interaction Visual",
+    "text": "Interaction Visual\n\nOne more example:\n\nStudents enjoy (Y) talking about stats (X) if there are good visuals (X)"
+  },
+  {
+    "objectID": "materials/slides_5a.html#roadmap-extension-interactions",
+    "href": "materials/slides_5a.html#roadmap-extension-interactions",
+    "title": "Intro to Data Science",
+    "section": "Roadmap Extension: Interactions",
+    "text": "Roadmap Extension: Interactions"
+  },
+  {
+    "objectID": "materials/slides_5a.html#r-syntax-for-interactions",
+    "href": "materials/slides_5a.html#r-syntax-for-interactions",
+    "title": "Intro to Data Science",
+    "section": "R Syntax for Interactions",
+    "text": "R Syntax for Interactions\n\nTwo ways to add additional an interaction between two explanatory variables:\n\nUse an asterisk (*) between the two terms\nUse a colon (:)\n\nUsing an asterisk includes both terms separately and their interaction\n\n\n\n\n\nExample syntax:\n\n# Use the asterisk to test an interaction\nstat_test(response ~ exp1 * exp2, data = my_df)\n\n# Fit the SAME MODEL with a colon instead\nstat_(response ~ exp1 + exp2 + exp1:exp2, data = my_df)"
+  },
+  {
+    "objectID": "materials/slides_5a.html#analysis-of-co-variance-ancova",
+    "href": "materials/slides_5a.html#analysis-of-co-variance-ancova",
+    "title": "Intro to Data Science",
+    "section": "Analysis of Co-Variance (ANCOVA)",
+    "text": "Analysis of Co-Variance (ANCOVA)\n\nMultiple X variables and Y is continuous\n\nX variables may be either categorical or continuous\nMust also include an “interaction term” between (at least) two of the X variables\n\n\n\n\n\n\nHypothesis: The effect on Y is due to the interaction of X variables\n\nH0: The effect on Y is not due to interactions among X variables\n\n\n\n\n\n\n\nReturns a P value for the interaction term and each X variable"
+  },
+  {
+    "objectID": "materials/slides_5a.html#practice-ancova",
+    "href": "materials/slides_5a.html#practice-ancova",
+    "title": "Intro to Data Science",
+    "section": "Practice: ANCOVA",
+    "text": "Practice: ANCOVA\n\n\nANCOVA function is the same as the regular ANOVA / n-way ANOVA – aov\n\n\n\n\n\nNew penguin-related hypothesis:\n\nHA: The relationship between bill length and bill depth differs by species\nH0: Bill length-depth relationships are not species-dependent\n\n\n\n\n\n\n\nTest HA with an interaction term!\n\nWas your hypothesis supported?\nWhat difference(s) do you see between this and a 2-way ANOVA summary table?"
   },
   {
     "objectID": "materials/slides_5a.html#temperature-check",
@@ -1172,11 +1263,74 @@
     "text": "Temperature Check\nHow are you Feeling?"
   },
   {
+    "objectID": "materials/slides_5a.html#discussion-null-hypothesis-testing",
+    "href": "materials/slides_5a.html#discussion-null-hypothesis-testing",
+    "title": "Intro to Data Science",
+    "section": "Discussion: Null Hypothesis Testing",
+    "text": "Discussion: Null Hypothesis Testing\n\nWhat lingering questions do you have on this topic?\n\n\n\n\n\nIs the “roadmap” helpful?\n\nHow can I change it to more helpful (for future cohorts of students)?"
+  },
+  {
+    "objectID": "materials/slides_5a.html#multi-model-inference-mmi",
+    "href": "materials/slides_5a.html#multi-model-inference-mmi",
+    "title": "Intro to Data Science",
+    "section": "Multi-Model Inference (MMI)",
+    "text": "Multi-Model Inference (MMI)\n\nMMI is an alternative to null hypothesis testing\n\nP &lt; 0.05 is an arbitrary cutoff!\n\n\n\n\n\n\nInstead, we can make several “candidate models”\n\nBasically several alternate hypotheses (HA)\n\n\n\n\n\n\n\nFit data to all candidate models (separately) and compare strength of fit\n\nCandidate hypothesis with the strongest relationship to data is supported"
+  },
+  {
+    "objectID": "materials/slides_5a.html#model-strengths",
+    "href": "materials/slides_5a.html#model-strengths",
+    "title": "Intro to Data Science",
+    "section": "“Model Strengths”",
+    "text": "“Model Strengths”\n\n‘Relative model strengths’ is very different from P values\n\nStill all about hypothesis testing though!\n\n\n\n\n\n\nP values ask “does this affect things?”\n\nMMI asks “does this affect things more than other factors?”\n\n\n\n\n\n\n\nModel strength evaluated with an information criterion\n\nWay of summarizing each candidate model to decide the “winner(s)”"
+  },
+  {
+    "objectID": "materials/slides_5a.html#information-criteria",
+    "href": "materials/slides_5a.html#information-criteria",
+    "title": "Intro to Data Science",
+    "section": "Information Criteria",
+    "text": "Information Criteria\n\nMost often: Akaike Information Criterion (AIC)\n\n[Ah-kuh-ee-kay]\n\n\n\n\n\nLowest information criterion is best model\n\nBUT models with &lt;2 AIC points difference are basically the same strength of fit\n\n\n\n\n\n\nAnother arbitrary threshold!"
+  },
+  {
+    "objectID": "materials/slides_5a.html#aic-function",
+    "href": "materials/slides_5a.html#aic-function",
+    "title": "Intro to Data Science",
+    "section": "AIC Function",
+    "text": "AIC Function\n\nAIC function is just a list of all your models\n\nFunction is–helpfully–AIC\n\n\n\n\n\n\nFit models using whichever stats test is appropriate\n\nRemember the roadmap!\n\n\n\n\n\n\n\nExample syntax:\n\n# Fit some candidate models\nmod1 &lt;- stat_test(resp ~ exp_1, data = my_df)\nmod2 &lt;- stat_test(resp ~ exp_2, data = my_df)\nmod3 &lt;- stat_test(resp ~ exp_1 + exp_2, data = my_df)\n\n# Compare their strengths\nAIC(mod1, mod2, mod3)"
+  },
+  {
+    "objectID": "materials/slides_5a.html#practice-mmi",
+    "href": "materials/slides_5a.html#practice-mmi",
+    "title": "Intro to Data Science",
+    "section": "Practice: MMI",
+    "text": "Practice: MMI\n\nFit the following four candidate models using the most appropriate test for each\n\nHA: Penguin body mass differs among species\nHA: Penguin body mass differs between sexes\nHA: Penguin body mass differs among species and between sexes\nHA: Penguin body mass differs among species differently depending on sex\n\n\n\n\n\n\nWhich model best fits the data?\n\nI.e., AIC is lowest\n\n\n\n\n\n\n\nWhat is the next best model?"
+  },
+  {
+    "objectID": "materials/slides_5a.html#temperature-check-1",
+    "href": "materials/slides_5a.html#temperature-check-1",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
+    "objectID": "materials/slides_5a.html#instructor-evaluations",
+    "href": "materials/slides_5a.html#instructor-evaluations",
+    "title": "Intro to Data Science",
+    "section": "Instructor Evaluations",
+    "text": "Instructor Evaluations\n\nToday is the first day of the second half of the course!\n\n\n\n\nI hope you all are having a fun time\n\nHopefully not ironic to say that after two days of stats {{&lt; fa smile &gt;}}\n\n\n\n\n\nWould really appreciate you filling out an anonymous evaluation for me!\n\nWhat am I doing well?\nWhat could I improve on for the rest of the course?\nAny other feedback you’d like to share?"
+  },
+  {
     "objectID": "materials/slides_5a.html#upcoming-due-dates",
     "href": "materials/slides_5a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #x\n\n\nDue before lecture\n(By midnight)\n\nX\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #5\nDraft 1 of Function Tutorials\n\nDouble check rubric to see that you’re not leaving any points on the table!\n\n\n\nDue before lecture\n(By midnight)\n\nHomework #5"
+  },
+  {
+    "objectID": "materials/slides_5a.html#free-work-on-function-tutorials",
+    "href": "materials/slides_5a.html#free-work-on-function-tutorials",
+    "title": "Intro to Data Science",
+    "section": "Free Work on Function Tutorials",
+    "text": "Free Work on Function Tutorials\n\nDraft 1 is due tomorrow night at midnight!\n\n\n\n\n\nTips for success:\n\nCheck out the rubric and make sure you don’t miss any “easy” points\nDon’t leave after this slide!\nI.e., make good use of this free work time to make sure you’re looking good for that due date\n\n\n\n\n\n\n\nIf you have questions, ask them now during this free work time\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/home_week7.html",
