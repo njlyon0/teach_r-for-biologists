@@ -653,14 +653,70 @@
     "href": "materials/slides_5b.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nY"
+    "text": "Today’s Plan\n\nMuddiest Point Review\nRequesting Feedback with Google Forms\nFunction Tutorials – Draft 1 Presentations"
   },
   {
     "objectID": "materials/slides_5b.html#todays-learning-objectives",
     "href": "materials/slides_5b.html#todays-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
-    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nX"
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nCreate a survey to get helpful feedback\nExplain R functions to an audience of your peers"
+  },
+  {
+    "objectID": "materials/slides_5b.html#muddiest-point-review",
+    "href": "materials/slides_5b.html#muddiest-point-review",
+    "title": "Intro to Data Science",
+    "section": "Muddiest Point Review",
+    "text": "Muddiest Point Review\n\nRecurring topics from most recent MPs:\n\n\n\n\n\nWhat other topic(s) would you like to review?"
+  },
+  {
+    "objectID": "materials/slides_5b.html#requesting-feedback",
+    "href": "materials/slides_5b.html#requesting-feedback",
+    "title": "Intro to Data Science",
+    "section": "Requesting Feedback",
+    "text": "Requesting Feedback\n\nAsking for feedback is a key part of any career\n\nEspecially in fields with a lot of teamwork / collaboration\n\n\n\n\n\n\nDesigning surveys helps standardize responses\n\nQuestions with specific / narrow answer ranges give more actionable feedback\n\n\n\n\n\n\n\nAnonymous surveys reduce ‘intimidation factor’ for critical feedback\n\nGreater response rate = more information to use for improvement"
+  },
+  {
+    "objectID": "materials/slides_5b.html#feedback-conversation",
+    "href": "materials/slides_5b.html#feedback-conversation",
+    "title": "Intro to Data Science",
+    "section": "Feedback Conversation",
+    "text": "Feedback Conversation\n\nWhat experience do you have with requesting/getting feedback?\n\nClasses? Work? Presentations?\n\n\n\n\n\n\nHow helpful was the feedback that you’ve received?\n\n\n\n\n\nHow could that feedback have been changed to be more helpful?"
+  },
+  {
+    "objectID": "materials/slides_5b.html#creating-surveys",
+    "href": "materials/slides_5b.html#creating-surveys",
+    "title": "Intro to Data Science",
+    "section": "Creating Surveys",
+    "text": "Creating Surveys\n\nConsider the kind of feedback you want to receive\n\nSpecific\nActionable (I.e., something you can actually do to handle this)\nBoth positive & constructively critical\n\n\n\n\n\n\nPhrase questions that give useful answers to you\n\nE.g., “How was my speaking pace? Answers: ‘too fast’, ‘just right’, ‘too slow’”\n\n\n\n\n\n\n\nImagine a useful piece of feedback then write the question that prompts it"
+  },
+  {
+    "objectID": "materials/slides_5b.html#create-a-survey",
+    "href": "materials/slides_5b.html#create-a-survey",
+    "title": "Intro to Data Science",
+    "section": "Create a Survey",
+    "text": "Create a Survey\n\nGoogle Forms are great for this!\n\nFree, familiar user interface, etc.\n\n\n\n\n\n\nEach of you will create a form to share with your peers today\n\n\n\n\n\n\nYour form should have (at least) questions about the following topics:\n\nEffectiveness of your tutorial’s format\nAny comments about your presentation style / pace\nQuestions specific to each of your chosen functions\nAnother question you think would be valuable"
+  },
+  {
+    "objectID": "materials/slides_5b.html#create-a-survey-continued",
+    "href": "materials/slides_5b.html#create-a-survey-continued",
+    "title": "Intro to Data Science",
+    "section": "Create a Survey Continued",
+    "text": "Create a Survey Continued\n\nOnce created, add me as a collaborator!\n\nThis will let me see feedback (necessary so I can moderate as/if needed)\n\n\n\n\n\n\nTo add a collaborator on a Google Form:\n\nClick “Send” in the top right\nClick “Add editor” in bottom left of resulting page\nEnter my email in the field at the top\nMake sure the “Notify people” box is checked\n\n\nClick “Send” in the bottom right"
+  },
+  {
+    "objectID": "materials/slides_5b.html#feedback-tips",
+    "href": "materials/slides_5b.html#feedback-tips",
+    "title": "Intro to Data Science",
+    "section": "Feedback Tips",
+    "text": "Feedback Tips\n\nBe specific and reasonable!\n\nPeople can’t change if they don’t understand exactly what you mean\nGigantic tasks can be demoralizing and counter-productive\n\n\n\n\n\n\nPair critiques with positive comments\n\nWhat someone did well can be just as important as where they can improve!\n\n\n\n\n\n\n\nBe constructively critical\n\nImagine what would fix the thing you didn’t like then suggest that solution"
+  },
+  {
+    "objectID": "materials/slides_5b.html#presentation-plan",
+    "href": "materials/slides_5b.html#presentation-plan",
+    "title": "Intro to Data Science",
+    "section": "Presentation Plan",
+    "text": "Presentation Plan\n\n\nVirtual\n\nScreen share your knit .Rmd with the class\nWalk us through all three of your tutorials (5-15 min)\nAsk if anyone has questions and answer any that come up\nShare Google Form response link in Zoom Chat\nEveryone gets ~5 minutes to fill out form\n\n\nIn Person\n\nConnect your computer to screen in classroom\nWalk us through the tutorial + end with Q&A\nEmail Google Form response link to class\nEveryone gets ~5 minutes to fill out form\n\n\n\n\n\nAny questions about this plan?"
   },
   {
     "objectID": "materials/slides_5b.html#temperature-check",
@@ -670,11 +726,39 @@
     "text": "Temperature Check\nHow are you Feeling?"
   },
   {
+    "objectID": "materials/slides_5b.html#get-ready",
+    "href": "materials/slides_5b.html#get-ready",
+    "title": "Intro to Data Science",
+    "section": "Get Ready!",
+    "text": "Get Ready!\n\nFind & open your R Markdown file\n\nKnit it to be sure that you have the latest version\nOpen the knit product (PDF / HTML)\n\n\n\n\n\n\nLet me know you’re ready\n\nVirtual: use a Zoom reaction / DM me\nIn Person: give me a thumbs up"
+  },
+  {
+    "objectID": "materials/slides_5b.html#draft-1-presentations",
+    "href": "materials/slides_5b.html#draft-1-presentations",
+    "title": "Intro to Data Science",
+    "section": "Draft 1 Presentations",
+    "text": "Draft 1 Presentations\n\nFinal note: remember this is just the first draft!\n\nYou have time to revise and improve\nTake a breath and try not to stress out too much!\n\n\n\n\n\n\nAnyone want to volunteer to go first?\n\nI’ll pick order randomly if there are no volunteers"
+  },
+  {
+    "objectID": "materials/slides_5b.html#temperature-check-1",
+    "href": "materials/slides_5b.html#temperature-check-1",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
     "objectID": "materials/slides_5b.html#upcoming-due-dates",
     "href": "materials/slides_5b.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nx\n\n\nDue before lab\n(By midnight)\n\nX\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #5\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #6"
+  },
+  {
+    "objectID": "materials/slides_5b.html#more-upcoming-due-dates",
+    "href": "materials/slides_5b.html#more-upcoming-due-dates",
+    "title": "Intro to Data Science",
+    "section": "More Upcoming Due Dates",
+    "text": "More Upcoming Due Dates\nDue Before Lab #7\n(By midnight)\n\nFunction Tutorials Draft 2\n\nYou’ll be assessed on how well you incorporated feedback from your peers & instructor\n\n\n\n\n\nCheck out the rubric for more details!\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/home_week6.html",
