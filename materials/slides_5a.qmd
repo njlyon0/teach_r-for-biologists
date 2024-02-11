@@ -28,7 +28,11 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- Multiple X Variables
+- Interactions
+- Multi-Model Inference
+- Mid-Term Instructor Evaluations
+- Free Work on Function Tutorials
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -36,7 +40,201 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Perform analytical tests using R
+- Explain an "interaction term" in the context of life sciences
+- Compare model strengths in R
+
+## [Roadmap Reminder]{.orange}
+
+\
+\
+
+<p align="center">
+<img src="images/stats-roadmap-v1.png" alt="Table with two rows (explanatory variables) and two columns (response variables). One row/column is labeled 'categorical' and the other 'continuous'. Categorical response and explanatory variables are a Chi Square test, Categorical response with continuous explanatory is a generalized linear model. Both continuous is a regression and a continuous response with categorical explanatory variables is an ANOVA." width="80%">
+</p>
+
+## [Roadmap Extension: Multiple Xs]{.orange}
+
+\
+
+<p align="center">
+<img src="images/stats-roadmap-v2.png" alt="Expansion of previous roadmap table with a new row labeled 'multiple (separate)'. Categorical response with multiple continuous explanatory variables is still a generalized linear model. Continuous response with multiple categorical explanatory variables is an 'n-way ANOVA'." width="80%">
+</p>
+
+## [R Syntax for Multiple Xs]{.orange}
+
+- Special syntax to indicate multiple explanatory variables
+    - Separate each explanatory variable with a plus sign
+
+\
+
+. . .
+
+- Example syntax:
+```{.r}
+# Test with two explanatory variables
+stat_test(response_var ~ exp_var1 + exp_var2, data = my_df)
+```
+
+## [_n_-way ANOVA]{.orange} {.smaller}
+
+- Multiple X variables and Y must be continuous
+    - X variables may be either categorical or continuous 
+
+\
+
+. . . 
+
+- "n" = number of X variables
+    - E.g., 2-way ANOVA has 2 X variables
+
+\
+
+. . .
+
+- Hypothesis: Each X variable (_separately_) affects Y values
+    - H~0~: Each X does not affect Y
+
+## [_n_-way ANOVA Continued]{.orange} {.smaller}
+
+- Returns a P value for _each_ X variable
+
+\
+
+. . . 
+
+- Examples:
+    - Temperature (X) and bird presence (X) both affect worm length (Y)
+    - Fire (X) and grazing (X) both affect butterfly lifespan (Y)
+
+\
+
+. . . 
+
+- _n_-way ANOVA function is the same as the regular ANOVA -- `aov`
+    - "Regular ANOVA" == 1-way ANOVA
+
+## [Practice: 2-way ANOVA]{.pink} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+
+- New funding source and new hypothesis for your penguin research:
+    - H~A~: Penguin body mass differs among species and among islands
+    - H~0~: Penguin body mass _does not_ differ with penguin species or island
+
+\
+
+. . .
+
+- Test H~A~ with a 2-way ANOVA
+    - Was your hypothesis supported?
+    - What difference(s) do you see between this and a 1-way ANOVA summary table?
+
+## [Interaction Terms]{.orange}
+
+- So far, we've assumed the effect on Y is due to each X <u>separately</u>
+    - In real life, the effect on Y may be due to [interactions among X variables]{.purple}!
+
+\
+
+. . .
+
+- Arguably _all_ of biology lives in these interactions!
+
+## [Interactions Examples]{.orange}
+
+- Let's consider some examples to hopefully make this "click" for you
+
+\
+
+. . . 
+
+1. The number of ant hills (Y) depends on <u>both</u> how hot it is (X) and rainfall amounts (X)
+
+\
+
+. . . 
+
+2. Raccoons are fatter (Y) when they live close to humans (X) <u>and</u> the weather is mild (X)
+
+## [Interaction Visual]{.orange}
+
+- One more example:
+    - Students enjoy (Y) talking about stats (X) if there are good visuals (X)
+
+. . .
+
+<p align="center">
+<img src="images/interactions-visual.png" alt="Bar graph with 'student enjoyment' on vertical axis and combinations of 'talking about statistics' and 'quality of visuals' on horizontal axis. Bar is highest when not talking about statistics but with good visuals and lowest when talking about stats without good visuals. Not talking about statistics without good visuals is medium low and talking about statistics with good visuals is medium high." width="55%">
+</p>
+
+## [Roadmap Extension: Interactions]{.orange}
+
+<p align="center">
+<img src="images/stats-roadmap-v3.png" alt="Expansion of previous roadmap table with a new row labeled 'multiple (interacting)'. Categorical response with multiple interacting continuous explanatory variables is still a generalized linear model. Continuous response with multiple interacting categorical explanatory variables is an 'ANCOVA'." width="80%">
+</p>
+
+## [R Syntax for Interactions]{.orange} {.smaller}
+
+- Two ways to add additional an interaction between two explanatory variables:
+    - Use an asterisk (`*`) between the two terms
+    - Use a colon (`:`)
+
+- Using an asterisk includes _both_ terms separately <u>and</u> their interaction
+
+\
+
+. . . 
+
+- Example syntax:
+```{.r}
+# Use the asterisk to test an interaction
+stat_test(response ~ exp1 * exp2, data = my_df)
+
+# Fit the SAME MODEL with a colon instead
+stat_(response ~ exp1 + exp2 + exp1:exp2, data = my_df)
+```
+
+## [<u>An</u>alysis of <u>Co</u>-<u>Va</u>riance (ANCOVA)]{.orange} {.smaller}
+
+- Multiple X variables and Y is continuous
+    - X variables may be either categorical or continuous 
+    - Must also include an "interaction term" between (at least) two of the X variables
+
+\
+
+. . .
+
+- Hypothesis: The effect on Y is due to _the interaction_ of X variables
+    - H~0~: The effect on Y is not due to interactions among X variables
+
+\
+
+. . .
+
+- Returns a P value for the interaction term and each X variable
+
+## [Practice: ANCOVA]{.pink} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+
+- ANCOVA function is the same as the regular ANOVA / _n_-way ANOVA -- `aov`
+
+\
+
+. . .
+
+- New penguin-related hypothesis:
+    - H~A~: The relationship between bill length and bill depth differs by species
+    - H~0~: Bill length-depth relationships are not species-dependent
+
+\
+
+. . . 
+
+- Test H~A~ with an interaction term!
+    - Was your hypothesis supported?
+    - What difference(s) do you see between this and a 2-way ANOVA summary table?
 
 ## [Temperature Check]{.purple}
 
@@ -46,31 +244,183 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+## [Discussion: Null Hypothesis Testing]{.gold}
 
+- What lingering questions do you have on this topic?
+
+\
+
+. . .
+
+- Is the "roadmap" helpful?
+    - How can I change it to _more_ helpful (for future cohorts of students)?
+
+## [Multi-Model Inference (MMI)]{.orange} {.smaller}
+
+- MMI is an alternative to null hypothesis testing
+    - P < 0.05 is an _arbitrary_ cutoff!
+
+\
+
+. . .
+
+- Instead, we can make several "candidate models"
+    - Basically several alternate hypotheses (H~A~)
+
+\
+
+. . .
+
+- Fit data to all candidate models (separately) and compare [strength of fit]{.purple}
+    - Candidate hypothesis with the strongest relationship to data is supported
+
+## ["Model Strengths"]{.orange} {.smaller}
+
+- 'Relative model strengths' is very different from P values
+    - Still all about hypothesis testing though!
+
+\
+
+. . .
+
+- P values ask "does this affect things?"
+    - MMI asks "does this affect things _more than other factors_?"
+
+\
+
+. . .
+
+- Model strength evaluated with an [information criterion]{.purple}
+    - Way of summarizing each candidate model to decide the "winner(s)"
+
+## [Information Criteria]{.orange}
+
+- Most often: <u>A</u>kaike <u>I</u>nformation <u>C</u>riterion (AIC)
+    - \[Ah-kuh-ee-kay\]
+
+\
+
+- Lowest information criterion is best model
+    - _BUT_ models with **<2 AIC points difference** are basically the same strength of fit
+
+\
+
+. . .
+
+- Another arbitrary threshold!
+
+## [AIC Function]{.orange} {.smaller}
+
+- AIC function is just a list of all your models
+    - Function is--helpfully--`AIC`
+
+\
+
+. . .
+
+- Fit models using whichever stats test is appropriate
+    - Remember the [roadmap]{.purple}!
+
+\
+
+. . .
+
+- Example syntax:
+```{.r}
+# Fit some candidate models
+mod1 <- stat_test(resp ~ exp_1, data = my_df)
+mod2 <- stat_test(resp ~ exp_2, data = my_df)
+mod3 <- stat_test(resp ~ exp_1 + exp_2, data = my_df)
+
+# Compare their strengths
+AIC(mod1, mod2, mod3)
+```
+
+## [Practice: MMI]{.pink} {.smaller}
+
+- Fit the following four candidate models using the most appropriate test <u>for each</u>
+    - H~A~: Penguin body mass differs among species
+    - H~A~: Penguin body mass differs between sexes
+    - H~A~: Penguin body mass differs among species _and_ between sexes
+    - H~A~: Penguin body mass differs among species differently _depending on_ sex
+
+\
+
+. . .
+
+- Which model best fits the data?
+    - I.e., AIC is lowest
+
+\
+
+. . .
+
+- What is the _next best_ model?
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
+## [Instructor Evaluations]{.gold} {.smaller}
+
+- Today is the first day of the second half of the course!
+
+\
+
+- I hope you all are having a fun time
+    - Hopefully not ironic to say that after two days of stats {{< fa smile >}}
+
+\
+
+- Would really appreciate you filling out an _anonymous_ evaluation for me!
+    - What am I doing well?
+    - What could I improve on for the rest of the course?
+    - Any other feedback you'd like to share?
 
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lab
 
 #### (By midnight)
 
-- Muddiest Point \#x
+- Muddiest Point \#5
+- [Draft 1]{.pink} of Function Tutorials
+    - Double check rubric to see that you’re not leaving any points on the table!
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lecture
 
 #### (By midnight)
 
-- X
+- Homework \#5
 
 :::
-
 ::::
 
+## [Free Work on Function Tutorials]{.pink} {.smaller}
+
+- Draft 1 is due [tomorrow night at midnight]{.blue}!
+
+\
+
+. . .
+
+- Tips for success:
+    - Check out the rubric and make sure you don't miss any "easy" points
+    - Don't leave after this slide!
+    - I.e., make good use of this free work time to make sure you're looking good for that due date
+
+\
+
+. . .
+
+- If you have questions, ask them <u>_now_</u> during this free work time
