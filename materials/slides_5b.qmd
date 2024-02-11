@@ -28,7 +28,9 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- Muddiest Point Review
+- Requesting Feedback with Google Forms
+- Function Tutorials – Draft 1 Presentations 
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -36,7 +38,159 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Create a survey to get helpful feedback
+- Explain R functions to an audience of your peers
+
+## [Muddiest Point Review]{.gold}
+
+- Recurring topics from most recent MPs:
+
+\
+
+. . . 
+
+- What other topic(s) would you like to review?
+
+## [Requesting Feedback]{.orange} {.smaller}
+
+- Asking for feedback is a key part of any career
+    - Especially in fields with a lot of teamwork / collaboration
+
+\
+
+. . .
+
+- Designing surveys helps standardize responses
+    - Questions with specific / narrow answer ranges give more actionable feedback
+
+\
+
+. . .
+
+- Anonymous surveys reduce 'intimidation factor' for critical feedback
+    - Greater response rate = more information to use for improvement
+
+## [Feedback Conversation]{.gold}
+
+- What experience do you have with requesting/getting feedback?
+    - Classes? Work? Presentations?
+
+\
+
+. . .
+
+- How helpful was the feedback that you've received?
+
+\
+
+. . .
+
+How could that feedback have been changed to be _more_ helpful?
+
+## [Creating Surveys]{.orange} {.smaller}
+
+- Consider the kind of feedback you want to receive
+    - Specific
+    - Actionable (I.e., something you can actually do to handle this)
+    - Both positive & _constructively_ critical
+
+\
+
+. . .
+
+- Phrase questions that give useful answers to you
+    - E.g., "How was my speaking pace? Answers: 'too fast', 'just right', 'too slow'"
+
+\
+
+. . .
+
+- Imagine a useful piece of feedback then <u>write the question that prompts it</u>
+
+## [Create a Survey]{.pink} {.smaller}
+
+- Google Forms are great for this!
+    - Free, familiar user interface, etc.
+
+\
+
+. . .
+
+- Each of you will create a form to share with your peers today
+
+\
+
+. . .
+
+- Your form should have (at least) questions about the following topics:
+    1. Effectiveness of your tutorial's format
+    2. Any comments about your presentation style / pace
+    3. Questions specific to each of your chosen functions
+    4. [Another question you think would be valuable]{.gold}
+
+## [Create a Survey Continued]{.pink} {.smaller}
+
+- Once created, add me as a collaborator!
+    - This will let me see feedback (necessary so I can moderate as/if needed)
+
+\
+
+. . .
+
+- To add a collaborator on a Google Form:
+    1. Click "Send" in the top right
+    2. Click "Add editor" in bottom left of resulting page
+    3. Enter my email in the field at the top
+    4. Make sure the "Notify people" box is checked
+    - Click "Send" in the bottom right
+
+## [Feedback Tips]{.orange} {.smaller}
+
+- Be specific and reasonable!
+    - People can't change if they don't understand _exactly_ what you mean
+    - Gigantic tasks can be demoralizing and counter-productive
+
+\
+
+. . .
+
+- Pair critiques with positive comments
+    - What someone did well can be _just as important_ as where they can improve!
+
+\
+
+. . . 
+
+- Be <u>constructively</u> critical
+    - Imagine what would fix the thing you didn't like then suggest that solution
+
+## [Presentation Plan]{.gold} {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+### Virtual
+
+- Screen share your knit .Rmd with the class
+- Walk us through _all three_ of your tutorials (5-15 min)
+- Ask if anyone has questions and answer any that come up
+- Share Google Form response link in Zoom Chat
+- Everyone gets \~5 minutes to fill out form
+
+:::
+:::{.column width="50%"}
+### In Person
+
+- Connect your computer to screen in classroom
+- Walk us through the tutorial + end with Q&A
+- Email Google Form response link to class
+- Everyone gets \~5 minutes to fill out form
+
+:::
+::::
+
+. . .
+
+- [**Any questions about this plan?**]{.gold}
 
 ## [Temperature Check]{.purple}
 
@@ -46,31 +200,73 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+## [Get Ready!]{.pink}
 
+- Find & open your R Markdown file
+    - Knit it to be sure that you have the latest version
+    - Open the knit product (PDF / HTML)
+
+\
+
+. . . 
+
+- Let me know you're ready
+    - Virtual: use a Zoom reaction / DM me
+    - In Person: give me a thumbs up
+
+## [Draft 1 Presentations]{.gold}
+
+- Final note: remember this is _just the first draft!_
+    - You have time to revise and improve
+    - [Take a breath]{.purple} and try not to stress out too much!
+
+\
+
+. . . 
+
+- Anyone want to volunteer to go first?
+    - I'll pick order randomly if there are no volunteers
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
 
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lecture
 
 #### (By midnight)
 
-- x
+- Homework \#5
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lab
 
 #### (By midnight)
 
-- X
+- Muddiest Point \#6
 
 :::
-
 ::::
 
+## [More Upcoming Due Dates]{.blue}
+
+### Due Before Lab \#7
+
+#### (By midnight)
+
+- Function Tutorials [Draft 2]{.pink}
+    - You'll be assessed on _how well you incorporated feedback_ from your peers & instructor
+
+\
+
+- <u>Check out the rubric</u> for more details!
