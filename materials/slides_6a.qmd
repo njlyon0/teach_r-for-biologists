@@ -14,6 +14,21 @@ format:
     footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
+```{r libraries}
+#| echo: false
+#| message: false
+#| error: false
+
+# Load needed libraries
+## install.packages("librarian")
+librarian::shelf(dplyr, ggplot2)
+```
+
+```{r ext-data}
+# Read in minnow data
+fish_df <- read.csv(file = file.path("materials", "data", "minnow.csv"))
+```
+
 ## A Guide to Your Process
 
 ### [Scheduling]{.blue}
@@ -83,59 +98,245 @@ After today's session you will be able to:
     - Visualization == figures == graphs == plots
     - Figures are implicitly publication-quality but fundamentally still graphs
 
-## [Data Viz in R]{.orange}
+## [Data Viz in R]{.orange} {.smaller}
 
+Two main options for data viz in R:
 
+::::{.columns}
+:::{.column width="50%"}
+### Base R
 
+- From base R
+- Simple but functional
+- Base R function syntax
 
-## [Plot Structure: `ggplot2`]{.orange}
+:::
+:::{.column width="50%"}
+### `ggplot2`
 
+- From `ggplot2` package
+- Modular functions allow range of complexity
+- Syntax similar to tidyverse but not identical
+- Name derived from _Grammar of Graphics_
 
+:::
+::::
 
+## [Data Viz in R]{.orange} {.smaller}
 
-## [Core ggplot Creation]{.orange}
+Two main options for data viz in R:
 
+::::{.columns}
+:::{.column width="50%"}
+### Base R
 
+\
 
+<img src="images/graph-base-plot.png" alt="Example 'base R' graph with a simple aesthetic">
+
+:::
+:::{.column width="50%"}
+### `ggplot2`
+
+<img src="images/graph-ggplot2.png" alt="Example ggplot2 graph with classic ggplot2-aesthetics">
+
+:::
+::::
+
+## [Plot Structure: `ggplot2`]{.orange} {.smaller}
+
+- Requires three components (+ optional fourth)
+
+\
+
+1. [Data object]{.purple} to plot
+
+. . .
+
+2. Mapping [aesthetics]{.purple}
+    - E.g., which column is on each axis, etc.
+    - I.e., which variable is "mapped to" a given plot component
+
+. . .
+
+3. One or more [geometries]{.purple}
+    - Determines what type of plot you have
+
+. . .
+
+4. [Theme]{.purple} elements
+    - Controls plot-level formatting
+
+## [Core ggplot Creation]{.orange} {.smaller}
+
+- Core plot is just [data object]{.purple} + [aesthetics]{.purple}
+    - Tells ggplot to create a plot with specified axes
+
+\
+
+. . .
+
+- Data object is inherited by _every_ other layer of the plot
+    - So only needs to be specified once!
+
+\
+
+. . .
+
+- What aesthetics can you specify?
+    - X/Y axes
+    - Color(s) of geometries
 
 ## [Core Graph Syntax]{.orange}
 
+- Fundamental graph syntax requires two functions:
+    1. `ggplot` 
+    2. `aes`
 
+\
 
+- Check out this example:
+```{.r}
+# Make a simple `ggplot2` plot
+ggplot(data = my_df, mapping = aes(x = x_var, y = y_var))
+```
+
+## [Core `ggplot2`]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+- Get prepared for this practice
+    - Create a script for this week
+    - Download and read in the "minnow.csv" data
+
+\
+
+. . .
+
+- Using `ggplot2`, make a graph with the minnow data where:
+    - Fish species is on the X axis
+    - Diameter of fish nest is on the Y axis
+
+\
+
+. . .
+
+- What does the resulting graph look like?
 
 ## [Core `ggplot2`]{.pink}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+\
 
+```{r ex-graph-v1}
+#| fig-width: 6
+#| fig-align: center
 
+# Generate desired example graph
+fish_v1 <- ggplot(data = fish_df, mapping = aes(x = species, y = diameter_cm))
 
-## [Core `ggplot2`]{.pink}
+# Show it!
+fish_v1
+```
+
+## [Plot Type & Geometries]{.orange} {.smaller}
+
+- Why does the plot not have anything on it?
+    - Because `ggplot2` needs you to specify your [geometry]{.purple!
+
+\
+
+. . .
+
+- Geometries are functions you add to a plot to make the desired plot type
+    - All start with `geom_...`
+    - E.g., `geom_bar`, `geom_point`, etc.
+
+\
+
+. . .
+
+- Geometry determines the type of plot
+    - E.g., bar plot, scatterplot, etc.
+
+## [Adding Elements]{.orange} {.smaller}
+
+- Use `+` to add geometries to a plot
+
+\
+
+. . .
+
+- Example syntax:
+```{.r}
+# Make a simple `ggplot2` plot
+ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
+    # Make it a scatterplot
+    geom_point()
+```
+
+\
+
+. . .
+
+- This syntax is <u>unique to `ggplot2`</u>
+    - Refers to stacked layers of plot information
+
+## [Geometries]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+- Let's practice adding geometries!
+    - Copy the code you wrote for the previous graph
+    - Add a `+` to the end of the line
+    - In the next line add `geom_point()`
 
+\
 
-## [Plot Type & Geometries]{.orange}
+. . .
 
+- What does that give you?
 
+\
 
+. . .
+
+- Copy that code and change `geom_point()` to `geom_boxplot()`
+    - What do you have now?
 
 ## [Geometries]{.pink}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+::::{.columns}
+:::{.column width="50%"}
 
+```{r ex-graph-v2a}
+#| fig-height: 10
 
+# Make a scatterplot
+fish_v1 +
+  geom_point() +
+  theme(axis.text = element_text(size = 18),
+        axis.title = element_text(size = 22))
+```
 
+:::
+:::{.column width="50%"}
 
+```{r ex-graph-v2b}
+#| fig-height: 10
 
-## [Geometries]{.pink}
+# Change it to a box plot
+fish_v1 +
+  geom_boxplot() +
+  theme(axis.text = element_text(size = 18),
+        axis.title = element_text(size = 22))
+```
 
-![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
-
-
-
+:::
+::::
 
 ## [Temperature Check]{.purple}
 
@@ -145,110 +346,392 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+## [Geometries Cont.]{.orange} {.smaller}
 
+- Geometries "know" what data to use because of your core plot
+    - I.e., in your top-level `ggplot` and `aes` functions
 
+\
 
-## [Geometries Cont.]{.orange}
+. . .
 
+- Geometries do support arguments but minimal graphs don't use them
 
+\
 
+. . .
 
-## [Multiple Geometries]{.orange}
+- Mappings/aesthetics inherited from top to bottom
 
+## [Multiple Geometries]{.orange} {.smaller}
 
+- You can add multiple geometries to the _same_ plot!
+    - But order matters!
 
+\
 
+. . .
 
+- Geometries added later are "in front" of earlier geometries
 
-## [Multiple Geometries]{.pink}
+\
+
+. . .
+
+- Similar to how first geometry is "in front" of core ggplot
+
+## [Multiple Geometries]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+- Make a graph with both `geom_boxplot` and `geom_point`
+    - Add a `+` after whichever you put first, then put the other
 
+\
 
+. . .
 
+- What happens if `geom_boxplot` is first?
 
-## [Multiple Geometries]{.pink}
+\
+
+. . .
+
+- Versus if `geom_point` is first?
+
+## [Multiple Geometries]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+::::{.columns}
+:::{.column width="50%"}
 
+```{r ex-graph-v3a}
+#| fig-height: 10
 
+# Make a scatterplot
+fish_v1 +
+  geom_point(size = 4) +
+  geom_boxplot() + 
+  theme(axis.text = element_text(size = 18),
+        axis.title = element_text(size = 22))
+```
 
+:::
+:::{.column width="50%"}
 
-## [Axis Titles]{.orange}
+```{r ex-graph-v3b}
+#| fig-height: 10
 
+# Change it to a box plot
+fish_v1 +
+  geom_boxplot() +
+  geom_point(size = 4) +
+  theme(axis.text = element_text(size = 18),
+        axis.title = element_text(size = 22))
+```
 
+:::
+::::
 
+See how points are "behind" boxplots on the left?
 
-## [Manual Axis Labels]{.orange}
+## [Axis Titles]{.orange} {.smaller}
 
+- Axis titles default to column name passed to `aes`
 
+\
 
+. . .
+
+- Good column names are usually not good plot axis labels!
+
+\
+
+. . .
+
+- Column names should have no spaces / may or may not be capitalized
+    - Plot axes should have spaces and be at least somewhat capitalized
+    - Units may be in parentheses
+
+## [Manual Axis Labels]{.orange} {.smaller}
+
+- Can set labels manually to be prettier with `labs` function!
+
+\
+
+. . .
+
+- `labs` has arguments `x` and `y` that expect characters to put as titles
+
+\
+
+. . .
+
+- Example syntax:
+```{.r}
+# Make a simple `ggplot2` plot
+ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
+    # Make it a scatterplot
+    geom_point() +
+    # Add custom axis labels
+    labs(x = "Custom X Label", y = "Custom Y Label")
+```
+
+## [Axis Labels]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+- Copy your code for the plot with:
+    - Both a boxplot and points
+    - Points in front of boxplots
+
+\
+
+. . .
+
+- Use `labs` to do do the following:
+    - Capitalize "species" and "diameter"
+    - Put "cm" in parentheses on the y-axis
+
+\
+
+. . .
+
+- What does that graph look like?
 
 ## [Axis Labels]{.pink}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+\
 
+```{r ex-graph-v4}
+#| fig-width: 6
+#| fig-align: center
 
+# Generate desired example graph
+fish_v1 +
+  geom_boxplot() +
+  geom_point(size = 2) +
+  labs(x = "Species", y = "Diameter (cm)") +
+  theme(axis.text = element_text(size = 13),
+        axis.title = element_text(size = 17))
+```
 
-## [Axis Labels]{.pink}
+## [Manual Label Cautionary Note]{.orange} {.smaller}
+
+- If you mis-apply the labels your plot will still work but will be wrong
+
+<p align="center">
+<img src="images/graph-bad-labels.png" alt="Two scatterplots side by side with the same configuration of points but flipped axis labels." width="80%">
+</p>
+
+- Same plot but flipped labels and no way to know which is correct!
+
+## [Coloring Geometries]{.orange} {.smaller}
+
+- You can color geometries by other columns in the data!
+    - You just need to pass them to the `color` or `fill` aesthetics
+
+\
+
+. . .
+
+- Example syntax:
+```{.r}
+# Make a plot where the color and y-axis are mapped to the same variable
+ggplot(data = my_df, mapping = aes(x = x_var, y = y_var, color = y_var)) +
+    # Make it a scatterplot
+    geom_point() +
+    # Add custom axis labels
+    labs(x = "Custom X Label", y = "Custom Y Label")
+```
+
+\
+
+. . .
+
+- Color != Fill
+    - Color = borders / solid points
+    - Fill = interior of shapes / points
+
+## [Geometry Color]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+- Take the plot you created during the previous practice:
+    - What happens if you map color to species in the `aes` call at the top?
 
+\
 
+. . .
 
-## [Manual Label Cuationary Note]{.orange}
+- Change `color` to `fill`. Now what does the plot look like?
 
-
-
-
-
-## [Coloring Geometries]{.orange}
-
-
-
-
-## [Geometry Color]{.pink}
+## [Geometry Color]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+::::{.columns}
+:::{.column width="50%"}
+`color = species`
 
+```{r ex-graph-v5a}
+#| fig-height: 10
 
+# Make a scatterplot
+ggplot(data = fish_df, mapping = aes(x = species, y = diameter_cm, color = species)) +
+  geom_point(size = 4) +
+  geom_boxplot() + 
+  labs(x = "Species", y = "Diameter (cm)") +
+  theme(axis.text = element_text(size = 18),
+        axis.title = element_text(size = 22))
+```
 
+:::
+:::{.column width="50%"}
+`fill = species`
 
-## [Geometry Color]{.pink}
+```{r ex-graph-v5b}
+#| fig-height: 10
+
+# Change it to a box plot
+ggplot(data = fish_df, mapping = aes(x = species, y = diameter_cm, fill = species)) +
+  geom_boxplot() +
+  geom_point(size = 4) +
+  labs(x = "Species", y = "Diameter (cm)") +
+  theme(axis.text = element_text(size = 18),
+        axis.title = element_text(size = 22))
+```
+
+:::
+::::
+
+## [Geometry Color]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+- What happens if you map species to **both** `color` and `fill`?
+
+\
+
+- Try it and find out!
+
+## [Geometry Color]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+```{r ex-graph-v6}
+#| fig-width: 6
+#| fig-align: center
+
+# Generate desired example graph
+ggplot(data = fish_df, mapping = aes(x = species, y = diameter_cm, 
+                                     fill = species, color = species)) +
+  geom_boxplot() +
+  geom_point(size = 2) +
+  labs(x = "Species", y = "Diameter (cm)") +
+  theme(axis.text = element_text(size = 13),
+        axis.title = element_text(size = 17))
+```
 
 ## [Customizing Colors]{.orange}
 
 
 
 
-## [Finding Fun Colors]{.orange}
+## [Finding Fun Colors]{.orange} {.smaller}
 
+- Coolors ([coolors.co/palettes/popular](https://coolors.co/palettes/popular))
+    - Many options + search bar to narrow results
 
+\
 
+- Color Brewer 2.0 ([colorbrewer2.org](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3))
+    - Fewer options but checkbox for colorblind safe palettes only
 
-## [Hexadecimal Aside]{.orange}
+\
 
+- Colors identified as "hexadecimal" codes
+    - Hexadecimal structure: \#**<span style="color:red">RR</span><span style="color:green">GG</span><span style="color:blue">BB</span>**
 
+## [Hexadecimal Aside]{.orange} {.smaller}
 
+- Hexadecimal = 16 digits
+    - 0-9 + a-f
 
-## [Manually Setting Colors]{.orange}
+\
 
+- Red/Green/Blue hues can be between 0 and 255
+    - "Colors" are combinations of 0-255 of R/G/B
 
+\
 
+- Color with regular numbers = \#**<span style="color:red">RRR</span><span style="color:green">GGG</span><span style="color:blue">BBB</span>**
+    - If using hexadecimals: three fewer numbers to store in a computer
+    - Each color x 10^3^-10^6^s of pixels would compound "extra" digits' memory demands
 
-## [Set Colors]{.pink}
+## [Manually Setting Colors]{.orange} {.smaller}
 
+- Use `scale_fill_manual()` or `scale_color_manual()`
+    - Each has one argument: `values`
 
+\
 
+- Needs a **named vector** of hexadecimal codes
+    - E.g., `c("name 1" = "entry 1", "name 2" = "entry 2", ...)`
 
+\
+
+- Example syntax: 
+```{.r}
+# Make a plot where the color and y-axis are mapped to the same variable
+ggplot(data = my_df, mapping = aes(x = x_var, y = y_var, color = y_var)) +
+    # Make it a scatterplot
+    geom_point() +
+    # Add custom axis labels
+    labs(x = "Custom X Label", y = "Custom Y Label") +
+    # Customize colors
+    scale_color_manual(values = c("name 1" = "#00FF00", "name 2" = "#FF0000", "name 3" = "#0000FF"))
+```
+
+## [Set Colors]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+- To the graph you made in the previous practice:
+    - Make species <u>fill</u> with custom colors
+
+\
+
+- Visit one of the sites I suggested to pick your colors
+    - Coolors ([coolors.co/palettes/popular](https://coolors.co/palettes/popular))
+    - Color Brewer 2.0 ([colorbrewer2.org](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3))
+
+\
+
+- What does that final plot look like?
+
+## [Set Colors]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+```{r ex-graph-v7}
+#| fig-width: 6
+#| fig-align: center
+
+# Generate desired example graph
+ggplot(data = fish_df, mapping = aes(x = species, y = diameter_cm, fill = species)) +
+  geom_boxplot() +
+  geom_point(size = 2) +
+  labs(x = "Species", y = "Diameter (cm)") +
+  scale_fill_manual(values = c("Chub" = "#ef233c", 
+                                "Paired" = "#7209b7", 
+                                "Stoneroller" = "#4361ee")) +
+  theme(axis.text = element_text(size = 13),
+        axis.title = element_text(size = 17))
+```
 
 ## [Temperature Check]{.purple}
 
