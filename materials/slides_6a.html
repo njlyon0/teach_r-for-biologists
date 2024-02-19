@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.549">
+  <meta name="generator" content="quarto-1.4.550">
 
   <meta name="author" content="Lecture 6 – Visualization I">
   <title>R Programming for Biologists - Intro to Data Science</title>
@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -348,7 +413,15 @@ Lecture 6 – Visualization I
 <section id="todays-plan" class="slide level2">
 <h2><span class="blue">Today’s Plan</span></h2>
 <ul>
-<li>Y</li>
+<li>Function Tutorial Debrief</li>
+<li>Data Visualization with <code>ggplot2</code>
+<ul>
+<li>Core ggplot</li>
+<li>Adding geometries</li>
+<li>Multiple geometries</li>
+<li>Setting color</li>
+<li>Customizing colors</li>
+</ul></li>
 </ul>
 </section>
 <section id="todays-learning-objectives" class="slide level2">
@@ -356,13 +429,777 @@ Lecture 6 – Visualization I
 <p>After today’s session you will be able to:</p>
 <div class="fragment">
 <ul>
-<li>X</li>
+<li>Discuss presentations and articulate plans for revision</li>
+<li>Create <code>ggplot2</code> graphs</li>
+<li>Modify <code>ggplot2</code> graph aesthetics and customize labels / colors</li>
 </ul>
+</div>
+</section>
+<section id="function-tutorial-debrief" class="slide level2">
+<h2><span class="gold">Function Tutorial Debrief</span></h2>
+<ul>
+<li>How did y’all feel that went?</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>What do you plan on doing differently for the 2<sup>nd</sup> presentation?</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>What questions do you have about the revision process / 2nd draft?</li>
+</ul>
+</div>
+</section>
+<section id="data-visualization" class="slide level2 smaller">
+<h2><span class="orange">Data Visualization</span></h2>
+<ul>
+<li>Fundamental part of scientific process</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Important for:
+<ul>
+<li>Figures in papers / presentations</li>
+<li>“Eyeball test” of statistical results</li>
+<li>Identifying errors in data (e.g., unreasonably high/low points, typos, etc.)</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Note on word choice
+<ul>
+<li>Visualization == figures == graphs == plots</li>
+<li>Figures are implicitly publication-quality but fundamentally still graphs</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="data-viz-in-r" class="slide level2 smaller">
+<h2><span class="orange">Data Viz in R</span></h2>
+<p>Two main options for data viz in R:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="base-r">Base R</h3>
+<ul>
+<li>From base R</li>
+<li>Simple but functional</li>
+<li>Base R function syntax</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="ggplot2"><code>ggplot2</code></h3>
+<ul>
+<li>From <code>ggplot2</code> package</li>
+<li>Modular functions allow range of complexity</li>
+<li>Syntax similar to tidyverse but not identical</li>
+<li>Name derived from <em>Grammar of Graphics</em></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="data-viz-in-r-1" class="slide level2 smaller">
+<h2><span class="orange">Data Viz in R</span></h2>
+<p>Two main options for data viz in R:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="base-r-1">Base R</h3>
+<p><br>
+</p>
+<p><img src="images/graph-base-plot.png" alt="Example 'base R' graph with a simple aesthetic"></p>
+</div><div class="column" style="width:50%;">
+<h3 id="ggplot2-1"><code>ggplot2</code></h3>
+<p><img src="images/graph-ggplot2.png" alt="Example ggplot2 graph with classic ggplot2-aesthetics"></p>
+</div>
+</div>
+</section>
+<section id="plot-structure-ggplot2" class="slide level2 smaller">
+<h2><span class="orange">Plot Structure: <code>ggplot2</code></span></h2>
+<ul>
+<li>Requires three components (+ optional fourth)</li>
+</ul>
+<p><br>
+</p>
+<ol type="1">
+<li><span class="purple">Data object</span> to plot</li>
+</ol>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Mapping <span class="purple">aesthetics</span>
+<ul>
+<li>E.g., which column is on each axis, etc.</li>
+<li>I.e., which variable is “mapped to” a given plot component</li>
+</ul></li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>One or more <span class="purple">geometries</span>
+<ul>
+<li>Determines what type of plot you have</li>
+</ul></li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="4" type="1">
+<li><span class="purple">Theme</span> elements
+<ul>
+<li>Controls plot-level formatting</li>
+</ul></li>
+</ol>
+</div>
+</section>
+<section id="core-ggplot-creation" class="slide level2 smaller">
+<h2><span class="orange">Core ggplot Creation</span></h2>
+<ul>
+<li>Core plot is just <span class="purple">data object</span> + <span class="purple">aesthetics</span>
+<ul>
+<li>Tells ggplot to create a plot with specified axes</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Data object is inherited by <em>every</em> other layer of the plot
+<ul>
+<li>So only needs to be specified once!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>What aesthetics can you specify?
+<ul>
+<li>X/Y axes</li>
+<li>Color(s) of geometries</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="core-graph-syntax" class="slide level2">
+<h2><span class="orange">Core Graph Syntax</span></h2>
+<ul>
+<li>Fundamental graph syntax requires two functions:
+<ol type="1">
+<li><code>ggplot</code></li>
+<li><code>aes</code></li>
+</ol></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Check out this example:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Make a simple `ggplot2` plot</span></span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="core-ggplot2" class="slide level2 smaller">
+<h2><span class="pink">Core <code>ggplot2</code></span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Get prepared for this practice
+<ul>
+<li>Create a script for this week</li>
+<li>Download and read in the “minnow.csv” data</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Using <code>ggplot2</code>, make a graph with the minnow data where:
+<ul>
+<li>Fish species is on the X axis</li>
+<li>Diameter of fish nest is on the Y axis</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>What does the resulting graph look like?</li>
+</ul>
+</div>
+</section>
+<section id="core-ggplot2-1" class="slide level2">
+<h2><span class="pink">Core <code>ggplot2</code></span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><br>
+</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_6a_files/figure-revealjs/ex-graph-v1-1.png" class="quarto-figure quarto-figure-center" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-type-geometries" class="slide level2 smaller">
+<h2><span class="orange">Plot Type &amp; Geometries</span></h2>
+<ul>
+<li>Why does the plot not have anything on it?
+<ul>
+<li>Because <code>ggplot2</code> needs you to specify your [geometry]{.purple!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Geometries are functions you add to a plot to make the desired plot type
+<ul>
+<li>All start with <code>geom_...</code></li>
+<li>E.g., <code>geom_bar</code>, <code>geom_point</code>, etc.</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Geometry determines the type of plot
+<ul>
+<li>E.g., bar plot, scatterplot, etc.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="adding-elements" class="slide level2 smaller">
+<h2><span class="orange">Adding Elements</span></h2>
+<ul>
+<li>Use <code>+</code> to add geometries to a plot</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Example syntax:</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Make a simple `ggplot2` plot</span></span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var)) <span class="sc">+</span></span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make it a scatterplot</span></span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>This syntax is <u>unique to <code>ggplot2</code></u>
+<ul>
+<li>Refers to stacked layers of plot information</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="geometries" class="slide level2 smaller">
+<h2><span class="pink">Geometries</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Let’s practice adding geometries!
+<ul>
+<li>Copy the code you wrote for the previous graph</li>
+<li>Add a <code>+</code> to the end of the line</li>
+<li>In the next line add <code>geom_point()</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>What does that give you?</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Copy that code and change <code>geom_point()</code> to <code>geom_boxplot()</code>
+<ul>
+<li>What do you have now?</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="geometries-1" class="slide level2">
+<h2><span class="pink">Geometries</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_6a_files/figure-revealjs/ex-graph-v2a-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_6a_files/figure-revealjs/ex-graph-v2b-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section id="temperature-check" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
 <h4 id="how-are-you-feeling">How are you Feeling?</h4>
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+</section>
+<section id="geometries-cont." class="slide level2 smaller">
+<h2><span class="orange">Geometries Cont.</span></h2>
+<ul>
+<li>Geometries “know” what data to use because of your core plot
+<ul>
+<li>I.e., in your top-level <code>ggplot</code> and <code>aes</code> functions</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Geometries do support arguments but minimal graphs don’t use them</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Mappings/aesthetics inherited from top to bottom</li>
+</ul>
+</div>
+</section>
+<section id="multiple-geometries" class="slide level2 smaller">
+<h2><span class="orange">Multiple Geometries</span></h2>
+<ul>
+<li>You can add multiple geometries to the <em>same</em> plot!
+<ul>
+<li>But order matters!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Geometries added later are “in front” of earlier geometries</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Similar to how first geometry is “in front” of core ggplot</li>
+</ul>
+</div>
+</section>
+<section id="multiple-geometries-1" class="slide level2 smaller">
+<h2><span class="pink">Multiple Geometries</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Make a graph with both <code>geom_boxplot</code> and <code>geom_point</code>
+<ul>
+<li>Add a <code>+</code> after whichever you put first, then put the other</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>What happens if <code>geom_boxplot</code> is first?</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Versus if <code>geom_point</code> is first?</li>
+</ul>
+</div>
+</section>
+<section id="multiple-geometries-2" class="slide level2 smaller">
+<h2><span class="pink">Multiple Geometries</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_6a_files/figure-revealjs/ex-graph-v3a-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_6a_files/figure-revealjs/ex-graph-v3b-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>See how points are “behind” boxplots on the left?</p>
+</section>
+<section id="axis-titles" class="slide level2 smaller">
+<h2><span class="orange">Axis Titles</span></h2>
+<ul>
+<li>Axis titles default to column name passed to <code>aes</code></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Good column names are usually not good plot axis labels!</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Column names should have no spaces / may or may not be capitalized
+<ul>
+<li>Plot axes should have spaces and be at least somewhat capitalized</li>
+<li>Units may be in parentheses</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="manual-axis-labels" class="slide level2 smaller">
+<h2><span class="orange">Manual Axis Labels</span></h2>
+<ul>
+<li>Can set labels manually to be prettier with <code>labs</code> function!</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li><code>labs</code> has arguments <code>x</code> and <code>y</code> that expect characters to put as titles</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Example syntax:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Make a simple `ggplot2` plot</span></span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var)) <span class="sc">+</span></span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make it a scatterplot</span></span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add custom axis labels</span></span>
+<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Custom X Label"</span>, <span class="at">y =</span> <span class="st">"Custom Y Label"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="axis-labels" class="slide level2 smaller">
+<h2><span class="pink">Axis Labels</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Copy your code for the plot with:
+<ul>
+<li>Both a boxplot and points</li>
+<li>Points in front of boxplots</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Use <code>labs</code> to do do the following:
+<ul>
+<li>Capitalize “species” and “diameter”</li>
+<li>Put “cm” in parentheses on the y-axis</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>What does that graph look like?</li>
+</ul>
+</div>
+</section>
+<section id="axis-labels-1" class="slide level2">
+<h2><span class="pink">Axis Labels</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><br>
+</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_6a_files/figure-revealjs/ex-graph-v4-1.png" class="quarto-figure quarto-figure-center" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="manual-label-cautionary-note" class="slide level2 smaller">
+<h2><span class="orange">Manual Label Cautionary Note</span></h2>
+<ul>
+<li>If you mis-apply the labels your plot will still work but will be wrong</li>
+</ul>
+<p align="center">
+<img src="images/graph-bad-labels.png" alt="Two scatterplots side by side with the same configuration of points but flipped axis labels." width="80%">
+</p>
+<ul>
+<li>Same plot but flipped labels and no way to know which is correct!</li>
+</ul>
+</section>
+<section id="coloring-geometries" class="slide level2 smaller">
+<h2><span class="orange">Coloring Geometries</span></h2>
+<ul>
+<li>You can color geometries by other columns in the data!
+<ul>
+<li>You just need to pass them to the <code>color</code> or <code>fill</code> aesthetics</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Example syntax:</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Make a plot where the color and y-axis are mapped to the same variable</span></span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var, <span class="at">color =</span> y_var)) <span class="sc">+</span></span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make it a scatterplot</span></span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add custom axis labels</span></span>
+<span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Custom X Label"</span>, <span class="at">y =</span> <span class="st">"Custom Y Label"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Color != Fill
+<ul>
+<li>Color = borders / solid points</li>
+<li>Fill = interior of shapes / points</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="geometry-color" class="slide level2 smaller">
+<h2><span class="pink">Geometry Color</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Take the plot you created during the previous practice:
+<ul>
+<li>What happens if you map color to species in the <code>aes</code> call at the top?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Change <code>color</code> to <code>fill</code>. Now what does the plot look like?</li>
+</ul>
+</div>
+</section>
+<section id="geometry-color-1" class="slide level2 smaller">
+<h2><span class="pink">Geometry Color</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><code>color = species</code></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_6a_files/figure-revealjs/ex-graph-v5a-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><code>fill = species</code></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_6a_files/figure-revealjs/ex-graph-v5b-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="geometry-color-2" class="slide level2 smaller">
+<h2><span class="pink">Geometry Color</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>What happens if you map species to <strong>both</strong> <code>color</code> and <code>fill</code>?</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Try it and find out!</li>
+</ul>
+</section>
+<section id="geometry-color-3" class="slide level2 smaller">
+<h2><span class="pink">Geometry Color</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_6a_files/figure-revealjs/ex-graph-v6-1.png" class="quarto-figure quarto-figure-center" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="customizing-colors" class="slide level2">
+<h2><span class="orange">Customizing Colors</span></h2>
+</section>
+<section id="finding-fun-colors" class="slide level2 smaller">
+<h2><span class="orange">Finding Fun Colors</span></h2>
+<ul>
+<li>Coolors (<a href="https://coolors.co/palettes/popular">coolors.co/palettes/popular</a>)
+<ul>
+<li>Many options + search bar to narrow results</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Color Brewer 2.0 (<a href="https://colorbrewer2.org/#type=sequential&amp;scheme=BuGn&amp;n=3">colorbrewer2.org</a>)
+<ul>
+<li>Fewer options but checkbox for colorblind safe palettes only</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Colors identified as “hexadecimal” codes
+<ul>
+<li>Hexadecimal structure: #<strong><span style="color:red">RR</span><span style="color:green">GG</span><span style="color:blue">BB</span></strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="hexadecimal-aside" class="slide level2 smaller">
+<h2><span class="orange">Hexadecimal Aside</span></h2>
+<ul>
+<li>Hexadecimal = 16 digits
+<ul>
+<li>0-9 + a-f</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Red/Green/Blue hues can be between 0 and 255
+<ul>
+<li>“Colors” are combinations of 0-255 of R/G/B</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Color with regular numbers = #<strong><span style="color:red">RRR</span><span style="color:green">GGG</span><span style="color:blue">BBB</span></strong>
+<ul>
+<li>If using hexadecimals: three fewer numbers to store in a computer</li>
+<li>Each color x 10<sup>3</sup>-10<sup>6</sup>s of pixels would compound “extra” digits’ memory demands</li>
+</ul></li>
+</ul>
+</section>
+<section id="manually-setting-colors" class="slide level2 smaller">
+<h2><span class="orange">Manually Setting Colors</span></h2>
+<ul>
+<li>Use <code>scale_fill_manual()</code> or <code>scale_color_manual()</code>
+<ul>
+<li>Each has one argument: <code>values</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Needs a <strong>named vector</strong> of hexadecimal codes
+<ul>
+<li>E.g., <code>c("name 1" = "entry 1", "name 2" = "entry 2", ...)</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Example syntax:</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Make a plot where the color and y-axis are mapped to the same variable</span></span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var, <span class="at">color =</span> y_var)) <span class="sc">+</span></span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make it a scatterplot</span></span>
+<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb5-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add custom axis labels</span></span>
+<span id="cb5-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Custom X Label"</span>, <span class="at">y =</span> <span class="st">"Custom Y Label"</span>) <span class="sc">+</span></span>
+<span id="cb5-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Customize colors</span></span>
+<span id="cb5-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"name 1"</span> <span class="ot">=</span> <span class="st">"#00FF00"</span>, <span class="st">"name 2"</span> <span class="ot">=</span> <span class="st">"#FF0000"</span>, <span class="st">"name 3"</span> <span class="ot">=</span> <span class="st">"#0000FF"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="set-colors" class="slide level2 smaller">
+<h2><span class="pink">Set Colors</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>To the graph you made in the previous practice:
+<ul>
+<li>Make species <u>fill</u> with custom colors</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Visit one of the sites I suggested to pick your colors
+<ul>
+<li>Coolors (<a href="https://coolors.co/palettes/popular">coolors.co/palettes/popular</a>)</li>
+<li>Color Brewer 2.0 (<a href="https://colorbrewer2.org/#type=sequential&amp;scheme=BuGn&amp;n=3">colorbrewer2.org</a>)</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What does that final plot look like?</li>
+</ul>
+</section>
+<section id="set-colors-1" class="slide level2 smaller">
+<h2><span class="pink">Set Colors</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_6a_files/figure-revealjs/ex-graph-v7-1.png" class="quarto-figure quarto-figure-center" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="temperature-check-1" class="slide level2">
+<h2><span class="purple">Temperature Check</span></h2>
+<h4 id="how-are-you-feeling-1">How are you Feeling?</h4>
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
@@ -374,13 +1211,13 @@ Lecture 6 – Visualization I
 <h3 id="due-before-lab">Due before lab</h3>
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
-<li>Muddiest Point #x</li>
+<li>Muddiest Point #6</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="due-before-lecture">Due before lecture</h3>
 <h4 id="by-midnight-1">(By midnight)</h4>
 <ul>
-<li>X</li>
+<li>Homework #6</li>
 </ul>
 </div>
 </div>
