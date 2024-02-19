@@ -636,10 +636,11 @@ ggplot(data = fish_df, mapping = aes(x = species, y = diameter_cm,
         axis.title = element_text(size = 17))
 ```
 
-## [Customizing Colors]{.orange}
+## [Customizing Colors]{.orange} {.smaller}
 
-
-
+<p align="center">
+<img src="memes/custom-colors.png" alt="Meme where Pedro Pascal is saying 'life is good but it could be better' in two panels. Top panel is a default color graph then bottom panel is the same graph with custom colors" width="80%">
+</p>
 
 ## [Finding Fun Colors]{.orange} {.smaller}
 
