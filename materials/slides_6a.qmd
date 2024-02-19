@@ -28,7 +28,13 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- Function Tutorial Debrief
+- Data Visualization with `ggplot2`
+    - Core ggplot
+    - Adding geometries
+    - Multiple geometries
+    - Setting color
+    - Customizing colors
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -36,7 +42,213 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Discuss presentations and articulate plans for revision
+- Create `ggplot2` graphs
+- Modify `ggplot2` graph aesthetics and customize labels / colors
+
+## [Function Tutorial Debrief]{.gold}
+
+- How did y'all feel that went?
+
+\
+
+. . .
+
+- What do you plan on doing differently for the 2^nd^ presentation?
+
+\
+
+. . .
+
+- What questions do you have about the revision process / 2nd draft?
+
+## [Data Visualization]{.orange} {.smaller}
+
+- Fundamental part of scientific process
+
+\
+
+. . .
+
+- Important for:
+    - Figures in papers / presentations
+    - "Eyeball test" of statistical results
+    - Identifying errors in data (e.g., unreasonably high/low points, typos, etc.)
+
+\
+
+. . .
+
+- Note on word choice
+    - Visualization == figures == graphs == plots
+    - Figures are implicitly publication-quality but fundamentally still graphs
+
+## [Data Viz in R]{.orange}
+
+
+
+
+## [Plot Structure: `ggplot2`]{.orange}
+
+
+
+
+## [Core ggplot Creation]{.orange}
+
+
+
+
+## [Core Graph Syntax]{.orange}
+
+
+
+
+## [Core `ggplot2`]{.pink}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+## [Core `ggplot2`]{.pink}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+## [Plot Type & Geometries]{.orange}
+
+
+
+
+## [Geometries]{.pink}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+
+
+## [Geometries]{.pink}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
+
+
+
+## [Geometries Cont.]{.orange}
+
+
+
+
+## [Multiple Geometries]{.orange}
+
+
+
+
+
+
+## [Multiple Geometries]{.pink}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+
+## [Multiple Geometries]{.pink}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+
+## [Axis Titles]{.orange}
+
+
+
+
+## [Manual Axis Labels]{.orange}
+
+
+
+
+## [Axis Labels]{.pink}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+## [Axis Labels]{.pink}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+## [Manual Label Cuationary Note]{.orange}
+
+
+
+
+
+## [Coloring Geometries]{.orange}
+
+
+
+
+## [Geometry Color]{.pink}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+
+## [Geometry Color]{.pink}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+## [Customizing Colors]{.orange}
+
+
+
+
+## [Finding Fun Colors]{.orange}
+
+
+
+
+## [Hexadecimal Aside]{.orange}
+
+
+
+
+## [Manually Setting Colors]{.orange}
+
+
+
+
+## [Set Colors]{.pink}
+
+
+
+
 
 ## [Temperature Check]{.purple}
 
@@ -51,26 +263,22 @@ After today's session you will be able to:
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lab
 
 #### (By midnight)
 
-- Muddiest Point \#x
+- Muddiest Point \#6
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lecture
 
 #### (By midnight)
 
-- X
+- Homework \#6
 
 :::
-
 ::::
-
