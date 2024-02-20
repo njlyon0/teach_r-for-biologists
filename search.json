@@ -689,35 +689,42 @@
     "href": "materials/slides_6b.html#ggplot2-review",
     "title": "Intro to Data Science",
     "section": "ggplot2 Review",
-    "text": "ggplot2 Review"
+    "text": "ggplot2 Review\n\nggplots require: (1) data, (2) aesthetics, (3) geometries\n\nOptionally can mess with theme parameters"
   },
   {
     "objectID": "materials/slides_6b.html#theme-internal-structure",
     "href": "materials/slides_6b.html#theme-internal-structure",
     "title": "Intro to Data Science",
     "section": "Theme Internal Structure",
-    "text": "Theme Internal Structure"
+    "text": "Theme Internal Structure\n\nTheme is composed of elements\n\n\n\n\nElements can be modified as desired inside of theme function\n\n\n\n\nEach type of element has a different ‘helper function’ needed to modify that element\n\nChange text = use element_text\nChange line = use element_line\nRemove an element with element_blank"
   },
   {
-    "objectID": "materials/slides_6b.html#removing-gridlines",
-    "href": "materials/slides_6b.html#removing-gridlines",
+    "objectID": "materials/slides_6b.html#theme-syntax",
+    "href": "materials/slides_6b.html#theme-syntax",
     "title": "Intro to Data Science",
-    "section": "Removing Gridlines",
-    "text": "Removing Gridlines"
+    "section": "Theme Syntax",
+    "text": "Theme Syntax\n\nYou use the theme function once with as many element_... functions as you need\n\n\n\n\nHere’s an example of the proper syntax\n\n# Make a simple scatterplot\nggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +\n    geom_point() +\n    # Modify its theme to make the axis font size bigger\n    theme(axis.text = element_text(size = 20),\n          # Also remove the grid lines\n          panel.grid = element_blank())\n\n\n\n\nNote how the theme and element_... functions are used together"
+  },
+  {
+    "objectID": "materials/slides_6b.html#gridline-theme-components",
+    "href": "materials/slides_6b.html#gridline-theme-components",
+    "title": "Intro to Data Science",
+    "section": "Gridline Theme Components",
+    "text": "Gridline Theme Components\n\nYou’ll learn theme element names as you work more with ggplot2\n\n\n\n\n\nHere are a few broadly relevant ones:\n\nGridlines = panel.grid\nPlot background = panel.background\nAxis lines (X & Y) = axis.line"
   },
   {
     "objectID": "materials/slides_6b.html#get-ready",
     "href": "materials/slides_6b.html#get-ready",
     "title": "Intro to Data Science",
     "section": "Get Ready",
-    "text": "Get Ready"
+    "text": "Get Ready\n\n\nCreate a script for this week\n\n\n\n\nLoad ggplot2\n\n\n\n\nRead “minnow.csv” into R and check the structure!\n\n\n\n\nCopy the final graph we made last time\n\n\n\n\nAssign the graph to an object"
   },
   {
     "objectID": "materials/slides_6b.html#remove-gridlines",
     "href": "materials/slides_6b.html#remove-gridlines",
     "title": "Intro to Data Science",
     "section": "Remove Gridlines",
-    "text": "Remove Gridlines"
+    "text": "Remove Gridlines\n\n\nTo that graph, add the following code:\n\ntheme(panel.grid = element_blank())\n\n\n\n\n\nWhat does this do to your graph?\n\n\n\n\nWhat happens if you add these two lines as well (inside of the theme parentheses!)?\n\npanel.background = element_blank()\naxis.line = element_line(color = \"black\"))"
   },
   {
     "objectID": "materials/slides_6b.html#remove-gridlines-1",
@@ -731,14 +738,14 @@
     "href": "materials/slides_6b.html#changing-text-size",
     "title": "Intro to Data Science",
     "section": "Changing Text Size",
-    "text": "Changing Text Size"
+    "text": "Changing Text Size\n\nWe can also modify text size inside of theme\n\n\n\n\n\nAxis “title” vs. axis “text”\n\naxis.title = axis label text (given to labs function)\naxis.text = text on axis tick marks\n\n\n\n\n\n\n\n\n\n\nWant to modify just X or Y? Add that to the element name!\n\nE.g., theme(axis.text.x = element_text(...))\n\n\n\n\n\n\nIncrease font size with: element_text(size = 14)"
   },
   {
     "objectID": "materials/slides_6b.html#change-text-size",
     "href": "materials/slides_6b.html#change-text-size",
     "title": "Intro to Data Science",
     "section": "Change Text Size",
-    "text": "Change Text Size"
+    "text": "Change Text Size\n\n\nTake your most recent graph\n\nNo gridlines, no background gray square, black axis lines\n\n\n\n\n\n\nAnd make the following tweaks:\n\nMake the axis title font size 15\nMake the axis text font size 13\n\n\n\n\n\n\n\nWhat does that leave you with?"
   },
   {
     "objectID": "materials/slides_6b.html#change-text-size-1",
@@ -752,14 +759,21 @@
     "href": "materials/slides_6b.html#customizing-legend",
     "title": "Intro to Data Science",
     "section": "Customizing Legend",
-    "text": "Customizing Legend"
+    "text": "Customizing Legend\n\nYou can also customize the plot legend in the theme function!\n\nLegend placement = legend.position\nLegend title = legend.title\n\n\n\n\n\n\nlegend.position works differently than most other elements!\n\nInstead of wanting element_... it wants c(&lt;x position&gt;, &lt;y position&gt;)\nPositions range from 0 (left / bottom) to 1 (right / top)"
+  },
+  {
+    "objectID": "materials/slides_6b.html#customizing-legend-syntax",
+    "href": "materials/slides_6b.html#customizing-legend-syntax",
+    "title": "Intro to Data Science",
+    "section": "Customizing Legend Syntax",
+    "text": "Customizing Legend Syntax\n\nCheck out an example where we put the legend in the middle of the plot\n\n# Example scatterplot\nggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +\n    geom_point() +\n    # With legend in the middle of the space\n    theme(legend.position = c(0.5, 0.5))\n\n\n\n\nThat graph would have the legend in both:\n\nthe center (left / right)\nthe middle (top / bottom)"
   },
   {
     "objectID": "materials/slides_6b.html#customize-legend",
     "href": "materials/slides_6b.html#customize-legend",
     "title": "Intro to Data Science",
     "section": "Customize Legend",
-    "text": "Customize Legend"
+    "text": "Customize Legend\n\n\nTo the graph you created last practice:\n\nRemove the legend title\nExperiment with legend placement until you’re happy\n\n\n\n\n\nYou may put the legend wherever you’d like but:\n\nIt should not overlap any points / boxplots\n\n\n\n\n\nWhat does that graph look like?"
   },
   {
     "objectID": "materials/slides_6b.html#customize-legend-1",

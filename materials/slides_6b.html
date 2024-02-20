@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -386,44 +451,321 @@ Lab 6 – Visualization II
 </section>
 <section id="ggplot2-review" class="slide level2 smaller">
 <h2><span class="orange"><code>ggplot2</code> Review</span></h2>
+<ul>
+<li>ggplots require: (1) data, (2) aesthetics, (3) geometries
+<ul>
+<li>Optionally can mess with <code>theme</code> parameters</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_6b_files/figure-revealjs/ex-graph-v7-1.png" class="quarto-figure quarto-figure-center" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="theme-internal-structure" class="slide level2 smaller">
 <h2><span class="orange">Theme Internal Structure</span></h2>
+<ul>
+<li>Theme is composed of <span class="purple">elements</span></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Elements can be modified as desired inside of <code>theme</code> function</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Each type of element has a different ‘helper function’ needed to modify that element
+<ul>
+<li>Change text = use <code>element_text</code></li>
+<li>Change line = use <code>element_line</code></li>
+<li><em>Remove</em> an element with <code>element_blank</code></li>
+</ul></li>
+</ul>
 </section>
-<section id="removing-gridlines" class="slide level2 smaller">
-<h2><span class="orange">Removing Gridlines</span></h2>
+<section id="theme-syntax" class="slide level2 smaller">
+<h2><span class="orange">Theme Syntax</span></h2>
+<ul>
+<li>You use the <code>theme</code> function <em>once</em> with as many <code>element_...</code> functions as you need</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Here’s an example of the proper syntax</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Make a simple scatterplot</span></span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var)) <span class="sc">+</span></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Modify its theme to make the axis font size bigger</span></span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">20</span>),</span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a>          <span class="co"># Also remove the grid lines</span></span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a>          <span class="at">panel.grid =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Note how the <code>theme</code> and <code>element_...</code> functions are used together</li>
+</ul>
+</div>
+</section>
+<section id="gridline-theme-components" class="slide level2 smaller">
+<h2><span class="orange">Gridline Theme Components</span></h2>
+<ul>
+<li>You’ll learn theme element names as you work more with <code>ggplot2</code></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Here are a few broadly relevant ones:
+<ul>
+<li>Gridlines = <code>panel.grid</code></li>
+<li>Plot background = <code>panel.background</code></li>
+<li>Axis lines (X &amp; Y) = <code>axis.line</code></li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="get-ready" class="slide level2 smaller">
 <h2><span class="pink">Get Ready</span></h2>
 <p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ol type="1">
+<li>Create a script for this week</li>
+</ol>
+<p><br>
+</p>
+<ol start="2" type="1">
+<li>Load <code>ggplot2</code></li>
+</ol>
+<p><br>
+</p>
+<ol start="3" type="1">
+<li>Read “minnow.csv” into R and check the structure!</li>
+</ol>
+<p><br>
+</p>
+<ol start="4" type="1">
+<li>Copy the <em>final</em> graph we made last time</li>
+</ol>
+<p><br>
+</p>
+<ol start="5" type="1">
+<li>Assign the graph to an object</li>
+</ol>
 </section>
 <section id="remove-gridlines" class="slide level2 smaller">
 <h2><span class="pink">Remove Gridlines</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>To that graph, add the following code:
+<ul>
+<li><code>theme(panel.grid = element_blank())</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What does this do to your graph?</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What happens if you add these two lines as well (<strong>inside</strong> of the <code>theme</code> parentheses!)?
+<ul>
+<li><code>panel.background = element_blank()</code></li>
+<li><code>axis.line = element_line(color = "black"))</code></li>
+</ul></li>
+</ul>
 </section>
 <section id="remove-gridlines-1" class="slide level2 smaller">
 <h2><span class="pink">Remove Gridlines</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_6b_files/figure-revealjs/ex-graph-v8a-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_6b_files/figure-revealjs/ex-graph-v8b-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="changing-text-size" class="slide level2 smaller">
 <h2><span class="orange">Changing Text Size</span></h2>
+<ul>
+<li>We can also modify text size inside of <code>theme</code></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Axis “<span class="purple">title</span>” vs.&nbsp;axis “<span class="gold">text</span>”
+<ul>
+<li><code>axis.title</code> = axis label text (given to <code>labs</code> function)</li>
+<li><code>axis.text</code> = text on axis tick marks</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<p><img data-src="images/graph-title-v-text.png" class="absolute" style="top: 80px; left: 750px; width: 40%; "></p>
+</div>
+<div class="fragment">
+<ul>
+<li>Want to modify just X or Y? Add that to the element name!
+<ul>
+<li>E.g., <code>theme(axis.text.x = element_text(...))</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<p>Increase font size with: <code>element_text(size = 14)</code></p>
+</div>
 </section>
 <section id="change-text-size" class="slide level2 smaller">
 <h2><span class="pink">Change Text Size</span></h2>
 <p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Take your most recent graph
+<ul>
+<li>No gridlines, no background gray square, black axis lines</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>And make the following tweaks:
+<ul>
+<li>Make the axis <em>title</em> font size 15</li>
+<li>Make the axis <em>text</em> font size 13</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>What does that leave you with?</li>
+</ul>
+</div>
 </section>
 <section id="change-text-size-1" class="slide level2 smaller">
 <h2><span class="pink">Change Text Size</span></h2>
 <p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_6b_files/figure-revealjs/ex-graph-v9-1.png" class="quarto-figure quarto-figure-center" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="customizing-legend" class="slide level2 smaller">
 <h2><span class="orange">Customizing Legend</span></h2>
+<ul>
+<li>You can also customize the plot legend in the <code>theme</code> function!
+<ul>
+<li>Legend placement = <code>legend.position</code></li>
+<li>Legend title = <code>legend.title</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li><code>legend.position</code> works differently than most other elements!
+<ul>
+<li>Instead of wanting <code>element_...</code> it wants <code>c(&lt;x position&gt;, &lt;y position&gt;)</code></li>
+<li>Positions range from 0 (left / bottom) to 1 (right / top)</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="customizing-legend-syntax" class="slide level2 smaller">
+<h2><span class="orange">Customizing Legend Syntax</span></h2>
+<ul>
+<li>Check out an example where we put the legend in the middle of the plot</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Example scatterplot</span></span>
+<span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var)) <span class="sc">+</span></span>
+<span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># With legend in the middle of the space</span></span>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>That graph would have the legend in both:
+<ul>
+<li>the center (left / right)</li>
+<li>the middle (top / bottom)</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="customize-legend" class="slide level2 smaller">
 <h2><span class="pink">Customize Legend</span></h2>
 <p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>To the graph you created last practice:
+<ul>
+<li>Remove the legend title</li>
+<li>Experiment with legend placement until you’re happy</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>You may put the legend wherever you’d like <em>but</em>:
+<ul>
+<li>It <u>should not</u> overlap any points / boxplots</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What does <em>that</em> graph look like?</li>
+</ul>
 </section>
 <section id="customize-legend-1" class="slide level2 smaller">
 <h2><span class="pink">Customize Legend</span></h2>
 <p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_6b_files/figure-revealjs/ex-graph-v10-1.png" class="quarto-figure quarto-figure-center" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="temperature-check" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
@@ -457,11 +799,11 @@ Lab 6 – Visualization II
 </section>
 <section id="plot-grids-1" class="slide level2 smaller">
 <h2><span class="pink">Plot Grids</span></h2>
-<p><img data-src="images/hex-cowplot.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-cowplot.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "></p>
 </section>
 <section id="plot-grids-2" class="slide level2 smaller">
 <h2><span class="pink">Plot Grids</span></h2>
-<p><img data-src="images/hex-cowplot.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-cowplot.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "></p>
 </section>
 <section id="temperature-check-1" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
