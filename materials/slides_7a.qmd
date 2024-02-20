@@ -28,7 +28,10 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- Choose [Lab \#8]{.blue} "Bonus Content"
+- Code Iteration with Loops
+- Conditionals in Loops
+- In-Class Free Work
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -36,7 +39,9 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Describe the contexts where iteration is useful
+- Apply loops to small arithmetic problems
+- Create a loop with a conditional
 
 ## [Temperature Check]{.purple}
 
@@ -48,29 +53,59 @@ After today's session you will be able to:
 
 
 
+
+
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
+## [In-Class Free Work]{.gold} {.smaller}
+
+- Draft 2 of Function Tutorials is due tomorrow!
+    - Presentations during [Lab \#7]{.blue} (this week)!
+    - Requires 'revision response' where you discuss what changes you made due to feedback
+
+\
+
+. . . 
+
+- GitHub Presence is due next week
+    - You have most of what you need for full points on that already
+
+\
+
+. . . 
+
+- Any questions about upcoming assignments / past topics?
+    - I _strongly_ recommend taking advantage of this time!
+
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lab
 
 #### (By midnight)
 
-- Muddiest Point \#x
+- Muddiest Point \#7
+- Submit [Draft 2]{.pink} of Function Tutorials
+    - Remember to include <u>_both_</u> the revised .Rmd _and_ your "revision response"
+    - Check the rubric for more details
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lecture
 
 #### (By midnight)
 
-- X
+- Homework \#7
 
 :::
-
 ::::
-
