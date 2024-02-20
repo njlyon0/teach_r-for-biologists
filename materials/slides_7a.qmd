@@ -45,33 +45,153 @@ After today's session you will be able to:
 
 ## [Bonus Content]{.gold} {.smaller}
 
+- [Lab \#8]{.blue} topic is your choice!
 
+\
+
+- Some options include:
+    - Biodiversity and ecological communities
+    - Pairwise comparisons (i.e., what to do after ANOVA says 'at least one group differs')
+    - Heatmaps
+
+\
+
+- What 1-2 topic(s) seem interesting to you?
+    - Feel free to propose topics that aren't listed!
 
 ## [Repeated Operations]{.orange} {.smaller}
 
+- Often we want to repeat a given operation multiple times
+    - I.e., repeat _iteratively_
 
+\
+
+. . . 
+
+- Could just copy/paste our code for each iteration
+    - Labor intensive & inefficient & ugly (IMO)
+
+\
+
+. . . 
+
+- Copy/pasting fails if you need to do something _many_ times
+    - [Code iteration]{.purple} is our solution to these types of problems!
 
 ## [Code Iteration]{.orange} {.smaller}
 
+- Iteration process:
+    1. Define the operation that you want to repeat
+    2. Define what the values to be passed through that operation
+    3. Press "go" and sit back while the code does the work!
 
+\
+
+. . . 
+
+- Benefits:
+    - Much faster than copy/pasting code
+    - Code is more human-readable / navigable
+    - Allows you to do something else while the code iterates itself!
+
+\
+
+. . . 
+
+- This method is named "for loop"
 
 ## [Loop Syntax]{.orange} {.smaller}
 
+- For loops repeat an operation for each value given to them
 
+\
+
+. . .
+
+- Fundamental syntax is as follows:
+```{.r}
+# Start of loop
+for ( index in vector ) {
+
+    # Actual operation of loop
+    function(index) 
+
+} # End of loop
+```
+
+\
+
+. . .
+
+- More info:
+    - index = placeholder for one value in vector
+    - vector = set of values to pass through loop
+    - curly brace (`{`/`}`) to define start/end
 
 ## [Loop Example]{.orange} {.smaller}
 
+- Let's check out an example loop to get more comfortable with these!
 
+\
+
+- Square each integer between 1 and 5
+```{r ex-loop-1}
+#| echo: true
+#| code-line-numbers: "|2|5|8|10"
+
+# Loop across vector of numbers
+for(k in 1:5){
+  
+  # Square that number
+  square_k <- k * k
+  
+  # Print that result
+  print(square_k)
+  
+}
+```
 
 ## [Loop Practice]{.pink} {.smaller}
 
+- Make a vector of numbers between 5 and 25
 
+\
 
+- Write a for loop that takes the square root of each number
+    - Function is `sqrt`
+
+- The loop should print the result for each square root in the Console
+    - Function is `print`
+
+\
+
+. . . 
+
+- Answer:
+```{.r}
+for(j in 5:25){
+  j_root <- sqrt(j)
+  print(j_root)
+}
+```
 
 ## [More Loop Practice]{.pink} {.smaller}
 
+- Write a second loop that:
+    1. multiplies each number by 32
+    2. Prints the result in the console
 
+\
 
+. . .
+
+- Answer:
+```{.r}
+for(i in 5:25){
+  i_mult <- i * 32
+  print(i_mult)
+}
+```
 
 ## [Temperature Check]{.purple}
 
@@ -118,7 +238,9 @@ After today's session you will be able to:
 
 ## [Loop Conditional Visual]{.orange} {.smaller}
 
-
+<p align="center">
+<img src="comics/loop-conditionals.jpg" alt="Comic showing a loop across a set of monster shapes where triangle creatures get sunglasses but non-triangles get a hat because of an 'if' and 'else' use in the loop" width="80%">
+</p>
 
 ## [Loops with Conditionals]{.pink} {.smaller}
 
