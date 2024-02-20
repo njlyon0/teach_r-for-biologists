@@ -21,7 +21,7 @@ format:
 
 # Load needed libraries
 ## install.packages("librarian")
-librarian::shelf(dplyr, ggplot2, cowplot)
+librarian::shelf(dplyr, magrittr, ggplot2, cowplot, palmerpenguins)
 ```
 
 ```{r ext-data}
@@ -362,55 +362,227 @@ fish_graph +
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-
-
-
 ## [Multi-Panel Background]{.orange} {.smaller}
 
+::::{.columns}
+:::{.column width="65%"}
+- Sometimes nice to have multiple graphs next to each other
+    - Makes direct comparison easier
+    - Journals have limits on number of figures but multi-panels still count as 1
 
+\
+
+- Two methods (for ggplots):
+    1. `ggplot2::facet_...`
+    2. `cowplot::plot_grid()`
+
+:::
+:::{.column width="35%"}
+
+<img src="images/graph-multi-panel.jpg" alt="Three panels of maps of the continental US where each panel shows conditions under a different climate change future" align="right">
+
+:::
+::::
 
 ## [Facted Graphs]{.orange} {.smaller}
 
+- `ggplot2` has an internal way of handling this called [facets]{.purple}
 
+\
+
+- Facets work just like geometries
+    - You get separate plots for each level of the facet variable
+
+\
+
+- Facets must _all_ be the same plot type and _have identical axes_
+    - Sometimes not an issue but good to keep in mind!
+
+## [Fact Syntax]{.orange} {.smaller}
+
+- To facet into 1 row x many columns:
+```{.r}
+# Example scatterplot
+ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
+    geom_point() +
+    # Facet into rows of some other variable
+    facet_grid(. ~ facet_variable)
+```
+
+\
+
+. . .
+
+- To facet into many rows x 1 column:
+```{.r}
+# Example scatterplot
+ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
+    geom_point() +
+    # Facet into rows of some other variable
+    facet_grid(facet_variable ~ .)
+```
 
 ## [Facet Example]{.orange} {.smaller}
 
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%"}
 
+- `facet_grid(. ~ island)`
+
+```{r ex-facet}
+#| fig-width: 6
+#| fig-align: center
+
+# Take the penguin data and remove NA values
+peng_df <- palmerpenguins::penguins %>%
+  dplyr::filter(!is.na(flipper_length_mm) & !is.na(body_mass_g))
+
+# Generate scatterplot
+ggplot(data = peng_df, aes(x = body_mass_g, y = flipper_length_mm, color = species)) + 
+  geom_point() +
+  geom_smooth(method = "lm", formula = "y ~ x", se = F) +
+  # facet_grid(island ~ .) + # 3 rows x 1 column
+  facet_grid(. ~ island) + # 3 columns by 1 row
+  labs(x = "Body Mass (g)", y = "Flipper Length (mm)") +
+  supportR::theme_lyon() +
+  theme(legend.position = c(0.87, 0.85))
+```
 
 ## [Facet]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+- Using the fish data, make a new graph that:
+    - Has nest _diameter_ on the X axis
+    - Has nest _depth_ on the Y axis
+    - Is a scatterplot
+    - Faceted by species
+    - Plus any additional `theme` tweaks you want to make!
 
+\
 
+- What does your plot look like?
 
 ## [Facet]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+```{r ex-graph-v11}
+#| fig-width: 6
+#| fig-align: center
+
+# Make desired graph
+ggplot(data = fish_df, aes(x = diameter_cm, y = depth_cm, color = species)) +
+  geom_point() +
+  facet_grid(. ~ species) +
+  theme_bw() +
+  theme(legend.position = "none")
+```
 
 ## [Plot Grids]{.orange} {.smaller}
 
+- Facets work great when all panels are the same
+    - What about when you have several types of graph?
 
+\
 
+. . . 
+
+- `cowplot::plot_grid` lets you put multiple different graphs together
+
+\
+
+. . . 
+
+- Have to make graphs _separately_ first, _then_ combine them
+
+\
+
+. . . 
+
+- Example syntax: 
+    - `cowplot::plot_grid(plot1, plot2, ncol = 1, nrow = 2)`
+    - A lot of other optional arguments
 
 ## [Plot Grid Example]{.orange} {.smaller}
 
+```{r ex-multi-panel}
+#| fig-width: 10
+#| fig-align: center
 
+# Make faceted plot
+first <- penguins %>%
+  dplyr::filter(!is.na(sex) & !is.na(flipper_length_mm)) %>%
+  ggplot(aes(x = sex, y = flipper_length_mm, fill = sex)) +
+  geom_jitter(alpha = 0.3, width = 0.15) +
+  geom_violin(alpha = 0.5) +
+  labs(x = "Sex", y = "Flipper Length (mm)") +
+  scale_fill_manual(values = c("pink", "navy")) +
+  supportR::theme_lyon() +
+  theme(legend.position = "none")
 
+# Make a second graph
+second <- penguins %>% 
+  dplyr::filter(!is.na(species) & !is.na(body_mass_g)) %>%
+  ggplot(aes(x = species, y = body_mass_g, fill = species)) +
+  coord_flip() +
+  geom_boxplot(alpha = 0.5) +
+  labs(x = "Species", y = "Body Mass (g)") +
+  scale_fill_manual(values = c("#8ecae6", "#219ebc", "#023047")) +
+  supportR::theme_lyon() +
+  theme(legend.position = "none")
+
+# Assemble plot grid
+cowplot::plot_grid(first, second, labels = "AUTO", ncol = 2, nrow = 1)
+```
 
 ## [Plot Grids]{.pink} {.smaller}
 
 ![](images/hex-cowplot.png){.absolute top=0 left=1100 width="12%"}
 ![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%"}
 
+- Make two graphs using the fish data:
 
+1. Copy your faceted graph of diameter vs. depth
+    - But remove the facet by species
+
+2. Make a boxplot with flow on the y-axis and species on the x-axis
+
+\
+
+- Using `plot_grid`, make a multi-panel graph with these two graphs
+    - Make them side by side (I.e., 2 columns, 1 row)
 
 ## [Plot Grids]{.pink} {.smaller}
 
 ![](images/hex-cowplot.png){.absolute top=0 left=1100 width="12%"}
 ![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%"}
 
+\
+\
+
+```{r ex-graph-v12}
+#| fig-width: 10
+#| fig-align: center
+
+# Make desired graph
+fish1 <- ggplot(data = fish_df, aes(x = diameter_cm, y = depth_cm, color = species)) +
+  geom_point() +
+  # facet_grid(. ~ species) +
+  labs(x = "Diameter (cm)", y = "Depth (cm)") +
+  theme_bw() +
+  theme(legend.position = "none")
+
+# Make second desired graph
+fish2 <- ggplot(data = fish_df, aes(x = species, y = flow_cfs, color = species)) +
+  geom_boxplot() +
+  labs(x = "Species", y = "Flow (cubic feet / second)") +
+  theme_bw() +
+  theme(legend.position = "none")
+
+# Assemble into a multi-panel graph
+cowplot::plot_grid(fish1, fish2, labels = "AUTO", ncol = 2, nrow = 1)
+```
 
 ## [Temperature Check]{.purple}
 
@@ -419,7 +591,6 @@ fish_graph +
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
-
 
 ## [GitHub Presence FAQ]{.orange} {.smaller}
 
