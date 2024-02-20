@@ -776,34 +776,197 @@ Lab 6 – Visualization II
 </section>
 <section id="multi-panel-background" class="slide level2 smaller">
 <h2><span class="orange">Multi-Panel Background</span></h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<ul>
+<li>Sometimes nice to have multiple graphs next to each other
+<ul>
+<li>Makes direct comparison easier</li>
+<li>Journals have limits on number of figures but multi-panels still count as 1</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Two methods (for ggplots):
+<ol type="1">
+<li><code>ggplot2::facet_...</code></li>
+<li><code>cowplot::plot_grid()</code></li>
+</ol></li>
+</ul>
+</div><div class="column" style="width:35%;">
+<p><img src="images/graph-multi-panel.jpg" alt="Three panels of maps of the continental US where each panel shows conditions under a different climate change future" align="right"></p>
+</div>
+</div>
 </section>
 <section id="facted-graphs" class="slide level2 smaller">
 <h2><span class="orange">Facted Graphs</span></h2>
+<ul>
+<li><code>ggplot2</code> has an internal way of handling this called <span class="purple">facets</span></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Facets work just like geometries
+<ul>
+<li>You get separate plots for each level of the facet variable</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Facets must <em>all</em> be the same plot type and <em>have identical axes</em>
+<ul>
+<li>Sometimes not an issue but good to keep in mind!</li>
+</ul></li>
+</ul>
+</section>
+<section id="fact-syntax" class="slide level2 smaller">
+<h2><span class="orange">Fact Syntax</span></h2>
+<ul>
+<li>To facet into 1 row x many columns:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Example scatterplot</span></span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var)) <span class="sc">+</span></span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Facet into rows of some other variable</span></span>
+<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_grid</span>(. <span class="sc">~</span> facet_variable)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>To facet into many rows x 1 column:</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Example scatterplot</span></span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var)) <span class="sc">+</span></span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Facet into rows of some other variable</span></span>
+<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">facet_grid</span>(facet_variable <span class="sc">~</span> .)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="facet-example" class="slide level2 smaller">
 <h2><span class="orange">Facet Example</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "></p>
+<ul>
+<li><code>facet_grid(. ~ island)</code></li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_6b_files/figure-revealjs/ex-facet-1.png" class="quarto-figure quarto-figure-center" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="facet" class="slide level2 smaller">
 <h2><span class="pink">Facet</span></h2>
 <p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Using the fish data, make a new graph that:
+<ul>
+<li>Has nest <em>diameter</em> on the X axis</li>
+<li>Has nest <em>depth</em> on the Y axis</li>
+<li>Is a scatterplot</li>
+<li>Faceted by species</li>
+<li>Plus any additional <code>theme</code> tweaks you want to make!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What does your plot look like?</li>
+</ul>
 </section>
 <section id="facet-1" class="slide level2 smaller">
 <h2><span class="pink">Facet</span></h2>
 <p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_6b_files/figure-revealjs/ex-graph-v11-1.png" class="quarto-figure quarto-figure-center" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="plot-grids" class="slide level2 smaller">
 <h2><span class="orange">Plot Grids</span></h2>
+<ul>
+<li>Facets work great when all panels are the same
+<ul>
+<li>What about when you have several types of graph?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li><code>cowplot::plot_grid</code> lets you put multiple different graphs together</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Have to make graphs <em>separately</em> first, <em>then</em> combine them</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Example syntax:
+<ul>
+<li><code>cowplot::plot_grid(plot1, plot2, ncol = 1, nrow = 2)</code></li>
+<li>A lot of other optional arguments</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="plot-grid-example" class="slide level2 smaller">
 <h2><span class="orange">Plot Grid Example</span></h2>
-</section>
+
+<img data-src="slides_6b_files/figure-revealjs/ex-multi-panel-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
 <section id="plot-grids-1" class="slide level2 smaller">
 <h2><span class="pink">Plot Grids</span></h2>
 <p><img data-src="images/hex-cowplot.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "></p>
+<ul>
+<li>Make two graphs using the fish data:</li>
+</ul>
+<ol type="1">
+<li>Copy your faceted graph of diameter vs.&nbsp;depth
+<ul>
+<li>But remove the facet by species</li>
+</ul></li>
+<li>Make a boxplot with flow on the y-axis and species on the x-axis</li>
+</ol>
+<p><br>
+</p>
+<ul>
+<li>Using <code>plot_grid</code>, make a multi-panel graph with these two graphs
+<ul>
+<li>Make them side by side (I.e., 2 columns, 1 row)</li>
+</ul></li>
+</ul>
 </section>
 <section id="plot-grids-2" class="slide level2 smaller">
 <h2><span class="pink">Plot Grids</span></h2>
 <p><img data-src="images/hex-cowplot.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "></p>
+<p><br>
+<br>
+</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="slides_6b_files/figure-revealjs/ex-graph-v12-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="temperature-check-1" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>

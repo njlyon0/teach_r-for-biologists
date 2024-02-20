@@ -794,28 +794,35 @@
     "href": "materials/slides_6b.html#multi-panel-background",
     "title": "Intro to Data Science",
     "section": "Multi-Panel Background",
-    "text": "Multi-Panel Background"
+    "text": "Multi-Panel Background\n\n\n\nSometimes nice to have multiple graphs next to each other\n\nMakes direct comparison easier\nJournals have limits on number of figures but multi-panels still count as 1\n\n\n\n\n\nTwo methods (for ggplots):\n\nggplot2::facet_...\ncowplot::plot_grid()"
   },
   {
     "objectID": "materials/slides_6b.html#facted-graphs",
     "href": "materials/slides_6b.html#facted-graphs",
     "title": "Intro to Data Science",
     "section": "Facted Graphs",
-    "text": "Facted Graphs"
+    "text": "Facted Graphs\n\nggplot2 has an internal way of handling this called facets\n\n\n\n\nFacets work just like geometries\n\nYou get separate plots for each level of the facet variable\n\n\n\n\n\nFacets must all be the same plot type and have identical axes\n\nSometimes not an issue but good to keep in mind!"
+  },
+  {
+    "objectID": "materials/slides_6b.html#fact-syntax",
+    "href": "materials/slides_6b.html#fact-syntax",
+    "title": "Intro to Data Science",
+    "section": "Fact Syntax",
+    "text": "Fact Syntax\n\nTo facet into 1 row x many columns:\n\n# Example scatterplot\nggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +\n    geom_point() +\n    # Facet into rows of some other variable\n    facet_grid(. ~ facet_variable)\n\n\n\n\nTo facet into many rows x 1 column:\n\n# Example scatterplot\nggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +\n    geom_point() +\n    # Facet into rows of some other variable\n    facet_grid(facet_variable ~ .)"
   },
   {
     "objectID": "materials/slides_6b.html#facet-example",
     "href": "materials/slides_6b.html#facet-example",
     "title": "Intro to Data Science",
     "section": "Facet Example",
-    "text": "Facet Example"
+    "text": "Facet Example\n \n\nfacet_grid(. ~ island)"
   },
   {
     "objectID": "materials/slides_6b.html#facet",
     "href": "materials/slides_6b.html#facet",
     "title": "Intro to Data Science",
     "section": "Facet",
-    "text": "Facet"
+    "text": "Facet\n\n\nUsing the fish data, make a new graph that:\n\nHas nest diameter on the X axis\nHas nest depth on the Y axis\nIs a scatterplot\nFaceted by species\nPlus any additional theme tweaks you want to make!\n\n\n\n\n\nWhat does your plot look like?"
   },
   {
     "objectID": "materials/slides_6b.html#facet-1",
@@ -829,7 +836,7 @@
     "href": "materials/slides_6b.html#plot-grids",
     "title": "Intro to Data Science",
     "section": "Plot Grids",
-    "text": "Plot Grids"
+    "text": "Plot Grids\n\nFacets work great when all panels are the same\n\nWhat about when you have several types of graph?\n\n\n\n\n\n\ncowplot::plot_grid lets you put multiple different graphs together\n\n\n\n\n\n\nHave to make graphs separately first, then combine them\n\n\n\n\n\n\nExample syntax:\n\ncowplot::plot_grid(plot1, plot2, ncol = 1, nrow = 2)\nA lot of other optional arguments"
   },
   {
     "objectID": "materials/slides_6b.html#plot-grid-example",
@@ -843,7 +850,7 @@
     "href": "materials/slides_6b.html#plot-grids-1",
     "title": "Intro to Data Science",
     "section": "Plot Grids",
-    "text": "Plot Grids"
+    "text": "Plot Grids\n \n\nMake two graphs using the fish data:\n\n\nCopy your faceted graph of diameter vs. depth\n\nBut remove the facet by species\n\nMake a boxplot with flow on the y-axis and species on the x-axis\n\n\n\n\nUsing plot_grid, make a multi-panel graph with these two graphs\n\nMake them side by side (I.e., 2 columns, 1 row)"
   },
   {
     "objectID": "materials/slides_6b.html#plot-grids-2",
