@@ -348,7 +348,16 @@ Lab 6 – Visualization II
 <section id="todays-plan" class="slide level2">
 <h2><span class="blue">Today’s Plan</span></h2>
 <ul>
-<li>Y</li>
+<li>Muddiest Point Review</li>
+<li>Data Visualization with <code>ggplot2</code>
+<ul>
+<li>Editing <code>theme</code> elements</li>
+</ul></li>
+<li>Multi-Panel Graphs</li>
+<li>GitHub Presence Check-Ins (1-on-1)
+<ul>
+<li><u><em>Not</em></u> graded! Don’t stress!</li>
+</ul></li>
 </ul>
 </section>
 <section id="todays-learning-objectives" class="slide level2">
@@ -356,9 +365,65 @@ Lab 6 – Visualization II
 <p>After today’s session you will be able to:</p>
 <div class="fragment">
 <ul>
-<li>X</li>
+<li>Modify background elements in a <code>ggplot2</code> graph</li>
+<li>Create publication-quality figures with <code>ggplot2</code></li>
+<li>Explain the difference between plot faceting and plot grids</li>
 </ul>
 </div>
+</section>
+<section id="muddiest-point-review" class="slide level2">
+<h2><span class="gold">Muddiest Point Review</span></h2>
+<ul>
+<li>Recurring topics from most recent MPs:</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>What other topic(s) would you like to review?</li>
+</ul>
+</div>
+</section>
+<section id="ggplot2-review" class="slide level2 smaller">
+<h2><span class="orange"><code>ggplot2</code> Review</span></h2>
+</section>
+<section id="theme-internal-structure" class="slide level2 smaller">
+<h2><span class="orange">Theme Internal Structure</span></h2>
+</section>
+<section id="removing-gridlines" class="slide level2 smaller">
+<h2><span class="orange">Removing Gridlines</span></h2>
+</section>
+<section id="get-ready" class="slide level2 smaller">
+<h2><span class="pink">Get Ready</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+</section>
+<section id="remove-gridlines" class="slide level2 smaller">
+<h2><span class="pink">Remove Gridlines</span></h2>
+</section>
+<section id="remove-gridlines-1" class="slide level2 smaller">
+<h2><span class="pink">Remove Gridlines</span></h2>
+</section>
+<section id="changing-text-size" class="slide level2 smaller">
+<h2><span class="orange">Changing Text Size</span></h2>
+</section>
+<section id="change-text-size" class="slide level2 smaller">
+<h2><span class="pink">Change Text Size</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+</section>
+<section id="change-text-size-1" class="slide level2 smaller">
+<h2><span class="pink">Change Text Size</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+</section>
+<section id="customizing-legend" class="slide level2 smaller">
+<h2><span class="orange">Customizing Legend</span></h2>
+</section>
+<section id="customize-legend" class="slide level2 smaller">
+<h2><span class="pink">Customize Legend</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+</section>
+<section id="customize-legend-1" class="slide level2 smaller">
+<h2><span class="pink">Customize Legend</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
 </section>
 <section id="temperature-check" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
@@ -367,6 +432,94 @@ Lab 6 – Visualization II
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 </section>
+<section id="multi-panel-background" class="slide level2 smaller">
+<h2><span class="orange">Multi-Panel Background</span></h2>
+</section>
+<section id="facted-graphs" class="slide level2 smaller">
+<h2><span class="orange">Facted Graphs</span></h2>
+</section>
+<section id="facet-example" class="slide level2 smaller">
+<h2><span class="orange">Facet Example</span></h2>
+</section>
+<section id="facet" class="slide level2 smaller">
+<h2><span class="pink">Facet</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+</section>
+<section id="facet-1" class="slide level2 smaller">
+<h2><span class="pink">Facet</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+</section>
+<section id="plot-grids" class="slide level2 smaller">
+<h2><span class="orange">Plot Grids</span></h2>
+</section>
+<section id="plot-grid-example" class="slide level2 smaller">
+<h2><span class="orange">Plot Grid Example</span></h2>
+</section>
+<section id="plot-grids-1" class="slide level2 smaller">
+<h2><span class="pink">Plot Grids</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+</section>
+<section id="plot-grids-2" class="slide level2 smaller">
+<h2><span class="pink">Plot Grids</span></h2>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+</section>
+<section id="temperature-check-1" class="slide level2">
+<h2><span class="purple">Temperature Check</span></h2>
+<h4 id="how-are-you-feeling-1">How are you Feeling?</h4>
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+</section>
+<section id="github-presence-faq" class="slide level2 smaller">
+<h2><span class="orange">GitHub Presence FAQ</span></h2>
+<ul>
+<li>Worth 40 pts (16% course grade)</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Checklist-style rubric on Canvas</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Due <span class="blue">day before <em>last</em> lab</span></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Can basically finish all of it now though if you want!</li>
+</ul>
+</section>
+<section id="github-presence-assignment" class="slide level2 smaller">
+<h2><span class="orange">GitHub Presence Assignment</span></h2>
+<ul>
+<li>This assignment will seriously help in interviews / job apps!
+<ul>
+<li>Shows how good of a data scientist you are</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>I don’t want anyone caught unawares by this assignment
+<ul>
+<li>So I’ll meet with each of you 1-on-1 today to see where you’re at so far</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Good chance for you to ask any questions you have!
+<ul>
+<li>Also lets me give you tips for success</li>
+</ul></li>
+</ul>
+</div>
+</section>
 <section id="upcoming-due-dates" class="slide level2 smaller">
 <h2><span class="blue">Upcoming Due Dates</span></h2>
 <div class="columns">
@@ -374,16 +527,40 @@ Lab 6 – Visualization II
 <h3 id="due-before-lecture">Due before lecture</h3>
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
-<li>x</li>
+<li>Homework #6</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="due-before-lab">Due before lab</h3>
 <h4 id="by-midnight-1">(By midnight)</h4>
 <ul>
-<li>X</li>
+<li>Muddiest Point #7</li>
+<li>Submit <span class="pink">Draft 2</span> of Function Tutorials
+<ul>
+<li>Double check rubric to see that you’re not leaving any points on the table!</li>
+<li>Remember to also <u>submit the Revision Response</u></li>
+</ul></li>
 </ul>
 </div>
 </div>
+</section>
+<section id="github-1-on-1s" class="slide level2 smaller">
+<h2><span class="gold">GitHub 1-on-1s</span></h2>
+<ul>
+<li>Stick around until we do our 1-on-1</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>After you have met with me you can leave
+<ul>
+<li>Though you’re welcome to stay and work on Homework #6 / course assignments!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Any volunteers to go first?</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
