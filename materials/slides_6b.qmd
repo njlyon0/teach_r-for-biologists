@@ -28,7 +28,12 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- Muddiest Point Review
+- Data Visualization with `ggplot2`
+    - Editing `theme` elements
+- Multi-Panel Graphs
+- GitHub Presence Check-Ins (1-on-1)
+    - <u>_Not_</u> graded! Don't stress!
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -36,7 +41,81 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Modify background elements in a `ggplot2` graph
+- Create publication-quality figures with `ggplot2`
+- Explain the difference between plot faceting and plot grids
+
+## [Muddiest Point Review]{.gold}
+
+- Recurring topics from most recent MPs:
+
+\
+
+. . .
+
+- What other topic(s) would you like to review?
+
+## [`ggplot2` Review]{.orange} {.smaller}
+
+
+
+## [Theme Internal Structure]{.orange} {.smaller}
+
+
+
+## [Removing Gridlines]{.orange} {.smaller}
+
+
+
+## [Get Ready]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+## [Remove Gridlines]{.pink} {.smaller}
+
+
+
+
+## [Remove Gridlines]{.pink} {.smaller}
+
+
+
+
+## [Changing Text Size]{.orange} {.smaller}
+
+
+
+## [Change Text Size]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+## [Change Text Size]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+## [Customizing Legend]{.orange} {.smaller}
+
+
+
+## [Customize Legend]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+## [Customize Legend]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
 
 ## [Temperature Check]{.purple}
 
@@ -48,29 +127,131 @@ After today's session you will be able to:
 
 
 
+
+## [Multi-Panel Background]{.orange} {.smaller}
+
+
+
+## [Facted Graphs]{.orange} {.smaller}
+
+
+
+## [Facet Example]{.orange} {.smaller}
+
+
+
+## [Facet]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+## [Facet]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+## [Plot Grids]{.orange} {.smaller}
+
+
+
+
+## [Plot Grid Example]{.orange} {.smaller}
+
+
+
+
+## [Plot Grids]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+## [Plot Grids]{.pink} {.smaller}
+
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
+
+## [GitHub Presence FAQ]{.orange} {.smaller}
+
+- Worth 40 pts (16% course grade)
+
+\
+
+- Checklist-style rubric on Canvas
+
+\
+
+- Due [day before _last_ lab]{.blue}
+
+\
+
+- Can basically finish all of it now though if you want!
+
+## [GitHub Presence Assignment]{.orange} {.smaller}
+
+- This assignment will seriously help in interviews / job apps!
+    - Shows how good of a data scientist you are
+
+\
+
+. . .
+
+- I don't want anyone caught unawares by this assignment
+    - So I'll meet with each of you 1-on-1 today to see where you're at so far
+
+\
+
+. . .
+
+- Good chance for you to ask any questions you have!
+    - Also lets me give you tips for success
+
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lecture
 
 #### (By midnight)
 
-- x
+- Homework \#6
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lab
 
 #### (By midnight)
 
-- X
+- Muddiest Point \#7
+- Submit [Draft 2]{.pink} of Function Tutorials
+    - Double check rubric to see that you're not leaving any points on the table!
+    - Remember to also <u>submit the Revision Response</u>
 
 :::
-
 ::::
 
+## [GitHub 1-on-1s]{.gold} {.smaller}
+
+- Stick around until we do our 1-on-1
+
+\
+
+- After you have met with me you can leave
+    - Though you're welcome to stay and work on Homework \#6 / course assignments!
+
+\
+
+- Any volunteers to go first?
