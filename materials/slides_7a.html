@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -348,7 +413,10 @@ Lecture 7 – Code Iteration
 <section id="todays-plan" class="slide level2">
 <h2><span class="blue">Today’s Plan</span></h2>
 <ul>
-<li>Y</li>
+<li>Choose <span class="blue">Lab #8</span> “Bonus Content”</li>
+<li>Code Iteration with Loops</li>
+<li>Conditionals in Loops</li>
+<li>In-Class Free Work</li>
 </ul>
 </section>
 <section id="todays-learning-objectives" class="slide level2">
@@ -356,8 +424,205 @@ Lecture 7 – Code Iteration
 <p>After today’s session you will be able to:</p>
 <div class="fragment">
 <ul>
-<li>X</li>
+<li>Describe the contexts where iteration is useful</li>
+<li>Apply loops to small arithmetic problems</li>
+<li>Create a loop with a conditional</li>
 </ul>
+</div>
+</section>
+<section id="bonus-content" class="slide level2 smaller">
+<h2><span class="gold">Bonus Content</span></h2>
+<ul>
+<li><span class="blue">Lab #8</span> topic is your choice!</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Some options include:
+<ul>
+<li>Biodiversity and ecological communities</li>
+<li>Pairwise comparisons (i.e., what to do after ANOVA says ‘at least one group differs’)</li>
+<li>Heatmaps</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What 1-2 topic(s) seem interesting to you?
+<ul>
+<li>Feel free to propose topics that aren’t listed!</li>
+</ul></li>
+</ul>
+</section>
+<section id="repeated-operations" class="slide level2 smaller">
+<h2><span class="orange">Repeated Operations</span></h2>
+<ul>
+<li>Often we want to repeat a given operation multiple times
+<ul>
+<li>I.e., repeat <em>iteratively</em></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Could just copy/paste our code for each iteration
+<ul>
+<li>Labor intensive &amp; inefficient &amp; ugly (IMO)</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Copy/pasting fails if you need to do something <em>many</em> times
+<ul>
+<li><span class="purple">Code iteration</span> is our solution to these types of problems!</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="code-iteration" class="slide level2 smaller">
+<h2><span class="orange">Code Iteration</span></h2>
+<ul>
+<li>Iteration process:
+<ol type="1">
+<li>Define the operation that you want to repeat</li>
+<li>Define what the values to be passed through that operation</li>
+<li>Press “go” and sit back while the code does the work!</li>
+</ol></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Benefits:
+<ul>
+<li>Much faster than copy/pasting code</li>
+<li>Code is more human-readable / navigable</li>
+<li>Allows you to do something else while the code iterates itself!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>This method is named “for loop”</li>
+</ul>
+</div>
+</section>
+<section id="loop-syntax" class="slide level2 smaller">
+<h2><span class="orange">Loop Syntax</span></h2>
+<ul>
+<li>For loops repeat an operation for each value given to them</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Fundamental syntax is as follows:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Start of loop</span></span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ( index <span class="cf">in</span> vector ) {</span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Actual operation of loop</span></span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="cf">function</span>(index) </span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a>} <span class="co"># End of loop</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>More info:
+<ul>
+<li>index = placeholder for one value in vector</li>
+<li>vector = set of values to pass through loop</li>
+<li>curly brace (<code>{</code>/<code>}</code>) to define start/end</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="loop-example" class="slide level2 smaller">
+<h2><span class="orange">Loop Example</span></h2>
+<ul>
+<li>Let’s check out an example loop to get more comfortable with these!</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Square each integer between 1 and 5</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|2|5|8|10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Loop across vector of numbers</span></span>
+<span id="cb2-2"><a></a><span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
+<span id="cb2-3"><a></a>  </span>
+<span id="cb2-4"><a></a>  <span class="co"># Square that number</span></span>
+<span id="cb2-5"><a></a>  square_k <span class="ot">&lt;-</span> k <span class="sc">*</span> k</span>
+<span id="cb2-6"><a></a>  </span>
+<span id="cb2-7"><a></a>  <span class="co"># Print that result</span></span>
+<span id="cb2-8"><a></a>  <span class="fu">print</span>(square_k)</span>
+<span id="cb2-9"><a></a>  </span>
+<span id="cb2-10"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1
+[1] 4
+[1] 9
+[1] 16
+[1] 25</code></pre>
+</div>
+</div>
+</section>
+<section id="loop-practice" class="slide level2 smaller">
+<h2><span class="pink">Loop Practice</span></h2>
+<ul>
+<li>Make a vector of numbers between 5 and 25</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Write a for loop that takes the square root of each number
+<ul>
+<li>Function is <code>sqrt</code></li>
+</ul></li>
+<li>The loop should print the result for each square root in the Console
+<ul>
+<li>Function is <code>print</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Answer:</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>){</span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>  j_root <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(j)</span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(j_root)</span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="more-loop-practice" class="slide level2 smaller">
+<h2><span class="pink">More Loop Practice</span></h2>
+<ul>
+<li>Write a second loop that:
+<ol type="1">
+<li>multiplies each number by 32</li>
+<li>Prints the result in the console</li>
+</ol></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Answer:</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>){</span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>  i_mult <span class="ot">&lt;-</span> i <span class="sc">*</span> <span class="dv">32</span></span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i_mult)</span>
+<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="temperature-check" class="slide level2">
@@ -367,6 +632,76 @@ Lecture 7 – Code Iteration
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 </section>
+<section id="messaging-with-r" class="slide level2 smaller">
+<h2><span class="orange">Messaging with R</span></h2>
+</section>
+<section id="messaging-continued" class="slide level2 smaller">
+<h2><span class="orange">Messaging Continued</span></h2>
+</section>
+<section id="print-paste" class="slide level2 smaller">
+<h2><span class="orange"><code>print</code> + <code>paste</code></span></h2>
+</section>
+<section id="write-messages" class="slide level2 smaller">
+<h2><span class="pink">Write Messages</span></h2>
+</section>
+<section id="conditionals" class="slide level2 smaller">
+<h2><span class="orange">Conditionals</span></h2>
+</section>
+<section id="conditional-syntax" class="slide level2 smaller">
+<h2><span class="orange">Conditional Syntax</span></h2>
+</section>
+<section id="if-vs.-else" class="slide level2 smaller">
+<h2><span class="orange"><code>if</code> vs.&nbsp;<code>else</code></span></h2>
+</section>
+<section id="conditionals-in-loops" class="slide level2 smaller">
+<h2><span class="orange">Conditionals in Loops</span></h2>
+</section>
+<section id="loop-conditional-visual" class="slide level2 smaller">
+<h2><span class="orange">Loop Conditional Visual</span></h2>
+<p align="center">
+<img src="comics/loop-conditionals.jpg" alt="Comic showing a loop across a set of monster shapes where triangle creatures get sunglasses but non-triangles get a hat because of an 'if' and 'else' use in the loop" width="80%">
+</p>
+</section>
+<section id="loops-with-conditionals" class="slide level2 smaller">
+<h2><span class="pink">Loops with Conditionals</span></h2>
+</section>
+<section id="temperature-check-1" class="slide level2">
+<h2><span class="purple">Temperature Check</span></h2>
+<h4 id="how-are-you-feeling-1">How are you Feeling?</h4>
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+</section>
+<section id="in-class-free-work" class="slide level2 smaller">
+<h2><span class="gold">In-Class Free Work</span></h2>
+<ul>
+<li>Draft 2 of Function Tutorials is due tomorrow!
+<ul>
+<li>Presentations during <span class="blue">Lab #7</span> (this week)!</li>
+<li>Requires ‘revision response’ where you discuss what changes you made due to feedback</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>GitHub Presence is due next week
+<ul>
+<li>You have most of what you need for full points on that already</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Any questions about upcoming assignments / past topics?
+<ul>
+<li>I <em>strongly</em> recommend taking advantage of this time!</li>
+</ul></li>
+</ul>
+</div>
+</section>
 <section id="upcoming-due-dates" class="slide level2 smaller">
 <h2><span class="blue">Upcoming Due Dates</span></h2>
 <div class="columns">
@@ -374,13 +709,18 @@ Lecture 7 – Code Iteration
 <h3 id="due-before-lab">Due before lab</h3>
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
-<li>Muddiest Point #x</li>
+<li>Muddiest Point #7</li>
+<li>Submit <span class="pink">Draft 2</span> of Function Tutorials
+<ul>
+<li>Remember to include <u><em>both</em></u> the revised .Rmd <em>and</em> your “revision response”</li>
+<li>Check the rubric for more details</li>
+</ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="due-before-lecture">Due before lecture</h3>
 <h4 id="by-midnight-1">(By midnight)</h4>
 <ul>
-<li>X</li>
+<li>Homework #7</li>
 </ul>
 </div>
 </div>

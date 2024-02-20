@@ -564,14 +564,63 @@
     "href": "materials/slides_7a.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nY"
+    "text": "Today’s Plan\n\nChoose Lab #8 “Bonus Content”\nCode Iteration with Loops\nConditionals in Loops\nIn-Class Free Work"
   },
   {
     "objectID": "materials/slides_7a.html#todays-learning-objectives",
     "href": "materials/slides_7a.html#todays-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
-    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nX"
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nDescribe the contexts where iteration is useful\nApply loops to small arithmetic problems\nCreate a loop with a conditional"
+  },
+  {
+    "objectID": "materials/slides_7a.html#bonus-content",
+    "href": "materials/slides_7a.html#bonus-content",
+    "title": "Intro to Data Science",
+    "section": "Bonus Content",
+    "text": "Bonus Content\n\nLab #8 topic is your choice!\n\n\n\n\nSome options include:\n\nBiodiversity and ecological communities\nPairwise comparisons (i.e., what to do after ANOVA says ‘at least one group differs’)\nHeatmaps\n\n\n\n\n\nWhat 1-2 topic(s) seem interesting to you?\n\nFeel free to propose topics that aren’t listed!"
+  },
+  {
+    "objectID": "materials/slides_7a.html#repeated-operations",
+    "href": "materials/slides_7a.html#repeated-operations",
+    "title": "Intro to Data Science",
+    "section": "Repeated Operations",
+    "text": "Repeated Operations\n\nOften we want to repeat a given operation multiple times\n\nI.e., repeat iteratively\n\n\n\n\n\n\nCould just copy/paste our code for each iteration\n\nLabor intensive & inefficient & ugly (IMO)\n\n\n\n\n\n\n\nCopy/pasting fails if you need to do something many times\n\nCode iteration is our solution to these types of problems!"
+  },
+  {
+    "objectID": "materials/slides_7a.html#code-iteration",
+    "href": "materials/slides_7a.html#code-iteration",
+    "title": "Intro to Data Science",
+    "section": "Code Iteration",
+    "text": "Code Iteration\n\nIteration process:\n\nDefine the operation that you want to repeat\nDefine what the values to be passed through that operation\nPress “go” and sit back while the code does the work!\n\n\n\n\n\n\nBenefits:\n\nMuch faster than copy/pasting code\nCode is more human-readable / navigable\nAllows you to do something else while the code iterates itself!\n\n\n\n\n\n\n\nThis method is named “for loop”"
+  },
+  {
+    "objectID": "materials/slides_7a.html#loop-syntax",
+    "href": "materials/slides_7a.html#loop-syntax",
+    "title": "Intro to Data Science",
+    "section": "Loop Syntax",
+    "text": "Loop Syntax\n\nFor loops repeat an operation for each value given to them\n\n\n\n\n\nFundamental syntax is as follows:\n\n# Start of loop\nfor ( index in vector ) {\n\n    # Actual operation of loop\n    function(index) \n\n} # End of loop\n\n\n\n\n\nMore info:\n\nindex = placeholder for one value in vector\nvector = set of values to pass through loop\ncurly brace ({/}) to define start/end"
+  },
+  {
+    "objectID": "materials/slides_7a.html#loop-example",
+    "href": "materials/slides_7a.html#loop-example",
+    "title": "Intro to Data Science",
+    "section": "Loop Example",
+    "text": "Loop Example\n\nLet’s check out an example loop to get more comfortable with these!\n\n\n\n\nSquare each integer between 1 and 5\n\n\n# Loop across vector of numbers\nfor(k in 1:5){\n  \n  # Square that number\n  square_k &lt;- k * k\n  \n  # Print that result\n  print(square_k)\n  \n}\n\n[1] 1\n[1] 4\n[1] 9\n[1] 16\n[1] 25"
+  },
+  {
+    "objectID": "materials/slides_7a.html#loop-practice",
+    "href": "materials/slides_7a.html#loop-practice",
+    "title": "Intro to Data Science",
+    "section": "Loop Practice",
+    "text": "Loop Practice\n\nMake a vector of numbers between 5 and 25\n\n\n\n\nWrite a for loop that takes the square root of each number\n\nFunction is sqrt\n\nThe loop should print the result for each square root in the Console\n\nFunction is print\n\n\n\n\n\n\nAnswer:\n\nfor(j in 5:25){\n  j_root &lt;- sqrt(j)\n  print(j_root)\n}"
+  },
+  {
+    "objectID": "materials/slides_7a.html#more-loop-practice",
+    "href": "materials/slides_7a.html#more-loop-practice",
+    "title": "Intro to Data Science",
+    "section": "More Loop Practice",
+    "text": "More Loop Practice\n\nWrite a second loop that:\n\nmultiplies each number by 32\nPrints the result in the console\n\n\n\n\n\n\nAnswer:\n\nfor(i in 5:25){\n  i_mult &lt;- i * 32\n  print(i_mult)\n}"
   },
   {
     "objectID": "materials/slides_7a.html#temperature-check",
@@ -581,11 +630,95 @@
     "text": "Temperature Check\nHow are you Feeling?"
   },
   {
+    "objectID": "materials/slides_7a.html#messaging-with-r",
+    "href": "materials/slides_7a.html#messaging-with-r",
+    "title": "Intro to Data Science",
+    "section": "Messaging with R",
+    "text": "Messaging with R"
+  },
+  {
+    "objectID": "materials/slides_7a.html#messaging-continued",
+    "href": "materials/slides_7a.html#messaging-continued",
+    "title": "Intro to Data Science",
+    "section": "Messaging Continued",
+    "text": "Messaging Continued"
+  },
+  {
+    "objectID": "materials/slides_7a.html#print-paste",
+    "href": "materials/slides_7a.html#print-paste",
+    "title": "Intro to Data Science",
+    "section": "print + paste",
+    "text": "print + paste"
+  },
+  {
+    "objectID": "materials/slides_7a.html#write-messages",
+    "href": "materials/slides_7a.html#write-messages",
+    "title": "Intro to Data Science",
+    "section": "Write Messages",
+    "text": "Write Messages"
+  },
+  {
+    "objectID": "materials/slides_7a.html#conditionals",
+    "href": "materials/slides_7a.html#conditionals",
+    "title": "Intro to Data Science",
+    "section": "Conditionals",
+    "text": "Conditionals"
+  },
+  {
+    "objectID": "materials/slides_7a.html#conditional-syntax",
+    "href": "materials/slides_7a.html#conditional-syntax",
+    "title": "Intro to Data Science",
+    "section": "Conditional Syntax",
+    "text": "Conditional Syntax"
+  },
+  {
+    "objectID": "materials/slides_7a.html#if-vs.-else",
+    "href": "materials/slides_7a.html#if-vs.-else",
+    "title": "Intro to Data Science",
+    "section": "if vs. else",
+    "text": "if vs. else"
+  },
+  {
+    "objectID": "materials/slides_7a.html#conditionals-in-loops",
+    "href": "materials/slides_7a.html#conditionals-in-loops",
+    "title": "Intro to Data Science",
+    "section": "Conditionals in Loops",
+    "text": "Conditionals in Loops"
+  },
+  {
+    "objectID": "materials/slides_7a.html#loop-conditional-visual",
+    "href": "materials/slides_7a.html#loop-conditional-visual",
+    "title": "Intro to Data Science",
+    "section": "Loop Conditional Visual",
+    "text": "Loop Conditional Visual"
+  },
+  {
+    "objectID": "materials/slides_7a.html#loops-with-conditionals",
+    "href": "materials/slides_7a.html#loops-with-conditionals",
+    "title": "Intro to Data Science",
+    "section": "Loops with Conditionals",
+    "text": "Loops with Conditionals"
+  },
+  {
+    "objectID": "materials/slides_7a.html#temperature-check-1",
+    "href": "materials/slides_7a.html#temperature-check-1",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
+    "objectID": "materials/slides_7a.html#in-class-free-work",
+    "href": "materials/slides_7a.html#in-class-free-work",
+    "title": "Intro to Data Science",
+    "section": "In-Class Free Work",
+    "text": "In-Class Free Work\n\nDraft 2 of Function Tutorials is due tomorrow!\n\nPresentations during Lab #7 (this week)!\nRequires ‘revision response’ where you discuss what changes you made due to feedback\n\n\n\n\n\n\nGitHub Presence is due next week\n\nYou have most of what you need for full points on that already\n\n\n\n\n\n\n\nAny questions about upcoming assignments / past topics?\n\nI strongly recommend taking advantage of this time!"
+  },
+  {
     "objectID": "materials/slides_7a.html#upcoming-due-dates",
     "href": "materials/slides_7a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #x\n\n\nDue before lecture\n(By midnight)\n\nX\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #7\nSubmit Draft 2 of Function Tutorials\n\nRemember to include both the revised .Rmd and your “revision response”\nCheck the rubric for more details\n\n\n\nDue before lecture\n(By midnight)\n\nHomework #7\n\n\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/home_week6.html",
