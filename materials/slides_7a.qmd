@@ -43,6 +43,36 @@ After today's session you will be able to:
 - Apply loops to small arithmetic problems
 - Create a loop with a conditional
 
+## [Bonus Content]{.gold} {.smaller}
+
+
+
+## [Repeated Operations]{.orange} {.smaller}
+
+
+
+## [Code Iteration]{.orange} {.smaller}
+
+
+
+## [Loop Syntax]{.orange} {.smaller}
+
+
+
+## [Loop Example]{.orange} {.smaller}
+
+
+
+## [Loop Practice]{.pink} {.smaller}
+
+
+
+
+## [More Loop Practice]{.pink} {.smaller}
+
+
+
+
 ## [Temperature Check]{.purple}
 
 #### How are you Feeling?
@@ -53,6 +83,44 @@ After today's session you will be able to:
 
 
 
+## [Messaging with R]{.orange} {.smaller}
+
+
+
+## [Messaging Continued]{.orange} {.smaller}
+
+
+
+## [`print` + `paste`]{.orange} {.smaller}
+
+
+
+## [Write Messages]{.pink} {.smaller}
+
+
+
+
+## [Conditionals]{.orange} {.smaller}
+
+
+
+## [Conditional Syntax]{.orange} {.smaller}
+
+
+
+## [`if` vs. `else`]{.orange} {.smaller}
+
+
+
+## [Conditionals in Loops]{.orange} {.smaller}
+
+
+
+## [Loop Conditional Visual]{.orange} {.smaller}
+
+
+
+## [Loops with Conditionals]{.pink} {.smaller}
 
 
 
