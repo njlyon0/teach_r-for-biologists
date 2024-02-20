@@ -164,13 +164,13 @@ After today's session you will be able to:
 
 ## [Plot Grids]{.pink} {.smaller}
 
-![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-cowplot.png){.absolute top=0 left=1100 width="12%"}
 
 
 
 ## [Plot Grids]{.pink} {.smaller}
 
-![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-cowplot.png){.absolute top=0 left=1100 width="12%"}
 
 
 ## [Temperature Check]{.purple}
