@@ -14,6 +14,21 @@ format:
     footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
+```{r libraries}
+#| echo: false
+#| message: false
+#| error: false
+
+# Load needed libraries
+## install.packages("librarian")
+librarian::shelf(dplyr, ggplot2, cowplot)
+```
+
+```{r ext-data}
+# Read in minnow data
+fish_df <- read.csv(file = file.path("materials", "data", "minnow.csv"))
+```
+
 ## A Guide to Your Process
 
 ### [Scheduling]{.blue}
@@ -57,65 +72,287 @@ After today's session you will be able to:
 
 ## [`ggplot2` Review]{.orange} {.smaller}
 
+- ggplots require: (1) data, (2) aesthetics, (3) geometries
+    - Optionally can mess with `theme` parameters
 
+. . .
+
+```{r ex-graph-v7}
+#| fig-width: 6
+#| fig-align: center
+
+# Create desired example graph
+fish_graph <- ggplot(data = fish_df, mapping = aes(x = species, y = diameter_cm, 
+                                                   fill = species)) +
+  geom_boxplot() +
+  geom_point(size = 2) +
+  labs(x = "Species", y = "Diameter (cm)") +
+  scale_fill_manual(values = c("Chub" = "#ef233c", 
+                                "Paired" = "#7209b7", 
+                                "Stoneroller" = "#4361ee")) +
+  theme(axis.text = element_text(size = 13),
+        axis.title = element_text(size = 17))
+
+# Show it
+fish_graph
+```
 
 ## [Theme Internal Structure]{.orange} {.smaller}
 
+- Theme is composed of [elements]{.purple}
 
+\
 
-## [Removing Gridlines]{.orange} {.smaller}
+- Elements can be modified as desired inside of `theme` function
 
+\
 
+- Each type of element has a different 'helper function' needed to modify that element
+    - Change text = use `element_text`
+    - Change line = use `element_line`
+    - _Remove_ an element with `element_blank`
+
+## [Theme Syntax]{.orange} {.smaller}
+
+- You use the `theme` function _once_ with as many `element_...` functions as you need
+
+\
+
+- Here's an example of the proper syntax
+```{.r}
+# Make a simple scatterplot
+ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
+    geom_point() +
+    # Modify its theme to make the axis font size bigger
+    theme(axis.text = element_text(size = 20),
+          # Also remove the grid lines
+          panel.grid = element_blank())
+```
+
+\
+
+. . . 
+
+- Note how the `theme` and `element_...` functions are used together
+
+## [Gridline Theme Components]{.orange} {.smaller}
+
+- You'll learn theme element names as you work more with `ggplot2`
+
+\
+
+. . . 
+
+- Here are a few broadly relevant ones:
+    - Gridlines = `panel.grid`
+    - Plot background = `panel.background`
+    - Axis lines (X & Y) = `axis.line`
 
 ## [Get Ready]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+1. Create a script for this week
 
+\
+
+2. Load `ggplot2`
+
+\
+
+3. Read "minnow.csv" into R and check the structure!
+
+\
+
+4. Copy the _final_ graph we made last time
+
+\
+
+5. Assign the graph to an object
 
 ## [Remove Gridlines]{.pink} {.smaller}
 
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+- To that graph, add the following code:
+    - `theme(panel.grid = element_blank())`
 
+\
+
+- What does this do to your graph?
+
+\
+
+- What happens if you add these two lines as well (**inside** of the `theme` parentheses!)?
+    - `panel.background = element_blank()`
+    - `axis.line = element_line(color = "black"))`
 
 ## [Remove Gridlines]{.pink} {.smaller}
 
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+::::{.columns}
+:::{.column width="50%"}
 
+```{r ex-graph-v8a}
+#| fig-height: 10
+
+# Make the first theme modification
+fish_graph +
+  theme(panel.grid = element_blank())
+```
+
+:::
+:::{.column width="50%"}
+
+```{r ex-graph-v8b}
+#| fig-height: 10
+
+# Make the remaining theme modifications
+fish_graph + 
+  theme(panel.grid = element_blank(),
+        panel.background = element_blank(),
+        axis.line = element_line(color = "black"))
+```
+
+:::
+::::
 
 ## [Changing Text Size]{.orange} {.smaller}
 
+- We can also modify text size inside of `theme`
 
+\
+
+. . . 
+
+- Axis "[title]{.purple}" vs. axis "[text]{.gold}"
+    - `axis.title` = axis label text (given to `labs` function)
+    - `axis.text` = text on axis tick marks
+
+\
+
+. . . 
+
+![](images/graph-title-v-text.png){.absolute top=80 left=750 width="40%"}
+
+. . . 
+
+- Want to modify just X or Y? Add that to the element name!
+    - E.g., `theme(axis.text.x = element_text(...))`
+
+\
+
+. . . 
+
+Increase font size with: `element_text(size = 14)`
 
 ## [Change Text Size]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+- Take your most recent graph
+    - No gridlines, no background gray square, black axis lines
 
+\
 
+. . .
+
+- And make the following tweaks:
+    - Make the axis _title_ font size 15
+    - Make the axis _text_ font size 13
+
+\
+
+. . .
+
+- What does that leave you with?
 
 ## [Change Text Size]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+```{r ex-graph-v9}
+#| fig-width: 6
+#| fig-align: center
 
-
+# Create desired example graph and change font size
+fish_graph +
+  theme(panel.grid = element_blank(),
+        panel.background = element_blank(),
+        axis.line = element_line(color = "black"),
+        axis.title = element_text(size = 15),
+        axis.text = element_text(size = 13))
+```
 
 ## [Customizing Legend]{.orange} {.smaller}
 
+- You can also customize the plot legend in the `theme` function!
+    - Legend placement = `legend.position`
+    - Legend title = `legend.title`
 
+\
+
+. . .
+
+- `legend.position` works differently than most other elements!
+    - Instead of wanting `element_...` it wants `c(<x position>, <y position>)`
+    - Positions range from 0 (left / bottom) to 1 (right / top)
+
+## [Customizing Legend Syntax]{.orange} {.smaller}
+
+- Check out an example where we put the legend in the middle of the plot
+```{.r}
+# Example scatterplot
+ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
+    geom_point() +
+    # With legend in the middle of the space
+    theme(legend.position = c(0.5, 0.5))
+```
+
+\
+
+. . .
+
+- That graph would have the legend in both:
+    - the center (left / right)
+    - the middle (top / bottom)
 
 ## [Customize Legend]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+- To the graph you created last practice:
+    - Remove the legend title
+    - Experiment with legend placement until you’re happy
 
+\
 
+- You may put the legend wherever you'd like _but_:
+    - It <u>should not</u> overlap any points / boxplots
+
+\
+
+- What does _that_ graph look like?
 
 ## [Customize Legend]{.pink} {.smaller}
 
 ![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
 
+```{r ex-graph-v10}
+#| fig-width: 6
+#| fig-align: center
+
+# Create desired example graph and change font size
+fish_graph +
+  theme(panel.grid = element_blank(),
+        panel.background = element_blank(),
+        axis.line = element_line(color = "black"),
+        axis.title = element_text(size = 15),
+        axis.text = element_text(size = 13),
+        legend.title = element_blank(),
+        legend.position = c(0.8, 0.8))
+```
 
 ## [Temperature Check]{.purple}
 
@@ -165,12 +402,14 @@ After today's session you will be able to:
 ## [Plot Grids]{.pink} {.smaller}
 
 ![](images/hex-cowplot.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%"}
 
 
 
 ## [Plot Grids]{.pink} {.smaller}
 
 ![](images/hex-cowplot.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%"}
 
 
 ## [Temperature Check]{.purple}
