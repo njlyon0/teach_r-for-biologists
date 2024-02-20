@@ -14,9 +14,13 @@ During lecture this week we'll go over how we can run a section of code repeated
 
 [Lecture Slides -- Full Screen](slides_7a.qmd)
 
-## Lab 7 - NA
+## Lab 7 - Function Tutorials (Draft 2)
 
-This space was held empty to allow for in-class presentations of the functional tutorials (second draft).
+```{=html}
+<iframe class="slide-deck" src="slides_7b.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
+```
+
+[Lab Slides -- Full Screen](slides_7b.qmd)
 
 ## Homework 7
 
