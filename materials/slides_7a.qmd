@@ -201,40 +201,216 @@ for(i in 5:25){
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-
-
 ## [Messaging with R]{.orange} {.smaller}
 
+- By default, loops don't put stuff in the Console
+    - This can make figuring out what is going on difficult
 
+\
 
-## [Messaging Continued]{.orange} {.smaller}
+. . .
 
+- Fortunately, R contains functions for putting text into the Console
+    - `print` is the one we'll focus on!
 
+\
+
+. . .
+
+- However, `print` only accepts one vector at a time
+
+\
+
+. . .
+
+- `paste` makes multiple vectors into one vector
 
 ## [`print` + `paste`]{.orange} {.smaller}
 
+- We can combine `print` and `paste` to assemble informative messages!
 
+\
+
+. . .
+
+- For example:
+```{r ex-print-paste}
+#| echo: true
+
+# Use `paste` to combine multiple vectors
+text <- paste("Hello", "my", "name", "is", "Nick")
+
+# Then give that to `print` to return!
+print(text)
+```
+
+\
+
+. . .
+
+- This can be used in a loop to create messages that change with each iteration!
+
+## [Message Example]{.orange} {.smaller}
+
+- Let's consider an example of a loop that uses `print` and `paste` to make messages
+
+\
+
+. . . 
+
+- For instance:
+```{r ex-loop-2}
+#| echo: true
+#| code-line-numbers: "|8"
+
+# Loop across vector of numbers
+for(k in 1:5){
+  
+  # Square that number
+  square_k <- k * k
+  
+  # Print a message about that result
+  print(paste("The square of", k, "is", square_k))
+
+}
+```
 
 ## [Write Messages]{.pink} {.smaller}
 
+- We'll modify your earlier practice loops to make informative messages!
 
+\
 
+- For the loop with `j` as the index:
+    - Make the `print` step tell you the starting number and its square root
+
+\
+
+. . . 
+
+- Answer:
+```{.r}
+for(j in 5:25){
+  j_root <- sqrt(j)
+  print(paste("The square root of", j, "is", j_root))
+}
+```
+
+## [More Message Pratice]{.pink} {.smaller}
+
+- For the loop with `i` as the index:
+    - Write a message that says each number and what it times 32 is equal to
+
+\
+
+. . .
+
+- Answer:
+```{.r}
+for(i in 5:25){
+  i_mult <- i * 32
+  print(paste(i, "times 32 is equal to", i_mult))
+}
+```
 
 ## [Conditionals]{.orange} {.smaller}
 
+- You can write code to do something _only_ if some condition is met
+    - Do this by using conditionals!
 
+\
+
+. . .
+
+- Syntax is similar to logical statements for subsetting
+    - Recall our earlier conversations about conditional operators:
+    - `==`, `&`, `!=`, `>`, etc.
+
+\
+
+. . .
+
+- Two main conditional functions: `if` & `else`
 
 ## [Conditional Syntax]{.orange} {.smaller}
 
+```{.r}
+# Do something if a condition is met
+if(2 == 2){
 
+  print("Math is mathing!")
 
-## [`if` vs. `else`]{.orange} {.smaller}
+  # If that condition is not met...
+} else { print("Math is--somehow--not mathing...") }
+```
 
+\
 
+. . . 
+
+- `if` wants:
+    - Condition to check in parentheses `(...)`
+    - What to do if the condition **_is_** met in curly braces `{...}`
+
+\
+
+. . . 
+
+- `else` wants:
+    - Only curly braces `{...}` bits
+    - Can only be used if `if` is used first
+
+## [Multiple `if`s]{.orange} {.smaller}
+
+- The example in the previous slide is just for one `if`
+    - Essentially 'either [this]{.purple} or [that]{.orange}'
+
+\
+
+. . .
+
+- You can add multiple conditions if desired!
+```{.r}
+# If the number is less than 0
+if(x < 0){
+  print("Number is negative")
+
+# If it's more than 0
+else if(x > 0){
+  print("Number is positive")
+
+# Otherwise ...
+} else { print("Number is zero") }
+```
+- See how the second condition uses `else if(...){...}`?
 
 ## [Conditionals in Loops]{.orange} {.smaller}
 
+- You can use conditionals to make one loop handle _multiple_ possibilities
 
+\
+
+- For example:
+```{r ex-loop-3}
+#| echo: true
+#| code-line-numbers: "|8|9|12|13"
+
+# Test vector
+my_vec <- c(-10, -9, -8, 0, 4, 5, 6)
+
+# Loop across it
+for(value in my_vec){
+  
+  # Make negative numbers positive
+  if(value < 0){ 
+    print(value * -1)
+    
+    # Take the square root of positive numbers
+  } else if(value > 0){
+      print(sqrt(value)) }
+  
+} # Close loop curly brace
+```
 
 ## [Loop Conditional Visual]{.orange} {.smaller}
 
@@ -244,7 +420,18 @@ for(i in 5:25){
 
 ## [Loops with Conditionals]{.pink} {.smaller}
 
+- Write a loop that:
+    - Uses `g` as the index
+    - Uses a vector that has all the integers between 10 and 20
+    - Prints each value in the vector
 
+\
+
+. . .
+
+- Add two conditionals to that loop:
+    1. If `g` is less than 14, `print` "Less than 14"
+    2. Otherwise, `print` the value as-is
 
 ## [Temperature Check]{.purple}
 
