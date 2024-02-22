@@ -634,56 +634,63 @@
     "href": "materials/slides_7a.html#messaging-with-r",
     "title": "Intro to Data Science",
     "section": "Messaging with R",
-    "text": "Messaging with R"
-  },
-  {
-    "objectID": "materials/slides_7a.html#messaging-continued",
-    "href": "materials/slides_7a.html#messaging-continued",
-    "title": "Intro to Data Science",
-    "section": "Messaging Continued",
-    "text": "Messaging Continued"
+    "text": "Messaging with R\n\nBy default, loops don’t put stuff in the Console\n\nThis can make figuring out what is going on difficult\n\n\n\n\n\n\nFortunately, R contains functions for putting text into the Console\n\nprint is the one we’ll focus on!\n\n\n\n\n\n\n\nHowever, print only accepts one vector at a time\n\n\n\n\n\n\npaste makes multiple vectors into one vector"
   },
   {
     "objectID": "materials/slides_7a.html#print-paste",
     "href": "materials/slides_7a.html#print-paste",
     "title": "Intro to Data Science",
     "section": "print + paste",
-    "text": "print + paste"
+    "text": "print + paste\n\nWe can combine print and paste to assemble informative messages!\n\n\n\n\n\nFor example:\n\n\n# Use `paste` to combine multiple vectors\ntext &lt;- paste(\"Hello\", \"my\", \"name\", \"is\", \"Nick\")\n\n# Then give that to `print` to return!\nprint(text)\n\n[1] \"Hello my name is Nick\"\n\n\n\n\n\n\n\nThis can be used in a loop to create messages that change with each iteration!"
+  },
+  {
+    "objectID": "materials/slides_7a.html#message-example",
+    "href": "materials/slides_7a.html#message-example",
+    "title": "Intro to Data Science",
+    "section": "Message Example",
+    "text": "Message Example\n\nLet’s consider an example of a loop that uses print and paste to make messages\n\n\n\n\n\nFor instance:\n\n\n# Loop across vector of numbers\nfor(k in 1:5){\n  \n  # Square that number\n  square_k &lt;- k * k\n  \n  # Print a message about that result\n  print(paste(\"The square of\", k, \"is\", square_k))\n\n}\n\n[1] \"The square of 1 is 1\"\n[1] \"The square of 2 is 4\"\n[1] \"The square of 3 is 9\"\n[1] \"The square of 4 is 16\"\n[1] \"The square of 5 is 25\""
   },
   {
     "objectID": "materials/slides_7a.html#write-messages",
     "href": "materials/slides_7a.html#write-messages",
     "title": "Intro to Data Science",
     "section": "Write Messages",
-    "text": "Write Messages"
+    "text": "Write Messages\n\nWe’ll modify your earlier practice loops to make informative messages!\n\n\n\n\nFor the loop with j as the index:\n\nMake the print step tell you the starting number and its square root\n\n\n\n\n\n\nAnswer:\n\nfor(j in 5:25){\n  j_root &lt;- sqrt(j)\n  print(paste(\"The square root of\", j, \"is\", j_root))\n}"
+  },
+  {
+    "objectID": "materials/slides_7a.html#more-message-pratice",
+    "href": "materials/slides_7a.html#more-message-pratice",
+    "title": "Intro to Data Science",
+    "section": "More Message Pratice",
+    "text": "More Message Pratice\n\nFor the loop with i as the index:\n\nWrite a message that says each number and what it times 32 is equal to\n\n\n\n\n\n\nAnswer:\n\nfor(i in 5:25){\n  i_mult &lt;- i * 32\n  print(paste(i, \"times 32 is equal to\", i_mult))\n}"
   },
   {
     "objectID": "materials/slides_7a.html#conditionals",
     "href": "materials/slides_7a.html#conditionals",
     "title": "Intro to Data Science",
     "section": "Conditionals",
-    "text": "Conditionals"
+    "text": "Conditionals\n\nYou can write code to do something only if some condition is met\n\nDo this by using conditionals!\n\n\n\n\n\n\nSyntax is similar to logical statements for subsetting\n\nRecall our earlier conversations about conditional operators:\n==, &, !=, &gt;, etc.\n\n\n\n\n\n\n\nTwo main conditional functions: if & else"
   },
   {
     "objectID": "materials/slides_7a.html#conditional-syntax",
     "href": "materials/slides_7a.html#conditional-syntax",
     "title": "Intro to Data Science",
     "section": "Conditional Syntax",
-    "text": "Conditional Syntax"
+    "text": "Conditional Syntax\n# Do something if a condition is met\nif(2 == 2){\n\n  print(\"Math is mathing!\")\n\n  # If that condition is not met...\n} else { print(\"Math is--somehow--not mathing...\") }\n\n\n\n\nif wants:\n\nCondition to check in parentheses (...)\nWhat to do if the condition is met in curly braces {...}\n\n\n\n\n\n\n\nelse wants:\n\nOnly curly braces {...} bits\nCan only be used if if is used first"
   },
   {
-    "objectID": "materials/slides_7a.html#if-vs.-else",
-    "href": "materials/slides_7a.html#if-vs.-else",
+    "objectID": "materials/slides_7a.html#multiple-ifs",
+    "href": "materials/slides_7a.html#multiple-ifs",
     "title": "Intro to Data Science",
-    "section": "if vs. else",
-    "text": "if vs. else"
+    "section": "Multiple ifs",
+    "text": "Multiple ifs\n\nThe example in the previous slide is just for one if\n\nEssentially ‘either this or that’\n\n\n\n\n\n\nYou can add multiple conditions if desired!\n\n# If the number is less than 0\nif(x &lt; 0){\n  print(\"Number is negative\")\n\n# If it's more than 0\nelse if(x &gt; 0){\n  print(\"Number is positive\")\n\n# Otherwise ...\n} else { print(\"Number is zero\") }\n\nSee how the second condition uses else if(...){...}?"
   },
   {
     "objectID": "materials/slides_7a.html#conditionals-in-loops",
     "href": "materials/slides_7a.html#conditionals-in-loops",
     "title": "Intro to Data Science",
     "section": "Conditionals in Loops",
-    "text": "Conditionals in Loops"
+    "text": "Conditionals in Loops\n\nYou can use conditionals to make one loop handle multiple possibilities\n\n\n\n\nFor example:\n\n\n# Test vector\nmy_vec &lt;- c(-10, -9, -8, 0, 4, 5, 6)\n\n# Loop across it\nfor(value in my_vec){\n  \n  # Make negative numbers positive\n  if(value &lt; 0){ \n    print(value * -1)\n    \n    # Take the square root of positive numbers\n  } else if(value &gt; 0){\n      print(sqrt(value)) }\n  \n} # Close loop curly brace\n\n[1] 10\n[1] 9\n[1] 8\n[1] 2\n[1] 2.236068\n[1] 2.44949"
   },
   {
     "objectID": "materials/slides_7a.html#loop-conditional-visual",
@@ -697,7 +704,7 @@
     "href": "materials/slides_7a.html#loops-with-conditionals",
     "title": "Intro to Data Science",
     "section": "Loops with Conditionals",
-    "text": "Loops with Conditionals"
+    "text": "Loops with Conditionals\n\nWrite a loop that:\n\nUses g as the index\nUses a vector that has all the integers between 10 and 20\nPrints each value in the vector\n\n\n\n\n\n\nAdd two conditionals to that loop:\n\nIf g is less than 14, print “Less than 14”\nOtherwise, print the value as-is"
   },
   {
     "objectID": "materials/slides_7a.html#temperature-check-1",

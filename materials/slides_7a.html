@@ -634,27 +634,267 @@ Lecture 7 – Code Iteration
 </section>
 <section id="messaging-with-r" class="slide level2 smaller">
 <h2><span class="orange">Messaging with R</span></h2>
-</section>
-<section id="messaging-continued" class="slide level2 smaller">
-<h2><span class="orange">Messaging Continued</span></h2>
+<ul>
+<li>By default, loops don’t put stuff in the Console
+<ul>
+<li>This can make figuring out what is going on difficult</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Fortunately, R contains functions for putting text into the Console
+<ul>
+<li><code>print</code> is the one we’ll focus on!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>However, <code>print</code> only accepts one vector at a time</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li><code>paste</code> makes multiple vectors into one vector</li>
+</ul>
+</div>
 </section>
 <section id="print-paste" class="slide level2 smaller">
 <h2><span class="orange"><code>print</code> + <code>paste</code></span></h2>
+<ul>
+<li>We can combine <code>print</code> and <code>paste</code> to assemble informative messages!</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>For example:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Use `paste` to combine multiple vectors</span></span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">"Hello"</span>, <span class="st">"my"</span>, <span class="st">"name"</span>, <span class="st">"is"</span>, <span class="st">"Nick"</span>)</span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Then give that to `print` to return!</span></span>
+<span id="cb6-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Hello my name is Nick"</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>This can be used in a loop to create messages that change with each iteration!</li>
+</ul>
+</div>
+</section>
+<section id="message-example" class="slide level2 smaller">
+<h2><span class="orange">Message Example</span></h2>
+<ul>
+<li>Let’s consider an example of a loop that uses <code>print</code> and <code>paste</code> to make messages</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>For instance:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Loop across vector of numbers</span></span>
+<span id="cb8-2"><a></a><span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
+<span id="cb8-3"><a></a>  </span>
+<span id="cb8-4"><a></a>  <span class="co"># Square that number</span></span>
+<span id="cb8-5"><a></a>  square_k <span class="ot">&lt;-</span> k <span class="sc">*</span> k</span>
+<span id="cb8-6"><a></a>  </span>
+<span id="cb8-7"><a></a>  <span class="co"># Print a message about that result</span></span>
+<span id="cb8-8"><a></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The square of"</span>, k, <span class="st">"is"</span>, square_k))</span>
+<span id="cb8-9"><a></a></span>
+<span id="cb8-10"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "The square of 1 is 1"
+[1] "The square of 2 is 4"
+[1] "The square of 3 is 9"
+[1] "The square of 4 is 16"
+[1] "The square of 5 is 25"</code></pre>
+</div>
+</div>
+</div>
 </section>
 <section id="write-messages" class="slide level2 smaller">
 <h2><span class="pink">Write Messages</span></h2>
+<ul>
+<li>We’ll modify your earlier practice loops to make informative messages!</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>For the loop with <code>j</code> as the index:
+<ul>
+<li>Make the <code>print</code> step tell you the starting number and its square root</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Answer:</li>
+</ul>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>){</span>
+<span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a>  j_root <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(j)</span>
+<span id="cb10-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The square root of"</span>, j, <span class="st">"is"</span>, j_root))</span>
+<span id="cb10-4"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="more-message-pratice" class="slide level2 smaller">
+<h2><span class="pink">More Message Pratice</span></h2>
+<ul>
+<li>For the loop with <code>i</code> as the index:
+<ul>
+<li>Write a message that says each number and what it times 32 is equal to</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Answer:</li>
+</ul>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>){</span>
+<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>  i_mult <span class="ot">&lt;-</span> i <span class="sc">*</span> <span class="dv">32</span></span>
+<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(i, <span class="st">"times 32 is equal to"</span>, i_mult))</span>
+<span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="conditionals" class="slide level2 smaller">
 <h2><span class="orange">Conditionals</span></h2>
+<ul>
+<li>You can write code to do something <em>only</em> if some condition is met
+<ul>
+<li>Do this by using conditionals!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Syntax is similar to logical statements for subsetting
+<ul>
+<li>Recall our earlier conversations about conditional operators:</li>
+<li><code>==</code>, <code>&amp;</code>, <code>!=</code>, <code>&gt;</code>, etc.</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Two main conditional functions: <code>if</code> &amp; <code>else</code></li>
+</ul>
+</div>
 </section>
 <section id="conditional-syntax" class="slide level2 smaller">
 <h2><span class="orange">Conditional Syntax</span></h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Do something if a condition is met</span></span>
+<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="dv">2</span> <span class="sc">==</span> <span class="dv">2</span>){</span>
+<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Math is mathing!"</span>)</span>
+<span id="cb12-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a aria-hidden="true" tabindex="-1"></a>  <span class="co"># If that condition is not met...</span></span>
+<span id="cb12-7"><a aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> { <span class="fu">print</span>(<span class="st">"Math is--somehow--not mathing..."</span>) }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li><code>if</code> wants:
+<ul>
+<li>Condition to check in parentheses <code>(...)</code></li>
+<li>What to do if the condition <strong><em>is</em></strong> met in curly braces <code>{...}</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li><code>else</code> wants:
+<ul>
+<li>Only curly braces <code>{...}</code> bits</li>
+<li>Can only be used if <code>if</code> is used first</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="if-vs.-else" class="slide level2 smaller">
-<h2><span class="orange"><code>if</code> vs.&nbsp;<code>else</code></span></h2>
+<section id="multiple-ifs" class="slide level2 smaller">
+<h2><span class="orange">Multiple <code>if</code>s</span></h2>
+<ul>
+<li>The example in the previous slide is just for one <code>if</code>
+<ul>
+<li>Essentially ‘either <span class="purple">this</span> or <span class="orange">that</span>’</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>You can add multiple conditions if desired!</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># If the number is less than 0</span></span>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(x <span class="sc">&lt;</span> <span class="dv">0</span>){</span>
+<span id="cb13-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Number is negative"</span>)</span>
+<span id="cb13-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># If it's more than 0</span></span>
+<span id="cb13-6"><a aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="cf">if</span>(x <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb13-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Number is positive"</span>)</span>
+<span id="cb13-8"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise ...</span></span>
+<span id="cb13-10"><a aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> { <span class="fu">print</span>(<span class="st">"Number is zero"</span>) }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>See how the second condition uses <code>else if(...){...}</code>?</li>
+</ul>
+</div>
 </section>
 <section id="conditionals-in-loops" class="slide level2 smaller">
 <h2><span class="orange">Conditionals in Loops</span></h2>
+<ul>
+<li>You can use conditionals to make one loop handle <em>multiple</em> possibilities</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>For example:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14" data-code-line-numbers="|8|9|12|13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co"># Test vector</span></span>
+<span id="cb14-2"><a></a>my_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="sc">-</span><span class="dv">9</span>, <span class="sc">-</span><span class="dv">8</span>, <span class="dv">0</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>)</span>
+<span id="cb14-3"><a></a></span>
+<span id="cb14-4"><a></a><span class="co"># Loop across it</span></span>
+<span id="cb14-5"><a></a><span class="cf">for</span>(value <span class="cf">in</span> my_vec){</span>
+<span id="cb14-6"><a></a>  </span>
+<span id="cb14-7"><a></a>  <span class="co"># Make negative numbers positive</span></span>
+<span id="cb14-8"><a></a>  <span class="cf">if</span>(value <span class="sc">&lt;</span> <span class="dv">0</span>){ </span>
+<span id="cb14-9"><a></a>    <span class="fu">print</span>(value <span class="sc">*</span> <span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb14-10"><a></a>    </span>
+<span id="cb14-11"><a></a>    <span class="co"># Take the square root of positive numbers</span></span>
+<span id="cb14-12"><a></a>  } <span class="cf">else</span> <span class="cf">if</span>(value <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb14-13"><a></a>      <span class="fu">print</span>(<span class="fu">sqrt</span>(value)) }</span>
+<span id="cb14-14"><a></a>  </span>
+<span id="cb14-15"><a></a>} <span class="co"># Close loop curly brace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10
+[1] 9
+[1] 8
+[1] 2
+[1] 2.236068
+[1] 2.44949</code></pre>
+</div>
+</div>
 </section>
 <section id="loop-conditional-visual" class="slide level2 smaller">
 <h2><span class="orange">Loop Conditional Visual</span></h2>
@@ -664,6 +904,25 @@ Lecture 7 – Code Iteration
 </section>
 <section id="loops-with-conditionals" class="slide level2 smaller">
 <h2><span class="pink">Loops with Conditionals</span></h2>
+<ul>
+<li>Write a loop that:
+<ul>
+<li>Uses <code>g</code> as the index</li>
+<li>Uses a vector that has all the integers between 10 and 20</li>
+<li>Prints each value in the vector</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Add two conditionals to that loop:
+<ol type="1">
+<li>If <code>g</code> is less than 14, <code>print</code> “Less than 14”</li>
+<li>Otherwise, <code>print</code> the value as-is</li>
+</ol></li>
+</ul>
+</div>
 </section>
 <section id="temperature-check-1" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
