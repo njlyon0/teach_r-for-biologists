@@ -28,7 +28,10 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- Muddiest Point Review
+- Custom Functions
+- Free Work on GitHub Presence
+
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -36,7 +39,61 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Describe the process of writing a new function
+- Create a custom function to perform arithmetic
+
+## [Muddiest Point Review]{.gold}
+
+- Recurring topics from most recent MPs:
+
+\
+
+. . . 
+
+- What other topic(s) would you like to review?
+
+## [What is a "Custom Function"?]{.orange} {.smaller}
+
+
+
+
+## [Why Write Functions?]{.orange} {.smaller}
+
+
+
+## [Special Syntax Note]{.orange} {.smaller}
+
+
+
+## [Process of Function Writing]{.orange} {.smaller}
+
+
+
+## [Custom Function Demo]{.gold} {.smaller}
+
+
+
+## [Demo Step 1: Write Script]{.gold} {.smaller}
+
+
+
+## [Demo Step 2: Identify Inputs]{.gold} {.smaller}
+
+
+
+## [Demo Step 3: Special Format]{.gold} {.smaller}
+
+
+
+## [Demo Step 4: Use Function!]{.gold} {.smaller}
+
+
+
+
+## [Write Your Own!]{.pink} {.smaller}
+
+
+
 
 ## [Temperature Check]{.purple}
 
@@ -46,31 +103,70 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+## [Setting Defaults]{.orange} {.smaller}
 
+
+
+## [Make a Default]{.pink} {.smaller}
+
+
+
+
+
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
 
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lab
 
 #### (By midnight)
 
-- Muddiest Point \#x
+- Muddiest Point \#8
+- Homework \#8
+    - Note reduced time to complete for this one!
+- GitHub Presence evaluation
+- _Optional_ [3^rd^ draft]{.pink} of Function Tutorials
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lecture
 
 #### (By midnight)
 
-- X
+- Final deadline for **_all_** work from a summer course
+
 
 :::
-
 ::::
 
+## [Free Work on GitHub]{.gold} {.smaller}
+
+
+- Assignment is due at end of course (_soon!_)
+
+\
+
+Tips for success:
+
+. . .
+
+1. Check out the rubric and make sure you don't miss any "easy" points
+
+. . .
+
+2. Don't leave after this slide!
+
+. . .
+
+3. If you have questions, [ask them _now_]{.purple} during this free work time
