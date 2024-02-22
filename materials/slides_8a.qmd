@@ -32,7 +32,6 @@ format:
 - Custom Functions
 - Free Work on GitHub Presence
 
-
 ## [Today's Learning Objectives]{.purple}
 
 After today's session you will be able to:
@@ -52,26 +51,121 @@ After today's session you will be able to:
 
 - What other topic(s) would you like to review?
 
-## [What is a "Custom Function"?]{.orange} {.smaller}
+## [What is a "Custom Function"?]{.orange}
 
+- We've been working with functions throughout the course
+    - These functions have come from packages we can install from CRAN
 
+\
 
+. . .
+
+- However, R _also_ lets you write your own functions!
+
+\
+
+. . .
+
+- Functions you write are called [custom functions]{.purple}
 
 ## [Why Write Functions?]{.orange} {.smaller}
 
+- Rewriting / duplicating anything is _risky_
+    - Chance for human error when you're typing
+    - Typos make each "copy" potentially give different results
 
+\
+
+. . .
+
+- Instead you could write/use a custom function!
+
+\
+
+. . .
+
+- Functions are a "single source of truth"
+    - Something went wrong? Fix the function!
+
+\
+
+. . .
+
+- Can also share function scripts with friends to make their lives easier
 
 ## [Special Syntax Note]{.orange} {.smaller}
 
+- R Uses the following special syntax for creating functions
+    - You have to use the `function` function
 
+\
+
+. . . 
+
+- Example syntax:
+```{r ex-fxn-syntax}
+#| echo: true
+#| code-line-numbers: "|2|5|8|10|13"
+
+# Define function name
+multiply <- function(arg1, arg2){
+  
+  # Multiply the arguments together
+  result <- arg1 * arg2
+  
+  # Return that to the user
+  return(result)
+  
+} # End function operations
+
+# Once created, it can be used!
+multiply(arg1 = 10, arg2 = 5)
+```
+
+. . . 
+
+- Looks kind of like a conditional or loop, right?
 
 ## [Process of Function Writing]{.orange} {.smaller}
 
+- My tips for success in custom function writing:
 
+. . .
+
+1. Write a normal script that does what you want your function to do
+
+\
+
+. . .
+
+2. Identify which part(s) of the script you want the function user to specify
+    - These will be the arguments!
+
+\
+
+. . .
+
+3. Do the special formatting to make R recognize it as a function
+
+\
+
+. . .
+
+4. Use the function like you would any other!
 
 ## [Custom Function Demo]{.gold} {.smaller}
 
+- Let's create a function together for practice!
 
+\
+
+. . .
+
+- Following my tips:
+    1. Write the script version of the function
+    2. Figure out what the function user should have control over
+    3. Make R consider it a function
+    4. Use our new function!
 
 ## [Demo Step 1: Write Script]{.gold} {.smaller}
 
