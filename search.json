@@ -1803,14 +1803,91 @@
     "href": "materials/slides_8a.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nY"
+    "text": "Today’s Plan\n\nMuddiest Point Review\nCustom Functions\nFree Work on GitHub Presence"
   },
   {
     "objectID": "materials/slides_8a.html#todays-learning-objectives",
     "href": "materials/slides_8a.html#todays-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
-    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nX"
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nDescribe the process of writing a new function\nCreate a custom function to perform arithmetic"
+  },
+  {
+    "objectID": "materials/slides_8a.html#muddiest-point-review",
+    "href": "materials/slides_8a.html#muddiest-point-review",
+    "title": "Intro to Data Science",
+    "section": "Muddiest Point Review",
+    "text": "Muddiest Point Review\n\nRecurring topics from most recent MPs:\n\n\n\n\n\nWhat other topic(s) would you like to review?"
+  },
+  {
+    "objectID": "materials/slides_8a.html#what-is-a-custom-function",
+    "href": "materials/slides_8a.html#what-is-a-custom-function",
+    "title": "Intro to Data Science",
+    "section": "What is a “Custom Function”?",
+    "text": "What is a “Custom Function”?\n\nWe’ve been working with functions throughout the course\n\nThese functions have come from packages we can install from CRAN\n\n\n\n\n\n\nHowever, R also lets you write your own functions!\n\n\n\n\n\n\nFunctions you write are called custom functions"
+  },
+  {
+    "objectID": "materials/slides_8a.html#why-write-functions",
+    "href": "materials/slides_8a.html#why-write-functions",
+    "title": "Intro to Data Science",
+    "section": "Why Write Functions?",
+    "text": "Why Write Functions?\n\nRewriting / duplicating anything is risky\n\nChance for human error when you’re typing\nTypos make each “copy” potentially give different results\n\n\n\n\n\n\nInstead you could write/use a custom function!\n\n\n\n\n\n\nFunctions are a “single source of truth”\n\nSomething went wrong? Fix the function!\n\n\n\n\n\n\n\nCan also share function scripts with friends to make their lives easier"
+  },
+  {
+    "objectID": "materials/slides_8a.html#special-syntax-note",
+    "href": "materials/slides_8a.html#special-syntax-note",
+    "title": "Intro to Data Science",
+    "section": "Special Syntax Note",
+    "text": "Special Syntax Note\n\nR Uses the following special syntax for creating functions\n\nYou have to use the function function\n\n\n\n\n\n\nExample syntax:\n\n\n# Define function name\nmultiply &lt;- function(arg1, arg2){\n  \n  # Multiply the arguments together\n  result &lt;- arg1 * arg2\n  \n  # Return that to the user\n  return(result)\n  \n} # End function operations\n\n# Once created, it can be used!\nmultiply(arg1 = 10, arg2 = 5)\n\n[1] 50\n\n\n\n\n\nLooks kind of like a conditional or loop, right?"
+  },
+  {
+    "objectID": "materials/slides_8a.html#process-of-function-writing",
+    "href": "materials/slides_8a.html#process-of-function-writing",
+    "title": "Intro to Data Science",
+    "section": "Process of Function Writing",
+    "text": "Process of Function Writing\n\nMy tips for success in custom function writing:\n\n\n\nWrite a normal script that does what you want your function to do\n\n\n\n\n\n\nIdentify which part(s) of the script you want the function user to specify\n\nThese will be the arguments!\n\n\n\n\n\n\n\nDo the special formatting to make R recognize it as a function\n\n\n\n\n\n\nUse the function like you would any other!"
+  },
+  {
+    "objectID": "materials/slides_8a.html#custom-function-demo",
+    "href": "materials/slides_8a.html#custom-function-demo",
+    "title": "Intro to Data Science",
+    "section": "Custom Function Demo",
+    "text": "Custom Function Demo\n\nLet’s create a function together for practice!\n\n\n\n\n\nFollowing my tips:\n\nWrite the script version of the function\nFigure out what the function user should have control over\nMake R consider it a function\nUse our new function!"
+  },
+  {
+    "objectID": "materials/slides_8a.html#demo-step-1-write-script",
+    "href": "materials/slides_8a.html#demo-step-1-write-script",
+    "title": "Intro to Data Science",
+    "section": "Demo Step 1: Write Script",
+    "text": "Demo Step 1: Write Script"
+  },
+  {
+    "objectID": "materials/slides_8a.html#demo-step-2-identify-inputs",
+    "href": "materials/slides_8a.html#demo-step-2-identify-inputs",
+    "title": "Intro to Data Science",
+    "section": "Demo Step 2: Identify Inputs",
+    "text": "Demo Step 2: Identify Inputs"
+  },
+  {
+    "objectID": "materials/slides_8a.html#demo-step-3-special-format",
+    "href": "materials/slides_8a.html#demo-step-3-special-format",
+    "title": "Intro to Data Science",
+    "section": "Demo Step 3: Special Format",
+    "text": "Demo Step 3: Special Format"
+  },
+  {
+    "objectID": "materials/slides_8a.html#demo-step-4-use-function",
+    "href": "materials/slides_8a.html#demo-step-4-use-function",
+    "title": "Intro to Data Science",
+    "section": "Demo Step 4: Use Function!",
+    "text": "Demo Step 4: Use Function!"
+  },
+  {
+    "objectID": "materials/slides_8a.html#write-your-own",
+    "href": "materials/slides_8a.html#write-your-own",
+    "title": "Intro to Data Science",
+    "section": "Write Your Own!",
+    "text": "Write Your Own!"
   },
   {
     "objectID": "materials/slides_8a.html#temperature-check",
@@ -1820,11 +1897,39 @@
     "text": "Temperature Check\nHow are you Feeling?"
   },
   {
+    "objectID": "materials/slides_8a.html#setting-defaults",
+    "href": "materials/slides_8a.html#setting-defaults",
+    "title": "Intro to Data Science",
+    "section": "Setting Defaults",
+    "text": "Setting Defaults"
+  },
+  {
+    "objectID": "materials/slides_8a.html#make-a-default",
+    "href": "materials/slides_8a.html#make-a-default",
+    "title": "Intro to Data Science",
+    "section": "Make a Default",
+    "text": "Make a Default"
+  },
+  {
+    "objectID": "materials/slides_8a.html#temperature-check-1",
+    "href": "materials/slides_8a.html#temperature-check-1",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
     "objectID": "materials/slides_8a.html#upcoming-due-dates",
     "href": "materials/slides_8a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #x\n\n\nDue before lecture\n(By midnight)\n\nX\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #8\nHomework #8\n\nNote reduced time to complete for this one!\n\nGitHub Presence evaluation\nOptional 3rd draft of Function Tutorials\n\n\nDue before lecture\n(By midnight)\n\nFinal deadline for all work from a summer course"
+  },
+  {
+    "objectID": "materials/slides_8a.html#free-work-on-github",
+    "href": "materials/slides_8a.html#free-work-on-github",
+    "title": "Intro to Data Science",
+    "section": "Free Work on GitHub",
+    "text": "Free Work on GitHub\n\nAssignment is due at end of course (soon!)\n\n\n\nTips for success:\n\n\nCheck out the rubric and make sure you don’t miss any “easy” points\n\n\n\n\nDon’t leave after this slide!\n\n\n\n\nIf you have questions, ask them now during this free work time\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/home_week2.html",
