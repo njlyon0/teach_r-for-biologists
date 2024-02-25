@@ -169,10 +169,47 @@ multiply(arg1 = 10, arg2 = 5)
 
 ## [Demo Step 1: Write Script]{.gold} {.smaller}
 
+- Let's make a function that adds two numbers together
+    - Artificially simple I know but useful to learn with!
 
+\
+
+- We begin by making the script version of our function
+
+```{r ex-fxn-v1}
+#| echo: true
+#| code-line-numbers: true
+
+# Add two numbers together
+4 + 3
+```
 
 ## [Demo Step 2: Identify Inputs]{.gold} {.smaller}
 
+- Now we identify what the user of our function should be able to control
+
+\
+
+- If the function adds two numbers together, the user:
+    - Should control the [first number]{.orange}
+    - Should control the [second number]{.purple}
+    - Should <u>not</u> control the plus sign
+
+\
+
+- Let's replace our numbers with objects
+
+```{r ex-fxn-v2}
+#| echo: true
+#| code-line-numbers: true
+
+# Make objects
+x <- 4
+y <- 3
+
+# Add two objects together
+x + y
+```
 
 
 ## [Demo Step 3: Special Format]{.gold} {.smaller}
