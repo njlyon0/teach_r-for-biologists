@@ -593,9 +593,56 @@ Lecture 8 – Custom Functions
 </section>
 <section id="demo-step-1-write-script" class="slide level2 smaller">
 <h2><span class="gold">Demo Step 1: Write Script</span></h2>
+<ul>
+<li>Let’s make a function that adds two numbers together
+<ul>
+<li>Artificially simple I know but useful to learn with!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>We begin by making the script version of our function</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Add two numbers together</span></span>
+<span id="cb3-2"><a></a><span class="dv">4</span> <span class="sc">+</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+</div>
 </section>
 <section id="demo-step-2-identify-inputs" class="slide level2 smaller">
 <h2><span class="gold">Demo Step 2: Identify Inputs</span></h2>
+<ul>
+<li>Now we identify what the user of our function should be able to control</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>If the function adds two numbers together, the user:
+<ul>
+<li>Should control the <span class="orange">first number</span></li>
+<li>Should control the <span class="purple">second number</span></li>
+<li>Should <u>not</u> control the plus sign</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Let’s replace our numbers with objects</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># Make objects</span></span>
+<span id="cb5-2"><a></a>x <span class="ot">&lt;-</span> <span class="dv">4</span></span>
+<span id="cb5-3"><a></a>y <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb5-4"><a></a></span>
+<span id="cb5-5"><a></a><span class="co"># Add two objects together</span></span>
+<span id="cb5-6"><a></a>x <span class="sc">+</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+</div>
 </section>
 <section id="demo-step-3-special-format" class="slide level2 smaller">
 <h2><span class="gold">Demo Step 3: Special Format</span></h2>

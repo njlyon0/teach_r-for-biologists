@@ -1859,14 +1859,14 @@
     "href": "materials/slides_8a.html#demo-step-1-write-script",
     "title": "Intro to Data Science",
     "section": "Demo Step 1: Write Script",
-    "text": "Demo Step 1: Write Script"
+    "text": "Demo Step 1: Write Script\n\nLet’s make a function that adds two numbers together\n\nArtificially simple I know but useful to learn with!\n\n\n\n\n\nWe begin by making the script version of our function\n\n\n# Add two numbers together\n4 + 3\n\n[1] 7"
   },
   {
     "objectID": "materials/slides_8a.html#demo-step-2-identify-inputs",
     "href": "materials/slides_8a.html#demo-step-2-identify-inputs",
     "title": "Intro to Data Science",
     "section": "Demo Step 2: Identify Inputs",
-    "text": "Demo Step 2: Identify Inputs"
+    "text": "Demo Step 2: Identify Inputs\n\nNow we identify what the user of our function should be able to control\n\n\n\n\nIf the function adds two numbers together, the user:\n\nShould control the first number\nShould control the second number\nShould not control the plus sign\n\n\n\n\n\nLet’s replace our numbers with objects\n\n\n# Make objects\nx &lt;- 4\ny &lt;- 3\n\n# Add two objects together\nx + y\n\n[1] 7"
   },
   {
     "objectID": "materials/slides_8a.html#demo-step-3-special-format",
