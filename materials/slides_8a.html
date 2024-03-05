@@ -601,6 +601,7 @@ Lecture 8 – Custom Functions
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>We begin by making the script version of our function</li>
 </ul>
@@ -611,6 +612,7 @@ Lecture 8 – Custom Functions
 <pre><code>[1] 7</code></pre>
 </div>
 </div>
+</div>
 </section>
 <section id="demo-step-2-identify-inputs" class="slide level2 smaller">
 <h2><span class="gold">Demo Step 2: Identify Inputs</span></h2>
@@ -619,6 +621,7 @@ Lecture 8 – Custom Functions
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>If the function adds two numbers together, the user:
 <ul>
@@ -629,6 +632,8 @@ Lecture 8 – Custom Functions
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Let’s replace our numbers with objects</li>
 </ul>
@@ -643,15 +648,79 @@ Lecture 8 – Custom Functions
 <pre><code>[1] 7</code></pre>
 </div>
 </div>
+</div>
 </section>
 <section id="demo-step-3-special-format" class="slide level2 smaller">
 <h2><span class="gold">Demo Step 3: Special Format</span></h2>
+<ul>
+<li>We can now make this a real function!</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Define the function using special R syntax</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="|2|5|8|9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Define function</span></span>
+<span id="cb7-2"><a></a>plus <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb7-3"><a></a>  </span>
+<span id="cb7-4"><a></a>  <span class="co"># Add arguments together</span></span>
+<span id="cb7-5"><a></a>  result <span class="ot">&lt;-</span> x <span class="sc">+</span> y</span>
+<span id="cb7-6"><a></a>  </span>
+<span id="cb7-7"><a></a>  <span class="co"># Return that</span></span>
+<span id="cb7-8"><a></a>  <span class="fu">return</span>(result)</span>
+<span id="cb7-9"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
 </section>
 <section id="demo-step-4-use-function" class="slide level2 smaller">
 <h2><span class="gold">Demo Step 4: Use Function!</span></h2>
+<ul>
+<li>Now that the function exists, we can use it just like any other function</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Add 4 and 3 together using our new function</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Define function</span></span>
+<span id="cb8-2"><a></a><span class="fu">plus</span>(<span class="at">x =</span> <span class="dv">4</span>, <span class="at">y =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+</div>
+</div>
 </section>
 <section id="write-your-own" class="slide level2 smaller">
 <h2><span class="pink">Write Your Own!</span></h2>
+<ul>
+<li>Write a function that converts pounds (lb) to kilograms (kg)
+<ul>
+<li>Formula: (pound / 2.2) = kilograms</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Remember my tips:
+<ol type="1">
+<li>Write it like a normal script</li>
+<li>Replace values a user would change with objects</li>
+<li>Use special R syntax</li>
+<li>Then use the function!</li>
+</ol></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Let me know when you’ve finished your function
+<ul>
+<li>Or if you need help!</li>
+</ul></li>
+</ul>
 </section>
 <section id="temperature-check" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
@@ -660,11 +729,88 @@ Lecture 8 – Custom Functions
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 </section>
-<section id="setting-defaults" class="slide level2 smaller">
-<h2><span class="orange">Setting Defaults</span></h2>
+<section id="argument-defaults" class="slide level2 smaller">
+<h2><span class="orange">Argument Defaults</span></h2>
+<ul>
+<li>You can set argument defaults when you create a function</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Advantage: user doesn’t have to specify all arguments</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>How do we do this?
+<ul>
+<li>Set it in the <code>function</code> <em>parentheses</em>!</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="default-example" class="slide level2 smaller">
+<h2><span class="orange">Default Example</span></h2>
+<ul>
+<li>Let’s define defaults in our addition function</li>
+</ul>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="|2|11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># Define function</span></span>
+<span id="cb10-2"><a></a>plus <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">x =</span> <span class="dv">4</span>, <span class="at">y =</span> <span class="dv">3</span>){</span>
+<span id="cb10-3"><a></a>  </span>
+<span id="cb10-4"><a></a>  <span class="co"># Add arguments together</span></span>
+<span id="cb10-5"><a></a>  result <span class="ot">&lt;-</span> x <span class="sc">+</span> y</span>
+<span id="cb10-6"><a></a>  </span>
+<span id="cb10-7"><a></a>  <span class="co"># Return that</span></span>
+<span id="cb10-8"><a></a>  <span class="fu">return</span>(result) }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>We can then use the function without specifying those arguments</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plus</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>If the user specifies an argument differently, their input “wins”</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plus</span>(<span class="at">x =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 13</code></pre>
+</div>
+</div>
+</div>
 </section>
 <section id="make-a-default" class="slide level2 smaller">
 <h2><span class="pink">Make a Default</span></h2>
+<ul>
+<li>Let’s revisit your pound to kilogram function</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Set the default pounds to <strong>175</strong></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What happens if you run your function with <em>nothing</em> in the parentheses?</li>
+</ul>
 </section>
 <section id="temperature-check-1" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>

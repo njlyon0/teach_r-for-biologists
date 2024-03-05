@@ -1859,35 +1859,35 @@
     "href": "materials/slides_8a.html#demo-step-1-write-script",
     "title": "Intro to Data Science",
     "section": "Demo Step 1: Write Script",
-    "text": "Demo Step 1: Write Script\n\nLet’s make a function that adds two numbers together\n\nArtificially simple I know but useful to learn with!\n\n\n\n\n\nWe begin by making the script version of our function\n\n\n# Add two numbers together\n4 + 3\n\n[1] 7"
+    "text": "Demo Step 1: Write Script\n\nLet’s make a function that adds two numbers together\n\nArtificially simple I know but useful to learn with!\n\n\n\n\n\n\nWe begin by making the script version of our function\n\n\n# Add two numbers together\n4 + 3\n\n[1] 7"
   },
   {
     "objectID": "materials/slides_8a.html#demo-step-2-identify-inputs",
     "href": "materials/slides_8a.html#demo-step-2-identify-inputs",
     "title": "Intro to Data Science",
     "section": "Demo Step 2: Identify Inputs",
-    "text": "Demo Step 2: Identify Inputs\n\nNow we identify what the user of our function should be able to control\n\n\n\n\nIf the function adds two numbers together, the user:\n\nShould control the first number\nShould control the second number\nShould not control the plus sign\n\n\n\n\n\nLet’s replace our numbers with objects\n\n\n# Make objects\nx &lt;- 4\ny &lt;- 3\n\n# Add two objects together\nx + y\n\n[1] 7"
+    "text": "Demo Step 2: Identify Inputs\n\nNow we identify what the user of our function should be able to control\n\n\n\n\n\nIf the function adds two numbers together, the user:\n\nShould control the first number\nShould control the second number\nShould not control the plus sign\n\n\n\n\n\n\n\nLet’s replace our numbers with objects\n\n\n# Make objects\nx &lt;- 4\ny &lt;- 3\n\n# Add two objects together\nx + y\n\n[1] 7"
   },
   {
     "objectID": "materials/slides_8a.html#demo-step-3-special-format",
     "href": "materials/slides_8a.html#demo-step-3-special-format",
     "title": "Intro to Data Science",
     "section": "Demo Step 3: Special Format",
-    "text": "Demo Step 3: Special Format"
+    "text": "Demo Step 3: Special Format\n\nWe can now make this a real function!\n\n\n\n\n\nDefine the function using special R syntax\n\n\n# Define function\nplus &lt;- function(x, y){\n  \n  # Add arguments together\n  result &lt;- x + y\n  \n  # Return that\n  return(result)\n}"
   },
   {
     "objectID": "materials/slides_8a.html#demo-step-4-use-function",
     "href": "materials/slides_8a.html#demo-step-4-use-function",
     "title": "Intro to Data Science",
     "section": "Demo Step 4: Use Function!",
-    "text": "Demo Step 4: Use Function!"
+    "text": "Demo Step 4: Use Function!\n\nNow that the function exists, we can use it just like any other function\n\n\n\n\n\nAdd 4 and 3 together using our new function\n\n\n# Define function\nplus(x = 4, y = 3)\n\n[1] 7"
   },
   {
     "objectID": "materials/slides_8a.html#write-your-own",
     "href": "materials/slides_8a.html#write-your-own",
     "title": "Intro to Data Science",
     "section": "Write Your Own!",
-    "text": "Write Your Own!"
+    "text": "Write Your Own!\n\nWrite a function that converts pounds (lb) to kilograms (kg)\n\nFormula: (pound / 2.2) = kilograms\n\n\n\n\n\nRemember my tips:\n\nWrite it like a normal script\nReplace values a user would change with objects\nUse special R syntax\nThen use the function!\n\n\n\n\n\nLet me know when you’ve finished your function\n\nOr if you need help!"
   },
   {
     "objectID": "materials/slides_8a.html#temperature-check",
@@ -1897,18 +1897,25 @@
     "text": "Temperature Check\nHow are you Feeling?"
   },
   {
-    "objectID": "materials/slides_8a.html#setting-defaults",
-    "href": "materials/slides_8a.html#setting-defaults",
+    "objectID": "materials/slides_8a.html#argument-defaults",
+    "href": "materials/slides_8a.html#argument-defaults",
     "title": "Intro to Data Science",
-    "section": "Setting Defaults",
-    "text": "Setting Defaults"
+    "section": "Argument Defaults",
+    "text": "Argument Defaults\n\nYou can set argument defaults when you create a function\n\n\n\n\n\nAdvantage: user doesn’t have to specify all arguments\n\n\n\n\n\n\nHow do we do this?\n\nSet it in the function parentheses!"
+  },
+  {
+    "objectID": "materials/slides_8a.html#default-example",
+    "href": "materials/slides_8a.html#default-example",
+    "title": "Intro to Data Science",
+    "section": "Default Example",
+    "text": "Default Example\n\nLet’s define defaults in our addition function\n\n\n\n# Define function\nplus &lt;- function(x = 4, y = 3){\n  \n  # Add arguments together\n  result &lt;- x + y\n  \n  # Return that\n  return(result) }\n\n\n\n\n\n\nWe can then use the function without specifying those arguments\n\n\nplus()\n\n[1] 7\n\n\n\n\n\n\n\nIf the user specifies an argument differently, their input “wins”\n\n\nplus(x = 10)\n\n[1] 13"
   },
   {
     "objectID": "materials/slides_8a.html#make-a-default",
     "href": "materials/slides_8a.html#make-a-default",
     "title": "Intro to Data Science",
     "section": "Make a Default",
-    "text": "Make a Default"
+    "text": "Make a Default\n\nLet’s revisit your pound to kilogram function\n\n\n\n\nSet the default pounds to 175\n\n\n\n\nWhat happens if you run your function with nothing in the parentheses?"
   },
   {
     "objectID": "materials/slides_8a.html#temperature-check-1",
