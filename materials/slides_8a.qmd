@@ -174,6 +174,8 @@ multiply(arg1 = 10, arg2 = 5)
 
 \
 
+. . .
+
 - We begin by making the script version of our function
 
 ```{r ex-fxn-v1}
@@ -190,12 +192,16 @@ multiply(arg1 = 10, arg2 = 5)
 
 \
 
+. . .
+
 - If the function adds two numbers together, the user:
     - Should control the [first number]{.orange}
     - Should control the [second number]{.purple}
     - Should <u>not</u> control the plus sign
 
 \
+
+. . .
 
 - Let's replace our numbers with objects
 
@@ -211,20 +217,66 @@ y <- 3
 x + y
 ```
 
-
 ## [Demo Step 3: Special Format]{.gold} {.smaller}
 
+- We can now make this a real function!
 
+\
+
+. . .
+
+- Define the function using special R syntax
+
+```{r ex-fxn-v3}
+#| echo: true
+#| code-line-numbers: "|2|5|8|9"
+
+# Define function
+plus <- function(x, y){
+  
+  # Add arguments together
+  result <- x + y
+  
+  # Return that
+  return(result)
+}
+```
 
 ## [Demo Step 4: Use Function!]{.gold} {.smaller}
 
+- Now that the function exists, we can use it just like any other function
 
+\
 
+. . .
+
+- Add 4 and 3 together using our new function
+
+```{r ex-fxn-v4}
+#| echo: true
+#| code-line-numbers: true
+
+# Define function
+plus(x = 4, y = 3)
+```
 
 ## [Write Your Own!]{.pink} {.smaller}
 
+- Write a function that converts pounds (lb) to kilograms (kg)
+    - Formula: (pound / 2.2) = kilograms
 
+\
 
+- Remember my tips:
+    1. Write it like a normal script
+    2. Replace values a user would change with objects
+    3. Use special R syntax
+    4. Then use the function!
+
+\
+
+- Let me know when you've finished your function
+    - Or if you need help!
 
 ## [Temperature Check]{.purple}
 
@@ -234,16 +286,80 @@ x + y
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-## [Setting Defaults]{.orange} {.smaller}
+## [Argument Defaults]{.orange} {.smaller}
 
+- You can set argument defaults when you create a function
 
+\
+
+. . .
+
+- Advantage: user doesn't have to specify all arguments
+
+\
+
+. . .
+
+- How do we do this?
+    - Set it in the `function` _parentheses_!
+
+## [Default Example]{.orange} {.smaller}
+
+- Let's define defaults in our addition function
+
+. . .
+
+```{r ex-fxn-v5}
+#| echo: true
+#| code-line-numbers: "|2|11"
+
+# Define function
+plus <- function(x = 4, y = 3){
+  
+  # Add arguments together
+  result <- x + y
+  
+  # Return that
+  return(result) }
+```
+
+\
+
+. . .
+
+- We can then use the function without specifying those arguments
+
+```{r ex-fxn-v6}
+#| echo: true
+#| code-line-numbers: false
+
+plus()
+```
+
+\
+
+. . .
+
+- If the user specifies an argument differently, their input "wins"
+
+```{r ex-fxn-v7}
+#| echo: true
+#| code-line-numbers: false
+
+plus(x = 10)
+```
 
 ## [Make a Default]{.pink} {.smaller}
 
+- Let's revisit your pound to kilogram function
 
+\
 
+- Set the default pounds to **175**
 
+\
 
+- What happens if you run your function with _nothing_ in the parentheses?
 
 ## [Temperature Check]{.purple}
 
