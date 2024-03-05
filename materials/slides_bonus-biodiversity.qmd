@@ -28,7 +28,10 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Y
+- Muddiest Point Review
+- Biodiversity & Ecological Communities
+- Future Resources
+    - Including mapping & geospatial in R!
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -36,7 +39,61 @@ After today's session you will be able to:
 
 . . .
 
-- X
+- Calculate diversity and species richness with R
+- Compute rarefied species richness
+- Create a species accumulation curve with `ggplot2`
+- Identify useful parts of The Carpentries' tutorials
+
+## [Muddiest Point Review]{.gold}
+
+- Recurring topics from most recent MPs:
+
+\
+
+. . . 
+
+- What other topic(s) would you like to review?
+
+## [Ecology Term Glossary]{.orange} {.smaller}
+
+
+
+
+## [Ecological Questions]{.orange} {.smaller}
+
+
+
+## [Ecology Data in R]{.orange} {.smaller}
+
+
+
+## [Calculating Diversity]{.orange} {.smaller}
+
+
+
+## [Calculating Diversity with R]{.orange} {.smaller}
+
+
+
+## [Community Data in `vegan`]{.orange} {.smaller}
+
+
+
+## [Practice Prep]{.pink} {.smaller}
+
+![](images/hex-vegan.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+## [Calculate Diversity]{.pink} {.smaller}
+
+![](images/hex-vegan.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+
+
+
 
 ## [Temperature Check]{.purple}
 
@@ -46,31 +103,92 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+## [Rarefaction Background]{.orange} {.smaller}
 
 
-## [Upcoming Due Dates]{.blue} {.smaller}
 
-::::{.columns}
+## [Rarefaction with R]{.orange} {.smaller}
 
-:::{.column width="50%"}
 
-### Due before lecture
 
-#### (By midnight)
+## [Rarefy a Community]{.pink} {.smaller}
 
-- x
+![](images/hex-vegan.png){.absolute top=0 left=1100 width="12%"}
 
-:::
 
-:::{.column width="50%"}
 
-### Due before lab
+## [Species Accumulation Curves (SACs)]{.orange} {.smaller}
 
-#### (By midnight)
 
-- X
 
-:::
+## [SAC Example]{.gold} {.smaller}
 
-::::
 
+
+## [Making a SAC]{.orange} {.smaller}
+
+
+
+## [Calculate Species Accumulation]{.pink} {.smaller}
+
+![](images/hex-vegan.png){.absolute top=0 left=1100 width="12%"}
+
+
+
+## [Make a SAC]{.pink} {.smaller}
+
+![](images/hex-vegan.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%"}
+
+
+
+## [New `ggplot2` Geometry]{.orange} {.smaller}
+
+
+
+## [Add Error Bars]{.pink} {.smaller}
+
+![](images/hex-vegan.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%"}
+
+
+
+
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
+## [Continuing to Explore R]{.orange} {.smaller}
+
+
+
+## [The Carpentries]{.orange} {.smaller}
+
+
+
+## [My Goal for You]{.purple}
+
+<p align="center">
+<img src="comics/r-knowledge.png" alt="Comic-style graph depicting someone's confidence with R changing over time">
+</p>
+
+## [Your Accomplishments]{.gold} {.smaller}
+
+
+
+## [Closing Thoughts]{.gold} {.smaller}
+
+
+
+## [Upcoming Due Dates]{.blue}
+
+- Everything must be turned in at midnight <u>tonight</u>!
+
+\
+
+- Turn in _everything_ you haven't yet as soon as possible
