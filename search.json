@@ -3740,14 +3740,98 @@
     "href": "materials/slides_bonus-biodiversity.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nY"
+    "text": "Today’s Plan\n\nMuddiest Point Review\nBiodiversity & Ecological Communities\nFuture Resources\n\nIncluding mapping & geospatial in R!"
   },
   {
     "objectID": "materials/slides_bonus-biodiversity.html#todays-learning-objectives",
     "href": "materials/slides_bonus-biodiversity.html#todays-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
-    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nX"
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nCalculate diversity and species richness with R\nCompute rarefied species richness\nCreate a species accumulation curve with ggplot2\nIdentify useful parts of The Carpentries’ tutorials"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#muddiest-point-review",
+    "href": "materials/slides_bonus-biodiversity.html#muddiest-point-review",
+    "title": "Intro to Data Science",
+    "section": "Muddiest Point Review",
+    "text": "Muddiest Point Review\n\nRecurring topics from most recent MPs:\n\n\n\n\n\nWhat other topic(s) would you like to review?"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#ecology-term-glossary",
+    "href": "materials/slides_bonus-biodiversity.html#ecology-term-glossary",
+    "title": "Intro to Data Science",
+    "section": "Ecology Term Glossary",
+    "text": "Ecology Term Glossary\n\nPopulation = individuals of one species in a given habitat / area\n\n\n\n\n\nCommunity = individuals of multiple species in a given habitat / area\n\n\n\n\n\n\nAbundance = number of individuals of one or more species\n\n\n\n\n\n\nRichness = number of species in a given habitat / area\n\n\n\n\n\n\nDiversity = index derived from some combination of abundance & richness"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#ecological-questions",
+    "href": "materials/slides_bonus-biodiversity.html#ecological-questions",
+    "title": "Intro to Data Science",
+    "section": "Ecological Questions",
+    "text": "Ecological Questions\n\nAs ecologists, we’re often concerned with biodiversity\n\n\n\n\n\nOur studies often involve data like:\n\nPresence or abundance of particular species\nNumber or mix of species in a habitat\nHabitat characteristics across multiple habitats\nScaling the above across space or time (or both!)\n\n\n\n\n\n\n\nA lot of different questions fit under the “ecology” umbrella!"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#ecology-data-in-r",
+    "href": "materials/slides_bonus-biodiversity.html#ecology-data-in-r",
+    "title": "Intro to Data Science",
+    "section": "Ecology Data in R",
+    "text": "Ecology Data in R\n\nEcological data are famously “messy”\n\nA lot of field-collected information\nOften multiple observers with their own abbreviations or acronyms\nMany typos or inconsistencies\nA lot of required processing before data can be visualized / analyzed\n\n\n\n\n\n\nEven when everything goes right, ecology data has a lot of variation\n\nThe natural world has a lot of “noise” in the data\n\n\n\n\n\n\n\nChallenge is separating biologically-relevant noise from scientists’ errors!"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#ecology-r-package",
+    "href": "materials/slides_bonus-biodiversity.html#ecology-r-package",
+    "title": "Intro to Data Science",
+    "section": "Ecology R Package",
+    "text": "Ecology R Package\n\nA lot of data wrangling can be done with whatever package you’d like\n\nE.g., dplyr, tidyr, base R, etc.\n\n\n\n\n\n\nSome of the special metrics unique to ecology need their own package\n\n\n\n\n\n\nMost of these tools live in the vegan package!\n\n\n\n\n\n\nNote on package name\n\nPronounced like the dietary preference\nShort for “vegetation analysis” (developed by plant people)"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#diversity-metrics",
+    "href": "materials/slides_bonus-biodiversity.html#diversity-metrics",
+    "title": "Intro to Data Science",
+    "section": "Diversity Metrics",
+    "text": "Diversity Metrics\n\n\nShannon Diversity\n\nHigher numbers = more diverse\nTheoretically infinite\n\n\n\n\nAbbreviation is H’\n\n“H prime”"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#diversity-metrics-1",
+    "href": "materials/slides_bonus-biodiversity.html#diversity-metrics-1",
+    "title": "Intro to Data Science",
+    "section": "Diversity Metrics",
+    "text": "Diversity Metrics\n\n\nShannon Diversity\n\nHigher numbers = more diverse\nTheoretically infinite\n\n\n\n\nAbbreviation is H’\n\n“H prime”\n\n\n\nSimpson Diversity\n\nRanges from 0 to 1\n\n\n\n\nAbbreviation is D"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#diversity-metrics-2",
+    "href": "materials/slides_bonus-biodiversity.html#diversity-metrics-2",
+    "title": "Intro to Data Science",
+    "section": "Diversity Metrics",
+    "text": "Diversity Metrics\n\n\nShannon Diversity\n\nHigher numbers = more diverse\nTheoretically infinite\n\n\n\n\nAbbreviation is H’\n\n“H prime”\n\n\n\nSimpson Diversity\n\nRanges from 0 to 1\n\n\n\n\nAbbreviation is D\n\n\nSpecies Richness\n\nNumber of species\nRegardless of number of individuals\n\n\n\n\nAbbreviation is S"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#calculating-diversity-in-r",
+    "href": "materials/slides_bonus-biodiversity.html#calculating-diversity-in-r",
+    "title": "Intro to Data Science",
+    "section": "Calculating Diversity in R",
+    "text": "Calculating Diversity in R\n\nFunctions are diversity and specnumber\n\n\n\n\n\nExample syntax:\n\n# Calculate diversity\nvegan::diversity(x = community_df, index = \"shannon\")\n\n# Calculate richness\nvegan::specnumber(x = community_df)\n\n\n\n\n\nNote that the community data needs to be in wide format\n\nRow = site / location\nColumn = species (either presence/absence or abundance)"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#community-data-in-vegan",
+    "href": "materials/slides_bonus-biodiversity.html#community-data-in-vegan",
+    "title": "Intro to Data Science",
+    "section": "Community Data in vegan",
+    "text": "Community Data in vegan\n\nvegan has some built-in community datasets\n\n\n\n\n\nWe’ll use a tree dataset from Barrow Colorado Island (BCI)\n\nHyper-diverse island in Panama\nSite of a lot of groundbreaking ecological work\n\n\n\n\n\n\n\n\nDataset is one row per sampling site\n\nColumns are tree scientific names\nValues are counts of tree species at that site"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#practice-prep",
+    "href": "materials/slides_bonus-biodiversity.html#practice-prep",
+    "title": "Intro to Data Science",
+    "section": "Practice Prep",
+    "text": "Practice Prep\n\n\nGet prepared\n\nMake a new script for today\nInstall/load vegan package\nLoad BCI data by running the following code:\n\n\ndata(BCI)\n\nCheck structure of BCI object\n\n\n\n\n\nCalculate number of tree species per site (i.e., per row)\n\nUse the specnumber function in vegan\n\n\n\n\n\n\n\nHow many tree species are in the first site?"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#calculate-diversity",
+    "href": "materials/slides_bonus-biodiversity.html#calculate-diversity",
+    "title": "Intro to Data Science",
+    "section": "Calculate Diversity",
+    "text": "Calculate Diversity\n\n\nCalculate Shannon diversity for the BCI data\n\nWhat is the Shannon diversity for the first site?\n\n\n\n\n\n\nCalculate Simpson diversity for the BCI data\n\nWhat is the Simpson diversity for the first site?"
   },
   {
     "objectID": "materials/slides_bonus-biodiversity.html#temperature-check",
@@ -3757,10 +3841,122 @@
     "text": "Temperature Check\nHow are you Feeling?"
   },
   {
+    "objectID": "materials/slides_bonus-biodiversity.html#rarefaction-background",
+    "href": "materials/slides_bonus-biodiversity.html#rarefaction-background",
+    "title": "Intro to Data Science",
+    "section": "Rarefaction Background",
+    "text": "Rarefaction Background"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#rarefaction-with-r",
+    "href": "materials/slides_bonus-biodiversity.html#rarefaction-with-r",
+    "title": "Intro to Data Science",
+    "section": "Rarefaction with R",
+    "text": "Rarefaction with R"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#rarefy-a-community",
+    "href": "materials/slides_bonus-biodiversity.html#rarefy-a-community",
+    "title": "Intro to Data Science",
+    "section": "Rarefy a Community",
+    "text": "Rarefy a Community"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#species-accumulation-curves-sacs",
+    "href": "materials/slides_bonus-biodiversity.html#species-accumulation-curves-sacs",
+    "title": "Intro to Data Science",
+    "section": "Species Accumulation Curves (SACs)",
+    "text": "Species Accumulation Curves (SACs)"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#sac-example",
+    "href": "materials/slides_bonus-biodiversity.html#sac-example",
+    "title": "Intro to Data Science",
+    "section": "SAC Example",
+    "text": "SAC Example"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#making-a-sac",
+    "href": "materials/slides_bonus-biodiversity.html#making-a-sac",
+    "title": "Intro to Data Science",
+    "section": "Making a SAC",
+    "text": "Making a SAC"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#calculate-species-accumulation",
+    "href": "materials/slides_bonus-biodiversity.html#calculate-species-accumulation",
+    "title": "Intro to Data Science",
+    "section": "Calculate Species Accumulation",
+    "text": "Calculate Species Accumulation"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#make-a-sac",
+    "href": "materials/slides_bonus-biodiversity.html#make-a-sac",
+    "title": "Intro to Data Science",
+    "section": "Make a SAC",
+    "text": "Make a SAC"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#new-ggplot2-geometry",
+    "href": "materials/slides_bonus-biodiversity.html#new-ggplot2-geometry",
+    "title": "Intro to Data Science",
+    "section": "New ggplot2 Geometry",
+    "text": "New ggplot2 Geometry"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#add-error-bars",
+    "href": "materials/slides_bonus-biodiversity.html#add-error-bars",
+    "title": "Intro to Data Science",
+    "section": "Add Error Bars",
+    "text": "Add Error Bars"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#temperature-check-1",
+    "href": "materials/slides_bonus-biodiversity.html#temperature-check-1",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#continuing-to-explore-r",
+    "href": "materials/slides_bonus-biodiversity.html#continuing-to-explore-r",
+    "title": "Intro to Data Science",
+    "section": "Continuing to Explore R",
+    "text": "Continuing to Explore R"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#the-carpentries",
+    "href": "materials/slides_bonus-biodiversity.html#the-carpentries",
+    "title": "Intro to Data Science",
+    "section": "The Carpentries",
+    "text": "The Carpentries"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#my-goal-for-you",
+    "href": "materials/slides_bonus-biodiversity.html#my-goal-for-you",
+    "title": "Intro to Data Science",
+    "section": "My Goal for You",
+    "text": "My Goal for You"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#your-accomplishments",
+    "href": "materials/slides_bonus-biodiversity.html#your-accomplishments",
+    "title": "Intro to Data Science",
+    "section": "Your Accomplishments",
+    "text": "Your Accomplishments"
+  },
+  {
+    "objectID": "materials/slides_bonus-biodiversity.html#closing-thoughts",
+    "href": "materials/slides_bonus-biodiversity.html#closing-thoughts",
+    "title": "Intro to Data Science",
+    "section": "Closing Thoughts",
+    "text": "Closing Thoughts"
+  },
+  {
     "objectID": "materials/slides_bonus-biodiversity.html#upcoming-due-dates",
     "href": "materials/slides_bonus-biodiversity.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nx\n\n\nDue before lab\n(By midnight)\n\nX\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\nEverything must be turned in at midnight tonight!\n\n\n\n\nTurn in everything you haven’t yet as soon as possible\n\n\n\n\nProgramming in R for Biologists"
   }
 ]
