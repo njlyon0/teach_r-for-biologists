@@ -56,24 +56,127 @@ After today's session you will be able to:
 
 ## [Ecology Term Glossary]{.orange} {.smaller}
 
+- [Population]{.gold} = individuals of <u>_one_</u> species in a given habitat / area
 
+\
 
+. . . 
+
+- [Community]{.blue} = individuals of <u>_multiple_</u> species in a given habitat / area
+
+\
+
+. . . 
+
+- [Abundance]{.orange} = number of <u>_individuals_</u> of one or more species
+
+\
+
+. . . 
+
+- [Richness]{.pink} = number of <u>_species_</u> in a given habitat / area
+
+\
+
+. . . 
+
+- [Diversity]{.purple} = index derived from some combination of abundance & richness
 
 ## [Ecological Questions]{.orange} {.smaller}
 
+- As ecologists, we're often concerned with biodiversity
 
+\
+
+. . . 
+
+- Our studies often involve data like:
+    - Presence or abundance of particular species
+    - Number or mix of species in a habitat
+    - Habitat characteristics across multiple habitats
+    - Scaling the above across space or time (or both!)
+
+\
+
+. . . 
+
+- A _lot_ of different questions fit under the "ecology" umbrella!
 
 ## [Ecology Data in R]{.orange} {.smaller}
 
+- Ecological data are famously "messy"
+    - A lot of field-collected information
+    - Often multiple observers with their own abbreviations or acronyms
+    - Many typos or inconsistencies
+    - A lot of required processing before data can be visualized / analyzed
 
+\
+
+. . .
+
+- Even when _everything_ goes right, <u>ecology data has a lot of variation</u>
+    - The natural world has a lot of "noise" in the data
+
+\
+
+. . .
+
+- Challenge is separating biologically-relevant noise from scientists’ errors!
 
 ## [Calculating Diversity]{.orange} {.smaller}
 
+- A lot of data wrangling can be done with whatever package you'd like
+    - E.g., `dplyr`,  `tidyr`, base R, etc.
 
+\
 
-## [Calculating Diversity with R]{.orange} {.smaller}
+. . .
 
+- Some of the special metrics unique to ecology need their own package
 
+\
+
+. . .
+
+- Most of these tools live in the `vegan` package!
+
+\
+
+. . .
+
+- Note on package name
+    - Pronounced like the dietary preference
+    - Short for "vegetation analysis" (developed by plant people)
+
+## [Diversity Metrics]{.orange} {.smaller}
+
+::::{.columns}
+
+:::{.column width="33.33%"}
+
+1. Shannon Diversity
+    - Higher numbers = more diverse
+    - Theoretically infinite
+
+H' = ($\Sigma$ p~i~ * ln(p~i~)) * -1
+
+:::
+:::{.column width="33.33%"}
+
+2. Simpson Diversity
+    - Ranges from 0 to 1
+
+D = ($\Sigma$ n * (n-1)) / (N (N - 1))
+
+:::
+:::{.column width="33.33%"}
+
+3. Species richness (S)
+    - Number of species
+    - Regardless of number of individuals
+
+:::
+::::
 
 ## [Community Data in `vegan`]{.orange} {.smaller}
 
