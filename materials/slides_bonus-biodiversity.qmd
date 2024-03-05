@@ -123,7 +123,7 @@ After today's session you will be able to:
 
 - Challenge is separating biologically-relevant noise from scientists’ errors!
 
-## [Calculating Diversity]{.orange} {.smaller}
+## [Ecology R Package]{.orange} {.smaller}
 
 - A lot of data wrangling can be done with whatever package you'd like
     - E.g., `dplyr`,  `tidyr`, base R, etc.
@@ -154,49 +154,189 @@ After today's session you will be able to:
 
 :::{.column width="33.33%"}
 
-1. Shannon Diversity
-    - Higher numbers = more diverse
-    - Theoretically infinite
+### Shannon Diversity
 
-H' = ($\Sigma$ p~i~ * ln(p~i~)) * -1
+- Higher numbers = more diverse
+- Theoretically infinite
 
-:::
-:::{.column width="33.33%"}
+\
 
-2. Simpson Diversity
-    - Ranges from 0 to 1
-
-D = ($\Sigma$ n * (n-1)) / (N (N - 1))
+- Abbreviation is H'
+    - "H prime"
 
 :::
 :::{.column width="33.33%"}
 
-3. Species richness (S)
-    - Number of species
-    - Regardless of number of individuals
+:::
+:::{.column width="33.33%"}
+
 
 :::
 ::::
 
+## [Diversity Metrics]{.orange} {.smaller}
+
+::::{.columns}
+
+:::{.column width="33.33%"}
+
+### Shannon Diversity
+
+- Higher numbers = more diverse
+- Theoretically infinite
+
+\
+
+- Abbreviation is H'
+    - "H prime"
+
+:::
+:::{.column width="33.33%"}
+
+### Simpson Diversity
+
+- Ranges from 0 to 1
+
+\
+
+- Abbreviation is D
+
+:::
+:::{.column width="33.33%"}
+
+:::
+::::
+
+## [Diversity Metrics]{.orange} {.smaller}
+
+::::{.columns}
+
+:::{.column width="33.33%"}
+
+### Shannon Diversity
+
+- Higher numbers = more diverse
+- Theoretically infinite
+
+\
+
+- Abbreviation is H'
+    - "H prime"
+
+:::
+:::{.column width="33.33%"}
+
+### Simpson Diversity
+
+- Ranges from 0 to 1
+
+\
+
+- Abbreviation is D
+
+:::
+:::{.column width="33.33%"}
+
+### Species Richness
+
+- Number of species
+- Regardless of number of individuals
+
+\
+
+- Abbreviation is S
+
+:::
+::::
+
+## [Calculating Diversity in R]{.orange} {.smaller}
+
+- Functions are `diversity` and `specnumber`
+
+\
+
+. . .
+
+- Example syntax:
+```{.r}
+# Calculate diversity
+vegan::diversity(x = community_df, index = "shannon")
+
+# Calculate richness
+vegan::specnumber(x = community_df)
+```
+
+\
+
+. . .
+
+- Note that the community data needs to be in _wide format_
+    - Row = site / location
+    - Column = species (either presence/absence or abundance)
+
 ## [Community Data in `vegan`]{.orange} {.smaller}
 
+- `vegan` has some built-in community datasets
 
+\
+
+. . .
+
+- We'll use a tree dataset from Barrow Colorado Island (BCI)
+    - Hyper-diverse island in Panama
+    - Site of a lot of groundbreaking ecological work
+
+![](images/map-bci.png){.absolute top=300 left=700 width="50%"}
+
+\
+
+. . .
+
+- Dataset is one row per sampling site
+    - Columns are tree scientific names
+    - Values are counts of tree species at that site
 
 ## [Practice Prep]{.pink} {.smaller}
 
 ![](images/hex-vegan.png){.absolute top=0 left=1100 width="12%"}
 
+- Get prepared
+    - Make a new script for today
+    - Install/load `vegan` package
+    - Load BCI data by running the following code:
+    
+```{.r}
+data(BCI)
+```
+    
+- Check structure of BCI object
 
+\
 
-## [Calculate Diversity]{.pink} {.smaller}
+. . .
+
+- Calculate number of tree species per site (i.e., per row)
+    - Use the `specnumber` function in `vegan`
+
+\
+
+. . .
+
+- How many tree species are in the _first_ site?
+
+## [Calculate Diversity]{.pink}
 
 ![](images/hex-vegan.png){.absolute top=0 left=1100 width="12%"}
 
+- Calculate _Shannon_ diversity for the BCI data
+    - What is the Shannon diversity for the first site?
 
+\
 
+. . .
 
-
-
+- Calculate Simpson diversity for the BCI data
+    - What is the Simpson diversity for the first site?
 
 ## [Temperature Check]{.purple}
 
