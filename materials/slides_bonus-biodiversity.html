@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.550">
+  <meta name="generator" content="quarto-1.4.551">
 
   <meta name="author" content="Lab 8 – Biodiversity + Mapping Resources">
   <title>R Programming for Biologists - Intro to Data Science</title>
@@ -786,37 +786,289 @@ Lab 8 – Biodiversity + Mapping Resources
 </section>
 <section id="rarefaction-background" class="slide level2 smaller">
 <h2><span class="orange">Rarefaction Background</span></h2>
+<ul>
+<li>Known issue: inconsistent survey effort yields inconsistent data
+<ul>
+<li>If you <u>look harder</u> for species at site A than B, you’ll <u>likely find more</u> at A than B</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li><span class="purple">Rarefaction</span> = way to (try to) account for this difference
+<ol type="1">
+<li>Identify site with smallest abundance of individuals (any species)</li>
+<li>Randomly pick that many individuals from sites that have more than that number</li>
+<li>Measure diversity of that random subset</li>
+<li>Re-randomize many times</li>
+<li>Average the diversity found in each random subset to get “rarefied” richness</li>
+</ol></li>
+</ul>
+</div>
 </section>
 <section id="rarefaction-with-r" class="slide level2 smaller">
 <h2><span class="orange">Rarefaction with R</span></h2>
+<ul>
+<li>Function for rarefaction in <code>vegan</code> is <code>rarefy</code></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Example syntax:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Rarefy our community data</span></span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a>vegan<span class="sc">::</span><span class="fu">rarefy</span>(<span class="at">x =</span> community_df,</span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>              <span class="co"># `sample` argument is minimum abundance</span></span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>              <span class="at">sample =</span> <span class="fu">min</span>(community_df<span class="sc">$</span>abundance))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Produces non-integer richness but that is not a problem
+<ul>
+<li>Scientists expect non-integers when you say you’ve rarefied the community</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="rarefy-a-community" class="slide level2 smaller">
 <h2><span class="pink">Rarefy a Community</span></h2>
 <p><img data-src="images/hex-vegan.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Rarefy the BCI data (set <code>sample</code> to 20)
+<ul>
+<li>What is the rarefied richness of the first site?</li>
+<li>How does this compare with the <em>actual</em> richness of the first site?</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Let’s identify the actual lowest abundance of trees
+<ul>
+<li>Run <code>rowSums(BCI)</code> and assign it to an object</li>
+<li>Use <code>min</code> on that object to identify the single smallest value</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Rarefy the community again but set <code>sample</code> to the minimum value you found
+<ul>
+<li>How does the rarefied richness of the first site change?</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="species-accumulation-curves-sacs" class="slide level2 smaller">
-<h2><span class="orange">Species Accumulation Curves (SACs)</span></h2>
+<section id="species-accumulation-curves" class="slide level2 smaller">
+<h2><span class="orange">Species Accumulation Curves</span></h2>
+<ul>
+<li>How do you know when you’ve sampled “enough”?</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>When you start sampling you find a ton of new species at first
+<ul>
+<li>Then fewer new species over time</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>We can use that trend to quantify how much we need to sample to find “most” of the species</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>These data are presented as a <span class="purple">Species Accumulation Curve</span> (SAC)</li>
+</ul>
+</div>
 </section>
 <section id="sac-example" class="slide level2 smaller">
 <h2><span class="gold">SAC Example</span></h2>
-</section>
+
+<img data-src="slides_bonus-biodiversity_files/figure-revealjs/ex-sac-1.png" class="quarto-figure quarto-figure-center r-stretch" width="576"></section>
 <section id="making-a-sac" class="slide level2 smaller">
 <h2><span class="orange">Making a SAC</span></h2>
+<ul>
+<li>Function for SACs in <code>vegan</code> is <code>specaccum</code></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Example syntax:</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a>vegan<span class="sc">::</span><span class="fu">specaccum</span>(<span class="at">comm =</span> community_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>One additional hurdle for this function: it returns a <span class="pink"><strong>list</strong></span>
+<ul>
+<li>A list is a class of object</li>
+<li>Essentially a list is a vector of some other class (vectors, dataframes, etc.)</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>We will cover how to pull what we want out of this list</li>
+</ul>
+</div>
 </section>
 <section id="calculate-species-accumulation" class="slide level2 smaller">
 <h2><span class="pink">Calculate Species Accumulation</span></h2>
 <p><img data-src="images/hex-vegan.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>Use <code>specaccum</code> on the BCI data and assign it to a new object</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Check the structure</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>What differences do you see here from what we’ve done in the past?</li>
+</ul>
+</div>
+</section>
+<section id="handle-the-list" class="slide level2 smaller">
+<h2><span class="pink">Handle the List</span></h2>
+<ul>
+<li>That worked but–as I warned you–you are left with a list
+<ul>
+<li><code>ggplot2</code> will want a dataframe so we need to do some parsing</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Run the following code:</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a>curve_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">"sites"</span> <span class="ot">=</span> curve_list<span class="sc">$</span>sites,</span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>                       <span class="st">"richness"</span> <span class="ot">=</span> curve_list<span class="sc">$</span>richness,</span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>                       <span class="st">"sd"</span> <span class="ot">=</span> curve_list<span class="sc">$</span>sd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><code>curve_list</code> should be whatever you named your species accumulation object</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Check the structure of the resulting data object</li>
+</ul>
+</div>
 </section>
 <section id="make-a-sac" class="slide level2 smaller">
 <h2><span class="pink">Make a SAC</span></h2>
 <p><img data-src="images/hex-vegan.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "></p>
+<ul>
+<li>Use <code>ggplot2</code> to make a graph with:
+<ul>
+<li>The curve dataframe (<em>not the list!</em>) as the data</li>
+<li>Map site number to X axis</li>
+<li>Map richness to Y axis</li>
+<li>Customize <code>theme</code> elements in ways that spark joy for you</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>What does your graph look like?</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>For fun, you can map <code>color</code> to sites
+<ul>
+<li>Makes a prettier graph (in my opinion)</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="new-ggplot2-geometry" class="slide level2 smaller">
 <h2><span class="orange">New <code>ggplot2</code> Geometry</span></h2>
+<ul>
+<li>Time to learn one more geometry: error bars (<code>geom_errorbar</code>)</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Example syntax:</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Make plot</span></span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="co"># Add (vertical) error bars</span></span>
+<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(<span class="at">ymin =</span> y <span class="sc">-</span> g,</span>
+<span id="cb6-5"><a aria-hidden="true" tabindex="-1"></a>                    <span class="at">ymax =</span> y <span class="sc">+</span> g),</span>
+<span id="cb6-6"><a aria-hidden="true" tabindex="-1"></a>                <span class="at">width =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Further explanation
+<ul>
+<li><code>y</code> = name of column mapped to Y axis</li>
+<li><code>g</code> = name of column to add/subtract from Y axis</li>
+<li><code>width</code> = how wide you want the crossbars on the error bars</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="add-error-bars" class="slide level2 smaller">
 <h2><span class="pink">Add Error Bars</span></h2>
 <p><img data-src="images/hex-vegan.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "></p>
+<ul>
+<li>Add the errorbar geometry to your existing graph
+<ul>
+<li>Reminder: <code>geom_errorbar</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Inside <code>aes</code> parentheses ymin/ymax should +/- the “sd” column
+<ul>
+<li>Set <code>width</code> to whatever you’d like</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>What does your final graph look like?</li>
+</ul>
+</div>
 </section>
 <section id="temperature-check-1" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
@@ -827,21 +1079,115 @@ Lab 8 – Biodiversity + Mapping Resources
 </section>
 <section id="continuing-to-explore-r" class="slide level2 smaller">
 <h2><span class="orange">Continuing to Explore R</span></h2>
+<ul>
+<li>You all have tackled a wide array of R tasks in this course!</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Even so, we’ve barely scratched the surface of what you can do in R</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>If you want to continue your R journey (which I hope that you do!), there are a lot of good resources out there</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>The big one is: <span class="purple">The Carpentries</span></li>
+</ul>
+</div>
 </section>
 <section id="the-carpentries" class="slide level2 smaller">
 <h2><span class="orange">The Carpentries</span></h2>
+<ul>
+<li>What are The Carpentries?
+<ul>
+<li>Free, open-source tutorials for specific coding skills</li>
+<li>Developed/maintained by educators with clear <span class="purple">learning objectives</span></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Consistently high quality and up-to-date</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Data Carpentry Lessons (<a href="https://datacarpentry.org/lessons/">datacarpentry.org/lessons</a>) including:
+<ul>
+<li>Data Skills for Ecologists</li>
+<li>Working with Genomics Data</li>
+<li>Geospatial Data + R</li>
+<li>And many, <em>many</em> more!</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="my-goal-for-you" class="slide level2">
 <h2><span class="purple">My Goal for You</span></h2>
+<h4 id="from-lecture-1">From <span class="blue">Lecture 1</span>!</h4>
 <p align="center">
 <img src="comics/r-knowledge.png" alt="Comic-style graph depicting someone's confidence with R changing over time">
 </p>
 </section>
 <section id="your-accomplishments" class="slide level2 smaller">
 <h2><span class="gold">Your Accomplishments</span></h2>
+<ul>
+<li>In this class, <span class="pink"><strong>you</strong></span> have done the following:
+<ul>
+<li>Made and manipulated data</li>
+<li>Created R scripts and RMarkdown reports</li>
+<li>Explored version control &amp; GitHub</li>
+<li>Performed statistical tests</li>
+<li>Written loops and your own custom function(s)</li>
+<li>And so much more!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>If you have a CV/resume, definitely add:
+<ul>
+<li>Some (or all!) of these skills</li>
+<li>Link to your GitHub profile</li>
+</ul></li>
+</ul>
 </section>
 <section id="closing-thoughts" class="slide level2 smaller">
 <h2><span class="gold">Closing Thoughts</span></h2>
+<ul>
+<li>I had a lot of fun this summer with y’all!</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Your development as data scientists has been <em>amazing</em> to witness</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>I particularly loved how you all engaged with the Function Tutorials
+<ul>
+<li>You really made it your own</li>
+<li>Found the intersection of your interests and R functions</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Do you have any last R / data things to discuss?</li>
+</ul>
 </section>
 <section id="upcoming-due-dates" class="slide level2">
 <h2><span class="blue">Upcoming Due Dates</span></h2>
@@ -1184,6 +1530,24 @@ Lab 8 – Biodiversity + Mapping Resources
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/njlyon0\.github\.io\/teach_r-for-biologists\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1220,7 +1584,11 @@ Lab 8 – Biodiversity + Mapping Resources
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
