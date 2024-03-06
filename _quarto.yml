@@ -26,6 +26,8 @@ website:
         contents:
           - text: "Syllabus"
             href: index.qmd
+          - text: "Answer Keys"
+            href: keys.qmd
       - section: "Assignment Rubrics"
         contents:
           - text: "Muddiest Point"
