@@ -1,0 +1,15 @@
+---
+title: "Course Readings"
+---
+
+## Readings Overview
+
+There are a handful of official reading assignments but I've also found some additional resources that may be valuable/of interest to students but I did not want to officially _require._ I've included links to these resources for convenience. If you find any of these are "pay-walled" (i.e., that you must pay to access them), please [contact me](https://njlyon0.github.io/) so that I can work to get you access to PDF versions.
+
+## Reading Links
+
+Better Science Guides: [**Reproducible Code**](https://www.britishecologicalsociety.org/publications/better-science/). British Ecological Society (BES).
+
+[Excuse Me, Do You Have a Moment to Talk About Version Control?](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1399928?casa_token=Tt09Cix9EZcAAAAA%3AJvzeB9_wq15T2zh2J6JQbad2Hm4qqSigKmSVg4nrHS9tOqZHJWSHR2RXVuYxlEguqD5bxJ9rCJuT). Bryan, 2018. _The American Statistician_. DOI: https://doi.org/10.1080/00031305.2017.1399928
+
+[Model Selection in Ecology and Evolution](https://www.cell.com/trends/ecology-evolution/abstract/S0169-5347\(03\)00345-8). Johnson & Omland, 2004. _Trends in Ecology and Evolution_ **19**. DOI: https://doi.org/10.1016/j.tree.2003.10.013

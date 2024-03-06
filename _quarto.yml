@@ -28,6 +28,8 @@ website:
             href: index.qmd
           - text: "Example Data"
             href: data.qmd
+          - text: "Readings"
+            href: readings.qmd
           - text: "Answer Keys"
             href: keys.qmd
       - section: "Assignment Rubrics"
