@@ -14,6 +14,25 @@ format:
     footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
+```{r libraries}
+#| echo: false
+#| message: false
+#| error: false
+
+# Load needed libraries
+## install.packages("librarian")
+librarian::shelf(vegan, ggplot2)
+```
+
+```{r data}
+#| echo: false
+#| message: false
+#| error: false
+
+# Load vegan's BCI data
+data(varespec)
+```
+
 ## A Guide to Your Process
 
 ### [Scheduling]{.blue}
@@ -348,55 +367,256 @@ data(BCI)
 
 ## [Rarefaction Background]{.orange} {.smaller}
 
+- Known issue: inconsistent survey effort yields inconsistent data
+    - If you <u>look harder</u> for species at site A than B, you'll <u>likely find more</u> at A than B
 
+\
+
+. . .
+
+- [Rarefaction]{.purple} = way to (try to) account for this difference
+    1. Identify site with smallest abundance of individuals (any species)
+    2. Randomly pick that many individuals from sites that have more than that number
+    3. Measure diversity of that random subset
+    4. Re-randomize many times
+    5. Average the diversity found in each random subset to get "rarefied" richness
 
 ## [Rarefaction with R]{.orange} {.smaller}
 
+- Function for rarefaction in `vegan` is `rarefy`
 
+\
+
+. . .
+
+- Example syntax:
+```{.r}
+# Rarefy our community data
+vegan::rarefy(x = community_df,
+              # `sample` argument is minimum abundance
+              sample = min(community_df$abundance))
+```
+
+\
+
+. . .
+
+- Produces non-integer richness but that is not a problem
+    - Scientists expect non-integers when you say you've rarefied the community
 
 ## [Rarefy a Community]{.pink} {.smaller}
 
 ![](images/hex-vegan.png){.absolute top=0 left=1100 width="12%"}
 
+- Rarefy the BCI data (set `sample` to 20)
+    - What is the rarefied richness of the first site?
+    - How does this compare with the _actual_ richness of the first site?
 
+\
 
-## [Species Accumulation Curves (SACs)]{.orange} {.smaller}
+. . .
 
+- Let's identify the actual lowest abundance of trees
+    - Run `rowSums(BCI)` and assign it to an object
+    - Use `min` on that object to identify the single smallest value
 
+\
+
+. . .
+
+- Rarefy the community again but set `sample` to the minimum value you found
+    - How does the rarefied richness of the first site change?
+
+## [Species Accumulation Curves]{.orange} {.smaller}
+
+- How do you know when you've sampled "enough"?
+
+\
+
+. . .
+
+- When you start sampling you find a ton of new species at first
+    - Then fewer new species over time
+
+\
+
+. . .
+
+- We can use that trend to quantify how much we need to sample to find "most" of the species
+
+\
+
+. . .
+
+- These data are presented as a [Species Accumulation Curve]{.purple} (SAC)
 
 ## [SAC Example]{.gold} {.smaller}
 
+```{r ex-sac}
+#| fig-width: 6
+#| fig-align: center
 
+# Calculate species accumulation curves
+curve_list <- vegan::specaccum(comm = varespec, method = "exact")
+
+# Strip out relevant bit of the list
+curve_df <- data.frame("sites" = curve_list$sites,
+                       "richness" = curve_list$richness,
+                       "sd" = curve_list$sd)
+
+# Create a plot of this
+ggplot(curve_df, aes(x = sites, y = richness, color = rev(sites))) +
+  geom_point() +
+  geom_errorbar(aes(ymin = richness - sd, ymax = richness + sd), width = 0.5) +
+  # Customize labels
+  labs(y = "Species Richness (± SD)", x = "Site Number") +
+  # Customize `theme`
+  theme(panel.background = element_blank(),
+        legend.position = "none",
+        axis.line = element_line(color = "black"),
+        axis.title = element_text(size = 14),
+        axis.text = element_text(size = 11))
+```
 
 ## [Making a SAC]{.orange} {.smaller}
 
+- Function for SACs in `vegan` is `specaccum`
 
+\
+
+. . .
+
+- Example syntax:
+```{.r}
+vegan::specaccum(comm = community_df)
+```
+
+\
+
+. . .
+
+- One additional hurdle for this function: it returns a [**list**]{.pink}
+    - A list is a class of object
+    - Essentially a list is a vector of some other class (vectors, dataframes, etc.)
+
+\
+
+. . .
+
+- We will cover how to pull what we want out of this list
 
 ## [Calculate Species Accumulation]{.pink} {.smaller}
 
 ![](images/hex-vegan.png){.absolute top=0 left=1100 width="12%"}
 
+- Use `specaccum` on the BCI data and assign it to a new object
 
+\
+
+. . .
+
+- Check the structure
+
+\
+
+. . .
+
+- What differences do you see here from what we've done in the past?
+
+## [Handle the List]{.pink} {.smaller}
+
+- That worked but--as I warned you--you are left with a list
+    - `ggplot2` will want a dataframe so we need to do some parsing
+
+\
+
+. . .
+
+- Run the following code:
+```{.r}
+curve_df <- data.frame("sites" = curve_list$sites,
+                       "richness" = curve_list$richness,
+                       "sd" = curve_list$sd)
+```
+- `curve_list` should be whatever you named your species accumulation object
+
+\
+
+. . .
+
+- Check the structure of the resulting data object
 
 ## [Make a SAC]{.pink} {.smaller}
 
 ![](images/hex-vegan.png){.absolute top=0 left=1100 width="12%"}
 ![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%"}
 
+- Use `ggplot2` to make a graph with:
+    - The curve dataframe (_not the list!_) as the data
+    - Map site number to X axis
+    - Map richness to Y axis
+    - Customize `theme` elements in ways that spark joy for you
 
+\
+
+. . . 
+
+- What does your graph look like?
+
+\
+
+. . . 
+
+- For fun, you can map `color` to sites
+    - Makes a prettier graph (in my opinion)
 
 ## [New `ggplot2` Geometry]{.orange} {.smaller}
 
+- Time to learn one more geometry: error bars (`geom_errorbar`)
 
+\
+
+. . . 
+
+- Example syntax:
+```{.r}
+# Make plot
+ggplot() +
+  # Add (vertical) error bars
+  geom_errorbar(aes(ymin = y - g,
+                    ymax = y + g),
+                width = 0.5)
+```
+
+\
+
+. . . 
+
+- Further explanation
+    - `y` = name of column mapped to Y axis
+    - `g` = name of column to add/subtract from Y axis
+    - `width` = how wide you want the crossbars on the error bars
 
 ## [Add Error Bars]{.pink} {.smaller}
 
 ![](images/hex-vegan.png){.absolute top=0 left=1100 width="12%"}
 ![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%"}
 
+- Add the errorbar geometry to your existing graph
+    - Reminder: `geom_errorbar`
 
+\
 
+. . . 
 
+- Inside `aes` parentheses ymin/ymax should +/- the "sd" column
+    - Set `width` to whatever you'd like
+
+\
+
+. . . 
+
+- What does your final graph look like?
 
 ## [Temperature Check]{.purple}
 
@@ -408,13 +628,51 @@ data(BCI)
 
 ## [Continuing to Explore R]{.orange} {.smaller}
 
+- You all have tackled a wide array of R tasks in this course!
 
+\
+
+. . .
+
+- Even so, we've barely scratched the surface of what you can do in R
+
+\
+
+. . .
+
+- If you want to continue your R journey (which I hope that you do!), there are a lot of good resources out there
+
+\
+
+. . .
+
+- The big one is: [The Carpentries]{.purple}
 
 ## [The Carpentries]{.orange} {.smaller}
 
+- What are The Carpentries?
+    - Free, open-source tutorials for specific coding skills
+    - Developed/maintained by educators with clear [learning objectives]{.purple}
 
+\
+
+. . . 
+
+- Consistently high quality and up-to-date
+
+\
+
+. . . 
+
+- Data Carpentry Lessons ([datacarpentry.org/lessons](https://datacarpentry.org/lessons/)) including:
+    - Data Skills for Ecologists
+    - Working with Genomics Data
+    - Geospatial Data + R 
+    - And many, _many_ more!
 
 ## [My Goal for You]{.purple}
+
+#### From [Lecture 1]{.blue}!
 
 <p align="center">
 <img src="comics/r-knowledge.png" alt="Comic-style graph depicting someone's confidence with R changing over time">
@@ -422,11 +680,37 @@ data(BCI)
 
 ## [Your Accomplishments]{.gold} {.smaller}
 
+- In this class, [**you**]{.pink} have done the following:
+    - Made and manipulated data
+    - Created R scripts and RMarkdown reports
+    - Explored version control & GitHub
+    - Performed statistical tests
+    - Written loops and your own custom function(s)
+    - And so much more!
 
+\
+
+- If you have a CV/resume, definitely add:
+    - Some (or all!) of these skills
+    - Link to your GitHub profile
 
 ## [Closing Thoughts]{.gold} {.smaller}
 
+- I had a lot of fun this summer with y'all!
 
+\
+
+- Your development as data scientists has been _amazing_ to witness
+
+\
+
+- I particularly loved how you all engaged with the Function Tutorials
+    - You really made it your own
+    - Found the intersection of your interests and R functions
+
+\
+
+- Do you have any last R / data things to discuss?
 
 ## [Upcoming Due Dates]{.blue}
 
