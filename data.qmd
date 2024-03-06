@@ -8,6 +8,8 @@ In this course there will be practice examples to help you get the hang of some 
 
 You can download the example datasets below. I've also provided a short, human-readable description of the context around each dataset.
 
+## Dataset Descriptions
+
 ### Native Bee Data
 
 This is simulated data on the annual abundance of four functional groups of bees for 10 years. There is a column for sampling year and then one column for each bee function group where the rows are the number of that bee observed in that year.
