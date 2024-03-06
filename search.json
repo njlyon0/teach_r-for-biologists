@@ -2151,6 +2151,39 @@
     ]
   },
   {
+    "objectID": "keys.html",
+    "href": "keys.html",
+    "title": "Homework Answer Keys",
+    "section": "",
+    "text": "I’ve designed a (short) homework assignment to be completed after each week’s lecture and lab slides have been covered. These assignments are generally due at midnight the day before the following week’s lecture. They are individually ‘low stakes’ assignments but collectively they are an appreciable part of a student’s overall grade and so should not be neglected. More importantly, they are a valuable chance for students to practice the skills they acquire during in-class discussions and practice sessions.\nIn code contexts there is almost always more than one way of accomplishing a given task but I’ve taken the liberty of drafting “answer keys” for each week’s homework. These keys are example assignments that would earn maximum points according to the rubrics (embedded at the end of each week’s home page).",
+    "crumbs": [
+      "Course Overview",
+      "Answer Keys"
+    ]
+  },
+  {
+    "objectID": "keys.html#keys-overview",
+    "href": "keys.html#keys-overview",
+    "title": "Homework Answer Keys",
+    "section": "",
+    "text": "I’ve designed a (short) homework assignment to be completed after each week’s lecture and lab slides have been covered. These assignments are generally due at midnight the day before the following week’s lecture. They are individually ‘low stakes’ assignments but collectively they are an appreciable part of a student’s overall grade and so should not be neglected. More importantly, they are a valuable chance for students to practice the skills they acquire during in-class discussions and practice sessions.\nIn code contexts there is almost always more than one way of accomplishing a given task but I’ve taken the liberty of drafting “answer keys” for each week’s homework. These keys are example assignments that would earn maximum points according to the rubrics (embedded at the end of each week’s home page).",
+    "crumbs": [
+      "Course Overview",
+      "Answer Keys"
+    ]
+  },
+  {
+    "objectID": "keys.html#accessing-keys",
+    "href": "keys.html#accessing-keys",
+    "title": "Homework Answer Keys",
+    "section": "Accessing Keys",
+    "text": "Accessing Keys\n\nEducators\nEducators can access the keys in a private GitHub repository (linked here) though you will need to contact me so that I can give you access.\n\n\nStudents\nStudents can access the answer keys here instead.",
+    "crumbs": [
+      "Course Overview",
+      "Answer Keys"
+    ]
+  },
+  {
     "objectID": "rubrics/rubric_github.html",
     "href": "rubrics/rubric_github.html",
     "title": "GitHub Presence Rubric",
