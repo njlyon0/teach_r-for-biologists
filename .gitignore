@@ -49,3 +49,8 @@ vignettes/*.pdf
 
 # Rendered docs folder
 docs/
+
+# Microsoft Office partial files
+~$*.pptx
+~$*.xlsx
+~$*.docx
