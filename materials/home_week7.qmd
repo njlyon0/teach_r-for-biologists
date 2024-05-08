@@ -1,5 +1,8 @@
 ---
 title: "Week 7 Slide Decks"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Overview
@@ -28,9 +31,9 @@ During lecture this week we'll go over how we can run a section of code repeated
 
 Upon completion of this assignment, students will be able to:
 
-- Write a for loop to perform a repeated operation
-- Modify a for loop to handle multiple conditionals
-- Create informative messages within a loop using the `print` and `paste` functions together
+- **Write** a for loop to perform a repeated operation
+- **Modify** a for loop to handle multiple conditionals
+- **Create** informative messages within a loop using the `print` and `paste` functions together
 
 ### Assignment Due Date(s)
 

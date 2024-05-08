@@ -1,5 +1,8 @@
 ---
 title: "Week 4 Slide Decks"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Overview
@@ -28,10 +31,10 @@ This week we'll focus first on data joining via the four types of join. During l
 
 Upon completion of this assignment, students will be able to:
 
-- Judge the appropriate join to use depending on the question being asked
-- Distinguish between continuous and discrete data
-- Identify the correct statistical test given response and explanatory variable types
-- Perform analysis in R correctly
+- **Judge** the appropriate join to use depending on the question being asked
+- **Distinguish** between continuous and discrete data
+- **Identify** the correct statistical test given response and explanatory variable types
+- **Perform** analysis in R correctly
 
 ### Assignment Due Date(s)
 

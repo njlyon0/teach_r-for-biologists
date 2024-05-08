@@ -1,5 +1,8 @@
 ---
 title: "Week 2 Slide Decks"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Overview
@@ -28,11 +31,11 @@ This week we'll learn to use R packages. We'll also explore ways of checking the
 
 Upon completion of these assignments, students will be able to:
 
--	Explain R package installation and use
--	Manipulate a vector using concatenation and bracket notation
--	Write conditional statements to subset a dataframe
--	Define fundamental Git vocabulary
--	Provide the URL for your GitHub profile 
+-	**Explain** R package installation and use
+-	**Manipulate** a vector using concatenation and bracket notation
+-	**Write** conditional statements to subset a dataframe
+-	**Define** fundamental Git vocabulary
+-	**Provide** the URL for your GitHub profile 
 
 ### Assignment Due Date(s)
 

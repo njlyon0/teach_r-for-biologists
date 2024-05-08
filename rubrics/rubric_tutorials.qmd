@@ -1,15 +1,18 @@
 ---
 title: "Function Tutorials Rubric"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Learning Objective(s)
 
 Upon completion of these assignments, students will be able to:
 
--   Explain the proper syntax and use of R functions
--   Communicate effectively to an audience of interested non-specialists
--   Apply feedback on an assignment to a successful revision
--   Reflect on the process of revising a presentation based on constructively critical feedback
+- **Explain** the proper syntax and use of R functions
+- **Communicate** effectively to an audience of interested non-specialists
+- **Apply** feedback on an assignment to a successful revision
+- **Reflect** on the process of revising a presentation based on constructively critical feedback
 
 ## Assignment Due Date(s)
 

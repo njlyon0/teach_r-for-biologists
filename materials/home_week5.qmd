@@ -1,5 +1,8 @@
 ---
 title: "Week 5 Slide Decks"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Overview
@@ -28,8 +31,8 @@ We will continue our exploration of statistics in R this week from last week's l
 
 Upon completion of this assignment, students will be able to:
 
-- Identify the most appropriate statistical test for a given hypothesis
-- Use multi-model inference tools in R
+- **Identify** the most appropriate statistical test for a given hypothesis
+- **Use** multi-model inference tools in R
 
 ### Assignment Due Date(s)
 

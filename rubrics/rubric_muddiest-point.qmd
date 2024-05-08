@@ -1,12 +1,15 @@
 ---
 title: "Muddiest Point Rubric"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Learning Objective(s)
 
 Upon completion of these assignments, students will be able to:
 
-- Develop thoughtful questions about the topics covered in that week's lecture and the preceding week's lab
+- **Develop** thoughtful questions about the topics covered in that week's lecture and the preceding week's lab
 
 ## Assignment Due Date(s)
 

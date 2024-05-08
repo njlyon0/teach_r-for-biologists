@@ -1,5 +1,8 @@
 ---
 title: "Week 6 Slide Decks"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Overview
@@ -28,9 +31,9 @@ This week is all about data visualization! We'll begin by covering the fundament
 
 Upon completion of this assignment, students will be able to:
 
-- Create publication-quality graphs using the `ggplot2` package
-- Customize background theme elements of those graphs
-- Make multi-panel graphs both using `ggplot2` and using the `cowplot` package
+- **Create** publication-quality graphs using the `ggplot2` package
+- **Customize** background theme elements of those graphs
+- **Make** multi-panel graphs both using `ggplot2` and using the `cowplot` package
 
 ### Assignment Due Date(s)
 

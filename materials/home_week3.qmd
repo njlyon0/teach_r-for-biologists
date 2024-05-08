@@ -1,5 +1,8 @@
 ---
 title: "Week 3 Slide Decks"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Overview
@@ -28,9 +31,9 @@ This week we'll cover the fundamentals of an R Markdown file (as opposed to the 
 
 Upon completion of this assignment, students will be able to:
 
--	Explain fundamental aspects of R Markdown files
--	Use data wrangling functions from the `dplyr` and `tidyr` packages
--	Rearrange wrangling code using the pipe operator (`%>%`)
+-	**Explain** fundamental aspects of R Markdown files
+-	**Use data** wrangling functions from the `dplyr` and `tidyr` packages
+-	**Rearrange** wrangling code using the pipe operator (`%>%`)
 
 ### Assignment Due Date(s)
 

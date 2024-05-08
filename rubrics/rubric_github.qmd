@@ -1,13 +1,16 @@
 ---
 title: "GitHub Presence Rubric"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Learning Objective(s)
 
 Upon completion of this assignment, students will be able to:
 
-- Create an outward-facing profile demonstrating data science skills
-- Understand the role of GitHub in a career in data science
+- **Create** an outward-facing profile demonstrating data science skills
+- **Understand** the role of GitHub in a career in data science
 
 ## Assignment Due Date(s)
 

@@ -1,5 +1,8 @@
 ---
 title: "Week 1 Slide Decks"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Overview
@@ -28,11 +31,11 @@ This week we'll be covering mostly big picture background content. We'll begin w
 
 Upon completion of these assignments, students will be able to:
 
-- Describe a real-world file path
-- Demonstrate comfortability with using comments in an R script 
-- Explain fundamental principles of R and RStudio
-- Perform arithmetic using objects in R
-- Manipulate and interpret vectors and objects of various classes and contents
+- **Describe** a real-world file path
+- **Demonstrate** comfortability with using comments in an R script 
+- **Explain** fundamental principles of R and RStudio
+- **Perform** arithmetic using objects in R
+- **Manipulate** and interpret vectors and objects of various classes and contents
 
 ### Assignment Due Date(s)
 

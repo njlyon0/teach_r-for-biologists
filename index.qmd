@@ -1,4 +1,9 @@
-# R Programming for Biologists Syllabus
+---
+title: "R Programming for Biologists Syllabus"
+format:
+  html: default
+  pdf: default
+---
 
 ## Course Description
 

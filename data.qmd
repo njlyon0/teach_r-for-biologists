@@ -1,5 +1,8 @@
 ---
 title: "Example Data"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Datasets Overview

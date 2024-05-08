@@ -1,5 +1,8 @@
 ---
 title: "Week 8 Slide Decks"
+format:
+  html: default
+  pdf: default
 ---
 
 ## Overview
@@ -32,8 +35,8 @@ I may (and likely will) design new 'bonus content' modules and I'll list those b
 
 Upon completion of this assignment, students will be able to:
 
-- Create a custom function in R
-- Demonstrate your process for writing a new function
+- **Create** a custom function in R
+- **Demonstrate** your process for writing a new function
 
 ### Assignment Due Date(s)
 
