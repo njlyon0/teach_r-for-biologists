@@ -2,7 +2,6 @@
 title: "Week 6 Slide Decks"
 format:
   html: default
-  pdf: default
 ---
 
 ## Overview

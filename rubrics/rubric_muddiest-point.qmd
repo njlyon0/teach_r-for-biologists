@@ -2,7 +2,6 @@
 title: "Muddiest Point Rubric"
 format:
   html: default
-  pdf: default
 ---
 
 ## Learning Objective(s)

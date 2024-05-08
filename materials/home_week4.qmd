@@ -2,7 +2,6 @@
 title: "Week 4 Slide Decks"
 format:
   html: default
-  pdf: default
 ---
 
 ## Overview

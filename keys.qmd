@@ -2,7 +2,6 @@
 title: "Homework Answer Keys"
 format:
   html: default
-  pdf: default
 ---
 
 ## Keys Overview
