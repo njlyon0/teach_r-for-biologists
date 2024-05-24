@@ -400,7 +400,7 @@ Lecture 1 – Data Science Fundamentals
 <p><br>
 <br>
 </p>
-<p>Data science combines <span class="gold"><em>programming</em></span> and statistics with <span class="purple"><em>subject matter expertise</em></span> to identify patterns and insights hidden in data</p>
+<p>Data science combines <span class="purple"><em>programming</em></span> and statistics with <span class="purple"><em>subject matter expertise</em></span> to identify patterns and insights hidden in data</p>
 </section>
 <section id="why-is-this-course-taught-in-r" class="slide level2">
 <h2><span class="orange">Why is this Course Taught in R?</span></h2>
@@ -464,7 +464,7 @@ Lecture 1 – Data Science Fundamentals
 <div class="column" style="width:50%;">
 <h3 id="reproducibility"><svg aria-label="Arrows Left Right" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrows Left Right</title><path d="M406.6 374.6l96-96c12.5-12.5 12.5-32.8 0-45.3l-96-96c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224l-293.5 0 41.4-41.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-96 96c-12.5 12.5-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288l293.5 0-41.4 41.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z"></path></svg> Reproducibility</h3>
 <ul>
-<li class="fragment">R is written in “<span class="blue">scripts</span>”
+<li class="fragment">R is written in “<span class="orange">scripts</span>”
 <ul>
 <li class="fragment">Scripts = step-by-step instructions</li>
 </ul></li>
@@ -486,7 +486,7 @@ Lecture 1 – Data Science Fundamentals
 </ul></li>
 <li class="fragment">Unscripted programs would again require written/verbal instructions
 <ul>
-<li class="fragment">Then hoping they click the right buttons in the right way</li>
+<li class="fragment">Then hoping someone clicks the right buttons in the right way</li>
 </ul></li>
 </ul>
 </div>
@@ -516,6 +516,14 @@ Lecture 1 – Data Science Fundamentals
 </ul>
 <p><br>
 </p>
+<div class="fragment">
+<ul>
+<li>I <em>do not</em> recommend using AI as a problem-solving method</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
 <ul>
 <li>Let’s discuss some useful strategies:
 <ol type="1">
@@ -526,6 +534,37 @@ Lecture 1 – Data Science Fundamentals
 <li>Whatever methods <em>you</em> use!</li>
 </ol></li>
 </ul>
+</div>
+</section>
+<section id="ai-aside" class="slide level2 smaller">
+<h2><span class="gold">“AI” Aside</span></h2>
+<ul>
+<li>I <em>strongly</em> discourage the use of AI tools in this class
+<ul>
+<li>E.g., ChatGPT, GitHub CoPilot, etc.</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Two primary reasons:
+<ol type="1">
+<li>It undermines your learning</li>
+<li>There is an ethical dimension we don’t have time to cover in this class</li>
+</ol></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>However, I’m an educator not a cop
+<ul>
+<li>I won’t be policing you in order to enforce my take on AI</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="method-1-rubber-duck" class="slide level2 smaller">
 <h2><span class="orange">Method 1: Rubber Duck</span></h2>
@@ -586,7 +625,7 @@ Lecture 1 – Data Science Fundamentals
 <ul>
 <li>Use a plus sign (<code>+</code>) between search terms
 <ul>
-<li>E.g., “R + &lt;error message text&gt;</li>
+<li>E.g., “R + &lt;error message text&gt;”</li>
 </ul></li>
 </ul>
 <p><br>
@@ -594,7 +633,7 @@ Lecture 1 – Data Science Fundamentals
 <ul>
 <li>When specific wording matters, use quotes!
 <ul>
-<li>E.g., “I want results with exactly this phrase”</li>
+<li>E.g., “I want results with <em>exactly</em> this phrase”</li>
 </ul></li>
 </ul>
 </section>
@@ -631,7 +670,7 @@ Lecture 1 – Data Science Fundamentals
 <section id="method-4-take-a-break-1" class="slide level2 smaller">
 <h2><span class="orange">Method 4: Take a Break</span></h2>
 <ul>
-<li>Coding issue can be super frustrating
+<li>Coding issues can be super frustrating
 <ul>
 <li>Totally <strong>normal</strong> to feel this way</li>
 </ul></li>
@@ -686,17 +725,16 @@ Lecture 1 – Data Science Fundamentals
 <section id="computer-file-paths" class="slide level2 smaller">
 <h2><span class="orange">Computer File Paths</span></h2>
 <ul>
-<li>Computers store files in “<span class="purple">folders</span>”</li>
-</ul>
-<p><br>
-</p>
+<li>Computers store files in “<span class="orange">folders</span>”
 <ul>
 <li>Folders can be <em>nested</em> inside other folders</li>
+</ul></li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
-<li>The name of all folders leading to a particular file is that file’s “<span class="gold">file path</span>”
+<li>The name of all folders leading to a particular file is that file’s “<span class="purple">file path</span>”
 <ul>
 <li>File path starts at the biggest folder (“top” folder) and ends at the file</li>
 <li>Each folder name is separated by slashes (<code>\</code> or <code>/</code>)</li>
@@ -704,14 +742,19 @@ Lecture 1 – Data Science Fundamentals
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
-<li>For example: <em><span class="blue">~</span> <span class="orange">/</span> Downloads <span class="orange">/</span> BIO316 Syllabus.pdf</em></li>
+<li>For example: <em><span class="blue">~</span> <span class="orange">/</span> Downloads <span class="orange">/</span> BIO-316_syllabus.docx</em></li>
 </ul>
+</div>
 </section>
 <section id="file-path-example" class="slide level2 smaller">
 <h2><span class="gold">File Path Example</span></h2>
-<p>What is the file path for the <span class="blue">notes</span> document in this image?</p>
-<p><img data-src="images/file-path.png" class="absolute" style="top: 175px; left: 250px; height: 75%; "></p>
+<p>What is the file path for the <strong>notes</strong> document in this image?</p>
+<p align="center">
+<img src="images/file-path.png" alt="Diagram of hierarchically nested folders with a 'downloads' folder and 'documents' folder at the top where 'documents' contains a 'bio 101' and 'bio 316' folder and the 'bio 316' folder contains a notes document" width="50%">
+</p>
 <div class="fragment">
 <p><em><span class="blue">~</span> <span class="orange">/</span> Documents <span class="orange">/</span> BIO 316 <span class="orange">/</span> BIO316-Notes-Week 1.docx</em></p>
 </div>
@@ -761,7 +804,7 @@ Lecture 1 – Data Science Fundamentals
 <h3 id="due-before-lecture">Due before lecture</h3>
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
-<li>Read the British Ecological Society’s <a href="https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf">Reproducible Code Guide</a> (p.1-12)</li>
+<li>Read the British Ecological Society’s <a href="https://www.britishecologicalsociety.org/publications/better-science/">Reproducible Code Guide</a> (p.1-12)</li>
 </ul>
 </div>
 </div>
