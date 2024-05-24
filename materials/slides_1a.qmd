@@ -77,7 +77,7 @@ Tell me a bit about yourselves!
 \
 \
 
-Data science combines [_programming_]{.gold} and statistics with [_subject matter expertise_]{.purple} to identify patterns and insights hidden in data
+Data science combines [_programming_]{.purple} and statistics with [_subject matter expertise_]{.purple} to identify patterns and insights hidden in data
 
 ## [Why is this Course Taught in R?]{.orange}
 
@@ -137,11 +137,10 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 :::{.incremental}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 ### `r fontawesome::fa(name = "arrows-left-right", a11y = "sem")` Reproducibility 
 
-- R is written in "[scripts]{.blue}"
+- R is written in "[scripts]{.orange}"
     - Scripts = step-by-step instructions
 - Scripts can be run by _any_ R user
 - Allows perfect replication of process
@@ -157,9 +156,8 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 - Many tools exist to formalize sharing
     - We'll cover one in this course!
 - Unscripted programs would again require written/verbal instructions
-    - Then hoping they click the right buttons in the right way 
+    - Then hoping someone clicks the right buttons in the right way 
 :::
-
 ::::
 
 :::
@@ -185,12 +183,40 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 \
 
+. . .
+
+- I _do not_ recommend using AI as a problem-solving method
+
+\
+
+. . .
+
 - Let's discuss some useful strategies:
     1. 'Rubber duck' method
     2. Google (seriously!)
     3. Teamwork
     4. Take a break
     5. Whatever methods _you_ use!
+
+## ["AI" Aside]{.gold} {.smaller}
+
+- I _strongly_ discourage the use of AI tools in this class
+    - E.g., ChatGPT, GitHub CoPilot, etc.
+
+\
+
+. . .
+
+- Two primary reasons:
+    1. It undermines your learning
+    2. There is an ethical dimension we don't have time to cover in this class
+
+\
+
+. . .
+
+- However, I'm an educator not a cop
+    - I won't be policing you in order to enforce my take on AI
 
 ## [Method 1: Rubber Duck]{.orange} {.smaller}
 
@@ -234,12 +260,12 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 ## [Google Tips]{.orange}
 
 - Use a plus sign (`+`) between search terms
-    - E.g., "R + \<error message text\>
+    - E.g., "R + \<error message text\>"
 
 \
 
 - When specific wording matters, use quotes!
-    - E.g., "I want results with exactly this phrase"
+    - E.g., "I want results with _exactly_ this phrase"
 
 ## [Method 3: Team Up!]{.orange} {.smaller}
 
@@ -265,7 +291,7 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 ## [Method 4: Take a Break]{.orange} {.smaller}
 
-- Coding issue can be super frustrating
+- Coding issues can be super frustrating
    - Totally **normal** to feel this way
 
 \
@@ -309,28 +335,31 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 ## [Computer File Paths]{.orange} {.smaller}
 
-- Computers store files in "[folders]{.purple}"
+- Computers store files in "[folders]{.orange}"
+    - Folders can be _nested_ inside other folders
 
 \
 
-- Folders can be _nested_ inside other folders
+. . .
 
-\
-
-- The name of all folders leading to a particular file is that file's "[file path]{.gold}"
+- The name of all folders leading to a particular file is that file's "[file path]{.purple}"
     - File path starts at the biggest folder ("top" folder) and ends at the file
     - Each folder name is separated by slashes (`\` or `/`)
 
 
 \
 
-- For example: _[\~]{.blue} [/]{.orange} Downloads [/]{.orange} BIO316 Syllabus.pdf_
+. . .
+
+- For example: _[\~]{.blue} [/]{.orange} Downloads [/]{.orange} BIO-316_syllabus.docx_
 
 ## [File Path Example]{.gold} {.smaller}
 
-What is the file path for the [notes]{.blue} document in this image?
+What is the file path for the **notes** document in this image?
 
-![](images/file-path.png){.absolute top=175 left=250 height="75%"}
+<p align="center">
+<img src="images/file-path.png" alt="Diagram of hierarchically nested folders with a 'downloads' folder and 'documents' folder at the top where 'documents' contains a 'bio 101' and 'bio 316' folder and the 'bio 316' folder contains a notes document" width = "50%">
+</p>
 
 . . . 
 
@@ -357,9 +386,7 @@ _[\~]{.blue} [/]{.orange} Documents [/]{.orange} BIO 316 [/]{.orange} BIO316-Not
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
-
 ### Due before lab
 
 #### Due ASAP
@@ -373,15 +400,12 @@ _[\~]{.blue} [/]{.orange} Documents [/]{.orange} BIO 316 [/]{.orange} BIO316-Not
 - Muddiest Point \#1
 
 :::
-
 :::{.column width="50%"}
-
 ### Due before lecture
 
 #### (By midnight)
 
-- Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) (p.1-12) 
+- Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/publications/better-science/) (p.1-12) 
 
 :::
-
 ::::
