@@ -220,8 +220,10 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 ## [Method 1: Rubber Duck]{.orange} {.smaller}
 
-![](images/ducky.png){.absolute top=50 left=800 width="20%"}
+![](images/ducky.png){.absolute top=50 left=800 width="20%" fig-alt="Image of a rubber duck"}
 - Get rubber duck / small object
+
+\
 
 . . . 
 
@@ -229,9 +231,13 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
     - Go into as much detail as possible
     - Re-read lines _carefully_ as you explain
 
+\
+
 . . .
 
 - You'll catch typos/errors that you had missed!
+
+\
 
 . . .
 
@@ -240,29 +246,45 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 ## [Method 2: Google]{.orange} {.smaller}
 
-![](images/logo-google.png){.absolute top=50 left=700 width="30%"}
+![](images/logo-google.png){.absolute top=50 left=700 width="30%" fig-alt="Google logo"}
 
 - This is a serious suggestion!
     - Google is truly an _amazing_ resource for this
 
 \
 
+. . . 
+
 - There are forums where where people discuss code issues
     - [StackOverflow](https://stackoverflow.com/), [GitHub Discussions](https://github.com/orgs/community/discussions/categories/programming-help), etc.
 
 \
+
+. . . 
 
 - If you get an error:
     1. Copy the entire error message
     2. Paste it into Google
     3. Check the first few links to see how others solved that issue
 
-## [Google Tips]{.orange}
+## [Google Tips]{.orange} {.smaller}
+
+![](images/logo-google.png){.absolute top=50 left=700 width="30%" fig-alt="Google logo"}
+
+- **Ignore** the "AI Overview"
+    - This is frequently wrong and/or misleading
+    - Click actual links!
+
+\
+
+. . . 
 
 - Use a plus sign (`+`) between search terms
     - E.g., "R + \<error message text\>"
 
 \
+
+. . . 
 
 - When specific wording matters, use quotes!
     - E.g., "I want results with _exactly_ this phrase"
@@ -273,10 +295,14 @@ Data from [Lai _et al._ 2019](https://esajournals.onlinelibrary.wiley.com/doi/fu
 
 \
 
+. . . 
+
 - Email/text classmates about errors you're encountering
     - Set up a weekly time to meet and work together
 
 \
+
+. . . 
 
 - Group work & assignments
     - I really encourage you to work together to [solve problems]{.blue}
