@@ -3088,28 +3088,28 @@
     "href": "materials/slides_1a.html#method-1-rubber-duck",
     "title": "Intro to Data Science",
     "section": "Method 1: Rubber Duck",
-    "text": "Method 1: Rubber Duck\n - Get rubber duck / small object\n\n\nExplain each line of your code to the duck\n\nGo into as much detail as possible\nRe-read lines carefully as you explain\n\n\n\n\n\nYou’ll catch typos/errors that you had missed!\n\n\n\n\nWhy “rubber duck” instead of “friend”?\n\nBecause it would likely be a dull experience for your friend Face Smile"
+    "text": "Method 1: Rubber Duck\n - Get rubber duck / small object\n\n\n\n\nExplain each line of your code to the duck\n\nGo into as much detail as possible\nRe-read lines carefully as you explain\n\n\n\n\n\n\n\nYou’ll catch typos/errors that you had missed!\n\n\n\n\n\n\nWhy “rubber duck” instead of “friend”?\n\nBecause it would likely be a dull experience for your friend Face Smile"
   },
   {
     "objectID": "materials/slides_1a.html#method-2-google",
     "href": "materials/slides_1a.html#method-2-google",
     "title": "Intro to Data Science",
     "section": "Method 2: Google",
-    "text": "Method 2: Google\n\n\nThis is a serious suggestion!\n\nGoogle is truly an amazing resource for this\n\n\n\n\n\nThere are forums where where people discuss code issues\n\nStackOverflow, GitHub Discussions, etc.\n\n\n\n\n\nIf you get an error:\n\nCopy the entire error message\nPaste it into Google\nCheck the first few links to see how others solved that issue"
+    "text": "Method 2: Google\n\n\nThis is a serious suggestion!\n\nGoogle is truly an amazing resource for this\n\n\n\n\n\n\nThere are forums where where people discuss code issues\n\nStackOverflow, GitHub Discussions, etc.\n\n\n\n\n\n\n\nIf you get an error:\n\nCopy the entire error message\nPaste it into Google\nCheck the first few links to see how others solved that issue"
   },
   {
     "objectID": "materials/slides_1a.html#google-tips",
     "href": "materials/slides_1a.html#google-tips",
     "title": "Intro to Data Science",
     "section": "Google Tips",
-    "text": "Google Tips\n\nUse a plus sign (+) between search terms\n\nE.g., “R + &lt;error message text&gt;”\n\n\n\n\n\nWhen specific wording matters, use quotes!\n\nE.g., “I want results with exactly this phrase”"
+    "text": "Google Tips\n\n\nIgnore the “AI Overview”\n\nThis is frequently wrong and/or misleading\nClick actual links!\n\n\n\n\n\n\nUse a plus sign (+) between search terms\n\nE.g., “R + &lt;error message text&gt;”\n\n\n\n\n\n\n\nWhen specific wording matters, use quotes!\n\nE.g., “I want results with exactly this phrase”"
   },
   {
     "objectID": "materials/slides_1a.html#method-3-team-up",
     "href": "materials/slides_1a.html#method-3-team-up",
     "title": "Intro to Data Science",
     "section": "Method 3: Team Up!",
-    "text": "Method 3: Team Up!\n\nGroup work is a classic method of problem solving\n\n\n\n\nEmail/text classmates about errors you’re encountering\n\nSet up a weekly time to meet and work together\n\n\n\n\n\nGroup work & assignments\n\nI really encourage you to work together to solve problems\nBUT assignments should be produced by you alone\nThere are no group assignments in this course!"
+    "text": "Method 3: Team Up!\n\nGroup work is a classic method of problem solving\n\n\n\n\n\nEmail/text classmates about errors you’re encountering\n\nSet up a weekly time to meet and work together\n\n\n\n\n\n\n\nGroup work & assignments\n\nI really encourage you to work together to solve problems\nBUT assignments should be produced by you alone\nThere are no group assignments in this course!"
   },
   {
     "objectID": "materials/slides_1a.html#method-4-take-a-break",
