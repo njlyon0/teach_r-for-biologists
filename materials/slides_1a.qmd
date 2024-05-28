@@ -45,6 +45,27 @@ After today's session you will be able to:
 - Identify useful code problem solving techniques
 - Demonstrate comprehension of computer file paths
 
+## [About Me]{.orange} {.smaller}
+
+![](images/lyon-profile.jpeg){.absolute top=50 left=800 width="30%" fig-alt="Photo of course instructor. A caucasian, male-presenting person with glasses in a dark jacket"}
+
+- Nick or Professor Lyon ([_they_]{.purple} / [_them_]{.purple})
+
+\
+
+- Education:
+    - B.Sc. Biology + M.Sc. Ecology & Evolutionary Biology
+
+\
+
+- Career Goals:
+    - Marine Biologist `r fontawesome::fa("arrow-right", a11y = "sem")` College Faculty `r fontawesome::fa("arrow-right", a11y = "sem")` **_???_** `r fontawesome::fa("arrow-right", a11y = "sem")` Data Scientist
+
+\
+
+- Hobbies:
+    - [Dungeons & Dragons]{.gold}; Reading; Hiking; Movies; Videogames
+
 ## [Introductions]{.gold}
 
 Tell me a bit about yourselves!
@@ -55,7 +76,7 @@ Tell me a bit about yourselves!
 
 - What year are you in school?
 
-- What's a fun fact that brings you joy?
+- What's one of your hobbies that brings you joy?
 
 ## [Introductions (Continued)]{.gold}
 
