@@ -51,7 +51,7 @@ After today's session you will be able to:
 
 :::{.incremental}
 
-- Did anyone <u>_not_</u> get [R]{.blue} installed?
+- Did anyone <u>_not_</u> get [R]{.orange} installed?
 
 \
 
@@ -66,10 +66,24 @@ After today's session you will be able to:
 ## [R versus RStudio]{.orange} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
-![](images/logo-r.png){.absolute top=100 left=150 width="15%"}
+![](images/logo-r.png){.absolute top=100 left=150 width="15%" fig-alt="R logo"}
+
+:::
+:::{.column width="50%"}
+
+![](images/logo-rstudio.png){.absolute top=100 left=580 width="35%" fig-alt="RStudio logo"}
+
+:::
+::::
+
+## [R versus RStudio]{.orange} {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+
+![](images/logo-r.png){.absolute top=100 left=150 width="15%" fig-alt="R logo"}
 \
 \
 \
@@ -82,10 +96,34 @@ After today's session you will be able to:
     - Unlikely to matter for this course!
 
 :::
-
 :::{.column width="50%"}
 
-![](images/logo-rstudio.png){.absolute top=100 left=580 width="35%"}
+![](images/logo-rstudio.png){.absolute top=100 left=580 width="35%" fig-alt="RStudio logo"}
+
+:::
+::::
+
+## [R versus RStudio]{.orange} {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+
+![](images/logo-r.png){.absolute top=100 left=150 width="15%" fig-alt="R logo"}
+\
+\
+\
+\
+
+- Access to fundamental R operations
+- Not aesthetically pleasing
+    - In my opinion `r fontawesome::fa(name = "smile", a11y = "sem")`
+- Faster for _very_ complex operations
+    - Unlikely to matter for this course!
+
+:::
+:::{.column width="50%"}
+
+![](images/logo-rstudio.png){.absolute top=100 left=580 width="35%" fig-alt="RStudio logo"}
 \
 \
 \
@@ -94,17 +132,16 @@ After today's session you will be able to:
 - Access to fundamental R operations
 - Allows custom aesthetics
 - Has quality-of-life improvements
-- Technically an "[IDE]{.purple}"
+- Technically an "[IDE]{.orange}"
     - <u>I</u>ntegrated <u>D</u>eveloper <u>E</u>nvironment
 
 :::
-
 ::::
 
 ## [RStudio Layout]{.orange} {.smaller}
 
-- Layout consisting of four [panes]{.blue}
-    - Each pane has [tabs]{.gold} that do different things
+- Layout consisting of four [panes]{.purple}
+    - Each pane has [tabs]{.orange} that do different things
     - You can customize which tabs are in each pane!
 - To customize options:
     - In top menu, click "Tools"
@@ -112,15 +149,16 @@ After today's session you will be able to:
     - Select "Pane Layout"
 - I recommend the following layout:
 
-![](images/rstudio-layout.png){.absolute top=280 left=600 width="40%"}
+![](images/rstudio-layout.png){.absolute top=260 left=600 width="40%" fig-alt="Image of four squares arranged in a 2x2 grid. The top left is titled 'source', the bottom left is titled 'console' and the two right squares are labeled 'your choice'"}
 
 ## [Practice: Choose Your Colors]{.pink}
 
 - Tools `r fontawesome::fa("arrow-right", a11y = "sem")` Global Options `r fontawesome::fa("arrow-right", a11y = "sem")` Appearance 
 
-- Look through some of the available color schemes
+\
 
-- Feel free to share the name of your favorites!
+- Look through some of the available color schemes
+    - Feel free to share the name of your favorites!
 
 \
 
@@ -133,7 +171,7 @@ After today's session you will be able to:
 
 :::{.incremental}
 
-- Projects are a special way of marking a folder on your computer for R
+- [Projects]{.purple} are a special way of marking a folder on your computer for R
 
 \
 
@@ -171,9 +209,7 @@ After today's session you will be able to:
 \
 
 2. In RStudio, click "Project: (None)" in the top right corner
-    - Choose "New Project..."
-    - Pick "Existing Directory"
-    - Click "Browse..." and find the folder you made in [step 1]{.pink}
+    - "New Project..." `r fontawesome::fa("arrow-right", a11y = "sem")` "Existing Directory" `r fontawesome::fa("arrow-right", a11y = "sem")` "Browse..." `r fontawesome::fa("arrow-right", a11y = "sem")` find the folder you made in [step 1]{.pink}
 
 \
 
@@ -190,17 +226,21 @@ After today's session you will be able to:
 ## [R Scripts]{.orange} {.smaller}
 
 - A code file is called a "script"
-    - [Microsoft Word]{.blue}:[document]{.gold} -- [R]{.blue}:[script]{.gold}
+    - [Microsoft Word]{.orange} **:** [document]{.purple} -- [R]{.orange} **:** [script]{.purple}
 
 \
+
+. . .
 
 - Lines of code written in scripts can be re-used
-    - I.e., re-"run"
+    - I.e., "[re-run]{.orange}"
 
 \
 
+. . .
+
 - Scripts can be run line-by-line manually or run all at once
-    - Running all at once = "sourcing" a script
+    - Running all at once = "[sourcing]{.orange}" a script
 
 ## [Practice: Create an R Script]{.pink} {.smaller}
 
@@ -225,11 +265,15 @@ After today's session you will be able to:
 
 \
 
-- R's real power comes from "packages" with more advanced functions
+. . .
+
+- R's real power comes from "[packages]{.purple}" with more advanced functions
     - These packages are _not_ in base R
-    - We'll begin to cover these next week
+    - We'll begin to cover these [next week]{.blue}
 
 \
+
+. . .
 
 - Base R is really useful in its own right!
 
@@ -239,16 +283,22 @@ After today's session you will be able to:
 
 \
 
-- More useful to use [objects]{.blue} instead of direct values
-    - [object]{.blue} = alias for a value / set of values
+. . .
+
+- More useful to use "objects" instead of direct values
+    - [object]{.purple} = alias for a value / set of values
 
 \
 
-- When we create an object we [assign]{.gold} some value(s) to the object
+. . .
+
+- When we create an object we [assign]{.purple} some value(s) to the object
     - Uses the [assignment operator]{.orange} (`<-`)
     - Keyboard shortcut: Alt + hyphen
 
 \
+
+. . .
 
 - After you create an object, you can use it in place of its value!
 
@@ -276,22 +326,55 @@ my_obj
 
 ... we get the value we assigned to it!
 
-## [Objects Continued]{.orange}
+## [Objects Continued]{.orange} {.smaller}
 
 - Useful because it lets you _flexibly_ code 
 
 \
 
-- If you know that an object only contains numbers, you can do general operations that work for any number object
+. . .
+
+- If you know that an object only contains numbers, you can do general operations that work for any number
 
 \
 
-- If you had to use the actual value every time, complex operations would be brutal to code
+. . .
+
+- If you had to use the actual value every time, complex operations would be _brutal_ to code
+
+## [Running Code]{.orange} {.smaller}
+
+- How do you 'actually' run code?
+
+\
+
+- You have two options!
+    1. Click the "Run" button in the top right of the "Source" pane of RStudio
+    2. Use the keyboard shortcut Command + Return (or for Windows users, Control + Return)
+
+\
+
+- Note that either option requires that you clicked somewhere in the line you want to run
+    - Lines are numbered on the left of the "Source" pane
 
 ## [Practice: Object Assignment]{.pink} {.smaller}
 
 ::::{.columns}
+:::{.column width="50%"}
 
+#### Arithmetic
+
+:::
+:::{.column width="50%"}
+
+#### Object Practice
+
+:::
+::::
+
+## [Practice: Object Assignment]{.pink} {.smaller}
+
+::::{.columns}
 :::{.column width="50%"}
 
 #### Arithmetic
@@ -307,7 +390,31 @@ my_obj
 - Calculate 2 + 2 - 4
 
 :::
+:::{.column width="50%"}
 
+#### Object Practice
+
+:::
+::::
+
+## [Practice: Object Assignment]{.pink} {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+
+#### Arithmetic
+
+- Calculate 576 / 3
+
+\
+
+- Calculate (258 * 4) / 13
+
+\
+
+- Calculate 2 + 2 - 4
+
+:::
 :::{.column width="50%"}
 
 #### Object Practice
@@ -321,22 +428,35 @@ my_obj
     - What happens when you don't include quotation marks around "text"?
 
 :::
-
 ::::
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
 
 ## [Code Comments]{.orange} {.smaller}
 
-- Coding languages all allow [comments]{.gold}
+- Coding languages all allow [comments]{.purple}
 
 \
+
+. . .
 
 - Comments are _non-coding_ lines that explain what the code is doing in a human-readable way
 
 \
 
+. . .
+
 - In R, comment lines start with a hashtag (`#`)
 
 \
+
+. . .
 
 - Comments allow others to read your code and understand what is happening
     - Great for <u>_future you</u>!!!_
@@ -344,7 +464,7 @@ my_obj
 ## [Code Comments]{.orange}
 
 <p align="center">
-<img src="memes/comments.jpg" alt="Person applying clown makeup as they talk about why they don't need to use code comments" width="45%">
+<img src="memes/comments.jpg" alt="Person applying clown makeup as they talk about why they don't need to use code comments" width="43%">
 </p>
 
 ## [Code Example]{.gold}
@@ -358,6 +478,12 @@ q <- 77
 # Divide it by 7 and assign to a new object
 p <- q / 7
 ```
+
+\
+
+. . .
+
+- Any questions about comments before we continue?
 
 ## [Practice: Comments]{.pink} {.smaller}
 
@@ -376,23 +502,30 @@ p <- q / 7
 . . .
 
 - This lets your class notes be included directly with your code!
+    - Though you're of course welcome to take notes (or not) using whatever medium you prefer
 
 ## [Functions]{.orange} {.smaller}
 
-- Programming wouldn't be useful if you could only use arithmetic
+- Programming wouldn't be useful if you needed to do everything by hand
 
 \
 
-- Programming languages include [functions]{.blue} to avoid arithmetic
-    - Someone else has done the arithmetic and made an object **of that process**!
+. . .
+
+- Programming languages include [functions]{.purple} to avoid arithmetic
+    - Someone else has done the manual labor and made an object **of that _process_**!
 
 \
+
+. . .
 
 - You can then use the function instead of doing the math yourself
 
 \
 
-- Functions use [arguments]{.orange} to let users specify what they can modify
+. . .
+
+- Functions use [arguments]{.purple} to let users specify what they can modify
 
 ## [Function Example]{.gold} {.smaller}
 
@@ -400,12 +533,16 @@ p <- q / 7
 
 \
 
+. . .
+
 - `round` has two arguments:
     - `x` = the number(s) to round
     - `digits` = the number of digits to which to round `x`
 
 \
 
+
+. . .
 
 - Let's look at an example
 
@@ -424,6 +561,8 @@ round(x = 62.82379110, digits = 2)
 
 \
 
+. . .
+
 - Can be accessed by typing a `?` and then the function name
     - E.g., `?mean`
 
@@ -431,13 +570,15 @@ round(x = 62.82379110, digits = 2)
 
 . . . 
 
-Type and run `?round` and see what happens
+- Type (and run) `?round` and see what happens
 
 ## [Practice: Functions]{.pink} {.smaller}
 
 - Base R includes an object called `pi` that includes the first 6 digits of π
 
 \
+
+. . .
 
 - Using the `round` function, round `pi` to 3 digits
 
@@ -449,6 +590,8 @@ Type and run `?round` and see what happens
     - What argument(s) does `sqrt` expect?
 
 \
+
+. . .
 
 - What is the square root of pi?
 
@@ -465,29 +608,39 @@ Type and run `?round` and see what happens
 
 \
 
-- You can make vectors using "concatenation"
+. . .
+
+- You can make vectors using "[concatenation]{.purple}"
     - \[con-CAT-eh-nation\]
 
 \
 
-- R does this with a lower case `c` and parentheses
+. . .
+
+- R does this with the `c` function
     - You need commas between each [element]{.orange} of a vector
     - E.g., `my_vector <- c(1, 2, 3, 4)`
 
 ## [Object Classes]{.orange} {.smaller}
 
-- Objects have a [class]{.blue} that dictates what operations they support
+- Objects have a [class]{.purple} that dictates what operations they support
 
 \
+
+. . .
 
 - Math can only be done on "numeric" objects
 
 \
 
+. . .
+
 - Text can be stored in "character" objects
     - But math can’t be done on characters!
 
 \
+
+. . .
 
 - You can check an object's current class with the `class` function
     - E.g., `class(my_object)`
@@ -495,30 +648,38 @@ Type and run `?round` and see what happens
 ## [Object Classes Cont.]{.orange}
 
 - There are _many_ classes
+    - Most of which are beyond the scope of this class
 
 \
 
-- Let's focus on 4 fundamental classes
-    - Numeric = numbers
-    - Integer = numbers without _any_ decimal places
-    - Character = text
-    - Factor = text but defines categorical groups
+. . .
+
+- Let's focus on 3 fundamental classes
+    1. [Numeric]{.purple} = numbers
+    2. [Character]{.purple} = text
+    3. [Factor]{.purple} = text but defines categorical groups
 
 ## [Class Coercion]{.orange} {.smaller}
 
-- You can force (a.k.a. [coerce]{.pink}) an object from one class to another
+- You can force (a.k.a. [coerce]{.purple}) an object from one class to another
 
 \
+
+. . .
 
 - The simplest functions to do this are all `as.<desired class>()`
     - E.g., `as.numeric()`
 
 \
 
+. . .
+
 - Want to have your code treat a number like text?
     - `my_text <- as.character(111)`
 
 \
+
+. . .
 
 - What happens when you try to force text into a number?
     - `my_num <- as.numeric("hello")`
@@ -526,8 +687,11 @@ Type and run `?round` and see what happens
 ## [Practice: Concatenation & Classes]{.pink} {.smaller}
 
 - Concatenate the numbers 1, 4, 9, and 6 into a vector
-    - Remember to use `c`!
-    - What is the class of that vector?
+    - _Hint:_ remember the `c` function!
+
+\
+
+- What is the class of that vector?
 
 \
 
