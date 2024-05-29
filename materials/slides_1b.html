@@ -440,7 +440,7 @@ Lab 1 – RStudio &amp; Base R
 <h2><span class="gold">Installation Check: R &amp; RStudio</span></h2>
 <div>
 <ul>
-<li class="fragment">Did anyone <u><em>not</em></u> get <span class="blue">R</span> installed?</li>
+<li class="fragment">Did anyone <u><em>not</em></u> get <span class="orange">R</span> installed?</li>
 </ul>
 <p><br>
 </p>
@@ -458,7 +458,17 @@ Lab 1 – RStudio &amp; Base R
 <h2><span class="orange">R versus RStudio</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="images/logo-r.png" class="absolute" style="top: 100px; left: 150px; width: 15%; "><br>
+<p><img data-src="images/logo-r.png" class="absolute" style="top: 100px; left: 150px; width: 15%; " alt="R logo"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/logo-rstudio.png" class="absolute" style="top: 100px; left: 580px; width: 35%; " alt="RStudio logo"></p>
+</div>
+</div>
+</section>
+<section id="r-versus-rstudio-1" class="slide level2 smaller">
+<h2><span class="orange">R versus RStudio</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/logo-r.png" class="absolute" style="top: 100px; left: 150px; width: 15%; " alt="R logo"><br>
 <br>
 <br>
 <br>
@@ -475,7 +485,32 @@ Lab 1 – RStudio &amp; Base R
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/logo-rstudio.png" class="absolute" style="top: 100px; left: 580px; width: 35%; "><br>
+<p><img data-src="images/logo-rstudio.png" class="absolute" style="top: 100px; left: 580px; width: 35%; " alt="RStudio logo"></p>
+</div>
+</div>
+</section>
+<section id="r-versus-rstudio-2" class="slide level2 smaller">
+<h2><span class="orange">R versus RStudio</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/logo-r.png" class="absolute" style="top: 100px; left: 150px; width: 15%; " alt="R logo"><br>
+<br>
+<br>
+<br>
+</p>
+<ul>
+<li>Access to fundamental R operations</li>
+<li>Not aesthetically pleasing
+<ul>
+<li>In my opinion <svg aria-label="Face Smile" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Face Smile</title><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path></svg></li>
+</ul></li>
+<li>Faster for <em>very</em> complex operations
+<ul>
+<li>Unlikely to matter for this course!</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/logo-rstudio.png" class="absolute" style="top: 100px; left: 580px; width: 35%; " alt="RStudio logo"><br>
 <br>
 <br>
 <br>
@@ -484,7 +519,7 @@ Lab 1 – RStudio &amp; Base R
 <li>Access to fundamental R operations</li>
 <li>Allows custom aesthetics</li>
 <li>Has quality-of-life improvements</li>
-<li>Technically an “<span class="purple">IDE</span>”
+<li>Technically an “<span class="orange">IDE</span>”
 <ul>
 <li><u>I</u>ntegrated <u>D</u>eveloper <u>E</u>nvironment</li>
 </ul></li>
@@ -495,9 +530,9 @@ Lab 1 – RStudio &amp; Base R
 <section id="rstudio-layout" class="slide level2 smaller">
 <h2><span class="orange">RStudio Layout</span></h2>
 <ul>
-<li>Layout consisting of four <span class="blue">panes</span>
+<li>Layout consisting of four <span class="purple">panes</span>
 <ul>
-<li>Each pane has <span class="gold">tabs</span> that do different things</li>
+<li>Each pane has <span class="orange">tabs</span> that do different things</li>
 <li>You can customize which tabs are in each pane!</li>
 </ul></li>
 <li>To customize options:
@@ -508,14 +543,20 @@ Lab 1 – RStudio &amp; Base R
 </ul></li>
 <li>I recommend the following layout:</li>
 </ul>
-<p><img data-src="images/rstudio-layout.png" class="absolute" style="top: 280px; left: 600px; width: 40%; "></p>
+<p><img data-src="images/rstudio-layout.png" class="absolute" style="top: 260px; left: 600px; width: 40%; " alt="Image of four squares arranged in a 2x2 grid. The top left is titled 'source', the bottom left is titled 'console' and the two right squares are labeled 'your choice'"></p>
 </section>
 <section id="practice-choose-your-colors" class="slide level2">
 <h2><span class="pink">Practice: Choose Your Colors</span></h2>
 <ul>
-<li><p>Tools <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> Global Options <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> Appearance</p></li>
-<li><p>Look through some of the available color schemes</p></li>
-<li><p>Feel free to share the name of your favorites!</p></li>
+<li>Tools <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> Global Options <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> Appearance</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Look through some of the available color schemes
+<ul>
+<li>Feel free to share the name of your favorites!</li>
+</ul></li>
 </ul>
 <p><br>
 </p>
@@ -532,7 +573,7 @@ Lab 1 – RStudio &amp; Base R
 <h2><span class="orange">RStudio Projects</span></h2>
 <div>
 <ul>
-<li class="fragment">Projects are a special way of marking a folder on your computer for R</li>
+<li class="fragment"><span class="purple">Projects</span> are a special way of marking a folder on your computer for R</li>
 </ul>
 <p><br>
 </p>
@@ -583,9 +624,7 @@ Lab 1 – RStudio &amp; Base R
 <ol start="2" type="1">
 <li>In RStudio, click “Project: (None)” in the top right corner
 <ul>
-<li>Choose “New Project…”</li>
-<li>Pick “Existing Directory”</li>
-<li>Click “Browse…” and find the folder you made in <span class="pink">step 1</span></li>
+<li>“New Project…” <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> “Existing Directory” <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> “Browse…” <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> find the folder you made in <span class="pink">step 1</span></li>
 </ul></li>
 </ol>
 <p><br>
@@ -606,25 +645,29 @@ Lab 1 – RStudio &amp; Base R
 <ul>
 <li>A code file is called a “script”
 <ul>
-<li><span class="blue">Microsoft Word</span>:<span class="gold">document</span> – <span class="blue">R</span>:<span class="gold">script</span></li>
+<li><span class="orange">Microsoft Word</span> <strong>:</strong> <span class="purple">document</span> – <span class="orange">R</span> <strong>:</strong> <span class="purple">script</span></li>
 </ul></li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Lines of code written in scripts can be re-used
 <ul>
-<li>I.e., re-“run”</li>
+<li>I.e., “<span class="orange">re-run</span>”</li>
 </ul></li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Scripts can be run line-by-line manually or run all at once
 <ul>
-<li>Running all at once = “sourcing” a script</li>
+<li>Running all at once = “<span class="orange">sourcing</span>” a script</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="practice-create-an-r-script" class="slide level2 smaller">
 <h2><span class="pink">Practice: Create an R Script</span></h2>
@@ -661,18 +704,22 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
-<li>R’s real power comes from “packages” with more advanced functions
+<li>R’s real power comes from “<span class="purple">packages</span>” with more advanced functions
 <ul>
 <li>These packages are <em>not</em> in base R</li>
-<li>We’ll begin to cover these next week</li>
+<li>We’ll begin to cover these <span class="blue">next week</span></li>
 </ul></li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Base R is really useful in its own right!</li>
 </ul>
+</div>
 </section>
 <section id="objects-and-assignment" class="slide level2 smaller">
 <h2><span class="orange">Objects and Assignment</span></h2>
@@ -681,16 +728,19 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
-<li>More useful to use <span class="blue">objects</span> instead of direct values
+<li>More useful to use “objects” instead of direct values
 <ul>
-<li><span class="blue">object</span> = alias for a value / set of values</li>
+<li><span class="purple">object</span> = alias for a value / set of values</li>
 </ul></li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
-<li>When we create an object we <span class="gold">assign</span> some value(s) to the object
+<li>When we create an object we <span class="purple">assign</span> some value(s) to the object
 <ul>
 <li>Uses the <span class="orange">assignment operator</span> (<code>&lt;-</code>)</li>
 <li>Keyboard shortcut: Alt + hyphen</li>
@@ -698,9 +748,12 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>After you create an object, you can use it in place of its value!</li>
 </ul>
+</div>
 </section>
 <section id="object-example" class="slide level2">
 <h2><span class="gold">Object Example</span></h2>
@@ -723,20 +776,47 @@ Lab 1 – RStudio &amp; Base R
 <p>… we get the value we assigned to it!</p>
 </div>
 </section>
-<section id="objects-continued" class="slide level2">
+<section id="objects-continued" class="slide level2 smaller">
 <h2><span class="orange">Objects Continued</span></h2>
 <ul>
 <li>Useful because it lets you <em>flexibly</em> code</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
-<li>If you know that an object only contains numbers, you can do general operations that work for any number object</li>
+<li>If you know that an object only contains numbers, you can do general operations that work for any number</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>If you had to use the actual value every time, complex operations would be <em>brutal</em> to code</li>
+</ul>
+</div>
+</section>
+<section id="running-code" class="slide level2 smaller">
+<h2><span class="orange">Running Code</span></h2>
+<ul>
+<li>How do you ‘actually’ run code?</li>
 </ul>
 <p><br>
 </p>
 <ul>
-<li>If you had to use the actual value every time, complex operations would be brutal to code</li>
+<li>You have two options!
+<ol type="1">
+<li>Click the “Run” button in the top right of the “Source” pane of RStudio</li>
+<li>Use the keyboard shortcut Command + Return (or for Windows users, Control + Return)</li>
+</ol></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Note that either option requires that you clicked somewhere in the line you want to run
+<ul>
+<li>Lines are numbered on the left of the “Source” pane</li>
+</ul></li>
 </ul>
 </section>
 <section id="practice-object-assignment" class="slide level2 smaller">
@@ -744,6 +824,16 @@ Lab 1 – RStudio &amp; Base R
 <div class="columns">
 <div class="column" style="width:50%;">
 <h4 id="arithmetic">Arithmetic</h4>
+</div><div class="column" style="width:50%;">
+<h4 id="object-practice">Object Practice</h4>
+</div>
+</div>
+</section>
+<section id="practice-object-assignment-1" class="slide level2 smaller">
+<h2><span class="pink">Practice: Object Assignment</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="arithmetic-1">Arithmetic</h4>
 <ul>
 <li>Calculate 576 / 3</li>
 </ul>
@@ -758,7 +848,30 @@ Lab 1 – RStudio &amp; Base R
 <li>Calculate 2 + 2 - 4</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<h4 id="object-practice">Object Practice</h4>
+<h4 id="object-practice-1">Object Practice</h4>
+</div>
+</div>
+</section>
+<section id="practice-object-assignment-2" class="slide level2 smaller">
+<h2><span class="pink">Practice: Object Assignment</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="arithmetic-2">Arithmetic</h4>
+<ul>
+<li>Calculate 576 / 3</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Calculate (258 * 4) / 13</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Calculate 2 + 2 - 4</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="object-practice-2">Object Practice</h4>
 <ul>
 <li>Create an object called <code>yy</code> with a value of 55
 <ul>
@@ -776,34 +889,47 @@ Lab 1 – RStudio &amp; Base R
 </div>
 </div>
 </section>
+<section id="temperature-check-1" class="slide level2">
+<h2><span class="purple">Temperature Check</span></h2>
+<h4 id="how-are-you-feeling-1">How are you Feeling?</h4>
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+</section>
 <section id="code-comments" class="slide level2 smaller">
 <h2><span class="orange">Code Comments</span></h2>
 <ul>
-<li>Coding languages all allow <span class="gold">comments</span></li>
+<li>Coding languages all allow <span class="purple">comments</span></li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Comments are <em>non-coding</em> lines that explain what the code is doing in a human-readable way</li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>In R, comment lines start with a hashtag (<code>#</code>)</li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Comments allow others to read your code and understand what is happening
 <ul>
 <li>Great for <u><em>future you</em></u><em>!!!</em></li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="code-comments-1" class="slide level2">
 <h2><span class="orange">Code Comments</span></h2>
 <p align="center">
-<img src="memes/comments.jpg" alt="Person applying clown makeup as they talk about why they don't need to use code comments" width="45%">
+<img src="memes/comments.jpg" alt="Person applying clown makeup as they talk about why they don't need to use code comments" width="43%">
 </p>
 </section>
 <section id="code-example" class="slide level2">
@@ -814,6 +940,13 @@ Lab 1 – RStudio &amp; Base R
 <span id="cb4-3"><a></a></span>
 <span id="cb4-4"><a></a><span class="co"># Divide it by 7 and assign to a new object</span></span>
 <span id="cb4-5"><a></a>p <span class="ot">&lt;-</span> q <span class="sc">/</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Any questions about comments before we continue?</li>
+</ul>
+</div>
 </section>
 <section id="practice-comments" class="slide level2 smaller">
 <h2><span class="pink">Practice: Comments</span></h2>
@@ -835,33 +968,42 @@ Lab 1 – RStudio &amp; Base R
 </div>
 <div class="fragment">
 <ul>
-<li>This lets your class notes be included directly with your code!</li>
+<li>This lets your class notes be included directly with your code!
+<ul>
+<li>Though you’re of course welcome to take notes (or not) using whatever medium you prefer</li>
+</ul></li>
 </ul>
 </div>
 </section>
 <section id="functions" class="slide level2 smaller">
 <h2><span class="orange">Functions</span></h2>
 <ul>
-<li>Programming wouldn’t be useful if you could only use arithmetic</li>
+<li>Programming wouldn’t be useful if you needed to do everything by hand</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
-<li>Programming languages include <span class="blue">functions</span> to avoid arithmetic
+<li>Programming languages include <span class="purple">functions</span> to avoid arithmetic
 <ul>
-<li>Someone else has done the arithmetic and made an object <strong>of that process</strong>!</li>
+<li>Someone else has done the manual labor and made an object <strong>of that <em>process</em></strong>!</li>
 </ul></li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>You can then use the function instead of doing the math yourself</li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
-<li>Functions use <span class="orange">arguments</span> to let users specify what they can modify</li>
+<li>Functions use <span class="purple">arguments</span> to let users specify what they can modify</li>
 </ul>
+</div>
 </section>
 <section id="function-example" class="slide level2 smaller">
 <h2><span class="gold">Function Example</span></h2>
@@ -870,6 +1012,7 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li><code>round</code> has two arguments:
 <ul>
@@ -879,9 +1022,12 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Let’s look at an example</li>
 </ul>
+</div>
 <div class="fragment">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Round a decimal to 2 digits</span></span>
@@ -899,6 +1045,7 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Can be accessed by typing a <code>?</code> and then the function name
 <ul>
@@ -907,8 +1054,11 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+</div>
 <div class="fragment">
-<p>Type and run <code>?round</code> and see what happens</p>
+<ul>
+<li>Type (and run) <code>?round</code> and see what happens</li>
+</ul>
 </div>
 </section>
 <section id="practice-functions" class="slide level2 smaller">
@@ -918,11 +1068,13 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Using the <code>round</code> function, round <code>pi</code> to 3 digits</li>
 </ul>
 <p><br>
 </p>
+</div>
 <div class="fragment">
 <ul>
 <li>Consult the help file for the square root function (<code>sqrt</code>)
@@ -932,6 +1084,8 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>What is the square root of pi?</li>
 </ul>
@@ -954,34 +1108,41 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
-<li>You can make vectors using “concatenation”
+<li>You can make vectors using “<span class="purple">concatenation</span>”
 <ul>
 <li>[con-CAT-eh-nation]</li>
 </ul></li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
-<li>R does this with a lower case <code>c</code> and parentheses
+<li>R does this with the <code>c</code> function
 <ul>
 <li>You need commas between each <span class="orange">element</span> of a vector</li>
 <li>E.g., <code>my_vector &lt;- c(1, 2, 3, 4)</code></li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="object-classes" class="slide level2 smaller">
 <h2><span class="orange">Object Classes</span></h2>
 <ul>
-<li>Objects have a <span class="blue">class</span> that dictates what operations they support</li>
+<li>Objects have a <span class="purple">class</span> that dictates what operations they support</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Math can only be done on “numeric” objects</li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Text can be stored in “character” objects
 <ul>
@@ -990,37 +1151,45 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>You can check an object’s current class with the <code>class</code> function
 <ul>
 <li>E.g., <code>class(my_object)</code></li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="object-classes-cont." class="slide level2">
 <h2><span class="orange">Object Classes Cont.</span></h2>
 <ul>
-<li>There are <em>many</em> classes</li>
+<li>There are <em>many</em> classes
+<ul>
+<li>Most of which are beyond the scope of this class</li>
+</ul></li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
-<li>Let’s focus on 4 fundamental classes
-<ul>
-<li>Numeric = numbers</li>
-<li>Integer = numbers without <em>any</em> decimal places</li>
-<li>Character = text</li>
-<li>Factor = text but defines categorical groups</li>
-</ul></li>
+<li>Let’s focus on 3 fundamental classes
+<ol type="1">
+<li><span class="purple">Numeric</span> = numbers</li>
+<li><span class="purple">Character</span> = text</li>
+<li><span class="purple">Factor</span> = text but defines categorical groups</li>
+</ol></li>
 </ul>
+</div>
 </section>
 <section id="class-coercion" class="slide level2 smaller">
 <h2><span class="orange">Class Coercion</span></h2>
 <ul>
-<li>You can force (a.k.a. <span class="pink">coerce</span>) an object from one class to another</li>
+<li>You can force (a.k.a. <span class="purple">coerce</span>) an object from one class to another</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>The simplest functions to do this are all <code>as.&lt;desired class&gt;()</code>
 <ul>
@@ -1029,6 +1198,8 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Want to have your code treat a number like text?
 <ul>
@@ -1037,21 +1208,28 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>What happens when you try to force text into a number?
 <ul>
 <li><code>my_num &lt;- as.numeric("hello")</code></li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="practice-concatenation-classes" class="slide level2 smaller">
 <h2><span class="pink">Practice: Concatenation &amp; Classes</span></h2>
 <ul>
 <li>Concatenate the numbers 1, 4, 9, and 6 into a vector
 <ul>
-<li>Remember to use <code>c</code>!</li>
-<li>What is the class of that vector?</li>
+<li><em>Hint:</em> remember the <code>c</code> function!</li>
 </ul></li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>What is the class of that vector?</li>
 </ul>
 <p><br>
 </p>
@@ -1071,9 +1249,9 @@ Lab 1 – RStudio &amp; Base R
 </ul>
 </div>
 </section>
-<section id="temperature-check-1" class="slide level2">
+<section id="temperature-check-2" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
-<h4 id="how-are-you-feeling-1">How are you Feeling?</h4>
+<h4 id="how-are-you-feeling-2">How are you Feeling?</h4>
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
