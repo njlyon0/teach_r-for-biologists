@@ -717,7 +717,6 @@ round(x = 62.82379110, digits = 2)
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lecture
@@ -728,7 +727,6 @@ round(x = 62.82379110, digits = 2)
 - Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) (p.1-12)
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lab
@@ -739,6 +737,4 @@ round(x = 62.82379110, digits = 2)
 - Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) (p.20-25)
 
 :::
-
 ::::
-

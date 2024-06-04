@@ -47,9 +47,11 @@ After today's session you will be able to:
 
 ## [R Package Background]{.orange} {.smaller}
 
-- R packages are suites of functions developed by users
+- R [packages]{.purple} are groups of functions developed by users
 
 \
+
+. . .
 
 - Packages have no defined depth or breadth requirements
     - A package could be a single, simple function
@@ -57,9 +59,13 @@ After today's session you will be able to:
 
 \
 
+. . .
+
 - Packages can be installed by any R user for _free!_
 
 \
+
+. . .
 
 - R is versatile and powerful (in part) because of contributed packages
 
@@ -72,16 +78,18 @@ After today's session you will be able to:
 . . . 
 
 1. Comprehensive R Archive Network
-    - A.k.a. "CRAN"
-    - [cran.rstudio.com](https://cran.rstudio.com/)
+    - A.k.a. "CRAN" | [cran.rstudio.com](https://cran.rstudio.com/)
+
+\
+
+. . .
 
 2. GitHub
     - [github.com](https://github.com/)
 
-## [Package Locations Cont.]{.orange} {.smaller}
+## [CRAN vs. GitHub]{.orange} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 #### CRAN
@@ -97,7 +105,31 @@ After today's session you will be able to:
 - These are "official" packages
 
 :::
+:::{.column width="50%"}
 
+#### GitHub
+
+:::
+::::
+
+## [CRAN vs. GitHub]{.orange} {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+
+#### CRAN
+
+- Currently >20,000 packages live here
+
+\
+
+- Strict rules for packages to be allowed
+
+\
+
+- These are "official" packages
+
+:::
 :::{.column width="50%"}
 
 #### GitHub
@@ -113,24 +145,27 @@ After today's session you will be able to:
 - Packages _usually_ work but they don't have the same quality control as CRAN packages
 
 :::
-
 ::::
 
-## [Using Packages]{.orange}
+## [Using Packages]{.orange} {.smaller}
 
 - In order to use a package, you must:
 
 \
+
+. . .
 
 1. <u>Install</u> the desired package
     - Done once per computer
 
 \
 
+. . .
+
 2. <u>Load</u> the package into R
     - Done _every_ time you re-open RStudio
 
-## [Using Packages: Specific Steps]{.orange}
+## [Using Packages: Specific Steps]{.orange} {.smaller}
 
 \
 
@@ -145,9 +180,14 @@ library(dplyr)
 \
 
 - `install.packages` <u>_requires_</u> the package name be in quotes
+
+\
+
+. . .
+
 - `library` <u>_requires_</u> requires **unquoted** names.
 
-## [Package Analogy]{.gold}
+## [Package Analogy]{.gold} {.smaller}
 
 . . . 
 
@@ -167,7 +207,7 @@ library(dplyr)
 
 ## [Practice: Packages]{.pink} {.smaller}
 
-![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
 
 - Make a new script for this week's lecture!
     - Save it in your RStudio Project folder for this course
@@ -193,27 +233,33 @@ library(dplyr)
 
 \
 
+. . .
+
 - Risk of using a different function than intended
     - Best case: creates an error and forces you to catch the mistake
     - Worst case: _silently_ does something wrong
 
+## [Function Namespacing]{.orange} {.smaller}
+
+- Functions can be "[namespaced]{.purple}" to specify which package the function comes from
+
 \
 
-- Functions can be "namespaced" to specify which package the function comes from
-
-## [Function Namespacing]{.orange}
+. . .
 
 - Namespacing _guarantees_ you use the function from the desired package
 
 \
+
+. . .
 
 - Done with two colons (:) between the package and function names
     - E.g., `package::function()`
 
 ## [Practice: Namespacing]{.pink} {.smaller}
 
-![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
-![](images/hex-dplyr.png){.absolute top=0 left=965 width="12%"}
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
+![](images/hex-dplyr.png){.absolute top=0 left=965 width="12%" fig-alt="dplyr R package hex logo"}
 
 - `palmerpenguins` includes an example dataset on penguins
 
@@ -235,22 +281,30 @@ library(dplyr)
 
 - Namespace `glimpse` and run it on `peng_df`
 
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+
 ## [Class versus Structure]{.orange} {.smaller}
 
-- Objects have both [class]{.blue} and [structure]{.gold}
+- Objects have both [class]{.purple} and [structure]{.purple}
 
 \
 
 . . .
 
-- [Class]{.blue} = the type of object it is
+- [Class]{.purple} = the type of object it is
     - E.g., dataframe, integer, character, etc.
 
 \
 
 . . .
 
-- [Structure]{.gold} = the dimensions and "shape" of the data
+- [Structure]{.purple} = the dimensions and "shape" of the data
     - E.g., Number of rows / columns, length, etc.
 
 \
@@ -266,7 +320,23 @@ library(dplyr)
 . . .
 
 ::::{.columns}
+:::{.column width="50%"}
 
+### Check Class
+
+:::
+:::{.column width="50%"}
+
+### Check Structure
+
+:::
+::::
+
+## [Checking Class/Structure]{.orange} {.smaller}
+
+- Best to **check class and structure** of an object to ensure functions will work
+
+::::{.columns}
 :::{.column width="50%"}
 
 ### Check Class
@@ -281,7 +351,32 @@ class(my_obj)
 ```
 
 :::
+:::{.column width="50%"}
 
+### Check Structure
+
+:::
+::::
+
+## [Checking Class/Structure]{.orange} {.smaller}
+
+- Best to **check class and structure** of an object to ensure functions will work
+
+::::{.columns}
+:::{.column width="50%"}
+
+### Check Class
+
+- Use the `class` function
+
+\
+
+```{.r}
+# Checking class of 'my_obj'
+class(my_obj)
+```
+
+:::
 :::{.column width="50%"}
 
 ### Check Structure
@@ -297,47 +392,59 @@ dplyr::glimpse(my_obj)
 ```
 
 :::
-
 ::::
 
 ## [Practice: Structure]{.pink} {.smaller}
 
-- What is the [class]{.blue} of 'peng_df'?
+- What is the [class]{.orange} of 'peng_df'?
 
 \
 
 . . .
 
-- What is the [structure]{.gold}?
+- What is the [structure]{.orange}?
     - What information is included when you check?
 
 \
 
 . . .
 
-- What happens when you check the [class]{.blue} of a function?
+- What happens when you check the class of a function?
     - Run `class(class)`
 
 \
 
 . . .
 
-- What happens when you check the [structure]{.gold} of a function?
+- What happens when you check the structure of a function?
     - Run `str(str)`
 
 ## [Using Vectors: Coordinates]{.orange} {.smaller}
 
-- Vector structure is expressed as "length"
+- Vector structure is expressed as "[length]{.purple}"
     - Vector length = number of elements in the vector
     - Dataframe length = number of rows
 
 \
 
-- Bracket notation can be used to navigate vectors
+. . .
+
+- [Bracket notation]{.orange} can be used to navigate vectors
 
 \
 
-- Running `my_vec[5]` will return the fifth element of `my_vec`
+. . .
+
+
+```{r bracket-demo-1}
+#| echo: true
+
+# Make a vector
+my_vec <- c("a", "b", "c", "d", "e")
+
+# Use bracket notation to retrieve one element
+my_vec[3]
+```
 
 ## [Using Vectors: Coordinates Cont.]{.orange} {.smaller}
 
@@ -347,7 +454,12 @@ dplyr::glimpse(my_obj)
 
 . . .
 
-- Running `my_vec[c(1, 4, 7)]` returns the first, fourth, and seventh elements of `my_vec`
+```{r bracket-demo-2}
+#| echo: true
+
+# Use bracket notation to retrieve several elements
+my_vec[c(1, 3, 5)]
+```
 
 \
 
@@ -359,7 +471,12 @@ dplyr::glimpse(my_obj)
 
 . . .
 
-- Running `my_vec[c(1, 1, 1)]` returns the first element three times 
+```{r bracket-demo-3}
+#| echo: true
+
+# Use bracket notation to retrieve one element multiple times
+my_vec[c(1, 1, 1)]
+```
 
 ## [Practice: Vector Navigation]{.pink} {.smaller}
 
@@ -368,13 +485,15 @@ dplyr::glimpse(my_obj)
 
 \
 
+. . .
+
 - Check the length of `my_vec` using the `length` function
 
 \
 
 . . .
  
-- Identify the 10th element of `my_vec` using bracket notation
+- Identify the 10^th^ element of `my_vec` using bracket notation
 
 \
 
@@ -413,55 +532,69 @@ dplyr::glimpse(my_obj)
 
 - The answer to a conditional <u>_must_</u> be either `TRUE` or `FALSE`
 
-## [Fundamentals: EQUAL]{.orange}
+## [Fundamentals: EQUAL]{.orange} {.smaller}
 
 - Are two things exactly equal?
 
 \
 
+. . .
+
 ```{r conditional-equal}
 #| echo: true
 
+# Check a conditional
 "hello" == "hello"
 ```
 
-
 \
+
+. . .
 
 - Uses `==` operator
     - Just two equal signs
 
-## [Fundamentals: OR]{.orange}
+## [Fundamentals: OR]{.orange} {.smaller}
 
 - Are _any_ of these conditions met?
 
 \
 
+. . .
+
 ```{r conditional-or}
 #| echo: true
 
+# Check either one conditional *or* the other
 "hello" == "hello" | 2 == 7
 ```
 
 \
 
+. . .
+
 - Uses `|` operator
     - Shift + `\` on keyboard
 
 
-## [Fundamentals: AND]{.orange}
+## [Fundamentals: AND]{.orange} {.smaller}
 
 - Are _all_ of the conditions met?
 
 \
 
+. . .
+
 ```{r conditional-and}
 #| echo: true
 
+# Are *all* conditions TRUE?
 "hello" == "hello" & 2 == 7
 ```
 
 \
+
+. . .
 
 - Uses `&` operator
     - Shift + 7 on keyboard
@@ -469,9 +602,7 @@ dplyr::glimpse(my_obj)
 ## [Fundamentals: Summary]{.orange} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="33.33%"}
-
 ### EQUAL
 
 - Are two things exactly equal?
@@ -484,14 +615,12 @@ dplyr::glimpse(my_obj)
 "hello" == "hello"
 ```
 
-
 \
 
 - Uses `==` operator
     - Just two equal signs
 
 :::
-
 :::{.column width="33.33%"}
 
 ### OR
@@ -512,7 +641,6 @@ dplyr::glimpse(my_obj)
     - Shift + `\` on keyboard
 
 :::
-
 :::{.column width="33.33%"}
 
 ### AND
@@ -533,12 +661,11 @@ dplyr::glimpse(my_obj)
     - Shift + 7 on keyboard
 
 :::
-
 ::::
 
 ## [Practice: Fundamental Conditionals]{.pink} {.smaller}
 
-![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
 
 - We'll use the base R `subset` function with the `peng_df` object
     - If needed, consult the help file for more details (`?subset`)
@@ -550,9 +677,15 @@ dplyr::glimpse(my_obj)
 - Subset `peng_df` to only Adelie penguins (and assign to a `sub_v1` object)
     - I.e., `species == "Adelie"`
 
+\
+
+. . .
+
+- How many rows does that subset have?
+
 ## [More Practice: Fundamental Conditionals]{.pink} {.smaller}
 
-![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
 
 - Subset `peng_df` to Adelie _or_ Biscoe penguins
     - Assign this subset to `sub_v2` object
@@ -564,12 +697,20 @@ dplyr::glimpse(my_obj)
 - Subset `peng_df` to only male Gentoo penguins
     - Assign to `sub_v3` object
 
+\
+
+. . .
+
+- How many rows does _that_ subset have?
+
 ## [Discussion: Conditionals]{.gold} {.smaller}
 
 - We've covered EQUAL, OR, and AND
     - `==`, `|`, or `&`
 
 \
+
+. . .
 
 - What unanswered questions do you have?
 
@@ -580,7 +721,7 @@ dplyr::glimpse(my_obj)
 - What other types of conditional statements would be useful?
     - Think about it in the context of wanting to subset some data
 
-## [Numeric Conditionals]{.orange}
+## [Numeric Conditionals]{.orange} {.smaller}
 
 - For numbers, we can use greater/less than conditionals!
 
@@ -598,7 +739,9 @@ dplyr::glimpse(my_obj)
 - Adding 'or equal to' is done by adding an equal sign
     - `>=` and `<=`
 
-## [Practice: Numeric Conditionals]{.orange}
+## [Practice: Numeric Conditionals]{.pink} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
 
 - Subset `peng_df` to only penguins with a bill length greater than 40 mm
     - Assign to `sub_v7`
@@ -686,7 +829,9 @@ dplyr::glimpse(my_obj)
     - E.g., `!x %in% c(...)`
     - Note the exclamation mark is _before_ the object
 
-## [Practice: Advanced Conditionals]{.purple}
+## [Practice: Advanced Conditionals]{.pink} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
 
 - Subset `peng_df` is species is any of "Adelie", "Gentoo", or "Chinstrap"
     - Use the `%in%` operator
