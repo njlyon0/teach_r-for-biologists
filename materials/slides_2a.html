@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.554">
+  <meta name="generator" content="quarto-1.4.555">
 
   <meta name="author" content="Lecture 2 – Packages, Structure, &amp; Conditionals">
   <title>R Programming for Biologists - Intro to Data Science</title>
@@ -435,10 +435,11 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <section id="r-package-background" class="slide level2 smaller">
 <h2><span class="orange">R Package Background</span></h2>
 <ul>
-<li>R packages are suites of functions developed by users</li>
+<li>R <span class="purple">packages</span> are groups of functions developed by users</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Packages have no defined depth or breadth requirements
 <ul>
@@ -448,14 +449,19 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Packages can be installed by any R user for <em>free!</em></li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>R is versatile and powerful (in part) because of contributed packages</li>
 </ul>
+</div>
 </section>
 <section id="package-locations" class="slide level2">
 <h2><span class="orange">Package Locations</span></h2>
@@ -468,9 +474,14 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <ol type="1">
 <li>Comprehensive R Archive Network
 <ul>
-<li>A.k.a. “CRAN”</li>
-<li><a href="https://cran.rstudio.com/">cran.rstudio.com</a></li>
+<li>A.k.a. “CRAN” | <a href="https://cran.rstudio.com/">cran.rstudio.com</a></li>
 </ul></li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
 <li>GitHub
 <ul>
 <li><a href="https://github.com/">github.com</a></li>
@@ -478,8 +489,8 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ol>
 </div>
 </section>
-<section id="package-locations-cont." class="slide level2 smaller">
-<h2><span class="orange">Package Locations Cont.</span></h2>
+<section id="cran-vs.-github" class="slide level2 smaller">
+<h2><span class="orange">CRAN vs.&nbsp;GitHub</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <h4 id="cran">CRAN</h4>
@@ -498,6 +509,29 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 </div><div class="column" style="width:50%;">
 <h4 id="github">GitHub</h4>
+</div>
+</div>
+</section>
+<section id="cran-vs.-github-1" class="slide level2 smaller">
+<h2><span class="orange">CRAN vs.&nbsp;GitHub</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="cran-1">CRAN</h4>
+<ul>
+<li>Currently &gt;20,000 packages live here</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Strict rules for packages to be allowed</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>These are “official” packages</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="github-1">GitHub</h4>
 <ul>
 <li>Unknown number of packages here (no centralized record retained)</li>
 </ul>
@@ -514,13 +548,14 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </div>
 </div>
 </section>
-<section id="using-packages" class="slide level2">
+<section id="using-packages" class="slide level2 smaller">
 <h2><span class="orange">Using Packages</span></h2>
 <ul>
 <li>In order to use a package, you must:</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ol type="1">
 <li><u>Install</u> the desired package
 <ul>
@@ -529,14 +564,17 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ol>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ol start="2" type="1">
 <li><u>Load</u> the package into R
 <ul>
 <li>Done <em>every</em> time you re-open RStudio</li>
 </ul></li>
 </ol>
+</div>
 </section>
-<section id="using-packages-specific-steps" class="slide level2">
+<section id="using-packages-specific-steps" class="slide level2 smaller">
 <h2><span class="orange">Using Packages: Specific Steps</span></h2>
 <p><br>
 </p>
@@ -549,10 +587,16 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </p>
 <ul>
 <li><code>install.packages</code> <u><em>requires</em></u> the package name be in quotes</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
 <li><code>library</code> <u><em>requires</em></u> requires <strong>unquoted</strong> names.</li>
 </ul>
+</div>
 </section>
-<section id="package-analogy" class="slide level2">
+<section id="package-analogy" class="slide level2 smaller">
 <h2><span class="gold">Package Analogy</span></h2>
 <div class="fragment">
 <ul>
@@ -576,7 +620,7 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </section>
 <section id="practice-packages" class="slide level2 smaller">
 <h2><span class="pink">Practice: Packages</span></h2>
-<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="palmerpenguins R package hex logo"></p>
 <ul>
 <li>Make a new script for this week’s lecture!
 <ul>
@@ -612,6 +656,7 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Risk of using a different function than intended
 <ul>
@@ -619,29 +664,34 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <li>Worst case: <em>silently</em> does something wrong</li>
 </ul></li>
 </ul>
+</div>
+</section>
+<section id="function-namespacing" class="slide level2 smaller">
+<h2><span class="orange">Function Namespacing</span></h2>
+<ul>
+<li>Functions can be “<span class="purple">namespaced</span>” to specify which package the function comes from</li>
+</ul>
 <p><br>
 </p>
-<ul>
-<li>Functions can be “namespaced” to specify which package the function comes from</li>
-</ul>
-</section>
-<section id="function-namespacing" class="slide level2">
-<h2><span class="orange">Function Namespacing</span></h2>
+<div class="fragment">
 <ul>
 <li>Namespacing <em>guarantees</em> you use the function from the desired package</li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Done with two colons (:) between the package and function names
 <ul>
 <li>E.g., <code>package::function()</code></li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="practice-namespacing" class="slide level2 smaller">
 <h2><span class="pink">Practice: Namespacing</span></h2>
-<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "></p>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="palmerpenguins R package hex logo"> <img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 965px; width: 12%; " alt="dplyr R package hex logo"></p>
 <ul>
 <li><code>palmerpenguins</code> includes an example dataset on penguins</li>
 </ul>
@@ -671,16 +721,23 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 </div>
 </section>
+<section id="temperature-check" class="slide level2">
+<h2><span class="purple">Temperature Check</span></h2>
+<h4 id="how-are-you-feeling">How are you Feeling?</h4>
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
+</section>
 <section id="class-versus-structure" class="slide level2 smaller">
 <h2><span class="orange">Class versus Structure</span></h2>
 <ul>
-<li>Objects have both <span class="blue">class</span> and <span class="gold">structure</span></li>
+<li>Objects have both <span class="purple">class</span> and <span class="purple">structure</span></li>
 </ul>
 <p><br>
 </p>
 <div class="fragment">
 <ul>
-<li><span class="blue">Class</span> = the type of object it is
+<li><span class="purple">Class</span> = the type of object it is
 <ul>
 <li>E.g., dataframe, integer, character, etc.</li>
 </ul></li>
@@ -690,7 +747,7 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </div>
 <div class="fragment">
 <ul>
-<li><span class="gold">Structure</span> = the dimensions and “shape” of the data
+<li><span class="purple">Structure</span> = the dimensions and “shape” of the data
 <ul>
 <li>E.g., Number of rows / columns, length, etc.</li>
 </ul></li>
@@ -713,6 +770,20 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="check-class">Check Class</h3>
+</div><div class="column" style="width:50%;">
+<h3 id="check-structure">Check Structure</h3>
+</div>
+</div>
+</div>
+</section>
+<section id="checking-classstructure-1" class="slide level2 smaller">
+<h2><span class="orange">Checking Class/Structure</span></h2>
+<ul>
+<li>Best to <strong>check class and structure</strong> of an object to ensure functions will work</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="check-class-1">Check Class</h3>
 <ul>
 <li>Use the <code>class</code> function</li>
 </ul>
@@ -721,29 +792,48 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Checking class of 'my_obj'</span></span>
 <span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(my_obj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:50%;">
-<h3 id="check-structure">Check Structure</h3>
+<h3 id="check-structure-1">Check Structure</h3>
+</div>
+</div>
+</section>
+<section id="checking-classstructure-2" class="slide level2 smaller">
+<h2><span class="orange">Checking Class/Structure</span></h2>
+<ul>
+<li>Best to <strong>check class and structure</strong> of an object to ensure functions will work</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="check-class-2">Check Class</h3>
+<ul>
+<li>Use the <code>class</code> function</li>
+</ul>
+<p><br>
+</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Checking class of 'my_obj'</span></span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(my_obj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<h3 id="check-structure-2">Check Structure</h3>
 <ul>
 <li>Use <em>either</em> the <code>str</code> function <em>or</em> <code>dplyr::glimpse</code></li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Checking structure of 'my_obj' (with base R)</span></span>
-<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(my_obj)</span>
-<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Checking structure of 'my_obj' (with `dplyr`)</span></span>
-<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(my_obj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Checking structure of 'my_obj' (with base R)</span></span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(my_obj)</span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Checking structure of 'my_obj' (with `dplyr`)</span></span>
+<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(my_obj)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
 <section id="practice-structure" class="slide level2 smaller">
 <h2><span class="pink">Practice: Structure</span></h2>
 <ul>
-<li>What is the <span class="blue">class</span> of ‘peng_df’?</li>
+<li>What is the <span class="orange">class</span> of ‘peng_df’?</li>
 </ul>
 <p><br>
 </p>
 <div class="fragment">
 <ul>
-<li>What is the <span class="gold">structure</span>?
+<li>What is the <span class="orange">structure</span>?
 <ul>
 <li>What information is included when you check?</li>
 </ul></li>
@@ -753,7 +843,7 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </div>
 <div class="fragment">
 <ul>
-<li>What happens when you check the <span class="blue">class</span> of a function?
+<li>What happens when you check the class of a function?
 <ul>
 <li>Run <code>class(class)</code></li>
 </ul></li>
@@ -763,7 +853,7 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </div>
 <div class="fragment">
 <ul>
-<li>What happens when you check the <span class="gold">structure</span> of a function?
+<li>What happens when you check the structure of a function?
 <ul>
 <li>Run <code>str(str)</code></li>
 </ul></li>
@@ -773,7 +863,7 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <section id="using-vectors-coordinates" class="slide level2 smaller">
 <h2><span class="orange">Using Vectors: Coordinates</span></h2>
 <ul>
-<li>Vector structure is expressed as “length”
+<li>Vector structure is expressed as “<span class="purple">length</span>”
 <ul>
 <li>Vector length = number of elements in the vector</li>
 <li>Dataframe length = number of rows</li>
@@ -781,14 +871,25 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
-<li>Bracket notation can be used to navigate vectors</li>
+<li><span class="orange">Bracket notation</span> can be used to navigate vectors</li>
 </ul>
 <p><br>
 </p>
-<ul>
-<li>Running <code>my_vec[5]</code> will return the fifth element of <code>my_vec</code></li>
-</ul>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Make a vector</span></span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>my_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>, <span class="st">"c"</span>, <span class="st">"d"</span>, <span class="st">"e"</span>)</span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Use bracket notation to retrieve one element</span></span>
+<span id="cb5-5"><a aria-hidden="true" tabindex="-1"></a>my_vec[<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "c"</code></pre>
+</div>
+</div>
+</div>
 </section>
 <section id="using-vectors-coordinates-cont." class="slide level2 smaller">
 <h2><span class="orange">Using Vectors: Coordinates Cont.</span></h2>
@@ -798,9 +899,13 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <p><br>
 </p>
 <div class="fragment">
-<ul>
-<li>Running <code>my_vec[c(1, 4, 7)]</code> returns the first, fourth, and seventh elements of <code>my_vec</code></li>
-</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Use bracket notation to retrieve several elements</span></span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>my_vec[<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "a" "c" "e"</code></pre>
+</div>
+</div>
 <p><br>
 </p>
 </div>
@@ -812,9 +917,13 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </p>
 </div>
 <div class="fragment">
-<ul>
-<li>Running <code>my_vec[c(1, 1, 1)]</code> returns the first element three times</li>
-</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Use bracket notation to retrieve one element multiple times</span></span>
+<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a>my_vec[<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "a" "a" "a"</code></pre>
+</div>
+</div>
 </div>
 </section>
 <section id="practice-vector-navigation" class="slide level2 smaller">
@@ -827,14 +936,16 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Check the length of <code>my_vec</code> using the <code>length</code> function</li>
 </ul>
 <p><br>
 </p>
+</div>
 <div class="fragment">
 <ul>
-<li>Identify the 10th element of <code>my_vec</code> using bracket notation</li>
+<li>Identify the 10<sup>th</sup> element of <code>my_vec</code> using bracket notation</li>
 </ul>
 <p><br>
 </p>
@@ -846,9 +957,9 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 </div>
 </section>
-<section id="temperature-check" class="slide level2">
+<section id="temperature-check-1" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
-<h4 id="how-are-you-feeling">How are you Feeling?</h4>
+<h4 id="how-are-you-feeling-1">How are you Feeling?</h4>
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
@@ -886,71 +997,86 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 </div>
 </section>
-<section id="fundamentals-equal" class="slide level2">
+<section id="fundamentals-equal" class="slide level2 smaller">
 <h2><span class="orange">Fundamentals: EQUAL</span></h2>
 <ul>
 <li>Are two things exactly equal?</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Check a conditional</span></span>
+<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Uses <code>==</code> operator
 <ul>
 <li>Just two equal signs</li>
 </ul></li>
 </ul>
+</div>
 </section>
-<section id="fundamentals-or" class="slide level2">
+<section id="fundamentals-or" class="slide level2 smaller">
 <h2><span class="orange">Fundamentals: OR</span></h2>
 <ul>
 <li>Are <em>any</em> of these conditions met?</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">|</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Check either one conditional *or* the other</span></span>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">|</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Uses <code>|</code> operator
 <ul>
 <li>Shift + <code>\</code> on keyboard</li>
 </ul></li>
 </ul>
+</div>
 </section>
-<section id="fundamentals-and" class="slide level2">
+<section id="fundamentals-and" class="slide level2 smaller">
 <h2><span class="orange">Fundamentals: AND</span></h2>
 <ul>
 <li>Are <em>all</em> of the conditions met?</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">&amp;</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Are *all* conditions TRUE?</span></span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">&amp;</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
 </div>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Uses <code>&amp;</code> operator
 <ul>
 <li>Shift + 7 on keyboard</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="fundamentals-summary" class="slide level2 smaller">
 <h2><span class="orange">Fundamentals: Summary</span></h2>
@@ -963,7 +1089,7 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <p><br>
 </p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
@@ -984,7 +1110,7 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <p><br>
 </p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">|</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">|</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
@@ -1005,7 +1131,7 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <p><br>
 </p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">&amp;</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">&amp;</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
@@ -1023,7 +1149,7 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </section>
 <section id="practice-fundamental-conditionals" class="slide level2 smaller">
 <h2><span class="pink">Practice: Fundamental Conditionals</span></h2>
-<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="palmerpenguins R package hex logo"></p>
 <ul>
 <li>We’ll use the base R <code>subset</code> function with the <code>peng_df</code> object
 <ul>
@@ -1039,11 +1165,18 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <li>I.e., <code>species == "Adelie"</code></li>
 </ul></li>
 </ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>How many rows does that subset have?</li>
+</ul>
 </div>
 </section>
 <section id="more-practice-fundamental-conditionals" class="slide level2 smaller">
 <h2><span class="pink">More Practice: Fundamental Conditionals</span></h2>
-<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="palmerpenguins R package hex logo"></p>
 <ul>
 <li>Subset <code>peng_df</code> to Adelie <em>or</em> Biscoe penguins
 <ul>
@@ -1059,6 +1192,13 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 <li>Assign to <code>sub_v3</code> object</li>
 </ul></li>
 </ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>How many rows does <em>that</em> subset have?</li>
+</ul>
 </div>
 </section>
 <section id="discussion-conditionals" class="slide level2 smaller">
@@ -1071,11 +1211,13 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>What unanswered questions do you have?</li>
 </ul>
 <p><br>
 </p>
+</div>
 <div class="fragment">
 <ul>
 <li>What other types of conditional statements would be useful?
@@ -1085,7 +1227,7 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 </div>
 </section>
-<section id="numeric-conditionals" class="slide level2">
+<section id="numeric-conditionals" class="slide level2 smaller">
 <h2><span class="orange">Numeric Conditionals</span></h2>
 <ul>
 <li>For numbers, we can use greater/less than conditionals!</li>
@@ -1111,8 +1253,9 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 </div>
 </section>
-<section id="practice-numeric-conditionals" class="slide level2">
-<h2><span class="orange">Practice: Numeric Conditionals</span></h2>
+<section id="practice-numeric-conditionals" class="slide level2 smaller">
+<h2><span class="pink">Practice: Numeric Conditionals</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="palmerpenguins R package hex logo"></p>
 <ul>
 <li>Subset <code>peng_df</code> to only penguins with a bill length greater than 40 mm
 <ul>
@@ -1130,9 +1273,9 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 </div>
 </section>
-<section id="temperature-check-1" class="slide level2">
+<section id="temperature-check-2" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
-<h4 id="how-are-you-feeling-1">How are you Feeling?</h4>
+<h4 id="how-are-you-feeling-2">How are you Feeling?</h4>
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
@@ -1218,8 +1361,9 @@ Lecture 2 – Packages, Structure, &amp; Conditionals
 </ul>
 </div>
 </section>
-<section id="practice-advanced-conditionals" class="slide level2">
-<h2><span class="purple">Practice: Advanced Conditionals</span></h2>
+<section id="practice-advanced-conditionals" class="slide level2 smaller">
+<h2><span class="pink">Practice: Advanced Conditionals</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="palmerpenguins R package hex logo"></p>
 <ul>
 <li>Subset <code>peng_df</code> is species is any of “Adelie”, “Gentoo”, or “Chinstrap”
 <ul>

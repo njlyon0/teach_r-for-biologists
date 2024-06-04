@@ -300,35 +300,42 @@
     "href": "materials/slides_2a.html#r-package-background",
     "title": "Intro to Data Science",
     "section": "R Package Background",
-    "text": "R Package Background\n\nR packages are suites of functions developed by users\n\n\n\n\nPackages have no defined depth or breadth requirements\n\nA package could be a single, simple function\nOr a complex ecosystem of inter-related functions\n\n\n\n\n\nPackages can be installed by any R user for free!\n\n\n\n\nR is versatile and powerful (in part) because of contributed packages"
+    "text": "R Package Background\n\nR packages are groups of functions developed by users\n\n\n\n\n\nPackages have no defined depth or breadth requirements\n\nA package could be a single, simple function\nOr a complex ecosystem of inter-related functions\n\n\n\n\n\n\n\nPackages can be installed by any R user for free!\n\n\n\n\n\n\nR is versatile and powerful (in part) because of contributed packages"
   },
   {
     "objectID": "materials/slides_2a.html#package-locations",
     "href": "materials/slides_2a.html#package-locations",
     "title": "Intro to Data Science",
     "section": "Package Locations",
-    "text": "Package Locations\n\nThere are two main homes for R packages\n\n\n\n\n\nComprehensive R Archive Network\n\nA.k.a. “CRAN”\ncran.rstudio.com\n\nGitHub\n\ngithub.com"
+    "text": "Package Locations\n\nThere are two main homes for R packages\n\n\n\n\n\nComprehensive R Archive Network\n\nA.k.a. “CRAN” | cran.rstudio.com\n\n\n\n\n\n\n\nGitHub\n\ngithub.com"
   },
   {
-    "objectID": "materials/slides_2a.html#package-locations-cont.",
-    "href": "materials/slides_2a.html#package-locations-cont.",
+    "objectID": "materials/slides_2a.html#cran-vs.-github",
+    "href": "materials/slides_2a.html#cran-vs.-github",
     "title": "Intro to Data Science",
-    "section": "Package Locations Cont.",
-    "text": "Package Locations Cont.\n\n\nCRAN\n\nCurrently &gt;20,000 packages live here\n\n\n\n\nStrict rules for packages to be allowed\n\n\n\n\nThese are “official” packages\n\n\nGitHub\n\nUnknown number of packages here (no centralized record retained)\n\n\n\n\nNo mandatory quality control tests to be available here\n\n\n\n\nPackages usually work but they don’t have the same quality control as CRAN packages"
+    "section": "CRAN vs. GitHub",
+    "text": "CRAN vs. GitHub\n\n\nCRAN\n\nCurrently &gt;20,000 packages live here\n\n\n\n\nStrict rules for packages to be allowed\n\n\n\n\nThese are “official” packages\n\n\nGitHub"
+  },
+  {
+    "objectID": "materials/slides_2a.html#cran-vs.-github-1",
+    "href": "materials/slides_2a.html#cran-vs.-github-1",
+    "title": "Intro to Data Science",
+    "section": "CRAN vs. GitHub",
+    "text": "CRAN vs. GitHub\n\n\nCRAN\n\nCurrently &gt;20,000 packages live here\n\n\n\n\nStrict rules for packages to be allowed\n\n\n\n\nThese are “official” packages\n\n\nGitHub\n\nUnknown number of packages here (no centralized record retained)\n\n\n\n\nNo mandatory quality control tests to be available here\n\n\n\n\nPackages usually work but they don’t have the same quality control as CRAN packages"
   },
   {
     "objectID": "materials/slides_2a.html#using-packages",
     "href": "materials/slides_2a.html#using-packages",
     "title": "Intro to Data Science",
     "section": "Using Packages",
-    "text": "Using Packages\n\nIn order to use a package, you must:\n\n\n\n\nInstall the desired package\n\nDone once per computer\n\n\n\n\n\nLoad the package into R\n\nDone every time you re-open RStudio"
+    "text": "Using Packages\n\nIn order to use a package, you must:\n\n\n\n\n\nInstall the desired package\n\nDone once per computer\n\n\n\n\n\n\n\nLoad the package into R\n\nDone every time you re-open RStudio"
   },
   {
     "objectID": "materials/slides_2a.html#using-packages-specific-steps",
     "href": "materials/slides_2a.html#using-packages-specific-steps",
     "title": "Intro to Data Science",
     "section": "Using Packages: Specific Steps",
-    "text": "Using Packages: Specific Steps\n\n\n# Install desired package\ninstall.packages(\"dplyr\")\n\n# Load that package\nlibrary(dplyr)\n\n\n\ninstall.packages requires the package name be in quotes\nlibrary requires requires unquoted names."
+    "text": "Using Packages: Specific Steps\n\n\n# Install desired package\ninstall.packages(\"dplyr\")\n\n# Load that package\nlibrary(dplyr)\n\n\n\ninstall.packages requires the package name be in quotes\n\n\n\n\n\nlibrary requires requires unquoted names."
   },
   {
     "objectID": "materials/slides_2a.html#package-analogy",
@@ -349,14 +356,14 @@
     "href": "materials/slides_2a.html#note-on-function-names",
     "title": "Intro to Data Science",
     "section": "Note on Function Names",
-    "text": "Note on Function Names\n\nFunctions are not required to have unique names across all packages\n\n\n\n\nRisk of using a different function than intended\n\nBest case: creates an error and forces you to catch the mistake\nWorst case: silently does something wrong\n\n\n\n\n\nFunctions can be “namespaced” to specify which package the function comes from"
+    "text": "Note on Function Names\n\nFunctions are not required to have unique names across all packages\n\n\n\n\n\nRisk of using a different function than intended\n\nBest case: creates an error and forces you to catch the mistake\nWorst case: silently does something wrong"
   },
   {
     "objectID": "materials/slides_2a.html#function-namespacing",
     "href": "materials/slides_2a.html#function-namespacing",
     "title": "Intro to Data Science",
     "section": "Function Namespacing",
-    "text": "Function Namespacing\n\nNamespacing guarantees you use the function from the desired package\n\n\n\n\nDone with two colons (:) between the package and function names\n\nE.g., package::function()"
+    "text": "Function Namespacing\n\nFunctions can be “namespaced” to specify which package the function comes from\n\n\n\n\n\nNamespacing guarantees you use the function from the desired package\n\n\n\n\n\n\nDone with two colons (:) between the package and function names\n\nE.g., package::function()"
   },
   {
     "objectID": "materials/slides_2a.html#practice-namespacing",
@@ -364,6 +371,13 @@
     "title": "Intro to Data Science",
     "section": "Practice: Namespacing",
     "text": "Practice: Namespacing\n \n\npalmerpenguins includes an example dataset on penguins\n\n\n\nRun the following code\n\npeng_df &lt;- palmerpenguins::penguins\n\n\n\n\n\n\n\nInstall and load the dplyr package\n\ndplyr has a function called glimpse that shows you core structures of data\n\n\n\n\n\n\n\nNamespace glimpse and run it on peng_df"
+  },
+  {
+    "objectID": "materials/slides_2a.html#temperature-check",
+    "href": "materials/slides_2a.html#temperature-check",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
   },
   {
     "objectID": "materials/slides_2a.html#class-versus-structure",
@@ -377,7 +391,21 @@
     "href": "materials/slides_2a.html#checking-classstructure",
     "title": "Intro to Data Science",
     "section": "Checking Class/Structure",
-    "text": "Checking Class/Structure\n\nBest to check class and structure of an object to ensure functions will work\n\n\n\n\nCheck Class\n\nUse the class function\n\n\n\n# Checking class of 'my_obj'\nclass(my_obj)\n\nCheck Structure\n\nUse either the str function or dplyr::glimpse\n\n# Checking structure of 'my_obj' (with base R)\nstr(my_obj)\n\n# Checking structure of 'my_obj' (with `dplyr`)\ndplyr::glimpse(my_obj)"
+    "text": "Checking Class/Structure\n\nBest to check class and structure of an object to ensure functions will work\n\n\n\n\nCheck Class\n\nCheck Structure"
+  },
+  {
+    "objectID": "materials/slides_2a.html#checking-classstructure-1",
+    "href": "materials/slides_2a.html#checking-classstructure-1",
+    "title": "Intro to Data Science",
+    "section": "Checking Class/Structure",
+    "text": "Checking Class/Structure\n\nBest to check class and structure of an object to ensure functions will work\n\n\n\nCheck Class\n\nUse the class function\n\n\n\n# Checking class of 'my_obj'\nclass(my_obj)\n\nCheck Structure"
+  },
+  {
+    "objectID": "materials/slides_2a.html#checking-classstructure-2",
+    "href": "materials/slides_2a.html#checking-classstructure-2",
+    "title": "Intro to Data Science",
+    "section": "Checking Class/Structure",
+    "text": "Checking Class/Structure\n\nBest to check class and structure of an object to ensure functions will work\n\n\n\nCheck Class\n\nUse the class function\n\n\n\n# Checking class of 'my_obj'\nclass(my_obj)\n\nCheck Structure\n\nUse either the str function or dplyr::glimpse\n\n# Checking structure of 'my_obj' (with base R)\nstr(my_obj)\n\n# Checking structure of 'my_obj' (with `dplyr`)\ndplyr::glimpse(my_obj)"
   },
   {
     "objectID": "materials/slides_2a.html#practice-structure",
@@ -391,25 +419,25 @@
     "href": "materials/slides_2a.html#using-vectors-coordinates",
     "title": "Intro to Data Science",
     "section": "Using Vectors: Coordinates",
-    "text": "Using Vectors: Coordinates\n\nVector structure is expressed as “length”\n\nVector length = number of elements in the vector\nDataframe length = number of rows\n\n\n\n\n\nBracket notation can be used to navigate vectors\n\n\n\n\nRunning my_vec[5] will return the fifth element of my_vec"
+    "text": "Using Vectors: Coordinates\n\nVector structure is expressed as “length”\n\nVector length = number of elements in the vector\nDataframe length = number of rows\n\n\n\n\n\n\nBracket notation can be used to navigate vectors\n\n\n\n\n\n\n# Make a vector\nmy_vec &lt;- c(\"a\", \"b\", \"c\", \"d\", \"e\")\n\n# Use bracket notation to retrieve one element\nmy_vec[3]\n\n[1] \"c\""
   },
   {
     "objectID": "materials/slides_2a.html#using-vectors-coordinates-cont.",
     "href": "materials/slides_2a.html#using-vectors-coordinates-cont.",
     "title": "Intro to Data Science",
     "section": "Using Vectors: Coordinates Cont.",
-    "text": "Using Vectors: Coordinates Cont.\n\nBracket notation accepts vectors of coordinates\n\n\n\n\n\nRunning my_vec[c(1, 4, 7)] returns the first, fourth, and seventh elements of my_vec\n\n\n\n\n\n\nYou can also grab the same element more than once!\n\n\n\n\n\n\nRunning my_vec[c(1, 1, 1)] returns the first element three times"
+    "text": "Using Vectors: Coordinates Cont.\n\nBracket notation accepts vectors of coordinates\n\n\n\n\n\n# Use bracket notation to retrieve several elements\nmy_vec[c(1, 3, 5)]\n\n[1] \"a\" \"c\" \"e\"\n\n\n\n\n\n\n\nYou can also grab the same element more than once!\n\n\n\n\n\n\n# Use bracket notation to retrieve one element multiple times\nmy_vec[c(1, 1, 1)]\n\n[1] \"a\" \"a\" \"a\""
   },
   {
     "objectID": "materials/slides_2a.html#practice-vector-navigation",
     "href": "materials/slides_2a.html#practice-vector-navigation",
     "title": "Intro to Data Science",
     "section": "Practice: Vector Navigation",
-    "text": "Practice: Vector Navigation\n\nBase R has a built-in vector of letters called letters\n\nAssign letters to an object called my_vec\n\n\n\n\n\nCheck the length of my_vec using the length function\n\n\n\n\n\nIdentify the 10th element of my_vec using bracket notation\n\n\n\n\nIdentify the 8th, 5th, 12th, 12th (again), and 15th elements of my_vec\n\nUse concatenation inside of the brackets (with c)!"
+    "text": "Practice: Vector Navigation\n\nBase R has a built-in vector of letters called letters\n\nAssign letters to an object called my_vec\n\n\n\n\n\n\nCheck the length of my_vec using the length function\n\n\n\n\n\n\nIdentify the 10th element of my_vec using bracket notation\n\n\n\n\nIdentify the 8th, 5th, 12th, 12th (again), and 15th elements of my_vec\n\nUse concatenation inside of the brackets (with c)!"
   },
   {
-    "objectID": "materials/slides_2a.html#temperature-check",
-    "href": "materials/slides_2a.html#temperature-check",
+    "objectID": "materials/slides_2a.html#temperature-check-1",
+    "href": "materials/slides_2a.html#temperature-check-1",
     "title": "Intro to Data Science",
     "section": "Temperature Check",
     "text": "Temperature Check\nHow are you Feeling?"
@@ -426,21 +454,21 @@
     "href": "materials/slides_2a.html#fundamentals-equal",
     "title": "Intro to Data Science",
     "section": "Fundamentals: EQUAL",
-    "text": "Fundamentals: EQUAL\n\nAre two things exactly equal?\n\n\n\n\n\"hello\" == \"hello\"\n\n[1] TRUE\n\n\n\n\n\nUses == operator\n\nJust two equal signs"
+    "text": "Fundamentals: EQUAL\n\nAre two things exactly equal?\n\n\n\n\n\n# Check a conditional\n\"hello\" == \"hello\"\n\n[1] TRUE\n\n\n\n\n\n\n\nUses == operator\n\nJust two equal signs"
   },
   {
     "objectID": "materials/slides_2a.html#fundamentals-or",
     "href": "materials/slides_2a.html#fundamentals-or",
     "title": "Intro to Data Science",
     "section": "Fundamentals: OR",
-    "text": "Fundamentals: OR\n\nAre any of these conditions met?\n\n\n\n\n\"hello\" == \"hello\" | 2 == 7\n\n[1] TRUE\n\n\n\n\n\nUses | operator\n\nShift + \\ on keyboard"
+    "text": "Fundamentals: OR\n\nAre any of these conditions met?\n\n\n\n\n\n# Check either one conditional *or* the other\n\"hello\" == \"hello\" | 2 == 7\n\n[1] TRUE\n\n\n\n\n\n\n\nUses | operator\n\nShift + \\ on keyboard"
   },
   {
     "objectID": "materials/slides_2a.html#fundamentals-and",
     "href": "materials/slides_2a.html#fundamentals-and",
     "title": "Intro to Data Science",
     "section": "Fundamentals: AND",
-    "text": "Fundamentals: AND\n\nAre all of the conditions met?\n\n\n\n\n\"hello\" == \"hello\" & 2 == 7\n\n[1] FALSE\n\n\n\n\n\nUses & operator\n\nShift + 7 on keyboard"
+    "text": "Fundamentals: AND\n\nAre all of the conditions met?\n\n\n\n\n\n# Are *all* conditions TRUE?\n\"hello\" == \"hello\" & 2 == 7\n\n[1] FALSE\n\n\n\n\n\n\n\nUses & operator\n\nShift + 7 on keyboard"
   },
   {
     "objectID": "materials/slides_2a.html#fundamentals-summary",
@@ -454,21 +482,21 @@
     "href": "materials/slides_2a.html#practice-fundamental-conditionals",
     "title": "Intro to Data Science",
     "section": "Practice: Fundamental Conditionals",
-    "text": "Practice: Fundamental Conditionals\n\n\nWe’ll use the base R subset function with the peng_df object\n\nIf needed, consult the help file for more details (?subset)\n\n\n\n\n\n\nSubset peng_df to only Adelie penguins (and assign to a sub_v1 object)\n\nI.e., species == \"Adelie\""
+    "text": "Practice: Fundamental Conditionals\n\n\nWe’ll use the base R subset function with the peng_df object\n\nIf needed, consult the help file for more details (?subset)\n\n\n\n\n\n\nSubset peng_df to only Adelie penguins (and assign to a sub_v1 object)\n\nI.e., species == \"Adelie\"\n\n\n\n\n\n\n\nHow many rows does that subset have?"
   },
   {
     "objectID": "materials/slides_2a.html#more-practice-fundamental-conditionals",
     "href": "materials/slides_2a.html#more-practice-fundamental-conditionals",
     "title": "Intro to Data Science",
     "section": "More Practice: Fundamental Conditionals",
-    "text": "More Practice: Fundamental Conditionals\n\n\nSubset peng_df to Adelie or Biscoe penguins\n\nAssign this subset to sub_v2 object\n\n\n\n\n\n\nSubset peng_df to only male Gentoo penguins\n\nAssign to sub_v3 object"
+    "text": "More Practice: Fundamental Conditionals\n\n\nSubset peng_df to Adelie or Biscoe penguins\n\nAssign this subset to sub_v2 object\n\n\n\n\n\n\nSubset peng_df to only male Gentoo penguins\n\nAssign to sub_v3 object\n\n\n\n\n\n\n\nHow many rows does that subset have?"
   },
   {
     "objectID": "materials/slides_2a.html#discussion-conditionals",
     "href": "materials/slides_2a.html#discussion-conditionals",
     "title": "Intro to Data Science",
     "section": "Discussion: Conditionals",
-    "text": "Discussion: Conditionals\n\nWe’ve covered EQUAL, OR, and AND\n\n==, |, or &\n\n\n\n\n\nWhat unanswered questions do you have?\n\n\n\n\n\nWhat other types of conditional statements would be useful?\n\nThink about it in the context of wanting to subset some data"
+    "text": "Discussion: Conditionals\n\nWe’ve covered EQUAL, OR, and AND\n\n==, |, or &\n\n\n\n\n\n\nWhat unanswered questions do you have?\n\n\n\n\n\n\nWhat other types of conditional statements would be useful?\n\nThink about it in the context of wanting to subset some data"
   },
   {
     "objectID": "materials/slides_2a.html#numeric-conditionals",
@@ -482,11 +510,11 @@
     "href": "materials/slides_2a.html#practice-numeric-conditionals",
     "title": "Intro to Data Science",
     "section": "Practice: Numeric Conditionals",
-    "text": "Practice: Numeric Conditionals\n\nSubset peng_df to only penguins with a bill length greater than 40 mm\n\nAssign to sub_v7\n\n\n\n\n\n\nSubset peng_df to only penguins with a body mass less than or equal to 4,000 g\n\nAssign to sub_v8"
+    "text": "Practice: Numeric Conditionals\n\n\nSubset peng_df to only penguins with a bill length greater than 40 mm\n\nAssign to sub_v7\n\n\n\n\n\n\nSubset peng_df to only penguins with a body mass less than or equal to 4,000 g\n\nAssign to sub_v8"
   },
   {
-    "objectID": "materials/slides_2a.html#temperature-check-1",
-    "href": "materials/slides_2a.html#temperature-check-1",
+    "objectID": "materials/slides_2a.html#temperature-check-2",
+    "href": "materials/slides_2a.html#temperature-check-2",
     "title": "Intro to Data Science",
     "section": "Temperature Check",
     "text": "Temperature Check\nHow are you Feeling?"
@@ -517,7 +545,7 @@
     "href": "materials/slides_2a.html#practice-advanced-conditionals",
     "title": "Intro to Data Science",
     "section": "Practice: Advanced Conditionals",
-    "text": "Practice: Advanced Conditionals\n\nSubset peng_df is species is any of “Adelie”, “Gentoo”, or “Chinstrap”\n\nUse the %in% operator\n\n\n\n\n\n\nSubset peng_df to all islands except “Dream”\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Practice: Advanced Conditionals\n\n\nSubset peng_df is species is any of “Adelie”, “Gentoo”, or “Chinstrap”\n\nUse the %in% operator\n\n\n\n\n\n\nSubset peng_df to all islands except “Dream”\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/slides_6a.html#a-guide-to-your-process",
