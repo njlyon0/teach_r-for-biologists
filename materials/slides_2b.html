@@ -348,21 +348,9 @@ Lab 2 – Version Control
 <section id="todays-plan" class="slide level2">
 <h2><span class="blue">Today’s Plan</span></h2>
 <ul>
-<li>Core Content
-<ul>
 <li>Muddiest Point Review</li>
 <li>Version Control Background</li>
 <li>Navigating GitHub</li>
-</ul></li>
-</ul>
-<p><br>
-</p>
-<ul>
-<li>Time Permitting
-<ul>
-<li>Git / GitHub Setup</li>
-<li>RStudio + Git / GitHub</li>
-</ul></li>
 </ul>
 </section>
 <section id="todays-learning-objectives" class="slide level2">
@@ -373,21 +361,12 @@ Lab 2 – Version Control
 <li>Explain the difference(s) between Git and GitHub</li>
 <li>Define fundamental version control vocabulary</li>
 </ul>
-<p><br>
-</p>
-<h3 id="time-permitting">Time Permitting</h3>
-<ul>
-<li>Integrate Git and GitHub with RStudio on your computer</li>
-</ul>
 </div>
 </section>
 <section id="muddiest-point-review" class="slide level2">
 <h2><span class="gold">Muddiest Point Review</span></h2>
 <ul>
-<li>Recurring topics from most recent MPs:
-<ul>
-<li>TBD</li>
-</ul></li>
+<li>Recurring topics from most recent MPs</li>
 </ul>
 <p><br>
 </p>
@@ -397,13 +376,14 @@ Lab 2 – Version Control
 </ul>
 </div>
 </section>
-<section id="version-control-background" class="slide level2">
+<section id="version-control-background" class="slide level2 smaller">
 <h2><span class="orange">Version Control Background</span></h2>
 <ul>
-<li>“Version control” is a set of tools for tracking changes to a code file</li>
+<li>“<span class="purple">Version control</span>” is a set of tools for tracking changes to a code file</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Version control lets you work only in a single file but still preserves the history
 <ul>
@@ -411,6 +391,7 @@ Lab 2 – Version Control
 <li>No need to “Save As” and retain many different files for each draft</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="version-control-rationale" class="slide level2 smaller">
 <h2><span class="orange">Version Control Rationale</span></h2>
@@ -438,10 +419,21 @@ Lab 2 – Version Control
 </section>
 <section id="git-versus-github" class="slide level2 smaller">
 <h2><span class="orange">Git Versus GitHub</span></h2>
-<p><img data-src="images/logo-git.png" class="absolute" style="top: 60px; left: -120px; width: 9%; "> <img data-src="images/logo-github.png" class="absolute" style="top: 20px; left: 1000px; width: 15%; "></p>
+<p><img data-src="images/logo-git.png" class="absolute" style="top: 60px; left: -120px; width: 9%; " alt="Git logo"> <img data-src="images/logo-github.png" class="absolute" style="top: 20px; left: 1000px; width: 15%; " alt="GitHub logo"></p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="git">Git</h3>
+</div><div class="column" style="width:50%;">
+<h3 id="github">GitHub</h3>
+</div>
+</div>
+</section>
+<section id="git-versus-github-1" class="slide level2 smaller">
+<h2><span class="orange">Git Versus GitHub</span></h2>
+<p><img data-src="images/logo-git.png" class="absolute" style="top: 60px; left: -120px; width: 9%; " alt="Git logo"> <img data-src="images/logo-github.png" class="absolute" style="top: 20px; left: 1000px; width: 15%; " alt="GitHub logo"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="git-1">Git</h3>
 <ul>
 <li>Actual version control software</li>
 </ul>
@@ -461,7 +453,36 @@ Lab 2 – Version Control
 <li>Not something others can interact with</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<h3 id="github">GitHub</h3>
+<h3 id="github-1">GitHub</h3>
+</div>
+</div>
+</section>
+<section id="git-versus-github-2" class="slide level2 smaller">
+<h2><span class="orange">Git Versus GitHub</span></h2>
+<p><img data-src="images/logo-git.png" class="absolute" style="top: 60px; left: -120px; width: 9%; " alt="Git logo"> <img data-src="images/logo-github.png" class="absolute" style="top: 20px; left: 1000px; width: 15%; " alt="GitHub logo"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="git-2">Git</h3>
+<ul>
+<li>Actual version control software</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Does the tracking of changes</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Works locally on your computer</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li>Not something others can interact with</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="github-2">GitHub</h3>
 <ul>
 <li><u>G</u>raphical <u>u</u>ser <u>i</u>nterface (GUI) for Git</li>
 </ul>
@@ -514,7 +535,7 @@ Lab 2 – Version Control
 <section id="practice-create-a-repository" class="slide level2 smaller">
 <h2><span class="pink">Practice: Create a Repository</span></h2>
 <ul>
-<li>To practice what we’ve just covered, you all will make a practice repository!</li>
+<li>To practice what we’ve just covered, make a practice repository!</li>
 </ul>
 <p><br>
 </p>
@@ -564,13 +585,78 @@ Lab 2 – Version Control
 </ul>
 </div>
 </div>
+</section>
+<section>
+<section id="bonus-git-info" class="title-slide slide level1 center">
+<h1><span class="orange">Bonus Git Info</span></h1>
+
+</section>
+<section id="git-rstudio" class="slide level2 smaller">
+<h2><span class="orange">Git &amp; RStudio</span></h2>
+<ul>
+<li>If desired, you can get GitHub to talk directly with RStudio
+<ul>
+<li>Done through Git!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Advantage is a clearer connection between your RStudio work and GitHub</li>
+</ul>
+</div>
+</section>
+<section id="prep-steps" class="slide level2 smaller">
+<h2><span class="orange">Prep Steps</span></h2>
+<ol type="1">
+<li>Install R &amp; RStudio</li>
+</ol>
+<p><br>
+</p>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Create a GitHub Account</li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Install Git
+<ul>
+<li>See <a href="https://happygitwithr.com/install-git.html">instructions here</a></li>
+</ul></li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="4" type="1">
+<li>Connect RStudio and GitHub
+<ul>
+<li>See <a href="https://nceas.github.io/scicomp-workshop-collaborative-coding/#connect-git-and-github">instructions here</a></li>
+</ul></li>
+</ol>
+</div>
+</section>
+<section id="git-and-rstudio" class="slide level2 smaller">
+<h2><span class="orange">Git and RStudio</span></h2>
+<ul>
+<li>You can work through part of an established GitHub workshop for this section</li>
+</ul>
+<p><br>
+</p>
+<ul>
+<li><a href="https://nceas.github.io/scicomp-workshop-collaborative-coding/rstudio.html">nceas.github.io/scicomp-workshop-collaborative-coding/rstudio</a></li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://njlyon0.github.io/teach_r-for-biologists/">Programming in R for Biologists</a></p>
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

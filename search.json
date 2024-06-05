@@ -2409,7 +2409,7 @@
     "href": "materials/slides_5a.html#instructor-evaluations",
     "title": "Intro to Data Science",
     "section": "Instructor Evaluations",
-    "text": "Instructor Evaluations\n\nToday is the first day of the second half of the course!\n\n\n\n\nI hope you all are having a fun time\n\nHopefully not ironic to say that after two days of stats {{&lt; fa smile &gt;}}\n\n\n\n\n\nWould really appreciate you filling out an anonymous evaluation for me!\n\nWhat am I doing well?\nWhat could I improve on for the rest of the course?\nAny other feedback you’d like to share?"
+    "text": "Instructor Evaluations\n\nToday is the first day of the second half of the course!\n\n\n\n\nI hope you all are having a fun time\n\nHopefully not ironic to say that after two days of stats Face Smile\n\n\n\n\n\nWould really appreciate you filling out an anonymous evaluation for me!\n\nWhat am I doing well?\nWhat could I improve on for the rest of the course?\nAny other feedback you’d like to share?"
   },
   {
     "objectID": "materials/slides_5a.html#upcoming-due-dates",
@@ -3945,28 +3945,28 @@
     "href": "materials/slides_2b.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nCore Content\n\nMuddiest Point Review\nVersion Control Background\nNavigating GitHub\n\n\n\n\n\nTime Permitting\n\nGit / GitHub Setup\nRStudio + Git / GitHub"
+    "text": "Today’s Plan\n\nMuddiest Point Review\nVersion Control Background\nNavigating GitHub"
   },
   {
     "objectID": "materials/slides_2b.html#todays-learning-objectives",
     "href": "materials/slides_2b.html#todays-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
-    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nExplain the difference(s) between Git and GitHub\nDefine fundamental version control vocabulary\n\n\n\nTime Permitting\n\nIntegrate Git and GitHub with RStudio on your computer"
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nExplain the difference(s) between Git and GitHub\nDefine fundamental version control vocabulary"
   },
   {
     "objectID": "materials/slides_2b.html#muddiest-point-review",
     "href": "materials/slides_2b.html#muddiest-point-review",
     "title": "Intro to Data Science",
     "section": "Muddiest Point Review",
-    "text": "Muddiest Point Review\n\nRecurring topics from most recent MPs:\n\nTBD\n\n\n\n\n\n\nWhat other topic(s) would you like to review?"
+    "text": "Muddiest Point Review\n\nRecurring topics from most recent MPs\n\n\n\n\n\nWhat other topic(s) would you like to review?"
   },
   {
     "objectID": "materials/slides_2b.html#version-control-background",
     "href": "materials/slides_2b.html#version-control-background",
     "title": "Intro to Data Science",
     "section": "Version Control Background",
-    "text": "Version Control Background\n\n“Version control” is a set of tools for tracking changes to a code file\n\n\n\n\nVersion control lets you work only in a single file but still preserves the history\n\nNo comments you’d have to resolve (like MS Word / etc.)\nNo need to “Save As” and retain many different files for each draft"
+    "text": "Version Control Background\n\n“Version control” is a set of tools for tracking changes to a code file\n\n\n\n\n\nVersion control lets you work only in a single file but still preserves the history\n\nNo comments you’d have to resolve (like MS Word / etc.)\nNo need to “Save As” and retain many different files for each draft"
   },
   {
     "objectID": "materials/slides_2b.html#version-control-rationale",
@@ -3978,6 +3978,20 @@
   {
     "objectID": "materials/slides_2b.html#git-versus-github",
     "href": "materials/slides_2b.html#git-versus-github",
+    "title": "Intro to Data Science",
+    "section": "Git Versus GitHub",
+    "text": "Git Versus GitHub\n \n\n\nGit\n\nGitHub"
+  },
+  {
+    "objectID": "materials/slides_2b.html#git-versus-github-1",
+    "href": "materials/slides_2b.html#git-versus-github-1",
+    "title": "Intro to Data Science",
+    "section": "Git Versus GitHub",
+    "text": "Git Versus GitHub\n \n\n\nGit\n\nActual version control software\n\n\n\n\nDoes the tracking of changes\n\n\n\n\nWorks locally on your computer\n\n\n\n\nNot something others can interact with\n\n\nGitHub"
+  },
+  {
+    "objectID": "materials/slides_2b.html#git-versus-github-2",
+    "href": "materials/slides_2b.html#git-versus-github-2",
     "title": "Intro to Data Science",
     "section": "Git Versus GitHub",
     "text": "Git Versus GitHub\n \n\n\nGit\n\nActual version control software\n\n\n\n\nDoes the tracking of changes\n\n\n\n\nWorks locally on your computer\n\n\n\n\nNot something others can interact with\n\n\nGitHub\n\nGraphical user interface (GUI) for Git\n\n\n\n\nAllows viewing of Git-tracked changes\n\nNot actually doing version control itself\n\n\n\n\n\nOther users can see your content\n\nDepending on your settings"
@@ -4001,7 +4015,7 @@
     "href": "materials/slides_2b.html#practice-create-a-repository",
     "title": "Intro to Data Science",
     "section": "Practice: Create a Repository",
-    "text": "Practice: Create a Repository\n\nTo practice what we’ve just covered, you all will make a practice repository!\n\n\n\n\n\nThis is a test repository so:\n\nSet it to “Private”\nCreate the repo with both a README and a .gitignore\n\n\n\n\n\n\n\nAs you go through this process, take notes for ‘future you’\n\nThis course will require you to make two more repositories\nSo you’ll want to have a good resource to remind yourself with down the line"
+    "text": "Practice: Create a Repository\n\nTo practice what we’ve just covered, make a practice repository!\n\n\n\n\n\nThis is a test repository so:\n\nSet it to “Private”\nCreate the repo with both a README and a .gitignore\n\n\n\n\n\n\n\nAs you go through this process, take notes for ‘future you’\n\nThis course will require you to make two more repositories\nSo you’ll want to have a good resource to remind yourself with down the line"
   },
   {
     "objectID": "materials/slides_2b.html#temperature-check",
@@ -4015,7 +4029,28 @@
     "href": "materials/slides_2b.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #2\nRead the British Ecological Society’s Reproducible Code Guide (p.20-25)\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #3\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #2\nRead the British Ecological Society’s Reproducible Code Guide (p.20-25)\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #3"
+  },
+  {
+    "objectID": "materials/slides_2b.html#git-rstudio",
+    "href": "materials/slides_2b.html#git-rstudio",
+    "title": "Intro to Data Science",
+    "section": "Git & RStudio",
+    "text": "Git & RStudio\n\nIf desired, you can get GitHub to talk directly with RStudio\n\nDone through Git!\n\n\n\n\n\n\nAdvantage is a clearer connection between your RStudio work and GitHub"
+  },
+  {
+    "objectID": "materials/slides_2b.html#prep-steps",
+    "href": "materials/slides_2b.html#prep-steps",
+    "title": "Intro to Data Science",
+    "section": "Prep Steps",
+    "text": "Prep Steps\n\nInstall R & RStudio\n\n\n\n\n\nCreate a GitHub Account\n\n\n\n\n\n\nInstall Git\n\nSee instructions here\n\n\n\n\n\n\n\nConnect RStudio and GitHub\n\nSee instructions here"
+  },
+  {
+    "objectID": "materials/slides_2b.html#git-and-rstudio",
+    "href": "materials/slides_2b.html#git-and-rstudio",
+    "title": "Intro to Data Science",
+    "section": "Git and RStudio",
+    "text": "Git and RStudio\n\nYou can work through part of an established GitHub workshop for this section\n\n\n\n\nnceas.github.io/scicomp-workshop-collaborative-coding/rstudio\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "data.html",
