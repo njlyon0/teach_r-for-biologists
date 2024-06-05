@@ -372,7 +372,7 @@ AIC(mod1, mod2, mod3)
 \
 
 - I hope you all are having a fun time
-    - Hopefully not ironic to say that after two days of stats {{< fa smile >}}
+    - Hopefully not ironic to say that after two days of stats `r fontawesome::fa(name = "smile", a11y = "sem")`
 
 \
 
