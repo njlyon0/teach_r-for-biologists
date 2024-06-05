@@ -789,7 +789,7 @@ my_vec[c(1, 1, 1)]
 
 ::::
 
-# [Bonus Conditionals]{.purple}
+# [Bonus Conditionals]{.orange}
 
 ## [OR with >2 Options]{.orange} {.smaller}
 
