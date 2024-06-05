@@ -28,16 +28,9 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Core Content
-    - Muddiest Point Review
-    - Version Control Background
-    - Navigating GitHub
-
-\
-
-- Time Permitting
-    - Git / GitHub Setup
-    - RStudio + Git / GitHub
+- Muddiest Point Review
+- Version Control Background
+- Navigating GitHub
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -48,16 +41,9 @@ After today's session you will be able to:
 - Explain the difference(s) between Git and GitHub
 - Define fundamental version control vocabulary
 
-\
-
-### Time Permitting
-
-- Integrate Git and GitHub with RStudio on your computer
-
 ## [Muddiest Point Review]{.gold}
 
-- Recurring topics from most recent MPs:
-    - TBD
+- Recurring topics from most recent MPs
 
 \
 
@@ -65,11 +51,13 @@ After today's session you will be able to:
 
 - What other topic(s) would you like to review?
 
-## [Version Control Background]{.orange}
+## [Version Control Background]{.orange} {.smaller}
 
-- "Version control" is a set of tools for tracking changes to a code file
+- "[Version control]{.purple}" is a set of tools for tracking changes to a code file
 
 \
+
+. . .
 
 - Version control lets you work only in a single file but still preserves the history
     - No comments you'd have to resolve (like MS Word / etc.)
@@ -91,7 +79,6 @@ Why use version control?
 Easily share & work together on files
 
 :::
-
 :::{.column width="33.33%"}
 
 ##### Reproducibility `r fontawesome::fa(name = "arrows-left-right", a11y = "sem")`
@@ -100,9 +87,7 @@ Easily share & work together on files
 
 Fully document your progress and end results
 
-::: 
-
-
+:::
 :::{.column width="33.33%"}
 
 ##### Portfolio `r fontawesome::fa(name = "book", a11y = "sem")`
@@ -116,12 +101,27 @@ Demonstrate your skills to others with coding know-how
 
 ## [Git Versus GitHub]{.orange} {.smaller}
 
-![](images/logo-git.png){.absolute left=-120 top=60 width="9%"}
-![](images/logo-github.png){.absolute left=1000 top=20 width="15%"}
+![](images/logo-git.png){.absolute left=-120 top=60 width="9%" fig-alt="Git logo"}
+![](images/logo-github.png){.absolute left=1000 top=20 width="15%" fig-alt="GitHub logo"}
 
 ::::{.columns}
 :::{.column width="50%"}
+### Git
 
+:::
+:::{.column width="50%"}
+### GitHub
+
+:::
+::::
+
+## [Git Versus GitHub]{.orange} {.smaller}
+
+![](images/logo-git.png){.absolute left=-120 top=60 width="9%" fig-alt="Git logo"}
+![](images/logo-github.png){.absolute left=1000 top=20 width="15%" fig-alt="GitHub logo"}
+
+::::{.columns}
+:::{.column width="50%"}
 ### Git
 
 - Actual version control software
@@ -139,11 +139,39 @@ Demonstrate your skills to others with coding know-how
 - Not something others can interact with
 
 :::
+:::{.column width="50%"}
+### GitHub
 
+:::
+::::
+
+## [Git Versus GitHub]{.orange} {.smaller}
+
+![](images/logo-git.png){.absolute left=-120 top=60 width="9%" fig-alt="Git logo"}
+![](images/logo-github.png){.absolute left=1000 top=20 width="15%" fig-alt="GitHub logo"}
+
+::::{.columns}
+:::{.column width="50%"}
+### Git
+
+- Actual version control software
+
+\
+
+- Does the tracking of changes
+
+\
+
+- Works locally on your computer
+
+\
+
+- Not something others can interact with
+
+:::
 :::{.column width="50%"}
 
 ### GitHub
-
 - <u>G</u>raphical <u>u</u>ser <u>i</u>nterface (GUI) for Git
 
 \
@@ -181,7 +209,7 @@ Demonstrate your skills to others with coding know-how
 
 ## [Practice: Create a Repository]{.pink} {.smaller}
 
-- To practice what we've just covered, you all will make a practice repository!
+- To practice what we've just covered, make a practice repository!
 
 \
 
@@ -232,4 +260,50 @@ Demonstrate your skills to others with coding know-how
 
 :::
 ::::
+
+# [Bonus Git Info]{.orange}
+
+## [Git & RStudio]{.orange} {.smaller}
+
+- If desired, you can get GitHub to talk directly with RStudio
+    - Done through Git!
+
+\
+
+. . . 
+
+- Advantage is a clearer connection between your RStudio work and GitHub
+
+## [Prep Steps]{.orange} {.smaller}
+
+1. Install R & RStudio
+
+\
+
+. . . 
+
+2. Create a GitHub Account
+
+\
+
+. . . 
+
+3. Install Git
+    - See [instructions here](https://happygitwithr.com/install-git.html)
+
+\
+
+. . . 
+
+4. Connect RStudio and GitHub
+    - See [instructions here](https://nceas.github.io/scicomp-workshop-collaborative-coding/#connect-git-and-github)
+
+
+## [Git and RStudio]{.orange} {.smaller}
+
+- You can work through part of an established GitHub workshop for this section
+
+\
+
+- [nceas.github.io/scicomp-workshop-collaborative-coding/rstudio](https://nceas.github.io/scicomp-workshop-collaborative-coding/rstudio.html)
 
