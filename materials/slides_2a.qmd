@@ -687,7 +687,7 @@ my_vec[c(1, 1, 1)]
 
 ![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
 
-- Subset `peng_df` to Adelie _or_ Biscoe penguins
+- Subset `peng_df` to Adelie _or_ Gentoo penguins
     - Assign this subset to `sub_v2` object
 
 \
