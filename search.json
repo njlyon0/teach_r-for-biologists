@@ -489,7 +489,7 @@
     "href": "materials/slides_2a.html#more-practice-fundamental-conditionals",
     "title": "Intro to Data Science",
     "section": "More Practice: Fundamental Conditionals",
-    "text": "More Practice: Fundamental Conditionals\n\n\nSubset peng_df to Adelie or Biscoe penguins\n\nAssign this subset to sub_v2 object\n\n\n\n\n\n\nSubset peng_df to only male Gentoo penguins\n\nAssign to sub_v3 object\n\n\n\n\n\n\n\nHow many rows does that subset have?"
+    "text": "More Practice: Fundamental Conditionals\n\n\nSubset peng_df to Adelie or Gentoo penguins\n\nAssign this subset to sub_v2 object\n\n\n\n\n\n\nSubset peng_df to only male Gentoo penguins\n\nAssign to sub_v3 object\n\n\n\n\n\n\n\nHow many rows does that subset have?"
   },
   {
     "objectID": "materials/slides_2a.html#discussion-conditionals",
