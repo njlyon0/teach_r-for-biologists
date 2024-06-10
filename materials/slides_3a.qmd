@@ -44,16 +44,20 @@ After today's session you will be able to:
 - Explore data with base R tools
 - Manipulate data with `dplyr`
 
-## [GitHub Individual Work]{.gold} {.smaller}
+## [GitHub Review]{.gold} {.smaller}
 
 - Great work last week!
 
 \
 
+. . .
+
 - In the next week or two (i.e., before the second half of the course) I would like you to:
     - Make _another_ practice repository (or maybe 2!)
 
 \
+
+. . .
 
 - What questions do you have about this?
     - Does this feel reasonable to you?
@@ -72,24 +76,24 @@ RMarkdown (Rmd) files have three sections:
 . . . 
 
 2. Plain Text
-    - Technically written in [markdown syntax]{.purple}
+    - Technically written in [markdown]{.purple} (a text-formatting language)
 
 \
 
 . . . 
 
-3. Code "Chunks"
+3. Code [chunks]{.purple}
     - Essentially mini R scripts within the larger file!
 
 ## [RMarkdown Analogy]{.orange}
 
-![](images/logo-r.png){.absolute top=110 left=160 width="15%"}
+![](images/logo-r.png){.absolute top=110 left=160 width="15%" fig-alt="R logo"}
 
-![](images/chocolate.png){.absolute top=300 left=-10 width="50%"}
+![](images/chocolate.png){.absolute top=300 left=-10 width="50%" fig-alt="picture of a chocolate bar"}
 
-![](images/hex-rmarkdown.png){.absolute top=105 left=720 width="11%"}
+![](images/hex-rmarkdown.png){.absolute top=105 left=720 width="11%" fig-alt="hex logo for the rmarkdown package"}
 
-![](images/cookie.png){.absolute top=250 left=625 width="30%"}
+![](images/cookie.png){.absolute top=250 left=625 width="30%" fig-alt="picture of a chocolate chip cookie"}
 
 ## [Rmds Part 1: Metadata]{.orange} {.smaller}
 
@@ -127,7 +131,7 @@ RMarkdown (Rmd) files have three sections:
 
 . . . 
 
-- Instead [Markdown syntax]{.purple} is required to accomplish these tweaks
+- Instead [markdown]{.purple} syntax is required to accomplish these tweaks
 
 ## [Markdown Syntax]{.orange} {.smaller}
 
@@ -137,9 +141,13 @@ RMarkdown (Rmd) files have three sections:
 
 . . .
 
-1. \# = headings (_more_ \# = _smaller_ heading)
+1. \# = headings
+    - _More_ \# = _smaller_ heading
+
 2. \_text\_ = italics
+
 3. \*\*text\*\* = bold
+
 4. \[text\]\(link\) = hyperlinked text
 
 \
@@ -152,9 +160,9 @@ Let's look at the structure of an example code chunk
 
 :::{.r-stack}
 
-![](images/code-chunk.png){.fragment .fade-out}
+![](images/code-chunk.png){.fragment .fade-out fig-alt="Screen capture of a code chunk from an Rmarkdown file where the echo option is set to false, the chunk is named 'pressure', and the `plot` function is used on an object also named 'pressure'"}
 
-![](images/code-chunk-annotated.png){.fragment}
+![](images/code-chunk-annotated.png){.fragment fig-alt="Screen capture of the same code chunk but with colored boxes annotating the chunk start and end, the code language, the chunk name, the chunk options, and the 'run this chunk' button"}
 
 :::
 
@@ -162,7 +170,7 @@ Let's look at the structure of an example code chunk
 
 . . .
 
-Note that chunk definition must be formatted like:
+Note that chunk start _must_ be formatted like:
 
     - ```{language chunk_name, option_1, option_2, ...}
 
@@ -173,7 +181,7 @@ Let's check out three crucial code chunk options!
 . . . 
 
 <p align="center">
-<img src="images/code-chunk-options.png" width="120%">
+<img src="images/code-chunk-options.png" width="120%" alt="A table indicating where the rows correspond to the chunk options 'include', 'echo', and 'message' and the columns correspond to whether the chunk's code, outputs, or messages are included in the resulting file. None of the three code possibilities are included when 'include' is false, code is excluded but everything else is included when 'echo' is false, and everything but messages is included when 'message' is false">
 </p>
 
 . . .
@@ -192,7 +200,7 @@ Let's check out three crucial code chunk options!
 . . .
 
 2. Create a new RMarkdown file!
-    - File `r fontawesome::fa("arrow-right", a11y = "sem")` New File `r fontawesome::fa("arrow-right", a11y = "sem")` R Markdown...
+    - File `r fontawesome::fa("arrow-right", a11y = "sem")` New File `r fontawesome::fa("arrow-right", a11y = "sem")` [R Markdown...]{.purple}
     - In resulting pop-up, skip to bottom and click "OK"
 
 \
@@ -217,7 +225,7 @@ Let's check out three crucial code chunk options!
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-## [Loading Data]{.orange}
+## [Loading Data]{.orange} {.smaller}
 
 - Function to use depends on file type
     - CSV = `read.csv`
@@ -227,7 +235,14 @@ Let's check out three crucial code chunk options!
 
 . . .
 
-- Need to assign to an object to use the data!
+- Need to assign data to an object to use it later!
+
+
+\
+
+. . .
+
+- For example:
 
 ```{.r}
 my_data <- read.csv(file = "my_data_file.csv")
@@ -245,9 +260,9 @@ my_data <- read.csv(file = "my_data_file.csv")
 
 3. Make a new script for today's lecture
 
-## [Practice: Load Data]{.pink}
+## [Practice: Load Data]{.pink} {.smaller}
 
-![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for dplyr R package"}
 
 - Now, use `read.csv` to read "minnow.csv" into R
     - Remember to assign it to an object!
@@ -260,6 +275,8 @@ my_data <- read.csv(file = "my_data_file.csv")
     - Can use `str` or `dplyr::glimpse`
 
 \
+
+. . .
 
 - What do you see?
 
@@ -305,7 +322,7 @@ my_df[10, 4]
 . . . 
 
 - Note that concatenation works here too!
-    - e.g., `my_df[c(1, 2, 3), 1]`
+    - `my_df[c(1, 2, 3), 1]` would get rows 1 through 3 of column 1
 
 ## [Dollar Sign Notations]{.orange}
 
@@ -349,27 +366,37 @@ my_df$species
     - Very human-readable
     - Extremely popular & commonly-used
 
-![](images/hex-tidyverse.png){.absolute top=225 left=381 width="25%"}
-![](images/hex-dplyr.png){.absolute top=500 left=0 width="12%"}
+![](images/hex-tidyverse.png){.absolute top=225 left=381 width="25%" fig-alt="tidyverse R package hex logo"}
 
-![](images/hex-ggplot2.png){.absolute top=500 left=150 width="12%"}
+![](images/hex-dplyr.png){.absolute top=500 left=0 width="12%" fig-alt="dplyr R package hex logo"}
 
-![](images/hex-tidyr.png){.absolute top=500 left=300 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=500 left=150 width="12%" fig-alt="ggplot2 R package hex logo"}
 
-![](images/hex-purrr.png){.absolute top=500 left=450 width="12%"}
+![](images/hex-tidyr.png){.absolute top=500 left=300 width="12%" fig-alt="tidyr R package hex logo"}
 
-![](images/hex-readr.png){.absolute top=500 left=600 width="12%"}
+![](images/hex-purrr.png){.absolute top=500 left=450 width="12%" fig-alt="purrr R package hex logo"}
 
-![](images/hex-tibble.png){.absolute top=500 left=750 width="12%"}
+![](images/hex-readr.png){.absolute top=500 left=600 width="12%" fig-alt="readr R package hex logo"}
 
-![](images/hex-magrittr.png){.absolute top=500 left=900 width="12%"}
+![](images/hex-tibble.png){.absolute top=500 left=750 width="12%" fig-alt="tibble R package hex logo"}
+
+![](images/hex-magrittr.png){.absolute top=500 left=900 width="12%" fig-alt="magrittr R package hex logo"}
 
 ## [`dplyr` Part 1: `filter`]{.orange} {.smaller}
+
+- Remember our discussion of [conditionals]{.purple} last week? 
+    - Types include: `==`, `|`, `&`, `%in%`, `!=`
+
+\
+
+. . .
 
 - Subset using conditionals with `filter`
     - `dplyr::filter` == `subset`
 
 \
+
+. . .
 
 ```{.r}
 # Subset to only butterfly milkweed records
@@ -381,12 +408,7 @@ milkweed <- dplyr::filter(.data = flowers, species == "Asclepias tuberosa")
 . . .
 
 - Can use `filter` instead of `subset` just to live fully in the Tidyverse
-    - Ultimately a style choice so your call!
-
-\
-
-- Remember our discussion of [conditionals]{.blue} last week? 
-    - Types include: `==`, `|`, `&`, `%in%`, `!=`
+    - Just a style choice, so your call!
 
 ## [`dplyr` Part 2: `mutate`]{.orange} {.smaller}
 
@@ -394,10 +416,12 @@ milkweed <- dplyr::filter(.data = flowers, species == "Asclepias tuberosa")
 
 \
 
+. . .
+
 - Can create multiple columns at the same time
 ```{.r}
-mutate(.data = my_df, new1 = ...,
-                      new2 = ...,
+mutate(.data = my_df, new1 = 10,
+                      new2 = 2,
                       new3 = new1 / new2)
 ```
 
@@ -407,7 +431,8 @@ mutate(.data = my_df, new1 = ...,
 
 - Has optional `.after` argument to specify where you want the new column
 ```{.r}
-my_df2, <- mutate(.data = my_df, weight_lb = weight_kg * 2.2,
+my_df2, <- mutate(.data = my_df,
+                  weight_lb = weight_kg * 2.2,
                   .after = weight_kg)
 ```
 
@@ -448,10 +473,9 @@ select(.data = my_df, -weight_kg)
 
 ## [Practice: Wrangling with `dplyr`]{.pink} {.smaller}
 
-![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%" fig-alt="dplyr R package hex logo"}
 
 1. Filter the minnow data to only cases where the species is Stoneroller or Chub
-    - There are (at least) three ways of doing this; can you identify them all?
 
 . . .
 
@@ -483,7 +507,6 @@ select(.data = my_df, -weight_kg)
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lab
@@ -493,7 +516,6 @@ select(.data = my_df, -weight_kg)
 - Muddiest Point \#3
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lecture
@@ -508,6 +530,4 @@ select(.data = my_df, -weight_kg)
     - Your possible functions must be from these packages!
 
 :::
-
 ::::
-
