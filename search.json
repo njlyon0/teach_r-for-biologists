@@ -842,18 +842,18 @@
     "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nDefine the three major components of RMarkdown files (.Rmd)\nWrite code to load external data into R\nExplore data with base R tools\nManipulate data with dplyr"
   },
   {
-    "objectID": "materials/slides_3a.html#github-individual-work",
-    "href": "materials/slides_3a.html#github-individual-work",
+    "objectID": "materials/slides_3a.html#github-review",
+    "href": "materials/slides_3a.html#github-review",
     "title": "Intro to Data Science",
-    "section": "GitHub Individual Work",
-    "text": "GitHub Individual Work\n\nGreat work last week!\n\n\n\n\nIn the next week or two (i.e., before the second half of the course) I would like you to:\n\nMake another practice repository (or maybe 2!)\n\n\n\n\n\nWhat questions do you have about this?\n\nDoes this feel reasonable to you?"
+    "section": "GitHub Review",
+    "text": "GitHub Review\n\nGreat work last week!\n\n\n\n\n\nIn the next week or two (i.e., before the second half of the course) I would like you to:\n\nMake another practice repository (or maybe 2!)\n\n\n\n\n\n\n\nWhat questions do you have about this?\n\nDoes this feel reasonable to you?"
   },
   {
     "objectID": "materials/slides_3a.html#rmarkdown-files-intro",
     "href": "materials/slides_3a.html#rmarkdown-files-intro",
     "title": "Intro to Data Science",
     "section": "RMarkdown Files Intro",
-    "text": "RMarkdown Files Intro\nRMarkdown (Rmd) files have three sections:\n\n\nMetadata (YAML)\n\nControls formatting of document\n\n\n\n\n\n\n\nPlain Text\n\nTechnically written in markdown syntax\n\n\n\n\n\n\n\nCode “Chunks”\n\nEssentially mini R scripts within the larger file!"
+    "text": "RMarkdown Files Intro\nRMarkdown (Rmd) files have three sections:\n\n\nMetadata (YAML)\n\nControls formatting of document\n\n\n\n\n\n\n\nPlain Text\n\nTechnically written in markdown (a text-formatting language)\n\n\n\n\n\n\n\nCode chunks\n\nEssentially mini R scripts within the larger file!"
   },
   {
     "objectID": "materials/slides_3a.html#rmarkdown-analogy",
@@ -874,21 +874,21 @@
     "href": "materials/slides_3a.html#rmds-part-2-plain-text",
     "title": "Intro to Data Science",
     "section": "Rmds Part 2: Plain Text",
-    "text": "Rmds Part 2: Plain Text\n\nWrite text just like you would in MS Word / etc.\n\n\n\n\n\nBut, there is no toolbar with buttons for doing formatting\n\n\n\n\n\n\nInstead Markdown syntax is required to accomplish these tweaks"
+    "text": "Rmds Part 2: Plain Text\n\nWrite text just like you would in MS Word / etc.\n\n\n\n\n\nBut, there is no toolbar with buttons for doing formatting\n\n\n\n\n\n\nInstead markdown syntax is required to accomplish these tweaks"
   },
   {
     "objectID": "materials/slides_3a.html#markdown-syntax",
     "href": "materials/slides_3a.html#markdown-syntax",
     "title": "Intro to Data Science",
     "section": "Markdown Syntax",
-    "text": "Markdown Syntax\n\nYour function tutorials have four required markdown styles:\n\n\n\n\n\n# = headings (more # = smaller heading)\n_text_ = italics\n**text** = bold\n[text](link) = hyperlinked text\n\n\n\nOther format options here: markdownguide.org/basic-syntax"
+    "text": "Markdown Syntax\n\nYour function tutorials have four required markdown styles:\n\n\n\n\n\n# = headings\n\nMore # = smaller heading\n\n_text_ = italics\n**text** = bold\n[text](link) = hyperlinked text\n\n\n\nOther format options here: markdownguide.org/basic-syntax"
   },
   {
     "objectID": "materials/slides_3a.html#rmds-part-3-code-chunks",
     "href": "materials/slides_3a.html#rmds-part-3-code-chunks",
     "title": "Intro to Data Science",
     "section": "Rmds Part 3: Code Chunks",
-    "text": "Rmds Part 3: Code Chunks\nLet’s look at the structure of an example code chunk\n\n\n\n\n\n\n\nNote that chunk definition must be formatted like:\n- ```{language chunk_name, option_1, option_2, ...}"
+    "text": "Rmds Part 3: Code Chunks\nLet’s look at the structure of an example code chunk\n\n\n\n\n\n\n\nNote that chunk start must be formatted like:\n- ```{language chunk_name, option_1, option_2, ...}"
   },
   {
     "objectID": "materials/slides_3a.html#code-chunks-options",
@@ -916,7 +916,7 @@
     "href": "materials/slides_3a.html#loading-data",
     "title": "Intro to Data Science",
     "section": "Loading Data",
-    "text": "Loading Data\n\nFunction to use depends on file type\n\nCSV = read.csv\nMS Excel = readxl::read_excel\n\n\n\n\n\n\nNeed to assign to an object to use the data!\n\nmy_data &lt;- read.csv(file = \"my_data_file.csv\")"
+    "text": "Loading Data\n\nFunction to use depends on file type\n\nCSV = read.csv\nMS Excel = readxl::read_excel\n\n\n\n\n\n\nNeed to assign data to an object to use it later!\n\n\n\n\n\n\nFor example:\n\nmy_data &lt;- read.csv(file = \"my_data_file.csv\")"
   },
   {
     "objectID": "materials/slides_3a.html#download-example-data",
@@ -930,7 +930,7 @@
     "href": "materials/slides_3a.html#practice-load-data",
     "title": "Intro to Data Science",
     "section": "Practice: Load Data",
-    "text": "Practice: Load Data\n\n\nNow, use read.csv to read “minnow.csv” into R\n\nRemember to assign it to an object!\n\n\n\n\n\n\nFirst thing after reading in data: check structure!\n\nCan use str or dplyr::glimpse\n\n\n\n\n\nWhat do you see?"
+    "text": "Practice: Load Data\n\n\nNow, use read.csv to read “minnow.csv” into R\n\nRemember to assign it to an object!\n\n\n\n\n\n\nFirst thing after reading in data: check structure!\n\nCan use str or dplyr::glimpse\n\n\n\n\n\n\n\nWhat do you see?"
   },
   {
     "objectID": "materials/slides_3a.html#exploring-data-with-base-r",
@@ -944,7 +944,7 @@
     "href": "materials/slides_3a.html#bracket-notation",
     "title": "Intro to Data Science",
     "section": "Bracket Notation",
-    "text": "Bracket Notation\n\nThe syntax is: data[row number, column number]\n\n\n\n\n\nLet’s look at some example cases\n\n# Get first column\nmy_df[,1]\n\n# Get first row\nmy_df[1,]\n\n# Get the value in the tenth row and fourth column\nmy_df[10, 4]\n\n\n\n\n\nNote that concatenation works here too!\n\ne.g., my_df[c(1, 2, 3), 1]"
+    "text": "Bracket Notation\n\nThe syntax is: data[row number, column number]\n\n\n\n\n\nLet’s look at some example cases\n\n# Get first column\nmy_df[,1]\n\n# Get first row\nmy_df[1,]\n\n# Get the value in the tenth row and fourth column\nmy_df[10, 4]\n\n\n\n\n\nNote that concatenation works here too!\n\nmy_df[c(1, 2, 3), 1] would get rows 1 through 3 of column 1"
   },
   {
     "objectID": "materials/slides_3a.html#dollar-sign-notations",
@@ -972,14 +972,14 @@
     "href": "materials/slides_3a.html#dplyr-part-1-filter",
     "title": "Intro to Data Science",
     "section": "dplyr Part 1: filter",
-    "text": "dplyr Part 1: filter\n\nSubset using conditionals with filter\n\ndplyr::filter == subset\n\n\n\n\n# Subset to only butterfly milkweed records\nmilkweed &lt;- dplyr::filter(.data = flowers, species == \"Asclepias tuberosa\")\n\n\n\n\nCan use filter instead of subset just to live fully in the Tidyverse\n\nUltimately a style choice so your call!\n\n\n\n\n\nRemember our discussion of conditionals last week?\n\nTypes include: ==, |, &, %in%, !="
+    "text": "dplyr Part 1: filter\n\nRemember our discussion of conditionals last week?\n\nTypes include: ==, |, &, %in%, !=\n\n\n\n\n\n\nSubset using conditionals with filter\n\ndplyr::filter == subset\n\n\n\n\n\n\n# Subset to only butterfly milkweed records\nmilkweed &lt;- dplyr::filter(.data = flowers, species == \"Asclepias tuberosa\")\n\n\n\n\n\nCan use filter instead of subset just to live fully in the Tidyverse\n\nJust a style choice, so your call!"
   },
   {
     "objectID": "materials/slides_3a.html#dplyr-part-2-mutate",
     "href": "materials/slides_3a.html#dplyr-part-2-mutate",
     "title": "Intro to Data Science",
     "section": "dplyr Part 2: mutate",
-    "text": "dplyr Part 2: mutate\n\nMake new columns with mutate\n\n\n\n\nCan create multiple columns at the same time\n\nmutate(.data = my_df, new1 = ...,\n                      new2 = ...,\n                      new3 = new1 / new2)\n\n\n\n\nHas optional .after argument to specify where you want the new column\n\nmy_df2, &lt;- mutate(.data = my_df, weight_lb = weight_kg * 2.2,\n                  .after = weight_kg)"
+    "text": "dplyr Part 2: mutate\n\nMake new columns with mutate\n\n\n\n\n\nCan create multiple columns at the same time\n\nmutate(.data = my_df, new1 = 10,\n                      new2 = 2,\n                      new3 = new1 / new2)\n\n\n\n\n\nHas optional .after argument to specify where you want the new column\n\nmy_df2, &lt;- mutate(.data = my_df,\n                  weight_lb = weight_kg * 2.2,\n                  .after = weight_kg)"
   },
   {
     "objectID": "materials/slides_3a.html#column-naming-aside",
@@ -1000,7 +1000,7 @@
     "href": "materials/slides_3a.html#practice-wrangling-with-dplyr",
     "title": "Intro to Data Science",
     "section": "Practice: Wrangling with dplyr",
-    "text": "Practice: Wrangling with dplyr\n\n\nFilter the minnow data to only cases where the species is Stoneroller or Chub\n\nThere are (at least) three ways of doing this; can you identify them all?\n\n\n\n\nFor that subset, make new columns where river depth and fish nest diameter are in meters\n\n\n\n\nNext, keep only the transect, species, diameter in meters, and depth in meters columns\n\nThere are two ways of doing this; can you identify them both?\n\n\n\n\n\n\n\nCheck your work! What are the dimensions of the final data object?\n\n\n\n\nShould be 14 rows and 4 columns"
+    "text": "Practice: Wrangling with dplyr\n\n\nFilter the minnow data to only cases where the species is Stoneroller or Chub\n\n\n\nFor that subset, make new columns where river depth and fish nest diameter are in meters\n\n\n\n\nNext, keep only the transect, species, diameter in meters, and depth in meters columns\n\nThere are two ways of doing this; can you identify them both?\n\n\n\n\n\n\n\nCheck your work! What are the dimensions of the final data object?\n\n\n\n\nShould be 14 rows and 4 columns"
   },
   {
     "objectID": "materials/slides_3a.html#temperature-check-1",

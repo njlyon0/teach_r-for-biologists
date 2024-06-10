@@ -431,13 +431,14 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </ul>
 </div>
 </section>
-<section id="github-individual-work" class="slide level2 smaller">
-<h2><span class="gold">GitHub Individual Work</span></h2>
+<section id="github-review" class="slide level2 smaller">
+<h2><span class="gold">GitHub Review</span></h2>
 <ul>
 <li>Great work last week!</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>In the next week or two (i.e., before the second half of the course) I would like you to:
 <ul>
@@ -446,12 +447,15 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>What questions do you have about this?
 <ul>
 <li>Does this feel reasonable to you?</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="rmarkdown-files-intro" class="slide level2 smaller">
 <h2><span class="orange">RMarkdown Files Intro</span></h2>
@@ -470,7 +474,7 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <ol start="2" type="1">
 <li>Plain Text
 <ul>
-<li>Technically written in <span class="purple">markdown syntax</span></li>
+<li>Technically written in <span class="purple">markdown</span> (a text-formatting language)</li>
 </ul></li>
 </ol>
 <p><br>
@@ -478,7 +482,7 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </div>
 <div class="fragment">
 <ol start="3" type="1">
-<li>Code “Chunks”
+<li>Code <span class="purple">chunks</span>
 <ul>
 <li>Essentially mini R scripts within the larger file!</li>
 </ul></li>
@@ -487,10 +491,10 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </section>
 <section id="rmarkdown-analogy" class="slide level2">
 <h2><span class="orange">RMarkdown Analogy</span></h2>
-<p><img data-src="images/logo-r.png" class="absolute" style="top: 110px; left: 160px; width: 15%; "></p>
-<p><img data-src="images/chocolate.png" class="absolute" style="top: 300px; left: -10px; width: 50%; "></p>
-<p><img data-src="images/hex-rmarkdown.png" class="absolute" style="top: 105px; left: 720px; width: 11%; "></p>
-<p><img data-src="images/cookie.png" class="absolute" style="top: 250px; left: 625px; width: 30%; "></p>
+<p><img data-src="images/logo-r.png" class="absolute" style="top: 110px; left: 160px; width: 15%; " alt="R logo"></p>
+<p><img data-src="images/chocolate.png" class="absolute" style="top: 300px; left: -10px; width: 50%; " alt="picture of a chocolate bar"></p>
+<p><img data-src="images/hex-rmarkdown.png" class="absolute" style="top: 105px; left: 720px; width: 11%; " alt="hex logo for the rmarkdown package"></p>
+<p><img data-src="images/cookie.png" class="absolute" style="top: 250px; left: 625px; width: 30%; " alt="picture of a chocolate chip cookie"></p>
 </section>
 <section id="rmds-part-1-metadata" class="slide level2 smaller">
 <h2><span class="orange">Rmds Part 1: Metadata</span></h2>
@@ -539,7 +543,7 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </div>
 <div class="fragment">
 <ul>
-<li>Instead <span class="purple">Markdown syntax</span> is required to accomplish these tweaks</li>
+<li>Instead <span class="purple">markdown</span> syntax is required to accomplish these tweaks</li>
 </ul>
 </div>
 </section>
@@ -552,10 +556,13 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </p>
 <div class="fragment">
 <ol type="1">
-<li># = headings (<em>more</em> # = <em>smaller</em> heading)</li>
-<li>_text_ = italics</li>
-<li>**text** = bold</li>
-<li>[text](link) = hyperlinked text</li>
+<li><p># = headings</p>
+<ul>
+<li><em>More</em> # = <em>smaller</em> heading</li>
+</ul></li>
+<li><p>_text_ = italics</p></li>
+<li><p>**text** = bold</p></li>
+<li><p>[text](link) = hyperlinked text</p></li>
 </ol>
 <p><br>
 </p>
@@ -566,13 +573,13 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <h2><span class="orange">Rmds Part 3: Code Chunks</span></h2>
 <p>Let’s look at the structure of an example code chunk</p>
 <div class="r-stack">
-<p><img data-src="images/code-chunk.png" class="fragment fade-out"></p>
-<p><img data-src="images/code-chunk-annotated.png" class="fragment"></p>
+<p><img data-src="images/code-chunk.png" class="fragment fade-out" alt="Screen capture of a code chunk from an Rmarkdown file where the echo option is set to false, the chunk is named 'pressure', and the `plot` function is used on an object also named 'pressure'"></p>
+<p><img data-src="images/code-chunk-annotated.png" class="fragment" alt="Screen capture of the same code chunk but with colored boxes annotating the chunk start and end, the code language, the chunk name, the chunk options, and the 'run this chunk' button"></p>
 </div>
 <p><br>
 </p>
 <div class="fragment">
-<p>Note that chunk definition must be formatted like:</p>
+<p>Note that chunk start <em>must</em> be formatted like:</p>
 <pre><code>- ```{language chunk_name, option_1, option_2, ...}</code></pre>
 </div>
 </section>
@@ -581,7 +588,7 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <p>Let’s check out three crucial code chunk options!</p>
 <div class="fragment">
 <p align="center">
-<img src="images/code-chunk-options.png" width="120%">
+<img src="images/code-chunk-options.png" width="120%" alt="A table indicating where the rows correspond to the chunk options 'include', 'echo', and 'message' and the columns correspond to whether the chunk's code, outputs, or messages are included in the resulting file. None of the three code possibilities are included when 'include' is false, code is excluded but everything else is included when 'echo' is false, and everything but messages is included when 'message' is false">
 </p>
 </div>
 <div class="fragment">
@@ -605,7 +612,7 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <ol start="2" type="1">
 <li>Create a new RMarkdown file!
 <ul>
-<li>File <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> New File <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> R Markdown…</li>
+<li>File <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> New File <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> <span class="purple">R Markdown…</span></li>
 <li>In resulting pop-up, skip to bottom and click “OK”</li>
 </ul></li>
 </ol>
@@ -635,7 +642,7 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 </section>
-<section id="loading-data" class="slide level2">
+<section id="loading-data" class="slide level2 smaller">
 <h2><span class="orange">Loading Data</span></h2>
 <ul>
 <li>Function to use depends on file type
@@ -648,7 +655,14 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </p>
 <div class="fragment">
 <ul>
-<li>Need to assign to an object to use the data!</li>
+<li>Need to assign data to an object to use it later!</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>For example:</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>my_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"my_data_file.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -669,9 +683,9 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <li>Make a new script for today’s lecture</li>
 </ol>
 </section>
-<section id="practice-load-data" class="slide level2">
+<section id="practice-load-data" class="slide level2 smaller">
 <h2><span class="pink">Practice: Load Data</span></h2>
-<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for dplyr R package"></p>
 <ul>
 <li>Now, use <code>read.csv</code> to read “minnow.csv” into R
 <ul>
@@ -689,6 +703,8 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>What do you see?</li>
 </ul>
@@ -738,7 +754,7 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <ul>
 <li>Note that concatenation works here too!
 <ul>
-<li>e.g., <code>my_df[c(1, 2, 3), 1]</code></li>
+<li><code>my_df[c(1, 2, 3), 1]</code> would get rows 1 through 3 of column 1</li>
 </ul></li>
 </ul>
 </div>
@@ -796,16 +812,26 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <li>Extremely popular &amp; commonly-used</li>
 </ul></li>
 </ul>
-<p><img data-src="images/hex-tidyverse.png" class="absolute" style="top: 225px; left: 381px; width: 25%; "> <img data-src="images/hex-dplyr.png" class="absolute" style="top: 500px; left: 0px; width: 12%; "></p>
-<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 500px; left: 150px; width: 12%; "></p>
-<p><img data-src="images/hex-tidyr.png" class="absolute" style="top: 500px; left: 300px; width: 12%; "></p>
-<p><img data-src="images/hex-purrr.png" class="absolute" style="top: 500px; left: 450px; width: 12%; "></p>
-<p><img data-src="images/hex-readr.png" class="absolute" style="top: 500px; left: 600px; width: 12%; "></p>
-<p><img data-src="images/hex-tibble.png" class="absolute" style="top: 500px; left: 750px; width: 12%; "></p>
-<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 500px; left: 900px; width: 12%; "></p>
+<p><img data-src="images/hex-tidyverse.png" class="absolute" style="top: 225px; left: 381px; width: 25%; " alt="tidyverse R package hex logo"></p>
+<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 500px; left: 0px; width: 12%; " alt="dplyr R package hex logo"></p>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 500px; left: 150px; width: 12%; " alt="ggplot2 R package hex logo"></p>
+<p><img data-src="images/hex-tidyr.png" class="absolute" style="top: 500px; left: 300px; width: 12%; " alt="tidyr R package hex logo"></p>
+<p><img data-src="images/hex-purrr.png" class="absolute" style="top: 500px; left: 450px; width: 12%; " alt="purrr R package hex logo"></p>
+<p><img data-src="images/hex-readr.png" class="absolute" style="top: 500px; left: 600px; width: 12%; " alt="readr R package hex logo"></p>
+<p><img data-src="images/hex-tibble.png" class="absolute" style="top: 500px; left: 750px; width: 12%; " alt="tibble R package hex logo"></p>
+<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 500px; left: 900px; width: 12%; " alt="magrittr R package hex logo"></p>
 </section>
 <section id="dplyr-part-1-filter" class="slide level2 smaller">
 <h2><span class="orange"><code>dplyr</code> Part 1: <code>filter</code></span></h2>
+<ul>
+<li>Remember our discussion of <span class="purple">conditionals</span> last week?
+<ul>
+<li>Types include: <code>==</code>, <code>|</code>, <code>&amp;</code>, <code>%in%</code>, <code>!=</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
 <ul>
 <li>Subset using conditionals with <code>filter</code>
 <ul>
@@ -814,23 +840,18 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Subset to only butterfly milkweed records</span></span>
 <span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>milkweed <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="at">.data =</span> flowers, species <span class="sc">==</span> <span class="st">"Asclepias tuberosa"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br>
 </p>
+</div>
 <div class="fragment">
 <ul>
 <li>Can use <code>filter</code> instead of <code>subset</code> just to live fully in the Tidyverse
 <ul>
-<li>Ultimately a style choice so your call!</li>
-</ul></li>
-</ul>
-<p><br>
-</p>
-<ul>
-<li>Remember our discussion of <span class="blue">conditionals</span> last week?
-<ul>
-<li>Types include: <code>==</code>, <code>|</code>, <code>&amp;</code>, <code>%in%</code>, <code>!=</code></li>
+<li>Just a style choice, so your call!</li>
 </ul></li>
 </ul>
 </div>
@@ -842,20 +863,23 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Can create multiple columns at the same time</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">.data =</span> my_df, <span class="at">new1 =</span> ...,</span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>                      <span class="at">new2 =</span> ...,</span>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">.data =</span> my_df, <span class="at">new1 =</span> <span class="dv">10</span>,</span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>                      <span class="at">new2 =</span> <span class="dv">2</span>,</span>
 <span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>                      <span class="at">new3 =</span> new1 <span class="sc">/</span> new2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br>
 </p>
+</div>
 <div class="fragment">
 <ul>
 <li>Has optional <code>.after</code> argument to specify where you want the new column</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>my_df2, <span class="ot">&lt;-</span> <span class="fu">mutate</span>(<span class="at">.data =</span> my_df, <span class="at">weight_lb =</span> weight_kg <span class="sc">*</span> <span class="fl">2.2</span>,</span>
-<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>                  <span class="at">.after =</span> weight_kg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>my_df2, <span class="ot">&lt;-</span> <span class="fu">mutate</span>(<span class="at">.data =</span> my_df,</span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>                  <span class="at">weight_lb =</span> weight_kg <span class="sc">*</span> <span class="fl">2.2</span>,</span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>                  <span class="at">.after =</span> weight_kg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="column-naming-aside" class="slide level2 smaller">
@@ -902,12 +926,9 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </section>
 <section id="practice-wrangling-with-dplyr" class="slide level2 smaller">
 <h2><span class="pink">Practice: Wrangling with <code>dplyr</code></span></h2>
-<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="dplyr R package hex logo"></p>
 <ol type="1">
-<li>Filter the minnow data to only cases where the species is Stoneroller or Chub
-<ul>
-<li>There are (at least) three ways of doing this; can you identify them all?</li>
-</ul></li>
+<li>Filter the minnow data to only cases where the species is Stoneroller or Chub</li>
 </ol>
 <div class="fragment">
 <ol start="2" type="1">
