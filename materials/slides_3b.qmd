@@ -61,6 +61,8 @@ After today's session you will be able to:
 
 \
 
+. . . 
+
 - Product of each function passed to next function
 ```{.r}
 new_data <- old_data %>%
@@ -70,6 +72,8 @@ new_data <- old_data %>%
 ```
 
 \
+
+. . . 
 
 - Same workflow requires fewer objects
 
@@ -129,25 +133,29 @@ df_done <- df_v1 %>%
 
 René Magritte -- _The Treachery of Images_ (1929)
 
-![](images/magritte-profile.jpg){.absolute top=150 left=50 width="30%"}
+![](images/magritte-profile.jpg){.absolute top=150 left=50 width="30%" fig-alt="photo of Rene Magritte"}
 
-![](images/magritte-treachery.jpg){.absolute top=150 left=450 width="60%"}
-![](images/hex-magrittr.png){.fragment .fade-in .absolute top=475 left=120 width="18%"}
+![](images/magritte-treachery.jpg){.absolute top=150 left=450 width="60%" fig-alt="copy of 'the treachery of images', a famous painting of a pipe with the words 'this is not a pipe' written in French beneath the image"}
+![](images/hex-magrittr.png){.fragment .fade-in .absolute top=475 left=120 width="18%" fig-alt="hex logo for magrittr R package"}
 
 ## [Practice: Pipe]{.pink} {.smaller}
 
-![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for magrittr R package"}
 
 1. Install and load the `magrittr` package
 
 \
 
-2. Return to your 3-step wrangling of "minnow.csv" from [Lecture \#3]{.gold}
+. . .
+
+2. Return to your 3-step wrangling of "minnow.csv" from [Lecture \#3]{.blue}
     - Filter "minnow.csv" to only Stonerollers and Chubs
     - Convert depth & diameter to meters (from cm)
     - Pare down columns to only species and depth/diameter in meters
 
 \
+
+. . .
 
 3. Copy these lines and edit them to use the `%>%`
     - Does this have the same end result as the non-pipe lines?
@@ -196,7 +204,7 @@ Let's check out an example:
 data %>%
     # 1. Group by treatment
     group_by(treatment) %>%
-    # 2. Calculate average and deviation
+    # 2. Calculate average and standard deviation
     summarize(mean_val = mean(response),
               sd_val = sd(response)) %>%
     # 3. Ungroup
@@ -212,7 +220,7 @@ data %>%
 
 . . . 
 
-2. Summarizing drops columns _unless_:
+2. [Summarizing drops columns]{.purple} _unless_:
     1. Column is named in `group_by`
     2. Column is created by `summarize`
 
@@ -246,14 +254,9 @@ data %>%
 
 ## [Practice: Summarizing]{.orange} {.smaller}
 
-![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%"}
-![](images/hex-tidyr.png){.absolute top=0 left=965 width="12%"}
-![](images/hex-penguins.png){.absolute top=115 left=1032 width="12%"}
-
-
-- Load the `palmerpenguins`, `tidyr`, and `magrittr` packages
-
-\
+![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for magrittr R package"}
+![](images/hex-tidyr.png){.absolute top=0 left=965 width="12%" fig-alt="hex logo for tidyr R package"}
+![](images/hex-penguins.png){.absolute top=115 left=1032 width="12%" fig-alt="hex logo for palmerpenguins R package"}
 
 - Using the "penguins" data in the `palmerpenguins` package, answer the following questions:
 
@@ -305,30 +308,25 @@ data %>%
 \
 
 ::::{.columns}
-
 :::{.column width="60%"}
 
 ### Long Data
 
 :::
-
 :::{.column width="10%"}
-
 :::
-
 :::{.column width="30%"}
 
 ### Wide Data
 
 :::
-
 ::::
 
-![](images/shape-long.png){.fragment .fade-in .absolute top=200 left=-50 width="40%"}
+![](images/shape-long.png){.fragment .fade-in .absolute top=200 left=-50 width="40%" fig-alt="Cartoon of a long table of data where there is a column with either fire or cow emojis, a column with one of three different butterfly emojis, and a third column with just '#' signs in every row"}
 
-![](images/shape-wide.png){.fragment .fade-in .absolute top=325 left=650 width="50%"}
+![](images/shape-wide.png){.fragment .fade-in .absolute top=325 left=650 width="50%" fig-alt="Cartoon of a wide table of data where there is one row for cows and one row for fire and the columns are dedicated to each of the three butterfly types"}
 
-![](images/shape-arrows.png){.fragment .fade-in .absolute top=325 left=400 width="20%"}
+![](images/shape-arrows.png){.fragment .fade-in .absolute top=325 left=400 width="20%" fig-alt="Two arrows--one facing left and the other right--between the two tables. The arrow point from wide to long is labeled 'pivot longer' and the opposite arrow is labeled 'pivot wider'"}
 
 ## [Reshaping Longer]{.orange} {.smaller}
 
@@ -378,7 +376,7 @@ pivot_longer(data = my_df,
 ## [Reshaping Longer Visual]{.orange}
 
 <p align="center">
-<img src="images/graphic-pivot-longer.png" width="120%">
+<img src="images/graphic-pivot-longer.png" alt="Diagram showing how the 'tidyr' package allows users to pivot data into long format (from wide format) using the 'pivot_longer' function" width="120%">
 </p>
 
 ## [Practice: `pivot_longer`]{.pink} {.smaller}
@@ -452,12 +450,12 @@ pivot_wider(data = my_df,
 ## [Reshaping Wider Visual]{.orange}
 
 <p align="center">
-<img src="images/graphic-pivot-wider.png" width="120%">
+<img src="images/graphic-pivot-wider.png" alt="Diagram showing how the 'tidyr' package allows users to pivot data into wide format (from long format) using the 'pivot_wider' function" width="120%">
 </p>
 
 ## [Practice: `pivot_wider`]{.pink}
 
-![](images/hex-tidyr.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-tidyr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the tidyr R package"}
 
 1. Take the data object you pivoted to long format in the prior practice block
 
@@ -476,11 +474,10 @@ pivot_wider(data = my_df,
 
 ## [Practice: Wrangling!]{.pink} {.smaller}
 
-![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%"}
-![](images/hex-tidyr.png){.absolute top=0 left=965 width="12%"}
-
-![](images/hex-dplyr.png){.absolute top=115 left=1032 width="12%"}
-![](images/hex-penguins.png){.absolute top=115 left=897 width="12%"}
+![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the magrittr R package"}
+![](images/hex-tidyr.png){.absolute top=0 left=965 width="12%" fig-alt="hex logo for the tidyr R package"}
+![](images/hex-dplyr.png){.absolute top=115 left=1032 width="12%" fig-alt="hex logo for the dplyr R package"}
+![](images/hex-penguins.png){.absolute top=115 left=897 width="12%" fig-alt="hex logo for the palmerpenguins R package"}
 
 - Beginning with the "penguins" data do the following operations:
 
@@ -514,9 +511,11 @@ pivot_wider(data = my_df,
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-## [Function Tutorial: Learning Objectives]{.orange}
+## [Function Tutorial: Learning Objectives]{.purple} {.smaller}
 
 After completing this assignment you will be able to:
+
+\
 
 . . .
 
@@ -534,14 +533,14 @@ After completing this assignment you will be able to:
 
 . . .
 
-- You’ll present your tutorials for 5-10 minutes in [Lab \#5]{.blue}
+- You'll present your tutorials for 5-10 minutes in [Lab \#5]{.blue}
     - Get peer feedback then & implement changes before submitting draft 2
 
 \
 
 . . . 
 
-- Submit & present revised tutorials during [Lab \#7]{.pink}
+- Submit & present revised tutorials during [Lab \#7]{.blue}
 
 ## [Function Tutorial: Points]{.orange} {.smaller}
 
@@ -567,8 +566,7 @@ After completing this assignment you will be able to:
 
 - Everyone must pick three _different_ functions
     - This way no two people present tutorials on the same function
-
-- Unfortunately, means if someone picks before you they "claim" that function
+    - Unfortunately, means if someone picks before you they "claim" that function
 
 . . .
 
@@ -581,17 +579,18 @@ After completing this assignment you will be able to:
 
 \
 
+. . .
+
 - Sound fair? If not, what’s a good alternative?
 
 ## [Nick's _Recommended_ Packages]{.orange} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
-![](images/hex-stringr.png){.absolute top=60 left=-150 width="12%"}
-![](images/hex-dndr.png){.absolute top=255 left=-150 width="12%"}
-![](images/hex-lterpalettefinder.png){.absolute top=450 left=-150 width="12%"}
+![](images/hex-stringr.png){.absolute top=60 left=-150 width="12%" fig-alt="hex logo for the stringr R package"}
+![](images/hex-dndr.png){.absolute top=255 left=-150 width="12%" fig-alt="hex logo for the dndR R package"}
+![](images/hex-lterpalettefinder.png){.absolute top=450 left=-150 width="12%" fig-alt="hex logo for the lterpalettefinder R package"}
 
 `stringr` -- Simple, Consistent Wrappers for Common String Operations
 
@@ -606,11 +605,10 @@ After completing this assignment you will be able to:
 `lterpalettefinder` -- Extract Color Palettes from Photos and Pick Official LTER Palettes
 
 :::
-
 :::{.column width="50%"}
 
-![](images/hex-supportr.png){.absolute top=60 left=1050 width="12%"}
-![](images/hex-vegan.png){.absolute top=255 left=1050 width="12%"}
+![](images/hex-supportr.png){.absolute top=60 left=1050 width="12%" fig-alt="hex logo for the supportR R package"}
+![](images/hex-vegan.png){.absolute top=255 left=1050 width="12%" fig-alt="hex logo for the vegan R package"}
 
 `supportR` -- Support Functions for Wrangling and Visualization
 
@@ -621,34 +619,33 @@ After completing this assignment you will be able to:
 `vegan` -- Community Ecology Package
 
 :::
-
 ::::
 
 ## [Forbidden Packages (Sorry!)]{.orange} {.smaller}
 
-![](images/hex-dplyr.png){.absolute top=60 left=-150 width="12%"}
-![](images/hex-tidyr.png){.absolute top=255 left=-150 width="12%"}
-![](images/hex-ggplot2.png){.absolute top=520 left=-150 width="12%"}
+![](images/hex-dplyr.png){.absolute top=60 left=-150 width="12%" fig-alt="hex logo for the dplyr R package"}
+![](images/hex-tidyr.png){.absolute top=255 left=-150 width="12%" fig-alt="hex logo for the tidyr R package"}
+![](images/hex-ggplot2.png){.absolute top=520 left=-150 width="12%" fig-alt="hex logo for the ggplot2 R package"}
 
 - `dplyr` -- A Grammar of Data Manipulation
-    - [Reason:]{.pink} we cover a lot of this in class
+    - [Reason:]{.gold} we cover a lot of this in class
 
 \
 
 - `tidyr` -- Tidy Messy Data
     - Actually [only 2 forbidden functions:]{.gold} `pivot_longer` & `pivot_wider`
     - Others are okay to use!
-    - [Reason:]{.pink} we _just_ covered both in class
+    - [Reason:]{.gold} we _just_ covered both in class
 
 \
 
 - `ggplot2` -- Create Elegant Data Visualizations Using the Grammar of Graphics
-    - [Reason:]{.pink} we cover a lot of this in class (see [week 6]{.blue}) **and** its functions use a really different syntax from what is used by other packages
+    - [Reason:]{.gold} we cover a lot of this in class (see [week 6]{.blue}) **and** its functions use a really different syntax from what is used by other packages
 
-## [Assignment Q & A]{.gold}
+## [Assignment Q & A]{.gold} {.smaller}
 
 - What questions do you have about this assignment?
-    - No "dumb" questions so ask away!
+    - No such thing as a "dumb" question, so ask away!
 
 \
 
