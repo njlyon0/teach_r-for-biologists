@@ -2535,7 +2535,7 @@
     "href": "materials/slides_3b.html#pipe-operator",
     "title": "Intro to Data Science",
     "section": "Pipe Operator (%>%)",
-    "text": "Pipe Operator (%&gt;%)\n\nAllows chaining together multiple operations\n\n\n\n\nProduct of each function passed to next function\n\nnew_data &lt;- old_data %&gt;%\n            function() %&gt;%\n            another_fxn() %&gt;%\n            etc()\n\n\n\nSame workflow requires fewer objects"
+    "text": "Pipe Operator (%&gt;%)\n\nAllows chaining together multiple operations\n\n\n\n\n\nProduct of each function passed to next function\n\nnew_data &lt;- old_data %&gt;%\n            function() %&gt;%\n            another_fxn() %&gt;%\n            etc()\n\n\n\n\n\nSame workflow requires fewer objects"
   },
   {
     "objectID": "materials/slides_3b.html#pipe-operator-example",
@@ -2563,7 +2563,7 @@
     "href": "materials/slides_3b.html#practice-pipe",
     "title": "Intro to Data Science",
     "section": "Practice: Pipe",
-    "text": "Practice: Pipe\n\n\nInstall and load the magrittr package\n\n\n\n\nReturn to your 3-step wrangling of “minnow.csv” from Lecture #3\n\nFilter “minnow.csv” to only Stonerollers and Chubs\nConvert depth & diameter to meters (from cm)\nPare down columns to only species and depth/diameter in meters\n\n\n\n\n\nCopy these lines and edit them to use the %&gt;%\n\nDoes this have the same end result as the non-pipe lines?"
+    "text": "Practice: Pipe\n\n\nInstall and load the magrittr package\n\n\n\n\n\nReturn to your 3-step wrangling of “minnow.csv” from Lecture #3\n\nFilter “minnow.csv” to only Stonerollers and Chubs\nConvert depth & diameter to meters (from cm)\nPare down columns to only species and depth/diameter in meters\n\n\n\n\n\n\n\nCopy these lines and edit them to use the %&gt;%\n\nDoes this have the same end result as the non-pipe lines?"
   },
   {
     "objectID": "materials/slides_3b.html#groupwise-summarization",
@@ -2584,7 +2584,7 @@
     "href": "materials/slides_3b.html#summarization-pipes",
     "title": "Intro to Data Science",
     "section": "Summarization + Pipes",
-    "text": "Summarization + Pipes\nLet’s check out an example:\n\n\n# Take data\ndata %&gt;%\n    # 1. Group by treatment\n    group_by(treatment) %&gt;%\n    # 2. Calculate average and deviation\n    summarize(mean_val = mean(response),\n              sd_val = sd(response)) %&gt;%\n    # 3. Ungroup\n    ungroup()"
+    "text": "Summarization + Pipes\nLet’s check out an example:\n\n\n# Take data\ndata %&gt;%\n    # 1. Group by treatment\n    group_by(treatment) %&gt;%\n    # 2. Calculate average and standard deviation\n    summarize(mean_val = mean(response),\n              sd_val = sd(response)) %&gt;%\n    # 3. Ungroup\n    ungroup()"
   },
   {
     "objectID": "materials/slides_3b.html#summarization-warnings",
@@ -2605,7 +2605,7 @@
     "href": "materials/slides_3b.html#practice-summarizing",
     "title": "Intro to Data Science",
     "section": "Practice: Summarizing",
-    "text": "Practice: Summarizing\n  \n\nLoad the palmerpenguins, tidyr, and magrittr packages\n\n\n\n\nUsing the “penguins” data in the palmerpenguins package, answer the following questions:\n\n\n\n\n\nWhat is the average bill length in millimeters for each species of penguin?\n\n\n\n\nWhich island has the smallest individual penguin?\n\nHint: use body mass\n\n\n\n\n\nWhich species at which island has the longest flippers for female penguins?\n\nHint: remember you can use filter before or after summarize!"
+    "text": "Practice: Summarizing\n  \n\nUsing the “penguins” data in the palmerpenguins package, answer the following questions:\n\n\n\n\n\nWhat is the average bill length in millimeters for each species of penguin?\n\n\n\n\nWhich island has the smallest individual penguin?\n\nHint: use body mass\n\n\n\n\n\nWhich species at which island has the longest flippers for female penguins?\n\nHint: remember you can use filter before or after summarize!"
   },
   {
     "objectID": "materials/slides_3b.html#temperature-check",
@@ -2689,7 +2689,7 @@
     "href": "materials/slides_3b.html#practice-wrangling",
     "title": "Intro to Data Science",
     "section": "Practice: Wrangling!",
-    "text": "Practice: Wrangling!\n \n \n\nBeginning with the “penguins” data do the following operations:\n\n\n\nKeep only data on female penguins\n\nNo male penguins and no individuals where sex is not known\n\n\n\n\n\nCalculate average bill depth within species and island\n\n\n\n\nReshape to wide format so that each island is a column\n\nNote that if an island doesn’t have a given species it should have NA (not 0)\n\n\n\n\n\nCheck your work! What are the dimensions of the resulting dataframe?\n\n\n\n\nShould be 6 rows by 5 columns"
+    "text": "Practice: Wrangling!\n   \n\nBeginning with the “penguins” data do the following operations:\n\n\n\nKeep only data on female penguins\n\nNo male penguins and no individuals where sex is not known\n\n\n\n\n\nCalculate average bill depth within species and island\n\n\n\n\nReshape to wide format so that each island is a column\n\nNote that if an island doesn’t have a given species it should have NA (not 0)\n\n\n\n\n\nCheck your work! What are the dimensions of the resulting dataframe?\n\n\n\n\nShould be 6 rows by 5 columns"
   },
   {
     "objectID": "materials/slides_3b.html#temperature-check-1",
@@ -2703,7 +2703,7 @@
     "href": "materials/slides_3b.html#function-tutorial-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Function Tutorial: Learning Objectives",
-    "text": "Function Tutorial: Learning Objectives\nAfter completing this assignment you will be able to:\n\n\nExplain the proper syntax and use of R functions\nCommunicate effectively to an audience of interested non-specialists\nApply feedback on an assignment to a successful revision\nReflect on the process of revising a presentation based on constructively critical feedback"
+    "text": "Function Tutorial: Learning Objectives\nAfter completing this assignment you will be able to:\n\n\n\n\nExplain the proper syntax and use of R functions\nCommunicate effectively to an audience of interested non-specialists\nApply feedback on an assignment to a successful revision\nReflect on the process of revising a presentation based on constructively critical feedback"
   },
   {
     "objectID": "materials/slides_3b.html#function-tutorial-faq",
@@ -2724,7 +2724,7 @@
     "href": "materials/slides_3b.html#picking-functions",
     "title": "Intro to Data Science",
     "section": "Picking Functions",
-    "text": "Picking Functions\n\nEveryone must pick three different functions\n\nThis way no two people present tutorials on the same function\n\nUnfortunately, means if someone picks before you they “claim” that function\n\n\n\n\n\nMy plan to do this equitably is as follows:\n\nRandomize student order and each person picks one function\nSecond function picked in reverse of that order (I.e., if you were last to pick in round 1, you’re first in round 2)\nRe-randomize student order for third function\n\n\n\n\n\nSound fair? If not, what’s a good alternative?"
+    "text": "Picking Functions\n\nEveryone must pick three different functions\n\nThis way no two people present tutorials on the same function\nUnfortunately, means if someone picks before you they “claim” that function\n\n\n\n\n\n\nMy plan to do this equitably is as follows:\n\nRandomize student order and each person picks one function\nSecond function picked in reverse of that order (I.e., if you were last to pick in round 1, you’re first in round 2)\nRe-randomize student order for third function\n\n\n\n\n\n\n\nSound fair? If not, what’s a good alternative?"
   },
   {
     "objectID": "materials/slides_3b.html#nicks-recommended-packages",
@@ -2745,7 +2745,7 @@
     "href": "materials/slides_3b.html#assignment-q-a",
     "title": "Intro to Data Science",
     "section": "Assignment Q & A",
-    "text": "Assignment Q & A\n\nWhat questions do you have about this assignment?\n\nNo “dumb” questions so ask away!\n\n\n\n\n\n\nFeeling good about next steps?"
+    "text": "Assignment Q & A\n\nWhat questions do you have about this assignment?\n\nNo such thing as a “dumb” question, so ask away!\n\n\n\n\n\n\nFeeling good about next steps?"
   },
   {
     "objectID": "materials/slides_3b.html#exploring-cran-packages",

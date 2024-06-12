@@ -454,6 +454,7 @@ Lab 3 – Data Wrangling (P2)
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Product of each function passed to next function</li>
 </ul>
@@ -463,9 +464,12 @@ Lab 3 – Data Wrangling (P2)
 <span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>            <span class="fu">etc</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Same workflow requires fewer objects</li>
 </ul>
+</div>
 </section>
 <section id="pipe-operator-example" class="slide level2 smaller">
 <h2><span class="orange">Pipe Operator Example</span></h2>
@@ -512,19 +516,20 @@ Lab 3 – Data Wrangling (P2)
 <section id="why-named-pipe" class="slide level2">
 <h2><span class="orange">Why Named “Pipe”?</span></h2>
 <p>René Magritte – <em>The Treachery of Images</em> (1929)</p>
-<p><img data-src="images/magritte-profile.jpg" class="absolute" style="top: 150px; left: 50px; width: 30%; "></p>
-<p><img data-src="images/magritte-treachery.jpg" class="absolute" style="top: 150px; left: 450px; width: 60%; "> <img data-src="images/hex-magrittr.png" class="fragment fade-in absolute" style="top: 475px; left: 120px; width: 18%; "></p>
+<p><img data-src="images/magritte-profile.jpg" class="absolute" style="top: 150px; left: 50px; width: 30%; " alt="photo of Rene Magritte"></p>
+<p><img data-src="images/magritte-treachery.jpg" class="absolute" style="top: 150px; left: 450px; width: 60%; " alt="copy of 'the treachery of images', a famous painting of a pipe with the words 'this is not a pipe' written in French beneath the image"> <img data-src="images/hex-magrittr.png" class="fragment fade-in absolute" style="top: 475px; left: 120px; width: 18%; " alt="hex logo for magrittr R package"></p>
 </section>
 <section id="practice-pipe" class="slide level2 smaller">
 <h2><span class="pink">Practice: Pipe</span></h2>
-<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for magrittr R package"></p>
 <ol type="1">
 <li>Install and load the <code>magrittr</code> package</li>
 </ol>
 <p><br>
 </p>
+<div class="fragment">
 <ol start="2" type="1">
-<li>Return to your 3-step wrangling of “minnow.csv” from <span class="gold">Lecture #3</span>
+<li>Return to your 3-step wrangling of “minnow.csv” from <span class="blue">Lecture #3</span>
 <ul>
 <li>Filter “minnow.csv” to only Stonerollers and Chubs</li>
 <li>Convert depth &amp; diameter to meters (from cm)</li>
@@ -533,12 +538,15 @@ Lab 3 – Data Wrangling (P2)
 </ol>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ol start="3" type="1">
 <li>Copy these lines and edit them to use the <code>%&gt;%</code>
 <ul>
 <li>Does this have the same end result as the non-pipe lines?</li>
 </ul></li>
 </ol>
+</div>
 </section>
 <section id="groupwise-summarization" class="slide level2 smaller">
 <h2><span class="orange">Groupwise Summarization</span></h2>
@@ -597,7 +605,7 @@ Lab 3 – Data Wrangling (P2)
 <span id="cb5-2"><a></a>data <span class="sc">%&gt;%</span></span>
 <span id="cb5-3"><a></a>    <span class="co"># 1. Group by treatment</span></span>
 <span id="cb5-4"><a></a>    <span class="fu">group_by</span>(treatment) <span class="sc">%&gt;%</span></span>
-<span id="cb5-5"><a></a>    <span class="co"># 2. Calculate average and deviation</span></span>
+<span id="cb5-5"><a></a>    <span class="co"># 2. Calculate average and standard deviation</span></span>
 <span id="cb5-6"><a></a>    <span class="fu">summarize</span>(<span class="at">mean_val =</span> <span class="fu">mean</span>(response),</span>
 <span id="cb5-7"><a></a>              <span class="at">sd_val =</span> <span class="fu">sd</span>(response)) <span class="sc">%&gt;%</span></span>
 <span id="cb5-8"><a></a>    <span class="co"># 3. Ungroup</span></span>
@@ -615,7 +623,7 @@ Lab 3 – Data Wrangling (P2)
 </p>
 <div class="fragment">
 <ol start="2" type="1">
-<li>Summarizing drops columns <em>unless</em>:
+<li><span class="purple">Summarizing drops columns</span> <em>unless</em>:
 <ol type="1">
 <li>Column is named in <code>group_by</code></li>
 <li>Column is created by <code>summarize</code></li>
@@ -663,12 +671,7 @@ Lab 3 – Data Wrangling (P2)
 </section>
 <section id="practice-summarizing" class="slide level2 smaller">
 <h2><span class="orange">Practice: Summarizing</span></h2>
-<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "> <img data-src="images/hex-penguins.png" class="absolute" style="top: 115px; left: 1032px; width: 12%; "></p>
-<ul>
-<li>Load the <code>palmerpenguins</code>, <code>tidyr</code>, and <code>magrittr</code> packages</li>
-</ul>
-<p><br>
-</p>
+<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for magrittr R package"> <img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 965px; width: 12%; " alt="hex logo for tidyr R package"> <img data-src="images/hex-penguins.png" class="absolute" style="top: 115px; left: 1032px; width: 12%; " alt="hex logo for palmerpenguins R package"></p>
 <ul>
 <li>Using the “penguins” data in the <code>palmerpenguins</code> package, answer the following questions:</li>
 </ul>
@@ -745,9 +748,9 @@ Lab 3 – Data Wrangling (P2)
 <h3 id="wide-data">Wide Data</h3>
 </div>
 </div>
-<p><img data-src="images/shape-long.png" class="fragment fade-in absolute" style="top: 200px; left: -50px; width: 40%; "></p>
-<p><img data-src="images/shape-wide.png" class="fragment fade-in absolute" style="top: 325px; left: 650px; width: 50%; "></p>
-<p><img data-src="images/shape-arrows.png" class="fragment fade-in absolute" style="top: 325px; left: 400px; width: 20%; "></p>
+<p><img data-src="images/shape-long.png" class="fragment fade-in absolute" style="top: 200px; left: -50px; width: 40%; " alt="Cartoon of a long table of data where there is a column with either fire or cow emojis, a column with one of three different butterfly emojis, and a third column with just '#' signs in every row"></p>
+<p><img data-src="images/shape-wide.png" class="fragment fade-in absolute" style="top: 325px; left: 650px; width: 50%; " alt="Cartoon of a wide table of data where there is one row for cows and one row for fire and the columns are dedicated to each of the three butterfly types"></p>
+<p><img data-src="images/shape-arrows.png" class="fragment fade-in absolute" style="top: 325px; left: 400px; width: 20%; " alt="Two arrows--one facing left and the other right--between the two tables. The arrow point from wide to long is labeled 'pivot longer' and the opposite arrow is labeled 'pivot wider'"></p>
 </section>
 <section id="reshaping-longer" class="slide level2 smaller">
 <h2><span class="orange">Reshaping Longer</span></h2>
@@ -810,12 +813,12 @@ Lab 3 – Data Wrangling (P2)
 <section id="reshaping-longer-visual" class="slide level2">
 <h2><span class="orange">Reshaping Longer Visual</span></h2>
 <p align="center">
-<img src="images/graphic-pivot-longer.png" width="120%">
+<img src="images/graphic-pivot-longer.png" alt="Diagram showing how the 'tidyr' package allows users to pivot data into long format (from wide format) using the 'pivot_longer' function" width="120%">
 </p>
 </section>
 <section id="practice-pivot_longer" class="slide level2 smaller">
 <h2><span class="pink">Practice: <code>pivot_longer</code></span></h2>
-<p><img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for the tidyr R package"></p>
 <ol type="1">
 <li>Download the “bees.csv” and load it into R with <code>read.csv</code>
 <ul>
@@ -904,12 +907,12 @@ Lab 3 – Data Wrangling (P2)
 <section id="reshaping-wider-visual" class="slide level2">
 <h2><span class="orange">Reshaping Wider Visual</span></h2>
 <p align="center">
-<img src="images/graphic-pivot-wider.png" width="120%">
+<img src="images/graphic-pivot-wider.png" alt="Diagram showing how the 'tidyr' package allows users to pivot data into wide format (from long format) using the 'pivot_wider' function" width="120%">
 </p>
 </section>
 <section id="practice-pivot_wider" class="slide level2">
 <h2><span class="pink">Practice: <code>pivot_wider</code></span></h2>
-<p><img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for the tidyr R package"></p>
 <ol type="1">
 <li>Take the data object you pivoted to long format in the prior practice block</li>
 </ol>
@@ -933,8 +936,7 @@ Lab 3 – Data Wrangling (P2)
 </section>
 <section id="practice-wrangling" class="slide level2 smaller">
 <h2><span class="pink">Practice: Wrangling!</span></h2>
-<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "> <img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 965px; width: 12%; "></p>
-<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 115px; left: 1032px; width: 12%; "> <img data-src="images/hex-penguins.png" class="absolute" style="top: 115px; left: 897px; width: 12%; "></p>
+<p><img data-src="images/hex-magrittr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for the magrittr R package"> <img data-src="images/hex-tidyr.png" class="absolute" style="top: 0px; left: 965px; width: 12%; " alt="hex logo for the tidyr R package"> <img data-src="images/hex-dplyr.png" class="absolute" style="top: 115px; left: 1032px; width: 12%; " alt="hex logo for the dplyr R package"> <img data-src="images/hex-penguins.png" class="absolute" style="top: 115px; left: 897px; width: 12%; " alt="hex logo for the palmerpenguins R package"></p>
 <ul>
 <li>Beginning with the “penguins” data do the following operations:</li>
 </ul>
@@ -977,9 +979,11 @@ Lab 3 – Data Wrangling (P2)
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 </section>
-<section id="function-tutorial-learning-objectives" class="slide level2">
-<h2><span class="orange">Function Tutorial: Learning Objectives</span></h2>
+<section id="function-tutorial-learning-objectives" class="slide level2 smaller">
+<h2><span class="purple">Function Tutorial: Learning Objectives</span></h2>
 <p>After completing this assignment you will be able to:</p>
+<p><br>
+</p>
 <div class="fragment">
 <ul>
 <li>Explain the proper syntax and use of R functions</li>
@@ -1011,7 +1015,7 @@ Lab 3 – Data Wrangling (P2)
 </div>
 <div class="fragment">
 <ul>
-<li>Submit &amp; present revised tutorials during <span class="pink">Lab #7</span></li>
+<li>Submit &amp; present revised tutorials during <span class="blue">Lab #7</span></li>
 </ul>
 </div>
 </section>
@@ -1051,8 +1055,8 @@ Lab 3 – Data Wrangling (P2)
 <li>Everyone must pick three <em>different</em> functions
 <ul>
 <li>This way no two people present tutorials on the same function</li>
-</ul></li>
 <li>Unfortunately, means if someone picks before you they “claim” that function</li>
+</ul></li>
 </ul>
 <div class="fragment">
 <p><br>
@@ -1067,6 +1071,8 @@ Lab 3 – Data Wrangling (P2)
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Sound fair? If not, what’s a good alternative?</li>
 </ul>
@@ -1076,7 +1082,7 @@ Lab 3 – Data Wrangling (P2)
 <h2><span class="orange">Nick’s <em>Recommended</em> Packages</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="images/hex-stringr.png" class="absolute" style="top: 60px; left: -150px; width: 12%; "> <img data-src="images/hex-dndr.png" class="absolute" style="top: 255px; left: -150px; width: 12%; "> <img data-src="images/hex-lterpalettefinder.png" class="absolute" style="top: 450px; left: -150px; width: 12%; "></p>
+<p><img data-src="images/hex-stringr.png" class="absolute" style="top: 60px; left: -150px; width: 12%; " alt="hex logo for the stringr R package"> <img data-src="images/hex-dndr.png" class="absolute" style="top: 255px; left: -150px; width: 12%; " alt="hex logo for the dndR R package"> <img data-src="images/hex-lterpalettefinder.png" class="absolute" style="top: 450px; left: -150px; width: 12%; " alt="hex logo for the lterpalettefinder R package"></p>
 <p><code>stringr</code> – Simple, Consistent Wrappers for Common String Operations</p>
 <p><br>
 <br>
@@ -1087,7 +1093,7 @@ Lab 3 – Data Wrangling (P2)
 </p>
 <p><code>lterpalettefinder</code> – Extract Color Palettes from Photos and Pick Official LTER Palettes</p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/hex-supportr.png" class="absolute" style="top: 60px; left: 1050px; width: 12%; "> <img data-src="images/hex-vegan.png" class="absolute" style="top: 255px; left: 1050px; width: 12%; "></p>
+<p><img data-src="images/hex-supportr.png" class="absolute" style="top: 60px; left: 1050px; width: 12%; " alt="hex logo for the supportR R package"> <img data-src="images/hex-vegan.png" class="absolute" style="top: 255px; left: 1050px; width: 12%; " alt="hex logo for the vegan R package"></p>
 <p><code>supportR</code> – Support Functions for Wrangling and Visualization</p>
 <p><br>
 <br>
@@ -1099,11 +1105,11 @@ Lab 3 – Data Wrangling (P2)
 </section>
 <section id="forbidden-packages-sorry" class="slide level2 smaller">
 <h2><span class="orange">Forbidden Packages (Sorry!)</span></h2>
-<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 60px; left: -150px; width: 12%; "> <img data-src="images/hex-tidyr.png" class="absolute" style="top: 255px; left: -150px; width: 12%; "> <img data-src="images/hex-ggplot2.png" class="absolute" style="top: 520px; left: -150px; width: 12%; "></p>
+<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 60px; left: -150px; width: 12%; " alt="hex logo for the dplyr R package"> <img data-src="images/hex-tidyr.png" class="absolute" style="top: 255px; left: -150px; width: 12%; " alt="hex logo for the tidyr R package"> <img data-src="images/hex-ggplot2.png" class="absolute" style="top: 520px; left: -150px; width: 12%; " alt="hex logo for the ggplot2 R package"></p>
 <ul>
 <li><code>dplyr</code> – A Grammar of Data Manipulation
 <ul>
-<li><span class="pink">Reason:</span> we cover a lot of this in class</li>
+<li><span class="gold">Reason:</span> we cover a lot of this in class</li>
 </ul></li>
 </ul>
 <p><br>
@@ -1113,7 +1119,7 @@ Lab 3 – Data Wrangling (P2)
 <ul>
 <li>Actually <span class="gold">only 2 forbidden functions:</span> <code>pivot_longer</code> &amp; <code>pivot_wider</code></li>
 <li>Others are okay to use!</li>
-<li><span class="pink">Reason:</span> we <em>just</em> covered both in class</li>
+<li><span class="gold">Reason:</span> we <em>just</em> covered both in class</li>
 </ul></li>
 </ul>
 <p><br>
@@ -1121,16 +1127,16 @@ Lab 3 – Data Wrangling (P2)
 <ul>
 <li><code>ggplot2</code> – Create Elegant Data Visualizations Using the Grammar of Graphics
 <ul>
-<li><span class="pink">Reason:</span> we cover a lot of this in class (see <span class="blue">week 6</span>) <strong>and</strong> its functions use a really different syntax from what is used by other packages</li>
+<li><span class="gold">Reason:</span> we cover a lot of this in class (see <span class="blue">week 6</span>) <strong>and</strong> its functions use a really different syntax from what is used by other packages</li>
 </ul></li>
 </ul>
 </section>
-<section id="assignment-q-a" class="slide level2">
+<section id="assignment-q-a" class="slide level2 smaller">
 <h2><span class="gold">Assignment Q &amp; A</span></h2>
 <ul>
 <li>What questions do you have about this assignment?
 <ul>
-<li>No “dumb” questions so ask away!</li>
+<li>No such thing as a “dumb” question, so ask away!</li>
 </ul></li>
 </ul>
 <p><br>
