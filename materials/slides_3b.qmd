@@ -381,7 +381,7 @@ pivot_longer(data = my_df,
 
 ## [Practice: `pivot_longer`]{.pink} {.smaller}
 
-![](images/hex-tidyr.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-tidyr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the tidyr R package"}
 
 1. Download the "bees.csv" and load it into R with `read.csv`
     - Check its structure! What columns are there?
