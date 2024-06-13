@@ -92,7 +92,7 @@ df_v2 <- filter(df_v1, treatment == "cows")
 df_v3 <- mutate(df_v2, monarch.tot = monarch.bfly + monarch.larva)
 
 # Keep only the total monarch column
-df_v4 <- select(df_v3, monarch)
+df_v4 <- select(df_v3, monarch.tot)
 ```
 
 ## [Pipe Operator Example]{.orange} {.smaller}
@@ -110,7 +110,7 @@ df_v2 <- filter(df_v1, treatment == "cows")
 df_v3 <- mutate(df_v2, monarch.tot = monarch.bfly + monarch.larva)
 
 # Keep only the total monarch column
-df_v4 <- select(df_v3, monarch)
+df_v4 <- select(df_v3, monarch.tot)
 ```
 
 ### With Pipe
@@ -126,7 +126,7 @@ df_done <- df_v1 %>%
       # Add together caterpillars and adult butterflies
       mutate(monarch.tot = monarch.bfly + monarch.larva) %>% 
       # Keep only the total monarch column
-      select(df_v3, monarch)
+      select(monarch.tot)
 ```
 
 ## [Why Named "Pipe"?]{.orange}
