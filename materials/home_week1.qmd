@@ -42,7 +42,7 @@ Each homework is due at midnight the day before each lecture (i.e., Monday night
 
 ### Assignment Description
 
-This homework should be submitted as an R script with your last name and week 1 as the file name (e.g., "Lyon_week1.R"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
+This homework should be submitted as an R script with your last name and week 1 as the file name (e.g., "Lyon_week1.R"). Remember to include comments explaining what line(s) correspond to each of the following prompts.
 
 1. As a comment, write the full file path on your computer to where you've saved this script. Folders should be separated by slashes. Include the name of the R script in the file path
 

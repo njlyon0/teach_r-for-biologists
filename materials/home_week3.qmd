@@ -36,7 +36,7 @@ Upon completion of this assignment, students will be able to:
 
 ### Assignment Due Date(s)
 
-Each homework is due at midnight the day before each lecture (i.e., Monday night) Late work will be accepted but will be subject to the late assignments policy outlined in this course’s syllabus.
+Each homework is due at midnight the day before each lecture (i.e., Monday night) Late work will be accepted but will be subject to the late assignments policy outlined in this course's syllabus.
 
 ### Assignment Description
 
@@ -44,7 +44,7 @@ This homework should be submitted as an R markdown with your last name and the w
 
 1. In your own words, explain the purpose of the YAML of an R Markdown file. What does it do / what is it for?
 
-2. Imagine you’re working on an R Markdown file. You set one code chunk to `include = FALSE`. What will happen to the contents of that code chunk when you knit the file? What parts–if any–of the code chunk will be displayed in the knit file? 
+2. Imagine you're working on an R Markdown file. You set one code chunk to `include = FALSE`. What will happen to the contents of that code chunk when you knit the file? What parts–if any–of the code chunk will be displayed in the knit file? 
 
 3. You are studying native bee populations and need to wrangle your dataset to be ready for someone else to take on analysis. This question has multiple parts, be sure to answer all components! Each sub-question should be in its own code chunk.
     - Load the `dplyr` and `magrittr` packages and read in the example bee data ("bees.csv") into R and check its structure. How many rows / columns are there?
@@ -55,5 +55,5 @@ This homework should be submitted as an R markdown with your last name and the w
 
 4. Your data wrangling skills are so impressive to your collaborator that they ask for your help with a lichen project they have been working on. This question has multiple parts, be sure to answer all components! Each sub-question should be in its own code chunk.
     - Load the `tidyr` package and read in the example lichen data ("tree_lichen.csv") into R and check its structure? What columns are included?
-    - Your collaborator tells you that they have already cleaned the data but the data shape isn’t exactly what they need. They want your help reshaping the data into long format. Use the `pivot_longer` function to reshape their data so that they have the following three columns: "tree" unchanged from the wide format version; "lichen_type" which includes whether the lichen is crustose, foliose, or fruticose; "percent_cover" which includes the percent cover values your collaborator measured in the field.
+    - Your collaborator tells you that they have already cleaned the data but the data shape isn't exactly what they need. They want your help reshaping the data into long format. Use the `pivot_longer` function to reshape their data so that they have the following three columns: "tree" unchanged from the wide format version; "lichen_type" which includes whether the lichen is crustose, foliose, or fruticose; "percent_cover" which includes the percent cover values your collaborator measured in the field.
     - Check the structure of the long format object you created. How many rows are there? 
