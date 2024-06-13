@@ -2542,14 +2542,14 @@
     "href": "materials/slides_3b.html#pipe-operator-example",
     "title": "Intro to Data Science",
     "section": "Pipe Operator Example",
-    "text": "Pipe Operator Example\nWithout Pipe\n# Load data\ndf_v1 &lt;- read.csv(\"butterfly.csv\")\n\n# Subset to only one treatment\ndf_v2 &lt;- filter(df_v1, treatment == \"cows\")\n\n# Add together caterpillars and adult butterflies\ndf_v3 &lt;- mutate(df_v2, monarch.tot = monarch.bfly + monarch.larva)\n\n# Keep only the total monarch column\ndf_v4 &lt;- select(df_v3, monarch)"
+    "text": "Pipe Operator Example\nWithout Pipe\n# Load data\ndf_v1 &lt;- read.csv(\"butterfly.csv\")\n\n# Subset to only one treatment\ndf_v2 &lt;- filter(df_v1, treatment == \"cows\")\n\n# Add together caterpillars and adult butterflies\ndf_v3 &lt;- mutate(df_v2, monarch.tot = monarch.bfly + monarch.larva)\n\n# Keep only the total monarch column\ndf_v4 &lt;- select(df_v3, monarch.tot)"
   },
   {
     "objectID": "materials/slides_3b.html#pipe-operator-example-1",
     "href": "materials/slides_3b.html#pipe-operator-example-1",
     "title": "Intro to Data Science",
     "section": "Pipe Operator Example",
-    "text": "Pipe Operator Example\nWithout Pipe\n# Load data\ndf_v1 &lt;- read.csv(\"butterfly.csv\")\n\n# Subset to only one treatment\ndf_v2 &lt;- filter(df_v1, treatment == \"cows\")\n\n# Add together caterpillars and adult butterflies\ndf_v3 &lt;- mutate(df_v2, monarch.tot = monarch.bfly + monarch.larva)\n\n# Keep only the total monarch column\ndf_v4 &lt;- select(df_v3, monarch)\nWith Pipe\n# Load data\ndf_v1 &lt;- read.csv(\"butterfly.csv\")\n\n# Do all needed wrangling\ndf_done &lt;- df_v1 %&gt;%\n      # Subset to only one treatment\n      filter(treatment == \"cows\") %&gt;%\n      # Add together caterpillars and adult butterflies\n      mutate(monarch.tot = monarch.bfly + monarch.larva) %&gt;% \n      # Keep only the total monarch column\n      select(df_v3, monarch)"
+    "text": "Pipe Operator Example\nWithout Pipe\n# Load data\ndf_v1 &lt;- read.csv(\"butterfly.csv\")\n\n# Subset to only one treatment\ndf_v2 &lt;- filter(df_v1, treatment == \"cows\")\n\n# Add together caterpillars and adult butterflies\ndf_v3 &lt;- mutate(df_v2, monarch.tot = monarch.bfly + monarch.larva)\n\n# Keep only the total monarch column\ndf_v4 &lt;- select(df_v3, monarch.tot)\nWith Pipe\n# Load data\ndf_v1 &lt;- read.csv(\"butterfly.csv\")\n\n# Do all needed wrangling\ndf_done &lt;- df_v1 %&gt;%\n      # Subset to only one treatment\n      filter(treatment == \"cows\") %&gt;%\n      # Add together caterpillars and adult butterflies\n      mutate(monarch.tot = monarch.bfly + monarch.larva) %&gt;% \n      # Keep only the total monarch column\n      select(monarch.tot)"
   },
   {
     "objectID": "materials/slides_3b.html#why-named-pipe",

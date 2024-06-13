@@ -484,7 +484,7 @@ Lab 3 – Data Wrangling (P2)
 <span id="cb2-8"><a aria-hidden="true" tabindex="-1"></a>df_v3 <span class="ot">&lt;-</span> <span class="fu">mutate</span>(df_v2, <span class="at">monarch.tot =</span> monarch.bfly <span class="sc">+</span> monarch.larva)</span>
 <span id="cb2-9"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-10"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only the total monarch column</span></span>
-<span id="cb2-11"><a aria-hidden="true" tabindex="-1"></a>df_v4 <span class="ot">&lt;-</span> <span class="fu">select</span>(df_v3, monarch)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-11"><a aria-hidden="true" tabindex="-1"></a>df_v4 <span class="ot">&lt;-</span> <span class="fu">select</span>(df_v3, monarch.tot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="pipe-operator-example-1" class="slide level2 smaller">
 <h2><span class="orange">Pipe Operator Example</span></h2>
@@ -499,7 +499,7 @@ Lab 3 – Data Wrangling (P2)
 <span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a>df_v3 <span class="ot">&lt;-</span> <span class="fu">mutate</span>(df_v2, <span class="at">monarch.tot =</span> monarch.bfly <span class="sc">+</span> monarch.larva)</span>
 <span id="cb3-9"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-10"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only the total monarch column</span></span>
-<span id="cb3-11"><a aria-hidden="true" tabindex="-1"></a>df_v4 <span class="ot">&lt;-</span> <span class="fu">select</span>(df_v3, monarch)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-11"><a aria-hidden="true" tabindex="-1"></a>df_v4 <span class="ot">&lt;-</span> <span class="fu">select</span>(df_v3, monarch.tot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <h3 id="with-pipe">With Pipe</h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Load data</span></span>
 <span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>df_v1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"butterfly.csv"</span>)</span>
@@ -511,7 +511,7 @@ Lab 3 – Data Wrangling (P2)
 <span id="cb4-8"><a aria-hidden="true" tabindex="-1"></a>      <span class="co"># Add together caterpillars and adult butterflies</span></span>
 <span id="cb4-9"><a aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">monarch.tot =</span> monarch.bfly <span class="sc">+</span> monarch.larva) <span class="sc">%&gt;%</span> </span>
 <span id="cb4-10"><a aria-hidden="true" tabindex="-1"></a>      <span class="co"># Keep only the total monarch column</span></span>
-<span id="cb4-11"><a aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(df_v3, monarch)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-11"><a aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(monarch.tot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="why-named-pipe" class="slide level2">
 <h2><span class="orange">Why Named “Pipe”?</span></h2>
