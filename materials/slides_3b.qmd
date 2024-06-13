@@ -252,10 +252,10 @@ data %>%
 
 - Find the smallest or largest number with `min` and `max`
 
-## [Practice: Summarizing]{.orange} {.smaller}
+## [Practice: Summarizing]{.pink} {.smaller}
 
 ![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for magrittr R package"}
-![](images/hex-tidyr.png){.absolute top=0 left=965 width="12%" fig-alt="hex logo for tidyr R package"}
+![](images/hex-dplyr.png){.absolute top=0 left=965 width="12%" fig-alt="hex logo for dplyr R package"}
 ![](images/hex-penguins.png){.absolute top=115 left=1032 width="12%" fig-alt="hex logo for palmerpenguins R package"}
 
 - Using the "penguins" data in the `palmerpenguins` package, answer the following questions:
