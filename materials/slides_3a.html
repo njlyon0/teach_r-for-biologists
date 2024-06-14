@@ -826,7 +826,7 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <ul>
 <li>Remember our discussion of <span class="purple">conditionals</span> last week?
 <ul>
-<li>Types include: <code>==</code>, <code>|</code>, <code>&amp;</code>, <code>%in%</code>, <code>!=</code></li>
+<li>Types include: <code>==</code>, <code>|</code>, and <code>&amp;</code></li>
 </ul></li>
 </ul>
 <p><br>
@@ -843,7 +843,7 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 </div>
 <div class="fragment">
 <div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Subset to only butterfly milkweed records</span></span>
-<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>milkweed <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="at">.data =</span> flowers, species <span class="sc">==</span> <span class="st">"Asclepias tuberosa"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>milkweed <span class="ot">&lt;-</span> <span class="fu">filter</span>(<span class="at">.data =</span> flowers, species <span class="sc">==</span> <span class="st">"Asclepias tuberosa"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br>
 </p>
 </div>
@@ -867,9 +867,9 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <ul>
 <li>Can create multiple columns at the same time</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">.data =</span> my_df, <span class="at">new1 =</span> <span class="dv">10</span>,</span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>                      <span class="at">new2 =</span> <span class="dv">2</span>,</span>
-<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>                      <span class="at">new3 =</span> new1 <span class="sc">/</span> new2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>df_v2 <span class="ot">&lt;-</span> <span class="fu">mutate</span>(<span class="at">.data =</span> df_v1, <span class="at">new1 =</span> old1 <span class="sc">+</span> <span class="dv">2</span>,</span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>                               <span class="at">new2 =</span> old2 <span class="sc">*</span> <span class="dv">10</span>,</span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>                               <span class="at">new3 =</span> new1 <span class="sc">/</span> new2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br>
 </p>
 </div>
@@ -877,9 +877,9 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <ul>
 <li>Has optional <code>.after</code> argument to specify where you want the new column</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>my_df2, <span class="ot">&lt;-</span> <span class="fu">mutate</span>(<span class="at">.data =</span> my_df,</span>
-<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>                  <span class="at">weight_lb =</span> weight_kg <span class="sc">*</span> <span class="fl">2.2</span>,</span>
-<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>                  <span class="at">.after =</span> weight_kg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a>df_v2 <span class="ot">&lt;-</span> <span class="fu">mutate</span>(<span class="at">.data =</span> df_v1,</span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>                <span class="at">weight_lb =</span> weight_kg <span class="sc">*</span> <span class="fl">2.2</span>,</span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>                <span class="at">.after =</span> weight_kg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="column-naming-aside" class="slide level2 smaller">
@@ -908,10 +908,10 @@ Lecture 3 – R Markdowns &amp; Data Wrangling (P1)
 <li>Can choose columns to <em>keep</em> or to <em>remove</em></li>
 </ul>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only species information and count columns</span></span>
-<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(<span class="at">.data =</span> my_df, species, count)</span>
+<span id="cb8-2"><a aria-hidden="true" tabindex="-1"></a>df_v3a <span class="ot">&lt;-</span> <span class="fu">select</span>(<span class="at">.data =</span> df_v2, species, count)</span>
 <span id="cb8-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the weight column</span></span>
-<span id="cb8-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(<span class="at">.data =</span> my_df, <span class="sc">-</span>weight_kg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-5"><a aria-hidden="true" tabindex="-1"></a>df_v3b <span class="ot">&lt;-</span> <span class="fu">select</span>(<span class="at">.data =</span> df_v2, <span class="sc">-</span>weight_kg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br>
 </p>
 </div>
