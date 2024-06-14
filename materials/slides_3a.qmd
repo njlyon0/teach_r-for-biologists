@@ -385,7 +385,7 @@ my_df$species
 ## [`dplyr` Part 1: `filter`]{.orange} {.smaller}
 
 - Remember our discussion of [conditionals]{.purple} last week? 
-    - Types include: `==`, `|`, `&`, `%in%`, `!=`
+    - Types include: `==`, `|`, and `&`
 
 \
 
@@ -400,7 +400,7 @@ my_df$species
 
 ```{.r}
 # Subset to only butterfly milkweed records
-milkweed <- dplyr::filter(.data = flowers, species == "Asclepias tuberosa")
+milkweed <- filter(.data = flowers, species == "Asclepias tuberosa")
 ```
 
 \
@@ -420,9 +420,9 @@ milkweed <- dplyr::filter(.data = flowers, species == "Asclepias tuberosa")
 
 - Can create multiple columns at the same time
 ```{.r}
-mutate(.data = my_df, new1 = 10,
-                      new2 = 2,
-                      new3 = new1 / new2)
+df_v2 <- mutate(.data = df_v1, new1 = old1 + 2,
+                               new2 = old2 * 10,
+                               new3 = new1 / new2)
 ```
 
 \
@@ -431,9 +431,9 @@ mutate(.data = my_df, new1 = 10,
 
 - Has optional `.after` argument to specify where you want the new column
 ```{.r}
-my_df2, <- mutate(.data = my_df,
-                  weight_lb = weight_kg * 2.2,
-                  .after = weight_kg)
+df_v2 <- mutate(.data = df_v1,
+                weight_lb = weight_kg * 2.2,
+                .after = weight_kg)
 ```
 
 ## [Column Naming Aside]{.orange} {.smaller} 
@@ -458,10 +458,10 @@ my_df2, <- mutate(.data = my_df,
 - Can choose columns to _keep_ or to _remove_
 ```{.r}
 # Keep only species information and count columns
-select(.data = my_df, species, count)
+df_v3a <- select(.data = df_v2, species, count)
 
 # Remove the weight column
-select(.data = my_df, -weight_kg)
+df_v3b <- select(.data = df_v2, -weight_kg)
 ```
 
 \

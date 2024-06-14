@@ -31,7 +31,6 @@ format:
 - Muddiest Point Review
 - Intro to the Pipe
 - Groupwise Summarization with `dplyr`
-- Reshaping Data with `tidyr`
 - Discuss Function Tutorial Assignment
 
 ## [Today's Learning Objectives]{.purple}
@@ -42,8 +41,6 @@ After today's session you will be able to:
 
 - Use the pipe operator in your code
 - Perform group summarization with `dplyr` functions
-- Reshape data from long to wide format
-    - And vice versa
 
 ## [Muddiest Point Review]{.gold}
 
@@ -193,41 +190,6 @@ René Magritte -- _The Treachery of Images_ (1929)
 
 - `ungroup` has _no_ arguments!
 
-## [Summarization + Pipes]{.orange}
-
-Let's check out an example:
-
-\
-
-```{.r code-line-numbers="|4|6,7|9"}
-# Take data
-data %>%
-    # 1. Group by treatment
-    group_by(treatment) %>%
-    # 2. Calculate average and standard deviation
-    summarize(mean_val = mean(response),
-              sd_val = sd(response)) %>%
-    # 3. Ungroup
-    ungroup()
-```
-
-## [Summarization Warnings]{.orange} {.smaller}
-
-1. Summarizing simplifies dataframes!
-    - After summarizing, you'll have _one_ row per <u>combination</u> of grouping columns
-
-\
-
-. . . 
-
-2. [Summarizing drops columns]{.purple} _unless_:
-    1. Column is named in `group_by`
-    2. Column is created by `summarize`
-
-\
-
-- If you don't want to lose a column, it needs to meet one of those criteria
-
 ## [Relevant Helper Functions]{.orange} {.smaller}
 
 - To summarize you'll need to use functions that calculate summary values
@@ -252,6 +214,41 @@ data %>%
 
 - Find the smallest or largest number with `min` and `max`
 
+## [Summarization + Pipes]{.orange}
+
+Let's check out an example:
+
+\
+
+```{.r code-line-numbers="|4|6,7|9"}
+# Take data
+data %>%
+    # 1. Group by treatment
+    group_by(treatment) %>%
+    # 2. Calculate average and standard deviation
+    summarize(mean_val = mean(response, na.rm = TRUE),
+              sd_val = sd(response, na.rm = TRUE)) %>%
+    # 3. Ungroup
+    ungroup()
+```
+
+## [Summarization Warnings]{.orange} {.smaller}
+
+1. Summarizing simplifies dataframes!
+    - After summarizing, you'll have _one_ row per <u>combination</u> of grouping columns
+
+\
+
+. . . 
+
+2. [Summarizing drops columns]{.purple} _unless_:
+    1. Column is named in `group_by`
+    2. Column is created by `summarize`
+
+\
+
+- If you don't want to lose a column, it needs to meet one of those criteria
+
 ## [Practice: Summarizing]{.pink} {.smaller}
 
 ![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for magrittr R package"}
@@ -275,233 +272,6 @@ data %>%
 
 3. Which species <u>at which island</u> has the longest flippers for female penguins?
     - Hint: remember you can use `filter` before or after `summarize`!
-
-## [Temperature Check]{.purple}
-
-#### How are you Feeling?
-
-<p align="center">
-<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
-</p>
-
-## [Data "Shape"]{.orange} {.smaller}
-
-- Data with rows/columns has a [shape]{.purple}
-    - Shape refers to whether _observations_ are in the rows or the columns
-
-\
-
-. . .
-
-- "Wide" data has observations as _columns_
-    - E.g., Each column is a different species' count
-
-\
-
-. . .
-
-- "Long" data has observations as _rows_
-    - E.g., The columns are "species" and "count"
-
-## [Data Shape Visual]{.orange}
-
-\
-
-::::{.columns}
-:::{.column width="60%"}
-
-### Long Data
-
-:::
-:::{.column width="10%"}
-:::
-:::{.column width="30%"}
-
-### Wide Data
-
-:::
-::::
-
-![](images/shape-long.png){.fragment .fade-in .absolute top=200 left=-50 width="40%" fig-alt="Cartoon of a long table of data where there is a column with either fire or cow emojis, a column with one of three different butterfly emojis, and a third column with just '#' signs in every row"}
-
-![](images/shape-wide.png){.fragment .fade-in .absolute top=325 left=650 width="50%" fig-alt="Cartoon of a wide table of data where there is one row for cows and one row for fire and the columns are dedicated to each of the three butterfly types"}
-
-![](images/shape-arrows.png){.fragment .fade-in .absolute top=325 left=400 width="20%" fig-alt="Two arrows--one facing left and the other right--between the two tables. The arrow point from wide to long is labeled 'pivot longer' and the opposite arrow is labeled 'pivot wider'"}
-
-## [Reshaping Longer]{.orange} {.smaller}
-
-- Change _from_ wide _to_ long format with `tidyr::pivot_longer`
-    - Has 4 key arguments
-
-\
-
-. . . 
-
-1. `data` = the wide data to pivot
-
-
-\
-
-. . .
-
-2. `cols` = the columns to pivot
-    - Can select which columns to pivot _OR_ which to **not**
-    - Include: `cols = colD:colX`
-    - Exclude: `cols = -colA:-colC`
-
-## [Reshaping Longer Continued]{.orange} {.smaller}
-
-3. `names_to` = name of new column to hold old column names
-    - Must be in quotes
-
-\
-
-. . .
-
-4. `values_to` = name of new column to hold _values_
-    - Also in quotes
-
-\
-
-. . .
-
-- Example (for syntax):
-```{.r}
-pivot_longer(data = my_df,
-             columns = hydrogen:uranium,
-             names_to = "element",
-             values_to = "measurement")
-```
-
-## [Reshaping Longer Visual]{.orange}
-
-<p align="center">
-<img src="images/graphic-pivot-longer.png" alt="Diagram showing how the 'tidyr' package allows users to pivot data into long format (from wide format) using the 'pivot_longer' function" width="120%">
-</p>
-
-## [Practice: `pivot_longer`]{.pink} {.smaller}
-
-![](images/hex-tidyr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the tidyr R package"}
-
-1. Download the "bees.csv" and load it into R with `read.csv`
-    - Check its structure! What columns are there?
-
-\
-
-. . .
-
-2. Pivot the data so that you are left with three columns:
-    - "year", "bee_group", and "bee_abundance"
-
-\
-
-. . . 
-
-3. Check your work! What are the dimensions of the resulting dataframe?
-
-. . . 
-
-- Should be 32 rows by 3 columns
-
-
-## [Reshaping Wider]{.orange} {.smaller}
-
-- Change _from_ long _to_ wide format with `tidyr::pivot_wider`
-    - Also has 4 key arguments
-
-\
-
-. . . 
-
-1. `data` = the wide data to pivot
-
-
-\
-
-. . .
-
-2. `names_from` = name of the column to turn into new column names
-    - Must be <u>unquoted</u>
-
-## [Reshaping Wider Continued]{.orange} {.smaller}
-
-3. `values_from` = name of column to make into new column values
-    - Also <u>unquoted</u>
-
-\
-
-. . .
-
-4. `values_fill` = value to fill if value is missing in original data
-    - Technically optional but good practice to include explicitly
-
-\
-
-. . .
-
-- Example:
-```{.r}
-pivot_wider(data = my_df,
-            names_from = "fruit",
-            values_from = "size",
-            values_fill = NA)
-```
-
-## [Reshaping Wider Visual]{.orange}
-
-<p align="center">
-<img src="images/graphic-pivot-wider.png" alt="Diagram showing how the 'tidyr' package allows users to pivot data into wide format (from long format) using the 'pivot_wider' function" width="120%">
-</p>
-
-## [Practice: `pivot_wider`]{.pink}
-
-![](images/hex-tidyr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the tidyr R package"}
-
-1. Take the data object you pivoted to long format in the prior practice block
-
-\
-
-. . . 
-
-2. Pivot it back to wide format with `pivot_wider`!
-
-\
-
-. . . 
-
-3. Check your work!
-    - Does it look like the original object you loaded with `read.csv`?
-
-## [Practice: Wrangling!]{.pink} {.smaller}
-
-![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the magrittr R package"}
-![](images/hex-tidyr.png){.absolute top=0 left=965 width="12%" fig-alt="hex logo for the tidyr R package"}
-![](images/hex-dplyr.png){.absolute top=115 left=1032 width="12%" fig-alt="hex logo for the dplyr R package"}
-![](images/hex-penguins.png){.absolute top=115 left=897 width="12%" fig-alt="hex logo for the palmerpenguins R package"}
-
-- Beginning with the "penguins" data do the following operations:
-
-. . .
-
-1. Keep only data on female penguins
-    - No male penguins and no individuals where sex is not known
-
-. . .
-
-2. Calculate average bill depth within species **and** island
-
-. . .
-
-3. Reshape _to_ wide format so that each island is a column
-    - Note that if an island doesn't have a given species it should have `NA` (not `0`)
-
-. . .
-
-4. Check your work! What are the dimensions of the resulting dataframe?
-
-. . . 
-
-- Should be 6 rows by 5 columns
 
 ## [Temperature Check]{.purple}
 
@@ -694,7 +464,6 @@ After completing this assignment you will be able to:
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lecture
@@ -707,7 +476,6 @@ After completing this assignment you will be able to:
 
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lab
@@ -717,6 +485,235 @@ After completing this assignment you will be able to:
 - Muddiest Point \#4
 
 :::
-
 ::::
+
+# [Bonus: Data Shape]{.orange}
+
+## [Bonus Learning Objectives]{.purple}
+
+After this bonus session you will be able to:
+
+. . .
+
+- Reshape data from long to wide format
+    - And vice versa
+
+## [Data "Shape"]{.orange} {.smaller}
+
+- Data with rows/columns has a [shape]{.purple}
+    - Shape refers to whether _observations_ are in the rows or the columns
+
+\
+
+. . .
+
+- "Wide" data has observations as _columns_
+    - E.g., Each column is a different species' count
+
+\
+
+. . .
+
+- "Long" data has observations as _rows_
+    - E.g., The columns are "species" and "count"
+
+## [Data Shape Visual]{.orange}
+
+\
+
+::::{.columns}
+:::{.column width="60%"}
+
+### Long Data
+
+:::
+:::{.column width="10%"}
+:::
+:::{.column width="30%"}
+
+### Wide Data
+
+:::
+::::
+
+![](images/shape-long.png){.fragment .fade-in .absolute top=200 left=-50 width="40%" fig-alt="Cartoon of a long table of data where there is a column with either fire or cow emojis, a column with one of three different butterfly emojis, and a third column with just '#' signs in every row"}
+
+![](images/shape-wide.png){.fragment .fade-in .absolute top=325 left=650 width="50%" fig-alt="Cartoon of a wide table of data where there is one row for cows and one row for fire and the columns are dedicated to each of the three butterfly types"}
+
+![](images/shape-arrows.png){.fragment .fade-in .absolute top=325 left=400 width="20%" fig-alt="Two arrows--one facing left and the other right--between the two tables. The arrow point from wide to long is labeled 'pivot longer' and the opposite arrow is labeled 'pivot wider'"}
+
+## [Reshaping Longer]{.orange} {.smaller}
+
+- Change _from_ wide _to_ long format with `tidyr::pivot_longer`
+    - Has 4 key arguments
+
+\
+
+. . . 
+
+1. `data` = the wide data to pivot
+
+
+\
+
+. . .
+
+2. `cols` = the columns to pivot
+    - Can select which columns to pivot _OR_ which to **not**
+    - Include: `cols = colD:colX`
+    - Exclude: `cols = -colA:-colC`
+
+## [Reshaping Longer Continued]{.orange} {.smaller}
+
+3. `names_to` = name of new column to hold old column names
+    - Must be in quotes
+
+\
+
+. . .
+
+4. `values_to` = name of new column to hold _values_
+    - Also in quotes
+
+\
+
+. . .
+
+- Example (for syntax):
+```{.r}
+df_long <- pivot_longer(data = my_df,
+                        columns = hydrogen:uranium,
+                        names_to = "element",
+                        values_to = "measurement")
+```
+
+## [Reshaping Longer Visual]{.orange}
+
+<p align="center">
+<img src="images/graphic-pivot-longer.png" alt="Diagram showing how the 'tidyr' package allows users to pivot data into long format (from wide format) using the 'pivot_longer' function" width="120%">
+</p>
+
+## [Practice: `pivot_longer`]{.pink} {.smaller}
+
+![](images/hex-tidyr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the tidyr R package"}
+
+1. Download the "bees.csv" and load it into R with `read.csv`
+    - Check its structure! What columns are there?
+
+\
+
+. . .
+
+2. Pivot the data so that you are left with three columns:
+    - "year", "bee_group", and "bee_abundance"
+
+\
+
+. . . 
+
+3. Check your work! What are the dimensions of the resulting dataframe?
+
+. . . 
+
+- Should be 32 rows by 3 columns
+
+
+## [Reshaping Wider]{.orange} {.smaller}
+
+- Change _from_ long _to_ wide format with `tidyr::pivot_wider`
+    - Also has 4 key arguments
+
+\
+
+. . . 
+
+1. `data` = the wide data to pivot
+
+
+\
+
+. . .
+
+2. `names_from` = name of the column to turn into new column names
+    - Must be <u>unquoted</u>
+
+## [Reshaping Wider Continued]{.orange} {.smaller}
+
+3. `values_from` = name of column to make into new column values
+    - Also <u>unquoted</u>
+
+\
+
+. . .
+
+4. `values_fill` = value to fill if value is missing in original data
+    - Technically optional but good practice to include explicitly
+
+\
+
+. . .
+
+- Example:
+```{.r}
+df_wide <- pivot_wider(data = my_df,
+                       names_from = "fruit",
+                       values_from = "size",
+                       values_fill = NA)
+```
+
+## [Reshaping Wider Visual]{.orange}
+
+<p align="center">
+<img src="images/graphic-pivot-wider.png" alt="Diagram showing how the 'tidyr' package allows users to pivot data into wide format (from long format) using the 'pivot_wider' function" width="120%">
+</p>
+
+## [Practice: `pivot_wider`]{.pink}
+
+![](images/hex-tidyr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the tidyr R package"}
+
+1. Take the data object you pivoted to long format in the prior practice block
+
+\
+
+. . . 
+
+2. Pivot it back to wide format with `pivot_wider`!
+
+\
+
+. . . 
+
+3. Check your work!
+    - Does it look like the original object you loaded with `read.csv`?
+
+## [Practice: Wrangling!]{.pink} {.smaller}
+
+![](images/hex-magrittr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the magrittr R package"}
+![](images/hex-tidyr.png){.absolute top=0 left=965 width="12%" fig-alt="hex logo for the tidyr R package"}
+![](images/hex-dplyr.png){.absolute top=115 left=1032 width="12%" fig-alt="hex logo for the dplyr R package"}
+![](images/hex-penguins.png){.absolute top=115 left=897 width="12%" fig-alt="hex logo for the palmerpenguins R package"}
+
+- Beginning with the "penguins" data do the following operations:
+
+. . .
+
+1. Keep only data on female penguins
+    - No male penguins and no individuals where sex is not known
+
+. . .
+
+2. Calculate average bill depth within species **and** island
+
+. . .
+
+3. Reshape _to_ wide format so that each island is a column
+    - Note that if an island doesn't have a given species it should have `NA` (not `0`)
+
+. . .
+
+4. Check your work! What are the dimensions of the resulting dataframe?
+
+. . . 
+
+- Should be 6 rows by 5 columns
 
