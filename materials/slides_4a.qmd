@@ -57,7 +57,7 @@ After today's session you will be able to:
 
 . . . 
 
-- Conditional matching like this is called "joining" data
+- Matching two data objects like this is called "[joining]{.purple}"
 
 ## [Join Example]{.orange} {.smaller}
 
@@ -65,11 +65,15 @@ After today's session you will be able to:
 
 \
 
+. . .
+
 - You collect the following data:
     1. number of frogs at ponds
     2. daily rainfall at those ponds
 
 \
+
+. . . 
 
 - Need to [join]{.purple} the frog abundance and rain amount data matched _by their pond_
 
@@ -83,11 +87,13 @@ After today's session you will be able to:
 
 \
 
+. . .
+
 - Let's look at some example syntax
 ```{.r}
 # Join frog and rain data by pond ID
-<type>_join(x = frog_df, y = rain_df,
-            by = c("pond_name"))
+combo_df <- left_join(x = frog_df, y = rain_df,
+                      by = "pond_name")
 ```
 
 ## [Left Joins]{.orange}
@@ -132,18 +138,25 @@ After today's session you will be able to:
 
 - Any questions on this study or these example datasets?
 
-## [Practice: Left Joins]{.pink}
+## [Practice: Left Joins]{.pink} {.smaller}
 
-![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the dplyr R package"}
 
 - Download the "tree_lichen.csv" and "tree_road.csv" from the course page
-    - Load them into R and check their structure
+
+\
+
+. . . 
+
+- Load them into R and check their structure
+    - Remember to use the `read.csv` function
+
 
 \
 
 . . .
 
-- Use a [<u>left</u> join]{.purple} to combine these two dataframes by tree ID
+- Use a [**left** join]{.purple} to combine these two dataframes by tree ID
     - What is the structure of the resulting dataframe?
 
 ## [Inner Joins]{.orange}
@@ -155,13 +168,17 @@ After today's session you will be able to:
 
 <img src="images/graphic-join-inner.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns and only an 'A' row" width="95%">
 
-## [Outer Joins]{.orange}
+## [Outer Joins]{.orange} {.smaller}
 
 - Outer joins keep columns from both left and right **and** _all rows_ 
 
 . . .
 
 <img src="images/graphic-join-outer.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns and 'A', 'B', and 'C' rows" width="95%">
+
+. . .
+
+- This join type is also known as a "full join" or "full outer join"
 
 ## [Revisiting Lichen Data]{.gold}
 
@@ -181,11 +198,13 @@ After today's session you will be able to:
 
 ## [Practice: Inner/Outer Joins]{.pink}
 
-![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the dplyr R package"}
 
 - Use a [full join]{.purple} to combine the original lichen and road distance objects
 
 \
+
+. . .
 
 - What is the structure of the resulting dataframe?
 
@@ -223,7 +242,7 @@ After today's session you will be able to:
 
 ## [Practice: Anti Joins]{.pink} {.smaller}
 
-![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-dplyr.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the dplyr R package"}
 
 - Use an [anti join]{.purple} to combine the original lichen and road distance objects
 
@@ -300,7 +319,7 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-## [Function Tutorial Assignment]{.orange}
+## [Function Tutorial Assignment]{.gold} {.smaller}
 
 - Picking functions today!
 
@@ -316,9 +335,11 @@ After today's session you will be able to:
 
 ## [Randomizing Vectors]{.orange} {.smaller}
 
-- We'll use `sample` to randomize student order
+- We'll use the `sample` function to randomize student order
 
 \
+
+. . . 
 
 - `sample` has three main arguments:
     - `x` = vector to randomize
@@ -391,12 +412,9 @@ sample(x = students, size = 3, replace = FALSE)
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-
-
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lab
@@ -406,7 +424,6 @@ sample(x = students, size = 3, replace = FALSE)
 - Muddiest Point \#4
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lecture
@@ -417,6 +434,5 @@ sample(x = students, size = 3, replace = FALSE)
 - Read [Model selection in ecology and evolution](https://www.uvm.edu/~bmitchel/NR385/Johnson_Model_selection.pdf)
 
 :::
-
 ::::
 
