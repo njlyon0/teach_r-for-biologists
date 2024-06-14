@@ -450,7 +450,7 @@ Lecture 4 – Joining Data
 </div>
 <div class="fragment">
 <ul>
-<li>Conditional matching like this is called “joining” data</li>
+<li>Matching two data objects like this is called “<span class="purple">joining</span>”</li>
 </ul>
 </div>
 </section>
@@ -461,6 +461,7 @@ Lecture 4 – Joining Data
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>You collect the following data:
 <ol type="1">
@@ -470,9 +471,12 @@ Lecture 4 – Joining Data
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Need to <span class="purple">join</span> the frog abundance and rain amount data matched <em>by their pond</em></li>
 </ul>
+</div>
 </section>
 <section id="join-types" class="slide level2 smaller">
 <h2><span class="orange">Join Types</span></h2>
@@ -487,12 +491,14 @@ Lecture 4 – Joining Data
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Let’s look at some example syntax</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Join frog and rain data by pond ID</span></span>
-<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>type<span class="sc">&gt;</span><span class="fu">_join</span>(<span class="at">x =</span> frog_df, <span class="at">y =</span> rain_df,</span>
-<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"pond_name"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>combo_df <span class="ot">&lt;-</span> <span class="fu">left_join</span>(<span class="at">x =</span> frog_df, <span class="at">y =</span> rain_df,</span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>                      <span class="at">by =</span> <span class="st">"pond_name"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="left-joins" class="slide level2">
 <h2><span class="orange">Left Joins</span></h2>
@@ -549,20 +555,27 @@ Lecture 4 – Joining Data
 </ul>
 </div>
 </section>
-<section id="practice-left-joins" class="slide level2">
+<section id="practice-left-joins" class="slide level2 smaller">
 <h2><span class="pink">Practice: Left Joins</span></h2>
-<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for the dplyr R package"></p>
 <ul>
-<li>Download the “tree_lichen.csv” and “tree_road.csv” from the course page
-<ul>
-<li>Load them into R and check their structure</li>
-</ul></li>
+<li>Download the “tree_lichen.csv” and “tree_road.csv” from the course page</li>
 </ul>
 <p><br>
 </p>
 <div class="fragment">
 <ul>
-<li>Use a <span class="purple"><u>left</u> join</span> to combine these two dataframes by tree ID
+<li>Load them into R and check their structure
+<ul>
+<li>Remember to use the <code>read.csv</code> function</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Use a <span class="purple"><strong>left</strong> join</span> to combine these two dataframes by tree ID
 <ul>
 <li>What is the structure of the resulting dataframe?</li>
 </ul></li>
@@ -581,13 +594,18 @@ Lecture 4 – Joining Data
 <p><img src="images/graphic-join-inner.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns and only an 'A' row" width="95%"></p>
 </div>
 </section>
-<section id="outer-joins" class="slide level2">
+<section id="outer-joins" class="slide level2 smaller">
 <h2><span class="orange">Outer Joins</span></h2>
 <ul>
 <li>Outer joins keep columns from both left and right <strong>and</strong> <em>all rows</em></li>
 </ul>
 <div class="fragment">
 <p><img src="images/graphic-join-outer.png" alt="Table with an 'X' column and 'A' and 'B' rows gets joined with a second table with a 'Y' column and 'A' and 'C' rows to produce a single table with 'X' and Y' columns and 'A', 'B', and 'C' rows" width="95%"></p>
+</div>
+<div class="fragment">
+<ul>
+<li>This join type is also known as a “full join” or “full outer join”</li>
+</ul>
 </div>
 </section>
 <section id="revisiting-lichen-data" class="slide level2">
@@ -612,17 +630,19 @@ Lecture 4 – Joining Data
 </section>
 <section id="practice-innerouter-joins" class="slide level2">
 <h2><span class="pink">Practice: Inner/Outer Joins</span></h2>
-<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for the dplyr R package"></p>
 <ul>
 <li>Use a <span class="purple">full join</span> to combine the original lichen and road distance objects</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>What is the structure of the resulting dataframe?</li>
 </ul>
 <p><br>
 </p>
+</div>
 <div class="fragment">
 <ul>
 <li>How does this differ from the result of your <strong>left</strong> join earlier?</li>
@@ -666,7 +686,7 @@ Lecture 4 – Joining Data
 </section>
 <section id="practice-anti-joins" class="slide level2 smaller">
 <h2><span class="pink">Practice: Anti Joins</span></h2>
-<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-dplyr.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for the dplyr R package"></p>
 <ul>
 <li>Use an <span class="purple">anti join</span> to combine the original lichen and road distance objects</li>
 </ul>
@@ -771,8 +791,8 @@ Lecture 4 – Joining Data
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 </section>
-<section id="function-tutorial-assignment" class="slide level2">
-<h2><span class="orange">Function Tutorial Assignment</span></h2>
+<section id="function-tutorial-assignment" class="slide level2 smaller">
+<h2><span class="gold">Function Tutorial Assignment</span></h2>
 <ul>
 <li>Picking functions today!</li>
 </ul>
@@ -796,10 +816,11 @@ Lecture 4 – Joining Data
 <section id="randomizing-vectors" class="slide level2 smaller">
 <h2><span class="orange">Randomizing Vectors</span></h2>
 <ul>
-<li>We’ll use <code>sample</code> to randomize student order</li>
+<li>We’ll use the <code>sample</code> function to randomize student order</li>
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li><code>sample</code> has three main arguments:
 <ul>
@@ -810,6 +831,7 @@ Lecture 4 – Joining Data
 </ul>
 <p><br>
 </p>
+</div>
 <div class="fragment">
 <ul>
 <li>In our case:

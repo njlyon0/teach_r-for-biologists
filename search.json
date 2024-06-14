@@ -1418,21 +1418,21 @@
     "href": "materials/slides_4a.html#join-background",
     "title": "Intro to Data Science",
     "section": "Join Background",
-    "text": "Join Background\n\nTo test a hypothesis we often need to collect multiple types of data\n\nBut, virtually all statistical tools require one data object\n\n\n\n\n\n\nSomehow you need to combine data from multiple sources\n\nUsually based on the contents of a shared column in both sources\n\n\n\n\n\n\n\nConditional matching like this is called “joining” data"
+    "text": "Join Background\n\nTo test a hypothesis we often need to collect multiple types of data\n\nBut, virtually all statistical tools require one data object\n\n\n\n\n\n\nSomehow you need to combine data from multiple sources\n\nUsually based on the contents of a shared column in both sources\n\n\n\n\n\n\n\nMatching two data objects like this is called “joining”"
   },
   {
     "objectID": "materials/slides_4a.html#join-example",
     "href": "materials/slides_4a.html#join-example",
     "title": "Intro to Data Science",
     "section": "Join Example",
-    "text": "Join Example\n\nYou want to test how frogs are affected by rainfall\n\n\n\n\nYou collect the following data:\n\nnumber of frogs at ponds\ndaily rainfall at those ponds\n\n\n\n\n\nNeed to join the frog abundance and rain amount data matched by their pond"
+    "text": "Join Example\n\nYou want to test how frogs are affected by rainfall\n\n\n\n\n\nYou collect the following data:\n\nnumber of frogs at ponds\ndaily rainfall at those ponds\n\n\n\n\n\n\n\nNeed to join the frog abundance and rain amount data matched by their pond"
   },
   {
     "objectID": "materials/slides_4a.html#join-types",
     "href": "materials/slides_4a.html#join-types",
     "title": "Intro to Data Science",
     "section": "Join Types",
-    "text": "Join Types\n\nFour major flavors of join:\n\nLeft / Right Join\nInner Join\nOuter Join (sometimes also known as “full” or “full outer”)\nAnti Join\n\n\n\n\n\nLet’s look at some example syntax\n\n# Join frog and rain data by pond ID\n&lt;type&gt;_join(x = frog_df, y = rain_df,\n            by = c(\"pond_name\"))"
+    "text": "Join Types\n\nFour major flavors of join:\n\nLeft / Right Join\nInner Join\nOuter Join (sometimes also known as “full” or “full outer”)\nAnti Join\n\n\n\n\n\n\nLet’s look at some example syntax\n\n# Join frog and rain data by pond ID\ncombo_df &lt;- left_join(x = frog_df, y = rain_df,\n                      by = \"pond_name\")"
   },
   {
     "objectID": "materials/slides_4a.html#left-joins",
@@ -1460,7 +1460,7 @@
     "href": "materials/slides_4a.html#practice-left-joins",
     "title": "Intro to Data Science",
     "section": "Practice: Left Joins",
-    "text": "Practice: Left Joins\n\n\nDownload the “tree_lichen.csv” and “tree_road.csv” from the course page\n\nLoad them into R and check their structure\n\n\n\n\n\n\nUse a left join to combine these two dataframes by tree ID\n\nWhat is the structure of the resulting dataframe?"
+    "text": "Practice: Left Joins\n\n\nDownload the “tree_lichen.csv” and “tree_road.csv” from the course page\n\n\n\n\n\nLoad them into R and check their structure\n\nRemember to use the read.csv function\n\n\n\n\n\n\n\nUse a left join to combine these two dataframes by tree ID\n\nWhat is the structure of the resulting dataframe?"
   },
   {
     "objectID": "materials/slides_4a.html#inner-joins",
@@ -1474,7 +1474,7 @@
     "href": "materials/slides_4a.html#outer-joins",
     "title": "Intro to Data Science",
     "section": "Outer Joins",
-    "text": "Outer Joins\n\nOuter joins keep columns from both left and right and all rows"
+    "text": "Outer Joins\n\nOuter joins keep columns from both left and right and all rows\n\n\n\n\n\n\nThis join type is also known as a “full join” or “full outer join”"
   },
   {
     "objectID": "materials/slides_4a.html#revisiting-lichen-data",
@@ -1488,7 +1488,7 @@
     "href": "materials/slides_4a.html#practice-innerouter-joins",
     "title": "Intro to Data Science",
     "section": "Practice: Inner/Outer Joins",
-    "text": "Practice: Inner/Outer Joins\n\n\nUse a full join to combine the original lichen and road distance objects\n\n\n\n\nWhat is the structure of the resulting dataframe?\n\n\n\n\n\nHow does this differ from the result of your left join earlier?"
+    "text": "Practice: Inner/Outer Joins\n\n\nUse a full join to combine the original lichen and road distance objects\n\n\n\n\n\nWhat is the structure of the resulting dataframe?\n\n\n\n\n\n\nHow does this differ from the result of your left join earlier?"
   },
   {
     "objectID": "materials/slides_4a.html#anti-joins",
@@ -1551,7 +1551,7 @@
     "href": "materials/slides_4a.html#randomizing-vectors",
     "title": "Intro to Data Science",
     "section": "Randomizing Vectors",
-    "text": "Randomizing Vectors\n\nWe’ll use sample to randomize student order\n\n\n\n\nsample has three main arguments:\n\nx = vector to randomize\nsize = number of times to randomly sample\nreplace = whether vector elements can be retrieved more than once\n\n\n\n\n\n\nIn our case:\n\nx = vector of student names\nsize = number of students\nreplace = FALSE (don’t want to double pick the same student)"
+    "text": "Randomizing Vectors\n\nWe’ll use the sample function to randomize student order\n\n\n\n\n\nsample has three main arguments:\n\nx = vector to randomize\nsize = number of times to randomly sample\nreplace = whether vector elements can be retrieved more than once\n\n\n\n\n\n\n\nIn our case:\n\nx = vector of student names\nsize = number of students\nreplace = FALSE (don’t want to double pick the same student)"
   },
   {
     "objectID": "materials/slides_4a.html#randomizing-vectors-demo",
