@@ -121,7 +121,7 @@ After today's session you will be able to:
 
 . . .
 
-![](images/sunflower-hypothesis.png){.absolute top=450 left=750 width="40%"}
+![](images/sunflower-hypothesis.png){.absolute top=450 left=750 width="40%" fig-alt="cartoon of a small sunflower emoji labeled 'regular soil' and a larger sunflower emoji labeled '+N soil'"}
 
 ## [Stats Example Continued]{.orange} {.smaller}
 
@@ -156,7 +156,7 @@ After today's session you will be able to:
 
 . . .
 
-- A perfect experiment with inappropriate statistics is <u>not good science</u>
+- [A perfect experiment with inappropriate statistics is <u>not good science</u>]{.purple}
 
 ## [Data Science & Statistics]{.orange} {.smaller}
 
@@ -195,6 +195,19 @@ After today's session you will be able to:
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
+
+## [Hypothesis Testing Philosophies]{.orange} {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+#### Null Hypothesis Testing
+
+:::
+:::{.column width="50%"}
+#### Multi-Model Inference
+
+:::
+::::
 
 ## [Hypothesis Testing Philosophies]{.orange} {.smaller}
 
@@ -258,6 +271,8 @@ After today's session you will be able to:
 
 - Null hypothesis testing & multi-model inference are <u>both</u> good science!
     - Just different framings of a hypothesis
+
+. . .
 
 ::::{.columns}
 :::{.column width="50%"}
@@ -325,7 +340,7 @@ After today's session you will be able to:
 
 ## [Null Hypothesis: P Values]{.orange} {.smaller}
 
-- P values < 0.05 are called "significant"
+- P values < 0.05 are called [significant]{.purple}
     - Significant P values mean you 'reject the null hypothesis'
     - I.e., you find support for your hypothesis!
 
@@ -340,7 +355,7 @@ After today's session you will be able to:
 
 . . .
 
-- In science writing, "significant" **_always_** means P < 0.05
+- In science writing, ["significant" **_always_** means P < 0.05]{.purple}
     - Use synonyms for non-P value contexts
     - E.g., dramatic, substantial, important, etc.
 
@@ -363,6 +378,20 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+
+## [Variable Types]{.orange} {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+### Continous
+
+:::
+:::{.column width="50%"}
+### Categorical
+
+:::
+::::
+
 ## [Variable Types]{.orange} {.smaller}
 
 ::::{.columns}
@@ -374,7 +403,7 @@ After today's session you will be able to:
 \
 
 - Okay if coercible to number
-    - I.e., "yes" vs. "no" becomes 0 vs. 1
+    - I.e., months can become 1-12
 
 \
 
@@ -401,7 +430,7 @@ After today's session you will be able to:
 \
 
 - Okay if coercible to number
-    - I.e., "yes" vs. "no" becomes 0 vs. 1
+    - I.e., months can become 1-12
 
 \
 
@@ -441,7 +470,20 @@ After today's session you will be able to:
 :::{.column width="50%"}
 #### Response Variables
 
-- Data measured to test hypothesis
+:::
+:::{.column width="50%"}
+#### Explanatory Variables
+
+:::
+::::
+
+## [Variables & Hypothesis Testing]{.orange} {.smaller}
+
+::::{.columns}
+:::{.column width="50%"}
+#### Response Variables
+
+- Data collected to test hypothesis
 
 \
 
@@ -467,7 +509,7 @@ After today's session you will be able to:
 :::{.column width="50%"}
 #### Response Variables
 
-- Data measured to test hypothesis
+- Data collected to test hypothesis
 
 \
 
@@ -506,9 +548,9 @@ After today's session you will be able to:
 
 :::{.r-stack}
 
-![](images/stats-roadmap-v0.png){.fragment .fade-out}
+![](images/stats-roadmap-v0.png){.fragment .fade-out fig-alt="two by two table with explanatory variables as the rows and response variables as the columns. The first row and first column are both labeled 'categorical' and the other row/column is labeled 'continuous'"}
 
-![](images/stats-roadmap-v1.png){.fragment .fade-in}
+![](images/stats-roadmap-v1.png){.fragment .fade-in fig-alt="two by two table with explanatory variables as the rows and response variables as the columns. The first row and first column are both labeled 'categorical' and the other row/column is labeled 'continuous'. Categorical response with categorical explanatory is labeled 'chi square', both continuous is labeled 'regression'. Continuous response with categorical explanatory is labeled 'ANOVA' while the opposite corner of the table is labeled 'generalized linear model'"}
 
 :::
 
@@ -589,7 +631,7 @@ my_model <- lm(response ~ explanatory, data = my_df)
 
 ## [Practice: Regression]{.pink} {.smaller}
 
-![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for palmerpenguins R package"}
 
 - You are studying penguins and want to test the following hypotheses:
     - H~A~: As penguin bill length increases, bill depth decreases
@@ -617,7 +659,7 @@ my_model <- lm(response ~ explanatory, data = my_df)
 \
 
 <p align="center">
-<img src="images/regression-table.png" alt="" width="55%">
+<img src="images/regression-table.png" alt="Screen capture of the output of the 'summary' function when used on a model object made by the 'lm' function" width="55%">
 </p>
 
 ## [Interpreting Summary Tables]{.orange} {.smaller}
@@ -627,7 +669,7 @@ my_model <- lm(response ~ explanatory, data = my_df)
 \
 
 <p align="center">
-<img src="images/regression-table-annotated.png" alt="" width="100%">
+<img src="images/regression-table-annotated.png" alt="Annotated screen capture of the output of the 'summary' function when used on a model object made by the 'lm' function. Y-intercept, explanatory variable, slope of line, test statistic, p value, p value asterisks, and p value asterisk codes are all separately indicated in the screen capture" width="100%">
 </p>
 
 ## [<u>An</u>alysis <u>o</u>f <u>Va</u>riance (ANOVA)]{.orange} {.smaller}
@@ -675,7 +717,7 @@ ggplot(peng_avgdf, aes(x = species, y = mean, fill = species)) +
 
 ## [Practice: ANOVA]{.pink} {.smaller}
 
-![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for palmerpenguins R package"}
 
 - You are still studying penguins but have new hypotheses:
     - H~A~: Penguin species have _different_ flipper lengths
@@ -711,7 +753,7 @@ ggplot(peng_avgdf, aes(x = species, y = mean, fill = species)) +
 
 . . . 
 
-![](images/chi-square-table.png){.absolute top=450 left=550 width="60%"}
+![](images/chi-square-table.png){.absolute top=450 left=550 width="60%" fig-alt="two by two table of fake data indicating the number of patients who are cured or not when given either a treatment or a placebo"}
 
 ## [Temperature Check]{.purple}
 
@@ -724,7 +766,6 @@ ggplot(peng_avgdf, aes(x = species, y = mean, fill = species)) +
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lecture
@@ -735,7 +776,6 @@ ggplot(peng_avgdf, aes(x = species, y = mean, fill = species)) +
 - Read [Model selection in ecology and evolution](https://www.uvm.edu/~bmitchel/NR385/Johnson_Model_selection.pdf)
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lab
@@ -743,10 +783,8 @@ ggplot(peng_avgdf, aes(x = species, y = mean, fill = species)) +
 #### (By midnight)
 
 - Muddiest Point \#5
--  [Draft 1]{.pink} of Function Tutorials
+-  [Draft 1]{.blue} of Function Tutorials
     - Double check rubric to see that you’re not leaving any points on the table!
 
 :::
-
 ::::
-
