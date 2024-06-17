@@ -1887,11 +1887,18 @@
     "href": "materials/slides_4b.html#hypothesis-testing-philosophies",
     "title": "Intro to Data Science",
     "section": "Hypothesis Testing Philosophies",
-    "text": "Hypothesis Testing Philosophies\n\n\nNull Hypothesis Testing\n\nMake hypothesis & “null hypothesis”\n\nHA: Something is happening\nH0: Nothing is happening\n\nAssess odds of obtaining results as extreme as observations assuming H0 is correct\n\n\n\n\nMeasured by P value\n\nRanges from 0 (0%) to 1 (100%)\n\n\n\nMulti-Model Inference"
+    "text": "Hypothesis Testing Philosophies\n\n\nNull Hypothesis Testing\n\nMulti-Model Inference"
   },
   {
     "objectID": "materials/slides_4b.html#hypothesis-testing-philosophies-1",
     "href": "materials/slides_4b.html#hypothesis-testing-philosophies-1",
+    "title": "Intro to Data Science",
+    "section": "Hypothesis Testing Philosophies",
+    "text": "Hypothesis Testing Philosophies\n\n\nNull Hypothesis Testing\n\nMake hypothesis & “null hypothesis”\n\nHA: Something is happening\nH0: Nothing is happening\n\nAssess odds of obtaining results as extreme as observations assuming H0 is correct\n\n\n\n\nMeasured by P value\n\nRanges from 0 (0%) to 1 (100%)\n\n\n\nMulti-Model Inference"
+  },
+  {
+    "objectID": "materials/slides_4b.html#hypothesis-testing-philosophies-2",
+    "href": "materials/slides_4b.html#hypothesis-testing-philosophies-2",
     "title": "Intro to Data Science",
     "section": "Hypothesis Testing Philosophies",
     "text": "Hypothesis Testing Philosophies\n\n\nNull Hypothesis Testing\n\nMake hypothesis & “null hypothesis”\n\nHA: Something is happening\nH0: Nothing is happening\n\nAssess odds of obtaining results as extreme as observations assuming H0 is correct\n\n\n\n\nMeasured by P value\n\nRanges from 0 (0%) to 1 (100%)\n\n\n\nMulti-Model Inference\n\nDefine many possible explanations for observation\n\nI.e., many competing hypotheses\n\nCompare model strength\n\nStronger models are better fit for the data and thus are more likely to be true\n\n\n\n\n\nMore on this in Lecture #5!"
@@ -1901,7 +1908,7 @@
     "href": "materials/slides_4b.html#philosophies-continued",
     "title": "Intro to Data Science",
     "section": "Philosophies Continued",
-    "text": "Philosophies Continued\n\nNull hypothesis testing & multi-model inference are both good science!\n\nJust different framings of a hypothesis\n\n\n\n\n\nDoes temperature have more of an effect than rainfall on newt growth?\n\n\n\nHigher temperatures and more rainfall affect newt growth"
+    "text": "Philosophies Continued\n\nNull hypothesis testing & multi-model inference are both good science!\n\nJust different framings of a hypothesis\n\n\n\n\n\n\nDoes temperature have more of an effect than rainfall on newt growth?\n\n\n\nHigher temperatures and more rainfall affect newt growth"
   },
   {
     "objectID": "materials/slides_4b.html#philosophies-continued-1",
@@ -1922,7 +1929,7 @@
     "href": "materials/slides_4b.html#null-hypothesis-p-values",
     "title": "Intro to Data Science",
     "section": "Null Hypothesis: P Values",
-    "text": "Null Hypothesis: P Values\n\nP values &lt; 0.05 are called “significant”\n\nSignificant P values mean you ‘reject the null hypothesis’\nI.e., you find support for your hypothesis!\n\n\n\n\n\n\n0.05 &lt; p &lt; 0.1 is ‘marginally significant’\n\nA.k.a. weak evidence of support for hypothesis\n\n\n\n\n\n\n\nIn science writing, “significant” always means P &lt; 0.05\n\nUse synonyms for non-P value contexts\nE.g., dramatic, substantial, important, etc."
+    "text": "Null Hypothesis: P Values\n\nP values &lt; 0.05 are called significant\n\nSignificant P values mean you ‘reject the null hypothesis’\nI.e., you find support for your hypothesis!\n\n\n\n\n\n\n0.05 &lt; p &lt; 0.1 is ‘marginally significant’\n\nA.k.a. weak evidence of support for hypothesis\n\n\n\n\n\n\n\nIn science writing, “significant” always means P &lt; 0.05\n\nUse synonyms for non-P value contexts\nE.g., dramatic, substantial, important, etc."
   },
   {
     "objectID": "materials/slides_4b.html#hypothesis-testing-chat",
@@ -1943,14 +1950,21 @@
     "href": "materials/slides_4b.html#variable-types",
     "title": "Intro to Data Science",
     "section": "Variable Types",
-    "text": "Variable Types\n\n\nContinous\n\nMust be a number!\n\n\n\n\nOkay if coercible to number\n\nI.e., “yes” vs. “no” becomes 0 vs. 1\n\n\n\n\n\nExamples\n\nSunflower height\nFlower nectar concentration\nFeather density\n\n\n\nCategorical"
+    "text": "Variable Types\n\n\nContinous\n\nCategorical"
   },
   {
     "objectID": "materials/slides_4b.html#variable-types-1",
     "href": "materials/slides_4b.html#variable-types-1",
     "title": "Intro to Data Science",
     "section": "Variable Types",
-    "text": "Variable Types\n\n\nContinous\n\nMust be a number!\n\n\n\n\nOkay if coercible to number\n\nI.e., “yes” vs. “no” becomes 0 vs. 1\n\n\n\n\n\nExamples\n\nSunflower height\nFlower nectar concentration\nFeather density\n\n\n\nCategorical\n\nDoes not need to be a number\n\nCan be letters or numbers\n\n\n\n\n\n\n\n\nExamples\n\nRainfall of 0 mm, 10 mm, or 20 mm\n“Site A”, “Site B”, etc."
+    "text": "Variable Types\n\n\nContinous\n\nMust be a number!\n\n\n\n\nOkay if coercible to number\n\nI.e., months can become 1-12\n\n\n\n\n\nExamples\n\nSunflower height\nFlower nectar concentration\nFeather density\n\n\n\nCategorical"
+  },
+  {
+    "objectID": "materials/slides_4b.html#variable-types-2",
+    "href": "materials/slides_4b.html#variable-types-2",
+    "title": "Intro to Data Science",
+    "section": "Variable Types",
+    "text": "Variable Types\n\n\nContinous\n\nMust be a number!\n\n\n\n\nOkay if coercible to number\n\nI.e., months can become 1-12\n\n\n\n\n\nExamples\n\nSunflower height\nFlower nectar concentration\nFeather density\n\n\n\nCategorical\n\nDoes not need to be a number\n\nCan be letters or numbers\n\n\n\n\n\n\n\n\nExamples\n\nRainfall of 0 mm, 10 mm, or 20 mm\n“Site A”, “Site B”, etc."
   },
   {
     "objectID": "materials/slides_4b.html#variable-types-visual",
@@ -1964,14 +1978,21 @@
     "href": "materials/slides_4b.html#variables-hypothesis-testing",
     "title": "Intro to Data Science",
     "section": "Variables & Hypothesis Testing",
-    "text": "Variables & Hypothesis Testing\n\n\nResponse Variables\n\nData measured to test hypothesis\n\n\n\n\nVariable responding to treatment/outside force\n\nCan be categorical or continuous\n\n\n\n\n\nAlso known as:\n\nY variables\nDependent variables (depend on explanatory variable)\n\n\n\nExplanatory Variables"
+    "text": "Variables & Hypothesis Testing\n\n\nResponse Variables\n\nExplanatory Variables"
   },
   {
     "objectID": "materials/slides_4b.html#variables-hypothesis-testing-1",
     "href": "materials/slides_4b.html#variables-hypothesis-testing-1",
     "title": "Intro to Data Science",
     "section": "Variables & Hypothesis Testing",
-    "text": "Variables & Hypothesis Testing\n\n\nResponse Variables\n\nData measured to test hypothesis\n\n\n\n\nVariable responding to treatment/outside force\n\nCan be categorical or continuous\n\n\n\n\n\nAlso known as:\n\nY variables\nDependent variables (depend on explanatory variable)\n\n\n\nExplanatory Variables\n\nTreatment and/or measurement of world\n\n\n\n\nVariable explaining response\n\nAlso can be categorical or continuous\n\n\n\n\n\nAlso known as:\n\nX variables\nIndependent variables"
+    "text": "Variables & Hypothesis Testing\n\n\nResponse Variables\n\nData collected to test hypothesis\n\n\n\n\nVariable responding to treatment/outside force\n\nCan be categorical or continuous\n\n\n\n\n\nAlso known as:\n\nY variables\nDependent variables (depend on explanatory variable)\n\n\n\nExplanatory Variables"
+  },
+  {
+    "objectID": "materials/slides_4b.html#variables-hypothesis-testing-2",
+    "href": "materials/slides_4b.html#variables-hypothesis-testing-2",
+    "title": "Intro to Data Science",
+    "section": "Variables & Hypothesis Testing",
+    "text": "Variables & Hypothesis Testing\n\n\nResponse Variables\n\nData collected to test hypothesis\n\n\n\n\nVariable responding to treatment/outside force\n\nCan be categorical or continuous\n\n\n\n\n\nAlso known as:\n\nY variables\nDependent variables (depend on explanatory variable)\n\n\n\nExplanatory Variables\n\nTreatment and/or measurement of world\n\n\n\n\nVariable explaining response\n\nAlso can be categorical or continuous\n\n\n\n\n\nAlso known as:\n\nX variables\nIndependent variables"
   },
   {
     "objectID": "materials/slides_4b.html#statistics-roadmap",
