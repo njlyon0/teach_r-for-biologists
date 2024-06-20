@@ -417,6 +417,7 @@ Lab 4 – Statistics
 <li>Statistics Background</li>
 <li>Stats Roadmap</li>
 <li>Fundamental Statistical Tests</li>
+<li>Multiple X Variables</li>
 </ul>
 </section>
 <section id="todays-learning-objectives" class="slide level2">
@@ -1165,7 +1166,7 @@ Lab 4 – Statistics
 <p><br>
 </p>
 <p align="center">
-<img src="images/regression-table-annotated.png" alt="Annotated screen capture of the output of the 'summary' function when used on a model object made by the 'lm' function. Y-intercept, explanatory variable, slope of line, test statistic, p value, p value asterisks, and p value asterisk codes are all separately indicated in the screen cap" width="100%">
+<img src="images/regression-table-annotated.png" alt="Annotated screen capture of the output of the 'summary' function when used on a model object made by the 'lm' function. Y-intercept, explanatory variable, slope of line, test statistic, p value, p value asterisks, and p value asterisk codes are all separately indicated in the screen capture" width="100%">
 </p>
 </section>
 <section id="analysis-of-variance-anova" class="slide level2 smaller">
@@ -1271,6 +1272,119 @@ Lab 4 – Statistics
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
+</section>
+<section id="roadmap-reminder" class="slide level2">
+<h2><span class="orange">Roadmap Reminder</span></h2>
+<p><br>
+<br>
+</p>
+<p align="center">
+<img src="images/stats-roadmap-v1.png" alt="Table with two rows (explanatory variables) and two columns (response variables). One row/column is labeled 'categorical' and the other 'continuous'. Categorical response and explanatory variables are a Chi Square test, Categorical response with continuous explanatory is a generalized linear model. Both continuous is a regression and a continuous response with categorical explanatory variables is an ANOVA." width="80%">
+</p>
+</section>
+<section id="roadmap-extension-multiple-xs" class="slide level2">
+<h2><span class="orange">Roadmap Extension: Multiple Xs</span></h2>
+<p><br>
+</p>
+<p align="center">
+<img src="images/stats-roadmap-v2.png" alt="Expansion of previous roadmap table with a new row labeled 'multiple (separate)'. Categorical response with multiple continuous explanatory variables is still a generalized linear model. Continuous response with multiple categorical explanatory variables is an 'n-way ANOVA'." width="80%">
+</p>
+</section>
+<section id="r-syntax-for-multiple-xs" class="slide level2">
+<h2><span class="orange">R Syntax for Multiple Xs</span></h2>
+<ul>
+<li>Special syntax to indicate multiple explanatory variables
+<ul>
+<li>Separate each explanatory variable with a plus sign</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Example syntax:</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Test with two explanatory variables</span></span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">stat_test</span>(response_var <span class="sc">~</span> exp_var1 <span class="sc">+</span> exp_var2, <span class="at">data =</span> my_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="n-way-anova" class="slide level2 smaller">
+<h2><span class="orange"><em>n</em>-way ANOVA</span></h2>
+<ul>
+<li>Multiple X variables and Y must be continuous
+<ul>
+<li>X variables may be either categorical or continuous</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>“n” = number of X variables
+<ul>
+<li>E.g., 2-way ANOVA has 2 X variables</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Hypothesis: Each X variable (<em>separately</em>) affects Y values
+<ul>
+<li>H<sub>0</sub>: Each X does not affect Y</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="n-way-anova-continued" class="slide level2 smaller">
+<h2><span class="orange"><em>n</em>-way ANOVA Continued</span></h2>
+<ul>
+<li>Returns a P value for <em>each</em> X variable</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Examples:
+<ul>
+<li>Temperature (X) and bird presence (X) both affect worm length (Y)</li>
+<li>Fire (X) and grazing (X) both affect butterfly lifespan (Y)</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li><em>n</em>-way ANOVA function is the same as the regular ANOVA – <code>aov</code>
+<ul>
+<li>“Regular ANOVA” == 1-way ANOVA</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="practice-2-way-anova" class="slide level2 smaller">
+<h2><span class="pink">Practice: 2-way ANOVA</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<ul>
+<li>New funding source and new hypothesis for your penguin research:
+<ul>
+<li>H<sub>A</sub>: Penguin body mass differs among species and among islands</li>
+<li>H<sub>0</sub>: Penguin body mass <em>does not</em> differ with penguin species or island</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Test H<sub>A</sub> with a 2-way ANOVA
+<ul>
+<li>Was your hypothesis supported?</li>
+<li>What difference(s) do you see between this and a 1-way ANOVA summary table?</li>
+</ul></li>
+</ul>
+</div>
 </section>
 <section id="upcoming-due-dates" class="slide level2 smaller">
 <h2><span class="blue">Upcoming Due Dates</span></h2>
