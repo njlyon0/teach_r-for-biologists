@@ -43,6 +43,7 @@ librarian::shelf(palmerpenguins, supportR, ggplot2)
 - Statistics Background
 - Stats Roadmap
 - Fundamental Statistical Tests
+- Multiple X Variables
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -762,6 +763,92 @@ ggplot(peng_avgdf, aes(x = species, y = mean, fill = species)) +
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
+
+## [Roadmap Reminder]{.orange}
+
+\
+\
+
+<p align="center">
+<img src="images/stats-roadmap-v1.png" alt="Table with two rows (explanatory variables) and two columns (response variables). One row/column is labeled 'categorical' and the other 'continuous'. Categorical response and explanatory variables are a Chi Square test, Categorical response with continuous explanatory is a generalized linear model. Both continuous is a regression and a continuous response with categorical explanatory variables is an ANOVA." width="80%">
+</p>
+
+## [Roadmap Extension: Multiple Xs]{.orange}
+
+\
+
+<p align="center">
+<img src="images/stats-roadmap-v2.png" alt="Expansion of previous roadmap table with a new row labeled 'multiple (separate)'. Categorical response with multiple continuous explanatory variables is still a generalized linear model. Continuous response with multiple categorical explanatory variables is an 'n-way ANOVA'." width="80%">
+</p>
+
+## [R Syntax for Multiple Xs]{.orange}
+
+- Special syntax to indicate multiple explanatory variables
+    - Separate each explanatory variable with a plus sign
+
+\
+
+. . .
+
+- Example syntax:
+```{.r}
+# Test with two explanatory variables
+stat_test(response_var ~ exp_var1 + exp_var2, data = my_df)
+```
+
+## [_n_-way ANOVA]{.orange} {.smaller}
+
+- Multiple X variables and Y must be continuous
+    - X variables may be either categorical or continuous 
+
+\
+
+. . . 
+
+- "n" = number of X variables
+    - E.g., 2-way ANOVA has 2 X variables
+
+\
+
+. . .
+
+- Hypothesis: Each X variable (_separately_) affects Y values
+    - H~0~: Each X does not affect Y
+
+## [_n_-way ANOVA Continued]{.orange} {.smaller}
+
+- Returns a P value for _each_ X variable
+
+\
+
+. . . 
+
+- Examples:
+    - Temperature (X) and bird presence (X) both affect worm length (Y)
+    - Fire (X) and grazing (X) both affect butterfly lifespan (Y)
+
+\
+
+. . . 
+
+- _n_-way ANOVA function is the same as the regular ANOVA -- `aov`
+    - "Regular ANOVA" == 1-way ANOVA
+
+## [Practice: 2-way ANOVA]{.pink} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+
+- New funding source and new hypothesis for your penguin research:
+    - H~A~: Penguin body mass differs among species and among islands
+    - H~0~: Penguin body mass _does not_ differ with penguin species or island
+
+\
+
+. . .
+
+- Test H~A~ with a 2-way ANOVA
+    - Was your hypothesis supported?
+    - What difference(s) do you see between this and a 1-way ANOVA summary table?
 
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
