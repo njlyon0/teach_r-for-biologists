@@ -9,6 +9,8 @@ website:
   repo-actions: [issue]
   navbar:
     right:
+      - text: "Alumni"
+        href: alumni.qmd
       - text: "Instructors"
         menu:
           - text: "Nick J Lyon"

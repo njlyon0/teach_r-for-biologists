@@ -1,0 +1,11 @@
+---
+title: "Alumni"
+---
+
+## Overview
+
+As part of this course, students invest in their GitHub presence and create an RMarkdown-style tutorial of three functions of their choice that are part of packages found in CRAN (rubrics [here](https://njlyon0.github.io/teach_r-for-biologists/rubrics/rubric_github.html) and [here](https://njlyon0.github.io/teach_r-for-biologists/rubrics/rubric_tutorials.html) respectively).
+
+## Alumni Spotlight
+
+
