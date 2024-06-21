@@ -231,7 +231,7 @@ combo_df <- left_join(x = frog_df, y = rain_df,
 
 . . .
 
-- You decide to spend your grant on meauring lichen on all of the trees that you <u>did not</u> measure the first time
+- You decide to spend your grant on measuring lichen on all of the trees that you <u>did not</u> measure the first time
 
 \
 

@@ -379,12 +379,11 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-
 ## [Variable Types]{.orange} {.smaller}
 
 ::::{.columns}
 :::{.column width="50%"}
-### Continous
+### Continuous
 
 :::
 :::{.column width="50%"}
@@ -397,7 +396,7 @@ After today's session you will be able to:
 
 ::::{.columns}
 :::{.column width="50%"}
-### Continous
+### Continuous
 
 - _Must_ be a number!
 
@@ -424,7 +423,7 @@ After today's session you will be able to:
 
 ::::{.columns}
 :::{.column width="50%"}
-### Continous
+### Continuous
 
 - _Must_ be a number!
 
