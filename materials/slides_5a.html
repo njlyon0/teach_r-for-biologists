@@ -424,7 +424,7 @@ Lecture 5 – Multi-Model Inference
 <p>After today’s session you will be able to:</p>
 <div class="fragment">
 <ul>
-<li>Perform analytical tests using R</li>
+<li>Perform more analytical tests using R</li>
 <li>Explain an “interaction term” in the context of life sciences</li>
 <li>Compare model strengths in R</li>
 </ul>
@@ -438,7 +438,7 @@ Lecture 5 – Multi-Model Inference
 <img src="images/stats-roadmap-v2.png" alt="Expansion of previous roadmap table with a new row labeled 'multiple (separate)'. Categorical response with multiple continuous explanatory variables is still a generalized linear model. Continuous response with multiple categorical explanatory variables is an 'n-way ANOVA'." width="80%">
 </p>
 </section>
-<section id="interaction-terms" class="slide level2">
+<section id="interaction-terms" class="slide level2 smaller">
 <h2><span class="orange">Interaction Terms</span></h2>
 <ul>
 <li>So far, we’ve assumed the effect on Y is due to each X <u>separately</u>
@@ -450,11 +450,11 @@ Lecture 5 – Multi-Model Inference
 </p>
 <div class="fragment">
 <ul>
-<li>Arguably <em>all</em> of biology lives in these interactions!</li>
+<li>Arguably, <em>all</em> of biology lives in these interactions!</li>
 </ul>
 </div>
 </section>
-<section id="interactions-examples" class="slide level2">
+<section id="interactions-examples" class="slide level2 smaller">
 <h2><span class="orange">Interactions Examples</span></h2>
 <ul>
 <li>Let’s consider some examples to hopefully make this “click” for you</li>
@@ -463,7 +463,7 @@ Lecture 5 – Multi-Model Inference
 </p>
 <div class="fragment">
 <ol type="1">
-<li>The number of ant hills (Y) depends on <u>both</u> how hot it is (X) and rainfall amounts (X)</li>
+<li>The number of ant hills (Y) depends on <u>both</u> how hot it is (X) and how rainy it is (X)</li>
 </ol>
 <p><br>
 </p>
@@ -502,10 +502,16 @@ Lecture 5 – Multi-Model Inference
 <li>Use an asterisk (<code>*</code>) between the two terms</li>
 <li>Use a colon (<code>:</code>)</li>
 </ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
 <li>Using an asterisk includes <em>both</em> terms separately <u>and</u> their interaction</li>
 </ul>
 <p><br>
 </p>
+</div>
 <div class="fragment">
 <ul>
 <li>Example syntax:</li>
@@ -540,13 +546,13 @@ Lecture 5 – Multi-Model Inference
 </div>
 <div class="fragment">
 <ul>
-<li>Returns a P value for the interaction term and each X variable</li>
+<li>Returns a P value for the interaction term and each X variable separately</li>
 </ul>
 </div>
 </section>
 <section id="practice-ancova" class="slide level2 smaller">
 <h2><span class="pink">Practice: ANCOVA</span></h2>
-<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for the palmerpenguins R package"></p>
 <ul>
 <li>ANCOVA function is the same as the regular ANOVA / <em>n</em>-way ANOVA – <code>aov</code></li>
 </ul>
@@ -556,8 +562,8 @@ Lecture 5 – Multi-Model Inference
 <ul>
 <li>New penguin-related hypothesis:
 <ul>
-<li>H<sub>A</sub>: The relationship between bill length and bill depth differs by species</li>
-<li>H<sub>0</sub>: Bill length-depth relationships are not species-dependent</li>
+<li>H<sub>A</sub>: Penguin body mass differs among species and within a species at different islands</li>
+<li>H<sub>0</sub>: Island differences on penguin body mass are not species-dependent</li>
 </ul></li>
 </ul>
 <p><br>
@@ -637,9 +643,9 @@ Lecture 5 – Multi-Model Inference
 </p>
 <div class="fragment">
 <ul>
-<li>P values ask “does this affect things?”
+<li>P values ask “does this affect things <em>more than if nothing is happening</em>?”
 <ul>
-<li>MMI asks “does this affect things <em>more than other factors</em>?”</li>
+<li>MMI asks “does this affect things <em>more than other variables/combinations of variables</em>?”</li>
 </ul></li>
 </ul>
 <p><br>
@@ -649,17 +655,17 @@ Lecture 5 – Multi-Model Inference
 <ul>
 <li>Model strength evaluated with an <span class="purple">information criterion</span>
 <ul>
-<li>Way of summarizing each candidate model to decide the “winner(s)”</li>
+<li>Way of summarizing each candidate model to decide the ‘winner(s)’</li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="information-criteria" class="slide level2">
+<section id="information-criteria" class="slide level2 smaller">
 <h2><span class="orange">Information Criteria</span></h2>
 <ul>
-<li>Most often: <u>A</u>kaike <u>I</u>nformation <u>C</u>riterion (AIC)
+<li>Most often: <u>A</u>kaike <u>I</u>nformation <u>C</u>riterion (<span class="purple">AIC</span>)
 <ul>
-<li>[Ah-kuh-ee-kay]</li>
+<li>[Ah-kuh-EE-kay]</li>
 </ul></li>
 </ul>
 <p><br>
@@ -692,7 +698,7 @@ Lecture 5 – Multi-Model Inference
 <ul>
 <li>Fit models using whichever stats test is appropriate
 <ul>
-<li>Remember the <span class="purple">roadmap</span>!</li>
+<li>Then compare AIC scores for each model</li>
 </ul></li>
 </ul>
 <p><br>
@@ -713,13 +719,14 @@ Lecture 5 – Multi-Model Inference
 </section>
 <section id="practice-mmi" class="slide level2 smaller">
 <h2><span class="pink">Practice: MMI</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for the palmerpenguins R package"></p>
 <ul>
 <li>Fit the following four candidate models using the most appropriate test <u>for each</u>
 <ul>
 <li>H<sub>A</sub>: Penguin body mass differs among species</li>
 <li>H<sub>A</sub>: Penguin body mass differs between sexes</li>
 <li>H<sub>A</sub>: Penguin body mass differs among species <em>and</em> between sexes</li>
-<li>H<sub>A</sub>: Penguin body mass differs among species differently <em>depending on</em> sex</li>
+<li>H<sub>A</sub>: Penguin body mass differences between sexes <em>depend on</em> the species</li>
 </ul></li>
 </ul>
 <p><br>
@@ -754,6 +761,7 @@ Lecture 5 – Multi-Model Inference
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>I hope you all are having a fun time
 <ul>
@@ -762,6 +770,8 @@ Lecture 5 – Multi-Model Inference
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Would really appreciate you filling out an <em>anonymous</em> evaluation for me!
 <ul>
@@ -770,6 +780,7 @@ Lecture 5 – Multi-Model Inference
 <li>Any other feedback you’d like to share?</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="upcoming-due-dates" class="slide level2 smaller">
 <h2><span class="blue">Upcoming Due Dates</span></h2>
@@ -779,7 +790,7 @@ Lecture 5 – Multi-Model Inference
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
 <li>Muddiest Point #5</li>
-<li><span class="pink">Draft 1</span> of Function Tutorials
+<li><span class="blue">Draft 1</span> of Function Tutorials
 <ul>
 <li>Double check rubric to see that you’re not leaving any points on the table!</li>
 </ul></li>
