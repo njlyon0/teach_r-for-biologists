@@ -39,7 +39,7 @@ After today's session you will be able to:
 
 . . .
 
-- Perform analytical tests using R
+- Perform more analytical tests using R
 - Explain an "interaction term" in the context of life sciences
 - Compare model strengths in R
 
@@ -51,7 +51,7 @@ After today's session you will be able to:
 <img src="images/stats-roadmap-v2.png" alt="Expansion of previous roadmap table with a new row labeled 'multiple (separate)'. Categorical response with multiple continuous explanatory variables is still a generalized linear model. Continuous response with multiple categorical explanatory variables is an 'n-way ANOVA'." width="80%">
 </p>
 
-## [Interaction Terms]{.orange}
+## [Interaction Terms]{.orange} {.smaller}
 
 - So far, we've assumed the effect on Y is due to each X <u>separately</u>
     - In real life, the effect on Y may be due to [interactions among X variables]{.purple}!
@@ -60,9 +60,9 @@ After today's session you will be able to:
 
 . . .
 
-- Arguably _all_ of biology lives in these interactions!
+- Arguably, _all_ of biology lives in these interactions!
 
-## [Interactions Examples]{.orange}
+## [Interactions Examples]{.orange} {.smaller}
 
 - Let's consider some examples to hopefully make this "click" for you
 
@@ -70,7 +70,7 @@ After today's session you will be able to:
 
 . . . 
 
-1. The number of ant hills (Y) depends on <u>both</u> how hot it is (X) and rainfall amounts (X)
+1. The number of ant hills (Y) depends on <u>both</u> how hot it is (X) and how rainy it is (X)
 
 \
 
@@ -100,6 +100,10 @@ After today's session you will be able to:
 - Two ways to add additional an interaction between two explanatory variables:
     - Use an asterisk (`*`) between the two terms
     - Use a colon (`:`)
+
+\
+
+. . .
 
 - Using an asterisk includes _both_ terms separately <u>and</u> their interaction
 
@@ -133,11 +137,11 @@ stat_(response ~ exp1 + exp2 + exp1:exp2, data = my_df)
 
 . . .
 
-- Returns a P value for the interaction term and each X variable
+- Returns a P value for the interaction term and each X variable separately
 
 ## [Practice: ANCOVA]{.pink} {.smaller}
 
-![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the palmerpenguins R package"}
 
 - ANCOVA function is the same as the regular ANOVA / _n_-way ANOVA -- `aov`
 
@@ -146,8 +150,8 @@ stat_(response ~ exp1 + exp2 + exp1:exp2, data = my_df)
 . . .
 
 - New penguin-related hypothesis:
-    - H~A~: The relationship between bill length and bill depth differs by species
-    - H~0~: Bill length-depth relationships are not species-dependent
+    - H~A~: Penguin body mass differs among species and within a species at different islands
+    - H~0~: Island differences on penguin body mass are not species-dependent
 
 \
 
@@ -204,20 +208,20 @@ stat_(response ~ exp1 + exp2 + exp1:exp2, data = my_df)
 
 . . .
 
-- P values ask "does this affect things?"
-    - MMI asks "does this affect things _more than other factors_?"
+- P values ask "does this affect things _more than if nothing is happening_?"
+    - MMI asks "does this affect things _more than other variables/combinations of variables_?"
 
 \
 
 . . .
 
 - Model strength evaluated with an [information criterion]{.purple}
-    - Way of summarizing each candidate model to decide the "winner(s)"
+    - Way of summarizing each candidate model to decide the 'winner(s)'
 
-## [Information Criteria]{.orange}
+## [Information Criteria]{.orange} {.smaller}
 
-- Most often: <u>A</u>kaike <u>I</u>nformation <u>C</u>riterion (AIC)
-    - \[Ah-kuh-ee-kay\]
+- Most often: <u>A</u>kaike <u>I</u>nformation <u>C</u>riterion ([AIC]{.purple})
+    - \[Ah-kuh-EE-kay\]
 
 \
 
@@ -240,7 +244,7 @@ stat_(response ~ exp1 + exp2 + exp1:exp2, data = my_df)
 . . .
 
 - Fit models using whichever stats test is appropriate
-    - Remember the [roadmap]{.purple}!
+    - Then compare AIC scores for each model
 
 \
 
@@ -259,11 +263,13 @@ AIC(mod1, mod2, mod3)
 
 ## [Practice: MMI]{.pink} {.smaller}
 
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for the palmerpenguins R package"}
+
 - Fit the following four candidate models using the most appropriate test <u>for each</u>
     - H~A~: Penguin body mass differs among species
     - H~A~: Penguin body mass differs between sexes
     - H~A~: Penguin body mass differs among species _and_ between sexes
-    - H~A~: Penguin body mass differs among species differently _depending on_ sex
+    - H~A~: Penguin body mass differences between sexes _depend on_ the species
 
 \
 
@@ -292,10 +298,14 @@ AIC(mod1, mod2, mod3)
 
 \
 
+. . .
+
 - I hope you all are having a fun time
     - Hopefully not ironic to say that after two days of stats `r fontawesome::fa(name = "smile", a11y = "sem")`
 
 \
+
+. . .
 
 - Would really appreciate you filling out an _anonymous_ evaluation for me!
     - What am I doing well?
@@ -312,7 +322,7 @@ AIC(mod1, mod2, mod3)
 #### (By midnight)
 
 - Muddiest Point \#5
-- [Draft 1]{.pink} of Function Tutorials
+- [Draft 1]{.blue} of Function Tutorials
     - Double check rubric to see that you’re not leaving any points on the table!
 
 :::
