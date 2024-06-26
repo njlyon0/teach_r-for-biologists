@@ -3019,7 +3019,7 @@
     "href": "materials/slides_5a.html#r-syntax-for-interactions",
     "title": "Intro to Data Science",
     "section": "R Syntax for Interactions",
-    "text": "R Syntax for Interactions\n\nTwo ways to add additional an interaction between two explanatory variables:\n\nUse an asterisk (*) between the two terms\nUse a colon (:)\n\n\n\n\n\n\nUsing an asterisk includes both terms separately and their interaction\n\n\n\n\n\n\nExample syntax:\n\n# Use the asterisk to test an interaction\nstat_test(response ~ exp1 * exp2, data = my_df)\n\n# Fit the SAME MODEL with a colon instead\nstat_(response ~ exp1 + exp2 + exp1:exp2, data = my_df)"
+    "text": "R Syntax for Interactions\n\nTwo ways to add additional an interaction between two explanatory variables:\n\nUse an asterisk (*) between the two terms\nUse a colon (:)\n\n\n\n\n\n\nUsing an asterisk includes both terms separately and their interaction\n\n\n\n\n\n\nExample syntax:\n\n# Use the asterisk to test an interaction\nstat_test(response ~ exp1 * exp2, data = my_df)\n\n# Fit the SAME MODEL with a colon instead\nstat_test(response ~ exp1 + exp2 + exp1:exp2, data = my_df)"
   },
   {
     "objectID": "materials/slides_5a.html#analysis-of-co-variance-ancova",
@@ -3033,7 +3033,7 @@
     "href": "materials/slides_5a.html#practice-ancova",
     "title": "Intro to Data Science",
     "section": "Practice: ANCOVA",
-    "text": "Practice: ANCOVA\n\n\nANCOVA function is the same as the regular ANOVA / n-way ANOVA – aov\n\n\n\n\n\nNew penguin-related hypothesis:\n\nHA: Penguin body mass differs among species and within a species at different islands\nH0: Island differences on penguin body mass are not species-dependent\n\n\n\n\n\n\n\nTest HA with an interaction term!\n\nWas your hypothesis supported?\nWhat difference(s) do you see between this and a 2-way ANOVA summary table?"
+    "text": "Practice: ANCOVA\n\n\nANCOVA function is the same as the regular ANOVA / n-way ANOVA – aov\n\n\n\n\n\nNew penguin-related hypothesis:\n\nHA: Penguin body mass differs among species and within a species between sexes\nH0: Sex-specific differences on penguin body mass are not species-dependent\n\n\n\n\n\n\n\nTest HA with an interaction term!\n\nWas your hypothesis supported?\nWhat difference(s) do you see between this and a 2-way ANOVA summary table?"
   },
   {
     "objectID": "materials/slides_5a.html#temperature-check",

@@ -520,7 +520,7 @@ Lecture 5 – Multi-Model Inference
 <span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">stat_test</span>(response <span class="sc">~</span> exp1 <span class="sc">*</span> exp2, <span class="at">data =</span> my_df)</span>
 <span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Fit the SAME MODEL with a colon instead</span></span>
-<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">stat_</span>(response <span class="sc">~</span> exp1 <span class="sc">+</span> exp2 <span class="sc">+</span> exp1<span class="sc">:</span>exp2, <span class="at">data =</span> my_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">stat_test</span>(response <span class="sc">~</span> exp1 <span class="sc">+</span> exp2 <span class="sc">+</span> exp1<span class="sc">:</span>exp2, <span class="at">data =</span> my_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="analysis-of-co-variance-ancova" class="slide level2 smaller">
@@ -562,8 +562,8 @@ Lecture 5 – Multi-Model Inference
 <ul>
 <li>New penguin-related hypothesis:
 <ul>
-<li>H<sub>A</sub>: Penguin body mass differs among species and within a species at different islands</li>
-<li>H<sub>0</sub>: Island differences on penguin body mass are not species-dependent</li>
+<li>H<sub>A</sub>: Penguin body mass differs among species and within a species between sexes</li>
+<li>H<sub>0</sub>: Sex-specific differences on penguin body mass are not species-dependent</li>
 </ul></li>
 </ul>
 <p><br>
