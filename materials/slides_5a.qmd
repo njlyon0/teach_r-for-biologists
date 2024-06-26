@@ -117,7 +117,7 @@ After today's session you will be able to:
 stat_test(response ~ exp1 * exp2, data = my_df)
 
 # Fit the SAME MODEL with a colon instead
-stat_(response ~ exp1 + exp2 + exp1:exp2, data = my_df)
+stat_test(response ~ exp1 + exp2 + exp1:exp2, data = my_df)
 ```
 
 ## [<u>An</u>alysis of <u>Co</u>-<u>Va</u>riance (ANCOVA)]{.orange} {.smaller}
@@ -150,8 +150,8 @@ stat_(response ~ exp1 + exp2 + exp1:exp2, data = my_df)
 . . .
 
 - New penguin-related hypothesis:
-    - H~A~: Penguin body mass differs among species and within a species at different islands
-    - H~0~: Island differences on penguin body mass are not species-dependent
+    - H~A~: Penguin body mass differs among species and within a species between sexes
+    - H~0~: Sex-specific differences on penguin body mass are not species-dependent
 
 \
 
