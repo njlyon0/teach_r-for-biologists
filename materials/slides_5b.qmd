@@ -70,7 +70,7 @@ After today's session you will be able to:
 - Anonymous surveys reduce 'intimidation factor' for critical feedback
     - Greater response rate = more information to use for improvement
 
-## [Feedback Conversation]{.gold}
+## [Feedback Conversation]{.gold} {.smaller}
 
 - What experience do you have with requesting/getting feedback?
     - Classes? Work? Presentations?
@@ -85,7 +85,7 @@ After today's session you will be able to:
 
 . . .
 
-How could that feedback have been changed to be _more_ helpful?
+- How could that feedback have been changed to be _more_ helpful?
 
 ## [Creating Surveys]{.orange} {.smaller}
 
@@ -105,7 +105,7 @@ How could that feedback have been changed to be _more_ helpful?
 
 . . .
 
-- Imagine a useful piece of feedback then <u>write the question that prompts it</u>
+- [Imagine a useful piece of feedback then <u>write the question that prompts it</u>]{.purple}
 
 ## [Create a Survey]{.pink} {.smaller}
 
@@ -123,10 +123,10 @@ How could that feedback have been changed to be _more_ helpful?
 . . .
 
 - Your form should have (at least) questions about the following topics:
-    1. Effectiveness of your tutorial's format
-    2. Any comments about your presentation style / pace
-    3. Questions specific to each of your chosen functions
-    4. [Another question you think would be valuable]{.gold}
+    1. Tutorial format
+    2. Presentation style / pace
+    3. Specific question / function (at least one)
+    4. [Another topic you think would be valuable]{.gold}
 
 ## [Create a Survey Continued]{.pink} {.smaller}
 
@@ -170,7 +170,7 @@ How could that feedback have been changed to be _more_ helpful?
 :::{.column width="50%"}
 ### Virtual
 
-- Screen share your knit .Rmd with the class
+- Screen share your tutorial with the class
 - Walk us through _all three_ of your tutorials (5-15 min)
 - Ask if anyone has questions and answer any that come up
 - Share Google Form response link in Zoom Chat
@@ -181,7 +181,8 @@ How could that feedback have been changed to be _more_ helpful?
 ### In Person
 
 - Connect your computer to screen in classroom
-- Walk us through the tutorial + end with Q&A
+- Walk us through _all three_ of your tutorials (5-15 min)
+- Q & A
 - Email Google Form response link to class
 - Everyone gets \~5 minutes to fill out form
 
@@ -200,11 +201,11 @@ How could that feedback have been changed to be _more_ helpful?
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-## [Get Ready!]{.pink}
+## [Get Ready!]{.pink} {.smaller}
 
-- Find & open your R Markdown file
-    - Knit it to be sure that you have the latest version
-    - Open the knit product (PDF / HTML)
+- Prepare your R Markdown file
+    - A -- Open your tutorial (knit or raw) on your computer
+    - B -- Email me your Rmd (knit or raw) and you can present from my computer
 
 \
 
@@ -264,7 +265,7 @@ How could that feedback have been changed to be _more_ helpful?
 
 #### (By midnight)
 
-- Function Tutorials [Draft 2]{.pink}
+- Function Tutorials [Draft 2]{.blue}
     - You'll be assessed on _how well you incorporated feedback_ from your peers & instructor
 
 \
