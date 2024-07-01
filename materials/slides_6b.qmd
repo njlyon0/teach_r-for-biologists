@@ -150,7 +150,7 @@ ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
 
 ## [Get Ready]{.pink} {.smaller}
 
-![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
 1. Create a script for this week
 
@@ -172,7 +172,7 @@ ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
 
 ## [Remove Gridlines]{.pink} {.smaller}
 
-![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
 - To that graph, add the following code:
     - `theme(panel.grid = element_blank())`
@@ -189,7 +189,7 @@ ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
 
 ## [Remove Gridlines]{.pink} {.smaller}
 
-![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
 ::::{.columns}
 :::{.column width="50%"}
@@ -234,7 +234,7 @@ fish_graph +
 
 . . . 
 
-![](images/graph-title-v-text.png){.absolute top=80 left=750 width="40%"}
+![](images/graph-title-v-text.png){.absolute top=80 left=750 width="40%" fig-alt="Screen capture of the x-axis of a ggplot2-style graph with the axis label (i.e., the bigger text -- a.k.a. 'title') in a rectangle and the axis tick labels (i.e., the smaller text -- a.k.a. 'text') in a separate rectangle"}
 
 . . . 
 
@@ -249,7 +249,7 @@ Increase font size with: `element_text(size = 14)`
 
 ## [Change Text Size]{.pink} {.smaller}
 
-![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
 - Take your most recent graph
     - No gridlines, no background gray square, black axis lines
@@ -270,7 +270,7 @@ Increase font size with: `element_text(size = 14)`
 
 ## [Change Text Size]{.pink} {.smaller}
 
-![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
 ```{r ex-graph-v9}
 #| fig-width: 6
@@ -320,7 +320,7 @@ ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
 
 ## [Customize Legend]{.pink} {.smaller}
 
-![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
 - To the graph you created last practice:
     - Remove the legend title
@@ -337,7 +337,7 @@ ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
 
 ## [Customize Legend]{.pink} {.smaller}
 
-![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
 ```{r ex-graph-v10}
 #| fig-width: 6
@@ -424,8 +424,8 @@ ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
 
 ## [Facet Example]{.orange} {.smaller}
 
-![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%"}
-![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%"}
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for palmerpenguins R package"}
+![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
 - `facet_grid(. ~ island)`
 
@@ -450,7 +450,7 @@ ggplot(data = peng_df, aes(x = body_mass_g, y = flipper_length_mm, color = speci
 
 ## [Facet]{.pink} {.smaller}
 
-![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
 - Using the fish data, make a new graph that:
     - Has nest _diameter_ on the X axis
@@ -465,7 +465,7 @@ ggplot(data = peng_df, aes(x = body_mass_g, y = flipper_length_mm, color = speci
 
 ## [Facet]{.pink} {.smaller}
 
-![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%"}
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
 ```{r ex-graph-v11}
 #| fig-width: 6
@@ -538,8 +538,8 @@ cowplot::plot_grid(first, second, labels = "AUTO", ncol = 2, nrow = 1)
 
 ## [Plot Grids]{.pink} {.smaller}
 
-![](images/hex-cowplot.png){.absolute top=0 left=1100 width="12%"}
-![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%"}
+![](images/hex-cowplot.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for cowplot R package"}
+![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
 - Make two graphs using the fish data:
 
@@ -555,8 +555,8 @@ cowplot::plot_grid(first, second, labels = "AUTO", ncol = 2, nrow = 1)
 
 ## [Plot Grids]{.pink} {.smaller}
 
-![](images/hex-cowplot.png){.absolute top=0 left=1100 width="12%"}
-![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%"}
+![](images/hex-cowplot.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for cowplot R package"}
+![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
 \
 \
