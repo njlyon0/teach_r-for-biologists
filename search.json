@@ -3503,7 +3503,7 @@
     "href": "materials/slides_6a.html#data-visualization",
     "title": "Intro to Data Science",
     "section": "Data Visualization",
-    "text": "Data Visualization\n\nFundamental part of scientific process\n\n\n\n\n\nImportant for:\n\nFigures in papers / presentations\n“Eyeball test” of statistical results\nIdentifying errors in data (e.g., unreasonably high/low points, typos, etc.)\n\n\n\n\n\n\n\nNote on word choice\n\nVisualization == figures == graphs == plots\nFigures are implicitly publication-quality but fundamentally still graphs"
+    "text": "Data Visualization\n\nFundamental part of scientific process\n\n\n\n\n\nImportant for:\n\nFigures in papers / presentations\n“Eyeball test” of statistical results\nIdentifying errors in data (e.g., unreasonably high/low points, typos, etc.)\n\n\n\n\n\n\n\nNote on word choice\n\nVisualization == figures == graphs == plots\n“Figures” are implicitly publication-quality but fundamentally still graphs"
   },
   {
     "objectID": "materials/slides_6a.html#data-viz-in-r",
@@ -3559,7 +3559,7 @@
     "href": "materials/slides_6a.html#plot-type-geometries",
     "title": "Intro to Data Science",
     "section": "Plot Type & Geometries",
-    "text": "Plot Type & Geometries\n\nWhy does the plot not have anything on it?\n\nBecause ggplot2 needs you to specify your [geometry]{.purple!\n\n\n\n\n\n\nGeometries are functions you add to a plot to make the desired plot type\n\nAll start with geom_...\nE.g., geom_bar, geom_point, etc.\n\n\n\n\n\n\n\nGeometry determines the type of plot\n\nE.g., bar plot, scatterplot, etc."
+    "text": "Plot Type & Geometries\n\nWhy does the plot not have anything on it?\n\nBecause ggplot2 needs you to specify your geometry!\n\n\n\n\n\n\nGeometries are functions you add to a plot to make the desired plot type\n\nAll start with geom_...\nE.g., geom_bar, geom_point, etc.\n\n\n\n\n\n\n\nGeometry determines the type of plot\n\nE.g., bar plot, scatterplot, etc."
   },
   {
     "objectID": "materials/slides_6a.html#adding-elements",
@@ -3699,21 +3699,21 @@
     "href": "materials/slides_6a.html#finding-fun-colors",
     "title": "Intro to Data Science",
     "section": "Finding Fun Colors",
-    "text": "Finding Fun Colors\n\nCoolors (coolors.co/palettes/popular)\n\nMany options + search bar to narrow results\n\n\n\n\n\nColor Brewer 2.0 (colorbrewer2.org)\n\nFewer options but checkbox for colorblind safe palettes only\n\n\n\n\n\nColors identified as “hexadecimal” codes\n\nHexadecimal structure: #RRGGBB"
+    "text": "Finding Fun Colors\n\nCoolors (coolors.co/palettes/popular)\n\nMany options + search bar to narrow results\n\n\n\n\n\n\nColor Brewer 2.0 (colorbrewer2.org)\n\nFewer options but checkbox for colorblind safe palettes only\n\n\n\n\n\n\n\nColors identified as hexadecimal codes\n\nHexadecimal structure: #RRGGBB"
   },
   {
     "objectID": "materials/slides_6a.html#hexadecimal-aside",
     "href": "materials/slides_6a.html#hexadecimal-aside",
     "title": "Intro to Data Science",
     "section": "Hexadecimal Aside",
-    "text": "Hexadecimal Aside\n\nHexadecimal = 16 digits\n\n0-9 + a-f\n\n\n\n\n\nRed/Green/Blue hues can be between 0 and 255\n\n“Colors” are combinations of 0-255 of R/G/B\n\n\n\n\n\nColor with regular numbers = #RRRGGGBBB\n\nIf using hexadecimals: three fewer numbers to store in a computer\nEach color x 103-106s of pixels would compound “extra” digits’ memory demands"
+    "text": "Hexadecimal Aside\n\nHexadecimal = 16 digits\n\n0-9 + a-f\n\n\n\n\n\n\nRed/Green/Blue hues can be between 0 and 255\n\n“Colors” are combinations of 0-255 of R/G/B\n\n\n\n\n\n\n\nColor with regular numbers = #RRRGGGBBB\n\nIf using hexadecimals: three fewer numbers to store in a computer\nEach color x 103-106s of pixels would compound “extra” digits’ memory demands"
   },
   {
     "objectID": "materials/slides_6a.html#manually-setting-colors",
     "href": "materials/slides_6a.html#manually-setting-colors",
     "title": "Intro to Data Science",
     "section": "Manually Setting Colors",
-    "text": "Manually Setting Colors\n\nUse scale_fill_manual() or scale_color_manual()\n\nEach has one argument: values\n\n\n\n\n\nNeeds a named vector of hexadecimal codes\n\nE.g., c(\"name 1\" = \"entry 1\", \"name 2\" = \"entry 2\", ...)\n\n\n\n\n\nExample syntax:\n\n# Make a plot where the color and y-axis are mapped to the same variable\nggplot(data = my_df, mapping = aes(x = x_var, y = y_var, color = y_var)) +\n    # Make it a scatterplot\n    geom_point() +\n    # Add custom axis labels\n    labs(x = \"Custom X Label\", y = \"Custom Y Label\") +\n    # Customize colors\n    scale_color_manual(values = c(\"name 1\" = \"#00FF00\", \"name 2\" = \"#FF0000\", \"name 3\" = \"#0000FF\"))"
+    "text": "Manually Setting Colors\n\nUse scale_fill_manual() or scale_color_manual()\n\nEach has one argument: values\n\n\n\n\n\n\nNeeds a named vector of hexadecimal codes\n\nE.g., c(\"name 1\" = \"entry 1\", \"name 2\" = \"entry 2\", ...)\n\n\n\n\n\n\n\nExample syntax:\n\n# Make a plot where the color and y-axis are mapped to the same variable\nggplot(data = my_df, mapping = aes(x = x_var, y = y_var, color = y_var)) +\n    # Make it a scatterplot\n    geom_point() +\n    # Add custom axis labels\n    labs(x = \"Custom X Label\", y = \"Custom Y Label\") +\n    # Customize colors\n    scale_color_manual(values = c(\"name 1\" = \"#00FF00\", \"name 2\" = \"#FF0000\", \"name 3\" = \"#0000FF\"))"
   },
   {
     "objectID": "materials/slides_6a.html#set-colors",
@@ -3741,7 +3741,7 @@
     "href": "materials/slides_6a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #6\n\n\nDue before lecture\n(By midnight)\n\nHomework #6\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #6\n\n\nDue before lecture\n(By midnight)\n\nNothing! Face Smile\n\n\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/home_week6.html",
