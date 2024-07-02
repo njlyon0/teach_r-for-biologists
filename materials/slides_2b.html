@@ -8,10 +8,10 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.557">
+  <meta name="generator" content="quarto-1.5.52">
 
   <meta name="author" content="Lab 2 – Version Control">
-  <title>R Programming for Biologists - Intro to Data Science</title>
+  <title>R Programming for Biologists – Intro to Data Science</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -414,8 +414,7 @@ Lab 2 – Version Control
 <p><br>
 </p>
 <p>Demonstrate your skills to others with coding know-how</p>
-</div>
-</div>
+</div></div>
 </section>
 <section id="git-versus-github" class="slide level2 smaller">
 <h2><span class="orange">Git Versus GitHub</span></h2>
@@ -425,8 +424,7 @@ Lab 2 – Version Control
 <h3 id="git">Git</h3>
 </div><div class="column" style="width:50%;">
 <h3 id="github">GitHub</h3>
-</div>
-</div>
+</div></div>
 </section>
 <section id="git-versus-github-1" class="slide level2 smaller">
 <h2><span class="orange">Git Versus GitHub</span></h2>
@@ -454,8 +452,7 @@ Lab 2 – Version Control
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="github-1">GitHub</h3>
-</div>
-</div>
+</div></div>
 </section>
 <section id="git-versus-github-2" class="slide level2 smaller">
 <h2><span class="orange">Git Versus GitHub</span></h2>
@@ -502,8 +499,7 @@ Lab 2 – Version Control
 <li>Depending on your settings</li>
 </ul></li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section id="create-a-github-profile" class="slide level2">
 <h2><span class="gold">Create a Github Profile</span></h2>
@@ -583,8 +579,7 @@ Lab 2 – Version Control
 <ul>
 <li>Muddiest Point #3</li>
 </ul>
-</div>
-</div>
+</div></div>
 </section>
 <section>
 <section id="bonus-git-info" class="title-slide slide level1 center">
@@ -937,18 +932,7 @@ Lab 2 – Version Control
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -980,7 +964,29 @@ Lab 2 – Version Control
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/njlyon0\.github\.io\/teach_r-for-biologists\/");
@@ -988,7 +994,7 @@ Lab 2 – Version Control
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
