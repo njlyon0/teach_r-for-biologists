@@ -130,15 +130,24 @@ Two main options for data viz in R:
 :::{.column width="50%"}
 ### Base R
 
-\
+```{r ex-graph-v0_base}
+#| echo: false
+#| fig-height: 9
 
-<img src="images/graph-base-plot.png" alt="Example 'base R' graph with a simple aesthetic">
+plot(cars)
+```
 
 :::
 :::{.column width="50%"}
 ### `ggplot2`
 
-<img src="images/graph-ggplot2.png" alt="Example ggplot2 graph with classic ggplot2-aesthetics">
+```{r ex-graph-v0_ggplot2}
+#| echo: false
+#| fig-height: 9
+
+ggplot(data = cars, aes(x = speed, y = dist)) +
+  geom_point()
+```
 
 :::
 ::::
@@ -753,8 +762,6 @@ ggplot(data = fish_df, mapping = aes(x = species, y = diameter_cm, fill = specie
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
-
-
 
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
