@@ -8,7 +8,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.52">
+  <meta name="generator" content="quarto-1.5.53">
 
   <meta name="author" content="Lecture 6 – Visualization I">
   <title>R Programming for Biologists – Intro to Data Science</title>
@@ -1162,11 +1162,15 @@ Lecture 6 – Visualization I
 </p>
 <div class="fragment">
 <ul>
-<li>Needs a <span class="purple">named vector</span> of hexadecimal codes
-<ul>
-<li>E.g., <code>c("name 1" = "entry 1", "name 2" = "entry 2", ...)</code></li>
-</ul></li>
+<li>Needs a <span class="purple">named vector</span> of hexadecimal codes</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">"name 1"</span> <span class="ot">=</span> <span class="st">"entry 1"</span>, <span class="st">"name 2"</span> <span class="ot">=</span> <span class="st">"entry 2"</span>, <span class="st">"name 3"</span> <span class="ot">=</span> <span class="st">"entry 3"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   name 1    name 2    name 3 
+"entry 1" "entry 2" "entry 3" </code></pre>
+</div>
+</div>
 <p><br>
 </p>
 </div>
@@ -1174,14 +1178,14 @@ Lecture 6 – Visualization I
 <ul>
 <li>Example syntax:</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Make a plot where the color and y-axis are mapped to the same variable</span></span>
-<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var, <span class="at">color =</span> y_var)) <span class="sc">+</span></span>
-<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make it a scatterplot</span></span>
-<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb5-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add custom axis labels</span></span>
-<span id="cb5-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Custom X Label"</span>, <span class="at">y =</span> <span class="st">"Custom Y Label"</span>) <span class="sc">+</span></span>
-<span id="cb5-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Customize colors</span></span>
-<span id="cb5-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"name 1"</span> <span class="ot">=</span> <span class="st">"#00FF00"</span>, <span class="st">"name 2"</span> <span class="ot">=</span> <span class="st">"#FF0000"</span>, <span class="st">"name 3"</span> <span class="ot">=</span> <span class="st">"#0000FF"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Make a plot where the color and y-axis are mapped to the same variable</span></span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var, <span class="at">color =</span> y_var)) <span class="sc">+</span></span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make it a scatterplot</span></span>
+<span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb7-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add custom axis labels</span></span>
+<span id="cb7-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Custom X Label"</span>, <span class="at">y =</span> <span class="st">"Custom Y Label"</span>) <span class="sc">+</span></span>
+<span id="cb7-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># Customize colors</span></span>
+<span id="cb7-8"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"name 1"</span> <span class="ot">=</span> <span class="st">"#00FF00"</span>, <span class="st">"name 2"</span> <span class="ot">=</span> <span class="st">"#FF0000"</span>, <span class="st">"name 3"</span> <span class="ot">=</span> <span class="st">"#0000FF"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="set-colors" class="slide level2 smaller">

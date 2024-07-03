@@ -3713,7 +3713,7 @@
     "href": "materials/slides_6a.html#manually-setting-colors",
     "title": "Intro to Data Science",
     "section": "Manually Setting Colors",
-    "text": "Manually Setting Colors\n\nUse scale_fill_manual() or scale_color_manual()\n\nEach has one argument: values\n\n\n\n\n\n\nNeeds a named vector of hexadecimal codes\n\nE.g., c(\"name 1\" = \"entry 1\", \"name 2\" = \"entry 2\", ...)\n\n\n\n\n\n\n\nExample syntax:\n\n# Make a plot where the color and y-axis are mapped to the same variable\nggplot(data = my_df, mapping = aes(x = x_var, y = y_var, color = y_var)) +\n    # Make it a scatterplot\n    geom_point() +\n    # Add custom axis labels\n    labs(x = \"Custom X Label\", y = \"Custom Y Label\") +\n    # Customize colors\n    scale_color_manual(values = c(\"name 1\" = \"#00FF00\", \"name 2\" = \"#FF0000\", \"name 3\" = \"#0000FF\"))"
+    "text": "Manually Setting Colors\n\nUse scale_fill_manual() or scale_color_manual()\n\nEach has one argument: values\n\n\n\n\n\n\nNeeds a named vector of hexadecimal codes\n\n\nc(\"name 1\" = \"entry 1\", \"name 2\" = \"entry 2\", \"name 3\" = \"entry 3\")\n\n   name 1    name 2    name 3 \n\"entry 1\" \"entry 2\" \"entry 3\" \n\n\n\n\n\n\n\nExample syntax:\n\n# Make a plot where the color and y-axis are mapped to the same variable\nggplot(data = my_df, mapping = aes(x = x_var, y = y_var, color = y_var)) +\n    # Make it a scatterplot\n    geom_point() +\n    # Add custom axis labels\n    labs(x = \"Custom X Label\", y = \"Custom Y Label\") +\n    # Customize colors\n    scale_color_manual(values = c(\"name 1\" = \"#00FF00\", \"name 2\" = \"#FF0000\", \"name 3\" = \"#0000FF\"))"
   },
   {
     "objectID": "materials/slides_6a.html#set-colors",
