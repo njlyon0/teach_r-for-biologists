@@ -103,9 +103,13 @@ fish_graph
 
 \
 
+. . . 
+
 - Elements can be modified as desired inside of `theme` function
 
 \
+
+. . . 
 
 - Each type of element has a different 'helper function' needed to modify that element
     - Change text = use `element_text`
@@ -117,6 +121,8 @@ fish_graph
 - You use the `theme` function _once_ with as many `element_...` functions as you need
 
 \
+
+. . . 
 
 - Here's an example of the proper syntax
 ```{.r}
@@ -137,7 +143,7 @@ ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
 
 ## [Gridline Theme Components]{.orange} {.smaller}
 
-- You'll learn theme element names as you work more with `ggplot2`
+- You'll learn `theme` argument names as you work more with `ggplot2`
 
 \
 
@@ -179,9 +185,13 @@ ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
 
 \
 
+. . . 
+
 - What does this do to your graph?
 
 \
+
+. . . 
 
 - What happens if you add these two lines as well (**inside** of the `theme` parentheses!)?
     - `panel.background = element_blank()`
@@ -226,7 +236,7 @@ fish_graph +
 
 . . . 
 
-- Axis "[title]{.purple}" vs. axis "[text]{.gold}"
+- Axis "[title]{.purple}" vs. axis "[text]{.purple}"
     - `axis.title` = axis label text (given to `labs` function)
     - `axis.text` = text on axis tick marks
 
@@ -238,14 +248,8 @@ fish_graph +
 
 . . . 
 
-- Want to modify just X or Y? Add that to the element name!
+- Want to modify just X or Y? Add that to the argument name!
     - E.g., `theme(axis.text.x = element_text(...))`
-
-\
-
-. . . 
-
-Increase font size with: `element_text(size = 14)`
 
 ## [Change Text Size]{.pink} {.smaller}
 
@@ -373,7 +377,7 @@ fish_graph +
 \
 
 - Two methods (for ggplots):
-    1. `ggplot2::facet_...`
+    1. `ggplot2::facet_grid()`
     2. `cowplot::plot_grid()`
 
 :::
@@ -390,10 +394,14 @@ fish_graph +
 
 \
 
-- Facets work just like geometries
+. . . 
+
+- Facets work similarly to geometries
     - You get separate plots for each level of the facet variable
 
 \
+
+. . . 
 
 - Facets must _all_ be the same plot type and _have identical axes_
     - Sometimes not an issue but good to keep in mind!
@@ -482,7 +490,7 @@ ggplot(data = fish_df, aes(x = diameter_cm, y = depth_cm, color = species)) +
 ## [Plot Grids]{.orange} {.smaller}
 
 - Facets work great when all panels are the same
-    - What about when you have several types of graph?
+    - What about when you want <u>different graphs in each panel</u>?
 
 \
 
@@ -574,7 +582,7 @@ fish1 <- ggplot(data = fish_df, aes(x = diameter_cm, y = depth_cm, color = speci
   theme(legend.position = "none")
 
 # Make second desired graph
-fish2 <- ggplot(data = fish_df, aes(x = species, y = flow_cfs, color = species)) +
+fish2 <- ggplot(data = fish_df, aes(x = species, y = flow_cfs, fill = species)) +
   geom_boxplot() +
   labs(x = "Species", y = "Flow (cubic feet / second)") +
   theme_bw() +
@@ -611,7 +619,7 @@ cowplot::plot_grid(fish1, fish2, labels = "AUTO", ncol = 2, nrow = 1)
 ## [GitHub Presence Assignment]{.orange} {.smaller}
 
 - This assignment will seriously help in interviews / job apps!
-    - Shows how good of a data scientist you are
+    - Demonstrates your data science skills
 
 \
 
@@ -632,21 +640,22 @@ cowplot::plot_grid(fish1, fish2, labels = "AUTO", ncol = 2, nrow = 1)
 ::::{.columns}
 :::{.column width="50%"}
 
-### Due before lecture
-
-#### (By midnight)
-
-- Homework \#6
-
-:::
-:::{.column width="50%"}
-
 ### Due before lab
 
 #### (By midnight)
 
+- Homework \#6
 - Muddiest Point \#7
-- Submit [Draft 2]{.pink} of Function Tutorials
+
+:::
+:::{.column width="50%"}
+
+### Due before lecture
+
+#### (By midnight)
+
+- Homework \#7
+- Submit [Draft 2]{.blue} of Function Tutorials
     - Double check rubric to see that you're not leaving any points on the table!
     - Remember to also <u>submit the Revision Response</u>
 

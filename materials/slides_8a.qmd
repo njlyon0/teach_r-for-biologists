@@ -30,7 +30,7 @@ format:
 
 - Muddiest Point Review
 - Custom Functions
-- Free Work on GitHub Presence
+- Free Work
 
 ## [Today's Learning Objectives]{.purple}
 
@@ -51,7 +51,7 @@ After today's session you will be able to:
 
 - What other topic(s) would you like to review?
 
-## [What is a "Custom Function"?]{.orange}
+## [What is a "Custom Function"?]{.orange} {.smaller}
 
 - We've been working with functions throughout the course
     - These functions have come from packages we can install from CRAN
@@ -66,7 +66,7 @@ After today's session you will be able to:
 
 . . .
 
-- Functions you write are called [custom functions]{.purple}
+- Functions _you_ write are called [custom functions]{.purple}
 
 ## [Why Write Functions?]{.orange} {.smaller}
 
@@ -126,7 +126,7 @@ multiply(arg1 = 10, arg2 = 5)
 
 - Looks kind of like a conditional or loop, right?
 
-## [Process of Function Writing]{.orange} {.smaller}
+## [Process of Function Writing]{.purple} {.smaller}
 
 - My tips for success in custom function writing:
 
@@ -170,7 +170,7 @@ multiply(arg1 = 10, arg2 = 5)
 ## [Demo Step 1: Write Script]{.gold} {.smaller}
 
 - Let's make a function that adds two numbers together
-    - Artificially simple I know but useful to learn with!
+    - Artificially simple, I know, but useful to learn with!
 
 \
 
@@ -196,7 +196,7 @@ multiply(arg1 = 10, arg2 = 5)
 
 - If the function adds two numbers together, the user:
     - Should control the [first number]{.orange}
-    - Should control the [second number]{.purple}
+    - Should control the [second number]{.orange}
     - Should <u>not</u> control the plus sign
 
 \
@@ -355,9 +355,13 @@ plus(x = 10)
 
 \
 
+. . .
+
 - Set the default pounds to **175**
 
 \
+
+. . .
 
 - What happens if you run your function with _nothing_ in the parentheses?
 
@@ -397,10 +401,10 @@ plus(x = 10)
 :::
 ::::
 
-## [Free Work on GitHub]{.gold} {.smaller}
+## [Free Work]{.gold} {.smaller}
 
 
-- Assignment is due at end of course (_soon!_)
+- Everything is due at the end of course (_soon!_)
 
 \
 
@@ -408,7 +412,7 @@ Tips for success:
 
 . . .
 
-1. Check out the rubric and make sure you don't miss any "easy" points
+1. Check out rubrics and make sure you don't miss any "easy" points
 
 . . .
 
@@ -416,4 +420,4 @@ Tips for success:
 
 . . .
 
-3. If you have questions, [ask them _now_]{.purple} during this free work time
+3. If you have questions, **ask them _now_** during this free work time

@@ -28,7 +28,6 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- Choose [Lab \#8]{.blue} "Bonus Content"
 - Code Iteration with Loops
 - Conditionals in Loops
 - In-Class Free Work
@@ -42,22 +41,6 @@ After today's session you will be able to:
 - Describe the contexts where iteration is useful
 - Apply loops to small arithmetic problems
 - Create a loop with a conditional
-
-## [Bonus Content]{.gold} {.smaller}
-
-- [Lab \#8]{.blue} topic is your choice!
-
-\
-
-- Some options include:
-    - Biodiversity and ecological communities
-    - Pairwise comparisons (i.e., what to do after ANOVA says 'at least one group differs')
-    - Heatmaps
-
-\
-
-- What 1-2 topic(s) seem interesting to you?
-    - Feel free to propose topics that aren't listed!
 
 ## [Repeated Operations]{.orange} {.smaller}
 
@@ -82,7 +65,7 @@ After today's session you will be able to:
 
 - Iteration process:
     1. Define the operation that you want to repeat
-    2. Define what the values to be passed through that operation
+    2. Define the values to be passed through that operation
     3. Press "go" and sit back while the code does the work!
 
 \
@@ -98,7 +81,7 @@ After today's session you will be able to:
 
 . . . 
 
-- This method is named "for loop"
+- This method is called a "[for loop]{.purple}"
 
 ## [Loop Syntax]{.orange} {.smaller}
 
@@ -157,23 +140,30 @@ for(k in 1:5){
 
 \
 
-- Write a for loop that takes the square root of each number
-    - Function is `sqrt`
+- Write a for loop that:
+    - 1. Takes the square root of each number (see `?sqrt`)
+    - 2. Prints that result (use `print` function)
 
-- The loop should print the result for each square root in the Console
-    - Function is `print`
+## [Loop Practice (Answer)]{.pink}
 
-\
+- Demonstrating on only a few numbers
 
-. . . 
+```{r practice-answer-1}
+#| echo: true
 
-- Answer:
-```{.r}
-for(j in 5:25){
-  j_root <- sqrt(j)
-  print(j_root)
-}
+# Define loop
+for(j in 5:8){
+  
+  # Take square root
+  j_root <- sqrt(x = j)
+  
+  # Print that result
+  print(x = j_root)
+  
+} # Close loop
 ```
+
+
 
 ## [More Loop Practice]{.pink} {.smaller}
 
@@ -281,6 +271,8 @@ for(k in 1:5){
 
 \
 
+. . .
+
 - For the loop with `j` as the index:
     - Make the `print` step tell you the starting number and its square root
 
@@ -296,7 +288,7 @@ for(j in 5:25){
 }
 ```
 
-## [More Message Pratice]{.pink} {.smaller}
+## [More Message Practice]{.pink} {.smaller}
 
 - For the loop with `i` as the index:
     - Write a message that says each number and what it times 32 is equal to
@@ -324,7 +316,7 @@ for(i in 5:25){
 
 - Syntax is similar to logical statements for subsetting
     - Recall our earlier conversations about conditional operators:
-    - `==`, `&`, `!=`, `>`, etc.
+    - `==`, `&`, `>`, etc.
 
 \
 
@@ -332,21 +324,25 @@ for(i in 5:25){
 
 - Two main conditional functions: `if` & `else`
 
-## [Conditional Syntax]{.orange} {.smaller}
+## [Conditional Example]{.orange}
 
-```{.r}
+```{r demo-conditional}
+#| echo: true
+
 # Do something if a condition is met
 if(2 == 2){
 
   print("Math is mathing!")
 
   # If that condition is not met...
-} else { print("Math is--somehow--not mathing...") }
+} else { 
+  
+  print("Math is--somehow--not mathing...")
+
+}
 ```
 
-\
-
-. . . 
+## [Conditional Syntax]{.orange} {.smaller}
 
 - `if` wants:
     - Condition to check in parentheses `(...)`
@@ -363,7 +359,7 @@ if(2 == 2){
 ## [Multiple `if`s]{.orange} {.smaller}
 
 - The example in the previous slide is just for one `if`
-    - Essentially 'either [this]{.purple} or [that]{.orange}'
+    - Essentially '[either this or that]{.purple}'
 
 \
 
@@ -389,6 +385,8 @@ else if(x > 0){
 - You can use conditionals to make one loop handle _multiple_ possibilities
 
 \
+
+. . . 
 
 - For example:
 ```{r ex-loop-3}
@@ -443,8 +441,8 @@ for(value in my_vec){
 
 ## [In-Class Free Work]{.gold} {.smaller}
 
-- Draft 2 of Function Tutorials is due tomorrow!
-    - Presentations during [Lab \#7]{.blue} (this week)!
+- Draft 2 of Function Tutorials is due next week!
+    - Presentations during [Lecture \#8]{.blue}
     - Requires 'revision response' where you discuss what changes you made due to feedback
 
 \
@@ -466,23 +464,25 @@ for(value in my_vec){
 ::::{.columns}
 :::{.column width="50%"}
 
-### Due before lab
-
-#### (By midnight)
-
-- Muddiest Point \#7
-- Submit [Draft 2]{.pink} of Function Tutorials
-    - Remember to include <u>_both_</u> the revised .Rmd _and_ your "revision response"
-    - Check the rubric for more details
-
-:::
-:::{.column width="50%"}
-
 ### Due before lecture
 
 #### (By midnight)
 
 - Homework \#7
+- Submit [Draft 2]{.blue} of Function Tutorials
+    - Double check rubric to see that you're not leaving any points on the table!
+    - Remember to also <u>submit the Revision Response</u>
+
+:::
+:::{.column width="50%"}
+
+### Due before lab
+
+#### (By midnight)
+
+- Homework \#8
+- Muddiest Point \#8
+- GitHub Presence
 
 :::
 ::::

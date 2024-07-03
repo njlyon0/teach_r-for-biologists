@@ -60,13 +60,17 @@ After today's session you will be able to:
 
 \
 
+. . .
+
 - Make a new Google Form for peer feedback today
     - Remember to add me to the editing side!
 
 \
 
+. . .
+
 - Your form should have (at least):
-    - Paragraph about whether people feel you addressed their feedback from [Draft 1]{.pink}
+    - Question about whether people feel you addressed their feedback from [Draft 1]{.blue}
     - Any questions from first survey that you think are still valuable
 
 ## [Feedback Reminder]{.orange}
@@ -98,14 +102,19 @@ Keep the following pieces of advice in mind:
 
 ## [Get Ready]{.pink} {.smaller}
 
-- Find & knit your R Markdown file, then open the product
+- Find and open your R Markdown file
+    - Knit it if you want
 
 \
+
+. . .
 
 - Take a deep breath and relax!
-    - You got this!
+    - [You got this]{.purple}!
 
 \
+
+. . .
 
 - Let me know when you're ready
 
@@ -113,7 +122,7 @@ Keep the following pieces of advice in mind:
 
 - Something to keep in mind:
     - There is an <u>optional</u> 3^rd^ draft! 
-    - If you submit draft 3 and do better than draft 2, [it will replace your score]{.gold}
+    - If you submit draft 3 and do better than draft 2, [it will replace your score]{.purple}
     - So take feedback seriously just in case you're unhappy with your draft 2 points!
 
 \
