@@ -476,11 +476,14 @@ Lab 6 – Visualization II
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Elements can be modified as desired inside of <code>theme</code> function</li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Each type of element has a different ‘helper function’ needed to modify that element
 <ul>
@@ -489,6 +492,7 @@ Lab 6 – Visualization II
 <li><em>Remove</em> an element with <code>element_blank</code></li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="theme-syntax" class="slide level2 smaller">
 <h2><span class="orange">Theme Syntax</span></h2>
@@ -497,6 +501,7 @@ Lab 6 – Visualization II
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>Here’s an example of the proper syntax</li>
 </ul>
@@ -509,6 +514,7 @@ Lab 6 – Visualization II
 <span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a>          <span class="at">panel.grid =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br>
 </p>
+</div>
 <div class="fragment">
 <ul>
 <li>Note how the <code>theme</code> and <code>element_...</code> functions are used together</li>
@@ -518,7 +524,7 @@ Lab 6 – Visualization II
 <section id="gridline-theme-components" class="slide level2 smaller">
 <h2><span class="orange">Gridline Theme Components</span></h2>
 <ul>
-<li>You’ll learn theme element names as you work more with <code>ggplot2</code></li>
+<li>You’ll learn <code>theme</code> argument names as you work more with <code>ggplot2</code></li>
 </ul>
 <p><br>
 </p>
@@ -571,11 +577,14 @@ Lab 6 – Visualization II
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>What does this do to your graph?</li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>What happens if you add these two lines as well (<strong>inside</strong> of the <code>theme</code> parentheses!)?
 <ul>
@@ -583,6 +592,7 @@ Lab 6 – Visualization II
 <li><code>axis.line = element_line(color = "black"))</code></li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="remove-gridlines-1" class="slide level2 smaller">
 <h2><span class="pink">Remove Gridlines</span></h2>
@@ -619,7 +629,7 @@ Lab 6 – Visualization II
 </p>
 <div class="fragment">
 <ul>
-<li>Axis “<span class="purple">title</span>” vs.&nbsp;axis “<span class="gold">text</span>”
+<li>Axis “<span class="purple">title</span>” vs.&nbsp;axis “<span class="purple">text</span>”
 <ul>
 <li><code>axis.title</code> = axis label text (given to <code>labs</code> function)</li>
 <li><code>axis.text</code> = text on axis tick marks</li>
@@ -633,16 +643,11 @@ Lab 6 – Visualization II
 </div>
 <div class="fragment">
 <ul>
-<li>Want to modify just X or Y? Add that to the element name!
+<li>Want to modify just X or Y? Add that to the argument name!
 <ul>
 <li>E.g., <code>theme(axis.text.x = element_text(...))</code></li>
 </ul></li>
 </ul>
-<p><br>
-</p>
-</div>
-<div class="fragment">
-<p>Increase font size with: <code>element_text(size = 14)</code></p>
 </div>
 </section>
 <section id="change-text-size" class="slide level2 smaller">
@@ -789,7 +794,7 @@ Lab 6 – Visualization II
 <ul>
 <li>Two methods (for ggplots):
 <ol type="1">
-<li><code>ggplot2::facet_...</code></li>
+<li><code>ggplot2::facet_grid()</code></li>
 <li><code>cowplot::plot_grid()</code></li>
 </ol></li>
 </ul>
@@ -804,20 +809,24 @@ Lab 6 – Visualization II
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
-<li>Facets work just like geometries
+<li>Facets work similarly to geometries
 <ul>
 <li>You get separate plots for each level of the facet variable</li>
 </ul></li>
 </ul>
 <p><br>
 </p>
+</div>
+<div class="fragment">
 <ul>
 <li>Facets must <em>all</em> be the same plot type and <em>have identical axes</em>
 <ul>
 <li>Sometimes not an issue but good to keep in mind!</li>
 </ul></li>
 </ul>
+</div>
 </section>
 <section id="fact-syntax" class="slide level2 smaller">
 <h2><span class="orange">Fact Syntax</span></h2>
@@ -895,7 +904,7 @@ Lab 6 – Visualization II
 <ul>
 <li>Facets work great when all panels are the same
 <ul>
-<li>What about when you have several types of graph?</li>
+<li>What about when you want <u>different graphs in each panel</u>?</li>
 </ul></li>
 </ul>
 <p><br>
@@ -999,7 +1008,7 @@ Lab 6 – Visualization II
 <ul>
 <li>This assignment will seriously help in interviews / job apps!
 <ul>
-<li>Shows how good of a data scientist you are</li>
+<li>Demonstrates your data science skills</li>
 </ul></li>
 </ul>
 <p><br>
@@ -1027,17 +1036,18 @@ Lab 6 – Visualization II
 <h2><span class="blue">Upcoming Due Dates</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="due-before-lecture">Due before lecture</h3>
+<h3 id="due-before-lab">Due before lab</h3>
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
 <li>Homework #6</li>
+<li>Muddiest Point #7</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<h3 id="due-before-lab">Due before lab</h3>
+<h3 id="due-before-lecture">Due before lecture</h3>
 <h4 id="by-midnight-1">(By midnight)</h4>
 <ul>
-<li>Muddiest Point #7</li>
-<li>Submit <span class="pink">Draft 2</span> of Function Tutorials
+<li>Homework #7</li>
+<li>Submit <span class="blue">Draft 2</span> of Function Tutorials
 <ul>
 <li>Double check rubric to see that you’re not leaving any points on the table!</li>
 <li>Remember to also <u>submit the Revision Response</u></li>

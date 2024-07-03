@@ -413,7 +413,6 @@ Lecture 7 – Code Iteration
 <section id="todays-plan" class="slide level2">
 <h2><span class="blue">Today’s Plan</span></h2>
 <ul>
-<li>Choose <span class="blue">Lab #8</span> “Bonus Content”</li>
 <li>Code Iteration with Loops</li>
 <li>Conditionals in Loops</li>
 <li>In-Class Free Work</li>
@@ -429,30 +428,6 @@ Lecture 7 – Code Iteration
 <li>Create a loop with a conditional</li>
 </ul>
 </div>
-</section>
-<section id="bonus-content" class="slide level2 smaller">
-<h2><span class="gold">Bonus Content</span></h2>
-<ul>
-<li><span class="blue">Lab #8</span> topic is your choice!</li>
-</ul>
-<p><br>
-</p>
-<ul>
-<li>Some options include:
-<ul>
-<li>Biodiversity and ecological communities</li>
-<li>Pairwise comparisons (i.e., what to do after ANOVA says ‘at least one group differs’)</li>
-<li>Heatmaps</li>
-</ul></li>
-</ul>
-<p><br>
-</p>
-<ul>
-<li>What 1-2 topic(s) seem interesting to you?
-<ul>
-<li>Feel free to propose topics that aren’t listed!</li>
-</ul></li>
-</ul>
 </section>
 <section id="repeated-operations" class="slide level2 smaller">
 <h2><span class="orange">Repeated Operations</span></h2>
@@ -489,7 +464,7 @@ Lecture 7 – Code Iteration
 <li>Iteration process:
 <ol type="1">
 <li>Define the operation that you want to repeat</li>
-<li>Define what the values to be passed through that operation</li>
+<li>Define the values to be passed through that operation</li>
 <li>Press “go” and sit back while the code does the work!</li>
 </ol></li>
 </ul>
@@ -509,7 +484,7 @@ Lecture 7 – Code Iteration
 </div>
 <div class="fragment">
 <ul>
-<li>This method is named “for loop”</li>
+<li>This method is called a “<span class="purple">for loop</span>”</li>
 </ul>
 </div>
 </section>
@@ -583,25 +558,39 @@ Lecture 7 – Code Iteration
 <p><br>
 </p>
 <ul>
-<li>Write a for loop that takes the square root of each number
+<li>Write a for loop that:
 <ul>
-<li>Function is <code>sqrt</code></li>
-</ul></li>
-<li>The loop should print the result for each square root in the Console
-<ul>
-<li>Function is <code>print</code></li>
+<li><ol type="1">
+<li>Takes the square root of each number (see <code>?sqrt</code>)</li>
+</ol></li>
+<li><ol start="2" type="1">
+<li>Prints that result (use <code>print</code> function)</li>
+</ol></li>
 </ul></li>
 </ul>
-<p><br>
-</p>
-<div class="fragment">
+</section>
+<section id="loop-practice-answer" class="slide level2">
+<h2><span class="pink">Loop Practice (Answer)</span></h2>
 <ul>
-<li>Answer:</li>
+<li>Demonstrating on only a few numbers</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>){</span>
-<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a>  j_root <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(j)</span>
-<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(j_root)</span>
-<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Define loop</span></span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">8</span>){</span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="co"># Take square root</span></span>
+<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a>  j_root <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="at">x =</span> j)</span>
+<span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="co"># Print that result</span></span>
+<span id="cb4-8"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="at">x =</span> j_root)</span>
+<span id="cb4-9"><a aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-10"><a aria-hidden="true" tabindex="-1"></a>} <span class="co"># Close loop</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.236068
+[1] 2.44949
+[1] 2.645751
+[1] 2.828427</code></pre>
+</div>
 </div>
 </section>
 <section id="more-loop-practice" class="slide level2 smaller">
@@ -619,10 +608,10 @@ Lecture 7 – Code Iteration
 <ul>
 <li>Answer:</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>){</span>
-<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a>  i_mult <span class="ot">&lt;-</span> i <span class="sc">*</span> <span class="dv">32</span></span>
-<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i_mult)</span>
-<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>){</span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>  i_mult <span class="ot">&lt;-</span> i <span class="sc">*</span> <span class="dv">32</span></span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i_mult)</span>
+<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="temperature-check" class="slide level2">
@@ -677,11 +666,11 @@ Lecture 7 – Code Iteration
 <li>For example:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Use `paste` to combine multiple vectors</span></span>
-<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">"Hello"</span>, <span class="st">"my"</span>, <span class="st">"name"</span>, <span class="st">"is"</span>, <span class="st">"Nick"</span>)</span>
-<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Then give that to `print` to return!</span></span>
-<span id="cb6-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Use `paste` to combine multiple vectors</span></span>
+<span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a>text <span class="ot">&lt;-</span> <span class="fu">paste</span>(<span class="st">"Hello"</span>, <span class="st">"my"</span>, <span class="st">"name"</span>, <span class="st">"is"</span>, <span class="st">"Nick"</span>)</span>
+<span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Then give that to `print` to return!</span></span>
+<span id="cb7-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Hello my name is Nick"</code></pre>
 </div>
@@ -707,16 +696,16 @@ Lecture 7 – Code Iteration
 <li>For instance:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Loop across vector of numbers</span></span>
-<span id="cb8-2"><a></a><span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
-<span id="cb8-3"><a></a>  </span>
-<span id="cb8-4"><a></a>  <span class="co"># Square that number</span></span>
-<span id="cb8-5"><a></a>  square_k <span class="ot">&lt;-</span> k <span class="sc">*</span> k</span>
-<span id="cb8-6"><a></a>  </span>
-<span id="cb8-7"><a></a>  <span class="co"># Print a message about that result</span></span>
-<span id="cb8-8"><a></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The square of"</span>, k, <span class="st">"is"</span>, square_k))</span>
-<span id="cb8-9"><a></a></span>
-<span id="cb8-10"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9" data-code-line-numbers="|8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Loop across vector of numbers</span></span>
+<span id="cb9-2"><a></a><span class="cf">for</span>(k <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){</span>
+<span id="cb9-3"><a></a>  </span>
+<span id="cb9-4"><a></a>  <span class="co"># Square that number</span></span>
+<span id="cb9-5"><a></a>  square_k <span class="ot">&lt;-</span> k <span class="sc">*</span> k</span>
+<span id="cb9-6"><a></a>  </span>
+<span id="cb9-7"><a></a>  <span class="co"># Print a message about that result</span></span>
+<span id="cb9-8"><a></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The square of"</span>, k, <span class="st">"is"</span>, square_k))</span>
+<span id="cb9-9"><a></a></span>
+<span id="cb9-10"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "The square of 1 is 1"
 [1] "The square of 2 is 4"
@@ -734,6 +723,7 @@ Lecture 7 – Code Iteration
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>For the loop with <code>j</code> as the index:
 <ul>
@@ -742,18 +732,19 @@ Lecture 7 – Code Iteration
 </ul>
 <p><br>
 </p>
+</div>
 <div class="fragment">
 <ul>
 <li>Answer:</li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>){</span>
-<span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a>  j_root <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(j)</span>
-<span id="cb10-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The square root of"</span>, j, <span class="st">"is"</span>, j_root))</span>
-<span id="cb10-4"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>){</span>
+<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>  j_root <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(j)</span>
+<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"The square root of"</span>, j, <span class="st">"is"</span>, j_root))</span>
+<span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="more-message-pratice" class="slide level2 smaller">
-<h2><span class="pink">More Message Pratice</span></h2>
+<section id="more-message-practice" class="slide level2 smaller">
+<h2><span class="pink">More Message Practice</span></h2>
 <ul>
 <li>For the loop with <code>i</code> as the index:
 <ul>
@@ -766,10 +757,10 @@ Lecture 7 – Code Iteration
 <ul>
 <li>Answer:</li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>){</span>
-<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>  i_mult <span class="ot">&lt;-</span> i <span class="sc">*</span> <span class="dv">32</span></span>
-<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(i, <span class="st">"times 32 is equal to"</span>, i_mult))</span>
-<span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">5</span><span class="sc">:</span><span class="dv">25</span>){</span>
+<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a>  i_mult <span class="ot">&lt;-</span> i <span class="sc">*</span> <span class="dv">32</span></span>
+<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">paste</span>(i, <span class="st">"times 32 is equal to"</span>, i_mult))</span>
+<span id="cb12-4"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="conditionals" class="slide level2 smaller">
@@ -787,7 +778,7 @@ Lecture 7 – Code Iteration
 <li>Syntax is similar to logical statements for subsetting
 <ul>
 <li>Recall our earlier conversations about conditional operators:</li>
-<li><code>==</code>, <code>&amp;</code>, <code>!=</code>, <code>&gt;</code>, etc.</li>
+<li><code>==</code>, <code>&amp;</code>, <code>&gt;</code>, etc.</li>
 </ul></li>
 </ul>
 <p><br>
@@ -799,18 +790,27 @@ Lecture 7 – Code Iteration
 </ul>
 </div>
 </section>
+<section id="conditional-example" class="slide level2">
+<h2><span class="orange">Conditional Example</span></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Do something if a condition is met</span></span>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="dv">2</span> <span class="sc">==</span> <span class="dv">2</span>){</span>
+<span id="cb13-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Math is mathing!"</span>)</span>
+<span id="cb13-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a aria-hidden="true" tabindex="-1"></a>  <span class="co"># If that condition is not met...</span></span>
+<span id="cb13-7"><a aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> { </span>
+<span id="cb13-8"><a aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-9"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Math is--somehow--not mathing..."</span>)</span>
+<span id="cb13-10"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Math is mathing!"</code></pre>
+</div>
+</div>
+</section>
 <section id="conditional-syntax" class="slide level2 smaller">
 <h2><span class="orange">Conditional Syntax</span></h2>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Do something if a condition is met</span></span>
-<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="dv">2</span> <span class="sc">==</span> <span class="dv">2</span>){</span>
-<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Math is mathing!"</span>)</span>
-<span id="cb12-5"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a aria-hidden="true" tabindex="-1"></a>  <span class="co"># If that condition is not met...</span></span>
-<span id="cb12-7"><a aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> { <span class="fu">print</span>(<span class="st">"Math is--somehow--not mathing..."</span>) }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br>
-</p>
-<div class="fragment">
 <ul>
 <li><code>if</code> wants:
 <ul>
@@ -820,7 +820,6 @@ Lecture 7 – Code Iteration
 </ul>
 <p><br>
 </p>
-</div>
 <div class="fragment">
 <ul>
 <li><code>else</code> wants:
@@ -836,7 +835,7 @@ Lecture 7 – Code Iteration
 <ul>
 <li>The example in the previous slide is just for one <code>if</code>
 <ul>
-<li>Essentially ‘either <span class="purple">this</span> or <span class="orange">that</span>’</li>
+<li>Essentially ‘<span class="purple">either this or that</span>’</li>
 </ul></li>
 </ul>
 <p><br>
@@ -845,16 +844,16 @@ Lecture 7 – Code Iteration
 <ul>
 <li>You can add multiple conditions if desired!</li>
 </ul>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># If the number is less than 0</span></span>
-<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(x <span class="sc">&lt;</span> <span class="dv">0</span>){</span>
-<span id="cb13-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Number is negative"</span>)</span>
-<span id="cb13-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># If it's more than 0</span></span>
-<span id="cb13-6"><a aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="cf">if</span>(x <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
-<span id="cb13-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Number is positive"</span>)</span>
-<span id="cb13-8"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise ...</span></span>
-<span id="cb13-10"><a aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> { <span class="fu">print</span>(<span class="st">"Number is zero"</span>) }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># If the number is less than 0</span></span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(x <span class="sc">&lt;</span> <span class="dv">0</span>){</span>
+<span id="cb15-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Number is negative"</span>)</span>
+<span id="cb15-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># If it's more than 0</span></span>
+<span id="cb15-6"><a aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="cf">if</span>(x <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb15-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Number is positive"</span>)</span>
+<span id="cb15-8"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise ...</span></span>
+<span id="cb15-10"><a aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> { <span class="fu">print</span>(<span class="st">"Number is zero"</span>) }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>See how the second condition uses <code>else if(...){...}</code>?</li>
 </ul>
@@ -867,25 +866,26 @@ Lecture 7 – Code Iteration
 </ul>
 <p><br>
 </p>
+<div class="fragment">
 <ul>
 <li>For example:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14" data-code-line-numbers="|8|9|12|13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="co"># Test vector</span></span>
-<span id="cb14-2"><a></a>my_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="sc">-</span><span class="dv">9</span>, <span class="sc">-</span><span class="dv">8</span>, <span class="dv">0</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>)</span>
-<span id="cb14-3"><a></a></span>
-<span id="cb14-4"><a></a><span class="co"># Loop across it</span></span>
-<span id="cb14-5"><a></a><span class="cf">for</span>(value <span class="cf">in</span> my_vec){</span>
-<span id="cb14-6"><a></a>  </span>
-<span id="cb14-7"><a></a>  <span class="co"># Make negative numbers positive</span></span>
-<span id="cb14-8"><a></a>  <span class="cf">if</span>(value <span class="sc">&lt;</span> <span class="dv">0</span>){ </span>
-<span id="cb14-9"><a></a>    <span class="fu">print</span>(value <span class="sc">*</span> <span class="sc">-</span><span class="dv">1</span>)</span>
-<span id="cb14-10"><a></a>    </span>
-<span id="cb14-11"><a></a>    <span class="co"># Take the square root of positive numbers</span></span>
-<span id="cb14-12"><a></a>  } <span class="cf">else</span> <span class="cf">if</span>(value <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
-<span id="cb14-13"><a></a>      <span class="fu">print</span>(<span class="fu">sqrt</span>(value)) }</span>
-<span id="cb14-14"><a></a>  </span>
-<span id="cb14-15"><a></a>} <span class="co"># Close loop curly brace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="|8|9|12|13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="co"># Test vector</span></span>
+<span id="cb16-2"><a></a>my_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="sc">-</span><span class="dv">9</span>, <span class="sc">-</span><span class="dv">8</span>, <span class="dv">0</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>)</span>
+<span id="cb16-3"><a></a></span>
+<span id="cb16-4"><a></a><span class="co"># Loop across it</span></span>
+<span id="cb16-5"><a></a><span class="cf">for</span>(value <span class="cf">in</span> my_vec){</span>
+<span id="cb16-6"><a></a>  </span>
+<span id="cb16-7"><a></a>  <span class="co"># Make negative numbers positive</span></span>
+<span id="cb16-8"><a></a>  <span class="cf">if</span>(value <span class="sc">&lt;</span> <span class="dv">0</span>){ </span>
+<span id="cb16-9"><a></a>    <span class="fu">print</span>(value <span class="sc">*</span> <span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb16-10"><a></a>    </span>
+<span id="cb16-11"><a></a>    <span class="co"># Take the square root of positive numbers</span></span>
+<span id="cb16-12"><a></a>  } <span class="cf">else</span> <span class="cf">if</span>(value <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb16-13"><a></a>      <span class="fu">print</span>(<span class="fu">sqrt</span>(value)) }</span>
+<span id="cb16-14"><a></a>  </span>
+<span id="cb16-15"><a></a>} <span class="co"># Close loop curly brace</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 10
 [1] 9
@@ -893,6 +893,7 @@ Lecture 7 – Code Iteration
 [1] 2
 [1] 2.236068
 [1] 2.44949</code></pre>
+</div>
 </div>
 </div>
 </section>
@@ -934,9 +935,9 @@ Lecture 7 – Code Iteration
 <section id="in-class-free-work" class="slide level2 smaller">
 <h2><span class="gold">In-Class Free Work</span></h2>
 <ul>
-<li>Draft 2 of Function Tutorials is due tomorrow!
+<li>Draft 2 of Function Tutorials is due next week!
 <ul>
-<li>Presentations during <span class="blue">Lab #7</span> (this week)!</li>
+<li>Presentations during <span class="blue">Lecture #8</span></li>
 <li>Requires ‘revision response’ where you discuss what changes you made due to feedback</li>
 </ul></li>
 </ul>
@@ -965,21 +966,23 @@ Lecture 7 – Code Iteration
 <h2><span class="blue">Upcoming Due Dates</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="due-before-lab">Due before lab</h3>
+<h3 id="due-before-lecture">Due before lecture</h3>
 <h4 id="by-midnight">(By midnight)</h4>
 <ul>
-<li>Muddiest Point #7</li>
-<li>Submit <span class="pink">Draft 2</span> of Function Tutorials
+<li>Homework #7</li>
+<li>Submit <span class="blue">Draft 2</span> of Function Tutorials
 <ul>
-<li>Remember to include <u><em>both</em></u> the revised .Rmd <em>and</em> your “revision response”</li>
-<li>Check the rubric for more details</li>
+<li>Double check rubric to see that you’re not leaving any points on the table!</li>
+<li>Remember to also <u>submit the Revision Response</u></li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<h3 id="due-before-lecture">Due before lecture</h3>
+<h3 id="due-before-lab">Due before lab</h3>
 <h4 id="by-midnight-1">(By midnight)</h4>
 <ul>
-<li>Homework #7</li>
+<li>Homework #8</li>
+<li>Muddiest Point #8</li>
+<li>GitHub Presence</li>
 </ul>
 </div></div>
 

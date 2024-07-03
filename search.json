@@ -47,7 +47,7 @@
     "href": "materials/slides_8a.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nMuddiest Point Review\nCustom Functions\nFree Work on GitHub Presence"
+    "text": "Today’s Plan\n\nMuddiest Point Review\nCustom Functions\nFree Work"
   },
   {
     "objectID": "materials/slides_8a.html#todays-learning-objectives",
@@ -103,7 +103,7 @@
     "href": "materials/slides_8a.html#demo-step-1-write-script",
     "title": "Intro to Data Science",
     "section": "Demo Step 1: Write Script",
-    "text": "Demo Step 1: Write Script\n\nLet’s make a function that adds two numbers together\n\nArtificially simple I know but useful to learn with!\n\n\n\n\n\n\nWe begin by making the script version of our function\n\n\n# Add two numbers together\n4 + 3\n\n[1] 7"
+    "text": "Demo Step 1: Write Script\n\nLet’s make a function that adds two numbers together\n\nArtificially simple, I know, but useful to learn with!\n\n\n\n\n\n\nWe begin by making the script version of our function\n\n\n# Add two numbers together\n4 + 3\n\n[1] 7"
   },
   {
     "objectID": "materials/slides_8a.html#demo-step-2-identify-inputs",
@@ -159,7 +159,7 @@
     "href": "materials/slides_8a.html#make-a-default",
     "title": "Intro to Data Science",
     "section": "Make a Default",
-    "text": "Make a Default\n\nLet’s revisit your pound to kilogram function\n\n\n\n\nSet the default pounds to 175\n\n\n\n\nWhat happens if you run your function with nothing in the parentheses?"
+    "text": "Make a Default\n\nLet’s revisit your pound to kilogram function\n\n\n\n\n\nSet the default pounds to 175\n\n\n\n\n\n\nWhat happens if you run your function with nothing in the parentheses?"
   },
   {
     "objectID": "materials/slides_8a.html#temperature-check-1",
@@ -176,11 +176,11 @@
     "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #8\nHomework #8\n\nNote reduced time to complete for this one!\n\nGitHub Presence evaluation\nOptional 3rd draft of Function Tutorials\n\n\nDue before lecture\n(By midnight)\n\nFinal deadline for all work from a summer course"
   },
   {
-    "objectID": "materials/slides_8a.html#free-work-on-github",
-    "href": "materials/slides_8a.html#free-work-on-github",
+    "objectID": "materials/slides_8a.html#free-work",
+    "href": "materials/slides_8a.html#free-work",
     "title": "Intro to Data Science",
-    "section": "Free Work on GitHub",
-    "text": "Free Work on GitHub\n\nAssignment is due at end of course (soon!)\n\n\n\nTips for success:\n\n\nCheck out the rubric and make sure you don’t miss any “easy” points\n\n\n\n\nDon’t leave after this slide!\n\n\n\n\nIf you have questions, ask them now during this free work time\n\n\n\n\nProgramming in R for Biologists"
+    "section": "Free Work",
+    "text": "Free Work\n\nEverything is due at the end of course (soon!)\n\n\n\nTips for success:\n\n\nCheck out rubrics and make sure you don’t miss any “easy” points\n\n\n\n\nDon’t leave after this slide!\n\n\n\n\nIf you have questions, ask them now during this free work time\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/home_week2.html",
@@ -1332,7 +1332,7 @@
     "href": "materials/slides_7a.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nChoose Lab #8 “Bonus Content”\nCode Iteration with Loops\nConditionals in Loops\nIn-Class Free Work"
+    "text": "Today’s Plan\n\nCode Iteration with Loops\nConditionals in Loops\nIn-Class Free Work"
   },
   {
     "objectID": "materials/slides_7a.html#todays-learning-objectives",
@@ -1340,13 +1340,6 @@
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
     "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nDescribe the contexts where iteration is useful\nApply loops to small arithmetic problems\nCreate a loop with a conditional"
-  },
-  {
-    "objectID": "materials/slides_7a.html#bonus-content",
-    "href": "materials/slides_7a.html#bonus-content",
-    "title": "Intro to Data Science",
-    "section": "Bonus Content",
-    "text": "Bonus Content\n\nLab #8 topic is your choice!\n\n\n\n\nSome options include:\n\nBiodiversity and ecological communities\nPairwise comparisons (i.e., what to do after ANOVA says ‘at least one group differs’)\nHeatmaps\n\n\n\n\n\nWhat 1-2 topic(s) seem interesting to you?\n\nFeel free to propose topics that aren’t listed!"
   },
   {
     "objectID": "materials/slides_7a.html#repeated-operations",
@@ -1360,7 +1353,7 @@
     "href": "materials/slides_7a.html#code-iteration",
     "title": "Intro to Data Science",
     "section": "Code Iteration",
-    "text": "Code Iteration\n\nIteration process:\n\nDefine the operation that you want to repeat\nDefine what the values to be passed through that operation\nPress “go” and sit back while the code does the work!\n\n\n\n\n\n\nBenefits:\n\nMuch faster than copy/pasting code\nCode is more human-readable / navigable\nAllows you to do something else while the code iterates itself!\n\n\n\n\n\n\n\nThis method is named “for loop”"
+    "text": "Code Iteration\n\nIteration process:\n\nDefine the operation that you want to repeat\nDefine the values to be passed through that operation\nPress “go” and sit back while the code does the work!\n\n\n\n\n\n\nBenefits:\n\nMuch faster than copy/pasting code\nCode is more human-readable / navigable\nAllows you to do something else while the code iterates itself!\n\n\n\n\n\n\n\nThis method is called a “for loop”"
   },
   {
     "objectID": "materials/slides_7a.html#loop-syntax",
@@ -1381,7 +1374,14 @@
     "href": "materials/slides_7a.html#loop-practice",
     "title": "Intro to Data Science",
     "section": "Loop Practice",
-    "text": "Loop Practice\n\nMake a vector of numbers between 5 and 25\n\n\n\n\nWrite a for loop that takes the square root of each number\n\nFunction is sqrt\n\nThe loop should print the result for each square root in the Console\n\nFunction is print\n\n\n\n\n\n\nAnswer:\n\nfor(j in 5:25){\n  j_root &lt;- sqrt(j)\n  print(j_root)\n}"
+    "text": "Loop Practice\n\nMake a vector of numbers between 5 and 25\n\n\n\n\nWrite a for loop that:\n\n\nTakes the square root of each number (see ?sqrt)\n\n\nPrints that result (use print function)"
+  },
+  {
+    "objectID": "materials/slides_7a.html#loop-practice-answer",
+    "href": "materials/slides_7a.html#loop-practice-answer",
+    "title": "Intro to Data Science",
+    "section": "Loop Practice (Answer)",
+    "text": "Loop Practice (Answer)\n\nDemonstrating on only a few numbers\n\n\n# Define loop\nfor(j in 5:8){\n  \n  # Take square root\n  j_root &lt;- sqrt(x = j)\n  \n  # Print that result\n  print(x = j_root)\n  \n} # Close loop\n\n[1] 2.236068\n[1] 2.44949\n[1] 2.645751\n[1] 2.828427"
   },
   {
     "objectID": "materials/slides_7a.html#more-loop-practice",
@@ -1423,28 +1423,35 @@
     "href": "materials/slides_7a.html#write-messages",
     "title": "Intro to Data Science",
     "section": "Write Messages",
-    "text": "Write Messages\n\nWe’ll modify your earlier practice loops to make informative messages!\n\n\n\n\nFor the loop with j as the index:\n\nMake the print step tell you the starting number and its square root\n\n\n\n\n\n\nAnswer:\n\nfor(j in 5:25){\n  j_root &lt;- sqrt(j)\n  print(paste(\"The square root of\", j, \"is\", j_root))\n}"
+    "text": "Write Messages\n\nWe’ll modify your earlier practice loops to make informative messages!\n\n\n\n\n\nFor the loop with j as the index:\n\nMake the print step tell you the starting number and its square root\n\n\n\n\n\n\n\nAnswer:\n\nfor(j in 5:25){\n  j_root &lt;- sqrt(j)\n  print(paste(\"The square root of\", j, \"is\", j_root))\n}"
   },
   {
-    "objectID": "materials/slides_7a.html#more-message-pratice",
-    "href": "materials/slides_7a.html#more-message-pratice",
+    "objectID": "materials/slides_7a.html#more-message-practice",
+    "href": "materials/slides_7a.html#more-message-practice",
     "title": "Intro to Data Science",
-    "section": "More Message Pratice",
-    "text": "More Message Pratice\n\nFor the loop with i as the index:\n\nWrite a message that says each number and what it times 32 is equal to\n\n\n\n\n\n\nAnswer:\n\nfor(i in 5:25){\n  i_mult &lt;- i * 32\n  print(paste(i, \"times 32 is equal to\", i_mult))\n}"
+    "section": "More Message Practice",
+    "text": "More Message Practice\n\nFor the loop with i as the index:\n\nWrite a message that says each number and what it times 32 is equal to\n\n\n\n\n\n\nAnswer:\n\nfor(i in 5:25){\n  i_mult &lt;- i * 32\n  print(paste(i, \"times 32 is equal to\", i_mult))\n}"
   },
   {
     "objectID": "materials/slides_7a.html#conditionals",
     "href": "materials/slides_7a.html#conditionals",
     "title": "Intro to Data Science",
     "section": "Conditionals",
-    "text": "Conditionals\n\nYou can write code to do something only if some condition is met\n\nDo this by using conditionals!\n\n\n\n\n\n\nSyntax is similar to logical statements for subsetting\n\nRecall our earlier conversations about conditional operators:\n==, &, !=, &gt;, etc.\n\n\n\n\n\n\n\nTwo main conditional functions: if & else"
+    "text": "Conditionals\n\nYou can write code to do something only if some condition is met\n\nDo this by using conditionals!\n\n\n\n\n\n\nSyntax is similar to logical statements for subsetting\n\nRecall our earlier conversations about conditional operators:\n==, &, &gt;, etc.\n\n\n\n\n\n\n\nTwo main conditional functions: if & else"
+  },
+  {
+    "objectID": "materials/slides_7a.html#conditional-example",
+    "href": "materials/slides_7a.html#conditional-example",
+    "title": "Intro to Data Science",
+    "section": "Conditional Example",
+    "text": "Conditional Example\n\n# Do something if a condition is met\nif(2 == 2){\n\n  print(\"Math is mathing!\")\n\n  # If that condition is not met...\n} else { \n  \n  print(\"Math is--somehow--not mathing...\")\n\n}\n\n[1] \"Math is mathing!\""
   },
   {
     "objectID": "materials/slides_7a.html#conditional-syntax",
     "href": "materials/slides_7a.html#conditional-syntax",
     "title": "Intro to Data Science",
     "section": "Conditional Syntax",
-    "text": "Conditional Syntax\n# Do something if a condition is met\nif(2 == 2){\n\n  print(\"Math is mathing!\")\n\n  # If that condition is not met...\n} else { print(\"Math is--somehow--not mathing...\") }\n\n\n\n\nif wants:\n\nCondition to check in parentheses (...)\nWhat to do if the condition is met in curly braces {...}\n\n\n\n\n\n\n\nelse wants:\n\nOnly curly braces {...} bits\nCan only be used if if is used first"
+    "text": "Conditional Syntax\n\nif wants:\n\nCondition to check in parentheses (...)\nWhat to do if the condition is met in curly braces {...}\n\n\n\n\n\n\nelse wants:\n\nOnly curly braces {...} bits\nCan only be used if if is used first"
   },
   {
     "objectID": "materials/slides_7a.html#multiple-ifs",
@@ -1458,7 +1465,7 @@
     "href": "materials/slides_7a.html#conditionals-in-loops",
     "title": "Intro to Data Science",
     "section": "Conditionals in Loops",
-    "text": "Conditionals in Loops\n\nYou can use conditionals to make one loop handle multiple possibilities\n\n\n\n\nFor example:\n\n\n# Test vector\nmy_vec &lt;- c(-10, -9, -8, 0, 4, 5, 6)\n\n# Loop across it\nfor(value in my_vec){\n  \n  # Make negative numbers positive\n  if(value &lt; 0){ \n    print(value * -1)\n    \n    # Take the square root of positive numbers\n  } else if(value &gt; 0){\n      print(sqrt(value)) }\n  \n} # Close loop curly brace\n\n[1] 10\n[1] 9\n[1] 8\n[1] 2\n[1] 2.236068\n[1] 2.44949"
+    "text": "Conditionals in Loops\n\nYou can use conditionals to make one loop handle multiple possibilities\n\n\n\n\n\nFor example:\n\n\n# Test vector\nmy_vec &lt;- c(-10, -9, -8, 0, 4, 5, 6)\n\n# Loop across it\nfor(value in my_vec){\n  \n  # Make negative numbers positive\n  if(value &lt; 0){ \n    print(value * -1)\n    \n    # Take the square root of positive numbers\n  } else if(value &gt; 0){\n      print(sqrt(value)) }\n  \n} # Close loop curly brace\n\n[1] 10\n[1] 9\n[1] 8\n[1] 2\n[1] 2.236068\n[1] 2.44949"
   },
   {
     "objectID": "materials/slides_7a.html#loop-conditional-visual",
@@ -1486,14 +1493,14 @@
     "href": "materials/slides_7a.html#in-class-free-work",
     "title": "Intro to Data Science",
     "section": "In-Class Free Work",
-    "text": "In-Class Free Work\n\nDraft 2 of Function Tutorials is due tomorrow!\n\nPresentations during Lab #7 (this week)!\nRequires ‘revision response’ where you discuss what changes you made due to feedback\n\n\n\n\n\n\nGitHub Presence is due next week\n\nYou have most of what you need for full points on that already\n\n\n\n\n\n\n\nAny questions about upcoming assignments / past topics?\n\nI strongly recommend taking advantage of this time!"
+    "text": "In-Class Free Work\n\nDraft 2 of Function Tutorials is due next week!\n\nPresentations during Lecture #8\nRequires ‘revision response’ where you discuss what changes you made due to feedback\n\n\n\n\n\n\nGitHub Presence is due next week\n\nYou have most of what you need for full points on that already\n\n\n\n\n\n\n\nAny questions about upcoming assignments / past topics?\n\nI strongly recommend taking advantage of this time!"
   },
   {
     "objectID": "materials/slides_7a.html#upcoming-due-dates",
     "href": "materials/slides_7a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #7\nSubmit Draft 2 of Function Tutorials\n\nRemember to include both the revised .Rmd and your “revision response”\nCheck the rubric for more details\n\n\n\nDue before lecture\n(By midnight)\n\nHomework #7\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #7\nSubmit Draft 2 of Function Tutorials\n\nDouble check rubric to see that you’re not leaving any points on the table!\nRemember to also submit the Revision Response\n\n\n\nDue before lab\n(By midnight)\n\nHomework #8\nMuddiest Point #8\nGitHub Presence\n\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/home_week8.html",
@@ -1630,21 +1637,21 @@
     "href": "materials/slides_6b.html#theme-internal-structure",
     "title": "Intro to Data Science",
     "section": "Theme Internal Structure",
-    "text": "Theme Internal Structure\n\nTheme is composed of elements\n\n\n\n\nElements can be modified as desired inside of theme function\n\n\n\n\nEach type of element has a different ‘helper function’ needed to modify that element\n\nChange text = use element_text\nChange line = use element_line\nRemove an element with element_blank"
+    "text": "Theme Internal Structure\n\nTheme is composed of elements\n\n\n\n\n\nElements can be modified as desired inside of theme function\n\n\n\n\n\n\nEach type of element has a different ‘helper function’ needed to modify that element\n\nChange text = use element_text\nChange line = use element_line\nRemove an element with element_blank"
   },
   {
     "objectID": "materials/slides_6b.html#theme-syntax",
     "href": "materials/slides_6b.html#theme-syntax",
     "title": "Intro to Data Science",
     "section": "Theme Syntax",
-    "text": "Theme Syntax\n\nYou use the theme function once with as many element_... functions as you need\n\n\n\n\nHere’s an example of the proper syntax\n\n# Make a simple scatterplot\nggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +\n    geom_point() +\n    # Modify its theme to make the axis font size bigger\n    theme(axis.text = element_text(size = 20),\n          # Also remove the grid lines\n          panel.grid = element_blank())\n\n\n\n\nNote how the theme and element_... functions are used together"
+    "text": "Theme Syntax\n\nYou use the theme function once with as many element_... functions as you need\n\n\n\n\n\nHere’s an example of the proper syntax\n\n# Make a simple scatterplot\nggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +\n    geom_point() +\n    # Modify its theme to make the axis font size bigger\n    theme(axis.text = element_text(size = 20),\n          # Also remove the grid lines\n          panel.grid = element_blank())\n\n\n\n\n\nNote how the theme and element_... functions are used together"
   },
   {
     "objectID": "materials/slides_6b.html#gridline-theme-components",
     "href": "materials/slides_6b.html#gridline-theme-components",
     "title": "Intro to Data Science",
     "section": "Gridline Theme Components",
-    "text": "Gridline Theme Components\n\nYou’ll learn theme element names as you work more with ggplot2\n\n\n\n\n\nHere are a few broadly relevant ones:\n\nGridlines = panel.grid\nPlot background = panel.background\nAxis lines (X & Y) = axis.line"
+    "text": "Gridline Theme Components\n\nYou’ll learn theme argument names as you work more with ggplot2\n\n\n\n\n\nHere are a few broadly relevant ones:\n\nGridlines = panel.grid\nPlot background = panel.background\nAxis lines (X & Y) = axis.line"
   },
   {
     "objectID": "materials/slides_6b.html#get-ready",
@@ -1658,7 +1665,7 @@
     "href": "materials/slides_6b.html#remove-gridlines",
     "title": "Intro to Data Science",
     "section": "Remove Gridlines",
-    "text": "Remove Gridlines\n\n\nTo that graph, add the following code:\n\ntheme(panel.grid = element_blank())\n\n\n\n\n\nWhat does this do to your graph?\n\n\n\n\nWhat happens if you add these two lines as well (inside of the theme parentheses!)?\n\npanel.background = element_blank()\naxis.line = element_line(color = \"black\"))"
+    "text": "Remove Gridlines\n\n\nTo that graph, add the following code:\n\ntheme(panel.grid = element_blank())\n\n\n\n\n\n\nWhat does this do to your graph?\n\n\n\n\n\n\nWhat happens if you add these two lines as well (inside of the theme parentheses!)?\n\npanel.background = element_blank()\naxis.line = element_line(color = \"black\"))"
   },
   {
     "objectID": "materials/slides_6b.html#remove-gridlines-1",
@@ -1672,7 +1679,7 @@
     "href": "materials/slides_6b.html#changing-text-size",
     "title": "Intro to Data Science",
     "section": "Changing Text Size",
-    "text": "Changing Text Size\n\nWe can also modify text size inside of theme\n\n\n\n\n\nAxis “title” vs. axis “text”\n\naxis.title = axis label text (given to labs function)\naxis.text = text on axis tick marks\n\n\n\n\n\n\n\n\n\n\nWant to modify just X or Y? Add that to the element name!\n\nE.g., theme(axis.text.x = element_text(...))\n\n\n\n\n\n\nIncrease font size with: element_text(size = 14)"
+    "text": "Changing Text Size\n\nWe can also modify text size inside of theme\n\n\n\n\n\nAxis “title” vs. axis “text”\n\naxis.title = axis label text (given to labs function)\naxis.text = text on axis tick marks\n\n\n\n\n\n\n\n\n\n\nWant to modify just X or Y? Add that to the argument name!\n\nE.g., theme(axis.text.x = element_text(...))"
   },
   {
     "objectID": "materials/slides_6b.html#change-text-size",
@@ -1728,14 +1735,14 @@
     "href": "materials/slides_6b.html#multi-panel-background",
     "title": "Intro to Data Science",
     "section": "Multi-Panel Background",
-    "text": "Multi-Panel Background\n\n\n\nSometimes nice to have multiple graphs next to each other\n\nMakes direct comparison easier\nJournals have limits on number of figures but multi-panels still count as 1\n\n\n\n\n\nTwo methods (for ggplots):\n\nggplot2::facet_...\ncowplot::plot_grid()"
+    "text": "Multi-Panel Background\n\n\n\nSometimes nice to have multiple graphs next to each other\n\nMakes direct comparison easier\nJournals have limits on number of figures but multi-panels still count as 1\n\n\n\n\n\nTwo methods (for ggplots):\n\nggplot2::facet_grid()\ncowplot::plot_grid()"
   },
   {
     "objectID": "materials/slides_6b.html#facted-graphs",
     "href": "materials/slides_6b.html#facted-graphs",
     "title": "Intro to Data Science",
     "section": "Facted Graphs",
-    "text": "Facted Graphs\n\nggplot2 has an internal way of handling this called facets\n\n\n\n\nFacets work just like geometries\n\nYou get separate plots for each level of the facet variable\n\n\n\n\n\nFacets must all be the same plot type and have identical axes\n\nSometimes not an issue but good to keep in mind!"
+    "text": "Facted Graphs\n\nggplot2 has an internal way of handling this called facets\n\n\n\n\n\nFacets work similarly to geometries\n\nYou get separate plots for each level of the facet variable\n\n\n\n\n\n\n\nFacets must all be the same plot type and have identical axes\n\nSometimes not an issue but good to keep in mind!"
   },
   {
     "objectID": "materials/slides_6b.html#fact-syntax",
@@ -1770,7 +1777,7 @@
     "href": "materials/slides_6b.html#plot-grids",
     "title": "Intro to Data Science",
     "section": "Plot Grids",
-    "text": "Plot Grids\n\nFacets work great when all panels are the same\n\nWhat about when you have several types of graph?\n\n\n\n\n\n\ncowplot::plot_grid lets you put multiple different graphs together\n\n\n\n\n\n\nHave to make graphs separately first, then combine them\n\n\n\n\n\n\nExample syntax:\n\ncowplot::plot_grid(plot1, plot2, ncol = 1, nrow = 2)\nA lot of other optional arguments"
+    "text": "Plot Grids\n\nFacets work great when all panels are the same\n\nWhat about when you want different graphs in each panel?\n\n\n\n\n\n\ncowplot::plot_grid lets you put multiple different graphs together\n\n\n\n\n\n\nHave to make graphs separately first, then combine them\n\n\n\n\n\n\nExample syntax:\n\ncowplot::plot_grid(plot1, plot2, ncol = 1, nrow = 2)\nA lot of other optional arguments"
   },
   {
     "objectID": "materials/slides_6b.html#plot-grid-example",
@@ -1812,14 +1819,14 @@
     "href": "materials/slides_6b.html#github-presence-assignment",
     "title": "Intro to Data Science",
     "section": "GitHub Presence Assignment",
-    "text": "GitHub Presence Assignment\n\nThis assignment will seriously help in interviews / job apps!\n\nShows how good of a data scientist you are\n\n\n\n\n\n\nI don’t want anyone caught unawares by this assignment\n\nSo I’ll meet with each of you 1-on-1 today to see where you’re at so far\n\n\n\n\n\n\n\nGood chance for you to ask any questions you have!\n\nAlso lets me give you tips for success"
+    "text": "GitHub Presence Assignment\n\nThis assignment will seriously help in interviews / job apps!\n\nDemonstrates your data science skills\n\n\n\n\n\n\nI don’t want anyone caught unawares by this assignment\n\nSo I’ll meet with each of you 1-on-1 today to see where you’re at so far\n\n\n\n\n\n\n\nGood chance for you to ask any questions you have!\n\nAlso lets me give you tips for success"
   },
   {
     "objectID": "materials/slides_6b.html#upcoming-due-dates",
     "href": "materials/slides_6b.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #6\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #7\nSubmit Draft 2 of Function Tutorials\n\nDouble check rubric to see that you’re not leaving any points on the table!\nRemember to also submit the Revision Response"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nHomework #6\nMuddiest Point #7\n\n\nDue before lecture\n(By midnight)\n\nHomework #7\nSubmit Draft 2 of Function Tutorials\n\nDouble check rubric to see that you’re not leaving any points on the table!\nRemember to also submit the Revision Response"
   },
   {
     "objectID": "materials/slides_6b.html#github-1-on-1s",
@@ -4151,7 +4158,7 @@
     "href": "materials/slides_7b.html#create-a-google-form",
     "title": "Intro to Data Science",
     "section": "Create a Google Form",
-    "text": "Create a Google Form\n\nConsult Lab #5 slides for a refresher on making Google Forms\n\n\n\n\nMake a new Google Form for peer feedback today\n\nRemember to add me to the editing side!\n\n\n\n\n\nYour form should have (at least):\n\nParagraph about whether people feel you addressed their feedback from Draft 1\nAny questions from first survey that you think are still valuable"
+    "text": "Create a Google Form\n\nConsult Lab #5 slides for a refresher on making Google Forms\n\n\n\n\n\nMake a new Google Form for peer feedback today\n\nRemember to add me to the editing side!\n\n\n\n\n\n\n\nYour form should have (at least):\n\nQuestion about whether people feel you addressed their feedback from Draft 1\nAny questions from first survey that you think are still valuable"
   },
   {
     "objectID": "materials/slides_7b.html#feedback-reminder",
@@ -4172,7 +4179,7 @@
     "href": "materials/slides_7b.html#get-ready",
     "title": "Intro to Data Science",
     "section": "Get Ready",
-    "text": "Get Ready\n\nFind & knit your R Markdown file, then open the product\n\n\n\n\nTake a deep breath and relax!\n\nYou got this!\n\n\n\n\n\nLet me know when you’re ready"
+    "text": "Get Ready\n\nFind and open your R Markdown file\n\nKnit it if you want\n\n\n\n\n\n\nTake a deep breath and relax!\n\nYou got this!\n\n\n\n\n\n\n\nLet me know when you’re ready"
   },
   {
     "objectID": "materials/slides_7b.html#revised-function-tutorials",
