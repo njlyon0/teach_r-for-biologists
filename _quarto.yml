@@ -5,6 +5,7 @@ project:
 
 website:
   title: "R Programming for Biologists"
+  favicon: materials/images/logo_lyon.png
   repo-url: https://github.com/njlyon0/teach_r-for-bio
   repo-actions: [issue]
   navbar:
