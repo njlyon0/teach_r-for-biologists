@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.53">
+  <meta name="generator" content="quarto-1.5.54">
 
   <meta name="author" content="Lab 6 – Visualization II">
   <title>R Programming for Biologists – Intro to Data Science</title>
@@ -855,10 +855,14 @@ Lab 6 – Visualization II
 <section id="facet-example" class="slide level2 smaller">
 <h2><span class="orange">Facet Example</span></h2>
 <p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for palmerpenguins R package"> <img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 965px; width: 12%; " alt="hex logo for ggplot2 R package"></p>
-<ul>
-<li><code>facet_grid(. ~ island)</code></li>
-</ul>
 <div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">y =</span> flipper_length_mm, <span class="at">color =</span> species)) <span class="sc">+</span> </span>
+<span id="cb5-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> island) <span class="sc">+</span></span>
+<span id="cb5-4"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Body Mass (g)"</span>, <span class="at">y =</span> <span class="st">"Flipper Length (mm)"</span>) <span class="sc">+</span></span>
+<span id="cb5-5"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.87</span>, <span class="fl">0.85</span>),</span>
+<span id="cb5-6"><a></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-7"><a></a>        <span class="at">panel.background =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -926,12 +930,9 @@ Lab 6 – Visualization II
 </div>
 <div class="fragment">
 <ul>
-<li>Example syntax:
-<ul>
-<li><code>cowplot::plot_grid(plot1, plot2, ncol = 1, nrow = 2)</code></li>
-<li>A lot of other optional arguments</li>
-</ul></li>
+<li>Example syntax:</li>
 </ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>cowplot<span class="sc">::</span><span class="fu">plot_grid</span>(plot1, plot2, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">nrow =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="plot-grid-example" class="slide level2 smaller">

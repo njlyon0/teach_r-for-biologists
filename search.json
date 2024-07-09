@@ -1756,7 +1756,7 @@
     "href": "materials/slides_6b.html#facet-example",
     "title": "Intro to Data Science",
     "section": "Facet Example",
-    "text": "Facet Example\n \n\nfacet_grid(. ~ island)"
+    "text": "Facet Example\n \n\nggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm, color = species)) + \n  geom_point() +\n  facet_grid(. ~ island) +\n  labs(x = \"Body Mass (g)\", y = \"Flipper Length (mm)\") +\n  theme(legend.position = c(0.87, 0.85),\n        legend.title = element_blank(),\n        panel.background = element_blank())"
   },
   {
     "objectID": "materials/slides_6b.html#facet",
@@ -1777,7 +1777,7 @@
     "href": "materials/slides_6b.html#plot-grids",
     "title": "Intro to Data Science",
     "section": "Plot Grids",
-    "text": "Plot Grids\n\nFacets work great when all panels are the same\n\nWhat about when you want different graphs in each panel?\n\n\n\n\n\n\ncowplot::plot_grid lets you put multiple different graphs together\n\n\n\n\n\n\nHave to make graphs separately first, then combine them\n\n\n\n\n\n\nExample syntax:\n\ncowplot::plot_grid(plot1, plot2, ncol = 1, nrow = 2)\nA lot of other optional arguments"
+    "text": "Plot Grids\n\nFacets work great when all panels are the same\n\nWhat about when you want different graphs in each panel?\n\n\n\n\n\n\ncowplot::plot_grid lets you put multiple different graphs together\n\n\n\n\n\n\nHave to make graphs separately first, then combine them\n\n\n\n\n\n\nExample syntax:\n\ncowplot::plot_grid(plot1, plot2, ncol = 1, nrow = 2)"
   },
   {
     "objectID": "materials/slides_6b.html#plot-grid-example",
