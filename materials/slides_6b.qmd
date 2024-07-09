@@ -195,7 +195,7 @@ ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
 
 - What happens if you add these two lines as well (**inside** of the `theme` parentheses!)?
     - `panel.background = element_blank()`
-    - `axis.line = element_line(color = "black"))`
+    - `axis.line = element_line(color = "black")`
 
 ## [Remove Gridlines]{.pink} {.smaller}
 
