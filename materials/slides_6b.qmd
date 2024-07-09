@@ -435,25 +435,21 @@ ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
 ![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for palmerpenguins R package"}
 ![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%" fig-alt="hex logo for ggplot2 R package"}
 
-- `facet_grid(. ~ island)`
-
 ```{r ex-facet}
+#| echo: true
+#| message: false
+#| code-line-numbers: "|3"
 #| fig-width: 6
+#| fig-height: 4.5
 #| fig-align: center
 
-# Take the penguin data and remove NA values
-peng_df <- palmerpenguins::penguins %>%
-  dplyr::filter(!is.na(flipper_length_mm) & !is.na(body_mass_g))
-
-# Generate scatterplot
-ggplot(data = peng_df, aes(x = body_mass_g, y = flipper_length_mm, color = species)) + 
+ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm, color = species)) + 
   geom_point() +
-  geom_smooth(method = "lm", formula = "y ~ x", se = F) +
-  # facet_grid(island ~ .) + # 3 rows x 1 column
-  facet_grid(. ~ island) + # 3 columns by 1 row
+  facet_grid(. ~ island) +
   labs(x = "Body Mass (g)", y = "Flipper Length (mm)") +
-  supportR::theme_lyon() +
-  theme(legend.position = c(0.87, 0.85))
+  theme(legend.position = c(0.87, 0.85),
+        legend.title = element_blank(),
+        panel.background = element_blank())
 ```
 
 ## [Facet]{.pink} {.smaller}
@@ -509,8 +505,9 @@ ggplot(data = fish_df, aes(x = diameter_cm, y = depth_cm, color = species)) +
 . . . 
 
 - Example syntax: 
-    - `cowplot::plot_grid(plot1, plot2, ncol = 1, nrow = 2)`
-    - A lot of other optional arguments
+```{.r}
+cowplot::plot_grid(plot1, plot2, ncol = 1, nrow = 2)
+```
 
 ## [Plot Grid Example]{.orange} {.smaller}
 
