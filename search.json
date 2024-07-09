@@ -1665,7 +1665,7 @@
     "href": "materials/slides_6b.html#remove-gridlines",
     "title": "Intro to Data Science",
     "section": "Remove Gridlines",
-    "text": "Remove Gridlines\n\n\nTo that graph, add the following code:\n\ntheme(panel.grid = element_blank())\n\n\n\n\n\n\nWhat does this do to your graph?\n\n\n\n\n\n\nWhat happens if you add these two lines as well (inside of the theme parentheses!)?\n\npanel.background = element_blank()\naxis.line = element_line(color = \"black\"))"
+    "text": "Remove Gridlines\n\n\nTo that graph, add the following code:\n\ntheme(panel.grid = element_blank())\n\n\n\n\n\n\nWhat does this do to your graph?\n\n\n\n\n\n\nWhat happens if you add these two lines as well (inside of the theme parentheses!)?\n\npanel.background = element_blank()\naxis.line = element_line(color = \"black\")"
   },
   {
     "objectID": "materials/slides_6b.html#remove-gridlines-1",
