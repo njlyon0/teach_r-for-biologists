@@ -273,7 +273,7 @@ for(k in 1:5){
 
 . . .
 
-- For the loop with `j` as the index:
+- For the loop that takes the square root of the index:
     - Make the `print` step tell you the starting number and its square root
 
 \
@@ -290,7 +290,7 @@ for(j in 5:25){
 
 ## [More Message Practice]{.pink} {.smaller}
 
-- For the loop with `i` as the index:
+- For the loop that multiplies the index by 32:
     - Write a message that says each number and what it times 32 is equal to
 
 \
@@ -304,6 +304,14 @@ for(i in 5:25){
   print(paste(i, "times 32 is equal to", i_mult))
 }
 ```
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
 
 ## [Conditionals]{.orange} {.smaller}
 
