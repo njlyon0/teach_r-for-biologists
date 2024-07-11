@@ -107,9 +107,9 @@ for ( index in vector ) {
 . . .
 
 - More info:
-    - index = placeholder for one value in vector
-    - vector = set of values to pass through loop
-    - curly brace (`{`/`}`) to define start/end
+    - [index]{.purple} = placeholder for one value in vector
+    - [vector]{.purple} = set of values to pass through loop
+    - [curly braces]{.purple} (`{`/`}`) to define start/end
 
 ## [Loop Example]{.orange} {.smaller}
 
