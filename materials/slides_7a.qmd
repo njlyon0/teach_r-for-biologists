@@ -364,28 +364,44 @@ if(2 == 2){
     - Only curly braces `{...}` bits
     - Can only be used if `if` is used first
 
-## [Multiple `if`s]{.orange} {.smaller}
+\
+
+. . . 
 
 - The example in the previous slide is just for one `if`
     - Essentially '[either this or that]{.purple}'
 
-\
-
-. . .
+## [Multiple `if`s]{.orange} {.smaller}
 
 - You can add multiple conditions if desired!
+
+\
+
+. . . 
+
 ```{.r}
 # If the number is less than 0
 if(x < 0){
+
   print("Number is negative")
 
 # If it's more than 0
-else if(x > 0){
+} else if(x > 0){
+
   print("Number is positive")
 
 # Otherwise ...
-} else { print("Number is zero") }
+} else { 
+
+  print("Number is zero")
+
+}
 ```
+
+\
+
+. . . 
+
 - See how the second condition uses `else if(...){...}`?
 
 ## [Conditionals in Loops]{.orange} {.smaller}
