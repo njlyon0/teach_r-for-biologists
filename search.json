@@ -468,14 +468,21 @@
     "href": "materials/slides_7a.html#write-messages",
     "title": "Intro to Data Science",
     "section": "Write Messages",
-    "text": "Write Messages\n\nWe’ll modify your earlier practice loops to make informative messages!\n\n\n\n\n\nFor the loop with j as the index:\n\nMake the print step tell you the starting number and its square root\n\n\n\n\n\n\n\nAnswer:\n\nfor(j in 5:25){\n  j_root &lt;- sqrt(j)\n  print(paste(\"The square root of\", j, \"is\", j_root))\n}"
+    "text": "Write Messages\n\nWe’ll modify your earlier practice loops to make informative messages!\n\n\n\n\n\nFor the loop that takes the square root of the index:\n\nMake the print step tell you the starting number and its square root\n\n\n\n\n\n\n\nAnswer:\n\nfor(j in 5:25){\n  j_root &lt;- sqrt(j)\n  print(paste(\"The square root of\", j, \"is\", j_root))\n}"
   },
   {
     "objectID": "materials/slides_7a.html#more-message-practice",
     "href": "materials/slides_7a.html#more-message-practice",
     "title": "Intro to Data Science",
     "section": "More Message Practice",
-    "text": "More Message Practice\n\nFor the loop with i as the index:\n\nWrite a message that says each number and what it times 32 is equal to\n\n\n\n\n\n\nAnswer:\n\nfor(i in 5:25){\n  i_mult &lt;- i * 32\n  print(paste(i, \"times 32 is equal to\", i_mult))\n}"
+    "text": "More Message Practice\n\nFor the loop that multiplies the index by 32:\n\nWrite a message that says each number and what it times 32 is equal to\n\n\n\n\n\n\nAnswer:\n\nfor(i in 5:25){\n  i_mult &lt;- i * 32\n  print(paste(i, \"times 32 is equal to\", i_mult))\n}"
+  },
+  {
+    "objectID": "materials/slides_7a.html#temperature-check-1",
+    "href": "materials/slides_7a.html#temperature-check-1",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
   },
   {
     "objectID": "materials/slides_7a.html#conditionals",
@@ -527,8 +534,8 @@
     "text": "Loops with Conditionals\n\nWrite a loop that:\n\nUses g as the index\nUses a vector that has all the integers between 10 and 20\nPrints each value in the vector\n\n\n\n\n\n\nAdd two conditionals to that loop:\n\nIf g is less than 14, print “Less than 14”\nOtherwise, print the value as-is"
   },
   {
-    "objectID": "materials/slides_7a.html#temperature-check-1",
-    "href": "materials/slides_7a.html#temperature-check-1",
+    "objectID": "materials/slides_7a.html#temperature-check-2",
+    "href": "materials/slides_7a.html#temperature-check-2",
     "title": "Intro to Data Science",
     "section": "Temperature Check",
     "text": "Temperature Check\nHow are you Feeling?"
