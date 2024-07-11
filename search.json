@@ -503,14 +503,14 @@
     "href": "materials/slides_7a.html#conditional-syntax",
     "title": "Intro to Data Science",
     "section": "Conditional Syntax",
-    "text": "Conditional Syntax\n\nif wants:\n\nCondition to check in parentheses (...)\nWhat to do if the condition is met in curly braces {...}\n\n\n\n\n\n\nelse wants:\n\nOnly curly braces {...} bits\nCan only be used if if is used first"
+    "text": "Conditional Syntax\n\nif wants:\n\nCondition to check in parentheses (...)\nWhat to do if the condition is met in curly braces {...}\n\n\n\n\n\n\nelse wants:\n\nOnly curly braces {...} bits\nCan only be used if if is used first\n\n\n\n\n\n\n\nThe example in the previous slide is just for one if\n\nEssentially ‘either this or that’"
   },
   {
     "objectID": "materials/slides_7a.html#multiple-ifs",
     "href": "materials/slides_7a.html#multiple-ifs",
     "title": "Intro to Data Science",
     "section": "Multiple ifs",
-    "text": "Multiple ifs\n\nThe example in the previous slide is just for one if\n\nEssentially ‘either this or that’\n\n\n\n\n\n\nYou can add multiple conditions if desired!\n\n# If the number is less than 0\nif(x &lt; 0){\n  print(\"Number is negative\")\n\n# If it's more than 0\nelse if(x &gt; 0){\n  print(\"Number is positive\")\n\n# Otherwise ...\n} else { print(\"Number is zero\") }\n\nSee how the second condition uses else if(...){...}?"
+    "text": "Multiple ifs\n\nYou can add multiple conditions if desired!\n\n\n\n\n# If the number is less than 0\nif(x &lt; 0){\n\n  print(\"Number is negative\")\n\n# If it's more than 0\n} else if(x &gt; 0){\n\n  print(\"Number is positive\")\n\n# Otherwise ...\n} else { \n\n  print(\"Number is zero\")\n\n}\n\n\n\n\n\nSee how the second condition uses else if(...){...}?"
   },
   {
     "objectID": "materials/slides_7a.html#conditionals-in-loops",

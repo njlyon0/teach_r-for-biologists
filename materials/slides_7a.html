@@ -836,32 +836,46 @@ Lecture 7 – Code Iteration
 <li>Can only be used if <code>if</code> is used first</li>
 </ul></li>
 </ul>
+<p><br>
+</p>
 </div>
-</section>
-<section id="multiple-ifs" class="slide level2 smaller">
-<h2><span class="orange">Multiple <code>if</code>s</span></h2>
+<div class="fragment">
 <ul>
 <li>The example in the previous slide is just for one <code>if</code>
 <ul>
 <li>Essentially ‘<span class="purple">either this or that</span>’</li>
 </ul></li>
 </ul>
-<p><br>
-</p>
-<div class="fragment">
+</div>
+</section>
+<section id="multiple-ifs" class="slide level2 smaller">
+<h2><span class="orange">Multiple <code>if</code>s</span></h2>
 <ul>
 <li>You can add multiple conditions if desired!</li>
 </ul>
+<p><br>
+</p>
+<div class="fragment">
 <div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># If the number is less than 0</span></span>
 <span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(x <span class="sc">&lt;</span> <span class="dv">0</span>){</span>
-<span id="cb15-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Number is negative"</span>)</span>
-<span id="cb15-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># If it's more than 0</span></span>
-<span id="cb15-6"><a aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="cf">if</span>(x <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
-<span id="cb15-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Number is positive"</span>)</span>
+<span id="cb15-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Number is negative"</span>)</span>
+<span id="cb15-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a aria-hidden="true" tabindex="-1"></a><span class="co"># If it's more than 0</span></span>
+<span id="cb15-7"><a aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span>(x <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
 <span id="cb15-8"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-9"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise ...</span></span>
-<span id="cb15-10"><a aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> { <span class="fu">print</span>(<span class="st">"Number is zero"</span>) }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-9"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Number is positive"</span>)</span>
+<span id="cb15-10"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise ...</span></span>
+<span id="cb15-12"><a aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> { </span>
+<span id="cb15-13"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">"Number is zero"</span>)</span>
+<span id="cb15-15"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
 <ul>
 <li>See how the second condition uses <code>else if(...){...}</code>?</li>
 </ul>
