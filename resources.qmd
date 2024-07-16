@@ -1,0 +1,26 @@
+---
+title: "Additional Resources"
+---
+
+If you've worked through the course content hosted elsewhere in this site, you have tackled a _wide_ array of R tasks in this course! Even so, you've barely scratched the surface of what you can do with this programming language. If you want to continue your R journey (which I hope that you do!), there are a lot of good resources out there. I'm linking some below but remember too that simply Googling for particular tutorials is also a nice way of continuing your journey as a new data scientist.
+
+## Resource Links
+
+### Code Tutorials - The Carpentries
+
+[The Carpentries](https://carpentries.org/index.html) is an organization that develops free, open-source tutorials for particular coding skills. Developed and maintained by educators with clear learning objectives in mind. In particular you might find the [Data Carpentries Lessons](https://datacarpentry.org/lessons/) valuable. These include:
+
+- Data Skills for Ecologists
+- Working with Genomics Data
+- Geospatial Data + R 
+- And many, _many_ more!
+
+### Another R Course - SSECR
+
+In my work with the Long Term Ecological Research Network ([LTER](https://lternet.edu/)) I got to help develop a course in data science and team science for graduate students called Synthesis Skills for Early Career Researchers (SSECR). This course covers some of the content we covered here but to a much greater depth. It also includes content we didn't cover in this course but that you might find interesting (e.g., working with spatial data, creating interactive web apps with R, etc.). The course materials live here: [lter.github.io/ssecr](https://lter.github.io/ssecr/)
+
+
+### R & Python
+
+If you're interested in Python you could check out my [R/Python Bilingualism website](https://njlyon0.github.io/collab_bilingualism/). I've developed a lot of demo code chunks their and demonstrated increasingly complex operations in both R and Python to help others in "translating" between the two languages. Incidentally there are also a lot of nice <u>demonstrations of R topics that we _did not cover in class_</u> so you could use that website and just ignore the Python facet.
+

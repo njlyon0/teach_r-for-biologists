@@ -63,6 +63,10 @@ website:
             href: materials/home_week7.qmd
           - text: "Week 8 Content"
             href: materials/home_week8.qmd
+      - section: "Continuing Education"
+        contents:
+          - text: "Additional Resources"
+            href: resources.qmd
   page-footer:
     center: "Copyright 2024, Nicholas J Lyon"
 
