@@ -375,31 +375,14 @@ plus(x = 10)
 
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
-::::{.columns}
-:::{.column width="50%"}
-
-### Due before lab
-
-#### (By midnight)
-
-- Muddiest Point \#8
-- Homework \#8
-    - Note reduced time to complete for this one!
-- GitHub Presence evaluation
-- _Optional_ [3^rd^ draft]{.pink} of Function Tutorials
-
-:::
-:::{.column width="50%"}
-
-### Due before lecture
+### Due before 7/22
 
 #### (By midnight)
 
 - Final deadline for **_all_** work from a summer course
-
-
-:::
-::::
+    - Homework \#8
+    - GitHub Presence evaluation
+    - _Optional_ [3^rd^ draft]{.pink} of Function Tutorials
 
 ## [Free Work]{.gold} {.smaller}
 
