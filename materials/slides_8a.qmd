@@ -373,6 +373,56 @@ plus(x = 10)
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
+## [My Goal for You]{.purple}
+
+#### From [Lecture 1]{.blue}!
+
+<p align="center">
+<img src="comics/r-knowledge.png" alt="Comic-style graph depicting someone's confidence with R changing over time">
+</p>
+
+## [Your Accomplishments]{.gold} {.smaller}
+
+- In this class, [**you**]{.pink} have done the following:
+    - Made and manipulated data
+    - Created R scripts and RMarkdown reports
+    - Explored version control & GitHub
+    - Performed statistical tests
+    - Written loops and your own custom function(s)
+    - And so much more!
+
+\
+
+. . .
+
+- If you have a CV/resume, definitely add:
+    - Some (or all!) of these skills
+    - Link to your GitHub profile
+
+## [Closing Thoughts]{.gold} {.smaller}
+
+- I had a lot of fun this summer with y'all!
+
+\
+
+. . .
+
+- Your development as data scientists has been _amazing_ to witness
+
+\
+
+. . .
+
+- I particularly loved how you all engaged with the Function Tutorials
+    - You really made it your own
+    - Found the intersection of your interests and R functions
+
+\
+
+. . .
+
+- Do you have any last R / data things to discuss?
+
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ### Due before 7/22
