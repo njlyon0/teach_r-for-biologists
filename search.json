@@ -3487,6 +3487,13 @@
     "text": "Closing Thoughts\n\nI had a lot of fun this summer with y’all!\n\n\n\n\n\nYour development as data scientists has been amazing to witness\n\n\n\n\n\n\nI particularly loved how you all engaged with the Function Tutorials\n\nYou really made it your own\nFound the intersection of your interests and R functions\n\n\n\n\n\n\n\nDo you have any last R / data things to discuss?"
   },
   {
+    "objectID": "materials/slides_8a.html#end-of-semester-feedback",
+    "href": "materials/slides_8a.html#end-of-semester-feedback",
+    "title": "Intro to Data Science",
+    "section": "End of Semester Feedback",
+    "text": "End of Semester Feedback\n\nI really value your feedback!\n\nBoth on me as an instructor and on the class materials/assignments\n\n\n\n\n\n\nI may offer this course again and I’d like to improve me/it in the meantime\n\n\n\n\n\n\nTo that end, please fill out the end-of-semester Google Form on Canvas"
+  },
+  {
     "objectID": "materials/slides_8a.html#upcoming-due-dates",
     "href": "materials/slides_8a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
@@ -3498,7 +3505,7 @@
     "href": "materials/slides_8a.html#free-work",
     "title": "Intro to Data Science",
     "section": "Free Work",
-    "text": "Free Work\n\nEverything is due at the end of course (soon!)\n\n\n\nTips for success:\n\n\nCheck out rubrics and make sure you don’t miss any “easy” points\n\n\n\n\nDon’t leave after this slide!\n\n\n\n\nIf you have questions, ask them now during this free work time\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Free Work\n\nEverything is due at the end of course (soon!)\n\n\n\nTips for success:\n\nCheck out rubrics and make sure you don’t miss any “easy” points\nDon’t leave after this slide!\nIf you have questions, ask them now during this free work time\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/slides_4a.html#a-guide-to-your-process",
@@ -4259,7 +4266,7 @@
     "href": "index.html#learning-objectives",
     "title": "R Programming for Biologists Syllabus",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\nUpon completion of this course, students will be able to:\n\nUnderstand the principles of well-structured data and reproducible coding\nWrite short computer programs (called “scripts”) in R\nExplore data through wrangling and visualization techniques\nAutomate data processes using loops and conditionals\nApply general data science concepts to new datasets\nCreate a professional online presence on GitHub (www.github.com)\nEvaluate peer’s work and offer both useful positive and constructively critical feedback",
+    "text": "Learning Objectives\nUpon completion of this course, students will be able to:\n\nUnderstand the principles of well-structured data and reproducible coding\nWrite short computer programs (called “scripts”) in R\nExplore data through wrangling and visualization techniques\nAutomate data processes using loops and conditionals\nApply general data science concepts to new datasets\nCreate a professional online presence on GitHub (www.github.com)\nEvaluate peers’ work and offer both useful positive and constructively critical feedback",
     "crumbs": [
       "Alumni",
       "Course Overview",
