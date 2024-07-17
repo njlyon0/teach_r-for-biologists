@@ -383,7 +383,7 @@ plus(x = 10)
 
 ## [Your Accomplishments]{.gold} {.smaller}
 
-- In this class, [**you**]{.pink} have done the following:
+- In this class, [**you** have done the following]{.purple}:
     - Made and manipulated data
     - Created R scripts and RMarkdown reports
     - Explored version control & GitHub
@@ -423,6 +423,23 @@ plus(x = 10)
 
 - Do you have any last R / data things to discuss?
 
+## [End of Semester Feedback]{.gold} {.smaller}
+
+- I _really_ value your feedback!
+    - Both on me as an instructor and on the class materials/assignments
+
+\
+
+. . .
+
+- I may offer this course again and I'd like to improve me/it in the meantime
+
+\
+
+. . .
+
+- To that end, [please fill out the end-of-semester Google Form on Canvas]{.pink}
+
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ### Due before 7/22
@@ -443,14 +460,7 @@ plus(x = 10)
 
 Tips for success:
 
-. . .
 
 1. Check out rubrics and make sure you don't miss any "easy" points
-
-. . .
-
 2. Don't leave after this slide!
-
-. . .
-
 3. If you have questions, **ask them _now_** during this free work time
