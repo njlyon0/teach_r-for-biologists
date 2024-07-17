@@ -22,7 +22,7 @@ Upon completion of this course, students will be able to:
 - **Automate** data processes using loops and conditionals
 - **Apply** general data science concepts to new datasets
 - **Create** a professional online presence on GitHub (www.github.com)
-- **Evaluate** peer's work and offer both useful positive and constructively critical feedback
+- **Evaluate** peers' work and offer both useful positive and constructively critical feedback
 
 ## Course Structure
 
