@@ -6,8 +6,10 @@ title: "Alumni"
 
 A major aim of this course is to help students display their newfound data science skills to gain tangible professional benefits. This is why the GitHub presence assignment (rubric [here](https://njlyon0.github.io/teach_r-for-biologists/rubrics/rubric_github.html)) and the function tutorial assignment (rubric [here](https://njlyon0.github.io/teach_r-for-biologists/rubrics/rubric_tutorials.html)) are given so much emphasis in the course schedule and in their point values to those taking the course for institutional credit. In service of this goal, this page was created to allow interested students to have their GitHub profiles and portfolios demonstrated to anyone who visits this course's page.
 
-I present students with the _option_ of promoting their GitHub selves here at the end of the course and use an 'opt in' method so only those students who are comfortable sharing are included below. The first offering of this course (summer 2023) predates this course website so none of that cohort is included here.
+I present students with the _option_ of promoting their GitHub selves here at the end of the course and use an 'opt in' method so only those students who are comfortable sharing are included below. The first offering of this course (2023) predates this course website so none of that cohort is included here.
 
 ## 2024 Alumni
 
-Check back later for selected 2024 alumni!
+Colton Burkhart (_he/him_) -- {{< fa brands github >}} [cgb913](https://github.com/cgb913)
+
+
