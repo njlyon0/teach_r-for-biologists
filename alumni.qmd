@@ -8,8 +8,12 @@ A major aim of this course is to help students display their newfound data scien
 
 I present students with the _option_ of promoting their GitHub selves here at the end of the course and use an 'opt in' method so only those students who are comfortable sharing are included below. The first offering of this course (2023) predates this course website so none of that cohort is included here.
 
-## 2024 Alumni
+## Course alums
 
-Colton Burkhart (_he/him_) -- {{< fa brands github >}} [cgb913](https://github.com/cgb913)
+Below are the course alumni and links to their GitHub profiles where you can find examples of their work! Alums are in alphabetical order by last name.
 
+2024 Cohort:
 
+- Colton Burkhart (_he/him_) -- {{< fa brands github >}} [cgb913](https://github.com/cgb913)
+- Juliana Dawood (_she/her_) -- {{< fa brands github >}} [jdawood04](https://github.com/jdawood04)
+- Anna Varholak (_she/her_) -- {{< fa brands github >}} [avarholak](https://github.com/avarholak)
