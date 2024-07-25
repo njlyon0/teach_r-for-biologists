@@ -4218,14 +4218,21 @@
     "href": "NEWS.html",
     "title": "R Programming for Biologists",
     "section": "",
-    "text": "This is the version of the course materials experienced by summer 2024 students\nFirst version of the course built entirely with Quarto / hosted on GitHub\nReflects all edits made during the 2024 term\n\nE.g., typo fixes, standardization of emphasis colors, adding/refining image alt text, etc."
+    "text": "This is the development version of the course\nChanges will be identified as they are made"
   },
   {
-    "objectID": "NEWS.html#v-1.0",
-    "href": "NEWS.html#v-1.0",
+    "objectID": "NEWS.html#v1.5---improved-2024-materials",
+    "href": "NEWS.html#v1.5---improved-2024-materials",
     "title": "R Programming for Biologists",
     "section": "",
-    "text": "This is the version of the course materials experienced by summer 2024 students\nFirst version of the course built entirely with Quarto / hosted on GitHub\nReflects all edits made during the 2024 term\n\nE.g., typo fixes, standardization of emphasis colors, adding/refining image alt text, etc."
+    "text": "This is the development version of the course\nChanges will be identified as they are made"
+  },
+  {
+    "objectID": "NEWS.html#v1.0---2024-course-materials",
+    "href": "NEWS.html#v1.0---2024-course-materials",
+    "title": "R Programming for Biologists",
+    "section": "v1.0 - 2024 Course Materials",
+    "text": "v1.0 - 2024 Course Materials\n\nThis is the version of the course materials experienced by summer 2024 students\nFirst version of the course built entirely with Quarto / hosted on GitHub\nReflects all edits made during the 2024 term\n\nE.g., typo fixes, standardization of emphasis colors, adding/refining image alt text, etc."
   },
   {
     "objectID": "resources.html",
