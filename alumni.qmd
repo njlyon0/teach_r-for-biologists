@@ -16,4 +16,5 @@ Below are the course alumni and links to their GitHub profiles where you can fin
 
 - Colton Burkhart (_he/him_) -- {{< fa brands github >}} [cgb913](https://github.com/cgb913)
 - Juliana Dawood (_she/her_) -- {{< fa brands github >}} [jdawood04](https://github.com/jdawood04)
+- Matthew King (_he/him_) -- {{< fa brands github >}} [matthewking7](https://github.com/matthewking7)
 - Anna Varholak (_she/her_) -- {{< fa brands github >}} [avarholak](https://github.com/avarholak)
