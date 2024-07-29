@@ -39,3 +39,21 @@ $code-color: $gray-3; // inline code text color
 
 // Code blocks
 $code-block-bg: $gray-0; // code block background color
+
+/*-- scss:rules --*/
+
+// Code chunk ouput
+pre code:not(.sourceCode) { background-color: $blue-1; }
+
+// Active tabset panel (tab then tab content)
+.nav-tabs .nav-link.active {
+  background-color: #FFF;
+  color: $black;
+}
+.tab-content { background-color:  #FFF; }
+
+// Navbar dropdown elements
+.dropdown-menu{
+  --bs-dropdown-link-hover-color: #F4F3EE;
+  --bs-dropdown-link-hover-bg: #01BAEF;
+}

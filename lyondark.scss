@@ -27,11 +27,11 @@ $font-size: 25px;
 $navbar-bg: $orange-3; // navbar
 $navbar-fg: $blue-4; // navbar foreground elements
 $navbar-hl: $blue-3; // highlight color when on a page
-$body-bg: $gray-4; // page background 
-$body-color: $cream; // page text 
-$footer-bg: $blue-3; // footer 
+$body-bg: $gray-4; // page background
+$body-color: $cream; // page text
+$footer-bg: $blue-3; // footer
 $footer-text: $cream; // footer text
-$link-color: $blue-2; // hyperlinks 
+$link-color: $blue-2; // hyperlinks
 
 // Inline code
 $code-bg: $gray-3; // inline code background color
@@ -39,3 +39,21 @@ $code-color: $cream; // inline code text color
 
 // Code blocks
 $code-block-bg: $blue-3; // code block background color
+
+/*-- scss:rules --*/
+
+// Code chunk ouput
+pre code:not(.sourceCode) { background-color: $gray-0; }
+
+// Active tabset panel (tab then tab content)
+.nav-tabs .nav-link.active {
+  background-color: $gray-3;
+  color: $cream;
+}
+.tab-content { background-color: $gray-3; }
+
+// Navbar dropdown elements
+.dropdown-menu{
+  --bs-dropdown-link-hover-color: #191919;
+  --bs-dropdown-link-hover-bg: #077DC2;
+}
