@@ -30,7 +30,6 @@ $navbar-hl: $blue-3; // highlight color when on a page
 $body-bg: $cream; // page background
 $body-color: $black; // page text
 $footer-bg: $blue-2; // footer
-$footer-text: $cream; // footer text
 $link-color: $blue-2; // hyperlinks
 
 // Inline code
@@ -57,3 +56,9 @@ pre code:not(.sourceCode) { background-color: $blue-1; }
   --bs-dropdown-link-hover-color: #F4F3EE;
   --bs-dropdown-link-hover-bg: #01BAEF;
 }
+
+// Code language semantic text colors
+.r { color: $orange-3; }
+.py { color: $blue-3; }
+.sql { color: $blue-4; }
+.cli {color: $orange-4; }

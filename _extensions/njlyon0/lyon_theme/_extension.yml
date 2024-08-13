@@ -1,0 +1,10 @@
+title: Lyon's Quarto Stylesheet
+author: Nick J Lyon
+version: 1.1.0
+quarto-required: ">=1.2.0"
+contributes:
+  formats:
+    revealjs:
+      theme:
+        light: lyon_light.scss
+        dark: lyon_dark.scss

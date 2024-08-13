@@ -79,8 +79,8 @@ format:
     code-line-numbers: false
     code-copy: hover
     theme:
-      light: lyonlight.scss
-      dark: lyondark.scss
+      light: _extensions/njlyon0/lyon_theme/lyon_light.scss
+      dark: _extensions/njlyon0/lyon_theme/lyon_dark.scss
     mainfont: Open Sans
     toc: true
     link-external-newwindow: true

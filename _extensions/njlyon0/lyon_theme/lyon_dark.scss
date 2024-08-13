@@ -30,7 +30,6 @@ $navbar-hl: $blue-3; // highlight color when on a page
 $body-bg: $gray-4; // page background
 $body-color: $cream; // page text
 $footer-bg: $blue-3; // footer
-$footer-text: $cream; // footer text
 $link-color: $blue-2; // hyperlinks
 
 // Inline code
@@ -38,7 +37,7 @@ $code-bg: $gray-3; // inline code background color
 $code-color: $cream; // inline code text color
 
 // Code blocks
-$code-block-bg: $blue-3; // code block background color
+$code-block-bg: $blue-4; // code block background color
 
 /*-- scss:rules --*/
 
@@ -57,3 +56,9 @@ pre code:not(.sourceCode) { background-color: $gray-0; }
   --bs-dropdown-link-hover-color: #191919;
   --bs-dropdown-link-hover-bg: #077DC2;
 }
+
+// Code language semantic text colors
+.r { color: $orange-3; }
+.py { color: $blue-3; }
+.sql { color: $blue-4; }
+.cli {color: $orange-4; }
