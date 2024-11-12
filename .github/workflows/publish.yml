@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   push:
-    branches: main
+    branches: [main, master]
 
 name: Quarto Publish
 
@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Check out repository
+      - name: Check Out Repository
         uses: actions/checkout@v3
 
       - name: Set up Quarto
