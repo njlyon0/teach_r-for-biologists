@@ -20,6 +20,8 @@ Each homework is worth 10 points each; roughly 4% of your course grade (80 point
 |:--------------:|:---------------------------------------------------------------------------------------------------------------------------|
 | 10 | - Produces the correct result using the requested approach </br> - Follows reproducibility best practices (e.g., uses comments effectively, defines relevant function arguments, etc.) |
 | 9 | - Uses mostly the right approach(es), but a minor mistake results in an incorrect final product </br> - Primarily adheres to reproducibility guidelines. |
-| 5 | - Attempts to accomplish the task and makes some progress using the core concept(s) </br> - Follows reproducibility best practices reasonably well with a few areas without comments / function argument definition |
-| 1 | - Answer demonstrates a lack of understanding of the core concept </br> - Lacks reproducibility components |
+| 7 | - Attempts to accomplish the task and makes moderate progress using the core concept(s) </br> - Follows reproducibility best practices reasonably well with a few areas without comments / function argument definition | 
+| 5 | - Task partially complete but either fails to reach a solution or makes some critical misstep </br> - Partial adherence to reproducibility best practices but lacking for much of the code |
+| 3 | - Answer demonstrates a lack of understanding of the core concept </br> - Lacks reproducibility components |
+| 1 | - Homework incomplete and does not demonstrate understanding of core concept </br> - Reproducibility considerations absent |
 | 0 | - No submission OR submission is more than 10 days late |
