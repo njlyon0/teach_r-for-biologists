@@ -11,7 +11,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
-  <meta name="author" content="Lab 2 – Version Control">
+  <meta name="author" content="Lab 2 – Conditionals &amp; Version Control">
   <title>R Programming for Biologists – Intro to Data Science</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,6 +30,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -332,7 +397,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Lab 2 – Version Control 
+Lab 2 – Conditionals &amp; Version Control 
 </div>
 </div>
 </div>
@@ -350,6 +415,7 @@ Lab 2 – Version Control
 <h2><span class="blue">Today’s Plan</span></h2>
 <ul>
 <li>Muddiest Point Review</li>
+<li>Conditionals</li>
 <li>Version Control Background</li>
 <li>Navigating GitHub</li>
 </ul>
@@ -359,6 +425,8 @@ Lab 2 – Version Control
 <p>After today’s session you will be able to:</p>
 <div class="fragment">
 <ul>
+<li>Write conditional statements</li>
+<li>Manage missing data in objects with conditionals</li>
 <li>Explain the difference(s) between Git and GitHub</li>
 <li>Define fundamental version control vocabulary</li>
 </ul>
@@ -376,6 +444,784 @@ Lab 2 – Version Control
 <li>What other topic(s) would you like to review?</li>
 </ul>
 </div>
+</section>
+<section id="conditionals" class="slide level2 smaller">
+<h2><span class="orange">Conditionals</span></h2>
+<ul>
+<li>You can write code that runs <em>only</em> if an ‘if statement’ is true
+<ul>
+<li>Otherwise that chunk of code is skipped!</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>This allows you to write flexible code that can handle any outcome that you can anticipate!
+<ul>
+<li>Particularly useful for subsetting data based on the contents of a column</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>These ‘if statements’ are called <span class="purple">conditionals</span></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>The answer to a conditional <u><em>must</em></u> be either <code>TRUE</code> or <code>FALSE</code></li>
+</ul>
+</div>
+</section>
+<section id="fundamentals-equal" class="slide level2 smaller">
+<h2><span class="orange">Fundamentals: EQUAL</span></h2>
+<ul>
+<li>Are two things exactly equal?</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Check a conditional</span></span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Uses <code>==</code> operator
+<ul>
+<li>Just two equal signs</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="fundamentals-or" class="slide level2 smaller">
+<h2><span class="orange">Fundamentals: OR</span></h2>
+<ul>
+<li>Are <em>any</em> of these conditions met?</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Check either one conditional *or* the other</span></span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">|</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Uses <code>|</code> operator
+<ul>
+<li>Shift + <code>\</code> on keyboard</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="fundamentals-and" class="slide level2 smaller">
+<h2><span class="orange">Fundamentals: AND</span></h2>
+<ul>
+<li>Are <em>all</em> of the conditions met?</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Are *all* conditions TRUE?</span></span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">&amp;</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Uses <code>&amp;</code> operator
+<ul>
+<li>Shift + 7 on keyboard</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="fundamentals-summary" class="slide level2 smaller">
+<h2><span class="orange">Fundamentals: Summary</span></h2>
+<div class="columns">
+<div class="column" style="width:33.33%;">
+<h3 id="equal">EQUAL</h3>
+<ul>
+<li>Are two things exactly equal?</li>
+</ul>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+<ul>
+<li>Uses <code>==</code> operator
+<ul>
+<li>Just two equal signs</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:33.33%;">
+<h3 id="or">OR</h3>
+<ul>
+<li>Are <em>any</em> of these conditions met?</li>
+</ul>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">|</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+<ul>
+<li>Uses <code>|</code> operator
+<ul>
+<li>Shift + <code>\</code> on keyboard</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:33.33%;">
+<h3 id="and">AND</h3>
+<ul>
+<li>Are <em>all</em> of the conditions met?</li>
+</ul>
+<p><br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="st">"hello"</span> <span class="sc">==</span> <span class="st">"hello"</span> <span class="sc">&amp;</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+<ul>
+<li>Uses <code>&amp;</code> operator
+<ul>
+<li>Shift + 7 on keyboard</li>
+</ul></li>
+</ul>
+</div></div>
+</section>
+<section id="practice-fundamental-conditionals" class="slide level2 smaller">
+<h2><span class="pink">Practice: Fundamental Conditionals</span></h2>
+<ol type="1">
+<li>Write a conditional that tests whether “apple” is equal to “orange”</li>
+</ol>
+<p><br>
+</p>
+<div class="fragment">
+<ol start="2" type="1">
+<li>Write a conditional that uses the <code>&amp;</code> operator and returns <code>TRUE</code></li>
+</ol>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ol start="3" type="1">
+<li>Write a conditional that uses the <code>|</code> operator and returns <code>FALSE</code></li>
+</ol>
+</div>
+</section>
+<section id="conditionals-vectors" class="slide level2 smaller">
+<h2><span class="orange">Conditionals &amp; Vectors</span></h2>
+<ul>
+<li>We can also use conditionals on vectors</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>When we do this, we get one <code>TRUE</code> or <code>FALSE</code> <em>per element in the vector</em></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Let’s explore that with a demonstration:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Make a vector</span></span>
+<span id="cb13-2"><a aria-hidden="true" tabindex="-1"></a>my_vec <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">0</span>, <span class="dv">2</span>)</span>
+<span id="cb13-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Find all elements that are equal to 1</span></span>
+<span id="cb13-5"><a aria-hidden="true" tabindex="-1"></a>my_vec <span class="sc">==</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  TRUE FALSE  TRUE  TRUE FALSE FALSE FALSE</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="conditionals-subsetting" class="slide level2 smaller">
+<h2><span class="orange">Conditionals &amp; Subsetting</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="palmerpenguins R package hex logo"></p>
+<ul>
+<li>Often we want to use conditional statements to “<span class="purple">subset</span>” data
+<ul>
+<li>I.e., keep only rows that meet the condition</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Subsetting is supported because columns and rows in data are vectors</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Let’s look at the first column in an example dataset from the <code>palmerpenguins</code> package</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Check out a condiitonal on one column in the dataset</span></span>
+<span id="cb15-2"><a aria-hidden="true" tabindex="-1"></a>palmerpenguins<span class="sc">::</span>penguins[<span class="dv">1</span>] <span class="sc">==</span> <span class="st">"Adelie"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       species
+  [1,]    TRUE
+  [2,]    TRUE
+  [3,]    TRUE
+  [4,]    TRUE
+  [5,]    TRUE
+  [6,]    TRUE
+  [7,]    TRUE
+  [8,]    TRUE
+  [9,]    TRUE
+ [10,]    TRUE
+ [11,]    TRUE
+ [12,]    TRUE
+ [13,]    TRUE
+ [14,]    TRUE
+ [15,]    TRUE
+ [16,]    TRUE
+ [17,]    TRUE
+ [18,]    TRUE
+ [19,]    TRUE
+ [20,]    TRUE
+ [21,]    TRUE
+ [22,]    TRUE
+ [23,]    TRUE
+ [24,]    TRUE
+ [25,]    TRUE
+ [26,]    TRUE
+ [27,]    TRUE
+ [28,]    TRUE
+ [29,]    TRUE
+ [30,]    TRUE
+ [31,]    TRUE
+ [32,]    TRUE
+ [33,]    TRUE
+ [34,]    TRUE
+ [35,]    TRUE
+ [36,]    TRUE
+ [37,]    TRUE
+ [38,]    TRUE
+ [39,]    TRUE
+ [40,]    TRUE
+ [41,]    TRUE
+ [42,]    TRUE
+ [43,]    TRUE
+ [44,]    TRUE
+ [45,]    TRUE
+ [46,]    TRUE
+ [47,]    TRUE
+ [48,]    TRUE
+ [49,]    TRUE
+ [50,]    TRUE
+ [51,]    TRUE
+ [52,]    TRUE
+ [53,]    TRUE
+ [54,]    TRUE
+ [55,]    TRUE
+ [56,]    TRUE
+ [57,]    TRUE
+ [58,]    TRUE
+ [59,]    TRUE
+ [60,]    TRUE
+ [61,]    TRUE
+ [62,]    TRUE
+ [63,]    TRUE
+ [64,]    TRUE
+ [65,]    TRUE
+ [66,]    TRUE
+ [67,]    TRUE
+ [68,]    TRUE
+ [69,]    TRUE
+ [70,]    TRUE
+ [71,]    TRUE
+ [72,]    TRUE
+ [73,]    TRUE
+ [74,]    TRUE
+ [75,]    TRUE
+ [76,]    TRUE
+ [77,]    TRUE
+ [78,]    TRUE
+ [79,]    TRUE
+ [80,]    TRUE
+ [81,]    TRUE
+ [82,]    TRUE
+ [83,]    TRUE
+ [84,]    TRUE
+ [85,]    TRUE
+ [86,]    TRUE
+ [87,]    TRUE
+ [88,]    TRUE
+ [89,]    TRUE
+ [90,]    TRUE
+ [91,]    TRUE
+ [92,]    TRUE
+ [93,]    TRUE
+ [94,]    TRUE
+ [95,]    TRUE
+ [96,]    TRUE
+ [97,]    TRUE
+ [98,]    TRUE
+ [99,]    TRUE
+[100,]    TRUE
+[101,]    TRUE
+[102,]    TRUE
+[103,]    TRUE
+[104,]    TRUE
+[105,]    TRUE
+[106,]    TRUE
+[107,]    TRUE
+[108,]    TRUE
+[109,]    TRUE
+[110,]    TRUE
+[111,]    TRUE
+[112,]    TRUE
+[113,]    TRUE
+[114,]    TRUE
+[115,]    TRUE
+[116,]    TRUE
+[117,]    TRUE
+[118,]    TRUE
+[119,]    TRUE
+[120,]    TRUE
+[121,]    TRUE
+[122,]    TRUE
+[123,]    TRUE
+[124,]    TRUE
+[125,]    TRUE
+[126,]    TRUE
+[127,]    TRUE
+[128,]    TRUE
+[129,]    TRUE
+[130,]    TRUE
+[131,]    TRUE
+[132,]    TRUE
+[133,]    TRUE
+[134,]    TRUE
+[135,]    TRUE
+[136,]    TRUE
+[137,]    TRUE
+[138,]    TRUE
+[139,]    TRUE
+[140,]    TRUE
+[141,]    TRUE
+[142,]    TRUE
+[143,]    TRUE
+[144,]    TRUE
+[145,]    TRUE
+[146,]    TRUE
+[147,]    TRUE
+[148,]    TRUE
+[149,]    TRUE
+[150,]    TRUE
+[151,]    TRUE
+[152,]    TRUE
+[153,]   FALSE
+[154,]   FALSE
+[155,]   FALSE
+[156,]   FALSE
+[157,]   FALSE
+[158,]   FALSE
+[159,]   FALSE
+[160,]   FALSE
+[161,]   FALSE
+[162,]   FALSE
+[163,]   FALSE
+[164,]   FALSE
+[165,]   FALSE
+[166,]   FALSE
+[167,]   FALSE
+[168,]   FALSE
+[169,]   FALSE
+[170,]   FALSE
+[171,]   FALSE
+[172,]   FALSE
+[173,]   FALSE
+[174,]   FALSE
+[175,]   FALSE
+[176,]   FALSE
+[177,]   FALSE
+[178,]   FALSE
+[179,]   FALSE
+[180,]   FALSE
+[181,]   FALSE
+[182,]   FALSE
+[183,]   FALSE
+[184,]   FALSE
+[185,]   FALSE
+[186,]   FALSE
+[187,]   FALSE
+[188,]   FALSE
+[189,]   FALSE
+[190,]   FALSE
+[191,]   FALSE
+[192,]   FALSE
+[193,]   FALSE
+[194,]   FALSE
+[195,]   FALSE
+[196,]   FALSE
+[197,]   FALSE
+[198,]   FALSE
+[199,]   FALSE
+[200,]   FALSE
+[201,]   FALSE
+[202,]   FALSE
+[203,]   FALSE
+[204,]   FALSE
+[205,]   FALSE
+[206,]   FALSE
+[207,]   FALSE
+[208,]   FALSE
+[209,]   FALSE
+[210,]   FALSE
+[211,]   FALSE
+[212,]   FALSE
+[213,]   FALSE
+[214,]   FALSE
+[215,]   FALSE
+[216,]   FALSE
+[217,]   FALSE
+[218,]   FALSE
+[219,]   FALSE
+[220,]   FALSE
+[221,]   FALSE
+[222,]   FALSE
+[223,]   FALSE
+[224,]   FALSE
+[225,]   FALSE
+[226,]   FALSE
+[227,]   FALSE
+[228,]   FALSE
+[229,]   FALSE
+[230,]   FALSE
+[231,]   FALSE
+[232,]   FALSE
+[233,]   FALSE
+[234,]   FALSE
+[235,]   FALSE
+[236,]   FALSE
+[237,]   FALSE
+[238,]   FALSE
+[239,]   FALSE
+[240,]   FALSE
+[241,]   FALSE
+[242,]   FALSE
+[243,]   FALSE
+[244,]   FALSE
+[245,]   FALSE
+[246,]   FALSE
+[247,]   FALSE
+[248,]   FALSE
+[249,]   FALSE
+[250,]   FALSE
+[251,]   FALSE
+[252,]   FALSE
+[253,]   FALSE
+[254,]   FALSE
+[255,]   FALSE
+[256,]   FALSE
+[257,]   FALSE
+[258,]   FALSE
+[259,]   FALSE
+[260,]   FALSE
+[261,]   FALSE
+[262,]   FALSE
+[263,]   FALSE
+[264,]   FALSE
+[265,]   FALSE
+[266,]   FALSE
+[267,]   FALSE
+[268,]   FALSE
+[269,]   FALSE
+[270,]   FALSE
+[271,]   FALSE
+[272,]   FALSE
+[273,]   FALSE
+[274,]   FALSE
+[275,]   FALSE
+[276,]   FALSE
+[277,]   FALSE
+[278,]   FALSE
+[279,]   FALSE
+[280,]   FALSE
+[281,]   FALSE
+[282,]   FALSE
+[283,]   FALSE
+[284,]   FALSE
+[285,]   FALSE
+[286,]   FALSE
+[287,]   FALSE
+[288,]   FALSE
+[289,]   FALSE
+[290,]   FALSE
+[291,]   FALSE
+[292,]   FALSE
+[293,]   FALSE
+[294,]   FALSE
+[295,]   FALSE
+[296,]   FALSE
+[297,]   FALSE
+[298,]   FALSE
+[299,]   FALSE
+[300,]   FALSE
+[301,]   FALSE
+[302,]   FALSE
+[303,]   FALSE
+[304,]   FALSE
+[305,]   FALSE
+[306,]   FALSE
+[307,]   FALSE
+[308,]   FALSE
+[309,]   FALSE
+[310,]   FALSE
+[311,]   FALSE
+[312,]   FALSE
+[313,]   FALSE
+[314,]   FALSE
+[315,]   FALSE
+[316,]   FALSE
+[317,]   FALSE
+[318,]   FALSE
+[319,]   FALSE
+[320,]   FALSE
+[321,]   FALSE
+[322,]   FALSE
+[323,]   FALSE
+[324,]   FALSE
+[325,]   FALSE
+[326,]   FALSE
+[327,]   FALSE
+[328,]   FALSE
+[329,]   FALSE
+[330,]   FALSE
+[331,]   FALSE
+[332,]   FALSE
+[333,]   FALSE
+[334,]   FALSE
+[335,]   FALSE
+[336,]   FALSE
+[337,]   FALSE
+[338,]   FALSE
+[339,]   FALSE
+[340,]   FALSE
+[341,]   FALSE
+[342,]   FALSE
+[343,]   FALSE
+[344,]   FALSE</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="subsetting-cont." class="slide level2 smaller">
+<h2><span class="orange">Subsetting Cont.</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="palmerpenguins R package hex logo"></p>
+<ul>
+<li>We can use the base R <code>subset</code> function to <span class="purple">keep only the <em>rows</em> of data where a specified <em>column</em> meets a condition</span></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Let’s subset the penguin dataset we explored earlier</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Load needed library</span></span>
+<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Check row number of penguins data</span></span>
+<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 344</code></pre>
+</div>
+</div>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Subset it to only 2008</span></span>
+<span id="cb19-2"><a aria-hidden="true" tabindex="-1"></a>peng_sub <span class="ot">&lt;-</span> <span class="fu">subset</span>(<span class="at">x =</span> penguins, year <span class="sc">==</span> <span class="dv">2008</span>)</span>
+<span id="cb19-3"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Check row number again</span></span>
+<span id="cb19-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(peng_sub)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 114</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="practice-subsetting" class="slide level2 smaller">
+<h2><span class="pink">Practice: Subsetting</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="palmerpenguins R package hex logo"></p>
+<ul>
+<li>We’ll use the base R <code>subset</code> function with the <code>peng_df</code> object
+<ul>
+<li>If needed, consult the help file for more details (<code>?subset</code>)</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Subset <code>peng_df</code> to only Adelie penguins (and assign to a <code>sub_v1</code> object)
+<ul>
+<li>I.e., <code>species == "Adelie"</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>How many rows does that subset have?</li>
+</ul>
+</div>
+</section>
+<section id="more-practice-fundamental-conditionals" class="slide level2 smaller">
+<h2><span class="pink">More Practice: Fundamental Conditionals</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="palmerpenguins R package hex logo"></p>
+<ul>
+<li>Subset <code>peng_df</code> to Adelie <em>or</em> Gentoo penguins
+<ul>
+<li>Assign this subset to <code>sub_v2</code> object</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Subset <code>peng_df</code> to only male Gentoo penguins
+<ul>
+<li>Assign to <code>sub_v3</code> object</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>How many rows does <em>that</em> subset have?</li>
+</ul>
+</div>
+</section>
+<section id="discussion-conditionals" class="slide level2 smaller">
+<h2><span class="gold">Discussion: Conditionals</span></h2>
+<ul>
+<li>We’ve covered EQUAL, OR, and AND
+<ul>
+<li><code>==</code>, <code>|</code>, or <code>&amp;</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>What unanswered questions do you have?</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>What other types of conditional statements would be useful?
+<ul>
+<li>Think about it in the context of wanting to subset some data</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="numeric-conditionals" class="slide level2 smaller">
+<h2><span class="orange">Numeric Conditionals</span></h2>
+<ul>
+<li>For numbers, we can use greater/less than conditionals!</li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Greater / less than are expressed as normal
+<ul>
+<li><code>&gt;</code> and <code>&lt;</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Adding ‘or equal to’ is done by adding an equal sign
+<ul>
+<li><code>&gt;=</code> and <code>&lt;=</code></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="practice-numeric-conditionals" class="slide level2 smaller">
+<h2><span class="pink">Practice: Numeric Conditionals</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="palmerpenguins R package hex logo"></p>
+<ul>
+<li>Subset <code>peng_df</code> to only penguins with a bill length greater than 40 mm
+<ul>
+<li>Assign to <code>sub_v7</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Subset <code>peng_df</code> to only penguins with a body mass less than or equal to 4,000 g
+<ul>
+<li>Assign to <code>sub_v8</code></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="temperature-check" class="slide level2">
+<h2><span class="purple">Temperature Check</span></h2>
+<h4 id="how-are-you-feeling">How are you Feeling?</h4>
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
 </section>
 <section id="version-control-background" class="slide level2 smaller">
 <h2><span class="orange">Version Control Background</span></h2>
@@ -557,9 +1403,9 @@ Lab 2 – Version Control
 </ul>
 </div>
 </section>
-<section id="temperature-check" class="slide level2">
+<section id="temperature-check-1" class="slide level2">
 <h2><span class="purple">Temperature Check</span></h2>
-<h4 id="how-are-you-feeling">How are you Feeling?</h4>
+<h4 id="how-are-you-feeling-1">How are you Feeling?</h4>
 <p align="center">
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
@@ -646,10 +1492,88 @@ Lab 2 – Version Control
 <ul>
 <li><a href="https://nceas.github.io/scicomp-workshop-collaborative-coding/rstudio.html">nceas.github.io/scicomp-workshop-collaborative-coding/rstudio</a></li>
 </ul>
+</section></section>
+<section>
+<section id="bonus-conditionals" class="title-slide slide level1 center">
+<h1><span class="orange">Bonus Conditionals</span></h1>
+
+</section>
+<section id="or-with-2-options" class="slide level2 smaller">
+<h2><span class="orange">OR with &gt;2 Options</span></h2>
+<ul>
+<li>OR conditionals with many options get cumbersome quickly
+<ul>
+<li>E.g., <code>x == 1 | x == 2 | x == 3 | x == 4 …</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>We can use concatenation and the <code>%in%</code> operator to simplify this!</li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li><code>%in%</code> is effectively “if any of &lt;this vector&gt; matches the value”
+<ul>
+<li>E.g., <code>x %in% c(1, 2, 3, 4, …)</code></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="conditionals-not" class="slide level2 smaller">
+<h2><span class="orange">Conditionals: NOT</span></h2>
+<ul>
+<li>You can also <em>exclude</em> based on conditions
+<ul>
+<li>Two different ways of doing this</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>For one / a few options: use <code>!=</code> for “not equal to”
+<ul>
+<li>E.g., <code>x != 10</code></li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>Can be combined with <code>%in%</code> to exclude a set of options
+<ul>
+<li>E.g., <code>!x %in% c(...)</code></li>
+<li>Note the exclamation mark is <em>before</em> the object</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="practice-advanced-conditionals" class="slide level2 smaller">
+<h2><span class="pink">Practice: Advanced Conditionals</span></h2>
+<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="palmerpenguins R package hex logo"></p>
+<ul>
+<li>Subset <code>peng_df</code> is species is any of “Adelie”, “Gentoo”, or “Chinstrap”
+<ul>
+<li>Use the <code>%in%</code> operator</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+<div class="fragment">
+<ul>
+<li>Subset <code>peng_df</code> to all islands except “Dream”</li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="https://njlyon0.github.io/teach_r-for-biologists/">Programming in R for Biologists</a></p>
+</div>
 </div>
 </div>
 </section></section>

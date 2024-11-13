@@ -4,14 +4,14 @@
     "href": "NEWS.html",
     "title": "R Programming for Biologists",
     "section": "",
-    "text": "This is the development version of the course\nChanges will be identified as they are made"
+    "text": "This is the development version of the course; changes will be identified as they are made\n\nExpanded homework assignment rubric to make it easier to respect partial credit\nMoved conditionals from first week 2 slides to second\n\nAlso fleshed out explanation of conditional behavior on vectors with multiple elements"
   },
   {
-    "objectID": "NEWS.html#v1.5---improved-2024-materials",
-    "href": "NEWS.html#v1.5---improved-2024-materials",
+    "objectID": "NEWS.html#v1.1---improved-2024-materials",
+    "href": "NEWS.html#v1.1---improved-2024-materials",
     "title": "R Programming for Biologists",
     "section": "",
-    "text": "This is the development version of the course\nChanges will be identified as they are made"
+    "text": "This is the development version of the course; changes will be identified as they are made\n\nExpanded homework assignment rubric to make it easier to respect partial credit\nMoved conditionals from first week 2 slides to second\n\nAlso fleshed out explanation of conditional behavior on vectors with multiple elements"
   },
   {
     "objectID": "NEWS.html#v1.0---2024-course-materials",
@@ -924,11 +924,11 @@
     ]
   },
   {
-    "objectID": "materials/home_week2.html#lecture-2---packages-object-structure-conditionals",
-    "href": "materials/home_week2.html#lecture-2---packages-object-structure-conditionals",
+    "objectID": "materials/home_week2.html#lecture-2---packages-object-structure",
+    "href": "materials/home_week2.html#lecture-2---packages-object-structure",
     "title": "Week 2 Slide Decks",
-    "section": "Lecture 2 - Packages, Object Structure, & Conditionals",
-    "text": "Lecture 2 - Packages, Object Structure, & Conditionals\n\nLecture Slides – Full Screen",
+    "section": "Lecture 2 - Packages & Object Structure",
+    "text": "Lecture 2 - Packages & Object Structure\n\nLecture Slides – Full Screen",
     "crumbs": [
       "Alumni",
       "Course Content",
@@ -936,11 +936,11 @@
     ]
   },
   {
-    "objectID": "materials/home_week2.html#lab-2---version-control",
-    "href": "materials/home_week2.html#lab-2---version-control",
+    "objectID": "materials/home_week2.html#lab-2---conditionals-version-control",
+    "href": "materials/home_week2.html#lab-2---conditionals-version-control",
     "title": "Week 2 Slide Decks",
-    "section": "Lab 2 - Version Control",
-    "text": "Lab 2 - Version Control\n\nLab Slides – Full Screen",
+    "section": "Lab 2 - Conditionals & Version Control",
+    "text": "Lab 2 - Conditionals & Version Control\n\nLab Slides – Full Screen",
     "crumbs": [
       "Alumni",
       "Course Content",
@@ -2881,14 +2881,14 @@
     "href": "materials/slides_2a.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nR Packages\nClass vs. Structure\nUsing Vectors\nConditionals"
+    "text": "Today’s Plan\n\nR Packages\nClass vs. Structure\nUsing Vectors"
   },
   {
     "objectID": "materials/slides_2a.html#todays-learning-objectives",
     "href": "materials/slides_2a.html#todays-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
-    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nLoad and use an R package\nDefine the difference(s) between object class and structure\nCreate and manipulate vectors\nWrite conditional statements\nManage missing data in objects with conditionals"
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nLoad and use an R package\nDefine the difference(s) between object class and structure\nCreate and manipulate vectors"
   },
   {
     "objectID": "materials/slides_2a.html#r-package-background",
@@ -3038,109 +3038,11 @@
     "text": "Temperature Check\nHow are you Feeling?"
   },
   {
-    "objectID": "materials/slides_2a.html#conditionals",
-    "href": "materials/slides_2a.html#conditionals",
-    "title": "Intro to Data Science",
-    "section": "Conditionals",
-    "text": "Conditionals\n\nYou can write code that runs only if an ‘if statement’ is true\n\nOtherwise that chunk of code is skipped!\n\n\n\n\n\n\nThis allows you to write flexible code that can handle any outcome that you can anticipate!\n\nParticularly useful for subsetting data based on the contents of a column\n\n\n\n\n\n\n\nThese ‘if statements’ are called conditionals\n\n\n\n\n\n\nThe answer to a conditional must be either TRUE or FALSE"
-  },
-  {
-    "objectID": "materials/slides_2a.html#fundamentals-equal",
-    "href": "materials/slides_2a.html#fundamentals-equal",
-    "title": "Intro to Data Science",
-    "section": "Fundamentals: EQUAL",
-    "text": "Fundamentals: EQUAL\n\nAre two things exactly equal?\n\n\n\n\n\n# Check a conditional\n\"hello\" == \"hello\"\n\n[1] TRUE\n\n\n\n\n\n\n\nUses == operator\n\nJust two equal signs"
-  },
-  {
-    "objectID": "materials/slides_2a.html#fundamentals-or",
-    "href": "materials/slides_2a.html#fundamentals-or",
-    "title": "Intro to Data Science",
-    "section": "Fundamentals: OR",
-    "text": "Fundamentals: OR\n\nAre any of these conditions met?\n\n\n\n\n\n# Check either one conditional *or* the other\n\"hello\" == \"hello\" | 2 == 7\n\n[1] TRUE\n\n\n\n\n\n\n\nUses | operator\n\nShift + \\ on keyboard"
-  },
-  {
-    "objectID": "materials/slides_2a.html#fundamentals-and",
-    "href": "materials/slides_2a.html#fundamentals-and",
-    "title": "Intro to Data Science",
-    "section": "Fundamentals: AND",
-    "text": "Fundamentals: AND\n\nAre all of the conditions met?\n\n\n\n\n\n# Are *all* conditions TRUE?\n\"hello\" == \"hello\" & 2 == 7\n\n[1] FALSE\n\n\n\n\n\n\n\nUses & operator\n\nShift + 7 on keyboard"
-  },
-  {
-    "objectID": "materials/slides_2a.html#fundamentals-summary",
-    "href": "materials/slides_2a.html#fundamentals-summary",
-    "title": "Intro to Data Science",
-    "section": "Fundamentals: Summary",
-    "text": "Fundamentals: Summary\n\n\nEQUAL\n\nAre two things exactly equal?\n\n\n\n\n\"hello\" == \"hello\"\n\n[1] TRUE\n\n\n\n\n\nUses == operator\n\nJust two equal signs\n\n\n\nOR\n\nAre any of these conditions met?\n\n\n\n\n\"hello\" == \"hello\" | 2 == 7\n\n[1] TRUE\n\n\n\n\n\nUses | operator\n\nShift + \\ on keyboard\n\n\n\nAND\n\nAre all of the conditions met?\n\n\n\n\n\"hello\" == \"hello\" & 2 == 7\n\n[1] FALSE\n\n\n\n\n\nUses & operator\n\nShift + 7 on keyboard"
-  },
-  {
-    "objectID": "materials/slides_2a.html#practice-fundamental-conditionals",
-    "href": "materials/slides_2a.html#practice-fundamental-conditionals",
-    "title": "Intro to Data Science",
-    "section": "Practice: Fundamental Conditionals",
-    "text": "Practice: Fundamental Conditionals\n\n\nWe’ll use the base R subset function with the peng_df object\n\nIf needed, consult the help file for more details (?subset)\n\n\n\n\n\n\nSubset peng_df to only Adelie penguins (and assign to a sub_v1 object)\n\nI.e., species == \"Adelie\"\n\n\n\n\n\n\n\nHow many rows does that subset have?"
-  },
-  {
-    "objectID": "materials/slides_2a.html#more-practice-fundamental-conditionals",
-    "href": "materials/slides_2a.html#more-practice-fundamental-conditionals",
-    "title": "Intro to Data Science",
-    "section": "More Practice: Fundamental Conditionals",
-    "text": "More Practice: Fundamental Conditionals\n\n\nSubset peng_df to Adelie or Gentoo penguins\n\nAssign this subset to sub_v2 object\n\n\n\n\n\n\nSubset peng_df to only male Gentoo penguins\n\nAssign to sub_v3 object\n\n\n\n\n\n\n\nHow many rows does that subset have?"
-  },
-  {
-    "objectID": "materials/slides_2a.html#discussion-conditionals",
-    "href": "materials/slides_2a.html#discussion-conditionals",
-    "title": "Intro to Data Science",
-    "section": "Discussion: Conditionals",
-    "text": "Discussion: Conditionals\n\nWe’ve covered EQUAL, OR, and AND\n\n==, |, or &\n\n\n\n\n\n\nWhat unanswered questions do you have?\n\n\n\n\n\n\nWhat other types of conditional statements would be useful?\n\nThink about it in the context of wanting to subset some data"
-  },
-  {
-    "objectID": "materials/slides_2a.html#numeric-conditionals",
-    "href": "materials/slides_2a.html#numeric-conditionals",
-    "title": "Intro to Data Science",
-    "section": "Numeric Conditionals",
-    "text": "Numeric Conditionals\n\nFor numbers, we can use greater/less than conditionals!\n\n\n\n\n\nGreater / less than are expressed as normal\n\n&gt; and &lt;\n\n\n\n\n\n\n\nAdding ‘or equal to’ is done by adding an equal sign\n\n&gt;= and &lt;="
-  },
-  {
-    "objectID": "materials/slides_2a.html#practice-numeric-conditionals",
-    "href": "materials/slides_2a.html#practice-numeric-conditionals",
-    "title": "Intro to Data Science",
-    "section": "Practice: Numeric Conditionals",
-    "text": "Practice: Numeric Conditionals\n\n\nSubset peng_df to only penguins with a bill length greater than 40 mm\n\nAssign to sub_v7\n\n\n\n\n\n\nSubset peng_df to only penguins with a body mass less than or equal to 4,000 g\n\nAssign to sub_v8"
-  },
-  {
-    "objectID": "materials/slides_2a.html#temperature-check-2",
-    "href": "materials/slides_2a.html#temperature-check-2",
-    "title": "Intro to Data Science",
-    "section": "Temperature Check",
-    "text": "Temperature Check\nHow are you Feeling?"
-  },
-  {
     "objectID": "materials/slides_2a.html#upcoming-due-dates",
     "href": "materials/slides_2a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #2\nRead Excuse me, do you have a moment to talk about version control?\n\n\nDue before lecture\n(By midnight)\n\nHomework #2\nRead the British Ecological Society’s Reproducible Code Guide (p.20-25)"
-  },
-  {
-    "objectID": "materials/slides_2a.html#or-with-2-options",
-    "href": "materials/slides_2a.html#or-with-2-options",
-    "title": "Intro to Data Science",
-    "section": "OR with >2 Options",
-    "text": "OR with &gt;2 Options\n\nOR conditionals with many options get cumbersome quickly\n\nE.g., x == 1 | x == 2 | x == 3 | x == 4 …\n\n\n\n\n\n\nWe can use concatenation and the %in% operator to simplify this!\n\n\n\n\n\n\n%in% is effectively “if any of &lt;this vector&gt; matches the value”\n\nE.g., x %in% c(1, 2, 3, 4, …)"
-  },
-  {
-    "objectID": "materials/slides_2a.html#conditionals-not",
-    "href": "materials/slides_2a.html#conditionals-not",
-    "title": "Intro to Data Science",
-    "section": "Conditionals: NOT",
-    "text": "Conditionals: NOT\n\nYou can also exclude based on conditions\n\nTwo different ways of doing this\n\n\n\n\n\n\nFor one / a few options: use != for “not equal to”\n\nE.g., x != 10\n\n\n\n\n\n\n\nCan be combined with %in% to exclude a set of options\n\nE.g., !x %in% c(...)\nNote the exclamation mark is before the object"
-  },
-  {
-    "objectID": "materials/slides_2a.html#practice-advanced-conditionals",
-    "href": "materials/slides_2a.html#practice-advanced-conditionals",
-    "title": "Intro to Data Science",
-    "section": "Practice: Advanced Conditionals",
-    "text": "Practice: Advanced Conditionals\n\n\nSubset peng_df is species is any of “Adelie”, “Gentoo”, or “Chinstrap”\n\nUse the %in% operator\n\n\n\n\n\n\nSubset peng_df to all islands except “Dream”\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #2\nRead Excuse me, do you have a moment to talk about version control?\n\n\nDue before lecture\n(By midnight)\n\nHomework #2\nRead the British Ecological Society’s Reproducible Code Guide (p.20-25)\n\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/slides_2b.html#a-guide-to-your-process",
@@ -3154,14 +3056,14 @@
     "href": "materials/slides_2b.html#todays-plan",
     "title": "Intro to Data Science",
     "section": "Today’s Plan",
-    "text": "Today’s Plan\n\nMuddiest Point Review\nVersion Control Background\nNavigating GitHub"
+    "text": "Today’s Plan\n\nMuddiest Point Review\nConditionals\nVersion Control Background\nNavigating GitHub"
   },
   {
     "objectID": "materials/slides_2b.html#todays-learning-objectives",
     "href": "materials/slides_2b.html#todays-learning-objectives",
     "title": "Intro to Data Science",
     "section": "Today’s Learning Objectives",
-    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nExplain the difference(s) between Git and GitHub\nDefine fundamental version control vocabulary"
+    "text": "Today’s Learning Objectives\nAfter today’s session you will be able to:\n\n\nWrite conditional statements\nManage missing data in objects with conditionals\nExplain the difference(s) between Git and GitHub\nDefine fundamental version control vocabulary"
   },
   {
     "objectID": "materials/slides_2b.html#muddiest-point-review",
@@ -3169,6 +3071,111 @@
     "title": "Intro to Data Science",
     "section": "Muddiest Point Review",
     "text": "Muddiest Point Review\n\nRecurring topics from most recent MPs\n\n\n\n\n\nWhat other topic(s) would you like to review?"
+  },
+  {
+    "objectID": "materials/slides_2b.html#conditionals",
+    "href": "materials/slides_2b.html#conditionals",
+    "title": "Intro to Data Science",
+    "section": "Conditionals",
+    "text": "Conditionals\n\nYou can write code that runs only if an ‘if statement’ is true\n\nOtherwise that chunk of code is skipped!\n\n\n\n\n\n\nThis allows you to write flexible code that can handle any outcome that you can anticipate!\n\nParticularly useful for subsetting data based on the contents of a column\n\n\n\n\n\n\n\nThese ‘if statements’ are called conditionals\n\n\n\n\n\n\nThe answer to a conditional must be either TRUE or FALSE"
+  },
+  {
+    "objectID": "materials/slides_2b.html#fundamentals-equal",
+    "href": "materials/slides_2b.html#fundamentals-equal",
+    "title": "Intro to Data Science",
+    "section": "Fundamentals: EQUAL",
+    "text": "Fundamentals: EQUAL\n\nAre two things exactly equal?\n\n\n\n\n\n# Check a conditional\n\"hello\" == \"hello\"\n\n[1] TRUE\n\n\n\n\n\n\n\nUses == operator\n\nJust two equal signs"
+  },
+  {
+    "objectID": "materials/slides_2b.html#fundamentals-or",
+    "href": "materials/slides_2b.html#fundamentals-or",
+    "title": "Intro to Data Science",
+    "section": "Fundamentals: OR",
+    "text": "Fundamentals: OR\n\nAre any of these conditions met?\n\n\n\n\n\n# Check either one conditional *or* the other\n\"hello\" == \"hello\" | 2 == 7\n\n[1] TRUE\n\n\n\n\n\n\n\nUses | operator\n\nShift + \\ on keyboard"
+  },
+  {
+    "objectID": "materials/slides_2b.html#fundamentals-and",
+    "href": "materials/slides_2b.html#fundamentals-and",
+    "title": "Intro to Data Science",
+    "section": "Fundamentals: AND",
+    "text": "Fundamentals: AND\n\nAre all of the conditions met?\n\n\n\n\n\n# Are *all* conditions TRUE?\n\"hello\" == \"hello\" & 2 == 7\n\n[1] FALSE\n\n\n\n\n\n\n\nUses & operator\n\nShift + 7 on keyboard"
+  },
+  {
+    "objectID": "materials/slides_2b.html#fundamentals-summary",
+    "href": "materials/slides_2b.html#fundamentals-summary",
+    "title": "Intro to Data Science",
+    "section": "Fundamentals: Summary",
+    "text": "Fundamentals: Summary\n\n\nEQUAL\n\nAre two things exactly equal?\n\n\n\n\n\"hello\" == \"hello\"\n\n[1] TRUE\n\n\n\n\n\nUses == operator\n\nJust two equal signs\n\n\n\nOR\n\nAre any of these conditions met?\n\n\n\n\n\"hello\" == \"hello\" | 2 == 7\n\n[1] TRUE\n\n\n\n\n\nUses | operator\n\nShift + \\ on keyboard\n\n\n\nAND\n\nAre all of the conditions met?\n\n\n\n\n\"hello\" == \"hello\" & 2 == 7\n\n[1] FALSE\n\n\n\n\n\nUses & operator\n\nShift + 7 on keyboard"
+  },
+  {
+    "objectID": "materials/slides_2b.html#practice-fundamental-conditionals",
+    "href": "materials/slides_2b.html#practice-fundamental-conditionals",
+    "title": "Intro to Data Science",
+    "section": "Practice: Fundamental Conditionals",
+    "text": "Practice: Fundamental Conditionals\n\nWrite a conditional that tests whether “apple” is equal to “orange”\n\n\n\n\n\nWrite a conditional that uses the & operator and returns TRUE\n\n\n\n\n\n\nWrite a conditional that uses the | operator and returns FALSE"
+  },
+  {
+    "objectID": "materials/slides_2b.html#conditionals-vectors",
+    "href": "materials/slides_2b.html#conditionals-vectors",
+    "title": "Intro to Data Science",
+    "section": "Conditionals & Vectors",
+    "text": "Conditionals & Vectors\n\nWe can also use conditionals on vectors\n\n\n\n\n\nWhen we do this, we get one TRUE or FALSE per element in the vector\n\n\n\n\n\n\nLet’s explore that with a demonstration:\n\n\n# Make a vector\nmy_vec &lt;- c(1, 2, 1, 1, 3, 0, 2)\n\n# Find all elements that are equal to 1\nmy_vec == 1\n\n[1]  TRUE FALSE  TRUE  TRUE FALSE FALSE FALSE"
+  },
+  {
+    "objectID": "materials/slides_2b.html#conditionals-subsetting",
+    "href": "materials/slides_2b.html#conditionals-subsetting",
+    "title": "Intro to Data Science",
+    "section": "Conditionals & Subsetting",
+    "text": "Conditionals & Subsetting\n\n\nOften we want to use conditional statements to “subset” data\n\nI.e., keep only rows that meet the condition\n\n\n\n\n\n\nSubsetting is supported because columns and rows in data are vectors\n\n\n\n\n\n\nLet’s look at the first column in an example dataset from the palmerpenguins package\n\n\n# Check out a condiitonal on one column in the dataset\npalmerpenguins::penguins[1] == \"Adelie\"\n\n       species\n  [1,]    TRUE\n  [2,]    TRUE\n  [3,]    TRUE\n  [4,]    TRUE\n  [5,]    TRUE\n  [6,]    TRUE\n  [7,]    TRUE\n  [8,]    TRUE\n  [9,]    TRUE\n [10,]    TRUE\n [11,]    TRUE\n [12,]    TRUE\n [13,]    TRUE\n [14,]    TRUE\n [15,]    TRUE\n [16,]    TRUE\n [17,]    TRUE\n [18,]    TRUE\n [19,]    TRUE\n [20,]    TRUE\n [21,]    TRUE\n [22,]    TRUE\n [23,]    TRUE\n [24,]    TRUE\n [25,]    TRUE\n [26,]    TRUE\n [27,]    TRUE\n [28,]    TRUE\n [29,]    TRUE\n [30,]    TRUE\n [31,]    TRUE\n [32,]    TRUE\n [33,]    TRUE\n [34,]    TRUE\n [35,]    TRUE\n [36,]    TRUE\n [37,]    TRUE\n [38,]    TRUE\n [39,]    TRUE\n [40,]    TRUE\n [41,]    TRUE\n [42,]    TRUE\n [43,]    TRUE\n [44,]    TRUE\n [45,]    TRUE\n [46,]    TRUE\n [47,]    TRUE\n [48,]    TRUE\n [49,]    TRUE\n [50,]    TRUE\n [51,]    TRUE\n [52,]    TRUE\n [53,]    TRUE\n [54,]    TRUE\n [55,]    TRUE\n [56,]    TRUE\n [57,]    TRUE\n [58,]    TRUE\n [59,]    TRUE\n [60,]    TRUE\n [61,]    TRUE\n [62,]    TRUE\n [63,]    TRUE\n [64,]    TRUE\n [65,]    TRUE\n [66,]    TRUE\n [67,]    TRUE\n [68,]    TRUE\n [69,]    TRUE\n [70,]    TRUE\n [71,]    TRUE\n [72,]    TRUE\n [73,]    TRUE\n [74,]    TRUE\n [75,]    TRUE\n [76,]    TRUE\n [77,]    TRUE\n [78,]    TRUE\n [79,]    TRUE\n [80,]    TRUE\n [81,]    TRUE\n [82,]    TRUE\n [83,]    TRUE\n [84,]    TRUE\n [85,]    TRUE\n [86,]    TRUE\n [87,]    TRUE\n [88,]    TRUE\n [89,]    TRUE\n [90,]    TRUE\n [91,]    TRUE\n [92,]    TRUE\n [93,]    TRUE\n [94,]    TRUE\n [95,]    TRUE\n [96,]    TRUE\n [97,]    TRUE\n [98,]    TRUE\n [99,]    TRUE\n[100,]    TRUE\n[101,]    TRUE\n[102,]    TRUE\n[103,]    TRUE\n[104,]    TRUE\n[105,]    TRUE\n[106,]    TRUE\n[107,]    TRUE\n[108,]    TRUE\n[109,]    TRUE\n[110,]    TRUE\n[111,]    TRUE\n[112,]    TRUE\n[113,]    TRUE\n[114,]    TRUE\n[115,]    TRUE\n[116,]    TRUE\n[117,]    TRUE\n[118,]    TRUE\n[119,]    TRUE\n[120,]    TRUE\n[121,]    TRUE\n[122,]    TRUE\n[123,]    TRUE\n[124,]    TRUE\n[125,]    TRUE\n[126,]    TRUE\n[127,]    TRUE\n[128,]    TRUE\n[129,]    TRUE\n[130,]    TRUE\n[131,]    TRUE\n[132,]    TRUE\n[133,]    TRUE\n[134,]    TRUE\n[135,]    TRUE\n[136,]    TRUE\n[137,]    TRUE\n[138,]    TRUE\n[139,]    TRUE\n[140,]    TRUE\n[141,]    TRUE\n[142,]    TRUE\n[143,]    TRUE\n[144,]    TRUE\n[145,]    TRUE\n[146,]    TRUE\n[147,]    TRUE\n[148,]    TRUE\n[149,]    TRUE\n[150,]    TRUE\n[151,]    TRUE\n[152,]    TRUE\n[153,]   FALSE\n[154,]   FALSE\n[155,]   FALSE\n[156,]   FALSE\n[157,]   FALSE\n[158,]   FALSE\n[159,]   FALSE\n[160,]   FALSE\n[161,]   FALSE\n[162,]   FALSE\n[163,]   FALSE\n[164,]   FALSE\n[165,]   FALSE\n[166,]   FALSE\n[167,]   FALSE\n[168,]   FALSE\n[169,]   FALSE\n[170,]   FALSE\n[171,]   FALSE\n[172,]   FALSE\n[173,]   FALSE\n[174,]   FALSE\n[175,]   FALSE\n[176,]   FALSE\n[177,]   FALSE\n[178,]   FALSE\n[179,]   FALSE\n[180,]   FALSE\n[181,]   FALSE\n[182,]   FALSE\n[183,]   FALSE\n[184,]   FALSE\n[185,]   FALSE\n[186,]   FALSE\n[187,]   FALSE\n[188,]   FALSE\n[189,]   FALSE\n[190,]   FALSE\n[191,]   FALSE\n[192,]   FALSE\n[193,]   FALSE\n[194,]   FALSE\n[195,]   FALSE\n[196,]   FALSE\n[197,]   FALSE\n[198,]   FALSE\n[199,]   FALSE\n[200,]   FALSE\n[201,]   FALSE\n[202,]   FALSE\n[203,]   FALSE\n[204,]   FALSE\n[205,]   FALSE\n[206,]   FALSE\n[207,]   FALSE\n[208,]   FALSE\n[209,]   FALSE\n[210,]   FALSE\n[211,]   FALSE\n[212,]   FALSE\n[213,]   FALSE\n[214,]   FALSE\n[215,]   FALSE\n[216,]   FALSE\n[217,]   FALSE\n[218,]   FALSE\n[219,]   FALSE\n[220,]   FALSE\n[221,]   FALSE\n[222,]   FALSE\n[223,]   FALSE\n[224,]   FALSE\n[225,]   FALSE\n[226,]   FALSE\n[227,]   FALSE\n[228,]   FALSE\n[229,]   FALSE\n[230,]   FALSE\n[231,]   FALSE\n[232,]   FALSE\n[233,]   FALSE\n[234,]   FALSE\n[235,]   FALSE\n[236,]   FALSE\n[237,]   FALSE\n[238,]   FALSE\n[239,]   FALSE\n[240,]   FALSE\n[241,]   FALSE\n[242,]   FALSE\n[243,]   FALSE\n[244,]   FALSE\n[245,]   FALSE\n[246,]   FALSE\n[247,]   FALSE\n[248,]   FALSE\n[249,]   FALSE\n[250,]   FALSE\n[251,]   FALSE\n[252,]   FALSE\n[253,]   FALSE\n[254,]   FALSE\n[255,]   FALSE\n[256,]   FALSE\n[257,]   FALSE\n[258,]   FALSE\n[259,]   FALSE\n[260,]   FALSE\n[261,]   FALSE\n[262,]   FALSE\n[263,]   FALSE\n[264,]   FALSE\n[265,]   FALSE\n[266,]   FALSE\n[267,]   FALSE\n[268,]   FALSE\n[269,]   FALSE\n[270,]   FALSE\n[271,]   FALSE\n[272,]   FALSE\n[273,]   FALSE\n[274,]   FALSE\n[275,]   FALSE\n[276,]   FALSE\n[277,]   FALSE\n[278,]   FALSE\n[279,]   FALSE\n[280,]   FALSE\n[281,]   FALSE\n[282,]   FALSE\n[283,]   FALSE\n[284,]   FALSE\n[285,]   FALSE\n[286,]   FALSE\n[287,]   FALSE\n[288,]   FALSE\n[289,]   FALSE\n[290,]   FALSE\n[291,]   FALSE\n[292,]   FALSE\n[293,]   FALSE\n[294,]   FALSE\n[295,]   FALSE\n[296,]   FALSE\n[297,]   FALSE\n[298,]   FALSE\n[299,]   FALSE\n[300,]   FALSE\n[301,]   FALSE\n[302,]   FALSE\n[303,]   FALSE\n[304,]   FALSE\n[305,]   FALSE\n[306,]   FALSE\n[307,]   FALSE\n[308,]   FALSE\n[309,]   FALSE\n[310,]   FALSE\n[311,]   FALSE\n[312,]   FALSE\n[313,]   FALSE\n[314,]   FALSE\n[315,]   FALSE\n[316,]   FALSE\n[317,]   FALSE\n[318,]   FALSE\n[319,]   FALSE\n[320,]   FALSE\n[321,]   FALSE\n[322,]   FALSE\n[323,]   FALSE\n[324,]   FALSE\n[325,]   FALSE\n[326,]   FALSE\n[327,]   FALSE\n[328,]   FALSE\n[329,]   FALSE\n[330,]   FALSE\n[331,]   FALSE\n[332,]   FALSE\n[333,]   FALSE\n[334,]   FALSE\n[335,]   FALSE\n[336,]   FALSE\n[337,]   FALSE\n[338,]   FALSE\n[339,]   FALSE\n[340,]   FALSE\n[341,]   FALSE\n[342,]   FALSE\n[343,]   FALSE\n[344,]   FALSE"
+  },
+  {
+    "objectID": "materials/slides_2b.html#subsetting-cont.",
+    "href": "materials/slides_2b.html#subsetting-cont.",
+    "title": "Intro to Data Science",
+    "section": "Subsetting Cont.",
+    "text": "Subsetting Cont.\n\n\nWe can use the base R subset function to keep only the rows of data where a specified column meets a condition\n\n\n\n\n\nLet’s subset the penguin dataset we explored earlier\n\n\n# Load needed library\nlibrary(palmerpenguins)\n\n# Check row number of penguins data\nnrow(penguins)\n\n[1] 344\n\n\n\n\n\n\n\n# Subset it to only 2008\npeng_sub &lt;- subset(x = penguins, year == 2008)\n\n# Check row number again\nnrow(peng_sub)\n\n[1] 114"
+  },
+  {
+    "objectID": "materials/slides_2b.html#practice-subsetting",
+    "href": "materials/slides_2b.html#practice-subsetting",
+    "title": "Intro to Data Science",
+    "section": "Practice: Subsetting",
+    "text": "Practice: Subsetting\n\n\nWe’ll use the base R subset function with the peng_df object\n\nIf needed, consult the help file for more details (?subset)\n\n\n\n\n\n\nSubset peng_df to only Adelie penguins (and assign to a sub_v1 object)\n\nI.e., species == \"Adelie\"\n\n\n\n\n\n\n\nHow many rows does that subset have?"
+  },
+  {
+    "objectID": "materials/slides_2b.html#more-practice-fundamental-conditionals",
+    "href": "materials/slides_2b.html#more-practice-fundamental-conditionals",
+    "title": "Intro to Data Science",
+    "section": "More Practice: Fundamental Conditionals",
+    "text": "More Practice: Fundamental Conditionals\n\n\nSubset peng_df to Adelie or Gentoo penguins\n\nAssign this subset to sub_v2 object\n\n\n\n\n\n\nSubset peng_df to only male Gentoo penguins\n\nAssign to sub_v3 object\n\n\n\n\n\n\n\nHow many rows does that subset have?"
+  },
+  {
+    "objectID": "materials/slides_2b.html#discussion-conditionals",
+    "href": "materials/slides_2b.html#discussion-conditionals",
+    "title": "Intro to Data Science",
+    "section": "Discussion: Conditionals",
+    "text": "Discussion: Conditionals\n\nWe’ve covered EQUAL, OR, and AND\n\n==, |, or &\n\n\n\n\n\n\nWhat unanswered questions do you have?\n\n\n\n\n\n\nWhat other types of conditional statements would be useful?\n\nThink about it in the context of wanting to subset some data"
+  },
+  {
+    "objectID": "materials/slides_2b.html#numeric-conditionals",
+    "href": "materials/slides_2b.html#numeric-conditionals",
+    "title": "Intro to Data Science",
+    "section": "Numeric Conditionals",
+    "text": "Numeric Conditionals\n\nFor numbers, we can use greater/less than conditionals!\n\n\n\n\n\nGreater / less than are expressed as normal\n\n&gt; and &lt;\n\n\n\n\n\n\n\nAdding ‘or equal to’ is done by adding an equal sign\n\n&gt;= and &lt;="
+  },
+  {
+    "objectID": "materials/slides_2b.html#practice-numeric-conditionals",
+    "href": "materials/slides_2b.html#practice-numeric-conditionals",
+    "title": "Intro to Data Science",
+    "section": "Practice: Numeric Conditionals",
+    "text": "Practice: Numeric Conditionals\n\n\nSubset peng_df to only penguins with a bill length greater than 40 mm\n\nAssign to sub_v7\n\n\n\n\n\n\nSubset peng_df to only penguins with a body mass less than or equal to 4,000 g\n\nAssign to sub_v8"
+  },
+  {
+    "objectID": "materials/slides_2b.html#temperature-check",
+    "href": "materials/slides_2b.html#temperature-check",
+    "title": "Intro to Data Science",
+    "section": "Temperature Check",
+    "text": "Temperature Check\nHow are you Feeling?"
   },
   {
     "objectID": "materials/slides_2b.html#version-control-background",
@@ -3227,8 +3234,8 @@
     "text": "Practice: Create a Repository\n\nTo practice what we’ve just covered, make a practice repository!\n\n\n\n\n\nThis is a test repository so:\n\nSet it to “Private”\nCreate the repo with both a README and a .gitignore\n\n\n\n\n\n\n\nAs you go through this process, take notes for ‘future you’\n\nThis course will require you to make two more repositories\nSo you’ll want to have a good resource to remind yourself with down the line"
   },
   {
-    "objectID": "materials/slides_2b.html#temperature-check",
-    "href": "materials/slides_2b.html#temperature-check",
+    "objectID": "materials/slides_2b.html#temperature-check-1",
+    "href": "materials/slides_2b.html#temperature-check-1",
     "title": "Intro to Data Science",
     "section": "Temperature Check",
     "text": "Temperature Check\nHow are you Feeling?"
@@ -3259,7 +3266,28 @@
     "href": "materials/slides_2b.html#git-and-rstudio",
     "title": "Intro to Data Science",
     "section": "Git and RStudio",
-    "text": "Git and RStudio\n\nYou can work through part of an established GitHub workshop for this section\n\n\n\n\nnceas.github.io/scicomp-workshop-collaborative-coding/rstudio\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Git and RStudio\n\nYou can work through part of an established GitHub workshop for this section\n\n\n\n\nnceas.github.io/scicomp-workshop-collaborative-coding/rstudio"
+  },
+  {
+    "objectID": "materials/slides_2b.html#or-with-2-options",
+    "href": "materials/slides_2b.html#or-with-2-options",
+    "title": "Intro to Data Science",
+    "section": "OR with >2 Options",
+    "text": "OR with &gt;2 Options\n\nOR conditionals with many options get cumbersome quickly\n\nE.g., x == 1 | x == 2 | x == 3 | x == 4 …\n\n\n\n\n\n\nWe can use concatenation and the %in% operator to simplify this!\n\n\n\n\n\n\n%in% is effectively “if any of &lt;this vector&gt; matches the value”\n\nE.g., x %in% c(1, 2, 3, 4, …)"
+  },
+  {
+    "objectID": "materials/slides_2b.html#conditionals-not",
+    "href": "materials/slides_2b.html#conditionals-not",
+    "title": "Intro to Data Science",
+    "section": "Conditionals: NOT",
+    "text": "Conditionals: NOT\n\nYou can also exclude based on conditions\n\nTwo different ways of doing this\n\n\n\n\n\n\nFor one / a few options: use != for “not equal to”\n\nE.g., x != 10\n\n\n\n\n\n\n\nCan be combined with %in% to exclude a set of options\n\nE.g., !x %in% c(...)\nNote the exclamation mark is before the object"
+  },
+  {
+    "objectID": "materials/slides_2b.html#practice-advanced-conditionals",
+    "href": "materials/slides_2b.html#practice-advanced-conditionals",
+    "title": "Intro to Data Science",
+    "section": "Practice: Advanced Conditionals",
+    "text": "Practice: Advanced Conditionals\n\n\nSubset peng_df is species is any of “Adelie”, “Gentoo”, or “Chinstrap”\n\nUse the %in% operator\n\n\n\n\n\n\nSubset peng_df to all islands except “Dream”\n\n\n\n\nProgramming in R for Biologists"
   },
   {
     "objectID": "materials/home_week5.html",
