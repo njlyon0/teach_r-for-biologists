@@ -1,8 +1,11 @@
 
-## `v1.5` - Improved 2024 Materials
+## `v1.1` - Improved 2024 Materials
 
-- This is the development version of the course
-- Changes will be identified as they are made
+This is the development version of the course; changes will be identified as they are made
+
+- Expanded homework assignment rubric to make it easier to respect partial credit
+- Moved conditionals from first week 2 slides to second
+    - Also fleshed out explanation of conditional behavior on vectors with multiple elements
 
 ## `v1.0` - 2024 Course Materials
 
