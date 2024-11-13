@@ -1,6 +1,6 @@
 ---
 title: "Intro to Data Science"
-author: "Lab 2 -- Version Control"
+author: "Lab 2 -- Conditionals & Version Control"
 engine: knitr
 format: 
   revealjs: 
@@ -29,6 +29,7 @@ format:
 ## [Today's Plan]{.blue}
 
 - Muddiest Point Review
+- Conditionals
 - Version Control Background
 - Navigating GitHub
 
@@ -38,6 +39,8 @@ After today's session you will be able to:
 
 . . .
 
+- Write conditional statements
+- Manage missing data in objects with conditionals
 - Explain the difference(s) between Git and GitHub
 - Define fundamental version control vocabulary
 
@@ -50,6 +53,364 @@ After today's session you will be able to:
 . . .
 
 - What other topic(s) would you like to review?
+
+## [Conditionals]{.orange} {.smaller}
+
+- You can write code that runs _only_ if an 'if statement' is true
+    - Otherwise that chunk of code is skipped!
+
+\
+
+. . .
+
+- This allows you to write flexible code that can handle any outcome that you can anticipate!
+    - Particularly useful for subsetting data based on the contents of a column
+
+\
+
+. . .
+
+- These 'if statements' are called [conditionals]{.purple}
+
+\
+
+. . .
+
+- The answer to a conditional <u>_must_</u> be either `TRUE` or `FALSE`
+
+## [Fundamentals: EQUAL]{.orange} {.smaller}
+
+- Are two things exactly equal?
+
+\
+
+. . .
+
+```{r conditional-equal}
+#| echo: true
+
+# Check a conditional
+"hello" == "hello"
+```
+
+\
+
+. . .
+
+- Uses `==` operator
+    - Just two equal signs
+
+## [Fundamentals: OR]{.orange} {.smaller}
+
+- Are _any_ of these conditions met?
+
+\
+
+. . .
+
+```{r conditional-or}
+#| echo: true
+
+# Check either one conditional *or* the other
+"hello" == "hello" | 2 == 7
+```
+
+\
+
+. . .
+
+- Uses `|` operator
+    - Shift + `\` on keyboard
+
+
+## [Fundamentals: AND]{.orange} {.smaller}
+
+- Are _all_ of the conditions met?
+
+\
+
+. . .
+
+```{r conditional-and}
+#| echo: true
+
+# Are *all* conditions TRUE?
+"hello" == "hello" & 2 == 7
+```
+
+\
+
+. . .
+
+- Uses `&` operator
+    - Shift + 7 on keyboard
+
+## [Fundamentals: Summary]{.orange} {.smaller}
+
+::::{.columns}
+:::{.column width="33.33%"}
+### EQUAL
+
+- Are two things exactly equal?
+
+\
+
+```{r conditional-ex1}
+#| echo: true
+
+"hello" == "hello"
+```
+
+\
+
+- Uses `==` operator
+    - Just two equal signs
+
+:::
+:::{.column width="33.33%"}
+
+### OR
+
+- Are _any_ of these conditions met?
+
+\
+
+```{r conditional-ex2}
+#| echo: true
+
+"hello" == "hello" | 2 == 7
+```
+
+\
+
+- Uses `|` operator
+    - Shift + `\` on keyboard
+
+:::
+:::{.column width="33.33%"}
+
+### AND
+
+- Are _all_ of the conditions met?
+
+\
+
+```{r conditional-ex3}
+#| echo: true
+
+"hello" == "hello" & 2 == 7
+```
+
+\
+
+- Uses `&` operator
+    - Shift + 7 on keyboard
+
+:::
+::::
+
+## [Practice: Fundamental Conditionals]{.pink} {.smaller}
+
+1. Write a conditional that tests whether "apple" is equal to "orange"
+
+\
+
+. . .
+
+2. Write a conditional that uses the `&` operator and returns `TRUE`
+
+\
+
+. . .
+
+3. Write a conditional that uses the `|` operator and returns `FALSE`
+
+## [Conditionals & Vectors]{.orange} {.smaller}
+
+
+- We can also use conditionals on vectors
+
+\
+
+. . . 
+
+- When we do this, we get one `TRUE` or `FALSE` _per element in the vector_
+
+\
+
+. . . 
+
+- Let's explore that with a demonstration:
+
+```{r conditional-vec}
+#| echo: true
+
+# Make a vector
+my_vec <- c(1, 2, 1, 1, 3, 0, 2)
+
+# Find all elements that are equal to 1
+my_vec == 1
+```
+
+## [Conditionals & Subsetting]{.orange} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
+
+- Often we want to use conditional statements to "[subset]{.purple}" data 
+    - I.e., keep only rows that meet the condition
+
+\
+
+. . . 
+
+- Subsetting is supported because columns and rows in data are vectors
+
+\
+
+. . . 
+
+- Let's look at the first column in an example dataset from the `palmerpenguins` package
+
+```{r subset-prep}
+#| echo: true
+
+# Check out a condiitonal on one column in the dataset
+palmerpenguins::penguins[1] == "Adelie"
+```
+
+## [Subsetting Cont.]{.orange} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
+
+- We can use the base R `subset` function to [keep only the _rows_ of data where a specified _column_ meets a condition]{.purple}
+
+\
+
+. . . 
+
+- Let's subset the penguin dataset we explored earlier
+
+```{r subset-p1}
+#| echo: true
+
+# Load needed library
+library(palmerpenguins)
+
+# Check row number of penguins data
+nrow(penguins)
+```
+
+\
+
+. . .
+
+```{r subset-p2}
+#| echo: true
+
+# Subset it to only 2008
+peng_sub <- subset(x = penguins, year == 2008)
+
+# Check row number again
+nrow(peng_sub)
+```
+
+## [Practice: Subsetting]{.pink} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
+
+- We'll use the base R `subset` function with the `peng_df` object
+    - If needed, consult the help file for more details (`?subset`)
+
+\
+
+. . .
+
+- Subset `peng_df` to only Adelie penguins (and assign to a `sub_v1` object)
+    - I.e., `species == "Adelie"`
+
+\
+
+. . .
+
+- How many rows does that subset have?
+
+## [More Practice: Fundamental Conditionals]{.pink} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
+
+- Subset `peng_df` to Adelie _or_ Gentoo penguins
+    - Assign this subset to `sub_v2` object
+
+\
+
+. . .
+
+- Subset `peng_df` to only male Gentoo penguins
+    - Assign to `sub_v3` object
+
+\
+
+. . .
+
+- How many rows does _that_ subset have?
+
+## [Discussion: Conditionals]{.gold} {.smaller}
+
+- We've covered EQUAL, OR, and AND
+    - `==`, `|`, or `&`
+
+\
+
+. . .
+
+- What unanswered questions do you have?
+
+\
+
+. . .
+
+- What other types of conditional statements would be useful?
+    - Think about it in the context of wanting to subset some data
+
+## [Numeric Conditionals]{.orange} {.smaller}
+
+- For numbers, we can use greater/less than conditionals!
+
+\
+
+. . .
+
+- Greater / less than are expressed as normal
+    - `>` and `<`
+
+\
+
+. . .
+
+- Adding 'or equal to' is done by adding an equal sign
+    - `>=` and `<=`
+
+## [Practice: Numeric Conditionals]{.pink} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
+
+- Subset `peng_df` to only penguins with a bill length greater than 40 mm
+    - Assign to `sub_v7`
+
+\
+
+. . . 
+
+- Subset `peng_df` to only penguins with a body mass less than or equal to 4,000 g
+    - Assign to `sub_v8`
+
+## [Temperature Check]{.purple}
+
+#### How are you Feeling?
+
+<p align="center">
+<img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
+</p>
 
 ## [Version Control Background]{.orange} {.smaller}
 
@@ -307,3 +668,55 @@ Demonstrate your skills to others with coding know-how
 
 - [nceas.github.io/scicomp-workshop-collaborative-coding/rstudio](https://nceas.github.io/scicomp-workshop-collaborative-coding/rstudio.html)
 
+# [Bonus Conditionals]{.orange}
+
+## [OR with >2 Options]{.orange} {.smaller}
+
+- OR conditionals with many options get cumbersome quickly
+    - E.g., `x == 1 | x == 2 | x == 3 | x == 4 …`
+
+\
+
+. . .
+
+-  We can use concatenation and the `%in%` operator to simplify this!
+
+\
+
+. . .
+
+- `%in%` is effectively "if any of \<this vector\> matches the value"
+    - E.g., `x %in% c(1, 2, 3, 4, …)`
+
+## [Conditionals: NOT]{.orange} {.smaller}
+
+- You can also _exclude_ based on conditions
+    - Two different ways of doing this
+
+\
+
+. . . 
+
+- For one / a few options: use `!=` for "not equal to"
+    - E.g., `x != 10`
+
+\
+
+. . . 
+
+- Can be combined with `%in%` to exclude a set of options
+    - E.g., `!x %in% c(...)`
+    - Note the exclamation mark is _before_ the object
+
+## [Practice: Advanced Conditionals]{.pink} {.smaller}
+
+![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="palmerpenguins R package hex logo"}
+
+- Subset `peng_df` is species is any of "Adelie", "Gentoo", or "Chinstrap"
+    - Use the `%in%` operator
+
+\
+
+. . .
+
+- Subset `peng_df` to all islands except "Dream"
