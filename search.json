@@ -4,14 +4,14 @@
     "href": "NEWS.html",
     "title": "R Programming for Biologists",
     "section": "",
-    "text": "This is the development version of the course; changes will be identified as they are made\n\nExpanded homework assignment rubric to make it easier to respect partial credit\nMoved conditionals from first week 2 slides to second\n\nAlso fleshed out explanation of conditional behavior on vectors with multiple elements"
+    "text": "This is the development version of the course; changes will be identified as they are made\n\nExpanded homework assignment rubric to make it easier to respect partial credit\nMoved conditionals from first week 2 slides to second\n\nAlso fleshed out explanation of conditional behavior on vectors with multiple elements\n\nUpdated ggplot2 slides to reflect new legend.position behavior as of ggplot2 version 3.5.0"
   },
   {
     "objectID": "NEWS.html#v1.1---improved-2024-materials",
     "href": "NEWS.html#v1.1---improved-2024-materials",
     "title": "R Programming for Biologists",
     "section": "",
-    "text": "This is the development version of the course; changes will be identified as they are made\n\nExpanded homework assignment rubric to make it easier to respect partial credit\nMoved conditionals from first week 2 slides to second\n\nAlso fleshed out explanation of conditional behavior on vectors with multiple elements"
+    "text": "This is the development version of the course; changes will be identified as they are made\n\nExpanded homework assignment rubric to make it easier to respect partial credit\nMoved conditionals from first week 2 slides to second\n\nAlso fleshed out explanation of conditional behavior on vectors with multiple elements\n\nUpdated ggplot2 slides to reflect new legend.position behavior as of ggplot2 version 3.5.0"
   },
   {
     "objectID": "NEWS.html#v1.0---2024-course-materials",
@@ -2354,14 +2354,14 @@
     "href": "materials/slides_6b.html#customizing-legend",
     "title": "Intro to Data Science",
     "section": "Customizing Legend",
-    "text": "Customizing Legend\n\nYou can also customize the plot legend in the theme function!\n\nLegend placement = legend.position\nLegend title = legend.title\n\n\n\n\n\n\nlegend.position works differently than most other elements!\n\nInstead of wanting element_... it wants c(&lt;x position&gt;, &lt;y position&gt;)\nPositions range from 0 (left / bottom) to 1 (right / top)"
+    "text": "Customizing Legend\n\nYou can also customize the plot legend in the theme function!\n\nLegend placement = legend.position\nLegend title = legend.title\n\n\n\n\n\n\nInstead of wanting element_..., legend.position wants words in quotes!\n\nE.g., \"none\", \"inside\", \"left\", etc.\n\n\n\n\n\n\n\nIf legend.position = \"inside\", you need to tell it where inside\n\nFormat is: legend.position.inside = c(&lt;x position&gt;, &lt;y position&gt;)\nPositions range from 0 (left / bottom) to 1 (right / top)"
   },
   {
     "objectID": "materials/slides_6b.html#customizing-legend-syntax",
     "href": "materials/slides_6b.html#customizing-legend-syntax",
     "title": "Intro to Data Science",
     "section": "Customizing Legend Syntax",
-    "text": "Customizing Legend Syntax\n\nCheck out an example where we put the legend in the middle of the plot\n\n# Example scatterplot\nggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +\n    geom_point() +\n    # With legend in the middle of the space\n    theme(legend.position = c(0.5, 0.5))\n\n\n\n\nThat graph would have the legend in both:\n\nthe center (left / right)\nthe middle (top / bottom)"
+    "text": "Customizing Legend Syntax\n\nCheck out an example where we put the legend in the middle of the plot\n\n# Example scatterplot\nggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +\n    geom_point() +\n    # With legend in the middle of the space\n    theme(legend.position = \"inside\",\n          legend.position.inside = c(0.5, 0.5))\n\n\n\n\nThat graph would have the legend in both:\n\nthe center (left / right)\nthe middle (top / bottom)"
   },
   {
     "objectID": "materials/slides_6b.html#customize-legend",
@@ -2410,7 +2410,7 @@
     "href": "materials/slides_6b.html#facet-example",
     "title": "Intro to Data Science",
     "section": "Facet Example",
-    "text": "Facet Example\n \n\nggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm, color = species)) + \n  geom_point() +\n  facet_grid(. ~ island) +\n  labs(x = \"Body Mass (g)\", y = \"Flipper Length (mm)\") +\n  theme(legend.position = c(0.87, 0.85),\n        legend.title = element_blank(),\n        panel.background = element_blank())"
+    "text": "Facet Example\n \n\nggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm, color = species)) + \n  geom_point() +\n  facet_grid(. ~ island) +\n  labs(x = \"Body Mass (g)\", y = \"Flipper Length (mm)\") +\n  theme(legend.position = \"inside\",\n        legend.position.inside = c(0.87, 0.85),\n        legend.title = element_blank(),\n        panel.background = element_blank())"
   },
   {
     "objectID": "materials/slides_6b.html#facet",

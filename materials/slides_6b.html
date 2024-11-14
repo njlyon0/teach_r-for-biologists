@@ -705,9 +705,19 @@ Lab 6 – Visualization II
 </p>
 <div class="fragment">
 <ul>
-<li><code>legend.position</code> works differently than most other elements!
+<li>Instead of wanting <code>element_...</code>, <code>legend.position</code> wants words in quotes!
 <ul>
-<li>Instead of wanting <code>element_...</code> it wants <code>c(&lt;x position&gt;, &lt;y position&gt;)</code></li>
+<li>E.g., <code>"none"</code>, <code>"inside"</code>, <code>"left"</code>, etc.</li>
+</ul></li>
+</ul>
+<p><br>
+</p>
+</div>
+<div class="fragment">
+<ul>
+<li>If <code>legend.position = "inside"</code>, you need to tell it <em>where</em> inside
+<ul>
+<li>Format is: <code>legend.position.inside = c(&lt;x position&gt;, &lt;y position&gt;)</code></li>
 <li>Positions range from 0 (left / bottom) to 1 (right / top)</li>
 </ul></li>
 </ul>
@@ -722,7 +732,8 @@ Lab 6 – Visualization II
 <span id="cb2-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> my_df, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> x_var, <span class="at">y =</span> y_var)) <span class="sc">+</span></span>
 <span id="cb2-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb2-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="co"># With legend in the middle of the space</span></span>
-<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"inside"</span>,</span>
+<span id="cb2-6"><a aria-hidden="true" tabindex="-1"></a>          <span class="at">legend.position.inside =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><br>
 </p>
 <div class="fragment">
@@ -860,9 +871,10 @@ Lab 6 – Visualization II
 <span id="cb5-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb5-3"><a></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> island) <span class="sc">+</span></span>
 <span id="cb5-4"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Body Mass (g)"</span>, <span class="at">y =</span> <span class="st">"Flipper Length (mm)"</span>) <span class="sc">+</span></span>
-<span id="cb5-5"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="fu">c</span>(<span class="fl">0.87</span>, <span class="fl">0.85</span>),</span>
-<span id="cb5-6"><a></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>(),</span>
-<span id="cb5-7"><a></a>        <span class="at">panel.background =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-5"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"inside"</span>,</span>
+<span id="cb5-6"><a></a>        <span class="at">legend.position.inside =</span> <span class="fu">c</span>(<span class="fl">0.87</span>, <span class="fl">0.85</span>),</span>
+<span id="cb5-7"><a></a>        <span class="at">legend.title =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb5-8"><a></a>        <span class="at">panel.background =</span> <span class="fu">element_blank</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
