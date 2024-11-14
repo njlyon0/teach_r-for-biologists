@@ -6,6 +6,7 @@ This is the development version of the course; changes will be identified as the
 - Expanded homework assignment rubric to make it easier to respect partial credit
 - Moved conditionals from first week 2 slides to second
     - Also fleshed out explanation of conditional behavior on vectors with multiple elements
+- Updated `ggplot2` slides to reflect new `legend.position` behavior as of `ggplot2` version 3.5.0
 
 ## `v1.0` - 2024 Course Materials
 
