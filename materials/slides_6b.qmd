@@ -299,8 +299,15 @@ fish_graph +
 
 . . .
 
-- `legend.position` works differently than most other elements!
-    - Instead of wanting `element_...` it wants `c(<x position>, <y position>)`
+- Instead of wanting `element_...`, `legend.position` wants words in quotes!
+    - E.g., `"none"`, `"inside"`, `"left"`, etc.
+
+\
+
+. . .
+
+- If `legend.position = "inside"`, you need to tell it _where_ inside
+    - Format is: `legend.position.inside = c(<x position>, <y position>)`
     - Positions range from 0 (left / bottom) to 1 (right / top)
 
 ## [Customizing Legend Syntax]{.orange} {.smaller}
@@ -311,7 +318,8 @@ fish_graph +
 ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
     geom_point() +
     # With legend in the middle of the space
-    theme(legend.position = c(0.5, 0.5))
+    theme(legend.position = "inside",
+          legend.position.inside = c(0.5, 0.5))
 ```
 
 \
@@ -440,14 +448,15 @@ ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
 #| message: false
 #| code-line-numbers: "|3"
 #| fig-width: 6
-#| fig-height: 4.5
+#| fig-height: 4
 #| fig-align: center
 
 ggplot(data = penguins, aes(x = body_mass_g, y = flipper_length_mm, color = species)) + 
   geom_point() +
   facet_grid(. ~ island) +
   labs(x = "Body Mass (g)", y = "Flipper Length (mm)") +
-  theme(legend.position = c(0.87, 0.85),
+  theme(legend.position = "inside",
+        legend.position.inside = c(0.87, 0.85),
         legend.title = element_blank(),
         panel.background = element_blank())
 ```
