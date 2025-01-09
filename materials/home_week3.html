@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,12 +36,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-f41df9969072506f8442bb6065e4368f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-2adf4173cfc659254b31c132c062cede.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -291,8 +291,8 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#lecture-3---r-markdowns-data-wrangling-p1" id="toc-lecture-3---r-markdowns-data-wrangling-p1" class="nav-link" data-scroll-target="#lecture-3---r-markdowns-data-wrangling-p1">Lecture 3 - R Markdowns &amp; Data Wrangling (P1)</a></li>
-  <li><a href="#lab-3---data-wrangling-p2" id="toc-lab-3---data-wrangling-p2" class="nav-link" data-scroll-target="#lab-3---data-wrangling-p2">Lab 3 - Data Wrangling (P2)</a></li>
+  <li><a href="#lecture-3---r-markdowns-data-wrangling-i" id="toc-lecture-3---r-markdowns-data-wrangling-i" class="nav-link" data-scroll-target="#lecture-3---r-markdowns-data-wrangling-i">Lecture 3 - R Markdowns &amp; Data Wrangling I</a></li>
+  <li><a href="#lab-3---data-wrangling-ii" id="toc-lab-3---data-wrangling-ii" class="nav-link" data-scroll-target="#lab-3---data-wrangling-ii">Lab 3 - Data Wrangling II</a></li>
   <li><a href="#homework-3" id="toc-homework-3" class="nav-link" data-scroll-target="#homework-3">Homework 3</a>
   <ul class="collapse">
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objective(s)</a></li>
@@ -328,13 +328,13 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>This week we’ll cover the fundamentals of an R Markdown file (as opposed to the R scripts we’ve been covering). We’ll also practice loading external data files into R and then exploring them with both base R tools and functions included in the <code>dplyr</code> package. In lab, we’ll expand our data wrangling conversation to include the pipe operator and how group-wise summarization can be accomplished in R. We’ll finish up with data “shapes” and how data can be re-shaped between wide and long format.</p>
 </section>
-<section id="lecture-3---r-markdowns-data-wrangling-p1" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-3---r-markdowns-data-wrangling-p1">Lecture 3 - R Markdowns &amp; Data Wrangling (P1)</h2>
+<section id="lecture-3---r-markdowns-data-wrangling-i" class="level2">
+<h2 class="anchored" data-anchor-id="lecture-3---r-markdowns-data-wrangling-i">Lecture 3 - R Markdowns &amp; Data Wrangling I</h2>
 <iframe class="slide-deck" src="slides_3a.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 <p><a href="../materials/slides_3a.html">Lecture Slides – Full Screen</a></p>
 </section>
-<section id="lab-3---data-wrangling-p2" class="level2">
-<h2 class="anchored" data-anchor-id="lab-3---data-wrangling-p2">Lab 3 - Data Wrangling (P2)</h2>
+<section id="lab-3---data-wrangling-ii" class="level2">
+<h2 class="anchored" data-anchor-id="lab-3---data-wrangling-ii">Lab 3 - Data Wrangling II</h2>
 <iframe class="slide-deck" src="slides_3b.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 <p><a href="../materials/slides_3b.html">Lab Slides – Full Screen</a></p>
 </section>
@@ -606,8 +606,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -723,7 +721,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

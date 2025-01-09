@@ -4,14 +4,14 @@
     "href": "NEWS.html",
     "title": "R Programming for Biologists",
     "section": "",
-    "text": "This is the development version of the course; changes will be identified as they are made\n\nExpanded homework assignment rubric to make it easier to respect partial credit\nMoved conditionals from first week 2 slides to second\n\nAlso fleshed out explanation of conditional behavior on vectors with multiple elements\n\nUpdated ggplot2 slides to reflect new legend.position behavior as of ggplot2 version 3.5.0"
+    "text": "This is the development version of the course; changes will be identified as they are made\n\nExpanded homework assignment rubric to make it easier to respect partial credit\nMoved conditionals from first week 2 slides to second\n\nAlso fleshed out explanation of conditional behavior on vectors with multiple elements\n\nUpdated ggplot2 slides to reflect new legend.position behavior as of ggplot2 version 3.5.0\nAdded course schedule (without specific dates) to course homepage"
   },
   {
     "objectID": "NEWS.html#v1.1---improved-2024-materials",
     "href": "NEWS.html#v1.1---improved-2024-materials",
     "title": "R Programming for Biologists",
     "section": "",
-    "text": "This is the development version of the course; changes will be identified as they are made\n\nExpanded homework assignment rubric to make it easier to respect partial credit\nMoved conditionals from first week 2 slides to second\n\nAlso fleshed out explanation of conditional behavior on vectors with multiple elements\n\nUpdated ggplot2 slides to reflect new legend.position behavior as of ggplot2 version 3.5.0"
+    "text": "This is the development version of the course; changes will be identified as they are made\n\nExpanded homework assignment rubric to make it easier to respect partial credit\nMoved conditionals from first week 2 slides to second\n\nAlso fleshed out explanation of conditional behavior on vectors with multiple elements\n\nUpdated ggplot2 slides to reflect new legend.position behavior as of ggplot2 version 3.5.0\nAdded course schedule (without specific dates) to course homepage"
   },
   {
     "objectID": "NEWS.html#v1.0---2024-course-materials",
@@ -73,7 +73,19 @@
     "href": "index.html#required-course-materials",
     "title": "R Programming for Biologists Syllabus",
     "section": "Required Course Materials",
-    "text": "Required Course Materials\n\nR (www.cran.r-project.org)\n\nI recognize that this website is very bare bones, but this program is the industry standard and enjoys the support of a large and active population of users. When you are troubleshooting (i.e., “debugging”) your code you will very much appreciate the breadth of people who are also using R. Follow the “Download R for …” link for your computer operating system (i.e., Mac vs. Windows vs. Linux) to install R.\n\nRStudio Desktop (www.posit.co/downloads)\n\nRStudio is the preferred platform for working in R; as the R website showed, so-called “base R” can be a little basic. RStudio will provide several helpful bells and whistles that will make the program easier to work with and easier on the eyes!\n\nGit & GitHub\n\nGit (an application like R) and GitHub (a website) will be a part of the course, but you do not need to do anything with them before we cover them in class! Installing Git can be a little annoying for those without command line (a.k.a. “terminal”, “shell”, or “bash”) experience. We’ll cover working with Git and GitHub together a few weeks into the course. If you feel so moved, you are welcome to try to install Git (see instructions here) and make a profile on GitHub on your own, but doing it alone is optional so don’t worry if you can’t get it to work before we cover it in class!\n\nMiscellaneous peer-reviewed articles / book excerpts\n\nI will provide any readings for the course in PDF format, so check the Canvas/etc. page regularly to download the necessary files. Any required readings will be posted at least one week before we discuss it in class. I’ll also do my best to link directly to the readings from this website!",
+    "text": "Required Course Materials\n\nR (cran.r-project.org)\n\nI recognize that this website is very bare bones, but this program is the industry standard and enjoys the support of a large and active population of users. When you are troubleshooting (i.e., “debugging”) your code you will very much appreciate the breadth of people who are also using R. Follow the “Download R for …” link for your computer operating system (i.e., Mac vs. Windows vs. Linux) to install R.\n\nRStudio Desktop (posit.co/downloads)\n\nRStudio is the preferred platform for working in R; as the R website showed, so-called “base R” can be a little basic. RStudio will provide several helpful bells and whistles that will make the program easier to work with and easier on the eyes!\n\nGit & GitHub\n\nGit (an application like R) and GitHub (a website) will be a part of the course, but you do not need to do anything with them before we cover them in class! Installing Git can be a little annoying for those without command line (a.k.a. “terminal”, “shell”, or “bash”) experience. We’ll cover working with Git and GitHub together a few weeks into the course. If you feel so moved, you are welcome to try to install Git (see instructions here) and make a profile on GitHub on your own, but doing it alone is optional so don’t worry if you can’t get it to work before we cover it in class!\n\nMiscellaneous peer-reviewed articles / book excerpts\n\nI will provide any readings for the course in PDF format, so check the Canvas/etc. page regularly to download the necessary files. Any required readings will be posted at least one week before we discuss it in class. I’ll also do my best to link directly to the readings from this website!",
+    "crumbs": [
+      "Alumni",
+      "Course Overview",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#course-schedule",
+    "href": "index.html#course-schedule",
+    "title": "R Programming for Biologists Syllabus",
+    "section": "Course Schedule",
+    "text": "Course Schedule\n\n\n\nWeek\nLecture\nLab\n\n\n\n\n1\nData Science Fundamentals\nBase R & RStudio\n\n\n2\nPackages & Data Structure\nConditionals & Version Control\n\n\n3\nRMarkdown & Data Wrangling I\nData Wrangling II\n\n\n4\nJoining Data\nStatistics\n\n\n5\nMulti-Model Inference\nSurvey Design Basics\n\n\n6\nData Visualization I\nData Visualization II\n\n\n7\nCode Iteration\nN/A1\n\n\n8\nCustom Functions\nBonus Topic2\n\n\n\n1 = held for student presentations of function tutorial assignment.\n2 = topic chosen by students.",
     "crumbs": [
       "Alumni",
       "Course Overview",
@@ -239,7 +251,7 @@
     "href": "materials/slides_7b.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #8\n\n\nDue before 7/22\n(By midnight)\n\nFinal deadline for all work from a summer course\n\nHomework #8\nGitHub Presence evaluation\nOptional 3rd draft of Function Tutorials\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #8\n\n\nDue before 7/22\n(By midnight)\n\nFinal deadline for all work from a summer course\n\nHomework #8\nGitHub Presence evaluation\nOptional 3rd draft of Function Tutorials"
   },
   {
     "objectID": "materials/slides_1a.html#a-guide-to-your-process",
@@ -428,7 +440,7 @@
     "href": "materials/slides_1a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\nDue ASAP\n\nInstall R (see here)\nInstall RStudio (see here)\nRead the syllabus (esp. point values + assignment descriptions)\n\nDue by midnight\n\nMuddiest Point #1\n\n\nDue before lecture\n(By midnight)\n\nRead the British Ecological Society’s Reproducible Code Guide (p.1-12)\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\nDue ASAP\n\nInstall R (see here)\nInstall RStudio (see here)\nRead the syllabus (esp. point values + assignment descriptions)\n\nDue by midnight\n\nMuddiest Point #1\n\n\nDue before lecture\n(By midnight)\n\nRead the British Ecological Society’s Reproducible Code Guide (p.1-12)"
   },
   {
     "objectID": "materials/slides_4a.html#a-guide-to-your-process",
@@ -624,7 +636,7 @@
     "href": "materials/slides_4a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #4\n\n\nDue before lecture\n(By midnight)\n\nHomework #4\nRead Model selection in ecology and evolution\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #4\n\n\nDue before lecture\n(By midnight)\n\nHomework #4\nRead Model selection in ecology and evolution"
   },
   {
     "objectID": "materials/slides_6a.html#a-guide-to-your-process",
@@ -897,7 +909,7 @@
     "href": "materials/slides_6a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #6\n\n\nDue before lecture\n(By midnight)\n\nNothing! Face Smile\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #6\n\n\nDue before lecture\n(By midnight)\n\nNothing! Face Smile"
   },
   {
     "objectID": "materials/home_week2.html",
@@ -1290,7 +1302,7 @@
     "href": "materials/slides_1b.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #1\nRead the British Ecological Society’s Reproducible Code Guide (p.1-12)\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #2\nRead the British Ecological Society’s Reproducible Code Guide (p.20-25)\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #1\nRead the British Ecological Society’s Reproducible Code Guide (p.1-12)\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #2\nRead the British Ecological Society’s Reproducible Code Guide (p.20-25)"
   },
   {
     "objectID": "materials/slides_4b.html#a-guide-to-your-process",
@@ -1626,7 +1638,7 @@
     "href": "materials/slides_4b.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #4\nRead Model selection in ecology and evolution\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #5\nDraft 1 of Function Tutorials\n\nDouble check rubric to see that you’re not leaving any points on the table!\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #4\nRead Model selection in ecology and evolution\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #5\nDraft 1 of Function Tutorials\n\nDouble check rubric to see that you’re not leaving any points on the table!"
   },
   {
     "objectID": "materials/slides_3a.html#a-guide-to-your-process",
@@ -1822,7 +1834,7 @@
     "href": "materials/slides_3a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #3\n\n\nDue before lecture\n(By midnight)\n\nHomework #3\nPick 7-10 possible functions for Function Tutorial assignment\n\nVisit: cran.r-project.org\nClick “Packages” in left sidebar\nClick “Table of available packages, sorted by name”\nYour possible functions must be from these packages!\n\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #3\n\n\nDue before lecture\n(By midnight)\n\nHomework #3\nPick 7-10 possible functions for Function Tutorial assignment\n\nVisit: cran.r-project.org\nClick “Packages” in left sidebar\nClick “Table of available packages, sorted by name”\nYour possible functions must be from these packages!"
   },
   {
     "objectID": "materials/slides_7a.html#a-guide-to-your-process",
@@ -2011,7 +2023,7 @@
     "href": "materials/slides_7a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #7\nSubmit Draft 2 of Function Tutorials\n\nDouble check rubric to see that you’re not leaving any points on the table!\nRemember to also submit the Revision Response\n\n\n\nDue before lab\n(By midnight)\n\nHomework #8\nMuddiest Point #8\nGitHub Presence\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lecture\n(By midnight)\n\nHomework #7\nSubmit Draft 2 of Function Tutorials\n\nDouble check rubric to see that you’re not leaving any points on the table!\nRemember to also submit the Revision Response\n\n\n\nDue before lab\n(By midnight)\n\nHomework #8\nMuddiest Point #8\nGitHub Presence"
   },
   {
     "objectID": "materials/slides_bonus-biodiversity.html#a-guide-to-your-process",
@@ -2249,7 +2261,7 @@
     "href": "materials/slides_bonus-biodiversity.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\nEverything must be turned in at midnight tonight!\n\n\n\n\nTurn in everything you haven’t yet as soon as possible\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\nEverything must be turned in at midnight tonight!\n\n\n\n\nTurn in everything you haven’t yet as soon as possible"
   },
   {
     "objectID": "materials/slides_6b.html#a-guide-to-your-process",
@@ -2487,7 +2499,7 @@
     "href": "materials/slides_6b.html#github-1-on-1s",
     "title": "Intro to Data Science",
     "section": "GitHub 1-on-1s",
-    "text": "GitHub 1-on-1s\n\nStick around until we do our 1-on-1\n\n\n\n\nAfter you have met with me you can leave\n\nThough you’re welcome to stay and work on Homework #6 / course assignments!\n\n\n\n\n\nAny volunteers to go first?\n\n\n\n\nProgramming in R for Biologists"
+    "text": "GitHub 1-on-1s\n\nStick around until we do our 1-on-1\n\n\n\n\nAfter you have met with me you can leave\n\nThough you’re welcome to stay and work on Homework #6 / course assignments!\n\n\n\n\n\nAny volunteers to go first?"
   },
   {
     "objectID": "materials/slides_template.html#a-guide-to-your-process",
@@ -2522,7 +2534,7 @@
     "href": "materials/slides_template.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #x\n\n\nDue before lecture\n(By midnight)\n\nX\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #x\n\n\nDue before lecture\n(By midnight)\n\nX"
   },
   {
     "objectID": "keys.html",
@@ -3042,7 +3054,7 @@
     "href": "materials/slides_2a.html#upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "Upcoming Due Dates",
-    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #2\nRead Excuse me, do you have a moment to talk about version control?\n\n\nDue before lecture\n(By midnight)\n\nHomework #2\nRead the British Ecological Society’s Reproducible Code Guide (p.20-25)\n\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Upcoming Due Dates\n\n\nDue before lab\n(By midnight)\n\nMuddiest Point #2\nRead Excuse me, do you have a moment to talk about version control?\n\n\nDue before lecture\n(By midnight)\n\nHomework #2\nRead the British Ecological Society’s Reproducible Code Guide (p.20-25)"
   },
   {
     "objectID": "materials/slides_2b.html#a-guide-to-your-process",
@@ -3287,7 +3299,7 @@
     "href": "materials/slides_2b.html#practice-advanced-conditionals",
     "title": "Intro to Data Science",
     "section": "Practice: Advanced Conditionals",
-    "text": "Practice: Advanced Conditionals\n\n\nSubset peng_df is species is any of “Adelie”, “Gentoo”, or “Chinstrap”\n\nUse the %in% operator\n\n\n\n\n\n\nSubset peng_df to all islands except “Dream”\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Practice: Advanced Conditionals\n\n\nSubset peng_df is species is any of “Adelie”, “Gentoo”, or “Chinstrap”\n\nUse the %in% operator\n\n\n\n\n\n\nSubset peng_df to all islands except “Dream”"
   },
   {
     "objectID": "materials/home_week5.html",
@@ -3582,7 +3594,7 @@
     "href": "materials/slides_8a.html#free-work",
     "title": "Intro to Data Science",
     "section": "Free Work",
-    "text": "Free Work\n\nEverything is due at the end of course (soon!)\n\n\n\nTips for success:\n\nCheck out rubrics and make sure you don’t miss any “easy” points\nDon’t leave after this slide!\nIf you have questions, ask them now during this free work time\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Free Work\n\nEverything is due at the end of course (soon!)\n\n\n\nTips for success:\n\nCheck out rubrics and make sure you don’t miss any “easy” points\nDon’t leave after this slide!\nIf you have questions, ask them now during this free work time"
   },
   {
     "objectID": "materials/home_week3.html",
@@ -3609,11 +3621,11 @@
     ]
   },
   {
-    "objectID": "materials/home_week3.html#lecture-3---r-markdowns-data-wrangling-p1",
-    "href": "materials/home_week3.html#lecture-3---r-markdowns-data-wrangling-p1",
+    "objectID": "materials/home_week3.html#lecture-3---r-markdowns-data-wrangling-i",
+    "href": "materials/home_week3.html#lecture-3---r-markdowns-data-wrangling-i",
     "title": "Week 3 Slide Decks",
-    "section": "Lecture 3 - R Markdowns & Data Wrangling (P1)",
-    "text": "Lecture 3 - R Markdowns & Data Wrangling (P1)\n\nLecture Slides – Full Screen",
+    "section": "Lecture 3 - R Markdowns & Data Wrangling I",
+    "text": "Lecture 3 - R Markdowns & Data Wrangling I\n\nLecture Slides – Full Screen",
     "crumbs": [
       "Alumni",
       "Course Content",
@@ -3621,11 +3633,11 @@
     ]
   },
   {
-    "objectID": "materials/home_week3.html#lab-3---data-wrangling-p2",
-    "href": "materials/home_week3.html#lab-3---data-wrangling-p2",
+    "objectID": "materials/home_week3.html#lab-3---data-wrangling-ii",
+    "href": "materials/home_week3.html#lab-3---data-wrangling-ii",
     "title": "Week 3 Slide Decks",
-    "section": "Lab 3 - Data Wrangling (P2)",
-    "text": "Lab 3 - Data Wrangling (P2)\n\nLab Slides – Full Screen",
+    "section": "Lab 3 - Data Wrangling II",
+    "text": "Lab 3 - Data Wrangling II\n\nLab Slides – Full Screen",
     "crumbs": [
       "Alumni",
       "Course Content",
@@ -3761,7 +3773,7 @@
     "href": "materials/slides_5b.html#more-upcoming-due-dates",
     "title": "Intro to Data Science",
     "section": "More Upcoming Due Dates",
-    "text": "More Upcoming Due Dates\nDue Before Lecture #8\n(By midnight)\n\nFunction Tutorials Draft 2\n\nYou’ll be assessed on how well you incorporated feedback from your peers & instructor\n\n\n\n\n\nCheck out the rubric for more details!\n\n\n\n\nProgramming in R for Biologists"
+    "text": "More Upcoming Due Dates\nDue Before Lecture #8\n(By midnight)\n\nFunction Tutorials Draft 2\n\nYou’ll be assessed on how well you incorporated feedback from your peers & instructor\n\n\n\n\n\nCheck out the rubric for more details!"
   },
   {
     "objectID": "materials/slides_5a.html#a-guide-to-your-process",
@@ -3915,7 +3927,7 @@
     "href": "materials/slides_5a.html#free-work-on-function-tutorials",
     "title": "Intro to Data Science",
     "section": "Free Work on Function Tutorials",
-    "text": "Free Work on Function Tutorials\n\nDraft 1 is due tomorrow night at midnight!\n\n\n\n\n\nTips for success:\n\nCheck out the rubric and make sure you don’t miss any “easy” points\nDon’t leave after this slide!\nI.e., make good use of this free work time to make sure you’re looking good for that due date\n\n\n\n\n\n\n\nIf you have questions, ask them now during this free work time\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Free Work on Function Tutorials\n\nDraft 1 is due tomorrow night at midnight!\n\n\n\n\n\nTips for success:\n\nCheck out the rubric and make sure you don’t miss any “easy” points\nDon’t leave after this slide!\nI.e., make good use of this free work time to make sure you’re looking good for that due date\n\n\n\n\n\n\n\nIf you have questions, ask them now during this free work time"
   },
   {
     "objectID": "materials/home_week4.html",
@@ -4248,7 +4260,7 @@
     "href": "materials/slides_3b.html#practice-wrangling",
     "title": "Intro to Data Science",
     "section": "Practice: Wrangling!",
-    "text": "Practice: Wrangling!\n   \n\nBeginning with the “penguins” data do the following operations:\n\n\n\nKeep only data on female penguins\n\nNo male penguins and no individuals where sex is not known\n\n\n\n\n\nCalculate average bill depth within species and island\n\n\n\n\nReshape to wide format so that each island is a column\n\nNote that if an island doesn’t have a given species it should have NA (not 0)\n\n\n\n\n\nCheck your work! What are the dimensions of the resulting dataframe?\n\n\n\n\nShould be 6 rows by 5 columns\n\n\n\n\nProgramming in R for Biologists"
+    "text": "Practice: Wrangling!\n   \n\nBeginning with the “penguins” data do the following operations:\n\n\n\nKeep only data on female penguins\n\nNo male penguins and no individuals where sex is not known\n\n\n\n\n\nCalculate average bill depth within species and island\n\n\n\n\nReshape to wide format so that each island is a column\n\nNote that if an island doesn’t have a given species it should have NA (not 0)\n\n\n\n\n\nCheck your work! What are the dimensions of the resulting dataframe?\n\n\n\n\nShould be 6 rows by 5 columns"
   },
   {
     "objectID": "materials/home_week8.html",
