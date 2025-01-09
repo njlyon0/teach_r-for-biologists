@@ -1,6 +1,6 @@
 ---
 title: "Intro to Data Science"
-author: "Lab 3 -- Data Wrangling (P2)"
+author: "Lab 3 -- Data Wrangling II"
 engine: knitr
 format: 
   revealjs: 

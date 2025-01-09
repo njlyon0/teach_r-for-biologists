@@ -1,6 +1,6 @@
 ---
 title: "Intro to Data Science"
-author: "Lecture 3 -- R Markdowns & Data Wrangling (P1)"
+author: "Lecture 3 -- R Markdowns & Data Wrangling I"
 engine: knitr
 format: 
   revealjs: 
