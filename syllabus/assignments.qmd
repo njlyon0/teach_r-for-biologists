@@ -21,48 +21,48 @@ Detailed rubrics are shared elsewhere in this site.
 
 ### Muddiest Point Responses
 
--   "Muddiest Point" is a type of exit ticket. Such assignments are meant to allow you space to think critically about what concepts from that day you felt confident with and which you struggled with (i.e., which were "muddier")
--   Note that if everything was clear in a given lesson then substituting a follow-up question that goes beyond the lecture materials is appropriate!
--   There will be eight (8) equally weighted muddiest point responses
+- "Muddiest Point" is a type of exit ticket. Such assignments are meant to allow you space to think critically about what concepts from that day you felt confident with and which you struggled with (i.e., which were "muddier")
+- Note that if everything was clear in a given lesson then substituting a follow-up question that goes beyond the lecture materials is appropriate!
+- There will be eight (8) equally weighted muddiest point responses
     - These will be graded according to [this rubric](https://njlyon0.github.io/teach_r-for-biologists/rubrics/rubric_muddiest-point.html#assignment-rubric)
--   All muddiest point responses will be due by midnight the day before each lab (i.e., one day after the lecture to which they are responding)
-    -   My hope is this will be helpful to you in clearly remembering which topics did or did not make sense to you
-    -   Additionally, this tight turn around will let me re-cover concepts in lab that several students identify as their muddiest point from that week's lecture
+- All muddiest point responses will be due by midnight the day before each lab (i.e., one day after the lecture to which they are responding)
+    - My hope is this will be helpful to you in clearly remembering which topics did or did not make sense to you
+    - Additionally, this tight turn around will let me re-cover concepts in lab that several students identify as their muddiest point from that week's lecture
 
 ### Weekly Homework
 
--   There will be eight (8) equally weighted homework assignments
+- There will be eight (8) equally weighted homework assignments
     - These will be graded according to [this rubric](https://njlyon0.github.io/teach_r-for-biologists/rubrics/rubric_homework.html)
--   Homework numbers 1 through 7 will be assigned after lecture and due before the following lecture at midnight (i.e., 7 days)
-    -   Homework 8 will be assigned after lecture and due before lab of that week (i.e., 3 days) because there won't be a lecture after that one
--   I will give you feedback on these assignments that you are welcome to implement so that you can include those revised homework assignments in your GitHub portfolio (see "GitHub Presence" below)
+- Homework numbers 1 through 7 will be assigned after lecture and due before the following lecture at midnight (i.e., 7 days)
+    - Homework 8 will be assigned after lecture and due before lab of that week (i.e., 3 days) because there won't be a lecture after that one
+- I will give you feedback on these assignments that you are welcome to implement so that you can include those revised homework assignments in your GitHub portfolio (see "GitHub Presence" below)
 
 ### GitHub Presence
 
--   A full rubric for this assignment is available [here](https://njlyon0.github.io/teach_r-for-biologists/rubrics/rubric_github.html)  but the summarized description below may prove helpful in setting expectations
--   This assignment includes two parts: (1) a fleshed-out GitHub profile including a 'special repository' that serves as a landing page for visitors to your profile and (2) a portfolio repository that includes (at least) your revised R Package Report
-    -   Don't worry if some of those vocabulary terms are alien to your right now, we will cover them in class/lab, and you will be well-prepared to tackle this component
-    -   Your portfolio repository should also include any homework assignments that you receive a 9 or 10 on (or revise following a score)
--   This assignment is meant both to give you some working knowledge of Git/GitHub and to serve as a tangible resource that you can share with prospective employers and add to your resume and/or curriculum vitae (CV)
+- A full rubric for this assignment is available [here](https://njlyon0.github.io/teach_r-for-biologists/rubrics/rubric_github.html)  but the summarized description below may prove helpful in setting expectations
+- This assignment includes two parts: (1) a fleshed-out GitHub profile including a 'special repository' that serves as a landing page for visitors to your profile and (2) a portfolio repository that includes (at least) your revised R Package Report
+    - Don't worry if some of those vocabulary terms are alien to your right now, we will cover them in class/lab, and you will be well-prepared to tackle this component
+    - Your portfolio repository should also include any homework assignments that you receive a 9 or 10 on (or revise following a score)
+- This assignment is meant both to give you some working knowledge of Git/GitHub and to serve as a tangible resource that you can share with prospective employers and add to your resume and/or curriculum vitae (CV)
 
 ### R Function Tutorials
 
--   A full rubric for this assignment is available [here](https://njlyon0.github.io/teach_r-for-biologists/rubrics/rubric_tutorials.html)
--   First Draft
-    -   Students will pick three functions from R package(s) available on CRAN (i.e., "official" R packages)
-    -   You will then create a tutorial of these three functions aimed at an interested but non-specialist audience (i.e., your classmates) in an R Markdown file
-    -   This tutorial should be self-contained and support copy/pasting of code that runs for your classmates / me
-    -   You may begin work on this assignment whenever you wish though you may wish to wait until we cover R Markdown files in the early weeks of the course
-    -   Roughly halfway through the course, you will share your R Markdowns with your classmates and walk us through your tutorial
-    -   Your classmates will provide positive and *constructively* critical feedback on your tutorial
--   Revision
-    -   You will have two weeks to implement any changes your classmates suggest by emphasizing strengths and addressing weaknesses indicated by your peers
-    -   You will then get to present your revised tutorial and receive more feedback
+- A full rubric for this assignment is available [here](https://njlyon0.github.io/teach_r-for-biologists/rubrics/rubric_tutorials.html)
+- First Draft
+    - Students will pick three functions from R package(s) available on CRAN (i.e., "official" R packages)
+    - You will then create a tutorial of these three functions aimed at an interested but non-specialist audience (i.e., your classmates) in an R Markdown file
+    - This tutorial should be self-contained and support copy/pasting of code that runs for your classmates / me
+    - You may begin work on this assignment whenever you wish though you may wish to wait until we cover R Markdown files in the early weeks of the course
+    - Roughly halfway through the course, you will share your R Markdowns with your classmates and walk us through your tutorial
+    - Your classmates will provide positive and _constructively_ critical feedback on your tutorial
+- Revision
+    - You will have two weeks to implement any changes your classmates suggest by emphasizing strengths and addressing weaknesses indicated by your peers
+    - You will then get to present your revised tutorial and receive more feedback
 
 ### Participation
 
-Recognizing that not everyone is equally comfortable speaking in front of a group, communication is still a crucial skill in virtually any career path. I *strongly encourage* you to take advantage of this course to get out of your comfort zone and try to develop that skill while in a safe environment if it is not your natural inclination. That being said, your participation grade will not be entirely dependent upon contributing to conversation and there will be other ways to grow as a communicator in this course.
+Recognizing that not everyone is equally comfortable speaking in front of a group, communication is still a crucial skill in virtually any career path. I _strongly encourage_ you to take advantage of this course to get out of your comfort zone and try to develop that skill while in a safe environment if it is not your natural inclination. That being said, your participation grade will not be entirely dependent upon contributing to conversation and there will be other ways to grow as a communicator in this course.
 
--   Your participation score includes:
-    -   Asking questions in class (both verbally and in the Zoom chat)
-    -   Useful written feedback to peers on either draft of their R package reports
+- Your participation score includes:
+    - Asking questions in class (both verbally and in the Zoom chat)
+    - Useful written feedback to peers on either draft of their R package reports
