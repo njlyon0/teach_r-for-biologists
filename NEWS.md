@@ -8,6 +8,7 @@ This is the development version of the course; changes will be identified as the
     - Also fleshed out explanation of conditional behavior on vectors with multiple elements
 - Updated `ggplot2` slides to reflect new `legend.position` behavior as of `ggplot2` version 3.5.0
 - Added course schedule (without specific dates) to course homepage
+- Split course home page into sub-sections (e.g., overview, schedule, assignments, policies, etc.)
 
 ## `v1.0` - 2024 Course Materials
 
