@@ -27,8 +27,14 @@ website:
     contents:
       - section: "Course Overview"
         contents:
-          - text: "Syllabus"
+          - text: "Home"
             href: index.qmd
+          - text: "Schedule"
+            href: syllabus/schedule.qmd
+          - text: "Assignments"
+            href: syllabus/assignments.qmd
+          - text: "Policies"
+            href: syllabus/policies.qmd
           - text: "Example Data"
             href: data.qmd
           - text: "Readings"
