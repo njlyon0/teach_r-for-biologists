@@ -1,7 +1,10 @@
+## `v1.2` - Zenodo Version
+
+This is the release created to archive these materials on Zenodo and get a DOI.
+
+- There are no changes to the material from the preceding version
 
 ## `v1.1` - Improved 2024 Materials
-
-This is the development version of the course; changes will be identified as they are made
 
 - Expanded homework assignment rubric to make it easier to respect partial credit
 - Moved conditionals from first week 2 slides to second
