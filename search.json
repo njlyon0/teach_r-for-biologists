@@ -2267,6 +2267,18 @@
     ]
   },
   {
+    "objectID": "index.html#citing-these-materials",
+    "href": "index.html#citing-these-materials",
+    "title": "R Programming for Biologists",
+    "section": "Citing These Materials",
+    "text": "Citing These Materials\nI hope these materials are useful beyond the scope of me offering the course and encourage you to use these elsewhere! If you do so, please use the following citation:\n\nLyon, N.J. (2025). Programming in R for Biologists. Zenodo. doi.org/10.5281/zenodo.17201332",
+    "crumbs": [
+      "Alumni",
+      "Course Overview",
+      "Home"
+    ]
+  },
+  {
     "objectID": "index.html#learning-objectives",
     "href": "index.html#learning-objectives",
     "title": "R Programming for Biologists",
@@ -2355,14 +2367,21 @@
     "href": "NEWS.html",
     "title": "R Programming for Biologists",
     "section": "",
-    "text": "This is the release created to archive these materials on Zenodo and get a DOI.\n\nThere are no changes to the material from the preceding version"
+    "text": "This is the development version of this content. Changes from the preceding version will be listed below as they are made.\n\nNo changes (yet!)"
+  },
+  {
+    "objectID": "NEWS.html#v1.2.900---dev-version",
+    "href": "NEWS.html#v1.2.900---dev-version",
+    "title": "R Programming for Biologists",
+    "section": "",
+    "text": "This is the development version of this content. Changes from the preceding version will be listed below as they are made.\n\nNo changes (yet!)"
   },
   {
     "objectID": "NEWS.html#v1.2---zenodo-version",
     "href": "NEWS.html#v1.2---zenodo-version",
     "title": "R Programming for Biologists",
-    "section": "",
-    "text": "This is the release created to archive these materials on Zenodo and get a DOI.\n\nThere are no changes to the material from the preceding version"
+    "section": "v1.2 - Zenodo Version",
+    "text": "v1.2 - Zenodo Version\nThis is the release created to archive these materials on Zenodo and get a DOI.\n\nThere are no changes to the material from the preceding version"
   },
   {
     "objectID": "NEWS.html#v1.1---improved-2024-materials",
