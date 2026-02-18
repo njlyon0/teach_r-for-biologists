@@ -87,7 +87,7 @@ After today's session you will be able to:
 ## [CRAN vs. GitHub]{.orange} {.smaller}
 
 ::::{.columns}
-:::{.column width="50%"}
+:::{.column width="48%"}
 
 #### CRAN
 
@@ -102,7 +102,9 @@ After today's session you will be able to:
 - These are "official" packages
 
 :::
-:::{.column width="50%"}
+:::{.column width="4%"}
+:::
+:::{.column width="48%"}
 
 #### GitHub
 
@@ -112,7 +114,7 @@ After today's session you will be able to:
 ## [CRAN vs. GitHub]{.orange} {.smaller}
 
 ::::{.columns}
-:::{.column width="50%"}
+:::{.column width="48%"}
 
 #### CRAN
 
@@ -127,7 +129,9 @@ After today's session you will be able to:
 - These are "official" packages
 
 :::
-:::{.column width="50%"}
+:::{.column width="4%"}
+:::
+:::{.column width="48%"}
 
 #### GitHub
 
@@ -182,7 +186,7 @@ library(dplyr)
 
 . . .
 
-- `library` <u>_requires_</u> requires **unquoted** names.
+- `library` <u>_requires_</u> **unquoted** names.
 
 ## [Package Analogy]{.gold} {.smaller}
 
