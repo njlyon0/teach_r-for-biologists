@@ -440,6 +440,7 @@ _[\~]{.blue} [/]{.orange} Documents [/]{.orange} BIO 316 [/]{.orange} BIO316-Not
 
 - Install R (see [here](https://cran.r-project.org/))
 - Install RStudio (see [here](https://posit.co/download/rstudio-desktop/))
+- Install Quarto (see [here](https://quarto.org/docs/get-started/))
 - Read the syllabus (esp. point values + assignment descriptions)
 
 #### Due by midnight
