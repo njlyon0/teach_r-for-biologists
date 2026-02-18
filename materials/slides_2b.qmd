@@ -560,13 +560,13 @@ Demonstrate your skills to others with coding know-how
 
 - Let me know if you run into any issues!
 
-## [Navigating GitHub]{.orange} {.smaller}
+## [Navigating GitHub]{.orange}
 
 - We'll work through part of an established GitHub workshop for this section
 
 \
 
-- [nceas.github.io/scicomp-workshop-collaborative-coding/github](https://nceas.github.io/scicomp-workshop-collaborative-coding/github.html)
+- [lter.github.io/workshop-github](https://lter.github.io/workshop-github/)
 
 ## [Practice: Create a Repository]{.pink} {.smaller}
 
@@ -666,7 +666,7 @@ Demonstrate your skills to others with coding know-how
 
 \
 
-- [nceas.github.io/scicomp-workshop-collaborative-coding/rstudio](https://nceas.github.io/scicomp-workshop-collaborative-coding/rstudio.html)
+- [lter.github.io/workshop-github](https://lter.github.io/workshop-github/)
 
 # [Bonus Conditionals]{.orange}
 
