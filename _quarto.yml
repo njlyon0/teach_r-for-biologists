@@ -2,6 +2,8 @@ project:
   type: website
   execute-dir: project
   output-dir: docs
+  render: 
+    - "*.qmd"
 
 website:
   title: "R Programming for Biologists"
