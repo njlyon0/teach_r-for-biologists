@@ -296,7 +296,7 @@ After completing this assignment you will be able to:
 
 ## [Function Tutorial: FAQ]{.orange} {.smaller}
 
-- Tutorial should be an R Markdown with plain text and code chunks
+- Tutorial should be Quarto document with plain text and code chunks
     - Write tutorials for your classmates for three functions from packages on CRAN
 
 \
@@ -495,6 +495,7 @@ After this bonus session you will be able to:
 
 . . .
 
+- Explain what "shape" means in the context of data
 - Reshape data from long to wide format
     - And vice versa
 
