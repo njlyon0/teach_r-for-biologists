@@ -388,7 +388,7 @@ sample(x = students, size = 3, replace = FALSE)
 
 ## [Function Tutorial: Free Work]{.pink} {.smaller}
 
-- Make a new R Markdown file for this assignment
+- Make a new Quarto file for this assignment
 
 \
 
