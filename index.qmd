@@ -47,11 +47,15 @@ I recognize that this website is very bare bones, but this program is the indust
 
 RStudio is the preferred platform for working in R; as the R website showed, so-called "base R" can be a little basic. RStudio will provide several helpful bells and whistles that will make the program easier to work with and easier on the eyes!
 
-3.  Git & GitHub
+3. Quarto ([quarto.org](https://quarto.org/))
+
+Quarto is software that lets you create "computational notebook" files. This type of file allows you to create a document that is a mix of working code and non-code components. This is particularly helpful for generating reports that are interpretable by those without strong code comprehension as well as--in your case--being a nice option for doing your homework as you can include the homework questions in addition to your plain-text and code answers to them.
+
+4.  Git & GitHub
 
 Git (an application like R) and GitHub (a website) will be a part of the course, but you do not need to do anything with them before we cover them in class! Installing Git can be a little annoying for those without command line (a.k.a. "terminal", "shell", or "bash") experience. We'll cover working with Git and GitHub together a few weeks into the course. If you feel so moved, you are welcome to try to install Git (see instructions [here](https://happygitwithr.com/install-git)) and make a profile on GitHub on your own, but doing it alone is *optional* so don't worry if you can't get it to work before we cover it in class!
 
-4.  Miscellaneous peer-reviewed articles / book excerpts
+5.  Miscellaneous peer-reviewed articles / book excerpts
 
 I will provide any readings for the course in PDF format, so check the Canvas/etc. page regularly to download the necessary files. Any required readings will be posted at least one week before we discuss it in class. I'll also do my best to link directly to the readings from this website!
 
