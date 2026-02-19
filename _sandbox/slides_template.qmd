@@ -5,14 +5,12 @@ engine: knitr
 format: 
   revealjs: 
     slide-number: c
-
     scrollable: false
     code-overflow: wrap
     code-line-numbers: false
     code-copy: hover
     theme: [night, slides.scss]
     reference-location: document
-    footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
 ## A Guide to Your Process
@@ -47,12 +45,9 @@ After today's session you will be able to:
 <img src="comics/debugging.png" alt="Comic-style graph depicting someone's emotional state as they debug code (from initial struggle and defeat to eventual triumph)">
 </p>
 
-
-
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lab
@@ -62,7 +57,6 @@ After today's session you will be able to:
 - Muddiest Point \#x
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lecture
@@ -72,6 +66,8 @@ After today's session you will be able to:
 - X
 
 :::
-
 ::::
 
+::: footer
+Back to Course Page: [Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)
+:::
