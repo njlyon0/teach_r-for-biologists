@@ -517,7 +517,7 @@ Lab 6 – Visualization II
 </div>
 <div class="fragment">
 <ul>
-<li>If <code>legend.position = "inside"</code>, you need to tell it <em>where</em> inside
+<li>If <code>legend.position = "inside"</code>, you need to tell it <em>where</em> inside with another argument for the <code>theme</code> function
 <ul>
 <li>Format is: <code>legend.position.inside = c(&lt;x position&gt;, &lt;y position&gt;)</code></li>
 <li>Positions range from 0 (left / bottom) to 1 (right / top)</li>
@@ -667,7 +667,7 @@ Lab 6 – Visualization II
 </section>
 <section id="facet-example" class="slide level2 smaller">
 <h2><span class="orange">Facet Example</span></h2>
-<p><img data-src="images/hex-penguins.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for palmerpenguins R package"> <img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 965px; width: 12%; " alt="hex logo for ggplot2 R package"></p>
+<p><img data-src="images/hex-ggplot2.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; " alt="hex logo for ggplot2 R package"> <img data-src="images/hex-penguins.png" class="absolute" style="top: 150px; left: 1100px; width: 12%; " alt="hex logo for palmerpenguins R package"></p>
 <div class="cell" data-layout-align="center">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" data-code-line-numbers="|3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> penguins, <span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">y =</span> flipper_length_mm, <span class="at">color =</span> species)) <span class="sc">+</span> </span>
 <span id="cb5-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
@@ -870,6 +870,9 @@ Lab 6 – Visualization II
 </ul></li>
 </ul>
 </div></div>
+<div class="footer">
+<p>Back to Course Page: <a href="https://njlyon0.github.io/teach_r-for-biologists/">Programming in R for Biologists</a></p>
+</div>
 </section>
 <section id="github-1-on-1s" class="slide level2 smaller">
 <h2><span class="gold">GitHub 1-on-1s</span></h2>
@@ -895,7 +898,7 @@ Lab 6 – Visualization II
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p><a href="https://njlyon0.github.io/teach_r-for-biologists/">Programming in R for Biologists</a></p>
+
 </div>
 </div></div>
 

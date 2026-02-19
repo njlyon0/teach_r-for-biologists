@@ -10,7 +10,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <meta name="author" content="Lecture 3 – R Markdowns &amp; Data Wrangling I">
+  <meta name="author" content="Lecture 3 – Quarto Files &amp; Data Wrangling I">
   <title>R Programming for Biologists – Intro to Data Science</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -199,7 +199,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Lecture 3 – R Markdowns &amp; Data Wrangling I 
+Lecture 3 – Quarto Files &amp; Data Wrangling I 
 </div>
 </div>
 </div>
@@ -216,7 +216,7 @@ Lecture 3 – R Markdowns &amp; Data Wrangling I
 <section id="todays-plan" class="slide level2">
 <h2><span class="blue">Today’s Plan</span></h2>
 <ul>
-<li>R Markdown Files</li>
+<li>Quarto Files</li>
 <li>Loading Data</li>
 <li>Working with Data</li>
 <li>Tidyverse - <code>dplyr</code></li>
@@ -227,7 +227,7 @@ Lecture 3 – R Markdowns &amp; Data Wrangling I
 <p>After today’s session you will be able to:</p>
 <div class="fragment">
 <ul>
-<li>Define the three major components of RMarkdown files (.Rmd)</li>
+<li>Define the three major components of Quarto files (.qmd)</li>
 <li>Write code to load external data into R</li>
 <li>Explore data with base R tools</li>
 <li>Manipulate data with <code>dplyr</code></li>
@@ -260,9 +260,9 @@ Lecture 3 – R Markdowns &amp; Data Wrangling I
 </ul>
 </div>
 </section>
-<section id="rmarkdown-files-intro" class="slide level2 smaller">
-<h2><span class="orange">RMarkdown Files Intro</span></h2>
-<p>RMarkdown (Rmd) files have three sections:</p>
+<section id="quarto-files-intro" class="slide level2 smaller">
+<h2><span class="orange">Quarto Files Intro</span></h2>
+<p>Quarto (qmd) files have three sections:</p>
 <div class="fragment">
 <ol type="1">
 <li>Metadata (YAML)
@@ -292,15 +292,15 @@ Lecture 3 – R Markdowns &amp; Data Wrangling I
 </ol>
 </div>
 </section>
-<section id="rmarkdown-analogy" class="slide level2">
-<h2><span class="orange">RMarkdown Analogy</span></h2>
+<section id="quarto-analogy" class="slide level2">
+<h2><span class="orange">Quarto Analogy</span></h2>
 <p><img data-src="images/logo-r.png" class="absolute" style="top: 110px; left: 160px; width: 15%; " alt="R logo"></p>
 <p><img data-src="images/chocolate.png" class="absolute" style="top: 300px; left: -10px; width: 50%; " alt="picture of a chocolate bar"></p>
-<p><img data-src="images/hex-rmarkdown.png" class="absolute" style="top: 105px; left: 720px; width: 11%; " alt="hex logo for the rmarkdown package"></p>
+<p><img data-src="images/logo-quarto.png" class="absolute" style="top: 120px; left: 550px; width: 40%; " alt="Quarto logo"></p>
 <p><img data-src="images/cookie.png" class="absolute" style="top: 250px; left: 625px; width: 30%; " alt="picture of a chocolate chip cookie"></p>
 </section>
-<section id="rmds-part-1-metadata" class="slide level2 smaller">
-<h2><span class="orange">Rmds Part 1: Metadata</span></h2>
+<section id="quarto-part-1-metadata" class="slide level2 smaller">
+<h2><span class="orange">Quarto Part 1: Metadata</span></h2>
 <ul>
 <li>Document formatting metadata is called YAML
 <ul>
@@ -330,8 +330,8 @@ Lecture 3 – R Markdowns &amp; Data Wrangling I
 </ul>
 </div>
 </section>
-<section id="rmds-part-2-plain-text" class="slide level2">
-<h2><span class="orange">Rmds Part 2: Plain Text</span></h2>
+<section id="quarto-part-2-plain-text" class="slide level2">
+<h2><span class="orange">Quarto Part 2: Plain Text</span></h2>
 <ul>
 <li>Write text just like you would in MS Word / etc.</li>
 </ul>
@@ -372,8 +372,8 @@ Lecture 3 – R Markdowns &amp; Data Wrangling I
 <p>Other format options here: <a href="https://markdownguide.offshoot.io/basic-syntax/">markdownguide.org/basic-syntax</a></p>
 </div>
 </section>
-<section id="rmds-part-3-code-chunks" class="slide level2 smaller">
-<h2><span class="orange">Rmds Part 3: Code Chunks</span></h2>
+<section id="quarto-part-3-code-chunks" class="slide level2 smaller">
+<h2><span class="orange">Quarto Part 3: Code Chunks</span></h2>
 <p>Let’s look at the structure of an example code chunk</p>
 <div class="r-stack">
 <p><img data-src="images/code-chunk.png" class="fragment fade-out" alt="Screen capture of a code chunk from an Rmarkdown file where the echo option is set to false, the chunk is named 'pressure', and the `plot` function is used on an object also named 'pressure'"></p>
@@ -400,28 +400,18 @@ Lecture 3 – R Markdowns &amp; Data Wrangling I
 </ul>
 </div>
 </section>
-<section id="practice-rmarkdown-files" class="slide level2 smaller">
-<h2><span class="pink">Practice: RMarkdown Files</span></h2>
-<p><img data-src="images/hex-rmarkdown.png" class="absolute" style="top: 0px; left: 1100px; width: 12%; "></p>
-<ul>
-<li>Install the <code>rmarkdown</code> package
-<ul>
-<li>Remember to use the <code>install.packages</code> function</li>
-</ul></li>
-</ul>
-<p><br>
-</p>
-<div class="fragment">
+<section id="practice-quarto-files" class="slide level2 smaller">
+<h2><span class="pink">Practice: Quarto Files</span></h2>
+<p><img data-src="images/logo-quarto.png" class="absolute" style="top: 0px; left: 800px; width: 40%; "></p>
 <ol start="2" type="1">
-<li>Create a new RMarkdown file!
+<li>Create a new Quarto file!
 <ul>
-<li>File <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> New File <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> <span class="purple">R Markdown…</span></li>
+<li>File <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> New File <svg aria-label="Arrow Right" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Arrow Right</title><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg> <span class="purple">Quarto Document…</span></li>
 <li>In resulting pop-up, skip to bottom and click “OK”</li>
 </ul></li>
 </ol>
 <p><br>
 </p>
-</div>
 <div class="fragment">
 <ol start="3" type="1">
 <li><p>Look at (1) YAML, (2) Plain text, and (3) code chunks</p>
@@ -434,7 +424,7 @@ Lecture 3 – R Markdowns &amp; Data Wrangling I
 </div>
 <div class="fragment">
 <ol start="4" type="1">
-<li>Click the “knit” button</li>
+<li>Click the “render” button</li>
 </ol>
 </div>
 </section>
@@ -789,13 +779,16 @@ Lecture 3 – R Markdowns &amp; Data Wrangling I
 </ul></li>
 </ul>
 </div></div>
+<div class="footer">
+<p>Back to Course Page: <a href="https://njlyon0.github.io/teach_r-for-biologists/">Programming in R for Biologists</a></p>
+</div>
 
 
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p><a href="https://njlyon0.github.io/teach_r-for-biologists/">Programming in R for Biologists</a></p>
+
 </div>
 </div></div>
 
