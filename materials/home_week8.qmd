@@ -18,8 +18,9 @@ This week we'll cover how to write your own functions in R! During lab we will c
 
 ## Lab 8 - Bonus Content
 
-I may (and likely will) design new 'bonus content' modules and I'll list those below as they are created.
+I will design new 'bonus content' modules as they are requested by students and I'll list those below as they are created.
 
+:::{.panel-tabset}
 ### Biodiversity + Mapping Resources
 
 ```{=html}
@@ -27,6 +28,7 @@ I may (and likely will) design new 'bonus content' modules and I'll list those b
 ```
 
 [Biodiversity Slides -- Full Screen](slides_bonus-biodiversity.qmd)
+:::
 
 ## Homework 8
 
@@ -43,7 +45,7 @@ Each homework is due at midnight the day before each lecture (i.e., Monday night
 
 ### Assignment Description
 
-This homework should be submitted as an R Markdown with your last name and the week number as the file name (e.g., "Lyon_week6.Rmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
+This homework should be submitted as a Quarto file with your last name and the week number as the file name (e.g., "Lyon_week6.qmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
 
 1. Your French colleague (for whom you calculated a number of temperature conversions last week) reaches out to you again with one final request: they would like you to write a function for them in R that converts temperature from Celsius to Fahrenheit so that they can stop bothering you to do the conversion for them. Note that last week you converted F to C and this week is the opposite!
     - In a code chunk, convert 22°C into Fahrenheit. Feel free to Google the formula. Also, note that you may want to be careful to use parentheses to make sure the order of operations is correct.

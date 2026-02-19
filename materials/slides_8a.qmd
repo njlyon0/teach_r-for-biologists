@@ -384,8 +384,8 @@ plus(x = 10)
 ## [Your Accomplishments]{.gold} {.smaller}
 
 - In this class, [**you** have done the following]{.purple}:
-    - Made and manipulated data
-    - Created R scripts and RMarkdown reports
+    - Wrangled tidy data
+    - Created R scripts and Quarto document reports
     - Explored version control & GitHub
     - Performed statistical tests
     - Written loops and your own custom function(s)
