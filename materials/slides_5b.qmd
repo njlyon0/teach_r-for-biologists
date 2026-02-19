@@ -11,7 +11,6 @@ format:
     code-copy: hover
     theme: [night, slides.scss]
     reference-location: document
-    footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
 ## A Guide to Your Process
@@ -259,6 +258,10 @@ After today's session you will be able to:
 :::
 ::::
 
+::: footer
+Back to Course Page: [Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)
+:::
+
 ## [More Upcoming Due Dates]{.blue}
 
 ### Due Before Lecture \#8
@@ -271,3 +274,7 @@ After today's session you will be able to:
 \
 
 - <u>Check out the rubric</u> for more details!
+
+::: footer
+Back to Course Page: [Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)
+:::
