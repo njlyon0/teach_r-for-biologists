@@ -11,7 +11,6 @@ format:
     code-copy: hover
     theme: [night, slides.scss]
     reference-location: document
-    footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
 ```{r libraries}
@@ -667,6 +666,10 @@ cowplot::plot_grid(fish1, fish2, labels = "AUTO", ncol = 2, nrow = 1)
 
 :::
 ::::
+
+::: footer
+Back to Course Page: [Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)
+:::
 
 ## [GitHub 1-on-1s]{.gold} {.smaller}
 
