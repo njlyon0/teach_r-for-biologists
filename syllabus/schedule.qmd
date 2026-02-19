@@ -10,7 +10,7 @@ This schedule is subject to change but currently includes the following topics.
 |:-:|:----:|:----:|
 | 1 | Data Science Fundamentals | Base R & RStudio |
 | 2 | Packages & Data Structure | Conditionals & Version Control |
-| 3 | RMarkdown & Data Wrangling I | Data Wrangling II |
+| 3 | Quarto & Data Wrangling I | Data Wrangling II |
 | 4 | Joining Data | Statistics |
 | 5 | Multi-Model Inference | Survey Design Basics |
 | 6 | Data Visualization I | Data Visualization II |
