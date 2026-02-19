@@ -100,10 +100,10 @@ Keep the following pieces of advice in mind:
 </p>
 
 
-## [Get Ready]{.pink} {.smaller}
+## [Get Ready]{.pink}
 
-- Find and open your R Markdown file
-    - Knit it if you want
+- Find and open your Quarto file
+    - Render it if you want
 
 \
 

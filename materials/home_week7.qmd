@@ -40,7 +40,7 @@ Each homework is due at midnight the day before each lecture (i.e., Monday night
 
 ### Assignment Description
 
-This homework should be submitted as an R Markdown with your last name and the week number as the file name (e.g., "Lyon_week6.Rmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
+This homework should be submitted as a Quarto file with your last name and the week number as the file name (e.g., "Lyon_week6.qmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
 
 1. At an international conference you meet a French colleague also interested in penguin research. They're very excited after your recent string of findings (and beautiful graphs) and want to plan a visit to the states to visit several researchers in your field. However, they intuitively think in Celsius (C) and would love your help with an R script that converts Fahrenheit (F) to their preferred temperature units
     - Create an object containing the number 35. Using that object, convert it to Celsius and print that converted value. The conversion formula is as follows: C = (F - 32) x 5/9
