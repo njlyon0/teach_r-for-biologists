@@ -76,7 +76,7 @@ website:
           - text: "Additional Resources"
             href: resources.qmd
   page-footer:
-    center: "Copyright 2024, Nicholas J Lyon"
+    center: "&copy; 2026, Nicholas J Lyon"
 
 execute:
   freeze: auto
