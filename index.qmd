@@ -16,7 +16,7 @@ I would also like to acknowledge that this course has taken place on Wôpanâak 
 
 I hope these materials are useful beyond the scope of me offering the course and encourage you to use these elsewhere! If you do so, please use the following citation:
 
-> Lyon, N.J. (2025). Programming in R for Biologists. Zenodo. [doi.org/10.5281/zenodo.17201332](https://doi.org/10.5281/zenodo.17201332)
+> Lyon, N.J. (2025). Programming in R for Biologists (v1.0). Zenodo. [doi.org/10.5281/zenodo.17201332](https://doi.org/10.5281/zenodo.17201332)
 
 ## Learning Objectives
 
@@ -41,11 +41,11 @@ Upon completion of this course, students will be able to:
 
 1.  R ([cran.r-project.org](https://www.cran.r-project.org/))
 
-I recognize that this website is very bare bones, but this program is the industry standard and enjoys the support of a large and active population of users. When you are troubleshooting (i.e., "debugging") your code you will very much appreciate the breadth of people who are also using R. Follow the "Download R for ..." link for your computer operating system (i.e., Mac vs. Windows vs. Linux) to install R.
+I recognize that CRAN's website is very simple, but this program is the industry standard and enjoys the support of a large and active population of users. When you are troubleshooting (a.k.a. "debugging") your code, you will very much appreciate the breadth of people who are also using R. Follow the "Download R for ..." link for your computer operating system (i.e., Mac vs. Windows vs. Linux) to install R.
 
 2.  RStudio Desktop ([posit.co/downloads](https://www.posit.co/downloads))
 
-RStudio is the preferred platform for working in R; as the R website showed, so-called "base R" can be a little basic. RStudio will provide several helpful bells and whistles that will make the program easier to work with and easier on the eyes!
+RStudio is the preferred platform for working in R; as the R website showed, so-called "base R" can be a little basic. RStudio will provide several helpful 'bells and whistles' that will make the program easier to work with and easier on the eyes!
 
 3. Quarto ([quarto.org](https://quarto.org/))
 
@@ -53,7 +53,7 @@ Quarto is software that lets you create "computational notebook" files. This typ
 
 4.  Git & GitHub
 
-Git (an application like R) and GitHub (a website) will be a part of the course, but you do not need to do anything with them before we cover them in class! Installing Git can be a little annoying for those without command line (a.k.a. "terminal", "shell", or "bash") experience. We'll cover working with Git and GitHub together a few weeks into the course. If you feel so moved, you are welcome to try to install Git (see instructions [here](https://happygitwithr.com/install-git)) and make a profile on GitHub on your own, but doing it alone is *optional* so don't worry if you can't get it to work before we cover it in class!
+Git (an application like R) and GitHub (a website) will be a part of the course, but you **do not need to do anything with them before we cover them in class!** Installing Git can be a little annoying for those without command line (a.k.a. "terminal", "shell", or "bash") experience. We'll cover working with Git and GitHub together a few weeks into the course. If you feel so moved, you are welcome to try to install Git (see instructions [here](https://happygitwithr.com/install-git)) and make a profile on GitHub on your own, but doing it alone is *optional* so don't worry if you can't get it to work before we cover it in class!
 
 5.  Miscellaneous peer-reviewed articles / book excerpts
 
