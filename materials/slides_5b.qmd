@@ -203,9 +203,9 @@ After today's session you will be able to:
 
 ## [Get Ready!]{.pink} {.smaller}
 
-- Prepare your R Markdown file
-    - A -- Open your tutorial (knit or raw) on your computer
-    - B -- Email me your Rmd (knit or raw) and you can present from my computer
+- Prepare your Quarto file
+    - A -- Open your tutorial (rendered or raw) on your computer
+    - B -- Email me your qmd (rendered or raw) and you can present from my computer
 
 \
 
