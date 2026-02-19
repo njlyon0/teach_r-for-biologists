@@ -4,8 +4,6 @@ format:
   html: default
 ---
 
-## Datasets Overview
-
 In this course there will be practice examples to help you get the hang of some tools that we cover in class. All of those datasets are included here so that they can be used in multiple modules while still giving you a centralized place for downloading all of the files. Each dataset will have a short blurb explaining what data are included.
 
 You can download the example datasets below. I've also provided a short, human-readable description of the context around each dataset.
@@ -16,32 +14,32 @@ You can download the example datasets below. I've also provided a short, human-r
 
 This is simulated data on the annual abundance of four functional groups of bees for 10 years. There is a column for sampling year and then one column for each bee function group where the rows are the number of that bee observed in that year.
 
-You can download the data here: [bees.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/bees.csv)
+You can download the data here: {{< fa file-csv >}} [bees.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/bees.csv)
 
 ### Lichen Data
 
 This is simulated data on the percent cover of the three lichen types (fruticose, foliose, and crustose) on ten trees. There is a column for tree 'name' as well as one column for each of the three lichen types. The values in the rows are the percent cover (expressed as a decimal) for each lichen type on each tree.
 
-You can download the data here: [tree_lichen.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/tree_lichen.csv)
+You can download the data here: {{< fa file-csv >}} [tree_lichen.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/tree_lichen.csv)
 
 ### Tree Road Distance Data
 
 This is simulated data on 26 trees and the distance to the nearest road from each tree (in meters). Some of these trees are also included in the lichen data but not all of them.
 
-You can download the data here: [tree_road.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/tree_road.csv)
+You can download the data here: {{< fa file-csv >}} [tree_road.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/tree_road.csv)
 
 ### Minnow Data
 
 This is real data collected in South Carolina on the nesting ecology of two kinds of river fish. 8 transects (lines of sampling) were created across a river and on each transect one Chub nest, one Stoneroller nest, and one 'Paired' nest suitable for either species were identified. All nests then had their diameter (in centimeters), depth (also in cm) measured as well as the flow of the river at that spot (in cubic feet per second; "cfs").
 
-You can download the data here: [minnow.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/minnow.csv)
+You can download the data here: {{< fa file-csv >}} [minnow.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/minnow.csv)
 
 ### Tomato Data
 
 This is simulated data on a tomato experiment about comparing control soil against soil with added Nitrogen (N). There are three files related to this dataset.
 
-[tomato.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/tomato.csv) is the "actual" data for the project. It includes 10 plants and the number of buds, flowers, and fruits counted on each plant.
+{{< fa file-csv >}} [tomato.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/tomato.csv) is the "actual" data for the project. It includes 10 plants and the number of buds, flowers, and fruits counted on each plant.
 
-[tomato_treatment.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/tomato_treatment.csv) identifies which treatment (none vs. added N) was applied to each of the 10 plants
+{{< fa file-csv >}} [tomato_treatment.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/tomato_treatment.csv) identifies which treatment (none vs. added N) was applied to each of the 10 plants
 
-[tomato_issues.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/tomato_issues.csv) explains some issues that are plant-specific (i.e., over watered, herbivore damaged, etc.) and includes all plants (even those without any documented problems).
+{{< fa file-csv >}} [tomato_issues.csv](https://github.com/njlyon0/teach_r-for-biologists/blob/main/ext_data/tomato_issues.csv) explains some issues that are plant-specific (i.e., over watered, herbivore damaged, etc.) and includes all plants (even those without any documented problems).
