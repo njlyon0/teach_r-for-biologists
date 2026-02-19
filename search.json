@@ -4,7 +4,7 @@
     "href": "syllabus/schedule.html",
     "title": "Course Schedule",
     "section": "",
-    "text": "This schedule is subject to change but currently includes the following topics.\n\n\n\nWeek\nLecture\nLab\n\n\n\n\n1\nData Science Fundamentals\nBase R & RStudio\n\n\n2\nPackages & Data Structure\nConditionals & Version Control\n\n\n3\nRMarkdown & Data Wrangling I\nData Wrangling II\n\n\n4\nJoining Data\nStatistics\n\n\n5\nMulti-Model Inference\nSurvey Design Basics\n\n\n6\nData Visualization I\nData Visualization II\n\n\n7\nCode Iteration\nN/A1\n\n\n8\nCustom Functions\nBonus Topic2\n\n\n\n1 = held for student presentations of function tutorial assignment.\n2 = topic chosen by students.",
+    "text": "This schedule is subject to change but currently includes the following topics.\n\n\n\nWeek\nLecture\nLab\n\n\n\n\n1\nData Science Fundamentals\nBase R & RStudio\n\n\n2\nPackages & Data Structure\nConditionals & Version Control\n\n\n3\nQuarto & Data Wrangling I\nData Wrangling II\n\n\n4\nJoining Data\nStatistics\n\n\n5\nMulti-Model Inference\nSurvey Design Basics\n\n\n6\nData Visualization I\nData Visualization II\n\n\n7\nCode Iteration\nN/A1\n\n\n8\nCustom Functions\nBonus Topic2\n\n\n\n1 = held for student presentations of function tutorial assignment.\n2 = topic chosen by students.",
     "crumbs": [
       "Alumni",
       "Course Overview",
@@ -4147,7 +4147,7 @@
     "href": "materials/slides_bonus-biodiversity.html#your-accomplishments",
     "title": "Intro to Data Science",
     "section": "Your Accomplishments",
-    "text": "Your Accomplishments\n\nIn this class, you have done the following:\n\nMade and manipulated data\nCreated R scripts and RMarkdown reports\nExplored version control & GitHub\nPerformed statistical tests\nWritten loops and your own custom function(s)\nAnd so much more!\n\n\n\n\n\nIf you have a CV/resume, definitely add:\n\nSome (or all!) of these skills\nLink to your GitHub profile"
+    "text": "Your Accomplishments\n\nIn this class, you have done the following:\n\nWrangled tidy data\nCreated R scripts and Quarto document reports\nExplored version control & GitHub\nPerformed statistical tests\nWritten loops and your own custom function(s)\nAnd so much more!\n\n\n\n\n\nIf you have a CV/resume, definitely add:\n\nSome (or all!) of these skills\nLink to your GitHub profile"
   },
   {
     "objectID": "materials/slides_bonus-biodiversity.html#closing-thoughts",
