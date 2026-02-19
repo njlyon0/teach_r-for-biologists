@@ -17,30 +17,15 @@ Upon completion of these assignments, students will be able to:
 
 This assignment is split into several drafts and pre-draft work each with their own due date. See below for specific dates for each component part:
 
--   Look through CRAN for 7-10 potential functions -- due before Lecture #4 at midnight
-
-    -   7-10 so you have alternates if others pick the functions you had in mind
-
--   Pick 3 functions for your assignment -- done *during class* in Lecture #4
-
-    -   Order for choosing will be random
-    -   I.e., One by one, everyone in class picks first function, then re-randomize for second function, and again for third
-
--   Submit Quarto file (.qmd) of function tutorials (Draft #1) -- due day before Lab #5 at midnight
-
--   Present tutorials (Draft #1) -- done during class in Lab #5
-
-    -   You will also submit your peer reviews for your peers' tutorials during lab this day
-
--   Submit Quarto file of function tutorials (Draft #2) -- due day before Lab #7 at midnight
-
--   Present tutorials (Draft #2) -- done *during class* in Lab #7
-
-    -   Again, you'll submit peer reviews of others' revised presentations today
-
--   *OPTIONAL:* Submit Quarto file of function tutorials (Draft #3) -- due day before Lab #8 at midnight
-
-    -   Fully optional, see below for more information
+| Assignment Component | Due Date |
+|:--------|:---|
+| Look through CRAN for 7-10 potential functions (7-10 so you have alternates if others pick the functions you had in mind) | Due before Lecture #4 at midnight |
+| Pick 3 functions for your assignment | Done _during class_ in Lecture #4 |
+| Submit Quarto file (.qmd) of function tutorials (Draft #1) | Due day before Lab #5 at midnight |
+| Present tutorials (Draft #1); You will also submit your peer reviews for your peers' tutorials during lab this day | Done _during class_ in Lab #5 |
+| Submit Quarto file of function tutorials (Draft #2) | Due day before Lab #7 at midnight |
+| Present tutorials (Draft #2); Again, you'll submit peer reviews of others' revised presentations today | Done _during class_ in Lab #7|
+| _OPTIONAL:_ Submit Quarto file of function tutorials (Draft #3) | Due day before Lab #8 at midnight |
 
 ## Assignment Description
 
