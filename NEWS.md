@@ -2,7 +2,7 @@
 
 This is the development version of this content. Changes from the preceding version will be listed below as they are made.
 
-- No changes (yet!)
+- Switched from R Markdown to Quarto
 
 ## `v1.2` - Zenodo Version
 
