@@ -26,19 +26,19 @@ This assignment is split into several drafts and pre-draft work each with their 
     -   Order for choosing will be random
     -   I.e., One by one, everyone in class picks first function, then re-randomize for second function, and again for third
 
--   Submit .Rmd of function tutorials (Draft #1) -- due day before Lab #5 at midnight
+-   Submit Quarto file (.qmd) of function tutorials (Draft #1) -- due day before Lab #5 at midnight
 
 -   Present tutorials (Draft #1) -- done during class in Lab #5
 
     -   You will also submit your peer reviews for your peers' tutorials during lab this day
 
--   Submit .Rmd of function tutorials (Draft #2) -- due day before Lab #7 at midnight
+-   Submit Quarto file of function tutorials (Draft #2) -- due day before Lab #7 at midnight
 
 -   Present tutorials (Draft #2) -- done *during class* in Lab #7
 
     -   Again, you'll submit peer reviews of others' revised presentations today
 
--   *OPTIONAL:* Submit .Rmd of function tutorials (Draft #3) -- due day before Lab #8 at midnight
+-   *OPTIONAL:* Submit Quarto file of function tutorials (Draft #3) -- due day before Lab #8 at midnight
 
     -   Fully optional, see below for more information
 
@@ -54,9 +54,9 @@ Because this assignment is a tutorial of three functions, the points for the fun
 
 | Component | Points Earned | Standard  |
 |:--------------------:|:--------------:|:--------------------------------------------------------------------------------------------------------|
-|  Report Overall   | 6 | \- Report is a well-formatted R Markdown file that knits to HTML or PDF </br> - Relevant headers and sub-headings divide the three functions' sections in the document </br> - Text gives excellent context for embedded code chunks </br> - Few or no grammatical issues in text |
-|  Report Overall   | 4 | \- Report is an R Markdown file but formatting is imprecise </br> - Headers and sub-headings are limited or incompletely used </br> - Text gives some context for code chunks but is incomplete for full understanding of the functions </br> - Moderate grammatical issues in text but still understandable |
-|  Report Overall   | 2 | \- Report is not an R Markdown file </br> - Headers and sub-headings are either not used at all or are so rare as to be functionally absent </br> - Text does not provide adequate context for code chunks or code chunks are completely absent </br> - Grammatical issues severe enough to impede understanding |
+|  Report Overall   | 6 | \- Report is a well-formatted Quarto file that knits to HTML or PDF </br> - Relevant headers and sub-headings divide the three functions' sections in the document </br> - Text gives excellent context for embedded code chunks </br> - Few or no grammatical issues in text |
+|  Report Overall   | 4 | \- Report is a Quarto file but formatting is imprecise </br> - Headers and sub-headings are limited or incompletely used </br> - Text gives some context for code chunks but is incomplete for full understanding of the functions </br> - Moderate grammatical issues in text but still understandable |
+|  Report Overall   | 2 | \- Report is not a Quarto file </br> - Headers and sub-headings are either not used at all or are so rare as to be functionally absent </br> - Text does not provide adequate context for code chunks or code chunks are completely absent </br> - Grammatical issues severe enough to impede understanding |
 | Function Tutorial | 8 | \- Function purpose is clearly explained by both plain language text and embedded code chunks </br> - Code chunks adhere to reproducibility best practices (e.g., makes effective use of comments and all function arguments are defined) </br> - Most / all arguments are defined in plain text </br> - Code can be run by instructor with clean environment without errors </br> - Package that exports this function is clearly indicated |
 | Function Tutorial | 6 | \- Function purpose is explained but explanation is not completely clear and/or areas of confusion exist </br> - Code chunks adhere to some reproducibility best practices but implementation is inconsistent </br> - Some arguments are defined in plain text but others are not explained </br> - Code can be run by instructor with only minor errors </br> - Package that exports this function is indicated but could be clearer |
 | Function Tutorial | 4 | \- Function explanation is minimal and significant unexplained areas exist </br> - Code chunks do not adhere to reproducibility guidelines </br> - Few arguments are defined in the text or code </br> - Package may or may not be indicated </br> - Code cannot be run by instructor due to major errors |
