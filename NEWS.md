@@ -1,6 +1,4 @@
-## `v1.2.900` - Dev Version
-
-This is the development version of this content. Changes from the preceding version will be listed below as they are made.
+## `v1.3` - Dev Version
 
 - Switched from R Markdown to Quarto
 
