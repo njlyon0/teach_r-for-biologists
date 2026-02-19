@@ -50,10 +50,10 @@ Detailed rubrics are shared elsewhere in this site.
 - A full rubric for this assignment is available [here](https://njlyon0.github.io/teach_r-for-biologists/rubrics/rubric_tutorials.html)
 - First Draft
     - Students will pick three functions from R package(s) available on CRAN (i.e., "official" R packages)
-    - You will then create a tutorial of these three functions aimed at an interested but non-specialist audience (i.e., your classmates) in an R Markdown file
+    - You will then create a tutorial of these three functions aimed at an interested but non-specialist audience (i.e., your classmates) in a Quarto file
     - This tutorial should be self-contained and support copy/pasting of code that runs for your classmates / me
-    - You may begin work on this assignment whenever you wish though you may wish to wait until we cover R Markdown files in the early weeks of the course
-    - Roughly halfway through the course, you will share your R Markdowns with your classmates and walk us through your tutorial
+    - You may begin work on this assignment whenever you wish though you may wish to wait until we cover Quarto files in the early weeks of the course
+    - Roughly halfway through the course, you will share your Quarto files with your classmates and walk us through your tutorial
     - Your classmates will provide positive and _constructively_ critical feedback on your tutorial
 - Revision
     - You will have two weeks to implement any changes your classmates suggest by emphasizing strengths and addressing weaknesses indicated by your peers
