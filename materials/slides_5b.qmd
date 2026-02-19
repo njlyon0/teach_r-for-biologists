@@ -11,7 +11,6 @@ format:
     code-copy: hover
     theme: [night, slides.scss]
     reference-location: document
-    footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
 ## A Guide to Your Process
@@ -203,9 +202,9 @@ After today's session you will be able to:
 
 ## [Get Ready!]{.pink} {.smaller}
 
-- Prepare your R Markdown file
-    - A -- Open your tutorial (knit or raw) on your computer
-    - B -- Email me your Rmd (knit or raw) and you can present from my computer
+- Prepare your Quarto file
+    - A -- Open your tutorial (rendered or raw) on your computer
+    - B -- Email me your qmd (rendered or raw) and you can present from my computer
 
 \
 
@@ -259,6 +258,10 @@ After today's session you will be able to:
 :::
 ::::
 
+::: footer
+Back to Course Page: [Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)
+:::
+
 ## [More Upcoming Due Dates]{.blue}
 
 ### Due Before Lecture \#8
@@ -271,3 +274,7 @@ After today's session you will be able to:
 \
 
 - <u>Check out the rubric</u> for more details!
+
+::: footer
+Back to Course Page: [Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)
+:::

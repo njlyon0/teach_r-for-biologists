@@ -41,7 +41,7 @@ Each homework is due at midnight the day before each lecture (i.e., Monday night
 
 ### Assignment Description
 
-This homework should be submitted as an R Markdown with your last name and the week number as the file name (e.g., "Lyon_week2.Rmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
+This homework should be submitted as a Quarto with your last name and the week number as the file name (e.g., "Lyon_week2.qmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
 
 1. A friend asks for your help wrangling some data for a summer project they did on tomatoes. Your friend tells you the "tomato.csv" file includes data on the number of buds, flowers, and fruits from 10 tomato plants they measured in a greenhouse. These plants either received no treatment or had Nitrogen added to their soil. Treatment information is listed in "tomato_treatment.csv". Finally, some plants had some issues that your friend recorded in a third file just in case they needed to account for that in the statistics later on. This question has multiple parts, be sure to answer all components! Each sub-question should be in its own code chunk.
     - Load the `dplyr` package and read in the three data files they shared with you: (1) "tomato.csv", "tomato_treatment.csv", and "tomato_issues.csv". Check the structure of all three files.

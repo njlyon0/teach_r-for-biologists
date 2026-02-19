@@ -11,7 +11,6 @@ format:
     code-copy: hover
     theme: [night, slides.scss]
     reference-location: document
-    footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
 ## A Guide to Your Process
@@ -384,8 +383,8 @@ plus(x = 10)
 ## [Your Accomplishments]{.gold} {.smaller}
 
 - In this class, [**you** have done the following]{.purple}:
-    - Made and manipulated data
-    - Created R scripts and RMarkdown reports
+    - Wrangled tidy data
+    - Created R scripts and Quarto document reports
     - Explored version control & GitHub
     - Performed statistical tests
     - Written loops and your own custom function(s)
@@ -450,6 +449,10 @@ plus(x = 10)
     - Homework \#8
     - GitHub Presence evaluation
     - _Optional_ [3^rd^ draft]{.pink} of Function Tutorials
+
+::: footer
+Back to Course Page: [Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)
+:::
 
 ## [Free Work]{.gold} {.smaller}
 

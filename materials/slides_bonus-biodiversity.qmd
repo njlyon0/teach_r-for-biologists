@@ -11,7 +11,6 @@ format:
     code-copy: hover
     theme: [night, slides.scss]
     reference-location: document
-    footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
 ```{r libraries}
@@ -719,3 +718,7 @@ ggplot() +
 \
 
 - Turn in _everything_ you haven't yet as soon as possible
+
+::: footer
+Back to Course Page: [Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)
+:::

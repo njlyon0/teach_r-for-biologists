@@ -1,6 +1,6 @@
 ---
 title: "Intro to Data Science"
-author: "Lecture 3 -- R Markdowns & Data Wrangling I"
+author: "Lecture 3 -- Quarto Files & Data Wrangling I"
 engine: knitr
 format: 
   revealjs: 
@@ -11,7 +11,6 @@ format:
     code-copy: hover
     theme: [night, slides.scss]
     reference-location: document
-    footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
 ## A Guide to Your Process
@@ -28,7 +27,7 @@ format:
 
 ## [Today's Plan]{.blue}
 
-- R Markdown Files
+- Quarto Files
 - Loading Data
 - Working with Data
 - Tidyverse - `dplyr`
@@ -39,7 +38,7 @@ After today's session you will be able to:
 
 . . .
 
-- Define the three major components of RMarkdown files (.Rmd)
+- Define the three major components of Quarto files (.qmd)
 - Write code to load external data into R
 - Explore data with base R tools
 - Manipulate data with `dplyr`
@@ -62,9 +61,9 @@ After today's session you will be able to:
 - What questions do you have about this?
     - Does this feel reasonable to you?
 
-## [RMarkdown Files Intro]{.orange} {.smaller}
+## [Quarto Files Intro]{.orange} {.smaller}
 
-RMarkdown (Rmd) files have three sections:
+Quarto (qmd) files have three sections:
 
 . . . 
 
@@ -85,17 +84,17 @@ RMarkdown (Rmd) files have three sections:
 3. Code [chunks]{.purple}
     - Essentially mini R scripts within the larger file!
 
-## [RMarkdown Analogy]{.orange}
+## [Quarto Analogy]{.orange}
 
 ![](images/logo-r.png){.absolute top=110 left=160 width="15%" fig-alt="R logo"}
 
 ![](images/chocolate.png){.absolute top=300 left=-10 width="50%" fig-alt="picture of a chocolate bar"}
 
-![](images/hex-rmarkdown.png){.absolute top=105 left=720 width="11%" fig-alt="hex logo for the rmarkdown package"}
+![](images/logo-quarto.png){.absolute top=120 left=550 width="40%" fig-alt="Quarto logo"}
 
 ![](images/cookie.png){.absolute top=250 left=625 width="30%" fig-alt="picture of a chocolate chip cookie"}
 
-## [Rmds Part 1: Metadata]{.orange} {.smaller}
+## [Quarto Part 1: Metadata]{.orange} {.smaller}
 
 - Document formatting metadata is called YAML
     - <u>Y</u>et <u>A</u>nother <u>M</u>arkup <u>L</u>anguage
@@ -112,12 +111,11 @@ RMarkdown (Rmd) files have three sections:
 
 . . .
 
-
 - Output options:
     - HTML = like a webpage but outputs as a file rather than a living website
     - PDF
 
-## [Rmds Part 2: Plain Text]{.orange} 
+## [Quarto Part 2: Plain Text]{.orange} 
 
 - Write text just like you would in MS Word / etc.
 
@@ -154,7 +152,7 @@ RMarkdown (Rmd) files have three sections:
 
 Other format options here: [markdownguide.org/basic-syntax](https://markdownguide.offshoot.io/basic-syntax/)
 
-## [Rmds Part 3: Code Chunks]{.orange} {.smaller}
+## [Quarto Part 3: Code Chunks]{.orange} {.smaller}
 
 Let's look at the structure of an example code chunk
 
@@ -188,19 +186,12 @@ Let's check out three crucial code chunk options!
 
 - For a full list of options see [here](www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
 
-## [Practice: RMarkdown Files]{.pink} {.smaller}
+## [Practice: Quarto Files]{.pink} {.smaller}
 
-![](images/hex-rmarkdown.png){.absolute top=0 left=1100 width="12%"}
+![](images/logo-quarto.png){.absolute top=0 left=800 width="40%"}
 
-- Install the `rmarkdown` package
-    - Remember to use the `install.packages` function
-
-\
-
-. . .
-
-2. Create a new RMarkdown file!
-    - File `r fontawesome::fa("arrow-right", a11y = "sem")` New File `r fontawesome::fa("arrow-right", a11y = "sem")` [R Markdown...]{.purple}
+2. Create a new Quarto file!
+    - File `r fontawesome::fa("arrow-right", a11y = "sem")` New File `r fontawesome::fa("arrow-right", a11y = "sem")` [Quarto Document...]{.purple}
     - In resulting pop-up, skip to bottom and click "OK"
 
 \
@@ -215,7 +206,7 @@ Let's check out three crucial code chunk options!
 
 . . .
 
-4. Click the "knit" button
+4. Click the "render" button
 
 ## [Temperature Check]{.purple}
 
@@ -531,3 +522,7 @@ df_v3b <- select(.data = df_v2, -weight_kg)
 
 :::
 ::::
+
+::: footer
+Back to Course Page: [Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)
+:::

@@ -39,7 +39,7 @@ Each homework is due at midnight the day before each lecture (i.e., Monday night
 
 ### Assignment Description
 
-This homework should be submitted as an R Markdown with your last name and the week number as the file name (e.g., "Lyon_week6.Rmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
+This homework should be submitted as a Quarto file with your last name and the week number as the file name (e.g., "Lyon_week6.qmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
 
 1. You hypothesize that penguin flipper length differs between sexes and that the degree of difference between sexes is related to the species of penguin (i.e., sex and species are interacting). Test your hypothesis using the "penguins" dataset in the `palmerpenguins` package
     - What is the name of the most appropriate statistical test? Why is it the correct test for this question?

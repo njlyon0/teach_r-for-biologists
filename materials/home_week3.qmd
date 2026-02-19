@@ -6,9 +6,9 @@ format:
 
 ## Overview
 
-This week we'll cover the fundamentals of an R Markdown file (as opposed to the R scripts we've been covering). We'll also practice loading external data files into R and then exploring them with both base R tools and functions included in the `dplyr` package. In lab, we'll expand our data wrangling conversation to include the pipe operator and how group-wise summarization can be accomplished in R. We'll finish up with data "shapes" and how data can be re-shaped between wide and long format. 
+This week we'll cover the fundamentals of an Quarto file (as opposed to the R scripts we've been covering). We'll also practice loading external data files into R and then exploring them with both base R tools and functions included in the `dplyr` package. In lab, we'll expand our data wrangling conversation to include the pipe operator and how group-wise summarization can be accomplished in R. We'll finish up with data "shapes" and how data can be re-shaped between wide and long format. 
 
-## Lecture 3 - R Markdowns & Data Wrangling I
+## Lecture 3 - Quarto Files & Data Wrangling I
 
 ```{=html}
 <iframe class="slide-deck" src="slides_3a.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
@@ -30,7 +30,7 @@ This week we'll cover the fundamentals of an R Markdown file (as opposed to the 
 
 Upon completion of this assignment, students will be able to:
 
--	**Explain** fundamental aspects of R Markdown files
+-	**Explain** fundamental aspects of Quarto files
 -	**Use data** wrangling functions from the `dplyr` and `tidyr` packages
 -	**Rearrange** wrangling code using the pipe operator (`%>%`)
 
@@ -40,11 +40,11 @@ Each homework is due at midnight the day before each lecture (i.e., Monday night
 
 ### Assignment Description
 
-This homework should be submitted as an R markdown with your last name and the week number as the file name (e.g., "Lyon_week3.Rmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
+This homework should be submitted as a Quarto file with your last name and the week number as the file name (e.g., "Lyon_week3.qmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
 
-1. In your own words, explain the purpose of the YAML of an R Markdown file. What does it do / what is it for?
+1. In your own words, explain the purpose of the YAML of a Quarto file. What does it do / what is it for?
 
-2. Imagine you're working on an R Markdown file. You set one code chunk to `include = FALSE`. What will happen to the contents of that code chunk when you knit the file? What parts–if any–of the code chunk will be displayed in the knit file? 
+2. Imagine you're working on a Quarto file. You set one code chunk to `include = FALSE`. What will happen to the contents of that code chunk when you knit the file? What parts–if any–of the code chunk will be displayed in the knit file? 
 
 3. You are studying native bee populations and need to wrangle your dataset to be ready for someone else to take on analysis. This question has multiple parts, be sure to answer all components! Each sub-question should be in its own code chunk.
     - Load the `dplyr` and `magrittr` packages and read in the example bee data ("bees.csv") into R and check its structure. How many rows / columns are there?

@@ -11,7 +11,6 @@ format:
     code-copy: hover
     theme: [night, slides.scss]
     reference-location: document
-    footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
 ```{r libraries}
@@ -789,3 +788,7 @@ ggplot(data = fish_df, mapping = aes(x = species, y = diameter_cm, fill = specie
 
 :::
 ::::
+
+::: footer
+Back to Course Page: [Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)
+:::

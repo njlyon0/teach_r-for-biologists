@@ -4,8 +4,6 @@ format:
   html: default
 ---
 
-## Readings Overview
-
 There are a handful of official reading assignments but I've also found some additional resources that may be valuable/of interest to students but I did not want to officially _require._ I've included links to these resources for convenience. If you find any of these are "pay-walled" (i.e., that you must pay to access them), please [contact me](https://njlyon0.github.io/) so that I can work to get you access to PDF versions.
 
 ## Reading Links

@@ -40,7 +40,7 @@ Each homework is due at midnight the day before each lecture (i.e., Monday night
 
 ### Assignment Description
 
-This homework should be submitted as an R Markdown with your last name and the week number as the file name (e.g., "Lyon_week6.Rmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
+This homework should be submitted as a Quarto file with your last name and the week number as the file name (e.g., "Lyon_week6.qmd"). Remember to specifically load any necessary packages using the `library` function and include comments explaining what line(s) correspond to each of the following prompts.
 
 1. Recalling your exciting statistical discoveries on penguin flipper length relationship to sex, species, and island, you decide to make some publication quality figures to demonstrate your findings. Use the `ggplot2` package to make the graphs and the `palmerpenguins` package for the "penguins" data.
     - Begin by creating a violin plot with sex on the x axis and flipper length on the y axis. The violin blobs' fill color should differ between the two sexes (default colors are fine!).

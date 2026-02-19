@@ -11,7 +11,6 @@ format:
     code-copy: hover
     theme: [night, slides.scss]
     reference-location: document
-    footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
 ```{r libraries}
@@ -306,7 +305,7 @@ fish_graph +
 
 . . .
 
-- If `legend.position = "inside"`, you need to tell it _where_ inside
+- If `legend.position = "inside"`, you need to tell it _where_ inside with another argument for the `theme` function
     - Format is: `legend.position.inside = c(<x position>, <y position>)`
     - Positions range from 0 (left / bottom) to 1 (right / top)
 
@@ -440,8 +439,8 @@ ggplot(data = my_df, mapping = aes(x = x_var, y = y_var)) +
 
 ## [Facet Example]{.orange} {.smaller}
 
-![](images/hex-penguins.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for palmerpenguins R package"}
-![](images/hex-ggplot2.png){.absolute top=0 left=965 width="12%" fig-alt="hex logo for ggplot2 R package"}
+![](images/hex-ggplot2.png){.absolute top=0 left=1100 width="12%" fig-alt="hex logo for ggplot2 R package"}
+![](images/hex-penguins.png){.absolute top=150 left=1100 width="12%" fig-alt="hex logo for palmerpenguins R package"}
 
 ```{r ex-facet}
 #| echo: true
@@ -667,6 +666,10 @@ cowplot::plot_grid(fish1, fish2, labels = "AUTO", ncol = 2, nrow = 1)
 
 :::
 ::::
+
+::: footer
+Back to Course Page: [Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)
+:::
 
 ## [GitHub 1-on-1s]{.gold} {.smaller}
 

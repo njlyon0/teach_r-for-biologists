@@ -11,7 +11,6 @@ format:
     code-copy: hover
     theme: [night, slides.scss]
     reference-location: document
-    footer: "[Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)"
 ---
 
 ## A Guide to Your Process
@@ -87,7 +86,7 @@ After today's session you will be able to:
 ## [CRAN vs. GitHub]{.orange} {.smaller}
 
 ::::{.columns}
-:::{.column width="50%"}
+:::{.column width="48%"}
 
 #### CRAN
 
@@ -102,7 +101,9 @@ After today's session you will be able to:
 - These are "official" packages
 
 :::
-:::{.column width="50%"}
+:::{.column width="4%"}
+:::
+:::{.column width="48%"}
 
 #### GitHub
 
@@ -112,7 +113,7 @@ After today's session you will be able to:
 ## [CRAN vs. GitHub]{.orange} {.smaller}
 
 ::::{.columns}
-:::{.column width="50%"}
+:::{.column width="48%"}
 
 #### CRAN
 
@@ -127,7 +128,9 @@ After today's session you will be able to:
 - These are "official" packages
 
 :::
-:::{.column width="50%"}
+:::{.column width="4%"}
+:::
+:::{.column width="48%"}
 
 #### GitHub
 
@@ -182,7 +185,7 @@ library(dplyr)
 
 . . .
 
-- `library` <u>_requires_</u> requires **unquoted** names.
+- `library` <u>_requires_</u> **unquoted** names.
 
 ## [Package Analogy]{.gold} {.smaller}
 
@@ -508,7 +511,6 @@ my_vec[c(1, 1, 1)]
 ## [Upcoming Due Dates]{.blue} {.smaller}
 
 ::::{.columns}
-
 :::{.column width="50%"}
 
 ### Due before lab
@@ -519,7 +521,6 @@ my_vec[c(1, 1, 1)]
 - Read [Excuse me, do you have a moment to talk about version control?](https://peerj.com/preprints/3159/)
 
 :::
-
 :::{.column width="50%"}
 
 ### Due before lecture
@@ -530,5 +531,8 @@ my_vec[c(1, 1, 1)]
 - Read the British Ecological Society's [Reproducible Code Guide](https://www.britishecologicalsociety.org/wp-content/uploads/2017/12/guide-to-reproducible-code.pdf) (p.20-25)
 
 :::
-
 ::::
+
+::: footer
+Back to Course Page: [Programming in R for Biologists](https://njlyon0.github.io/teach_r-for-biologists/)
+:::
