@@ -1,3 +1,9 @@
+## `v1.3.900`
+
+This is the development version. Changes from the preceding version will be listed below as they are made.
+
+- No changes yet.
+
 ## `v1.3` - Quarto Replaces R Markdown
 
 - Switched from R Markdown to Quarto
