@@ -1,4 +1,4 @@
-## `v1.3` - Dev Version
+## `v1.3` - Quarto Replaces R Markdown
 
 - Switched from R Markdown to Quarto
 
