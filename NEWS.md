@@ -2,7 +2,7 @@
 
 This is the development version. Changes from the preceding version will be listed below as they are made.
 
-- No changes yet.
+- Renamed sidebar elements with weekly topics intead of ambiguous numbers
 
 ## `v1.3` - Quarto Replaces R Markdown
 
