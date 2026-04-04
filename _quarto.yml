@@ -55,21 +55,21 @@ website:
             href: rubrics/rubric_tutorials.qmd
       - section: "Course Content"
         contents:
-          - text: "Week 1 Content"
+          - text: "1. Fundamentals"
             href: materials/home_week1.qmd
-          - text: "Week 2 Content"
+          - text: "2. Packages, Data, & Version Control"
             href: materials/home_week2.qmd
-          - text: "Week 3 Content"
+          - text: "3. Data Wrangling"
             href: materials/home_week3.qmd
-          - text: "Week 4 Content"
+          - text: "4. Joins & Stats I"
             href: materials/home_week4.qmd
-          - text: "Week 5 Content"
+          - text: "5. Stats II & V1 Presentations"
             href: materials/home_week5.qmd
-          - text: "Week 6 Content"
+          - text: "6. Data Visualization"
             href: materials/home_week6.qmd
-          - text: "Week 7 Content"
+          - text: "7. Loops & V2 Presentations"
             href: materials/home_week7.qmd
-          - text: "Week 8 Content"
+          - text: "8. Custom Functions & Bonus Topic"
             href: materials/home_week8.qmd
       - section: "Continuing Education"
         contents:
