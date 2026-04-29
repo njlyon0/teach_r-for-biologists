@@ -8,19 +8,19 @@ This week we'll focus first on data joining via the four types of join. During l
 
 ## Lecture 4 - Joining Data
 
+Slides {{< fa person-chalkboard >}} -- [Full Screen](slides_4a.qmd){target="_blank"}
+
 ```{=html}
 <iframe class="slide-deck" src="slides_4a.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 ```
 
-[Lecture Slides -- Full Screen](slides_4a.qmd)
-
 ## Lab 4 - Statistics
+
+Slides {{< fa person-chalkboard >}} -- [Full Screen](slides_4b.qmd){target="_blank"}
 
 ```{=html}
 <iframe class="slide-deck" src="slides_4b.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 ```
-
-[Lab Slides -- Full Screen](slides_4b.qmd)
 
 ## Homework 4
 

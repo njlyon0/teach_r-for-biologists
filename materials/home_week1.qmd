@@ -8,19 +8,19 @@ This week we'll be covering mostly big picture background content. We'll begin w
 
 ## Lecture 1 - Data Science Fundamentals
 
+Slides {{< fa person-chalkboard >}} -- [Full Screen](slides_1a.qmd){target="_blank"}
+
 ```{=html}
 <iframe class="slide-deck" src="slides_1a.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 ```
 
-[Lecture Slides -- Full Screen](slides_1a.qmd)
-
 ## Lab 1 - RStudio & Base R
+
+Slides {{< fa person-chalkboard >}} -- [Full Screen](slides_1b.qmd){target="_blank"}
 
 ```{=html}
 <iframe class="slide-deck" src="slides_1b.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 ```
-
-[Lab Slides -- Full Screen](slides_1b.qmd)
 
 ## Homework 1
 

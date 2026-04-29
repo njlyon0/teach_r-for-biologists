@@ -8,19 +8,19 @@ This week we'll cover the fundamentals of an Quarto file (as opposed to the R sc
 
 ## Lecture 3 - Quarto Files & Data Wrangling I
 
+Slides {{< fa person-chalkboard >}} -- [Full Screen](slides_3a.qmd){target="_blank"}
+
 ```{=html}
 <iframe class="slide-deck" src="slides_3a.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 ```
 
-[Lecture Slides -- Full Screen](slides_3a.qmd)
-
 ## Lab 3 - Data Wrangling II
+
+Slides {{< fa person-chalkboard >}} -- [Full Screen](slides_3b.qmd){target="_blank"}
 
 ```{=html}
 <iframe class="slide-deck" src="slides_3b.html" height="420" width="750" style="border: 1px solid #2e3846;"></iframe>
 ```
-
-[Lab Slides -- Full Screen](slides_3b.qmd)
 
 ## Homework 3
 
