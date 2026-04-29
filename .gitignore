@@ -40,6 +40,7 @@ vignettes/*.pdf
 
 # Interior parts of Quarto
 /.quarto/
+**/*.quarto_ipynb
 
 # Add DS_Store
 .DS_Store
