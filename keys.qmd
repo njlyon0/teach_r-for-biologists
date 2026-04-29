@@ -1,7 +1,5 @@
 ---
 title: "Homework Answer Keys"
-format:
-  html: default
 ---
 
 I've designed a (short) homework assignment to be completed after each week's lecture and lab slides have been covered. These assignments are generally due at midnight the day before the following week's lecture. They are individually 'low stakes' assignments but collectively they are an appreciable part of a student's overall grade and so should not be neglected. More importantly, they are a valuable chance for students to practice the skills they acquire during in-class discussions and practice sessions. 

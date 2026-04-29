@@ -1,7 +1,5 @@
 ---
 title: "Example Data"
-format:
-  html: default
 ---
 
 In this course there will be practice examples to help you get the hang of some tools that we cover in class. All of those datasets are included here so that they can be used in multiple modules while still giving you a centralized place for downloading all of the files. Each dataset will have a short blurb explaining what data are included.

@@ -1,7 +1,5 @@
 ---
 title: "R Programming for Biologists"
-format:
-  html: default
 ---
 
 ## Course Description
