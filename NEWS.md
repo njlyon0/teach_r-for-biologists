@@ -3,6 +3,7 @@
 This is the development version. Changes from the preceding version will be listed below as they are made.
 
 - Renamed sidebar elements with weekly topics intead of ambiguous numbers
+- Set all slide 'full screen' links to open in new tab
 
 ## `v1.3` - Quarto Replaces R Markdown
 
